@@ -1,0 +1,13 @@
+      (b-2)  An offense under Subsection (b-1) is:
+            (1)  a Class C misdemeanor if the aggregate amount involved is less than $100;
+            (2)  a Class B misdemeanor if the aggregate amount involved is $100 or more but less than $750;
+            (3)  a Class A misdemeanor if the aggregate amount involved is $750 or more but less than $2,500;
+            (4)  a state jail felony if the aggregate amount involved is $2,500 or more but less than $30,000;
+            (5)  a felony of the third degree if the aggregate amount involved is $30,000 or more but less than $150,000;
+            (6)  a felony of the second degree if:
+                  (A)  the aggregate amount involved is $150,000 or more but less than $300,000;
+                  (B)  the aggregate amount involved is any amount less than $300,000 and the computer, computer network, or computer system is owned by the government or a critical infrastructure facility; or
+                  (C)  the actor obtains the identifying information of another by accessing only one computer, computer network, or computer system; or
+            (7)  a felony of the first degree if:
+                  (A)  the aggregate amount involved is $300,000 or more; or
+                  (B)  the actor obtains the identifying information of another by accessing more than one computer, computer network, or computer system.

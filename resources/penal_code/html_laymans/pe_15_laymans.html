@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 15 – Preparatory Offenses | TX Penal Code Layman's Guide</title>
+<style>
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+.ladder-table{width:100%;border-collapse:collapse;margin:.75em 0;font-size:.85rem;}
+.ladder-table th{background:var(--blue);color:#fff;padding:6px 10px;text-align:left;}
+.ladder-table td{padding:6px 10px;border-bottom:1px solid #e0e0e0;vertical-align:top;}
+.ladder-table tr:nth-child(even) td{background:#f7f9fc;}
+.warn-box{background:#fff8e1;border-left:3px solid var(--gold);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.warn-box strong{color:#7a5800;}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 15: Preparatory Offenses</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-15-01">§15.01</a>
+  <a href="#sec-15-02">§15.02</a>
+  <a href="#sec-15-03">§15.03</a>
+  <a href="#sec-15-031">§15.031</a>
+  <a href="#sec-15-032">§15.032</a>
+  <a href="#sec-15-04">§15.04</a>
+  <a href="#sec-15-05">§15.05</a>
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<!-- §15.01 -->
+<div class="sec-card" id="sec-15-01">
+  <div class="sec-header open" onclick="toggleSec(this)">
+    <span class="sec-num">§15.01</span>
+    <span class="sec-name">CRIMINAL ATTEMPT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body open">
+    <h3>§15.01 – CRIMINAL ATTEMPT</h3>
+    <em>You don't have to actually succeed at a crime to be charged — taking a meaningful step toward committing one is enough.</em>
+
+    <h4>What It Is</h4>
+    <p>A person commits Criminal Attempt if, <strong>with specific intent to commit a particular offense</strong>, they take an act that goes <strong>beyond mere preparation</strong> — meaning they've crossed from planning into doing — but the offense is never completed.</p>
+    <div class="def-box"><strong>Key distinction:</strong> Buying a gun to commit murder = preparation (not yet an attempt). Driving to the victim's house with the loaded gun = attempt. The line is crossed when conduct directly tends toward committing the offense, even if the final step never happens.</div>
+
+    <h4>Special Rules</h4>
+    <ul>
+      <li><strong>Aggravated versions:</strong> If the target offense could be aggravated (e.g., simple assault → aggravated assault), and an aggravating element is present during the attempt, the charge is attempt of the <em>aggravated</em> offense — not just the base offense.</li>
+      <li><strong>No defense that the crime was completed:</strong> If a suspect attempts an offense and it actually succeeds, that doesn't get them out of the attempt charge (though they'd typically be charged with the completed offense instead).</li>
+    </ul>
+
+    <h4>Classification — Sliding Scale</h4>
+    <p>There is <strong>no single fixed classification</strong> for Criminal Attempt. The grade is always one step below the offense attempted:</p>
+    <table class="ladder-table">
+      <thead><tr><th>Attempted Offense</th><th>Attempt Classification</th></tr></thead>
+      <tbody>
+        <tr><td>Capital Felony</td><td><span class="grade-tag g-f1">Felony of the 1st Degree</span></td></tr>
+        <tr><td>Felony of the 1st Degree</td><td><span class="grade-tag g-f2">Felony of the 2nd Degree</span></td></tr>
+        <tr><td>Felony of the 2nd Degree</td><td><span class="grade-tag g-f3">Felony of the 3rd Degree</span></td></tr>
+        <tr><td>Felony of the 3rd Degree</td><td><span class="grade-tag g-sj">State Jail Felony</span></td></tr>
+        <tr><td>State Jail Felony</td><td><span class="grade-tag g-ma">Class A Misdemeanor</span> <em>(explicit statutory floor)</em></td></tr>
+        <tr><td>Class A Misdemeanor</td><td><span class="grade-tag g-mb">Class B Misdemeanor</span></td></tr>
+        <tr><td>Class B Misdemeanor</td><td><span class="grade-tag g-mc">Class C Misdemeanor</span></td></tr>
+      </tbody>
+    </table>
+    <div class="warn-box"><strong>Special exception (§15.01(e)):</strong> Attempting to commit Capital Murder of a peace officer under §19.03(a)(1) is a <span class="grade-tag g-f1">Felony of the 1st Degree</span> punishable by 25–99 years or life in TDCJ — not reducible below F1 regardless of the normal sliding scale.</div>
+    <div class="warn-box"><strong>Note on Class C attempts:</strong> The statute does not address attempting a Class C misdemeanor — there is no recognized grade below Class C.</div>
+  </div>
+</div>
+
+<!-- §15.02 -->
+<div class="sec-card" id="sec-15-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.02</span>
+    <span class="sec-name">CRIMINAL CONSPIRACY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.02 – CRIMINAL CONSPIRACY</h3>
+    <em>Agreeing with someone to commit a felony — and taking any step toward it — is itself a crime, even if the felony never happens.</em>
+
+    <h4>What It Is</h4>
+    <p>Criminal Conspiracy requires two elements, both present:</p>
+    <ul>
+      <li><strong>Agreement:</strong> The suspect agrees with one or more other people that at least one of them will engage in conduct constituting a <em>felony</em>.</li>
+      <li><strong>Overt act:</strong> The suspect or at least one co-conspirator performs any act — no matter how small — in furtherance of the plan.</li>
+    </ul>
+    <div class="def-box"><strong>The agreement can be inferred from conduct.</strong> No written agreement or explicit verbal pact is required. If everyone's behavior shows they're working toward a common criminal goal, a jury can find a conspiracy.</div>
+
+    <h4>Felonies Only</h4>
+    <p>Criminal Conspiracy under §15.02 only applies to <strong>felony</strong> target offenses. You cannot be charged with conspiracy to commit a misdemeanor under this section.</p>
+
+    <h4>Things That Are NOT a Defense</h4>
+    <ul>
+      <li>One co-conspirator isn't criminally responsible (e.g., is legally insane)</li>
+      <li>A co-conspirator was acquitted — <em>unless</em> all co-conspirators except one have been acquitted</li>
+      <li>A co-conspirator hasn't been prosecuted, got a deal, or is immune</li>
+      <li>The suspect belongs to a class of people who legally can't commit the target offense individually (they can still conspire to help others commit it)</li>
+      <li>The target offense was actually committed</li>
+    </ul>
+
+    <h4>Classification — Sliding Scale</h4>
+    <p>The grade is one step below the <strong>most serious felony</strong> that is the object of the conspiracy:</p>
+    <table class="ladder-table">
+      <thead><tr><th>Target Felony</th><th>Conspiracy Classification</th></tr></thead>
+      <tbody>
+        <tr><td>Capital Felony</td><td><span class="grade-tag g-f1">Felony of the 1st Degree</span></td></tr>
+        <tr><td>Felony of the 1st Degree</td><td><span class="grade-tag g-f2">Felony of the 2nd Degree</span></td></tr>
+        <tr><td>Felony of the 2nd Degree</td><td><span class="grade-tag g-f3">Felony of the 3rd Degree</span></td></tr>
+        <tr><td>Felony of the 3rd Degree</td><td><span class="grade-tag g-sj">State Jail Felony</span></td></tr>
+        <tr><td>State Jail Felony</td><td><span class="grade-tag g-ma">Class A Misdemeanor</span></td></tr>
+      </tbody>
+    </table>
+    <div class="warn-box"><strong>Note:</strong> This section does not apply to conspiracy under §76.02 (combination of criminal street gangs with foreign terrorist organizations — that offense has its own provisions).</div>
+  </div>
+</div>
+
+<!-- §15.03 -->
+<div class="sec-card" id="sec-15-03">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.03</span>
+    <span class="sec-name">CRIMINAL SOLICITATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.03 – CRIMINAL SOLICITATION</h3>
+    <em>Trying to get someone else to commit a capital felony or first-degree felony — even if they refuse — is itself a serious felony.</em>
+
+    <h4>What It Is</h4>
+    <p>A person commits Criminal Solicitation if, <strong>with intent that a capital felony or first-degree felony be committed</strong>, they <strong>request, command, or attempt to induce</strong> another person to commit that offense (or to become a party to it).</p>
+    <p>The solicited person doesn't have to agree. The offense is complete the moment the request or command is made with the required intent.</p>
+
+    <h4>Applies Only to Capital and F1 Offenses</h4>
+    <p>This is a high-bar statute — it only applies when the <em>target</em> offense is a <strong>Capital Felony or Felony of the 1st Degree</strong>. Soliciting lesser offenses falls outside §15.03 (see §15.031 for solicitation of a minor).</p>
+
+    <h4>Corroboration Required</h4>
+    <p>A conviction cannot rest on the uncorroborated testimony of the person allegedly solicited alone. The solicitation must also be shown by circumstances strongly corroborating both the solicitation itself and the actor's intent. This is a protection against false accusations.</p>
+
+    <h4>Things That Are NOT a Defense</h4>
+    <ul>
+      <li>The person solicited isn't criminally responsible</li>
+      <li>The person solicited was acquitted or not prosecuted</li>
+      <li>The actor belongs to a class that can't commit the target offense individually</li>
+      <li>The target offense was actually committed</li>
+    </ul>
+
+    <h4>Classification</h4>
+    <ul>
+      <li>Soliciting a <strong>Capital Felony</strong> → <span class="grade-tag g-f1">Felony of the 1st Degree</span></li>
+      <li>Soliciting a <strong>Felony of the 1st Degree</strong> → <span class="grade-tag g-f2">Felony of the 2nd Degree</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- §15.031 -->
+<div class="sec-card" id="sec-15-031">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.031</span>
+    <span class="sec-name">CRIMINAL SOLICITATION OF A MINOR</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.031 – CRIMINAL SOLICITATION OF A MINOR</h3>
+    <em>Trying to get a minor (under 17) to commit serious offenses — particularly sexual offenses — is a standalone crime, regardless of whether the minor complies.</em>
+
+    <h4>Two Tracks</h4>
+    <p><strong>Track 1 — Serious listed offenses (42A.054):</strong> A person solicits a minor to engage in conduct constituting any offense listed under Art. 42A.054(a) of the Code of Criminal Procedure (these are the most serious violent and sexual offenses for which deferred adjudication is prohibited).</p>
+    <p><strong>Track 2 — Sexual offense solicitation:</strong> A person solicits a minor — or someone they believe to be a minor — to engage in conduct constituting a specific list of sexual offenses including: §§20A.02(a)(7)/(8), 21.02, 21.03, 21.11, 22.011, 22.021, 43.02, 43.021, 43.05(a)(2), or 43.25.</p>
+
+    <h4>Key Definition</h4>
+    <div class="def-box"><strong>"Minor"</strong> means an individual <strong>younger than 17 years of age</strong>. (Note: different from the general definition used elsewhere; 17-year-olds are not minors under this section.)</div>
+
+    <h4>Corroboration Required</h4>
+    <p>Same as §15.03 — a conviction cannot rest solely on the uncorroborated testimony of the minor allegedly solicited.</p>
+
+    <h4>Things That Are NOT a Defense</h4>
+    <ul>
+      <li>The minor isn't criminally responsible for the solicited offense</li>
+      <li>The minor was acquitted or not prosecuted</li>
+      <li>The actor belongs to a class that can't commit the offense individually</li>
+      <li>The solicited offense was actually committed</li>
+    </ul>
+
+    <h4>Classification — Sliding Scale with Enhancement</h4>
+    <p>Base rule: <strong>one category lower</strong> than the solicited offense.</p>
+    <div class="warn-box"><strong>Gang enhancement — same category as the solicited offense:</strong> If it is shown at trial that the actor was 17 or older AND a member of a criminal street gang, AND committed the offense to further gang activities or avoid detection as a gang member, the classification is elevated to the <em>same</em> grade as the solicited offense — the one-step reduction disappears.</div>
+  </div>
+</div>
+
+<!-- §15.032 -->
+<div class="sec-card" id="sec-15-032">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.032</span>
+    <span class="sec-name">CHILD GROOMING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.032 – CHILD GROOMING</h3>
+    <em>Manipulating, coaxing, or enticing a child under 18 toward sexual activity or sex trafficking — even without touching them — is a felony.</em>
+
+    <h4>What It Is</h4>
+    <p>A person commits Child Grooming if, <strong>with the intent that a sexual offense under Ch. 43 or a sexual activity offense under Ch. 20A, 21, or 22 be committed</strong>, they knowingly:</p>
+    <ul>
+      <li><strong>Persuade, induce, entice, or coerce</strong> — or <strong>attempt to</strong> do any of these — a child younger than 18 to engage in specific conduct that would constitute one of those sexual offenses (or make the child a party to such an offense).</li>
+    </ul>
+    <p>The offense is complete upon the persuasion/enticement — no actual sexual contact is required.</p>
+
+    <h4>Classification</h4>
+    <ul>
+      <li>Base offense: <span class="grade-tag g-f3">Felony of the 3rd Degree</span></li>
+      <li>Enhanced to <span class="grade-tag g-f2">Felony of the 2nd Degree</span> if the actor has a prior conviction for: trafficking (Ch. 20A sexual conduct), Continuous Sexual Abuse (§21.02 or §21.03), Indecency with a Child (§21.11), Sexual Assault of a child under 18 (§22.011), or Aggravated Sexual Assault of a child under 18 (§22.021).</li>
+    </ul>
+
+    <h4>Affirmative Defense</h4>
+    <p>It is an affirmative defense if the actor is under 18 and the conduct occurred between the actor and another child under 18 who is either: (a) in a dating relationship and not more than 3 years older or younger, or (b) the actor's spouse — and the conduct occurred only between those two.</p>
+
+    <h4>Double Jeopardy Note</h4>
+    <p>If the conduct also constitutes an offense under another code section, the actor may be prosecuted under <em>either</em> section but not both.</p>
+  </div>
+</div>
+
+<!-- §15.04 -->
+<div class="sec-card" id="sec-15-04">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.04</span>
+    <span class="sec-name">RENUNCIATION DEFENSE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.04 – RENUNCIATION DEFENSE</h3>
+    <em>Voluntarily abandoning a criminal plan — and actively preventing the crime from happening — can be a complete defense to attempt, conspiracy, or solicitation charges.</em>
+
+    <h4>How It Works</h4>
+    <p>Renunciation is an <strong>affirmative defense</strong> — the defendant must raise and prove it. It applies differently to each of the three preparatory offenses:</p>
+
+    <ul>
+      <li><strong>Criminal Attempt (§15.01):</strong> The defendant, under circumstances showing a voluntary and complete renunciation of the criminal objective, either (a) abandoned the conduct and that was enough to prevent the crime, or (b) took further affirmative action that actually prevented the crime.</li>
+      <li><strong>Criminal Conspiracy (§15.02) or Criminal Solicitation (§15.03):</strong> The defendant countermanded (took back) the solicitation or withdrew from the conspiracy <em>before</em> the target offense was committed, and took further affirmative action that actually prevented the target offense.</li>
+    </ul>
+
+    <h4>What Is NOT Voluntary Renunciation</h4>
+    <p>Renunciation is <strong>not</strong> considered voluntary if the change of heart was caused by:</p>
+    <ul>
+      <li>New circumstances that <strong>increased the risk of getting caught</strong> (e.g., a police car shows up)</li>
+      <li>New circumstances that made the crime <strong>harder to complete</strong></li>
+      <li>A decision to simply <strong>postpone</strong> the crime to another time or switch to a similar target</li>
+    </ul>
+    <div class="def-box">In plain terms: cold feet driven by fear of getting caught doesn't count. Genuine moral abandonment that actually stops the crime does.</div>
+
+    <h4>Mitigation at Sentencing</h4>
+    <p>Even if renunciation doesn't qualify as a full defense, evidence that the defendant renounced their criminal objective and made a substantial effort to prevent the offense <strong>is admissible at punishment</strong>. If a jury finds genuine renunciation at sentencing, the punishment grade is reduced by <strong>one level</strong> from whatever the offense was found to be.</p>
+  </div>
+</div>
+
+<!-- §15.05 -->
+<div class="sec-card" id="sec-15-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§15.05</span>
+    <span class="sec-name">NO OFFENSE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§15.05 – NO OFFENSE</h3>
+    <em>You cannot be charged with "attempting to attempt" or "conspiring to conspire."</em>
+
+    <h4>What It Means</h4>
+    <p>Attempting, conspiring to commit, or soliciting a <strong>preparatory offense defined in this chapter</strong> is not a criminal offense. In other words:</p>
+    <ul>
+      <li>Attempting a Criminal Attempt → not an offense</li>
+      <li>Conspiring to commit a Criminal Conspiracy → not an offense</li>
+      <li>Soliciting someone to commit Criminal Solicitation → not an offense</li>
+    </ul>
+    <p>This prevents pyramiding of preparatory offenses. The law draws the line at one step removed from the completed crime — it doesn't extend to attempts of attempts or conspiracies of conspiracies.</p>
+  </div>
+</div>
+
+</main>
+
+<script>
+function toggleSec(hdr){
+  hdr.classList.toggle('open');
+  var body = hdr.nextElementSibling;
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){
+    h.classList.add('open');
+    h.nextElementSibling.classList.add('open');
+  });
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){
+    h.classList.remove('open');
+    h.nextElementSibling.classList.remove('open');
+  });
+}
+// Open first section on load
+document.addEventListener('DOMContentLoaded', function(){
+  var first = document.querySelector('.sec-header');
+  if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
+});
+</script>
+</body>
+</html>

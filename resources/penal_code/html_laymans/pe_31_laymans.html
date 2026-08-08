@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 31 – Theft | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 31: Theft</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-31-03">§31.03</a>
+<a href="#sec-31-04">§31.04</a>
+<a href="#sec-31-05">§31.05</a>
+<a href="#sec-31-06">§31.06</a>
+<a href="#sec-31-07">§31.07</a>
+<a href="#sec-31-11">§31.11</a>
+<a href="#sec-31-12">§31.12</a>
+<a href="#sec-31-13">§31.13</a>
+<a href="#sec-31-14">§31.14</a>
+<a href="#sec-31-15">§31.15</a>
+<a href="#sec-31-16">§31.16</a>
+<a href="#sec-31-17">§31.17</a>
+<a href="#sec-31-18">§31.18</a>
+<a href="#sec-31-19">§31.19</a>
+<a href="#sec-31-20">§31.20</a>
+<a href="#sec-31-21">§31.21</a>
+<a href="#sec-31-22">§31.22</a>
+<a href="#sec-31-23">§31.23</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-31-03">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.03</span>
+    <span class="sec-name">THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.03 – THEFT</h3>
+<p><em>Taking someone's property without their consent and with intent to deprive them of it — the core theft offense covering shoplifting, pickpocketing, embezzlement, receiving stolen goods, and more.</em></p>
+<p>A person commits theft if they <strong>unlawfully appropriate property with intent to deprive the owner</strong> of it. Appropriation is unlawful if it is:</p>
+<ul>
+  <li>Without the owner's effective consent, OR</li>
+  <li>The property is stolen and the suspect knows it was stolen, OR</li>
+  <li>Property that law enforcement represented as stolen and the suspect believed it was stolen.</li>
+</ul>
+<h4>Punishment Scale (by value of property stolen)</h4>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — under $100</li>
+  <li><strong>Class B Misdemeanor</strong> — $100 to under $750; OR under $100 with a prior theft conviction; OR stealing a driver's license or state ID</li>
+  <li><strong>Class A Misdemeanor</strong> — $750 to under $2,500</li>
+  <li><strong>State Jail Felony</strong> — $2,500 to under $30,000; OR stolen from a person or a corpse/grave (any value); OR stealing a firearm (any value); OR under $2,500 with two or more prior theft convictions; OR stealing an official election ballot; OR stealing aluminum, bronze, copper, or brass under $20,000; OR stealing a catalytic converter (replacement cost under $30,000); OR stealing in a declared disaster area as a fake volunteer (under $30,000)</li>
+  <li><strong>Felony of the 3rd Degree</strong> — $30,000 to under $150,000; OR cattle, horses, or exotic livestock under $150,000; OR 10+ head of sheep, swine, or goats under $150,000; OR controlled substances under $150,000 from a pharmacy, clinic, hospital, nursing facility, warehouse, or drug distributor vehicle</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $150,000 to under $300,000; OR any amount under $300,000 for stealing an ATM or its contents/components</li>
+  <li><strong>Felony of the 1st Degree</strong> — $300,000 or more</li>
+</ul>
+<h4>Enhancements (bumps to NEXT higher category)</h4>
+<ul>
+  <li>Suspect was a <strong>public servant</strong> and the property came into their control through that position</li>
+  <li>Suspect was in a <strong>government contract</strong> and the property came through the contract</li>
+  <li>Victim was an <strong>elderly individual</strong> or a <strong>nonprofit organization</strong></li>
+  <li>Suspect was a <strong>Medicare provider</strong> exploiting that relationship</li>
+  <li>Suspect set off or deactivated a <strong>fire exit alarm</strong> or used a <strong>shielding/deactivation instrument</strong> to defeat a retail theft detector</li>
+  <li>Stolen property was a <strong>catalytic converter</strong> (state jail felony or higher) AND the suspect had a firearm during the offense — bumped to next level</li>
+  <li>Stolen property was <strong>copper or brass</strong> from a critical infrastructure facility (state jail felony or higher) — bumped to next level</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-04">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.04</span>
+    <span class="sec-name">THEFT OF SERVICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.04 – THEFT OF SERVICE</h3>
+<p><em>Getting services without paying for them — through deception, threats, keeping rental property too long, or simply skipping out on the bill.</em></p>
+<p>A person commits theft of service by obtaining services they know are only provided for compensation, using any of these methods:</p>
+<ul>
+  <li>Securing services through <strong>deception, threat, or false token</strong></li>
+  <li>Diverting another's services to their own benefit without authorization</li>
+  <li>Keeping rental property past the rental period without consent, thereby depriving the owner of further rentals</li>
+  <li>Agreeing to pay for services, having them performed, then <strong>failing to pay after receiving a demand notice</strong></li>
+</ul>
+<h4>Presumptions of Intent to Avoid Payment</h4>
+<ul>
+  <li>Walking out without paying at a restaurant, hotel, etc.</li>
+  <li>Failing to pay within 10 days of receiving written notice demanding payment</li>
+  <li>Failing to return rental property within 5 days (under $2,500), 3 days ($2,500–$10,000), or 2 days ($10,000+) after notice</li>
+</ul>
+<h4>Punishment Scale (by value of service)</h4>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — under $100</li>
+  <li><strong>Class B Misdemeanor</strong> — $100 to under $750</li>
+  <li><strong>Class A Misdemeanor</strong> — $750 to under $2,500</li>
+  <li><strong>State Jail Felony</strong> — $2,500 to under $30,000</li>
+  <li><strong>Felony of the 3rd Degree</strong> — $30,000 to under $150,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $150,000 to under $300,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $300,000 or more</li>
+</ul>
+<h4>Defense</h4>
+<p>It is a defense if the suspect gave a post-dated check and the payee presented it early (before the date on the check).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.05</span>
+    <span class="sec-name">THEFT OF TRADE SECRETS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.05 – THEFT OF TRADE SECRETS</h3>
+<p><em>Stealing, copying, or sharing a company's confidential technical secrets — formulas, designs, processes, or other protected proprietary information.</em></p>
+<p>A person commits this offense if, without the owner's effective consent, they knowingly:</p>
+<ul>
+  <li><strong>Steal</strong> a trade secret</li>
+  <li><strong>Copy</strong> an item that embodies a trade secret (writing, recording, drawing, sample, blueprint, etc.)</li>
+  <li><strong>Communicate or transmit</strong> a trade secret to others</li>
+</ul>
+<p>A "trade secret" is any scientific or technical information, design, process, procedure, formula, or improvement that has value and that the owner has taken steps to keep secret from unauthorized persons.</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Felony of the 3rd Degree</strong> — base offense.</li>
+  <li><strong>Felony of the 2nd Degree</strong> — if the suspect intended to benefit a <strong>foreign agent, foreign government, or foreign instrumentality</strong> (i.e., espionage-adjacent).</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-06">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.06</span>
+    <span class="sec-name">PRESUMPTION FOR THEFT BY CHECK OR SIMILAR SIGHT ORDER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.06 – PRESUMPTION FOR THEFT BY CHECK OR SIMILAR SIGHT ORDER</h3>
+<p><em>Writing a bad check (insufficient funds) creates a legal presumption of intent to steal — this section establishes when that presumption kicks in.</em></p>
+<p>This section is a <strong>rules/presumption provision</strong> supporting prosecution of theft (§31.03) and theft of service (§31.04) when payment was made by check. Intent to steal is presumed (but rebuttable) if:</p>
+<ul>
+  <li>The issuer had <strong>no account</strong> at the bank when writing the check, OR</li>
+  <li>The check was <strong>returned for insufficient funds</strong> within 30 days of issue, AND the issuer failed to pay in full within <strong>10 days</strong> of receiving written notice of the refusal.</li>
+</ul>
+<p>A separate presumption applies if the issuer <strong>stopped payment</strong> and then failed to pay or return the property after demand. Written notice is presumed received within 5 days of mailing. Partial restitution does not remove the presumption.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-07">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.07</span>
+    <span class="sec-name">UNAUTHORIZED USE OF A VEHICLE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.07 – UNAUTHORIZED USE OF A VEHICLE</h3>
+<p><em>Joyriding — operating someone else's vehicle, boat, or airplane without their permission, even if you don't intend to keep it.</em></p>
+<p>A person commits this offense if they <strong>intentionally or knowingly operate</strong> another person's <strong>boat, airplane, or motor-propelled vehicle</strong> without the effective consent of the owner. Unlike theft, there is no requirement to intend to permanently deprive — just operating it without permission is enough.</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>State Jail Felony</strong></li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-11">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.11</span>
+    <span class="sec-name">TAMPERING WITH IDENTIFICATION NUMBERS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.11 – TAMPERING WITH IDENTIFICATION NUMBERS</h3>
+<p><em>Removing or altering serial numbers or other permanent markings on property — typically to hide that something is stolen.</em></p>
+<p>A person commits this offense if they:</p>
+<ul>
+  <li><strong>Remove, alter, or obliterate</strong> the serial number or other permanent ID marking on tangible personal property, OR</li>
+  <li><strong>Possess, sell, or offer to sell</strong> property knowing (or where a reasonable person would know) the serial number or permanent ID has been removed, altered, or obliterated.</li>
+</ul>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class A Misdemeanor</strong></li>
+</ul>
+<h4>Affirmative Defenses</h4>
+<ul>
+  <li>The person was the owner or acting with the owner's effective consent</li>
+  <li>A peace officer acting in official duties</li>
+  <li>Acting under authority of TxDOT or TxDMV with respect to a vehicle identification number</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-12">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.12</span>
+    <span class="sec-name">THEFT OF OR TAMPERING WITH MULTICHANNEL VIDEO OR INFORMATION SERVICES</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.12 – THEFT OF OR TAMPERING WITH MULTICHANNEL VIDEO OR INFORMATION SERVICES</h3>
+<p><em>Stealing cable TV or other video/information services by making unauthorized connections, attaching devices, or tampering with a provider's equipment.</em></p>
+<p>Without the service provider's authorization, a person commits this offense if they intentionally or knowingly:</p>
+<ul>
+  <li>Make or maintain a connection to a cable, wire, or receiver attached to a multichannel video/information services system</li>
+  <li>Attach a device to such a system to receive services without paying</li>
+  <li>Tamper with or modify provider-installed equipment</li>
+  <li>Tamper with or use an access device (signal decoder, etc.) to get services without authorization</li>
+</ul>
+<p>Each connection, attachment, modification, or act of tampering is a <strong>separate offense</strong>.</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — first offense.</li>
+  <li><strong>Class B Misdemeanor</strong> — one prior conviction.</li>
+  <li><strong>Class A Misdemeanor</strong> — two or more prior convictions; OR if committed <em>for pay</em> (for remuneration), regardless of priors.</li>
+  <li><strong>Class A Misdemeanor with minimum $2,000 fine and 180 days</strong> — committed for pay AND two or more prior convictions.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-13">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.13</span>
+    <span class="sec-name">MANUFACTURE, DISTRIBUTION, OR ADVERTISEMENT OF MULTICHANNEL VIDEO OR INFORMATION SERVICES DEVICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.13 – MANUFACTURE, DISTRIBUTION, OR ADVERTISEMENT OF MULTICHANNEL VIDEO OR INFORMATION SERVICES DEVICE</h3>
+<p><em>Making, importing, selling, or advertising cable TV piracy devices for profit.</em></p>
+<p>A person commits this offense if, <strong>for payment</strong>, they intentionally or knowingly manufacture, assemble, modify, import, export, distribute, advertise, or offer for sale any device, kit, or plan designed to decode encrypted cable/video/information signals — with intent to help someone commit cable theft (§31.12).</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class A Misdemeanor</strong></li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-14">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.14</span>
+    <span class="sec-name">SALE OR LEASE OF MULTICHANNEL VIDEO OR INFORMATION SERVICES DEVICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.14 – SALE OR LEASE OF MULTICHANNEL VIDEO OR INFORMATION SERVICES DEVICE</h3>
+<p><em>Selling or renting cable piracy devices with the intent to help someone steal cable service.</em></p>
+<p>A person commits this offense if they intentionally or knowingly <strong>sell or lease</strong> a device, kit, or plan designed to decode cable/video/information services — with intent to aid in cable theft (§31.12).</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class A Misdemeanor</strong></li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-15">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.15</span>
+    <span class="sec-name">POSSESSION, MANUFACTURE, OR DISTRIBUTION OF CERTAIN INSTRUMENTS USED TO COMMIT RETAIL THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.15 – POSSESSION, MANUFACTURE, OR DISTRIBUTION OF RETAIL THEFT INSTRUMENTS</h3>
+<p><em>Having or dealing in booster bags or other devices specifically designed to defeat anti-theft systems in stores.</em></p>
+<p>A person commits this offense if, <strong>with intent to use the instrument to commit theft</strong>, they:</p>
+<ul>
+  <li><strong>Possess</strong> a shielding or deactivation instrument (e.g., a foil-lined bag designed to defeat retail theft detectors, or a tool for removing security tags), OR</li>
+  <li>Knowingly <strong>manufacture, sell, offer for sale, or distribute</strong> such an instrument.</li>
+</ul>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class A Misdemeanor</strong></li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-16">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.16</span>
+    <span class="sec-name">ORGANIZED RETAIL THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.16 – ORGANIZED RETAIL THEFT</h3>
+<p><em>Coordinated shoplifting — working with others, repeat theft from merchants within 180 days, benefiting from organized theft, or swarming a store's security.</em></p>
+<p>A person commits organized retail theft if they:</p>
+<ul>
+  <li><strong>Acting in concert</strong> with one or more others, steal retail merchandise, money, or property from a merchant, OR</li>
+  <li>Steal from a merchant on <strong>two or more occasions within 180 days</strong>, OR</li>
+  <li>Knowingly <strong>benefit from</strong> organized retail theft committed by someone else, OR</li>
+  <li>Knowingly act with others to <strong>overwhelm security</strong> (including peace officers) to commit or avoid detection of retail theft.</li>
+</ul>
+<h4>Punishment Scale (by total value involved)</h4>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — under $100</li>
+  <li><strong>Class A Misdemeanor</strong> — $100 to under $750</li>
+  <li><strong>State Jail Felony</strong> — $750 to under $2,500</li>
+  <li><strong>Felony of the 3rd Degree</strong> — $2,500 to under $30,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $30,000 to under $150,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $150,000 or more</li>
+</ul>
+<h4>Notable Points</h4>
+<ul>
+  <li>It is NOT a defense that other participants weren't charged or identified.</li>
+  <li>Altering price tags or transferring merchandise to different packaging creates a presumption of intent to steal.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-17">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.17</span>
+    <span class="sec-name">UNAUTHORIZED ACQUISITION OR TRANSFER OF CERTAIN FINANCIAL INFORMATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.17 – UNAUTHORIZED ACQUISITION OR TRANSFER OF CERTAIN FINANCIAL INFORMATION</h3>
+<p><em>Skimming — using a device to capture someone's check, credit card, or debit card information without their knowledge, or passing that stolen data to someone else.</em></p>
+<p>A person commits this offense if, knowing they are not entitled to the information, they:</p>
+<ul>
+  <li><strong>Obtain</strong> financial sight order or payment card information (check data, credit/debit card numbers from the front, back, or magnetic strip) using an electronic, photographic, visual imaging, recording, or other device, OR</li>
+  <li><strong>Transfer</strong> information obtained that way to a third party.</li>
+</ul>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — for acquiring/skimming the information.</li>
+  <li><strong>Class A Misdemeanor</strong> — for transferring/selling the skimmed information to another.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-18">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.18</span>
+    <span class="sec-name">CARGO THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.18 – CARGO THEFT</h3>
+<p><em>Receiving, concealing, selling, or dealing in stolen commercial freight shipments — or a contracted driver who diverts cargo or breaks its seal.</em></p>
+<p>A person commits cargo theft if they:</p>
+<ul>
+  <li>Knowingly or intentionally receive, possess, conceal, store, barter, sell, abandon, or dispose of <strong>stolen cargo</strong> (or cargo represented as stolen), OR</li>
+  <li>Are a contracted driver for a shipment and, with intent to facilitate the above, fail to deliver the entire cargo to its destination, or break the seal on the vehicle or container.</li>
+</ul>
+<p>"Cargo" means commercial freight moving in commerce — from origin to final destination, including stops.</p>
+<h4>Punishment Scale (by total cargo value, including any vehicle stolen/damaged)</h4>
+<ul>
+  <li><strong>State Jail Felony</strong> — $1,500 to under $10,000</li>
+  <li><strong>Felony of the 3rd Degree</strong> — $10,000 to under $100,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $100,000 to under $200,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $200,000 or more</li>
+</ul>
+<h4>Enhancement</h4>
+<p>For state jail felony through 2nd degree: bumped to next higher category if the suspect <strong>organized, supervised, financed, or managed</strong> one or more others in the theft activity.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-19">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.19</span>
+    <span class="sec-name">THEFT OF PETROLEUM PRODUCT OR OIL AND GAS EQUIPMENT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.19 – THEFT OF PETROLEUM PRODUCT OR OIL AND GAS EQUIPMENT</h3>
+<p><em>Stealing crude oil, natural gas, condensate, or oilfield equipment — including pipeline tapping and unauthorized transport.</em></p>
+<p>There are two tracks:</p>
+<h4>Track A — Petroleum Product Theft</h4>
+<p>Unlawfully appropriating crude oil, natural gas, or condensate by possessing, removing, delivering, receiving, purchasing, selling, moving, concealing, transporting it — or making unauthorized connections to pipelines or tanks. Also includes transporting to disposal without knowing the original owner, buying from an unauthorized seller, or storing/trading through unauthorized methods.</p>
+<ul>
+  <li><strong>Felony of the 3rd Degree</strong> — total value under $10,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $10,000 to under $100,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $100,000 or more</li>
+</ul>
+<h4>Track B — Oil and Gas Equipment Theft</h4>
+<p>Unlawfully appropriating machinery, drilling equipment, welding equipment, pipeline equipment, pumps, vehicles, or other oilfield equipment.</p>
+<ul>
+  <li><strong>Felony of the 3rd Degree</strong> — total value under $10,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $10,000 to under $100,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $100,000 or more</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-20">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.20</span>
+    <span class="sec-name">MAIL THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.20 – MAIL THEFT</h3>
+<p><em>Stealing mail from porches, mailboxes, or in transit — whether for the contents, to steal checks/negotiable instruments, or to commit identity theft.</em></p>
+<p>A person commits this offense if they <strong>intentionally appropriate mail without the addressee's consent</strong> and with intent to:</p>
+<ul>
+  <li>Deprive the addressee of the mail, OR</li>
+  <li>Steal a negotiable instrument contained in the mail.</li>
+</ul>
+<p><strong>Presumptions:</strong> Possessing mail from 5+ addressees creates a rebuttable presumption of theft intent. Possessing mail containing 5+ negotiable instruments creates a presumption of intent to steal and to commit fraud.</p>
+<h4>Punishment (Basic — by number of addressees)</h4>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — mail from fewer than 10 addressees</li>
+  <li><strong>State Jail Felony</strong> — 10 to fewer than 30 addressees</li>
+  <li><strong>Felony of the 3rd Degree</strong> — 30 or more addressees</li>
+</ul>
+<h4>Enhanced Punishment — If committed with intent to commit identity theft (§32.51)</h4>
+<ul>
+  <li><strong>State Jail Felony</strong> — fewer than 10 addressees</li>
+  <li><strong>Felony of the 3rd Degree</strong> — 10 to fewer than 20 addressees</li>
+  <li><strong>Felony of the 2nd Degree</strong> — 20 to fewer than 50 addressees</li>
+  <li><strong>Felony of the 1st Degree</strong> — 50 or more addressees</li>
+</ul>
+<h4>Enhanced Punishment — If committed with intent to steal negotiable instruments and commit fraud (Ch. 32)</h4>
+<ul>
+  <li><strong>State Jail Felony</strong> — 5 or fewer negotiable instruments</li>
+  <li><strong>Felony of the 3rd Degree</strong> — 6 to 9 instruments</li>
+  <li><strong>Felony of the 2nd Degree</strong> — 10 to 49 instruments</li>
+  <li><strong>Felony of the 1st Degree</strong> — 50 or more instruments</li>
+</ul>
+<h4>Further Enhancement</h4>
+<p>Identity theft or negotiable instrument offenses (state jail through 2nd degree): bumped one level higher if the victim was a <strong>disabled or elderly individual</strong>.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-21">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.21</span>
+    <span class="sec-name">UNAUTHORIZED POSSESSION OF CATALYTIC CONVERTER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.21 – UNAUTHORIZED POSSESSION OF CATALYTIC CONVERTER</h3>
+<p><em>Having a catalytic converter that has been cut off a vehicle, unless you're the vehicle owner or in the legitimate recycling/scrap business.</em></p>
+<p>A person commits this offense if they intentionally or knowingly <strong>possess a catalytic converter that has been removed from a motor vehicle</strong> and are not authorized to possess it.</p>
+<p>A person is <strong>presumed authorized</strong> if they are:</p>
+<ul>
+  <li>The owner of the vehicle it was removed from, OR</li>
+  <li>A business in the ordinary course of their work (including licensed metal recycling entities).</li>
+</ul>
+<p>The presumption does NOT apply to business owners who know the converter was unlawfully obtained.</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>State Jail Felony</strong> — base offense.</li>
+  <li><strong>Felony of the 3rd Degree</strong> if:
+    <ul>
+      <li>Prior conviction under this section, OR</li>
+      <li>The offense involved conspiracy to commit criminal mischief or theft related to a catalytic converter, OR</li>
+      <li>Suspect possessed a <strong>firearm</strong> during the offense.</li>
+    </ul>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-22">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.22</span>
+    <span class="sec-name">UNAUTHORIZED POSSESSION OF CERTAIN COPPER OR BRASS MATERIAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.22 – UNAUTHORIZED POSSESSION OF CERTAIN COPPER OR BRASS MATERIAL</h3>
+<p><em>Possessing copper or brass wire, cable, or fittings without being an authorized user — targeting scrap metal theft.</em></p>
+<p>A person commits this offense if they intentionally or knowingly <strong>possess copper or brass material</strong> without being authorized to do so. Authorized persons include the owner, utilities, telecoms, cable providers, manufacturers, licensed metal recyclers, construction/demolition workers acquiring material in scope of work, and their agents.</p>
+<p>The authorization does NOT apply to anyone who <strong>knows the material was unlawfully obtained</strong>.</p>
+<h4>Punishment</h4>
+<ul>
+  <li><strong>State Jail Felony</strong> — base offense.</li>
+  <li><strong>Felony of the 3rd Degree</strong> if:
+    <ul>
+      <li>The material was stolen from a <strong>critical infrastructure facility</strong>, OR</li>
+      <li>Suspect has a prior conviction under this section or prior theft/mischief conviction involving copper or brass, OR</li>
+      <li>Offense involved conspiracy or criminal organization activity, OR</li>
+      <li>Suspect possessed a <strong>firearm</strong> during the offense.</li>
+    </ul>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-31-23">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§31.23</span>
+    <span class="sec-name">REAL PROPERTY THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§31.23 – REAL PROPERTY THEFT</h3>
+<p><em>Deed fraud — forging or falsifying the transfer of real estate to steal land or a home from its rightful owner, or fraudulently selling property you don't own.</em></p>
+<p>There are two tracks:</p>
+<h4>Track 1 — Stealing Real Property (Deed Fraud)</h4>
+<p>Bringing about or attempting a transfer of real property, title, or a nonpossessory interest in real property without the owner's effective consent and with intent to deprive the owner.</p>
+<ul>
+  <li><strong>Felony of the 2nd Degree</strong> — market value under $300,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — market value $300,000 or more</li>
+</ul>
+<h4>Track 2 — Fraudulent Sale of Another's Property</h4>
+<p>Selling or encumbering real property or a nonpossessory interest without the true owner's consent and in exchange for a benefit (such as selling someone else's house and pocketing the proceeds).</p>
+<ul>
+  <li><strong>Felony of the 3rd Degree</strong> — benefit value under $30,000</li>
+  <li><strong>Felony of the 2nd Degree</strong> — $30,000 to under $150,000</li>
+  <li><strong>Felony of the 1st Degree</strong> — $150,000 or more</li>
+</ul>
+<h4>Enhancement (bumped one level higher) if victim was:</h4>
+<ul>
+  <li>An <strong>elderly individual</strong>, a <strong>disabled individual</strong>, or a <strong>nonprofit organization</strong>, OR</li>
+  <li>The property was subject to a homestead property tax exemption.</li>
+</ul>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>

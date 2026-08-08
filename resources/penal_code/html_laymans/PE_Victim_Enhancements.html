@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>TX Penal Code — Victim-Status Enhancements</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;
+  --child:#b5390a;--elderly:#1a5c2a;--disabled:#5a2d82;
+  --child-bg:#fff0eb;--elderly-bg:#eafaf0;--disabled-bg:#f3eeff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px;}
+header h1{font-size:1.1rem;font-weight:800;}
+header p{font-size:.8rem;opacity:.75;margin-top:3px;}
+
+/* ── filter bar ── */
+.filter-bar{background:var(--white);border-bottom:2px solid var(--gold);padding:12px 20px;
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.1);}
+.filter-bar label{font-size:.8rem;font-weight:700;color:#546e7a;white-space:nowrap;}
+.type-btns{display:flex;gap:6px;flex-wrap:wrap;}
+.type-btn{padding:5px 14px;border-radius:14px;border:2px solid #ccc;background:#fff;
+  font-size:.8rem;font-weight:700;cursor:pointer;transition:all .15s;}
+.type-btn[data-type="all"]   {border-color:#455a64;color:#455a64;}
+.type-btn[data-type="child"] {border-color:var(--child);color:var(--child);}
+.type-btn[data-type="elderly"]{border-color:var(--elderly);color:var(--elderly);}
+.type-btn[data-type="disabled"]{border-color:var(--disabled);color:var(--disabled);}
+.type-btn.active[data-type="all"]    {background:#455a64;color:#fff;border-color:#455a64;}
+.type-btn.active[data-type="child"]  {background:var(--child);color:#fff;}
+.type-btn.active[data-type="elderly"]{background:var(--elderly);color:#fff;}
+.type-btn.active[data-type="disabled"]{background:var(--disabled);color:#fff;}
+#ch-filter{padding:6px 10px;border-radius:8px;border:2px solid #b0bec5;
+  font-size:.83rem;color:var(--blue);background:#fff;min-width:150px;}
+#ch-filter:focus{border-color:var(--blue);outline:none;}
+#match-count{font-size:.78rem;color:#78909c;white-space:nowrap;}
+
+/* ── cards ── */
+main{max-width:900px;margin:0 auto;padding:20px 16px 60px;}
+.offense-card{background:var(--white);border-radius:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:16px;overflow:hidden;}
+.offense-header{padding:12px 16px;cursor:pointer;display:flex;
+  align-items:center;gap:10px;border-bottom:1px solid #e8ecf0;}
+.offense-header:hover{background:#f8f9fc;}
+.sec-badge{font-size:.72rem;font-weight:800;background:var(--blue);color:#fff;
+  padding:2px 8px;border-radius:8px;white-space:nowrap;}
+.offense-name{font-size:.92rem;font-weight:700;flex:1;}
+.type-chips{display:flex;gap:4px;flex-wrap:wrap;}
+.chip{font-size:.68rem;font-weight:800;padding:2px 7px;border-radius:8px;}
+.chip-child   {background:var(--child-bg);color:var(--child);}
+.chip-elderly {background:var(--elderly-bg);color:var(--elderly);}
+.chip-disabled{background:var(--disabled-bg);color:var(--disabled);}
+.toggle-icon{font-size:1.1rem;color:#90a4ae;transition:transform .2s;flex-shrink:0;}
+.offense-header.open .toggle-icon{transform:rotate(180deg);}
+
+.offense-body{display:none;padding:16px 18px;}
+.offense-body.open{display:block;}
+
+/* base box */
+.base-box{background:#f4f6f9;border-radius:8px;padding:10px 14px;margin-bottom:14px;}
+.base-box .base-label{font-size:.72rem;font-weight:800;text-transform:uppercase;
+  color:#78909c;letter-spacing:.05em;margin-bottom:4px;}
+.base-box .base-grade{font-size:.9rem;font-weight:800;}
+.base-box .base-conduct{font-size:.82rem;color:#546e7a;margin-top:3px;line-height:1.5;}
+
+/* tree connector */
+.tree-wrap{padding-left:18px;border-left:2px dashed #c8d0da;margin-left:10px;}
+.enh-node{position:relative;margin-bottom:10px;}
+.enh-node::before{content:'';position:absolute;left:-18px;top:16px;
+  width:14px;height:2px;background:#c8d0da;}
+
+.enh-card{border-radius:8px;border:2px solid #e0e4ea;overflow:hidden;}
+.enh-card.type-child   {border-color:var(--child);}
+.enh-card.type-elderly {border-color:var(--elderly);}
+.enh-card.type-disabled{border-color:var(--disabled);}
+.enh-top{display:flex;align-items:center;gap:8px;padding:8px 12px;}
+.victim-pill{font-size:.72rem;font-weight:800;padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.vp-child   {background:var(--child-bg);color:var(--child);}
+.vp-elderly {background:var(--elderly-bg);color:var(--elderly);}
+.vp-disabled{background:var(--disabled-bg);color:var(--disabled);}
+.enh-arrow{font-size:1rem;color:#90a4ae;}
+.grade-result{font-size:.85rem;font-weight:800;}
+.enh-detail{padding:6px 12px 10px;font-size:.8rem;color:#546e7a;line-height:1.55;
+  border-top:1px solid #f0f2f5;}
+.conduct-tag{font-size:.75rem;font-style:italic;color:#78909c;margin-top:3px;}
+.enh-note{font-size:.75rem;color:#78909c;font-style:italic;margin-top:3px;}
+
+.notes-box{background:#f4f6f9;border-left:3px solid var(--gold);border-radius:6px;
+  padding:8px 12px;font-size:.78rem;color:#546e7a;line-height:1.5;margin-top:12px;}
+
+.grade-color-Capital   {color:#5b0080;}
+.grade-color-F1        {color:#8b0000;}
+.grade-color-F2        {color:#7b3a00;}
+.grade-color-F3        {color:#1a5c2a;}
+.grade-color-SJF       {color:#1a3a5c;}
+.grade-color-MA        {color:#5a2d82;}
+.grade-color-MB        {color:#6b5000;}
+.grade-color-MC        {color:#3a3a3a;}
+
+@media(max-width:560px){
+  .offense-name{font-size:.84rem;}
+  .offense-body{padding:12px 12px;}
+  .tree-wrap{padding-left:12px;}
+}
+
+</style>
+</head>
+<body>
+<header>
+  <h1>TX Penal Code — Victim-Status Enhancements</h1>
+  <p>Offenses enhanced by victim age (child / under-X), elderly status (65+), or disability — across all chapters</p>
+</header>
+<div class='filter-bar'>
+  <label>Victim type:</label>
+  <div class='type-btns'>
+    <button class='type-btn active' data-type='all'>All</button>
+    <button class='type-btn' data-type='child'>&#x1F9D2; Child / Age-Based</button>
+    <button class='type-btn' data-type='elderly'>&#x1F9D3; Elderly (65+)</button>
+    <button class='type-btn' data-type='disabled'>&#x267F; Disabled</button>
+  </div>
+  <label for='ch-filter'>Chapter:</label>
+  <select id='ch-filter'><option value='all'>All Chapters</option></select>
+  <span id='match-count'></span>
+</div>
+<main>
+  <div id='cards'></div>
+</main>
+<script>
+
+var DATA = [{"sec": "19.03", "ch": "19", "offense_name": "CAPITAL MURDER", "victim_types": ["child"], "base": {"grade": "Felony of the 1st Degree", "conduct": "intentionally or knowingly causes the death of an individual", "conditions": "Murder under \u00a719.02 elevated to capital murder by any \u00a719.03(a) element"}, "enhancements": [{"victim_label": "child under 10", "trigger": "victim of the murder is a child younger than 10 years of age [\u00a719.03(a)(8)]", "conduct_required": "intentionally causes death of child under 10", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Capital Felony", "notes": "No minimum age on the actor."}, {"victim_label": "child 10-14", "trigger": "victim is a child 10 years of age or older but younger than 15 [\u00a719.03(a)(9)]", "conduct_required": "intentionally causes death of child aged 10-14", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Capital Felony", "notes": "Added by 2023 legislature."}], "notes": "Capital felony is punishable by death or life without parole."}, {"sec": "20.02", "ch": "20", "offense_name": "UNLAWFUL RESTRAINT", "victim_types": ["child"], "base": {"grade": "Class A Misdemeanor", "conduct": "intentionally or knowingly restrains another person", "conditions": "Base offense \u2014 victim is an adult"}, "enhancements": [{"victim_label": "child under 17", "trigger": "person restrained is a child younger than 17 years of age [\u00a720.02(c)(1)]", "conduct_required": "intentionally or knowingly restrains child under 17", "base_grade": "Class A Misdemeanor", "enhanced_grade": "State Jail Felony", "notes": ""}], "notes": ""}, {"sec": "20.05", "ch": "20", "offense_name": "SMUGGLING OF PERSONS", "victim_types": ["child"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "uses a motor vehicle, aircraft, watercraft, or other means of conveyance to transport an individual with intent to conceal from authorities or for pecuniary benefit", "conditions": "Base offense \u2014 smuggled individual is an adult"}, "enhancements": [{"victim_label": "child under 18", "trigger": "the individual being smuggled is a child younger than 18 years of age [\u00a720.05(b)(1)(B)]", "conduct_required": "smuggles child under 18", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 2nd Degree", "notes": "Base F3 carries mandatory minimum of 2 years (\u00a720.05(c)). F2 enhancement also carries mandatory minimum of 10 years."}], "notes": ""}, {"sec": "20.06", "ch": "20", "offense_name": "CONTINUOUS SMUGGLING OF PERSONS", "victim_types": ["child"], "base": {"grade": "Felony of the 2nd Degree", "conduct": "during a period of 30 or more days, engages two or more times in conduct that constitutes an offense under \u00a720.05", "conditions": "Base offense \u2014 smuggled individuals are adults; mandatory minimum 10 years [\u00a720.06(d)]"}, "enhancements": [{"victim_label": "child under 18", "trigger": "one of the smuggled individuals is a child younger than 18 [\u00a720.06(f)(2)]", "conduct_required": "continuous smuggling involving child under 18", "base_grade": "Felony of the 2nd Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "F1 also carries mandatory minimum of 10 years."}], "notes": ""}, {"sec": "20A.02", "ch": "20A", "offense_name": "TRAFFICKING OF PERSONS", "victim_types": ["child", "disabled"], "base": {"grade": "Felony of the 2nd Degree", "conduct": "knowingly traffics another person with intent to use or facilitate use in forced labor, sexual conduct, or other trafficking purposes [\u00a720A.02(a)(1)-(4)]", "conditions": "Base offense \u2014 victim is an adult without disability"}, "enhancements": [{"victim_label": "child or disabled individual", "trigger": "victim is a child (younger than 18) or a disabled individual [as defined by \u00a722.021(b)], under \u00a720A.02(a)(5)-(8), regardless of whether actor knew age or disability [\u00a720A.02(b)(1)]", "conduct_required": "traffics child or disabled individual", "base_grade": "Felony of the 2nd Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Knowledge of age or disability is not required. 'Disabled individual' under \u00a720A.01 has same meaning as \u00a722.021(b)."}], "notes": ""}, {"sec": "21.02", "ch": "21", "offense_name": "CONTINUOUS SEXUAL ABUSE OF YOUNG CHILD OR DISABLED INDIVIDUAL", "victim_types": ["child", "disabled"], "base": {"grade": "Felony of the 1st Degree", "conduct": "during a period 30 or more days, commits two or more acts of sexual abuse against same victim", "conditions": "Victim must be child younger than 14 years of age OR a disabled individual \u2014 no base offense exists without this victim-status element"}, "enhancements": [], "notes": "Punishable by life or any term of not more than 99 years or less than 25 years. Constitutive offense \u2014 victim status is an element, not an enhancement on top of another offense."}, {"sec": "21.11", "ch": "21", "offense_name": "INDECENCY WITH A CHILD", "victim_types": ["child"], "base": {"grade": "Felony of the 2nd Degree (contact) / Felony of the 3rd Degree (exposure)", "conduct": "(a)(1) engages in sexual contact with child or causes child to engage in sexual contact; (a)(2) exposes genitals or anus to child or causes child to expose", "conditions": "Victim must be child younger than 17 years of age \u2014 constitutive element. Applies even if actor does not know child's age."}, "enhancements": [], "notes": "'Child' means person younger than 17 years. \u00a721.11(a)(1) sexual contact = F2; \u00a721.11(a)(2) exposure = F3. Defense: actor not more than 3 years older and of opposite sex and in dating relationship (\u00a721.11(b))."}, {"sec": "22.01", "ch": "22", "offense_name": "ASSAULT", "victim_types": ["elderly", "disabled"], "base": {"grade": "Class C Misdemeanor", "conduct": "intentionally or knowingly threatens another with imminent bodily injury, or intentionally or knowingly causes physical contact with another that the actor knows or reasonably believes the other will find provocative or offensive [\u00a722.01(a)(2)-(3)]", "conditions": "Base grade when victim is not in a protected class"}, "enhancements": [{"victim_label": "elderly or disabled individual", "trigger": "the victim is an elderly individual or a disabled individual as defined by \u00a722.04 [\u00a722.01(a)(3) cross-reference]", "conduct_required": "threatens or causes offensive/provocative contact with elderly or disabled individual", "base_grade": "Class C Misdemeanor", "enhanced_grade": "Class A Misdemeanor", "notes": "Elderly = 65+; disabled defined by \u00a722.04(c)(3)."}], "notes": "Enhancement applies specifically to \u00a722.01(a)(3) threatening/offensive contact, not to bodily injury under \u00a722.01(a)(1)."}, {"sec": "22.012", "ch": "22", "offense_name": "INDECENT ASSAULT", "victim_types": ["elderly", "disabled"], "base": {"grade": "Class A Misdemeanor", "conduct": "without consent, touches anus, breast, or genitals of another, or causes another to touch actor's or a third person's anus, breast, or genitals, with intent to arouse or gratify sexual desire", "conditions": "Base offense when victim is not elderly or disabled"}, "enhancements": [{"victim_label": "elderly or disabled individual", "trigger": "victim is a disabled individual or an elderly individual as defined by \u00a722.04", "conduct_required": "indecent assault of elderly or disabled individual", "base_grade": "Class A Misdemeanor", "enhanced_grade": "Felony of the 2nd Degree", "notes": "Jumps two grade levels."}], "notes": ""}, {"sec": "22.021", "ch": "22", "offense_name": "AGGRAVATED SEXUAL ASSAULT", "victim_types": ["child", "elderly", "disabled"], "base": {"grade": "Felony of the 1st Degree", "conduct": "commits sexual assault and uses or exhibits a deadly weapon, causes SBI, threatens to kill, acts in concert with another, etc. [\u00a722.021(a)(1)]", "conditions": "All \u00a722.021 offenses are F1; victim status elements in \u00a722.021(a)(2) create alternative basis for the offense; \u00a722.021(f) increases mandatory minimum based on victim age"}, "enhancements": [{"victim_label": "child under 14", "trigger": "victim is a child younger than 14 years of age [\u00a722.021(a)(2)(A)]", "conduct_required": "commits sexual assault of child under 14 (no aggravating circumstances required beyond victim age)", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Felony of the 1st Degree (mandatory minimum 25 years if victim under 10 or under 14 with specific aggravated conduct [\u00a722.021(f)])", "notes": "No separate grade increase; minimum sentence increases based on victim age under \u00a722.021(f). Victim age removes the need for the aggravating circumstances required by \u00a722.021(a)(1)."}, {"victim_label": "elderly individual", "trigger": "victim is an elderly individual as defined by \u00a722.04(c) (65 years or older) [\u00a722.021(a)(2)(C)]", "conduct_required": "commits sexual assault of elderly individual (no aggravating circumstances required beyond victim status)", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Victim status removes need for aggravating circumstances of \u00a722.021(a)(1). 'Elderly individual' = 65+ per \u00a722.04(c)."}, {"victim_label": "disabled individual", "trigger": "victim is a disabled individual [\u00a722.021(a)(2)(C)] \u2014 defined as person older than 13 who by reason of age, physical or mental disease, defect, or injury is substantially unable to protect self or provide self-care [\u00a722.021(b)(3)]", "conduct_required": "commits sexual assault of disabled individual (no aggravating circumstances required beyond victim status)", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Disabled individual definition for \u00a722.021 differs slightly from \u00a722.04 definition."}], "notes": "\u00a722.021(f): punishment is life or 25-99 years (not less than 25) if victim is younger than 6, or if victim is younger than 14 and offense committed in aggravated manner described by \u00a722.021(a)(2)(A)."}, {"sec": "22.04", "ch": "22", "offense_name": "INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL", "victim_types": ["child", "elderly", "disabled"], "base": {"grade": "State Jail Felony (criminal negligence)", "conduct": "intentionally, knowingly, recklessly, or with criminal negligence, by act or omission, causes bodily injury, serious bodily injury, or serious mental deficiency/impairment/injury to victim", "conditions": "Victim must be: child (14 years or younger), elderly individual (65+), or disabled individual as defined by \u00a722.04(c). All grades require victim status as an element."}, "enhancements": [{"victim_label": "child, elderly, or disabled individual", "trigger": "serious bodily injury or serious mental deficiency/impairment/injury [\u00a722.04(a)(1)-(2)], intentionally or knowingly", "conduct_required": "intentionally or knowingly causes serious bodily injury or serious mental deficiency/impairment/injury", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "Felony of the 1st Degree", "notes": ""}, {"victim_label": "child, elderly, or disabled individual", "trigger": "serious bodily injury or serious mental deficiency/impairment/injury [\u00a722.04(a)(1)-(2)], recklessly", "conduct_required": "recklessly causes serious bodily injury or serious mental deficiency/impairment/injury", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "Felony of the 2nd Degree", "notes": ""}, {"victim_label": "child, elderly, or disabled individual", "trigger": "bodily injury [\u00a722.04(a)(3)], intentionally or knowingly", "conduct_required": "intentionally or knowingly causes bodily injury", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "Felony of the 3rd Degree (or F2 if victim is disabled individual in \u00a722.04(d) residential/day-activity facility and actor is employee with direct care duties)", "notes": ""}, {"victim_label": "child, elderly, or disabled individual", "trigger": "bodily injury [\u00a722.04(a)(3)], recklessly, or any harm with criminal negligence", "conduct_required": "recklessly causes bodily injury, or causes injury/harm with criminal negligence", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "State Jail Felony", "notes": ""}], "notes": "Child = 14 years or younger [\u00a722.04(c)(1)]; Elderly individual = 65 years or older [\u00a722.04(c)(2)]; Disabled individual includes persons with autism spectrum disorder, developmental disability, intellectual disability, severe emotional disturbance, traumatic brain injury, or mental illness, or who is substantially unable to protect self or provide food, shelter, or medical care due to age or physical/mental disease, defect, or injury [\u00a722.04(c)(3)]."}, {"sec": "22.041", "ch": "22", "offense_name": "ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL", "victim_types": ["child", "elderly", "disabled"], "base": {"grade": "Class A Misdemeanor", "conduct": "intentionally, knowingly, recklessly, or with criminal negligence, by act or omission, engages in conduct that places a child, elderly individual, or disabled individual in imminent danger of harm", "conditions": "Endangerment [\u00a722.041(c)]: Class A misdemeanor. Abandonment has separate, higher grade ladder."}, "enhancements": [{"victim_label": "child, elderly, or disabled individual", "trigger": "abandonment with intent to return [\u00a722.041(d)(1)]", "conduct_required": "abandons child/elderly/disabled individual in any place under circumstances that expose the individual to unreasonable risk of harm, with intent to return", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "State Jail Felony", "notes": ""}, {"victim_label": "child, elderly, or disabled individual", "trigger": "abandonment without intent to return [\u00a722.041(d)(2)]", "conduct_required": "abandons child/elderly/disabled individual without intent to return", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "Felony of the 3rd Degree", "notes": ""}, {"victim_label": "child, elderly, or disabled individual", "trigger": "abandonment creating imminent danger of death or bodily injury/impairment [\u00a722.041(e)]", "conduct_required": "abandons and exposes individual to imminent danger of death or SBI", "base_grade": "N/A \u2014 constitutive offense", "enhanced_grade": "Felony of the 2nd Degree", "notes": ""}], "notes": "Victim definitions track \u00a722.04(c): child = 14 or younger; elderly = 65+; disabled = per \u00a722.04(c)(3)."}, {"sec": "25.01", "ch": "25", "offense_name": "BIGAMY", "victim_types": ["child"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "is legally married and purports to marry or does marry another in this state, or being legally married enters into a cohabitation relationship with another not the spouse", "conditions": "Base offense \u2014 other person is 18 years of age or older"}, "enhancements": [{"victim_label": "person 17 years of age", "trigger": "the other person is 17 years of age [\u00a725.01(e)(1)]", "conduct_required": "bigamy with person aged 17", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 2nd Degree", "notes": ""}, {"victim_label": "person 16 or younger", "trigger": "the other person is 16 years of age or younger [\u00a725.01(e)(2)]", "conduct_required": "bigamy with person 16 or younger", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": ""}], "notes": ""}, {"sec": "29.03", "ch": "29", "offense_name": "AGGRAVATED ROBBERY", "victim_types": ["elderly", "disabled"], "base": {"grade": "Felony of the 2nd Degree", "conduct": "commits robbery as defined by \u00a729.02", "conditions": "Robbery (\u00a729.02) = F2. Aggravated Robbery (\u00a729.03) = F1. Victim being 65+ or disabled is one of the elements that elevates robbery to aggravated robbery."}, "enhancements": [{"victim_label": "person 65 years of age or older", "trigger": "the person robbed is 65 years of age or older [\u00a729.03(a)(3)(A)]", "conduct_required": "commits robbery (intentionally, knowingly, or recklessly causes bodily injury, or threatens with imminent bodily injury or death) against victim 65+", "base_grade": "Felony of the 2nd Degree (robbery)", "enhanced_grade": "Felony of the 1st Degree (aggravated robbery)", "notes": ""}, {"victim_label": "disabled person", "trigger": "the person robbed is a disabled person [\u00a729.03(a)(3)(B)]; 'disabled person' = individual with a mental, physical, or developmental disability who is substantially unable to protect himself from harm [\u00a729.03(c)]", "conduct_required": "commits robbery against disabled person", "base_grade": "Felony of the 2nd Degree (robbery)", "enhanced_grade": "Felony of the 1st Degree (aggravated robbery)", "notes": "Definition of 'disabled person' in \u00a729.03(c) is narrower than \u00a722.04 definition."}], "notes": ""}, {"sec": "31.03", "ch": "31", "offense_name": "THEFT", "victim_types": ["elderly"], "base": {"grade": "Class C Misdemeanor through Felony of the 2nd Degree (based on value)", "conduct": "unlawfully appropriates property with intent to deprive the owner", "conditions": "Grade ladder under \u00a731.03(e): Class C (<$100), Class B ($100-<$750), Class A ($750-<$2,500), State Jail ($2,500-<$30,000), F3 ($30,000-<$150,000), F2 ($150,000-<$300,000), F1 ($300,000+)"}, "enhancements": [{"victim_label": "elderly individual", "trigger": "the owner of the property appropriated was an elderly individual as defined by \u00a722.04 (65+) at the time of the offense [\u00a731.03(f)(3)(A)]", "conduct_required": "theft where owner is elderly individual", "base_grade": "Applicable grade under \u00a731.03(e)(1)-(6)", "enhanced_grade": "Next higher category of offense", "notes": "Enhancement applies to grades (e)(1)-(6) only; F1 base grade (e)(7) is not subject to further enhancement by this provision. Not applicable to other victim-status categories \u2014 only elderly, not disabled."}], "notes": ""}, {"sec": "31.20", "ch": "31", "offense_name": "MAIL THEFT", "victim_types": ["elderly", "disabled"], "base": {"grade": "State Jail Felony through Felony of the 2nd Degree (based on number of items/value)", "conduct": "intentionally or knowingly steals mail from a mailbox, collection box, mail carrier, or postal vehicle", "conditions": "Grade ladder under \u00a731.20(d): State Jail, F3, F2 based on quantity/value"}, "enhancements": [{"victim_label": "elderly or disabled individual", "trigger": "actor knew or had reason to believe the addressee was a disabled individual or elderly individual as defined by \u00a722.04 [\u00a731.20(e)]", "conduct_required": "mail theft targeting elderly or disabled addressee", "base_grade": "Applicable grade under \u00a731.20(d)(1)-(3)", "enhanced_grade": "Next higher category of offense", "notes": "Applies to mail theft. \u00a731.20(e-1) has identical enhancement for theft of negotiable instruments. Both elderly and disabled qualify."}], "notes": "\u00a731.20(e-1): same next-higher-category enhancement applies when stolen item is a negotiable instrument and addressee is elderly or disabled individual."}, {"sec": "31.23", "ch": "31", "offense_name": "REAL PROPERTY THEFT", "victim_types": ["elderly", "disabled"], "base": {"grade": "Felony of the 2nd Degree or Felony of the 1st Degree (\u00a731.23(b)(1), market value based); Felony of the 3rd Degree through Felony of the 1st Degree (\u00a731.23(b)(2), benefit value based)", "conduct": "brings about or attempts transfer of real property without effective consent of owner with intent to deprive; or sells/transfers/encumbers real property without consent of owner of benefit", "conditions": "Grade based on market value of real property or value of benefit received"}, "enhancements": [{"victim_label": "elderly or disabled individual", "trigger": "owner of the real property or nonpossessory interest, or owner of the benefit, was an elderly individual or disabled individual as defined by \u00a722.04 [\u00a731.23(e)(1)(A)-(B)]", "conduct_required": "real property theft where owner is elderly or disabled", "base_grade": "Applicable grade under \u00a731.23(c) or (d)", "enhanced_grade": "Next higher category of offense", "notes": "Added by 2025 legislature. Applies to both elderly and disabled victims."}], "notes": "Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 16, effective December 4, 2025."}, {"sec": "32.21", "ch": "32", "offense_name": "FORGERY", "victim_types": ["elderly"], "base": {"grade": "State Jail Felony (base) or F3/F2 based on type of writing, or value ladder under \u00a732.21(e-1)", "conduct": "forges a writing with intent to defraud or harm another", "conditions": "Grade depends on type of writing: SJF (default), F3 (wills, deeds, credit cards, checks, commercial instruments), F2 (government securities, government records, stocks/bonds). If actor engaged in conduct to obtain property/service, value ladder applies."}, "enhancements": [{"victim_label": "elderly individual", "trigger": "offense was committed against an elderly individual as defined by \u00a722.04 [\u00a732.21(e-2)]", "conduct_required": "forgery targeting elderly individual", "base_grade": "Applicable grade (SJF, F3, F2, or value-ladder grades except F1)", "enhanced_grade": "Next higher category of offense", "notes": "Enhancement does NOT apply to an offense punishable as F1 under the value ladder (\u00a732.21(e-1)(6)). 'Elderly individual' = 65+."}], "notes": ""}, {"sec": "32.31", "ch": "32", "offense_name": "CREDIT CARD OR DEBIT CARD ABUSE", "victim_types": ["elderly"], "base": {"grade": "State Jail Felony", "conduct": "with fraudulent intent, presents, uses, or possesses another's credit or debit card; buys or sells a card; or uses cardholder's card without consent [\u00a732.31(a) various subsections]", "conditions": "Base offense \u2014 victim is not an elderly individual"}, "enhancements": [{"victim_label": "elderly individual", "trigger": "offense was committed against an elderly individual as defined by \u00a722.04 [\u00a732.31(d)]", "conduct_required": "credit/debit card abuse targeting elderly individual", "base_grade": "State Jail Felony", "enhanced_grade": "Felony of the 3rd Degree", "notes": "Expressly states 'felony of the third degree' rather than 'next higher category' language."}], "notes": ""}, {"sec": "32.45", "ch": "32", "offense_name": "MISAPPLICATION OF FIDUCIARY PROPERTY OR PROPERTY OF FINANCIAL INSTITUTION", "victim_types": ["elderly"], "base": {"grade": "Class C Misdemeanor through Felony of the 1st Degree (value-based ladder)", "conduct": "intentionally, knowingly, or recklessly misapplies property held as a fiduciary or property of a financial institution in a manner involving substantial risk of loss to the owner", "conditions": "Grade ladder: Class C (<$100), Class B ($100-<$750), Class A ($750-<$2,500), SJF ($2,500-<$30,000), F3 ($30,000-<$150,000), F2 ($150,000-<$300,000), F1 ($300,000+)"}, "enhancements": [{"victim_label": "elderly individual", "trigger": "offense was committed against an elderly individual as defined by \u00a722.04 [\u00a732.45(d)]", "conduct_required": "misapplication of fiduciary property against elderly individual", "base_grade": "Applicable grade under \u00a732.45(c)(1)-(6)", "enhanced_grade": "Next higher category of offense", "notes": "Applies to grades (c)(1)-(6) only; F1 base grade is not subject to further enhancement."}], "notes": ""}, {"sec": "32.46", "ch": "32", "offense_name": "FRAUDULENT SECURING OF DOCUMENT EXECUTION", "victim_types": ["elderly"], "base": {"grade": "Class C Misdemeanor through Felony of the 1st Degree (\u00a7(a)(1)); State Jail Felony (\u00a7(a)(2))", "conduct": "(a)(1) causes another person, without effective consent, to sign or execute any document affecting property or pecuniary interest; (a)(2) causes a public servant to file or record a purported judgment from a fake court", "conditions": "Grade for (a)(1) based on value of property/service/pecuniary interest. (a)(2) is a flat State Jail Felony."}, "enhancements": [{"victim_label": "elderly individual", "trigger": "offense was committed against an elderly individual as defined by \u00a722.04 [\u00a732.46(c-1)]", "conduct_required": "fraudulently secures document execution from elderly individual", "base_grade": "Applicable grade under \u00a732.46(b)(1)-(6) or \u00a732.46(c)", "enhanced_grade": "Next higher category of offense", "notes": "Applies to (b)(1)-(6) and (c). Enhancement also triggers if offense involves state Medicaid program."}], "notes": ""}, {"sec": "32.51", "ch": "32", "offense_name": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION", "victim_types": ["elderly", "child"], "base": {"grade": "State Jail Felony through Felony of the 1st Degree (quantity-based ladder)", "conduct": "with intent to harm or defraud another, obtains, possesses, transfers, or uses identifying information of another person without consent; or identifying information of a deceased person; or identifying information of a child younger than 18", "conditions": "Grade: SJF (<5 items), F3 (5-<10), F2 (10-<50), F1 (50+)"}, "enhancements": [{"victim_label": "elderly individual", "trigger": "offense was committed against an elderly individual as defined by \u00a722.04 [\u00a732.51(c-1)(1)]", "conduct_required": "fraudulent use of identifying information targeting elderly individual", "base_grade": "Applicable grade under \u00a732.51(c)(1)-(3)", "enhanced_grade": "Next higher category of offense", "notes": "Applies to grades (c)(1)-(3); F1 base grade (c)(4) is not subject to further enhancement."}], "notes": "\u00a732.51(b)(3): identifying information of a child younger than 18 is a constitutive offense element \u2014 the same grade ladder applies regardless of victim's age; no separate elevated grade for child victims. Child under 18 provision creates liability even without proof of 'harm or defraud' intent toward the child specifically."}, {"sec": "32.53", "ch": "32", "offense_name": "EXPLOITATION OF CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL", "victim_types": ["child", "elderly", "disabled"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "intentionally, knowingly, or recklessly causes the exploitation of a child, elderly individual, or disabled individual", "conditions": "Victim must be child, elderly individual, or disabled individual as defined by \u00a722.04 \u2014 constitutive element. 'Exploitation' = illegal or improper use of victim or victim's resources for monetary or personal benefit, profit, or gain."}, "enhancements": [], "notes": "Constitutive offense \u2014 no base offense without victim-status element. F3 flat. Definitions track \u00a722.04."}, {"sec": "32.55", "ch": "32", "offense_name": "FINANCIAL ABUSE OF ELDERLY INDIVIDUAL", "victim_types": ["elderly"], "base": {"grade": "Class B Misdemeanor through Felony of the 1st Degree (value-based ladder)", "conduct": "knowingly engages in financial abuse of an elderly individual", "conditions": "Victim must be elderly individual (65+) \u2014 constitutive element. 'Financial abuse' = wrongful taking, appropriation, obtaining, retention, or use of money or property by any means, including undue influence."}, "enhancements": [], "notes": "Constitutive offense \u2014 no base offense without elderly victim. Grade: Class B (<$100), Class A ($100-<$750), SJF ($750-<$2,500), F3 ($2,500-<$30,000), F2 ($30,000-<$150,000), F1 ($150,000+). Rebuttable presumption of wrongfulness if victim had diagnosed dementia/Alzheimer's and actor knew or should have known [\u00a732.55(f)]."}, {"sec": "32.60", "ch": "32", "offense_name": "REAL PROPERTY FRAUD", "victim_types": ["elderly", "disabled"], "base": {"grade": "Felony of the 2nd Degree or Felony of the 1st Degree (value-based)", "conduct": "makes materially false or misleading written statement to obtain real property; or with intent to defraud, causes another to sign document affecting real property without effective consent; or causes public servant to record false judgment regarding real property", "conditions": "F2 if market value of real property is less than $300,000; F1 if $300,000 or more"}, "enhancements": [{"victim_label": "elderly or disabled individual", "trigger": "owner of the real property was an elderly individual or disabled individual as defined by \u00a722.04 [\u00a732.60(d)(1)(A)-(B)]", "conduct_required": "real property fraud against elderly or disabled owner", "base_grade": "F2 (<$300,000) or F1 ($300,000+)", "enhanced_grade": "Next higher category of offense", "notes": "Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 16, effective December 4, 2025. F1 base escalates to Capital Felony under 'next higher category' rule if victim is elderly/disabled."}], "notes": "Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 16, eff. December 4, 2025."}, {"sec": "33.021", "ch": "33", "offense_name": "ONLINE SOLICITATION OF A MINOR", "victim_types": ["child"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "with intent to arouse or gratify sexual desire, communicates in sexually explicit manner with a minor or distributes sexually explicit material to minor; or solicits minor to meet with intent to engage in sexual contact", "conditions": "'Minor' = person younger than 17 years of age, or person the actor believes or has reason to believe is younger than 17. Base offense applies to victims under 17 but 14 or older."}, "enhancements": [{"victim_label": "minor under 14", "trigger": "the minor is younger than 14 years of age [\u00a733.021(f)]", "conduct_required": "online solicitation of minor under 14", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 2nd Degree", "notes": ""}], "notes": ""}, {"sec": "43.021", "ch": "43", "offense_name": "SOLICITATION OF PROSTITUTION", "victim_types": ["child"], "base": {"grade": "State Jail Felony", "conduct": "knowingly offers or agrees to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another", "conditions": "Base offense \u2014 person is an adult (18+)"}, "enhancements": [{"victim_label": "person under 18", "trigger": "the person with respect to whom the actor offers or agrees to engage in sexual conduct is younger than 18 years of age, OR is represented to the actor as being younger than 18, OR actor believes the person is younger than 18 [\u00a743.021(b)(2)]", "conduct_required": "offers or agrees to pay fee for sexual conduct with person under 18", "base_grade": "State Jail Felony", "enhanced_grade": "Felony of the 2nd Degree", "notes": "Knowledge of actual age not required; belief or representation of minor status is sufficient."}], "notes": ""}, {"sec": "43.03", "ch": "43", "offense_name": "PROMOTION OF PROSTITUTION", "victim_types": ["child"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "acting other than as prostitute, receives money/property pursuant to agreement to participate in proceeds of prostitution; or solicits another to engage in sexual conduct for compensation", "conditions": "Base offense \u2014 person involved is an adult (18+)"}, "enhancements": [{"victim_label": "person under 18", "trigger": "conduct involves a person younger than 18 years of age, regardless of whether actor knows the age at time of offense [\u00a743.03(b)(2)]", "conduct_required": "promotes prostitution involving person under 18", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Knowledge of age not required."}], "notes": ""}, {"sec": "43.031", "ch": "43", "offense_name": "ONLINE PROMOTION OF PROSTITUTION", "victim_types": ["child"], "base": {"grade": "Felony of the 3rd Degree", "conduct": "owns, manages, or operates an interactive computer service or information content provider with intent to promote prostitution of another or facilitate another to engage in prostitution or solicitation of prostitution", "conditions": "Base offense \u2014 persons involved are adults (18+)"}, "enhancements": [{"victim_label": "person under 18", "trigger": "conduct involves a person younger than 18 years of age engaging in prostitution, regardless of whether actor knows the age [\u00a743.031(b)(2)]", "conduct_required": "online promotion of prostitution involving person under 18", "base_grade": "Felony of the 3rd Degree", "enhanced_grade": "Felony of the 2nd Degree", "notes": "Knowledge of age not required. Note: \u00a743.041 Aggravated Online Promotion (5+ persons) has separate enhancement to F1 if 2+ persons under 18 are involved."}], "notes": "\u00a743.041 (Aggravated Online Promotion of Prostitution): base = F2; enhanced to F1 if 2 or more persons under 18 are involved."}, {"sec": "43.05", "ch": "43", "offense_name": "COMPELLING PROSTITUTION", "victim_types": ["child", "disabled"], "base": {"grade": "Felony of the 1st Degree", "conduct": "causes another by force, threat, coercion, or fraud to commit prostitution [\u00a743.05(a)(1)]", "conditions": "Base offense under \u00a743.05(a)(1) requires force/threat/coercion/fraud. Child/disabled alternatives under (a)(2)-(3) require only 'any means' \u2014 lower threshold, same grade."}, "enhancements": [{"victim_label": "child under 18", "trigger": "causes by any means a child younger than 18 to commit prostitution, regardless of whether actor knows the age [\u00a743.05(a)(2)]", "conduct_required": "causes child under 18 to commit prostitution by any means (no force/coercion required)", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Same grade as base; the enhancement is the removal of the force/coercion/fraud requirement. Knowledge of age not required."}, {"victim_label": "disabled individual", "trigger": "causes by any means a disabled individual, as defined by \u00a722.021(b), to commit prostitution, regardless of whether actor knows the individual is disabled [\u00a743.05(a)(3)]", "conduct_required": "causes disabled individual to commit prostitution by any means", "base_grade": "Felony of the 1st Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "Same grade; removal of force/coercion requirement. 'Disabled individual' per \u00a722.021(b) \u2014 person older than 13 substantially unable to protect self or provide self-care. Knowledge of disability not required."}], "notes": "All alternatives under \u00a743.05 are F1. For child and disabled victims, the mens rea requirement for the means of compulsion is eliminated."}, {"sec": "43.25", "ch": "43", "offense_name": "SEXUAL PERFORMANCE BY A CHILD", "victim_types": ["child"], "base": {"grade": "Felony of the 2nd Degree (employ/authorize/induce/offer, \u00a743.25(c)); Felony of the 3rd Degree (produce/direct/promote, \u00a743.25(e))", "conduct": "(c): employs, authorizes, or induces a child to engage in sexual performance; or offers/agrees to employ etc. a child for sexual performance. (e): produces, directs, or promotes a performance that includes sexual conduct by a child.", "conditions": "Child = person younger than 18 years of age. Base grades apply when child is 14-17."}, "enhancements": [{"victim_label": "child under 14", "trigger": "child involved is younger than 14 years of age [\u00a743.25(c), (e)]", "conduct_required": "employs/authorizes/induces child under 14 for sexual performance", "base_grade": "Felony of the 2nd Degree (employ/authorize/induce conduct)", "enhanced_grade": "Felony of the 1st Degree", "notes": "\u00a743.25(c) sub-enhancement."}, {"victim_label": "child under 14", "trigger": "child involved is younger than 14 years of age [\u00a743.25(e)]", "conduct_required": "produces/directs/promotes sexual performance involving child under 14", "base_grade": "Felony of the 3rd Degree (produce/direct/promote conduct)", "enhanced_grade": "Felony of the 2nd Degree", "notes": "\u00a743.25(e) sub-enhancement."}], "notes": "'Child' = person younger than 18. 'Sexual performance' = any performance or part thereof that includes sexual conduct by a child."}, {"sec": "43.251", "ch": "43", "offense_name": "EMPLOYMENT HARMFUL TO CHILDREN", "victim_types": ["child"], "base": {"grade": "Felony of the 2nd Degree", "conduct": "employs, authorizes, or induces a child to work in a sexually oriented commercial activity; or as owner/operator/manager of such business, permits a child to work there", "conditions": "'Child' = person younger than 21 years of age. Base grade applies when child is 14-20."}, "enhancements": [{"victim_label": "child under 14", "trigger": "child is younger than 14 years of age [\u00a743.251(c)]", "conduct_required": "employs or induces child under 14 to work in sexually oriented commercial activity", "base_grade": "Felony of the 2nd Degree", "enhanced_grade": "Felony of the 1st Degree", "notes": "'Child' in this section means person under 21 \u2014 broader than the standard definition."}], "notes": ""}, {"sec": "46.13", "ch": "46", "offense_name": "MAKING A FIREARM ACCESSIBLE TO A CHILD", "victim_types": ["child"], "base": {"grade": "Class C Misdemeanor", "conduct": "with criminal negligence, stores or leaves a firearm in a place where the actor knows or should know a child will gain access to the firearm", "conditions": "'Child' = person younger than 17 years of age. Base offense \u2014 child did not discharge the firearm, or discharge did not cause death or SBI."}, "enhancements": [{"victim_label": "child who discharges firearm causing death or SBI", "trigger": "a child gains access to the firearm and the child discharges the firearm and causes the death of or serious bodily injury to or by the child [\u00a746.13(e)]", "conduct_required": "criminal negligence storage of firearm accessible to child under 17, which child then discharges causing death or SBI", "base_grade": "Class C Misdemeanor", "enhanced_grade": "Class A Misdemeanor", "notes": ""}], "notes": ""}, {"sec": "49.045", "ch": "49", "offense_name": "DRIVING WHILE INTOXICATED WITH CHILD PASSENGER", "victim_types": ["child"], "base": {"grade": "State Jail Felony", "conduct": "operates a motor vehicle in a public place while intoxicated and the vehicle is occupied by a passenger who is younger than 15 years of age", "conditions": "Victim must be passenger younger than 15 \u2014 constitutive element. No base DWI offense elevated; this is a separate offense."}, "enhancements": [], "notes": "Constitutive offense \u2014 the child passenger under 15 is a required element, not an enhancement. DWI without child passenger (\u00a749.04) = Class B or A misdemeanor depending on prior convictions. The child passenger creates a stand-alone State Jail Felony."}, {"sec": "49.061", "ch": "49", "offense_name": "BOATING WHILE INTOXICATED WITH CHILD PASSENGER", "victim_types": ["child"], "base": {"grade": "State Jail Felony", "conduct": "operates a watercraft while intoxicated and the watercraft is occupied by a passenger who is younger than 15 years of age", "conditions": "Victim must be passenger younger than 15 \u2014 constitutive element."}, "enhancements": [], "notes": "Constitutive offense \u2014 analogous to \u00a749.045 but for watercraft. BWI without child passenger (\u00a749.06) = Class B or A misdemeanor."}, {"sec": "71.02", "ch": "71", "offense_name": "ENGAGING IN ORGANIZED CRIMINAL ACTIVITY", "victim_types": ["child"], "base": {"grade": "One category higher than most serious predicate offense; if most serious predicate is Class A misd = State Jail Felony; if predicate is F1 = F1 with 15-99 yr range", "conduct": "with intent to establish, maintain, or participate in a combination or criminal street gang or foreign terrorist organization, commits or conspires to commit a listed predicate offense", "conditions": "Base enhancement applies generally. Additional victim-age-based minimums apply within F1 when predicate offense is aggravated sexual assault."}, "enhancements": [{"victim_label": "child under 6 (aggravated sexual assault predicate)", "trigger": "most serious offense is aggravated sexual assault; defendant is 18 or older; victim is younger than 6 years of age [\u00a771.02(b)(1)(A)]", "conduct_required": "engaging in organized criminal activity with aggravated sexual assault of child under 6 as predicate", "base_grade": "Felony of the 1st Degree (15-99 yr range)", "enhanced_grade": "Felony of the 1st Degree \u2014 life without parole", "notes": ""}, {"victim_label": "child under 14 with aggravated manner", "trigger": "most serious offense is aggravated sexual assault; defendant is 18 or older; victim is younger than 14 AND offense committed in manner described by \u00a722.021(a)(2)(A) [\u00a771.02(b)(1)(B)]", "conduct_required": "engaging in organized criminal activity with aggravated sexual assault of child under 14 in aggravated manner as predicate", "base_grade": "Felony of the 1st Degree (15-99 yr range)", "enhanced_grade": "Felony of the 1st Degree \u2014 life without parole", "notes": ""}, {"victim_label": "child under 17 with serious bodily injury", "trigger": "most serious offense is aggravated sexual assault; defendant is 18 or older; victim is younger than 17 AND suffered serious bodily injury [\u00a771.02(b)(1)(C)]", "conduct_required": "engaging in organized criminal activity with aggravated sexual assault of child under 17 causing SBI as predicate", "base_grade": "Felony of the 1st Degree (15-99 yr range)", "enhanced_grade": "Felony of the 1st Degree \u2014 life without parole", "notes": ""}], "notes": "These enhancements apply within \u00a771.02 and require defendant to be at least 18 years of age."}];
+
+var GRADE_COLOR = {
+  "Capital Felony":"grade-color-Capital",
+  "Felony of the 1st Degree":"grade-color-F1",
+  "Felony of the 2nd Degree":"grade-color-F2",
+  "Felony of the 3rd Degree":"grade-color-F3",
+  "State Jail Felony":"grade-color-SJF",
+  "Class A Misdemeanor":"grade-color-MA",
+  "Class B Misdemeanor":"grade-color-MB",
+  "Class C Misdemeanor":"grade-color-MC"
+};
+
+var activeType = 'all';
+var activeCh   = 'all';
+
+function gradeClass(g){return GRADE_COLOR[g]||'';}
+
+function typeClass(types){
+  if(!types||!types.length) return '';
+  if(types.length>1) return 'type-multi';
+  return 'type-'+types[0];
+}
+
+function chipHtml(types){
+  return (types||[]).map(function(t){
+    var label = t==='child'?'Child':t==='elderly'?'Elderly (65+)':'Disabled';
+    return '<span class="chip chip-'+t+'">'+label+'</span>';
+  }).join('');
+}
+
+function victimClass(label){
+  var l = label.toLowerCase();
+  if(l.indexOf('child')>=0||l.indexOf('minor')>=0||l.indexOf('younger')>=0||
+     l.indexOf('under ')>=0||l.indexOf('age ')>=0||l.indexOf('juvenile')>=0) return 'child';
+  if(l.indexOf('elder')>=0||l.indexOf('senior')>=0) return 'elderly';
+  if(l.indexOf('disab')>=0) return 'disabled';
+  return 'child'; // fallback
+}
+
+function buildCards(){
+  var container = document.getElementById('cards');
+  container.innerHTML='';
+  var visible=0;
+
+  DATA.forEach(function(rec, ri){
+    if(activeCh!=='all' && rec.ch!==activeCh) return;
+    if(activeType!=='all'){
+      var vt=rec.victim_types||[];
+      if(vt.indexOf(activeType)<0) return;
+    }
+    visible++;
+
+    var card = document.createElement('div');
+    card.className='offense-card';
+    card.setAttribute('data-ch',rec.ch);
+    card.setAttribute('data-types',(rec.victim_types||[]).join(','));
+
+    // header
+    var hdr = document.createElement('div');
+    hdr.className='offense-header';
+    hdr.innerHTML=
+      '<span class="sec-badge">§'+rec.sec+'</span>'+
+      '<span class="offense-name">'+rec.offense_name+'</span>'+
+      '<span class="type-chips">'+chipHtml(rec.victim_types)+'</span>'+
+      '<span class="toggle-icon">▾</span>';
+    hdr.onclick=function(){
+      this.classList.toggle('open');
+      this.nextElementSibling.classList.toggle('open');
+    };
+    card.appendChild(hdr);
+
+    // body
+    var body = document.createElement('div');
+    body.className='offense-body';
+
+    // base
+    if(rec.base && rec.base.grade){
+      var bb=document.createElement('div');
+      bb.className='base-box';
+      bb.innerHTML=
+        '<div class="base-label">Base Offense</div>'+
+        '<div class="base-grade '+gradeClass(rec.base.grade)+'">'+rec.base.grade+'</div>'+
+        (rec.base.conduct?'<div class="base-conduct">'+rec.base.conduct+'</div>':'')+
+        (rec.base.conditions&&rec.base.conditions!==rec.base.conduct?
+          '<div class="base-conduct" style="margin-top:3px;color:#90a4ae;font-style:italic;">'+rec.base.conditions+'</div>':'');
+      body.appendChild(bb);
+    }
+
+    // enhancement tree
+    if(rec.enhancements && rec.enhancements.length){
+      var tree=document.createElement('div');
+      tree.className='tree-wrap';
+
+      rec.enhancements.forEach(function(e){
+        if(activeType!=='all'){
+          var vc=victimClass(e.victim_label+' '+e.trigger);
+          if(vc!==activeType) return;
+        }
+        var vc2=victimClass(e.victim_label+' '+e.trigger);
+        var node=document.createElement('div');
+        node.className='enh-node';
+
+        var ec=document.createElement('div');
+        ec.className='enh-card type-'+vc2;
+
+        var fromGrade=e.base_grade||rec.base&&rec.base.grade||'';
+        var toGrade=e.enhanced_grade||'';
+
+        ec.innerHTML=
+          '<div class="enh-top">'+
+            '<span class="victim-pill vp-'+vc2+'">'+e.victim_label+'</span>'+
+            (fromGrade?'<span class="grade-color-MC" style="font-size:.78rem;font-weight:600;">'+fromGrade+'</span><span class="enh-arrow">→</span>':'')+
+            '<span class="grade-result '+gradeClass(toGrade)+'">'+toGrade+'</span>'+
+          '</div>'+
+          '<div class="enh-detail">'+
+            '<div>'+e.trigger+'</div>'+
+            (e.conduct_required?'<div class="conduct-tag">Conduct: '+e.conduct_required+'</div>':'')+
+            (e.notes?'<div class="enh-note">'+e.notes+'</div>':'')+
+          '</div>';
+        node.appendChild(ec);
+        tree.appendChild(node);
+      });
+      body.appendChild(tree);
+    } else if(rec.base && rec.base.grade){
+      // Constitutive offense — victim status is an element
+      var note=document.createElement('div');
+      note.style.cssText='font-size:.8rem;color:#78909c;font-style:italic;margin-top:8px;';
+      note.textContent='Victim status is a required element of this offense, not an add-on enhancement.';
+      body.appendChild(note);
+    }
+
+    if(rec.notes){
+      var nb=document.createElement('div');
+      nb.className='notes-box';
+      nb.textContent=rec.notes;
+      body.appendChild(nb);
+    }
+
+    card.appendChild(body);
+    container.appendChild(card);
+  });
+
+  document.getElementById('match-count').textContent=visible+' offense'+(visible!==1?'s':'');
+}
+
+function setType(t){
+  activeType=t;
+  document.querySelectorAll('.type-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-type')===t);
+  });
+  buildCards();
+}
+
+function populateChFilter(){
+  var sel=document.getElementById('ch-filter');
+  var chs=[];
+  DATA.forEach(function(r){if(chs.indexOf(r.ch)<0) chs.push(r.ch);});
+  chs.sort(function(a,b){
+    var na=parseInt(a.replace(/[A-Z]/g,'')), nb=parseInt(b.replace(/[A-Z]/g,''));
+    return na!==nb?na-nb:(a>b?1:-1);
+  });
+  var CH_NAMES={
+    "19":"Ch.19 Criminal Homicide","20":"Ch.20 Kidnapping & Restraint",
+    "20A":"Ch.20A Trafficking","21":"Ch.21 Sexual Offenses",
+    "22":"Ch.22 Assaultive Offenses","25":"Ch.25 Family Offenses",
+    "29":"Ch.29 Robbery","31":"Ch.31 Theft","32":"Ch.32 Fraud",
+    "33":"Ch.33 Computer Crimes","43":"Ch.43 Public Indecency",
+    "46":"Ch.46 Weapons","49":"Ch.49 Intoxication","71":"Ch.71 Organized Crime"
+  };
+  chs.forEach(function(c){
+    var o=document.createElement('option');
+    o.value=c; o.textContent=CH_NAMES[c]||('Ch.'+c);
+    sel.appendChild(o);
+  });
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  populateChFilter();
+  document.querySelectorAll('.type-btn').forEach(function(b){
+    b.addEventListener('click',function(){setType(this.getAttribute('data-type'));});
+  });
+  document.getElementById('ch-filter').addEventListener('change',function(){
+    activeCh=this.value; buildCards();
+  });
+  setType('all');
+});
+
+</script>
+</body>
+</html>

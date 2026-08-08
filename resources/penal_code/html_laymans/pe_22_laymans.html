@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 22 – Assaultive Offenses | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 22: Assaultive Offenses</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-22-01">§22.01</a>
+<a href="#sec-22-011">§22.011</a>
+<a href="#sec-22-012">§22.012</a>
+<a href="#sec-22-02">§22.02</a>
+<a href="#sec-22-021">§22.021</a>
+<a href="#sec-22-04">§22.04</a>
+<a href="#sec-22-041">§22.041</a>
+<a href="#sec-22-05">§22.05</a>
+<a href="#sec-22-06">§22.06</a>
+<a href="#sec-22-07">§22.07</a>
+<a href="#sec-22-08">§22.08</a>
+<a href="#sec-22-09">§22.09</a>
+<a href="#sec-22-10">§22.10</a>
+<a href="#sec-22-11">§22.11</a>
+<a href="#sec-22-12">§22.12</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-22-01">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.01</span>
+    <span class="sec-name">ASSAULT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.01 – ASSAULT</h3><em>Causing bodily injury, threatening someone with bodily injury, or making offensive physical contact — with different grades based on who the victim is and how the offense was committed.</em><h4>Three Ways to Commit Assault</h4><ul><li><strong>(a)(1) — Bodily Injury:</strong> Intentionally, knowingly, or recklessly causes bodily injury to another person (including a spouse).</li><li><strong>(a)(2) — Threat:</strong> Intentionally or knowingly threatens another with <em>imminent</em> bodily injury (including a spouse).</li><li><strong>(a)(3) — Offensive Contact:</strong> Intentionally or knowingly causes physical contact with another when the suspect knows or reasonably should know the other person will find it offensive or provocative.</li></ul><h4>Punishment — (a)(1) Bodily Injury Assault</h4><ul><li>Base: <strong>Class A Misdemeanor</strong></li><li>Enhancement — <strong>Felony of the 3rd Degree</strong> if committed against:<ul><li>A <strong>public servant</strong> (known to the suspect) lawfully discharging duties, or in retaliation</li><li>A <strong>family/household member or dating partner</strong> with a prior family violence conviction, OR by strangulation/suffocation (applying pressure to throat/neck or blocking nose/mouth)</li><li>A <strong>government contractor</strong> performing services in a correctional/detention facility</li><li>A <strong>security officer</strong> while performing duties</li><li><strong>Emergency services personnel</strong> while providing emergency services</li><li>A <strong>process server</strong> while performing duties</li><li>A <strong>pregnant individual</strong> to force an abortion</li><li>A person the suspect knows is <strong>pregnant</strong></li><li><strong>Hospital personnel</strong> while on hospital property</li><li>A <strong>utility employee or agent</strong> while performing duties</li><li>A civilly committed person against Texas Civil Commitment Office staff or contractors</li></ul></li><li>Enhancement — <strong>Felony of the 2nd Degree</strong> if committed against:<ul><li>A <strong>peace officer or judge</strong> (known to the suspect) lawfully discharging official duties or in retaliation — this overrides the 3rd degree public servant enhancement</li><li>A <strong>family/household member or dating partner</strong> with a prior family violence conviction AND committed by strangulation/suffocation — this overrides the 3rd degree family violence enhancement</li></ul></li><li>Enhancement — <strong>Felony of the 3rd Degree</strong>: If committed during the course of committing smuggling of persons (§20.05(a)(2)).</li></ul><h4>Punishment — (a)(2) Threat and (a)(3) Offensive Contact</h4><ul><li>Base: <strong>Class C Misdemeanor</strong></li><li>Enhancement — <strong>Class A Misdemeanor</strong>: Offensive contact against an elderly or disabled individual; OR threat committed to force a pregnant individual to have an abortion.</li><li>Enhancement — <strong>Class B Misdemeanor</strong>: Non-participant assaults a sports participant while performing their role, or in retaliation for their sports role.</li><li>Enhancement — <strong>State Jail Felony</strong>: Threat offense committed against a <strong>peace officer or judge</strong>.</li></ul><h4>Knowledge Presumption</h4><p>The suspect is presumed to have known the victim was a public servant, security officer, emergency services personnel, or utility employee if the victim was wearing a distinctive uniform or badge.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-011">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.011</span>
+    <span class="sec-name">SEXUAL ASSAULT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.011 – SEXUAL ASSAULT</h3><em>Non-consensual sexual penetration of or by another adult, or any sexual penetration involving a child under 17 — regardless of consent.</em><h4>Track 1 — Adult Victim (Without Consent)</h4><p>The suspect intentionally or knowingly:</p><ul><li>Causes penetration of the anus or sexual organ of another person without consent</li><li>Causes penetration of the victim's mouth by the suspect's sexual organ without consent</li><li>Causes the victim's sexual organ to contact or penetrate the mouth, anus, or sexual organ of another person without consent</li></ul><h4>Track 2 — Child Victim (Under 17, Regardless of Consent)</h4><p>The suspect intentionally or knowingly causes any of the same types of sexual penetration involving a child — the child's age makes it a crime regardless of apparent "consent" or the suspect's knowledge of the child's age.</p><h4>When Is It "Without Consent" (Adult Victims)?</h4><p>No consent if:</p><ul><li>Physical force, violence, or coercion is used</li><li>The victim is threatened and believes the threat can be carried out</li><li>The victim is unconscious or physically unable to resist</li><li>The victim has a mental disease or defect making them unable to appraise or resist</li><li>The victim is unaware the assault is occurring</li><li>The victim is intoxicated or impaired to the point of being unable to consent</li><li>The suspect threatens force against any person and the victim believes it</li><li>The suspect is a <strong>public servant</strong> coercing submission</li><li>The suspect is a <strong>mental health or health care provider</strong> exploiting a patient's emotional dependency</li><li>The suspect is a <strong>clergyman</strong> exploiting spiritual dependency</li><li>The suspect is an <strong>employee of a facility</strong> where the victim is a resident (nursing home, group home, etc.)</li><li>The suspect is a <strong>health care provider</strong> who used a different donor's reproductive material than the patient consented to in assisted reproduction</li><li>The suspect is a <strong>coach or tutor</strong> exploiting the victim's dependency</li><li>The suspect is a <strong>hired caregiver</strong> assisting with daily activities who exploits the victim's dependency</li></ul><h4>Punishment</h4><ul><li>Base: <strong>Felony of the 2nd Degree</strong></li><li>Enhancement — <strong>Felony of the 1st Degree</strong>: If the victim was a person the suspect was prohibited from marrying (incest) or from engaging in sexual conduct with under §25.02.</li><li>Reduction — <strong>State Jail Felony</strong>: Assault under Track 1 where the suspect used reproductive material without the patient's express donor consent (§22.011(b)(12)) — essentially unauthorized use of donor material in assisted reproduction.</li></ul><h4>Defenses</h4><ul><li><strong>Defense (Track 2 — Child):</strong> Conduct consisted entirely of legitimate medical care not involving sexual contact between the suspect's and child's sexual organs/anus.</li><li><strong>Affirmative defense (Track 2):</strong> Suspect was the spouse of the child; OR the child was 14–16, the suspect was not more than 3 years older, was not a registered-for-life sex offender, and the child was not a prohibited relation.</li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-012">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.012</span>
+    <span class="sec-name">INDECENT ASSAULT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.012 – INDECENT ASSAULT</h3><em>Non-consensual sexual touching of an adult — a gap-filling offense between simple assault and sexual assault.</em><h4>Elements</h4><p>Without the other person's consent and with the intent to arouse or gratify sexual desire, the suspect:</p><ul><li>Touches the anus, breast, or genitals of the other person</li><li>Touches the other person with the suspect's anus, breast, or genitals</li><li>Exposes or attempts to expose the other person's genitals, pubic area, anus, buttocks, or female areola</li><li>Causes the other person to contact blood, seminal fluid, vaginal fluid, saliva, urine, or feces of any person</li></ul><h4>Punishment</h4><ul><li>Base: <strong>Class A Misdemeanor</strong></li><li>Enhancement — <strong>State Jail Felony</strong>: Prior conviction under this section; OR the suspect is a health care or mental health services provider who committed the act during treatment and beyond the scope of accepted practice.</li><li>Enhancement — <strong>Felony of the 3rd Degree</strong>: Prior state jail conviction based on the health care/mental health provider aggravation; OR (under alternate 2025 version) the suspect is a civilly committed sexually violent predator who committed the act against Texas Civil Commitment Office staff or contractors.</li><li>Enhancement — <strong>Felony of the 2nd Degree</strong>: The victim is a <strong>disabled or elderly individual</strong>.</li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.02</span>
+    <span class="sec-name">AGGRAVATED ASSAULT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.02 – AGGRAVATED ASSAULT</h3><em>An assault that causes serious bodily injury or involves a deadly weapon — elevated further if the victim is a protected person or the method is especially dangerous.</em><h4>Elements</h4><p>The suspect commits assault (§22.01) AND:</p><ul><li>Causes <strong>serious bodily injury</strong> to another (including a spouse); OR</li><li>Uses or exhibits a <strong>deadly weapon</strong> during the assault.</li></ul><h4>Punishment</h4><ul><li>Base: <strong>Felony of the 2nd Degree</strong></li><li>Enhancement — <strong>Felony of the 1st Degree</strong> if:<ul><li>The suspect used a deadly weapon AND caused serious bodily injury to a <strong>family/household/dating partner</strong>; OR caused a traumatic brain or spine injury resulting in persistent vegetative state or irreversible paralysis to any person.</li><li>The offense was committed <strong>by a public servant</strong> under color of their office; OR against a <strong>public servant, process server, or security officer</strong> performing duties; OR in retaliation against a witness, informant, or crime reporter.</li><li>The suspect was <strong>inside or en route to/from a vehicle</strong>, knowingly discharged a firearm at a habitation, building, or vehicle, was reckless about whether it was occupied, AND caused bodily injury/property damage or placed someone in fear.</li><li>The assault was part of a <strong>mass shooting</strong>.</li><li>Committed by a civilly committed suspect against Texas Civil Commitment Office staff or contractors.</li></ul></li></ul><h4>Knowledge Presumption</h4><p>The suspect is presumed to have known the victim was a public servant or security officer if wearing a distinctive uniform or badge.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-021">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.021</span>
+    <span class="sec-name">AGGRAVATED SEXUAL ASSAULT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.021 – AGGRAVATED SEXUAL ASSAULT</h3><em>Sexual assault made worse by serious bodily harm, a weapon, threats of other crimes, acting with an accomplice, drugging the victim, or because the victim is a child, elderly, or disabled person.</em><h4>Track A — Adult Victim (Non-Consensual)</h4><p>The suspect commits sexual assault (same penetration acts as §22.011) without the victim's consent, AND at least one aggravating circumstance applies:</p><ul><li>Caused serious bodily injury or attempted to kill the victim or another person</li><li>Threatened or placed the victim in fear of trafficking, death, serious bodily injury, or kidnapping through acts or words</li><li>Used or exhibited a <strong>deadly weapon</strong></li><li>Acted <strong>in concert with another person</strong> who was also sexually assaulting the same victim during the same episode</li><li><strong>Drugged the victim</strong> to impair their ability to appraise or resist</li></ul><h4>Track B — Child Under 14</h4><p>The suspect commits any of the sexual penetration acts involving a child under 14. No additional aggravating circumstance required. The suspect does not need to have known the child's age.</p><h4>Track C — Elderly or Disabled Victim</h4><p>The suspect commits the sexual penetration acts against an elderly individual (65+) or a disabled individual.</p><h4>Punishment</h4><ul><li><strong>Felony of the 1st Degree</strong> (for all tracks)</li><li>Mandatory minimum increased to <strong>25 years</strong> if: (a) the victim was under 10 years old; OR (b) the victim was under 14 AND the suspect used one of the aggravating methods listed above for adult victims.</li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-04">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.04</span>
+    <span class="sec-name">INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.04 – INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</h3><em>Causing bodily harm or mental impairment to a child (14 or younger), elderly person (65+), or disabled individual — by act or by failing to act when you had a duty to care for them.</em><h4>Who Can Be Victimized</h4><ul><li><strong>Child:</strong> 14 years of age or younger</li><li><strong>Elderly individual:</strong> 65 years of age or older</li><li><strong>Disabled individual:</strong> A person with autism spectrum disorder, developmental disability, intellectual disability, severe emotional disturbance, traumatic brain injury, mental illness, or who is otherwise substantially unable to protect themselves or provide for their own food, shelter, or medical care due to age or physical/mental condition.</li></ul><h4>Ways to Commit</h4><ul><li><strong>By act:</strong> Intentionally, knowingly, recklessly, or with criminal negligence causes serious bodily injury, serious mental deficiency/impairment/injury, or bodily injury to the victim.</li><li><strong>By omission:</strong> Same results through failure to act — but only if the suspect had a legal or statutory duty to act, OR had assumed care, custody, or control of the victim.</li><li><strong>Facility operator/employee (§(a-1)):</strong> An owner, operator, or employee of a group home, nursing facility, assisted living facility, etc., who causes the same harms by omission to a resident.</li></ul><h4>Punishment by Injury Type and Mental State</h4><ul><li><strong>Serious bodily injury or serious mental impairment:</strong><ul><li>Intentional or knowing: <strong>Felony of the 1st Degree</strong></li><li>Reckless: <strong>Felony of the 2nd Degree</strong></li><li>Criminal negligence: <strong>State Jail Felony</strong></li></ul></li><li><strong>Bodily injury (lesser injury):</strong><ul><li>Intentional or knowing: <strong>Felony of the 3rd Degree</strong> (elevated to <strong>Felony of the 2nd Degree</strong> if the victim is a disabled person residing in a state center or licensed facility and the suspect was an employee providing direct care)</li><li>Reckless: <strong>State Jail Felony</strong></li><li>Criminal negligence: <strong>State Jail Felony</strong></li></ul></li></ul><h4>Defenses</h4><ul><li>Reasonable medical care under direction of a licensed physician.</li><li>Emergency medical care given in good faith by an unlicensed person.</li><li>Religious healing methods with a generally accepted record of efficacy (affirmative defense).</li><li>Victim of family violence by another person who also abused the child/elder — and the suspect didn't cause the harm and couldn't reasonably have prevented the abuser (affirmative defense).</li><li>Suspect was not more than 3 years older than the victim child (affirmative defense — for child victims only).</li><li>Did not know and could not reasonably have known the individual was disabled (affirmative defense — for disabled victim cases only).</li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-041">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.041</span>
+    <span class="sec-name">ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.041 – ABANDONING OR ENDANGERING A CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</h3><em>Leaving a child, elderly person, or disabled person without care in dangerous conditions — or engaging in any conduct that puts them at imminent risk of harm.</em><h4>Track 1 — Abandonment (§(b))</h4><p>The suspect has custody, care, or control of a child, elderly individual, or disabled individual and <strong>intentionally abandons</strong> them somewhere in a way that exposes them to an unreasonable risk of harm. "Abandon" means leaving them without reasonable and necessary care under circumstances where no reasonable person would leave someone of that age and ability.</p><ul><li>If the suspect abandoned them <strong>intending to return</strong>: <strong>State Jail Felony</strong></li><li>If the suspect abandoned them <strong>without intent to return</strong>: <strong>Felony of the 3rd Degree</strong></li><li>If the circumstances would lead a reasonable person to believe the child/individual was in <strong>imminent danger of death, bodily injury, or mental/physical impairment</strong>: <strong>Felony of the 2nd Degree</strong></li></ul><h4>Track 2 — Endangerment (§(c))</h4><p>The suspect intentionally, knowingly, recklessly, or with criminal negligence, by act or omission, engages in conduct that places a child, elderly individual, or disabled individual in <strong>imminent danger of death, bodily injury, or physical/mental impairment</strong>.</p><ul><li>Punishment: <strong>State Jail Felony</strong></li><li><strong>Presumption of endangerment</strong>: It is presumed the suspect endangered the child/individual if they manufactured, possessed, or introduced methamphetamine or certain controlled substances (Penalty Group 1-B) in the person's presence, or if the child/individual tested positive for such substances related to the suspect's conduct, or if the suspect injected/ingested such a substance while not lawfully possessing it.</li></ul><h4>Exception</h4><p>Leaving a child at a designated emergency infant care ("Safe Haven") provider under Texas Family Code §262.302 is not an offense under this section.</p><h4>Defense</h4><p>For endangerment: Allowing a child/individual to participate in an organized athletic event with appropriate safety equipment is a defense.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.05</span>
+    <span class="sec-name">DEADLY CONDUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.05 – DEADLY CONDUCT</h3><em>Recklessly endangering someone's life or knowingly shooting at people, buildings, or vehicles.</em><h4>Track 1 — Reckless Endangerment (§(a))</h4><p>The suspect <strong>recklessly</strong> engages in conduct that places another person in <strong>imminent danger of serious bodily injury</strong>.</p><ul><li>Punishment: <strong>Class A Misdemeanor</strong></li><li><em>Recklessness and danger are presumed</em> if the suspect knowingly pointed a firearm at or in the direction of another person, whether or not the suspect believed it was loaded. (This presumption does NOT apply to peace officers in the lawful discharge of duty.)</li></ul><h4>Track 2 — Shooting at Persons or Structures (§(b))</h4><p>The suspect <strong>knowingly discharges a firearm</strong> at or in the direction of:</p><ul><li>One or more individuals; OR</li><li>A habitation, building, or vehicle while being reckless about whether it is occupied.</li></ul><ul><li>Punishment: <strong>Felony of the 3rd Degree</strong></li></ul><h4>Peace Officer Exception (Track 2 only)</h4><p>Track 2 (shooting at individuals) does NOT apply to a peace officer who was engaged in the actual discharge of official duties AND reasonably believed the use of the firearm was justified under Chapter 9 (Use of Force/Deadly Force).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-06">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.06</span>
+    <span class="sec-name">CONSENT AS DEFENSE TO ASSAULTIVE CONDUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.06 – CONSENT AS DEFENSE TO ASSAULTIVE CONDUCT</h3><em>Victim consent (or the suspect's reasonable belief of consent) is a defense to some assault charges — but only in limited situations.</em><h4>When Consent Is a Defense</h4><p>The victim's effective consent, or the suspect's reasonable belief that the victim consented, is a defense to Assault (§22.01), Aggravated Assault (§22.02), or Deadly Conduct (§22.05) <strong>if</strong>:</p><ul><li>The conduct did not threaten or inflict <strong>serious bodily injury</strong>; OR</li><li>The victim knew the conduct was a risk of their <strong>occupation, recognized medical treatment, or a recognized scientific experiment</strong>.</li></ul><h4>Limitation — Gang Initiation</h4><p>Consent is <strong>NOT a defense</strong> if the assault was committed as a condition of the suspect's or victim's initiation into or continued membership in a <strong>criminal street gang</strong>.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-07">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.07</span>
+    <span class="sec-name">TERRORISTIC THREAT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.07 – TERRORISTIC THREAT</h3><em>Threatening violence against a person or property to cause panic, fear, disruption, or to influence government — with different grades depending on the scope and target of the threat.</em><h4>Six Ways to Commit — By Intent</h4><ul><li><strong>(a)(1) — False Emergency:</strong> Threatening violence with intent to cause a reaction by an emergency response agency (e.g., a bomb threat to trigger an evacuation). → <strong>Class B Misdemeanor</strong></li><li><strong>(a)(2) — Fear of Bodily Injury:</strong> Threatening violence to place a specific person in fear of imminent serious bodily injury. → <strong>Class B Misdemeanor</strong> (elevated to <strong>Class A</strong> if against a family/household member or dating partner, or constitutes family violence, or against a public servant; elevated to <strong>State Jail Felony</strong> if against a peace officer or judge)</li><li><strong>(a)(3) — Disrupting Occupancy of a Place:</strong> Threatening violence to prevent or interrupt use of a building, room, vehicle, public place, aircraft, etc. → <strong>Class A Misdemeanor</strong>; elevated to <strong>State Jail Felony</strong> if the owner suffers pecuniary loss of $1,500 or more.</li><li><strong>(a)(4) — Disrupting Public Services:</strong> Threatening violence to cause impairment or interruption of public communications, transportation, water, gas, power, or other public services. → <strong>Felony of the 3rd Degree</strong></li><li><strong>(a)(5) — Public Fear:</strong> Threatening violence to place the public or a substantial group in fear of serious bodily injury. → <strong>Felony of the 3rd Degree</strong></li><li><strong>(a)(6) — Influencing Government:</strong> Threatening violence to influence the conduct of federal, state, or local government. → <strong>Felony of the 3rd Degree</strong></li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-08">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.08</span>
+    <span class="sec-name">AIDING SUICIDE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.08 – AIDING SUICIDE</h3><em>Helping or attempting to help another person commit suicide — not the act of suicide itself, which is not a crime in Texas.</em><h4>Elements</h4><p>With intent to promote or assist the commission of suicide by another person, the suspect aids or attempts to aid that person in committing or attempting suicide.</p><h4>Punishment</h4><ul><li>Base offense: <strong>Class C Misdemeanor</strong></li><li>Enhancement — <strong>State Jail Felony</strong>: If the suspect's conduct actually causes a suicide or attempted suicide that results in serious bodily injury.</li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-09">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.09</span>
+    <span class="sec-name">TAMPERING WITH CONSUMER PRODUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.09 – TAMPERING WITH CONSUMER PRODUCT</h3><em>Altering or threatening to alter a product intended for public consumption to make it dangerous.</em><h4>Track 1 — Actual Tampering</h4><p>The suspect knowingly or intentionally <strong>tampers</strong> with a consumer product (any product offered for sale to or for consumption by the public, including food and drugs), knowing it will be offered for sale or given as a gift. "Tamper" means altering or adding a foreign substance to make it probable the product will cause serious bodily injury.</p><ul><li>Base: <strong>Felony of the 2nd Degree</strong></li><li>Enhancement — <strong>Felony of the 1st Degree</strong>: A person actually suffers serious bodily injury.</li></ul><h4>Track 2 — Threatening to Tamper</h4><p>The suspect knowingly or intentionally <strong>threatens</strong> to tamper with a consumer product with intent to: cause fear, affect the product's sales, or cause bodily injury.</p><ul><li>Punishment: <strong>Felony of the 3rd Degree</strong></li></ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-10">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.10</span>
+    <span class="sec-name">LEAVING A CHILD IN A VEHICLE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.10 – LEAVING A CHILD IN A VEHICLE</h3><em>Intentionally or knowingly leaving a young child alone in a car for more than five minutes.</em><h4>Elements</h4><p>The suspect intentionally or knowingly leaves a child in a motor vehicle for <strong>longer than five minutes</strong>, knowing that the child is:</p><ul><li>Younger than <strong>7 years of age</strong>; AND</li><li>Not attended by a person <strong>14 years of age or older</strong> inside the vehicle.</li></ul><h4>Punishment</h4><ul><li><strong>Class C Misdemeanor</strong></li></ul><p><em>Note: This offense is about intentional/knowing abandonment in a vehicle for 5+ minutes. It does not cover situations where a caretaker accidentally forgot the child — those may be charged under §22.041 (Endangering a Child) or §19.05 (Criminally Negligent Homicide) if more serious harm results.</em></p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-11">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.11</span>
+    <span class="sec-name">HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.11 – HARASSMENT BY PERSONS IN CERTAIN FACILITIES; HARASSMENT OF PUBLIC SERVANT</h3><em>An inmate, civilly committed person, or anyone else deliberately throwing bodily fluids or waste on a public servant, correctional officer, or facility employee to harass, assault, or embarrass them.</em><h4>Three Tracks</h4><ul><li><strong>Track 1 — Inmate/Detainee Targeting Anyone:</strong> While imprisoned or confined in a correctional or detention facility (including juvenile facilities), the suspect causes another person to contact blood, seminal fluid, vaginal fluid, saliva, urine, feces, or any other fluid — with intent to assault, harass, annoy, alarm, abuse, torment, or embarrass.</li><li><strong>Track 2 — Civilly Committed Person Targeting Staff:</strong> While committed to a civil commitment facility, the suspect causes a Texas Civil Commitment Office officer/employee or a facility contractor to contact the above fluids, while they are performing official duties or in retaliation for doing so.</li><li><strong>Track 3 — Anyone Targeting a Public Servant:</strong> The suspect causes a <strong>public servant</strong> (known to the suspect to be a public servant) to contact the above fluids while the public servant is lawfully discharging official duties or in retaliation for doing so.</li></ul><h4>Punishment</h4><ul><li><strong>Felony of the 3rd Degree</strong> (all tracks)</li></ul><h4>Knowledge Presumption</h4><p>The suspect is presumed to have known the person was a public servant if they were wearing a distinctive uniform or badge indicating their employment. Similarly presumed for Texas Civil Commitment Office staff wearing identifying uniforms.</p><h4>No Warning Defense</h4><p>It is NOT a defense that the suspect warned the target they were going to do it.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-22-12">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§22.12</span>
+    <span class="sec-name">APPLICABILITY TO CERTAIN CONDUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§22.12 – APPLICABILITY TO CERTAIN CONDUCT</h3><em>The assault offenses in Chapter 22 do NOT apply to the death or injury of an unborn child in these specific circumstances.</em><h4>Exceptions — Chapter 22 Does NOT Apply When the "Victim" is an Unborn Child and the Conduct Is:</h4><ul><li>Committed by the <strong>mother</strong> of the unborn child.</li><li>A <strong>lawful medical procedure</strong> by a licensed health care provider with the requisite consent.</li><li>A <strong>lawful assisted reproduction procedure</strong> by a licensed provider with proper consent.</li><li><strong>Dispensation or administration of a drug</strong> in accordance with law or as prescribed.</li></ul>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>

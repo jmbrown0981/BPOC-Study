@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 33 – Computer Crimes | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 33: Computer Crimes</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-33-02">§33.02</a>
+<a href="#sec-33-021">§33.021</a>
+<a href="#sec-33-022">§33.022</a>
+<a href="#sec-33-023">§33.023</a>
+<a href="#sec-33-024">§33.024</a>
+<a href="#sec-33-05">§33.05</a>
+<a href="#sec-33-07">§33.07</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-33-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.02</span>
+    <span class="sec-name">BREACH OF COMPUTER SECURITY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.02 – BREACH OF COMPUTER SECURITY</h3>
+<p><em>Hacking — accessing someone else's computer, network, or system without permission; elevated when done to defraud, harm, or steal data.</em></p>
+<h4>Track A – Simple Unauthorized Access (sub.(a))</h4>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base grade</li>
+<li><strong>State Jail Felony</strong> – if the suspect has 2 or more prior convictions under Chapter 33, OR the computer belongs to a government entity or critical infrastructure facility (power plants, water treatment, refineries, telecom hubs, etc.)</li>
+</ul>
+<h4>Track B – Unauthorized Access WITH Intent to Defraud, Harm, or Alter/Delete Data (sub.(b-1))</h4>
+<p>This also covers employees/contractors who violate a clear company policy or their contractual agreement to access systems and steal proprietary data.</p>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – aggregate harm less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999; OR any amount under $300,000 if government/critical infrastructure is involved; OR suspect obtained another person's identifying information from one system</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more; OR suspect obtained identifying information from more than one system</li>
+</ul>
+<p><strong>Defenses:</strong> (1) Law enforcement lawful seizure or search; (2) security professional acting under contract with the owner to assess system security.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-021">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.021</span>
+    <span class="sec-name">ONLINE SOLICITATION OF A MINOR</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.021 – ONLINE SOLICITATION OF A MINOR</h3>
+<p><em>Using the internet or electronic messages to send sexual content to a minor, or to arrange a meeting with a minor for sexual contact.</em></p>
+<p>A "minor" is someone under 17 — or someone the suspect <em>believes</em> to be under 17. The suspect must be 17 or older.</p>
+<h4>Track A – Sexually Explicit Communication or Distribution to a Minor (sub.(b))</h4>
+<p>Communicating in a sexually explicit manner with a minor, or sending/distributing sexually explicit material to a minor, via internet, email, text, or commercial online service — with intent to commit a listed sexual offense.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base grade</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the minor is under 14 (or the suspect believes them to be under 14)</li>
+</ul>
+<h4>Track B – Soliciting a Minor to Meet for Sexual Contact (sub.(c))</h4>
+<p>Knowingly soliciting a minor online to meet with intent to engage in sexual contact, intercourse, or deviate sexual intercourse. It is NOT a defense that no meeting actually occurred.</p>
+<ul>
+<li><strong>Felony of the 2nd Degree</strong> – base grade</li>
+</ul>
+<h4>School-Hours Enhancement (Both Tracks)</h4>
+<ul>
+<li>Bumped to the <strong>next higher category</strong> if the offense was committed during regular school hours and the suspect knew (or reasonably should have known) the minor was enrolled in school.</li>
+</ul>
+<p><strong>Defenses (Track B only):</strong> Actor was married to the minor; actor was no more than 3 years older than the minor and the minor consented.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-022">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.022</span>
+    <span class="sec-name">ELECTRONIC ACCESS INTERFERENCE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.022 – ELECTRONIC ACCESS INTERFERENCE</h3>
+<p><em>Intentionally shutting down or blocking access to someone's computer system or network without their consent — essentially a cyberattack denial-of-service offense.</em></p>
+<p>The suspect intentionally interrupts or suspends access to a computer system or network without the owner's effective consent. Does not apply to network/online service providers acting for a legitimate business purpose (routine maintenance, etc.).</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base and only grade</li>
+</ul>
+<p><strong>Defense:</strong> Law enforcement lawful seizure, search, or access.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-023">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.023</span>
+    <span class="sec-name">ELECTRONIC DATA TAMPERING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.023 – ELECTRONIC DATA TAMPERING</h3>
+<p><em>Secretly altering data in transit between computers, or deploying ransomware to extort victims.</em></p>
+<h4>Track A – Base Offense (no intent to defraud)</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – base grade</li>
+</ul>
+<h4>Track B – With Intent to Defraud or Harm (scale by aggregate harm)</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100, or amount unknown</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<h4>Track C – Restricting Access to Privileged Information (medical, legal, or accounting records)</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – aggregate amount less than $2,500</li>
+<li><strong>Felony of the 3rd Degree</strong> – $2,500 to $29,999, OR a client/patient of a victim suffered harm attributable to the offense</li>
+<li><strong>Felony of the 2nd Degree</strong> – $30,000 to $149,999, OR a client/patient suffered bodily injury</li>
+<li><strong>Felony of the 1st Degree</strong> – $150,000 or more, OR a client/patient suffered serious bodily injury or death</li>
+</ul>
+<p><strong>Note:</strong> Normal subscription paywalls or authentication-locked content are NOT ransomware under this section.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-024">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.024</span>
+    <span class="sec-name">UNLAWFUL DECRYPTION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.024 – UNLAWFUL DECRYPTION</h3>
+<p><em>Breaking or bypassing someone's encryption to access their private information — using deception and without legitimate business purpose.</em></p>
+<p>The suspect intentionally decrypts encrypted private information through deception without a legitimate business purpose.</p>
+<h4>Track A – Base Offense</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong></li>
+</ul>
+<h4>Track B – With Intent to Defraud or Harm (scale by aggregate value)</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100 or unknown</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<h4>Track C – Decrypting Privileged Information (medical, legal, accounting records)</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – less than $2,500</li>
+<li><strong>Felony of the 3rd Degree</strong> – $2,500 to $29,999, OR a client/patient suffered harm</li>
+<li><strong>Felony of the 2nd Degree</strong> – $30,000 to $149,999, OR a client/patient suffered bodily injury</li>
+<li><strong>Felony of the 1st Degree</strong> – $150,000 or more, OR a client/patient suffered serious bodily injury or death</li>
+</ul>
+<p><strong>Defense:</strong> Actor was authorized under a contract with the owner to assess the security of the information or provide security-related services.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.05</span>
+    <span class="sec-name">TAMPERING WITH DIRECT RECORDING ELECTRONIC VOTING MACHINE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.05 – TAMPERING WITH DIRECT RECORDING ELECTRONIC VOTING MACHINE</h3>
+<p><em>Hacking into a computerized voting machine to change, prevent, or fabricate votes.</em></p>
+<p>The suspect knowingly accesses a computer or system that is part of a direct recording electronic (DRE) voting system and, through that access: prevents someone from casting a lawful vote, changes a lawfully cast vote, prevents a lawful vote from being counted, or causes an unlawfully cast vote to be counted.</p>
+<ul>
+<li><strong>Felony of the 1st Degree</strong> – base and only grade</li>
+</ul>
+<p><strong>Notable:</strong> Criminal attempt to commit this offense is a Felony of the 3rd Degree. The offense does not require that the tampered votes actually affected the official election outcome.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-33-07">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§33.07</span>
+    <span class="sec-name">ONLINE IMPERSONATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§33.07 – ONLINE IMPERSONATION</h3>
+<p><em>Using someone else's name or identity online to harm, threaten, or defraud — or faking emails/messages as if they came from that person.</em></p>
+<h4>Track A – Creating Fake Social Media Profiles or Posts (sub.(a))</h4>
+<p>The suspect, without the real person's consent and with intent to harm, defraud, intimidate, or threaten someone, uses another person's name or persona to create a web page or post/send messages on social media or other websites.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong></li>
+</ul>
+<h4>Track B – Sending Fake Emails or Messages Impersonating Another Person (sub.(b))</h4>
+<p>The suspect sends a message that references another person's name, address, phone number, or other identifying information — without their consent, intending the recipient to believe the real person sent it — with intent to harm or defraud.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the suspect sent it with intent to solicit an emergency response (fake 911 call, fake emergency report)</li>
+</ul>
+<p><strong>Defenses:</strong> The suspect is a social media platform, ISP, interactive computer service, telecom provider, or cable/video provider — or an employee acting within that role.</p>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>

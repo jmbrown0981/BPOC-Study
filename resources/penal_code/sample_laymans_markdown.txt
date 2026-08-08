@@ -1,0 +1,88 @@
+## Track 1: Possession / Accessing to View
+
+*This applies to anyone who intentionally possesses or accesses with the intent to view child pornography.*
+
+### A. Depictions of an Actual Child (Subsection a-1)
+
+* **Base Offense:** Third Degree Felony.
+* **Enhancement Step 1 (Second Degree Felony):**
+* If the actor has 1 prior conviction under Chapter 43 or related sex offenses; **OR**
+* If they possess **10 to 49** distinct depictions.
+
+
+* **Enhancement Step 2 (First Degree Felony):**
+* If the actor has 2 or more prior convictions; **OR**
+* If they possess **50 or more** distinct depictions; **OR**
+* If the material depicts a specific severe continuous sexual abuse offense.
+
+
+* **Enhancement Step 3 (First Degree / 25-to-Life or Life Imprisonment):**
+* If the actor worked at a child-care, residential treatment, or youth shelter facility; **OR**
+* If the actor displayed or caused the material to be displayed in a **school library**.
+
+
+* **The "Under 10" Multiplier:** If the child depicted is **younger than 10 years old**, any Second or Third Degree punishment bumps up to the *next highest category*, and First Degree minimum sentences jump to 15 years.
+
+### B. Depictions of a Computer-Generated Child (Subsection a-2)
+
+*Includes AI-generated, cartoon, or software-altered images that look virtually indistinguishable from a real child.*
+
+* **Base Offense:** State Jail Felony.
+* **Enhancement Step 1 (Third Degree Felony):**
+* If the actor has 1 prior conviction; **OR**
+* If they possess **10 to 49** depictions.
+
+
+* **Enhancement Step 2 (Second Degree Felony):**
+* If the actor has 2 or more prior convictions; **OR**
+* If they possess **50 or more** depictions.
+
+
+* **Enhancement Step 3 (Second Degree / Minimum 10 Years Confinement):**
+* If the actor worked at a child-care/youth facility; **OR**
+* If they displayed the material in a **school library**.
+
+
+* **The "Under 10" Multiplier:** If the computer-generated child *appears* to be **younger than 10**, the penalty bumps to the *next highest category*.
+
+---
+
+## Track 2: Promotion / Possession with Intent to Promote
+
+*This applies to manufacturing, selling, delivering, transmitting, distributing, or advertising the material.*
+
+### A. Depictions of an Actual Child (Subsection e)
+
+* **Base Offense:** Second Degree Felony.
+* **Enhancement Step 1 (First Degree Felony):**
+* If the actor has 1 or more prior convictions; **OR**
+* If the material contains **10 to 49** depictions; **OR**
+* If the material depicts a child who appears **younger than 10**.
+
+
+* **Enhancement Step 2 (First Degree / Minimum 15 Years Confinement):**
+* If the material contains **50 or more** depictions; **OR**
+* If it depicts specific severe continuous sexual abuse.
+
+
+
+### B. Depictions of a Computer-Generated Child (Subsection e-1)
+
+* **Base Offense:** Third Degree Felony.
+* **Enhancement Step 1 (Second Degree Felony):**
+* If the actor has 1 or more prior convictions; **OR**
+* If the material contains **10 to 49** depictions; **OR**
+* If the material depicts a computer-generated child who appears **younger than 10**.
+
+
+* **Enhancement Step 2 (Second Degree / Minimum 10 Years Confinement):**
+* If the material contains **50 or more** computer-generated depictions.
+
+
+
+---
+
+## Notable Defenses Provided in the Text
+
+* **The "Romeo & Juliet" Defense:** For computer-generated or promotional offenses, it is an affirmative defense if the actor is **not more than 2 years older** than the depicted child.
+* **Law Enforcement / School Officials:** It is a defense if a law enforcement officer or school administrator temporarily possessed the material in good faith solely to handle/destroy a report of an offense.

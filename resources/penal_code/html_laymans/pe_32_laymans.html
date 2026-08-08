@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 32 – Fraud | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 32: Fraud</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-32-21">§32.21</a>
+<a href="#sec-32-22">§32.22</a>
+<a href="#sec-32-23">§32.23</a>
+<a href="#sec-32-24">§32.24</a>
+<a href="#sec-32-31">§32.31</a>
+<a href="#sec-32-315">§32.315</a>
+<a href="#sec-32-32">§32.32</a>
+<a href="#sec-32-33">§32.33</a>
+<a href="#sec-32-34">§32.34</a>
+<a href="#sec-32-35">§32.35</a>
+<a href="#sec-32-41">§32.41</a>
+<a href="#sec-32-42">§32.42</a>
+<a href="#sec-32-43">§32.43</a>
+<a href="#sec-32-44">§32.44</a>
+<a href="#sec-32-441">§32.441</a>
+<a href="#sec-32-45">§32.45</a>
+<a href="#sec-32-46">§32.46</a>
+<a href="#sec-32-47">§32.47</a>
+<a href="#sec-32-48">§32.48</a>
+<a href="#sec-32-49">§32.49</a>
+<a href="#sec-32-50">§32.50</a>
+<a href="#sec-32-51">§32.51</a>
+<a href="#sec-32-52">§32.52</a>
+<a href="#sec-32-53">§32.53</a>
+<a href="#sec-32-54">§32.54</a>
+<a href="#sec-32-55">§32.55</a>
+<a href="#sec-32-56(a)">§32.56(a)</a>
+<a href="#sec-32-56(b)">§32.56(b)</a>
+<a href="#sec-32-56(c)">§32.56(c)</a>
+<a href="#sec-32-56(d)">§32.56(d)</a>
+<a href="#sec-32-57">§32.57</a>
+<a href="#sec-32-60">§32.60</a>
+<a href="#sec-32-61">§32.61</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-32-21">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.21</span>
+    <span class="sec-name">FORGERY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.21 – FORGERY</h3>
+<p><em>Making, possessing, or passing fake documents with intent to cheat or harm someone.</em></p>
+<p>The suspect commits this offense by creating a fake writing (or using/possessing one) that pretends to be from someone else, from a different time/place, or a copy of an original that never existed — with intent to defraud or harm.</p>
+<h4>Base Offense (no property/service obtained)</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – base level</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the document is a check, credit card, deed, mortgage, contract, release, or similar financial instrument</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the document is currency, postage/revenue stamps, government-issued securities/stock, or a government record (§37.01(2)(C))</li>
+</ul>
+<h4>Value-Based Track (forgery used to obtain property or services)</h4>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – value less than $100</li>
+<li><strong>Class A Misdemeanor</strong> – $100 to $749</li>
+<li><strong>State Jail Felony</strong> – $750 to $2,499</li>
+<li><strong>Felony of the 3rd Degree</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $150,000 or more</li>
+</ul>
+<h4>Elderly Victim Enhancement</h4>
+<ul>
+<li>Offense is bumped <strong>one level higher</strong> if the victim is an elderly individual (65+), except the F1 level cannot be enhanced further.</li>
+</ul>
+<p><strong>Notable:</strong> Possessing two or more of the same type of government record forgeries creates a presumption of intent to defraud.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-22">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.22</span>
+    <span class="sec-name">CRIMINAL SIMULATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.22 – CRIMINAL SIMULATION</h3>
+<p><em>Making or selling objects that are faked to look older, rarer, or more valuable than they really are.</em></p>
+<p>The suspect creates or alters an object to make it appear to have value because of age, rarity, or famous origin — or sells/authenticates such a faked item — with intent to defraud.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-23">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.23</span>
+    <span class="sec-name">TRADEMARK COUNTERFEITING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.23 – TRADEMARK COUNTERFEITING</h3>
+<p><em>Manufacturing, selling, or distributing fake branded goods — knockoff logos, counterfeit trademarks.</em></p>
+<p>The suspect intentionally makes, advertises, sells, or possesses with intent to sell any item bearing a counterfeit mark (a copy of someone's registered trademark/service mark that they didn't authorize).</p>
+<h4>Scale by Retail Value</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – retail value less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<p><strong>Notable:</strong> Values from multiple acts in one scheme may be added together (aggregated) to determine the grade.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-24">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.24</span>
+    <span class="sec-name">STEALING OR RECEIVING STOLEN CHECK OR SIMILAR SIGHT ORDER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.24 – STEALING OR RECEIVING STOLEN CHECK OR SIMILAR SIGHT ORDER</h3>
+<p><em>Stealing a blank (unsigned) check or knowingly receiving one that was stolen.</em></p>
+<p>The suspect steals an unsigned check or sight order, or — knowing it was stolen — receives it with intent to use it, sell it, or transfer it to someone other than the rightful owner.</p>
+<ul>
+<li><strong>State Jail Felony</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-31">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.31</span>
+    <span class="sec-name">CREDIT CARD OR DEBIT CARD ABUSE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.31 – CREDIT CARD OR DEBIT CARD ABUSE</h3>
+<p><em>Fraudulently using, stealing, buying, or trafficking in someone else's credit or debit card.</em></p>
+<p>This section covers a wide range of card fraud: using a card that isn't yours (or that is revoked/expired), using a fictitious card number, stealing a card, buying a card from someone who isn't the issuer, selling a card, using the cardholder's card against them, or possessing incomplete/blank cards to complete them fraudulently.</p>
+<ul>
+<li><strong>State Jail Felony</strong> – base grade for all prohibited conduct</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the victim is an elderly individual (65+)</li>
+</ul>
+<p><strong>Notable:</strong> If the suspect received notice that a card was revoked or expired, there is a presumption they knew it was invalid.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-315">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.315</span>
+    <span class="sec-name">FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.315 – FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR DEBIT CARD INFORMATION</h3>
+<p><em>Skimming or stealing card numbers and account data to defraud — scaled by how many card accounts are compromised.</em></p>
+<p>The suspect obtains, possesses, transfers, or uses counterfeit card data, card numbers/expiration dates, or digital imprint data from cards — without the account holder's consent — with intent to harm or defraud.</p>
+<h4>Scale by Number of Card Items</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – fewer than 5 items</li>
+<li><strong>Felony of the 3rd Degree</strong> – 5 to 9 items</li>
+<li><strong>Felony of the 2nd Degree</strong> – 10 to 49 items</li>
+<li><strong>Felony of the 1st Degree</strong> – 50 or more items</li>
+</ul>
+<p><strong>Notable:</strong> Possessing 5 or more card items creates a rebuttable presumption that each was obtained without consent.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-32">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.32</span>
+    <span class="sec-name">FALSE STATEMENT TO OBTAIN PROPERTY OR CREDIT OR IN THE PROVISION OF CERTAIN SERVICES</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.32 – FALSE STATEMENT TO OBTAIN PROPERTY OR CREDIT</h3>
+<p><em>Lying in writing on a loan application, credit application, or appraisal to get money, property, or credit.</em></p>
+<p>The suspect intentionally or knowingly makes a materially false or misleading <em>written</em> statement to obtain property or credit (including mortgage loans). A separate track covers making false written statements when providing a real estate appraisal for pay.</p>
+<h4>Scale by Value of Property or Credit</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-33">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.33</span>
+    <span class="sec-name">HINDERING SECURED CREDITORS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.33 – HINDERING SECURED CREDITORS</h3>
+<p><em>Hiding, destroying, or selling property you pledged as collateral on a loan, with intent to prevent the lender from collecting.</em></p>
+<h4>Track A – Destroying or Hiding Collateral (Subsection b)</h4>
+<p>The suspect signed a security agreement (used property as loan collateral) and then destroys, removes, hides, or otherwise harms the collateral to prevent the lender from enforcing the loan.</p>
+<h4>Track B – Selling Collateral Without Accounting for Proceeds (Subsection e)</h4>
+<p>The suspect is a debtor who sells the collateral without authorization and then doesn't pay over the proceeds to the lender.</p>
+<h4>Scale by Value (Both Tracks)</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<p><strong>Notable:</strong> If any part of the debt was due and the debtor didn't pay and didn't surrender the property when demanded, there is a presumption of intent to hinder.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-34">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.34</span>
+    <span class="sec-name">FRAUDULENT TRANSFER OF A MOTOR VEHICLE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.34 – FRAUDULENT TRANSFER OF A MOTOR VEHICLE</h3>
+<p><em>Taking someone's car to sell it, then cheating the owner or lender in the process.</em></p>
+<p>The suspect takes possession of someone else's vehicle under an agreement to sell it to a third party, then either: transfers it without lender/lienholder approval, transfers it with intent to defraud the owner, disposes of it in some other way, or refuses to disclose where it is.</p>
+<h4>Track A – Unauthorized Transfer / Fraudulent Transfer / Wrongful Disposal (sub.(b)(1)–(3))</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – vehicle value less than $30,000</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<h4>Track B – Hiding Vehicle Location (sub.(b)(4))</h4>
+<ul>
+<li><strong>Class A Misdemeanor</strong></li>
+</ul>
+<p><strong>Defense:</strong> For (b)(1), it is a defense that the full debt was paid off within 30 days of the transfer.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-35">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.35</span>
+    <span class="sec-name">CREDIT CARD TRANSACTION RECORD LAUNDERING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.35 – CREDIT CARD TRANSACTION RECORD LAUNDERING</h3>
+<p><em>A merchant submitting fake credit card receipts to a bank for transactions that never happened — or someone who orchestrates that scheme.</em></p>
+<p>Two roles: (1) the authorized vendor who submits a fake sales record to a creditor with intent to defraud; and (2) the person who recruits or causes the vendor to do it without the creditor's authorization.</p>
+<h4>Scale by Amount of the Fake Sales Record</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-41">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.41</span>
+    <span class="sec-name">ISSUANCE OF BAD CHECK OR SIMILAR SIGHT ORDER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.41 – ISSUANCE OF BAD CHECK OR SIMILAR SIGHT ORDER</h3>
+<p><em>Writing a check knowing there isn't enough money in the account to cover it.</em></p>
+<p>The suspect issues or passes a check (or sight order) knowing at the time that the account doesn't have sufficient funds to pay it — plus all other outstanding checks.</p>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – base grade</li>
+<li><strong>Class B Misdemeanor</strong> – if the bad check was for a court-ordered child support payment</li>
+</ul>
+<p><strong>Presumption of knowledge:</strong> Knowledge of insufficient funds is presumed if the suspect had no account at all, or if the bank refused payment and the suspect failed to pay the holder in full within 10 days of receiving written notice of the refusal.</p>
+<p><strong>Note:</strong> This is NOT a lesser included offense of theft (§31.03) or theft of service (§31.04).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-42">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.42</span>
+    <span class="sec-name">DECEPTIVE BUSINESS PRACTICES</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.42 – DECEPTIVE BUSINESS PRACTICES</h3>
+<p><em>A range of dishonest business conduct: fake weights/measures, mislabeled goods, false advertising, and rigged contests.</em></p>
+<h4>Track A – Physical Deceptions (subsections (b)(1)–(6)): false weights, short measures, adulterated goods, passing off as another's brand, misrepresenting used goods as new</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – if the suspect acted with criminal negligence and has no prior conviction for deceptive business practices</li>
+<li><strong>Class A Misdemeanor</strong> – if the suspect acted intentionally, knowingly, or recklessly, OR has a prior Class B or C conviction under this section</li>
+</ul>
+<h4>Track B – Representational Deceptions (subsections (b)(7)–(12)): misrepresenting grade/model, bait-and-switch advertising, false pricing, deceptive sales contests, misleading ads</h4>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – for all offenses in this track</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-43">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.43</span>
+    <span class="sec-name">COMMERCIAL BRIBERY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.43 – COMMERCIAL BRIBERY</h3>
+<p><em>A person in a position of trust (agent, trustee, lawyer, corporate officer) secretly accepting payoffs to influence how they handle their duties — or someone offering those payoffs.</em></p>
+<p>Two roles: (1) the fiduciary who solicits/accepts a benefit in exchange for acting a certain way toward their client/employer without the client's consent; and (2) the person who offers or gives that benefit.</p>
+<ul>
+<li><strong>State Jail Felony</strong> – for both the bribe-taker and the bribe-giver</li>
+</ul>
+<p><strong>Notable:</strong> In addition to imprisonment, the court may fine a convicted fiduciary up to <em>double the value of the benefit</em> they gained.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-44">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.44</span>
+    <span class="sec-name">RIGGING PUBLICLY EXHIBITED CONTEST</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.44 – RIGGING PUBLICLY EXHIBITED CONTEST</h3>
+<p><em>Bribing, threatening, or tampering to fix the outcome or score of a publicly held contest.</em></p>
+<p>Two roles: (1) anyone who offers a benefit or threatens harm to a participant, official, or anyone associated with the contest to affect the outcome, or tampers with a person/animal/thing in violation of the rules; and (2) anyone who knowingly accepts or solicits such a bribe.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – for all conduct under this section</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-441">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.441</span>
+    <span class="sec-name">ILLEGAL RECRUITMENT OF AN ATHLETE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.441 – ILLEGAL RECRUITMENT OF AN ATHLETE</h3>
+<p><em>Paying or accepting payment to influence an athlete's decision to enroll at a college and play sports there.</em></p>
+<p>Two roles: (1) the athlete who accepts a benefit without the college's approval to influence their enrollment/participation decision; and (2) the person who offers or gives that benefit.</p>
+<h4>Scale by Value of the Benefit</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<p><strong>Exceptions:</strong> No offense if the parties are relatives within the 2nd degree of consanguinity or affinity. Also, an athlete who accepted a benefit but reported the offense to law enforcement within 60 days has an exception to prosecution.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-45">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.45</span>
+    <span class="sec-name">MISAPPLICATION OF FIDUCIARY PROPERTY OR PROPERTY OF FINANCIAL INSTITUTION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.45 – MISAPPLICATION OF FIDUCIARY PROPERTY OR PROPERTY OF FINANCIAL INSTITUTION</h3>
+<p><em>A trustee, executor, attorney-in-fact, bank officer, or similar person mishandling money or property they're responsible for managing.</em></p>
+<p>The suspect intentionally, knowingly, or recklessly deals with entrusted property in a way that violates their agreement or the law, and creates a substantial risk of loss to the owner.</p>
+<h4>Scale by Value of Property Misapplied</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<p><strong>Elderly Victim Enhancement:</strong> Offense is bumped <strong>one level higher</strong> (for grades (c)(1)–(6)) if the victim is an elderly individual (65+).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-46">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.46</span>
+    <span class="sec-name">FRAUDULENT SECURING OF DOCUMENT EXECUTION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.46 – FRAUDULENT SECURING OF DOCUMENT EXECUTION</h3>
+<p><em>Tricking someone into signing a document that affects their property or finances, or tricking a public servant into filing a fake court order — with intent to defraud or harm.</em></p>
+<h4>Track A – Tricking a Private Person to Sign (sub.(a)(1))</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – value less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+<h4>Track B – Getting a Public Servant to File a Fake "Court" Record (sub.(a)(2))</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – base grade</li>
+</ul>
+<p><strong>Elderly / Medicaid Enhancement:</strong> Offenses in (b)(1)–(6) and (c) are bumped <strong>one level higher</strong> if the victim is elderly or the offense involves the state Medicaid program.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-47">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.47</span>
+    <span class="sec-name">FRAUDULENT DESTRUCTION, REMOVAL, OR CONCEALMENT OF WRITING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.47 – FRAUDULENT DESTRUCTION, REMOVAL, OR CONCEALMENT OF WRITING</h3>
+<p><em>Destroying, hiding, or altering a document (other than a government record) with intent to defraud — includes switching price tags to pay less for merchandise.</em></p>
+<h4>Standard Track (no price-tag scheme)</h4>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade (if the writing is not a will, deed, or formal property document)</li>
+<li><strong>State Jail Felony</strong> – if the writing is a will/codicil, or a deed, mortgage, or recorded security instrument</li>
+</ul>
+<h4>Price-Tag Substitution Track (swapping tags to get merchandise cheaper)</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – price difference less than $100</li>
+<li><strong>Class B Misdemeanor</strong> – $100 to $749</li>
+<li><strong>Class A Misdemeanor</strong> – $750 to $2,499</li>
+<li><strong>State Jail Felony</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 3rd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $150,000 to $299,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $300,000 or more</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-48">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.48</span>
+    <span class="sec-name">SIMULATING LEGAL PROCESS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.48 – SIMULATING LEGAL PROCESS</h3>
+<p><em>Sending someone a fake lawsuit, summons, judgment, or court document to pressure them into paying or acting as if it's real.</em></p>
+<p>The suspect recklessly delivers (or causes to be delivered) a document that looks like a real court summons, complaint, judgment, or process with intent to make someone pay a claim or submit to its fake authority.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade</li>
+<li><strong>State Jail Felony</strong> – if the suspect has a prior conviction under this section</li>
+</ul>
+<p><strong>Notable:</strong> It is NOT a defense that the fake document says "NOT A GOVERNMENT DOCUMENT" — unless that phrase is printed clearly in red capital letters at least 1/4 inch tall diagonally across both front and back.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-49">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.49</span>
+    <span class="sec-name">REFUSAL TO EXECUTE RELEASE OF FRAUDULENT LIEN OR CLAIM</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.49 – REFUSAL TO EXECUTE RELEASE OF FRAUDULENT LIEN OR CLAIM</h3>
+<p><em>Holding onto a fake lien on someone's property and refusing to release it after being asked — with intent to harm or defraud.</em></p>
+<p>The suspect owns or holds a fraudulent lien or claim against real or personal property, and refuses to release it within 21 days of receiving proper written or electronic notice requesting release.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the property owner is a public servant the suspect knows to be a public servant</li>
+</ul>
+<p><strong>Notable:</strong> Failure to release within the 21-day window creates a presumption of intent to harm or defraud.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-50">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.50</span>
+    <span class="sec-name">DECEPTIVE PREPARATION AND MARKETING OF ACADEMIC PRODUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.50 – DECEPTIVE PREPARATION AND MARKETING OF ACADEMIC PRODUCT</h3>
+<p><em>Running a "term paper mill" — selling or advertising essays, theses, or other academic work for someone to turn in as their own.</em></p>
+<p>The suspect, with intent to profit, prepares, sells, offers, or advertises academic products knowing they'll be used by someone to satisfy another person's academic requirement (i.e., ghost-writing for pay). Also covers soliciting others to use such services.</p>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – base and only grade</li>
+</ul>
+<p><strong>Defenses:</strong> Employees of the institution providing legitimate tutoring/instruction; people offering editing or tutorial help without writing most of the work; typing/transcribing a manuscript for a fee.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-51">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.51</span>
+    <span class="sec-name">FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.51 – FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION</h3>
+<p><em>Identity theft — obtaining, using, possessing, or transferring someone's personal identifying information without their consent to harm or defraud.</em></p>
+<p>Identifying information includes name/date of birth, fingerprints, electronic ID numbers, financial account numbers, social security numbers, and telecom device identifiers. Applies to living persons, deceased persons, and children under 18.</p>
+<h4>Scale by Number of Items</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – fewer than 5 items</li>
+<li><strong>Felony of the 3rd Degree</strong> – 5 to 9 items</li>
+<li><strong>Felony of the 2nd Degree</strong> – 10 to 49 items</li>
+<li><strong>Felony of the 1st Degree</strong> – 50 or more items</li>
+</ul>
+<p><strong>Elderly / Sex Offender Enhancement:</strong> Offense bumped <strong>one level higher</strong> (for grades (c)(1)–(3)) if the victim is elderly (65+), or if the actor used the identity to evade sex offender registration requirements.</p>
+<p><strong>Presumption:</strong> Possessing identifying information of 3 or more other people creates a presumption of intent to harm or defraud.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-52">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.52</span>
+    <span class="sec-name">FRAUDULENT, SUBSTANDARD, OR FICTITIOUS DEGREE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.52 – FRAUDULENT, SUBSTANDARD, OR FICTITIOUS DEGREE</h3>
+<p><em>Falsely claiming to hold a college degree that is fake, was never granted to you, or has been revoked — to get a job, license, promotion, or admission.</em></p>
+<p>The suspect uses or claims to hold a fraudulent, substandard, or fictitious postsecondary degree in advertising, or with the intent to gain employment, a professional license, a promotion, educational admission, or a government position.</p>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-53">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.53</span>
+    <span class="sec-name">EXPLOITATION OF CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.53 – EXPLOITATION OF CHILD, ELDERLY INDIVIDUAL, OR DISABLED INDIVIDUAL</h3>
+<p><em>Illegally using a child, elderly person, or disabled person — or their resources — for monetary or personal gain.</em></p>
+<p>The suspect intentionally, knowingly, or recklessly causes the exploitation of a child, elderly individual, or disabled individual. "Exploitation" means the illegal or improper use of the person or their resources for monetary or personal benefit, profit, or gain.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base and only grade</li>
+</ul>
+<p><strong>Notable:</strong> This section can be prosecuted alongside other applicable offenses, and any sentences must run concurrently.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-54">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.54</span>
+    <span class="sec-name">FRAUDULENT OR FICTITIOUS MILITARY RECORD</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.54 – FRAUDULENT OR FICTITIOUS MILITARY RECORD</h3>
+<p><em>Falsely claiming military medals, awards, or specialties that were never earned — to get a job, benefits, services, or a government position.</em></p>
+<p>The suspect uses or claims to hold a military record (enlistment record, specialty, medal, award, decoration, or certification) that is fraudulent, fake, or revoked, and uses it in advertising or with intent to get employment priority, a professional license, promotion, benefits, educational admission, or state government authority.</p>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-55">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.55</span>
+    <span class="sec-name">FINANCIAL ABUSE OF ELDERLY INDIVIDUAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.55 – FINANCIAL ABUSE OF ELDERLY INDIVIDUAL</h3>
+<p><em>Wrongfully taking, using, or exploiting an elderly person's money or property — including through undue influence or breach of trust.</em></p>
+<p>The suspect knowingly engages in financial abuse of an elderly individual (65+). This includes financial exploitation by people in positions of confidence or trust: family members, caregivers, joint tenants, fiduciaries, and financial advisors.</p>
+<h4>Scale by Value of Property</h4>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – less than $100</li>
+<li><strong>Class A Misdemeanor</strong> – $100 to $749</li>
+<li><strong>State Jail Felony</strong> – $750 to $2,499</li>
+<li><strong>Felony of the 3rd Degree</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $150,000 or more</li>
+</ul>
+<p><strong>Notable:</strong> A rebuttable presumption of wrongfulness applies when a paid or unpaid caregiver transfers an elderly person's money or property, if the suspect knew or should have known the victim had dementia, Alzheimer's, or a related disorder.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-56(a)">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.56(a)</span>
+    <span class="sec-name">FRAUDULENT USE, POSSESSION, OR TAMPERING WITH GIFT CARD DATA (SB 1809)</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.56 – FRAUDULENT USE, POSSESSION, OR TAMPERING WITH GIFT CARD, GIFT CARD PACKAGING, OR GIFT CARD DATA (Added by SB 1809, eff. Sept. 1, 2025)</h3>
+<p><em>Stealing, counterfeiting, or tampering with gift cards or gift card account data to defraud.</em></p>
+<p>The suspect, with intent to harm or defraud, acquires gift cards or their data without consent, tampers with cards or packaging, uses stolen/counterfeit card data, or plants unactivated gift cards on store racks to deceive buyers.</p>
+<h4>Scale by Number of Gift Cards / Digital Imprints</h4>
+<ul>
+<li><strong>State Jail Felony</strong> – fewer than 5</li>
+<li><strong>Felony of the 3rd Degree</strong> – 5 to 9</li>
+<li><strong>Felony of the 2nd Degree</strong> – 10 to 49</li>
+<li><strong>Felony of the 1st Degree</strong> – 50 or more</li>
+</ul>
+<p><strong>Presumption:</strong> Possessing 3 or more gift cards/imprints creates a rebuttable presumption that each was obtained without consent.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-56(b)">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.56(b)</span>
+    <span class="sec-name">UNLAWFUL CONDUCT INVOLVING MAIL RECEPTACLE KEY OR LOCK (SB 1281)</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.56 – UNLAWFUL CONDUCT INVOLVING MAIL RECEPTACLE KEY OR LOCK (Added by SB 1281, eff. Sept. 1, 2025)</h3>
+<p><em>Obtaining, copying, or using postal service mailbox keys or locks to steal mail or defraud someone.</em></p>
+<p>The suspect, with intent to harm or defraud someone or steal their property, obtains, possesses, duplicates, transfers, or uses a key or lock adopted by a postal service for mail boxes or authorized mail receptacles.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base grade</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the suspect has a prior conviction under this section</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-56(c)">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.56(c)</span>
+    <span class="sec-name">FALSE, FRAUDULENT, OR FICTITIOUS DOCUMENT CONVEYING REAL PROPERTY INTEREST (SB 1333)</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.56 – FALSE, FRAUDULENT, OR FICTITIOUS DOCUMENT CONVEYING REAL PROPERTY INTEREST (Added by SB 1333, eff. Sept. 1, 2025)</h3>
+<p><em>Presenting a fake deed, lease, or other property document to claim the right to enter or remain on real property.</em></p>
+<p>The suspect, with intent to enter or stay on real property, knowingly shows another person a false, fraudulent, or fictitious document (lease, deed, or other instrument) that purports to give them a right to that property.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-56(d)">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.56(d)</span>
+    <span class="sec-name">FINANCIAL ABUSE USING ARTIFICIALLY GENERATED MEDIA OR PHISHING (SB 2373)</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.56 – FINANCIAL ABUSE USING ARTIFICIALLY GENERATED MEDIA OR PHISHING (Added by SB 2373, eff. Sept. 1, 2025)</h3>
+<p><em>Using deepfakes (AI-generated audio/video) or phishing schemes to financially exploit someone.</em></p>
+<p>The suspect knowingly engages in financial abuse either by using artificially generated media (deepfakes) sent to the victim, or by using phishing (tricking someone via email or electronic communication into giving up personal, financial, or identifying information).</p>
+<h4>Scale by Value of Property</h4>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – less than $100</li>
+<li><strong>Class A Misdemeanor</strong> – $100 to $749</li>
+<li><strong>State Jail Felony</strong> – $750 to $2,499</li>
+<li><strong>Felony of the 3rd Degree</strong> – $2,500 to $29,999</li>
+<li><strong>Felony of the 2nd Degree</strong> – $30,000 to $149,999</li>
+<li><strong>Felony of the 1st Degree</strong> – $150,000 or more</li>
+</ul>
+<p><strong>Notable:</strong> Internet service providers, telecom companies, and licensed broadcasters are exempt for content provided by others (they're not liable for third-party phishing content hosted on their platforms).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-57">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.57</span>
+    <span class="sec-name">FRAUDULENT SALE, RENTAL, OR LEASE OF RESIDENTIAL REAL PROPERTY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.57 – FRAUDULENT SALE, RENTAL, OR LEASE OF RESIDENTIAL REAL PROPERTY</h3>
+<p><em>Listing or actually selling/renting a home you don't own and have no authority to sell or rent.</em></p>
+<p>The suspect knowingly lists or advertises residential real property for sale, rent, or lease knowing they have no legal title or authority — or actually completes the sale/rental to another person under those conditions.</p>
+<ul>
+<li><strong>Felony of the 1st Degree</strong> – base and only grade</li>
+</ul>
+<p><strong>Exception:</strong> Licensed real estate professionals (lenders, title companies, brokers, agents) who participate in good faith and don't know the other party lacks authority are exempt.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-60">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.60</span>
+    <span class="sec-name">REAL PROPERTY FRAUD</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.60 – REAL PROPERTY FRAUD</h3>
+<p><em>Making false written statements or tricking someone into signing documents to fraudulently obtain real estate.</em></p>
+<p>The suspect either: (1) intentionally makes a materially false or misleading written statement to obtain real property; or (2) with intent to defraud or harm, tricks someone into signing a document affecting real property, or tricks a public servant into filing a fake judgment or lien related to real property.</p>
+<h4>Scale by Market Value of the Property</h4>
+<ul>
+<li><strong>Felony of the 2nd Degree</strong> – market value less than $300,000</li>
+<li><strong>Felony of the 1st Degree</strong> – market value $300,000 or more</li>
+</ul>
+<p><strong>Enhancement (next higher category):</strong> If the property owner is elderly (65+), a disabled individual, or a nonprofit — or if the property is a homestead with a residential tax exemption.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-32-61">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§32.61</span>
+    <span class="sec-name">MALICIOUS SOLICITATION OF DISASTER VICTIM OR FOR DISASTER RESPONSE OR RECOVERY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§32.61 – MALICIOUS SOLICITATION OF DISASTER VICTIM OR FOR DISASTER RESPONSE OR RECOVERY</h3>
+<p><em>Scamming disaster victims or donors by pretending to help with disaster relief — or pretending to search for a missing relative after a disaster.</em></p>
+<h4>Track A – Fake Donation Collection, Fake Free Services, or Retaining Solicited Donations (sub.(b)(1)–(3))</h4>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – first offense</li>
+<li><strong>Felony of the 2nd Degree</strong> – second or subsequent offense</li>
+<li><strong>Felony of the 1st Degree</strong> – if the suspect fabricated an official government disaster designation</li>
+</ul>
+<h4>Track B – Soliciting Payment to Search for a Missing Relative (sub.(b)(4))</h4>
+<ul>
+<li><strong>Felony of the 1st Degree</strong> – base grade for this track</li>
+</ul>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>

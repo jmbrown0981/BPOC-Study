@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 37 – Perjury and Other Falsification | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 37: Perjury and Other Falsification</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-37-02">§37.02</a>
+<a href="#sec-37-03">§37.03</a>
+<a href="#sec-37-08">§37.08</a>
+<a href="#sec-37-081">§37.081</a>
+<a href="#sec-37-082">§37.082</a>
+<a href="#sec-37-09">§37.09</a>
+<a href="#sec-37-10">§37.10</a>
+<a href="#sec-37-101">§37.101</a>
+<a href="#sec-37-11">§37.11</a>
+<a href="#sec-37-12">§37.12</a>
+<a href="#sec-37-13">§37.13</a>
+<a href="#sec-37-14">§37.14</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-37-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.02</span>
+    <span class="sec-name">PERJURY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.02 – PERJURY</h3>
+<p><em>Lying under oath — or in an unsworn declaration — when you know the statement is false and intend to deceive.</em></p>
+<p>The suspect, with intent to deceive and knowing the statement's meaning, either: (1) makes a false statement under oath (or swears a previously made false statement is true) when law requires it to be under oath; or (2) makes a false unsworn declaration under Chapter 132, Civil Practice and Remedies Code.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-03">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.03</span>
+    <span class="sec-name">AGGRAVATED PERJURY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.03 – AGGRAVATED PERJURY</h3>
+<p><em>Lying under oath during an official proceeding when the lie is material — meaning it could affect the outcome of the proceeding.</em></p>
+<p>The suspect commits perjury (§37.02) AND the false statement: (1) is made during or in connection with an official proceeding; AND (2) is material (could have affected the course or outcome of the proceeding). Whether a statement is material is a question of law for the judge, not the jury.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base and only grade</li>
+</ul>
+<p><strong>Defense (§37.05 – Retraction):</strong> It is a defense if the suspect retracted the false statement before the testimony at the proceeding was complete, AND before it became apparent that the lie was about to be exposed.</p>
+<p><strong>Notable (§37.06):</strong> If a suspect made two sworn statements that cannot both be true, the prosecution doesn't have to prove which one was false — both can be charged and prosecuted.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-08">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.08</span>
+    <span class="sec-name">FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL INVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR JAILER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.08 – FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL INVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR JAILER</h3>
+<p><em>Lying to a police officer, investigator, or corrections officer during a criminal investigation — with intent to deceive.</em></p>
+<p>The suspect, with intent to deceive, knowingly makes a false statement that is material to a criminal investigation, and makes it to: a peace officer or federal special investigator conducting the investigation; an authorized law enforcement agency employee conducting the investigation (who the suspect knows is doing so); or a corrections officer or jailer.</p>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-081">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.081</span>
+    <span class="sec-name">FALSE REPORT REGARDING MISSING CHILD OR MISSING PERSON</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.081 – FALSE REPORT REGARDING MISSING CHILD OR MISSING PERSON</h3>
+<p><em>Filing a false missing persons report or lying to police about a missing child or person.</em></p>
+<p>The suspect, with intent to deceive, knowingly either: files a false missing child or missing person report with law enforcement; or makes a false statement to a law enforcement officer or employee about a missing child or person.</p>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-082">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.082</span>
+    <span class="sec-name">MISREPRESENTING CHILD AS FAMILY MEMBER AT PORT OF ENTRY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.082 – MISREPRESENTING CHILD AS FAMILY MEMBER AT PORT OF ENTRY</h3>
+<p><em>Falsely telling officers at a border crossing that a child is your family member — with intent to traffic that child.</em></p>
+<p>The suspect, with intent to commit trafficking of persons (§20A.02), knowingly misrepresents a child (under 18) as their family member to a peace officer or federal special investigator at a U.S. port of entry.</p>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-09">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.09</span>
+    <span class="sec-name">TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.09 – TAMPERING WITH OR FABRICATING PHYSICAL EVIDENCE</h3>
+<p><em>Destroying, hiding, or faking physical evidence during an ongoing investigation or proceeding — or concealing a body from law enforcement.</em></p>
+<h4>Track A – While Investigation or Proceeding is Underway (sub.(a))</h4>
+<p>The suspect knows an investigation or official proceeding is pending or in progress, and either: destroys, alters, or conceals any record, document, or thing to impair its availability or integrity as evidence; or makes, presents, or uses a false record/document/thing with intent to affect the investigation's outcome.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base grade (altering/concealing)</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the item concealed or altered is a human corpse</li>
+<li><strong>Class A Misdemeanor</strong> – for making/presenting/using a false record (sub.(a)(2))</li>
+</ul>
+<h4>Track B – After an Offense Has Been Committed (sub.(d)(1))</h4>
+<p>The suspect knows an offense has been committed and conceals/destroys evidence to impair its availability in a subsequent investigation.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base grade</li>
+<li><strong>Felony of the 2nd Degree</strong> – if what is concealed is a human corpse</li>
+</ul>
+<h4>Track C – Failing to Report a Corpse (sub.(d)(2))</h4>
+<p>The suspect sees a human body under circumstances where a reasonable person would believe an offense was committed, knows police don't know about the body, and fails to report its existence and location to law enforcement.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong></li>
+</ul>
+<p><strong>Exceptions:</strong> Privileged communications and attorney work product are excluded. Legally destroying visual material under §43.261(f)(3) is also a defense.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-10">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.10</span>
+    <span class="sec-name">TAMPERING WITH GOVERNMENTAL RECORD</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.10 – TAMPERING WITH GOVERNMENTAL RECORD</h3>
+<p><em>Falsifying, destroying, selling, or misusing official government records and documents — courts, licenses, permits, election records, etc.</em></p>
+<p>The suspect knowingly: makes a false entry in or alteration of a government record; presents or uses a fake government record; intentionally destroys, conceals, removes, or impairs a government record; possesses or sells government record forms for unlawful use; or possesses government records obtained unlawfully.</p>
+<h4>Base Grades</h4>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade (no intent to defraud)</li>
+<li><strong>State Jail Felony</strong> – if the suspect intended to defraud or harm another</li>
+</ul>
+<h4>Special Record Type Enhancements</h4>
+<ul>
+<li><strong>Class C Misdemeanor</strong> – if the record is a school enrollment residency document</li>
+<li><strong>Class B Misdemeanor</strong> – if the record is a tax appraisal filed with a conflicted appraiser, or a ballot application with false candidate information, or a temporary vehicle tag</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the record is a public school assessment or PEIMS report; a government-issued license/certificate/permit/title/patent; an expert examination report in a criminal case; an instrument calibration record in a criminal case; or a search warrant</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the record in the previous category was tampered with <em>and</em> the suspect intended to defraud (upgrades from F3)</li>
+</ul>
+<h4>Insurance Document Track (§37.01(2)(D) records)</h4>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – presenting or using a fake insurance document</li>
+<li><strong>Felony of the 3rd Degree</strong> – making a fake insurance document, or other tampering acts</li>
+<li><strong>Felony of the 2nd Degree</strong> – if the intent was to defraud or harm another</li>
+</ul>
+<p><strong>Defense:</strong> For false entries or false information, it is a defense that the false entry could have no effect on the government's purpose for requiring the record.</p>
+<p><strong>Presumption:</strong> Acting with respect to two or more of the same type of government-issued licenses, certificates, or permits creates a presumption of intent to defraud.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-101">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.101</span>
+    <span class="sec-name">FRAUDULENT FILING OF FINANCING STATEMENT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.101 – FRAUDULENT FILING OF FINANCING STATEMENT</h3>
+<p><em>Filing a forged, false, or baseless UCC financing statement (a legal lien document) with the government.</em></p>
+<p>The suspect knowingly presents for filing a financing statement that they know is: forged; contains a material false statement; or is groundless (has no legal basis).</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – if the financing statement is forged</li>
+<li><strong>Felony of the 2nd Degree</strong> – if forged AND the suspect has 2 or more prior convictions under this section</li>
+<li><strong>Class A Misdemeanor</strong> – if the statement contains a false statement or is groundless</li>
+<li><strong>State Jail Felony</strong> – if the false-statement or groundless filing was done with intent to defraud or harm another</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-11">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.11</span>
+    <span class="sec-name">IMPERSONATING PUBLIC SERVANT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.11 – IMPERSONATING PUBLIC SERVANT</h3>
+<p><em>Pretending to be a police officer, judge, or other government official to get someone to submit to fake authority or rely on fake official acts.</em></p>
+<p>Two forms: (1) the suspect impersonates a public servant with intent to get someone to submit to fake official authority or rely on fake official acts; (2) the suspect knowingly exercises government functions (including judicial functions) without legal authority.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-12">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.12</span>
+    <span class="sec-name">FALSE IDENTIFICATION AS PEACE OFFICER; MISREPRESENTATION OF PROPERTY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.12 – FALSE IDENTIFICATION AS PEACE OFFICER; MISREPRESENTATION OF PROPERTY</h3>
+<p><em>Making, giving, or possessing fake police badges or insignia for someone who isn't actually a commissioned peace officer — or disguising a vehicle as a law enforcement vehicle.</em></p>
+<p>Two forms: (1) the suspect makes, provides, or possesses an item (badge, ID, shoulder patch, vehicle marking) bearing a law enforcement agency insignia that identifies someone as a peace officer, knowing that person is NOT actually commissioned as one; (2) the suspect intentionally misrepresents an object as property of a law enforcement agency.</p>
+<ul>
+<li><strong>Class B Misdemeanor</strong> – base and only grade for both forms</li>
+</ul>
+<p><strong>Defenses:</strong> The item clearly labels the person as an honorary/junior peace officer or member of a junior posse; the person was actually commissioned at the time the item was made; the item is used exclusively for decorative purposes or in an artistic or dramatic presentation.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-13">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.13</span>
+    <span class="sec-name">RECORD OF A FRAUDULENT COURT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.13 – RECORD OF A FRAUDULENT COURT</h3>
+<p><em>Creating or using fake "court orders" from made-up courts that have no legal existence under state or federal law — a tool of sovereign citizen/paper terrorism schemes.</em></p>
+<p>The suspect makes, presents, or uses any document knowing it is NOT a record of a real court created under state or federal law, with the intent that it be given the same legal effect as a real court record.</p>
+<ul>
+<li><strong>Class A Misdemeanor</strong> – base grade</li>
+<li><strong>Felony of the 3rd Degree</strong> – if the suspect has 2 or more prior convictions under this section</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-37-14">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§37.14</span>
+    <span class="sec-name">FALSE STATEMENT REGARDING CHILD CUSTODY DETERMINATION MADE IN FOREIGN COUNTRY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§37.14 – FALSE STATEMENT REGARDING CHILD CUSTODY DETERMINATION MADE IN FOREIGN COUNTRY</h3>
+<p><em>Lying to a Texas court about a foreign country's child custody ruling during a hearing on that custody matter.</em></p>
+<p>The suspect knowingly makes or causes a false statement to be made about a child custody determination issued by a foreign country, during a Texas court hearing under Chapter 152 (Uniform Child Custody Jurisdiction) or Chapter 153 (Subchapter I), Family Code.</p>
+<ul>
+<li><strong>Felony of the 3rd Degree</strong> – base and only grade</li>
+</ul>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>

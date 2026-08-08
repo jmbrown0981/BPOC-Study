@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch. 42 – Disorderly Conduct and Related Offenses | TX Penal Code Layman's Guide</title>
+<style>
+
+:root{--blue:#1a3a5c;--gold:#c8a240;--light:#f0f2f5;--white:#fff;--teal:#1a7a7a;--indigo:#3d3d8f;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--light);color:#222;min-height:100vh;}
+header{background:var(--blue);color:#fff;padding:16px 20px 14px;}
+header .sub{font-size:.78rem;opacity:.75;margin-bottom:2px;}
+header h1{font-size:1.1rem;font-weight:800;line-height:1.3;}
+nav.toc{background:var(--white);border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+nav.toc a{font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;padding:3px 9px;border-radius:12px;border:1.5px solid var(--blue);white-space:nowrap;}
+nav.toc a:hover{background:var(--blue);color:#fff;}
+main{max-width:820px;margin:0 auto;padding:24px 16px 60px;}
+.sec-card{background:var(--white);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden;}
+.sec-header{background:var(--blue);color:#fff;padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.sec-header:hover{background:#122a45;}
+.sec-header .sec-num{font-size:.78rem;font-weight:700;background:var(--gold);color:var(--blue);padding:2px 9px;border-radius:10px;white-space:nowrap;}
+.sec-header .sec-name{font-size:.95rem;font-weight:700;flex:1;}
+.sec-header .toggle{font-size:1.2rem;opacity:.8;transition:transform .2s;}
+.sec-header.open .toggle{transform:rotate(180deg);}
+.sec-body{padding:18px 20px;display:none;}
+.sec-body.open{display:block;}
+.sec-body p{margin-bottom:.75em;line-height:1.65;font-size:.92rem;}
+.sec-body em{color:#546e7a;font-style:italic;}
+.sec-body h3{color:var(--blue);font-size:.95rem;font-weight:700;margin:1em 0 .4em;padding-left:10px;border-left:3px solid var(--gold);}
+.sec-body h4{color:#455a64;font-size:.88rem;font-weight:700;margin:.8em 0 .3em;}
+.sec-body ul{padding-left:1.4em;margin-bottom:.75em;}
+.sec-body li{font-size:.91rem;line-height:1.6;margin-bottom:.25em;}
+.sec-body strong{color:#1a3a5c;}
+.grade-tag{display:inline-block;font-size:.76rem;font-weight:800;padding:2px 8px;border-radius:8px;margin-right:4px;}
+.g-capital{background:#2d0000;color:#fff;}
+.g-f1{background:#6a1a1a;color:#fff;}
+.g-f2{background:#7b3a00;color:#fff;}
+.g-f3{background:#1a4a1a;color:#fff;}
+.g-sj{background:#1a3a5c;color:#fff;}
+.g-ma{background:#4a2d6a;color:#fff;}
+.g-mb{background:#5a4500;color:#e0c060;}
+.g-mc{background:#3a3a3a;color:#e0e0e0;}
+.def-box{background:#f0f6ff;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin:.5em 0;font-size:.88rem;}
+.def-box strong{color:var(--blue);}
+@media(max-width:520px){.sec-header .sec-name{font-size:.88rem;}.sec-body{padding:14px 14px;}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">TX Penal Code &mdash; Layman's Guide</div>
+  <h1>Chapter 42: Disorderly Conduct and Related Offenses</h1>
+</header>
+<nav class="toc">
+  <a href="#sec-42-01">§42.01</a>
+<a href="#sec-42-02">§42.02</a>
+<a href="#sec-42-03">§42.03</a>
+<a href="#sec-42-05">§42.05</a>
+<a href="#sec-42-055">§42.055</a>
+<a href="#sec-42-06">§42.06</a>
+<a href="#sec-42-0601">§42.0601</a>
+<a href="#sec-42-061">§42.061</a>
+<a href="#sec-42-062">§42.062</a>
+<a href="#sec-42-07">§42.07</a>
+<a href="#sec-42-072">§42.072</a>
+<a href="#sec-42-074">§42.074</a>
+<a href="#sec-42-075">§42.075</a>
+<a href="#sec-42-08">§42.08</a>
+<a href="#sec-42-09">§42.09</a>
+<a href="#sec-42-091">§42.091</a>
+<a href="#sec-42-092">§42.092</a>
+<a href="#sec-42-10">§42.10</a>
+<a href="#sec-42-105">§42.105</a>
+<a href="#sec-42-107">§42.107</a>
+<a href="#sec-42-11">§42.11</a>
+<a href="#sec-42-12">§42.12</a>
+<a href="#sec-42-13">§42.13</a>
+<a href="#sec-42-14">§42.14</a>
+<a href="#sec-42-15">§42.15</a>
+
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <button onclick="expandAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;font-weight:700;">Expand All</button>
+    <button onclick="collapseAll()" style="font-size:.75rem;padding:3px 9px;border-radius:10px;border:1.5px solid #90a4ae;background:#fff;color:#546e7a;cursor:pointer;font-weight:700;">Collapse All</button>
+  </span>
+</nav>
+<main>
+
+<div class="sec-card" id="sec-42-01">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.01</span>
+    <span class="sec-name">DISORDERLY CONDUCT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.01 – DISORDERLY CONDUCT</h3>
+<p><em>Creating a public disturbance — from fighting and flashing to firing guns and peeking in windows.</em></p>
+<p>A person commits the offense if they intentionally or knowingly engage in any of the following in a public place:</p>
+<ul>
+  <li>Using abusive, indecent, profane, or vulgar language that tends to incite immediate breach of the peace</li>
+  <li>Making offensive gestures or displays that tend to incite a breach of the peace</li>
+  <li>Creating a noxious and unreasonable odor by chemical means</li>
+  <li>Abusing or threatening a person in an obviously offensive manner</li>
+  <li>Making unreasonable noise in or near a place they have no right to occupy</li>
+  <li>Fighting in a public place</li>
+  <li>Discharging a firearm in a public place (not on a public road or sport shooting range)</li>
+  <li>Displaying a firearm or deadly weapon in a manner calculated to alarm</li>
+  <li>Discharging a firearm on or across a public road</li>
+  <li>Exposing genitals or anus in public while reckless about whether someone will be offended</li>
+  <li>Peeping through windows of a dwelling, hotel room, or privacy area (restroom, changing room) for a lewd or unlawful purpose</li>
+</ul>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — most of the above.</li>
+  <li><strong>Class B Misdemeanor</strong> — discharging a firearm in a public place (§a(7)) or displaying a firearm/deadly weapon in a manner calculated to alarm (§a(8)).</li>
+</ul>
+<p><strong>Defense:</strong> A significant provocation defense is available for the "abusing or threatening" subsection (§a(4)). Discharging a firearm out of reasonable fear of a dangerous wild animal is also a defense to §a(7) or (9).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.02</span>
+    <span class="sec-name">RIOT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.02 – RIOT</h3>
+<p><em>Knowingly participating in a mob of 7 or more people whose combined conduct creates danger, obstructs law enforcement, or deprives someone of their rights.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — base offense: knowingly participating in a riot.</li>
+  <li><strong>Same grade as highest offense committed by any rioter</strong> — if anyone in the riot commits a higher-grade offense in furtherance of the riot's purpose, or in a way that should have been anticipated, all participants can be charged at that higher grade.</li>
+</ul>
+<p><strong>Defense:</strong> If the assembly started lawfully and the suspect left when someone manifested an intent to engage in riot conduct, that is a defense.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-03">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.03</span>
+    <span class="sec-name">OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.03 – OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY</h3>
+<p><em>Blocking a road, sidewalk, hallway, or any other passage — or refusing to move when ordered by an officer or authorized person.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — base offense: intentionally, knowingly, or recklessly obstructing a highway, street, sidewalk, waterway, aisle, hallway, entrance, or exit without legal authority; or disobeying a reasonable order to move from a peace officer, firefighter, or authorized person to prevent obstruction or maintain safety.</li>
+  <li><strong>State Jail Felony</strong> — if the blockage prevents passage of an authorized emergency vehicle with lights/sirens active, or blocks access to a hospital or emergency care facility; OR if the person was operating a motor vehicle in a "reckless driving exhibition" (street spinning/drifting spectacle) AND had a prior conviction, was intoxicated, or someone was injured.</li>
+  <li><strong>Class A Misdemeanor</strong> — if the person was engaged in a reckless driving exhibition (donut-spinning spectacle) at the time of the obstruction.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.05</span>
+    <span class="sec-name">DISRUPTING MEETING OR PROCESSION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.05 – DISRUPTING MEETING OR PROCESSION</h3>
+<p><em>Intentionally breaking up a lawful meeting, march, or gathering — whether in person or online.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — intentionally disrupting a lawful meeting, procession, or gathering (including virtual ones) through physical action, verbal utterance, or electronic disturbance such as hacking into an online meeting.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-055">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.055</span>
+    <span class="sec-name">FUNERAL SERVICE DISRUPTIONS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.055 – FUNERAL SERVICE DISRUPTIONS</h3>
+<p><em>Protesting or picketing too close to a funeral — within 1,000 feet during the 3-hour window before and after the service.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — engaging in picketing (carrying signs, loud chanting/singing/yelling, or blocking access) within 1,000 feet of a funeral facility or cemetery during the period beginning 3 hours before and ending 3 hours after a funeral service.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-06">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.06</span>
+    <span class="sec-name">FALSE ALARM OR REPORT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.06 – FALSE ALARM OR REPORT</h3>
+<p><em>Calling in a fake bomb threat, false fire report, or other phony emergency.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — knowingly initiating, communicating, or circulating a report of a false bombing, fire, offense, or other emergency that would cause emergency responders to act, place someone in fear of serious injury, or prevent use of a building or vehicle.</li>
+  <li><strong>State Jail Felony</strong> — if the false report involves a <em>school</em> (public or private K–12 or higher education), public communications, transportation, water, gas, power, or other public service.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-0601">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.0601</span>
+    <span class="sec-name">FALSE REPORT TO INDUCE EMERGENCY RESPONSE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.0601 – FALSE REPORT TO INDUCE EMERGENCY RESPONSE (SWATTING)</h3>
+<p><em>Making a false police or emergency report that you know could recklessly result in bodily injury to someone when responders show up — commonly called "swatting."</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — base offense: making a knowingly false report to police, 9-1-1, or emergency services that causes an emergency response, while reckless as to whether that response could directly result in bodily injury to another.</li>
+  <li><strong>State Jail Felony</strong> — if the suspect has two or more prior convictions for this offense.</li>
+  <li><strong>Felony of the 3rd Degree</strong> — if the false report was of a criminal offense to which law enforcement responded, and a person suffered <em>serious bodily injury or death</em> as a direct result of lawful conduct arising from that response.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-061">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.061</span>
+    <span class="sec-name">SILENT OR ABUSIVE CALLS TO 9-1-1 SERVICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.061 – SILENT OR ABUSIVE CALLS TO 9-1-1 SERVICE</h3>
+<p><em>Calling 9-1-1 when there is no emergency — staying silent or verbally abusing the dispatcher.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — calling 9-1-1 with no emergency and intentionally remaining silent or making abusive/harassing statements to a PSAP (dispatch) employee; also applies to knowingly permitting another person to misuse your device this way.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-062">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.062</span>
+    <span class="sec-name">INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.062 – INTERFERENCE WITH EMERGENCY REQUEST FOR ASSISTANCE</h3>
+<p><em>Stopping someone from calling 9-1-1 or getting emergency help — like blocking a victim from calling police during a domestic violence situation.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — base offense: knowingly preventing or interfering with another person's ability to place an emergency call or request emergency assistance; or recklessly rendering a phone or device unusable that another person would otherwise use to call for help in an emergency.</li>
+  <li><strong>State Jail Felony</strong> — if the suspect has a prior conviction for this offense.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-07">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.07</span>
+    <span class="sec-name">HARASSMENT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.07 – HARASSMENT</h3>
+<p><em>Repeatedly contacting, messaging, or tracking someone with the intent to harass, annoy, alarm, torment, or embarrass them.</em></p>
+<p>The offense requires <em>intent to harass, annoy, alarm, abuse, torment, or embarrass</em>. Prohibited conduct includes:</p>
+<ul>
+  <li>Initiating obscene communications</li>
+  <li>Threatening bodily injury or a felony in a manner likely to alarm the recipient</li>
+  <li>Conveying a false report that someone died or was seriously injured</li>
+  <li>Making repeated anonymous phone calls or calls likely to annoy/harass</li>
+  <li>Failing to hang up after calling</li>
+  <li>Permitting another to use your phone for harassment</li>
+  <li>Sending repeated electronic communications likely to harass or embarrass</li>
+  <li>Repeatedly posting on social media/websites in a manner likely to cause emotional distress (unless matters of public concern)</li>
+  <li>Tracking or monitoring someone's property or vehicle without consent (including GPS apps or physically following them)</li>
+  <li>Making threatening/obscene calls from throwaway/internet phone numbers</li>
+</ul>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — base offense.</li>
+  <li><strong>Class A Misdemeanor</strong> — if the suspect has a prior conviction; or if the victim is a utility worker, court employee, or a child under 18 targeted online with intent to make them commit suicide or self-harm.</li>
+  <li><strong>State Jail Felony</strong> — if the victim is a judge, or a court employee with a prior conviction for harassment.</li>
+  <li><strong>Felony of the 3rd Degree</strong> — if the victim is a judge and the suspect has a prior harassment conviction.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-072">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.072</span>
+    <span class="sec-name">STALKING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.072 – STALKING</h3>
+<p><em>A repeated pattern of conduct — on more than one occasion — that threatens someone and causes them reasonable fear of injury, death, or criminal acts against them, their family, or their property.</em></p>
+<p>Three elements must all be present:</p>
+<ol>
+  <li>The conduct constitutes harassment (§42.07) or the suspect reasonably knows the other person will regard it as threatening bodily injury/death or commission of an offense against them, their family/household/dating partner, or their property;</li>
+  <li>The conduct places the other person (or their family/household/dating partner) in actual fear or causes them to feel harassed, terrified, intimidated, etc.; and</li>
+  <li>A reasonable person in the victim's circumstances would similarly fear bodily injury, death, offenses against their family/property, or feel harassed/terrorized.</li>
+</ol>
+<ul>
+  <li><strong>Felony of the 3rd Degree</strong> — base offense.</li>
+  <li><strong>Felony of the 2nd Degree</strong> — if the suspect has a prior stalking conviction in Texas, another state, or under tribal or federal law.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-074">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.074</span>
+    <span class="sec-name">UNLAWFUL DISCLOSURE OF RESIDENCE ADDRESS OR TELEPHONE NUMBER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.074 – UNLAWFUL DISCLOSURE OF RESIDENCE ADDRESS OR TELEPHONE NUMBER</h3>
+<p><em>Posting someone's home address or phone number online with the intent to cause them harm or threats.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — posting on a publicly accessible website or disclosing through an electronic communication someone's residence address or phone number with intent to cause harm or a threat of harm to that person or their family/household.</li>
+  <li><strong>Class A Misdemeanor</strong> — if the disclosure results in <em>bodily injury</em> to the victim or a member of their family/household.</li>
+</ul>
+<p><strong>Exception:</strong> Public servants acting within the scope of state or federal law are exempt.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-075">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.075</span>
+    <span class="sec-name">DISCLOSURE OF CONFIDENTIAL INFORMATION REGARDING FAMILY VIOLENCE OR VICTIMS OF TRAFFICKING SHELTER CENTER</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.075 – DISCLOSURE OF CONFIDENTIAL INFORMATION REGARDING FAMILY VIOLENCE OR TRAFFICKING SHELTER</h3>
+<p><em>Revealing the location or layout of a domestic violence or trafficking victim shelter with intent to endanger the residents.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — a person who, with intent to threaten the safety of shelter residents, discloses or publicizes the location or physical layout of a family violence shelter center or victims of trafficking shelter center.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-08">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.08</span>
+    <span class="sec-name">ABUSE OF CORPSE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.08 – ABUSE OF CORPSE</h3>
+<p><em>Disturbing, damaging, trafficking, or disrespecting a dead body or a person's burial space.</em></p>
+<ul>
+  <li><strong>State Jail Felony</strong> — knowingly, without legal authority, disinterring, disturbing, damaging, dissecting, carrying away, or treating a human corpse in an offensive manner; concealing an illegally disinterred corpse; buying or selling a corpse; or transporting a corpse out of state.</li>
+  <li><strong>Class A Misdemeanor</strong> — vandalizing, damaging, or treating in an offensive manner the <em>space</em> where a corpse is interred or permanently laid to rest.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-09">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.09</span>
+    <span class="sec-name">CRUELTY TO LIVESTOCK ANIMALS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.09 – CRUELTY TO LIVESTOCK ANIMALS</h3>
+<p><em>Torturing, neglecting, abandoning, or fighting livestock animals (cattle, horses, sheep, pigs, goats, poultry, and similar animals).</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — failing to provide necessary food/water/care, abandoning, transporting or confining in a cruel manner, or seriously overworking a livestock animal. Escalates to a <strong>State Jail Felony</strong> with two prior animal cruelty convictions (under this section or §42.092, in any combination).</li>
+  <li><strong>State Jail Felony</strong> — torture, poisoning another's livestock (other than cattle, horses, sheep, swine, or goats), causing animals to fight, using a live animal as a race lure, or horse tripping. Escalates to a <strong>Felony of the 3rd Degree</strong> with two prior convictions.</li>
+</ul>
+<p><strong>Exception:</strong> Lawful hunting, wildlife management, and standard agricultural practices are not offenses.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-091">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.091</span>
+    <span class="sec-name">ATTACK ON ASSISTANCE ANIMAL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.091 – ATTACK ON ASSISTANCE ANIMAL</h3>
+<p><em>Attacking, injuring, or killing a service animal (guide dog, hearing dog, etc.) or directing your animal to do so.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — attacking an assistance animal or inciting/permitting your own animal to attack one.</li>
+  <li><strong>State Jail Felony</strong> — <em>injuring</em> an assistance animal or permitting your animal to injure one.</li>
+  <li><strong>Felony of the 3rd Degree</strong> — <em>killing</em> an assistance animal or permitting your animal to kill one.</li>
+</ul>
+<p><strong>Note:</strong> Courts must order restitution for vet bills, replacement/retraining costs, and other expenses.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-092">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.092</span>
+    <span class="sec-name">CRUELTY TO NONLIVESTOCK ANIMALS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.092 – CRUELTY TO NONLIVESTOCK ANIMALS</h3>
+<p><em>Torturing, neglecting, abandoning, fighting, or otherwise abusing pets and domesticated non-farm animals.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — failing to provide necessary food, water, care, or shelter; abandoning; confining or transporting in a cruel manner; causing bodily injury (without owner's consent); or seriously overworking an animal. Escalates to a <strong>State Jail Felony</strong> with two prior convictions.</li>
+  <li><strong>Felony of the 3rd Degree</strong> — torturing an animal or killing/causing serious bodily injury in a cruel manner; or killing/seriously injuring another person's animal without consent. Escalates to a <strong>Felony of the 2nd Degree</strong> with a prior conviction for these specific acts.</li>
+  <li><strong>State Jail Felony</strong> — causing animals (other than dogs) to fight, or using a live animal as a race lure. Escalates to a <strong>Felony of the 3rd Degree</strong> with a prior conviction.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-10">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.10</span>
+    <span class="sec-name">DOG FIGHTING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.10 – DOG FIGHTING</h3>
+<p><em>Causing, hosting, betting on, or attending dogfights — or owning/training dogs for fighting.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — owning or possessing dog-fighting equipment with fighting intent; owning or training a dog for fighting; attending as a spectator.</li>
+  <li><strong>State Jail Felony</strong> — causing a dog to fight another dog; participating in the earnings of or operating a dog-fighting facility; using or permitting property to be used for dog fighting.</li>
+</ul>
+<p><strong>Defense:</strong> Causing a dog to fight in defense of livestock or other property against another dog is a defense to §(a)(1).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-105">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.105</span>
+    <span class="sec-name">COCKFIGHTING</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.105 – COCKFIGHTING</h3>
+<p><em>Causing roosters to fight, hosting cockfights, or breeding/training roosters for fighting.</em></p>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — attending a cockfight as a spectator (escalates to <strong>Class A Misdemeanor</strong> with a prior conviction for attending). Exception: spectators 15 and under are exempt.</li>
+  <li><strong>Class A Misdemeanor</strong> — manufacturing, buying, selling, or possessing gaffs/slashers (fighting spurs); using or permitting property for cockfighting; owning or training cocks for fighting.</li>
+  <li><strong>State Jail Felony</strong> — causing a cock to fight another; participating in the earnings of a cockfight.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-107">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.107</span>
+    <span class="sec-name">POSSESSION OF ANIMAL BY PERSON CONVICTED OF ANIMAL CRUELTY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.107 – POSSESSION OF ANIMAL BY PERSON CONVICTED OF ANIMAL CRUELTY</h3>
+<p><em>A person with a recent animal cruelty conviction who tries to own or control an animal again within five years.</em></p>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — possessing or exercising control over any animal within 5 years of a conviction under §42.091, §42.092, or §42.10 (or substantially similar offenses in other jurisdictions).</li>
+  <li><strong>Class B Misdemeanor</strong> — if the suspect has a prior conviction under this section.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-11">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.11</span>
+    <span class="sec-name">DESTRUCTION OF FLAG</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.11 – DESTRUCTION OF FLAG</h3>
+<p><em>Intentionally or knowingly damaging, defacing, mutilating, or burning the U.S. or Texas flag.</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong></li>
+</ul>
+<p><strong>Exception:</strong> Disposing of a damaged flag in accordance with federal or state law (proper retirement) is not an offense.</p>
+<p><strong>Note:</strong> "Flag" means an actual flag capable of being flown — not a printed or painted depiction on paper, clothing, or jewelry.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-12">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.12</span>
+    <span class="sec-name">DISCHARGE OF FIREARM IN CERTAIN MUNICIPALITIES</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.12 – DISCHARGE OF FIREARM IN CERTAIN MUNICIPALITIES</h3>
+<p><em>Recklessly firing a gun inside the city limits of a large municipality (100,000 or more population).</em></p>
+<ul>
+  <li><strong>Class A Misdemeanor</strong> — recklessly discharging a firearm inside the corporate limits of a municipality with a population of 100,000 or more.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-13">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.13</span>
+    <span class="sec-name">USE OF LASER POINTERS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.13 – USE OF LASER POINTERS</h3>
+<p><em>Knowingly shining a laser pointer at a uniformed officer, security guard, firefighter, EMT, or other uniformed public safety worker.</em></p>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — base offense: knowingly directing a laser pointer at a uniformed safety officer (peace officer, security guard, firefighter, EMS worker, or other uniformed municipal/state/federal officer).</li>
+  <li><strong>Felony of the 3rd Degree</strong> — if the laser causes <em>bodily injury</em> to the officer.</li>
+  <li><strong>Felony of the 1st Degree</strong> — if the laser causes <em>serious bodily injury</em> to the officer.</li>
+</ul>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-14">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.14</span>
+    <span class="sec-name">ILLUMINATION OF AIRCRAFT BY INTENSE LIGHT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.14 – ILLUMINATION OF AIRCRAFT BY INTENSE LIGHT</h3>
+<p><em>Shining a laser or intense light at a plane or helicopter in a way that could impair the pilot's ability to control the aircraft.</em></p>
+<ul>
+  <li><strong>Class C Misdemeanor</strong> — intentionally directing a laser or other intense light at an aircraft, even if it doesn't impair the pilot.</li>
+  <li><strong>Class A Misdemeanor</strong> — if the light is intense enough to <em>impair the operator's ability to control the aircraft</em>.</li>
+</ul>
+<p><strong>Affirmative defense:</strong> Using the light to send an emergency distress signal.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-42-15">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">§42.15</span>
+    <span class="sec-name">OPERATION OF UNMANNED AIRCRAFT OVER AIRPORT, MILITARY INSTALLATION, OR SPACEPORT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>§42.15 – OPERATION OF UNMANNED AIRCRAFT OVER AIRPORT, MILITARY INSTALLATION, OR SPACEPORT</h3>
+<p><em>Flying a drone over an airport, military base, or spaceport in a way that interferes with operations.</em></p>
+<ul>
+  <li><strong>Class B Misdemeanor</strong> — intentionally or knowingly operating a drone over an airport, military installation, or spaceport; allowing the drone to make contact with the facility; or operating it in a manner that interferes with or causes a disturbance to the facility.</li>
+  <li><strong>Class A Misdemeanor</strong> — if the suspect has a prior conviction under this section.</li>
+</ul>
+<p><strong>Exceptions:</strong> Government agencies, persons with authorization from facility operators or the FAA, law enforcement, and property owners/occupants are exempt.</p>
+  </div>
+</div>
+
+</main>
+<script>
+
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+// open first section by default
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+
+</script>
+</body>
+</html>
