@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <title>Flashcards — BPOC Study Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -20,6 +21,7 @@
   .hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;}
   .hero-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); margin:0 0 6px;}
   .hero h1{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:22px; line-height:1.15; margin:0;}
+  .hero p.sub{font-size:12.5px; color:#C8C0AA; line-height:1.55; margin:8px 0 0; max-width:62ch;}
   .back{font-size:12px; color:var(--brass-light); text-decoration:none; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
 
   nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch;}
@@ -30,32 +32,44 @@
 
   main{max-width:560px; margin:0 auto; padding:22px 16px 60px;}
 
+  .setup-box{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:22px 20px; text-align:center;}
+  .setup-box h2{font-family:'IBM Plex Serif',serif; font-size:18px; margin:0 0 6px;}
+  .setup-box p{font-size:13px; color:var(--ink-soft); line-height:1.6; margin:0 0 18px;}
+  .filter-row{display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin:4px 0 18px;}
+  .filter-chip{font-family:'IBM Plex Sans',sans-serif; font-size:11.5px; font-weight:600; padding:5px 11px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer;}
+  .filter-chip.active{background:var(--brass); border-color:var(--brass); color:#221F19;}
+  .start-btn{width:100%; padding:13px; border-radius:8px; border:none; background:var(--brass); color:#221F19; font-family:'IBM Plex Sans',sans-serif; font-size:14px; font-weight:600; cursor:pointer;}
+
   .deck-status{display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:14px;}
   .progress-track{flex:1; height:6px; border-radius:999px; background:var(--paper-dim); margin:0 12px; overflow:hidden;}
   .progress-fill{height:100%; background:var(--brass); width:0%; transition:width 0.2s ease;}
 
   .card-scene{margin-bottom:18px;}
   .flashcard{
-    position:relative; width:100%; min-height:200px; border-radius:14px;
+    position:relative; width:100%; min-height:220px; border-radius:14px;
     padding:26px 22px; box-shadow:0 4px 18px rgba(19,35,57,0.14); border:1px solid var(--rule);
     background:#fff; cursor:pointer; display:flex; flex-direction:column; justify-content:center;
     transition:transform 0.16s ease, background 0.16s ease, color 0.16s ease;
   }
   .flashcard.mid-flip{transform:scaleY(0.05);}
   .flashcard.back-mode{background:var(--navy); color:#EDE7D6;}
-  .face-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:var(--brass); margin-bottom:10px; text-align:center;}
+  .face-eyebrow{display:flex; justify-content:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:var(--brass); margin-bottom:12px; text-align:center;}
   .flashcard.back-mode .face-eyebrow{color:var(--brass-light);}
-  .face-term{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:19px; text-align:center; line-height:1.35;}
-  .face-cite{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); text-align:center; margin-top:8px;}
-  .face-body{font-size:13.5px; line-height:1.6; margin-top:6px;}
-  .face-body ul{margin:6px 0 0; padding-left:18px;}
-  .face-hint{text-align:center; font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--ink-soft); opacity:0.6; margin-top:14px;}
+  .face-tag{background:var(--paper-dim); color:var(--ink-soft); border-radius:6px; padding:1px 7px; font-size:9.5px;}
+  .flashcard.back-mode .face-tag{background:rgba(255,255,255,0.12); color:#EDE7D6;}
+  .face-prompt{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:17px; text-align:center; line-height:1.4;}
+  .face-prompt p{margin:0 0 8px;}
+  .face-prompt p:last-child{margin-bottom:0;}
+  .face-answer{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:16px; text-align:center; line-height:1.4; color:var(--brass-light);}
+  .face-answer .ans-label{display:block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:#B9C2CE; margin-bottom:3px;}
+  .face-explanation{font-size:13px; line-height:1.6; margin-top:14px; opacity:0.92; text-align:left;}
+  .face-source{font-family:'IBM Plex Mono',monospace; font-size:10px; color:#B9C2CE; margin-top:10px; text-align:left;}
+  .face-hint{text-align:center; font-family:'IBM Plex Mono',monospace; font-size:9.5px; color:var(--ink-soft); opacity:0.6; margin-top:16px;}
   .flashcard.back-mode .face-hint{color:#B9C2CE;}
 
   .controls{display:flex; gap:8px; margin-bottom:10px;}
   .btn{flex:1; padding:11px 10px; border-radius:8px; border:1px solid var(--rule); background:#fff; color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer; text-align:center;}
   .btn:active{transform:scale(0.98);}
-  .btn.nav{flex:0 0 44px; font-size:16px;}
   .btn.know{border-color:var(--green); color:var(--green);}
   .btn.know:hover{background:var(--green); color:#fff;}
   .btn.learning{border-color:var(--amber); color:var(--amber);}
@@ -65,9 +79,10 @@
   .util-btn{flex:1; padding:9px; border-radius:8px; border:1px dashed var(--rule); background:transparent; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:11px; cursor:pointer;}
   .util-btn:hover{border-style:solid; color:var(--ink);}
 
-  .empty-state, .done-state{background:#fff; border:1px dashed var(--rule); border-radius:10px; padding:40px 20px; text-align:center;}
+  .empty-state, .done-state, .load-error{background:#fff; border:1px dashed var(--rule); border-radius:10px; padding:40px 20px; text-align:center;}
   .empty-state h3, .done-state h3{font-family:'IBM Plex Serif',serif; font-size:17px; margin:0 0 8px;}
   .empty-state p, .done-state p{font-size:13px; color:var(--ink-soft); line-height:1.6; max-width:38ch; margin:0 auto;}
+  .load-error{border-color:var(--rust); color:var(--rust); font-size:13px; line-height:1.6;}
 
   .stat-pill{font-size:10.5px; font-family:'IBM Plex Mono',monospace; padding:2px 8px; border-radius:4px; font-weight:600;}
   .stat-pill.know{background:rgba(75,106,80,0.12); color:var(--green);}
@@ -83,56 +98,181 @@
 <header class="hero">
   <div class="hero-top">
     <div>
-      <p class="hero-eyebrow">Fort Worth PD Academy · BPOC Flashcards</p>
-      <h1>Flip &amp; Test</h1>
+      <p class="hero-eyebrow">Fort Worth PD Academy &middot; BPOC Flashcards</p>
+      <h1>Flip &amp; Recall</h1>
     </div>
     <a class="back" href="index.html">&larr; Hub</a>
   </div>
+  <p class="sub">Built straight from the Alt Quiz question banks &mdash; same hand-authored questions, but with the multiple-choice options stripped out. You see the question only; flip the card to check whether you actually recalled the answer, or just recognized it in a list.</p>
 </header>
 
 <nav class="chips" id="chapterChips"></nav>
 
 <main id="main"></main>
 
-<footer>Auto-generated from the Chapter &amp; Topic Reference — same source material, quiz format · Built for study purposes by and for the FWPD Academy class</footer>
+<footer>Built from the Alt Quiz banks &middot; format spec at <code>alt-quizzes/FORMAT.md</code> &middot; Built for study purposes by and for the FWPD Academy class</footer>
 
-<script src="assets/chapters-data.js"></script>
 <script>
-/* ===================== FLASHCARD ENGINE ===================== */
+/* ===================== FLASHCARD ENGINE (bank-driven) ===================== */
 
-// Only chapters listed here are offered as flashcard decks. Add a chapter's
-// number here once you're ready to expand — no other code changes needed.
-const FLASHCARD_ENABLED_CHAPTERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Add an entry here for every chapter bank you want offered as a flashcard deck.
+// Same file format as alt-quiz.html — no separate flashcard data to maintain.
+const FLASHCARD_CHAPTERS = [
+  {key:"6", num:6, title:"Racial Profiling", file:"alt-quizzes/bank/06-racial-profiling.md"},
+  {key:"7", num:7, title:"US/Texas Constitution, Bill of Rights, and CJ System", file:"alt-quizzes/bank/07-us-texas-constitution-cj-system.md"},
+  {key:"24", num:24, title:"Written Communication", file:"alt-quizzes/bank/24-written-communication.md"},
+  {key:"25", num:25, title:"Verbal Communication", file:"alt-quizzes/bank/25-verbal-communication.md"},
+  {key:"case-law", num:0, short:"Case Law", title:"Case Law (Course List)", file:"alt-quizzes/bank/case-law.md"}
+];
 
-let deck = [];          // full ordered deck for the current chapter
-let queue = [];         // remaining indices to review this session
+let activeChapter = null;
+let bankQuestions = [];   // full parsed bank for the active chapter
+let activeTag = 'All';
+
+let deck = [];          // full ordered deck for this session
+let queue = [];         // remaining indices to review this pass
 let missed = [];        // indices marked "still learning" this pass
 let knowCount = 0;
 let learningCount = 0;
 let currentIdx = null;
 let isFlipped = false;
-let activeChapterNum = null;
 
-function buildDeckForChapter(chNum){
-  const ch = chapters.find(c => c.num === chNum);
-  const cards = [];
-  if(ch && ch.topics){
-    ch.topics.forEach(topic => {
-      topic.cards.forEach(c => {
-        // Strip HTML tags for the front/back text so the flip card reads cleanly
-        const cleanBody = c.body ? c.body.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim() : '';
-        cards.push({
-          front: c.title.replace(/<[^>]+>/g,''),
-          cite: c.cite || '',
-          back: cleanBody,
-          note: c.note ? c.note.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim() : '',
-          topicLabel: topic.label
-        });
-      });
-    });
-  }
-  return cards;
+/* ---------- markdown bank parser (identical to alt-quiz.html) ---------- */
+
+function escapeHtml(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+function inlineMd(s){
+  let out = escapeHtml(s);
+  out = out.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  out = out.replace(/(^|[^*])\*(?!\*)([^*]+)\*(?!\*)/g, '$1<em>$2</em>');
+  return out;
+}
+
+function parseBank(text){
+  const blocks = text.split(/\r?\n-{3,}\r?\n/);
+  const out = [];
+  for(const raw of blocks){
+    const lines = raw.split(/\r?\n/);
+    let hIdx = -1, tag = '', id = '';
+    for(let i=0;i<lines.length;i++){
+      const m = lines[i].match(/^###\s*(Q\S+)\s*[—-]{1,2}\s*(.+)$/);
+      if(m){ hIdx = i; id = m[1]; tag = m[2].trim(); break; }
+    }
+    if(hIdx === -1) continue;
+    const rest = lines.slice(hIdx+1);
+    let lo = '', source = '';
+    const bodyLines = [];
+    const optLines = [];
+    const offenseLines = [];
+    const classLines = [];
+    let explanation = '';
+    let inExplanation = false;
+    let section = 'body'; // 'body' | 'offense' | 'classification'
+    for(const line of rest){
+      const metaM = line.match(/^\*\*LO:\*\*\s*([^·]+?)(?:\s*·\s*\*\*Source:\*\*\s*(.+))?\s*$/);
+      if(metaM && !lo){ lo = metaM[1].trim(); source = (metaM[2]||'').trim(); continue; }
+      const offHdr = line.match(/^\*\*Offense:\*\*\s*$/);
+      if(offHdr){ section = 'offense'; continue; }
+      const classHdr = line.match(/^\*\*Classification:\*\*\s*$/);
+      if(classHdr){ section = 'classification'; continue; }
+      const optM = line.match(/^-\s*\[([ xX])\]\s*(.+)$/);
+      if(optM){
+        const o = {correct: optM[1].toLowerCase()==='x', text: optM[2].trim()};
+        if(section === 'offense') offenseLines.push(o);
+        else if(section === 'classification') classLines.push(o);
+        else optLines.push(o);
+        continue;
+      }
+      const explM = line.match(/^\*\*Explanation:\*\*\s*(.*)$/);
+      if(explM){ inExplanation = true; explanation = explM[1]; continue; }
+      if(inExplanation){ explanation += (explanation && line.trim() ? ' ' : '') + line.trim(); continue; }
+      if(section === 'body') bodyLines.push(line);
+    }
+    const prompt = bodyLines.join('\n').trim();
+    const isDual = offenseLines.length > 0 && classLines.length > 0;
+    if(isDual){
+      if(offenseLines.length < 2 || classLines.length < 2) continue;
+      out.push({id, tag, lo, source, prompt, dual:true, offenseOptions: offenseLines, classificationOptions: classLines, explanation: explanation.trim()});
+    } else {
+      if(optLines.length < 2) continue;
+      out.push({id, tag, lo, source, prompt, options: optLines, explanation: explanation.trim()});
+    }
+  }
+  return out;
+}
+
+function renderPrompt(prompt){
+  return prompt.split(/\n\s*\n/).map(p => `<p>${inlineMd(p.replace(/\n/g,' ').trim())}</p>`).join('');
+}
+
+/* ---------- setup / navigation ---------- */
+
+function renderChapterChips(){
+  const wrap = document.getElementById('chapterChips');
+  wrap.innerHTML = '';
+  FLASHCARD_CHAPTERS.forEach(ch => {
+    const b = document.createElement('button');
+    b.className = 'chip' + (activeChapter && activeChapter.key === ch.key ? ' active' : '');
+    b.textContent = ch.short || ('Ch ' + ch.num);
+    b.title = ch.title;
+    b.onclick = () => selectChapter(ch);
+    wrap.appendChild(b);
+  });
+}
+
+async function selectChapter(ch){
+  activeChapter = ch;
+  activeTag = 'All';
+  renderChapterChips();
+  const main = document.getElementById('main');
+  main.innerHTML = `<div class="setup-box"><h2>Loading ${ch.title}&hellip;</h2><p>Fetching ${ch.file}</p></div>`;
+  try{
+    const res = await fetch(ch.file, {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    bankQuestions = parseBank(text);
+    if(bankQuestions.length === 0) throw new Error('No questions parsed from bank file');
+  }catch(err){
+    main.innerHTML = `<div class="load-error"><b>Couldn't load this question bank.</b><br>${escapeHtml(String(err.message||err))}<br><br>If you're viewing this file directly (file://) rather than through a web server or GitHub Pages, your browser may block the fetch. Try running a local server (e.g. <code>python3 -m http.server</code>) or use the live site.</div>`;
+    return;
+  }
+  renderSetup();
+}
+
+function availableTags(){
+  const set = new Set(bankQuestions.map(q => q.tag));
+  return ['All', ...Array.from(set)];
+}
+
+function renderSetup(){
+  const main = document.getElementById('main');
+  if(!activeChapter){
+    main.innerHTML = `<div class="empty-state"><h3>Pick a chapter above</h3><p>Flashcard decks are built straight from the Alt Quiz banks, chapter by chapter — more get added here as banks are built out.</p></div>`;
+    return;
+  }
+  const tags = availableTags();
+  const filtered = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  main.innerHTML = `
+    <div class="setup-box">
+      <h2>${activeChapter.short || ('Ch ' + activeChapter.num)}: ${activeChapter.title}</h2>
+      <p>${bankQuestions.length} cards in this deck${activeTag !== 'All' ? ` &middot; ${filtered.length} tagged "${activeTag}"` : ''}. The question shows first &mdash; no answer choices. Flip it to check yourself.</p>
+      <div class="filter-row" id="filterRow"></div>
+      <button class="start-btn" id="startBtn">Start Deck (${filtered.length} cards)</button>
+    </div>
+  `;
+  const filterRow = document.getElementById('filterRow');
+  tags.forEach(t => {
+    const b = document.createElement('button');
+    b.className = 'filter-chip' + (t === activeTag ? ' active' : '');
+    b.textContent = t;
+    b.onclick = () => { activeTag = t; renderSetup(); };
+    filterRow.appendChild(b);
+  });
+  document.getElementById('startBtn').onclick = startDeck;
+}
+
+/* ---------- deck flow ---------- */
 
 function shuffle(arr){
   const a = arr.slice();
@@ -143,31 +283,13 @@ function shuffle(arr){
   return a;
 }
 
-function renderChapterChips(){
-  const wrap = document.getElementById('chapterChips');
-  wrap.innerHTML = '';
-  const liveChapters = chapters.filter(c => c.status === 'live');
-  liveChapters.forEach(ch => {
-    const enabled = FLASHCARD_ENABLED_CHAPTERS.includes(ch.num);
-    const b = document.createElement('button');
-    b.className = 'chip' + (ch.num === activeChapterNum ? ' active' : '') + (enabled ? '' : ' disabled');
-    b.textContent = 'Ch ' + ch.num;
-    b.title = enabled ? ch.title : ch.title + ' (flashcards coming soon)';
-    if(enabled){
-      b.onclick = () => { startChapter(ch.num); };
-    }
-    wrap.appendChild(b);
-  });
-}
-
-function startChapter(chNum){
-  activeChapterNum = chNum;
-  deck = shuffle(buildDeckForChapter(chNum));
+function startDeck(){
+  const pool = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  deck = shuffle(pool);
   queue = deck.map((_, i) => i);
   missed = [];
   knowCount = 0;
   learningCount = 0;
-  renderChapterChips();
   nextCard();
 }
 
@@ -193,18 +315,31 @@ function markCard(known){
 
 function frontContentHtml(card){
   return `
-    <div class="face-eyebrow">${card.topicLabel}</div>
-    <div class="face-term">${card.front}</div>
-    ${card.cite ? `<div class="face-cite">${card.cite}</div>` : ''}
+    <div class="face-eyebrow"><span class="face-tag">${escapeHtml(card.tag)}</span></div>
+    <div class="face-prompt">${renderPrompt(card.prompt)}</div>
     <div class="face-hint">Tap to flip</div>
   `;
 }
 
+function answerHtml(card){
+  if(card.dual){
+    const off = card.offenseOptions.find(o => o.correct);
+    const cls = card.classificationOptions.find(o => o.correct);
+    return `
+      <div class="face-answer"><span class="ans-label">Offense</span>${inlineMd(off ? off.text : '—')}</div>
+      <div class="face-answer" style="margin-top:10px;"><span class="ans-label">Classification</span>${inlineMd(cls ? cls.text : '—')}</div>
+    `;
+  }
+  const correct = card.options.find(o => o.correct);
+  return `<div class="face-answer"><span class="ans-label">Answer</span>${inlineMd(correct ? correct.text : '—')}</div>`;
+}
+
 function backContentHtml(card){
   return `
-    <div class="face-eyebrow">Answer</div>
-    <div class="face-body">${card.back}</div>
-    ${card.note ? `<div class="face-body" style="margin-top:10px;font-style:italic;opacity:0.9;">${card.note}</div>` : ''}
+    <div class="face-eyebrow"><span class="face-tag">${escapeHtml(card.tag)}</span></div>
+    ${answerHtml(card)}
+    ${card.explanation ? `<div class="face-explanation">${inlineMd(card.explanation)}</div>` : ''}
+    ${card.source ? `<div class="face-source">${escapeHtml(card.source)}</div>` : ''}
     <div class="face-hint">Tap to flip back</div>
   `;
 }
@@ -230,15 +365,15 @@ function renderCard(){
     </div>
     <div class="util-row">
       <button class="util-btn" id="shuffleBtn">&#8635; Reshuffle Deck</button>
-      <button class="util-btn" id="restartBtn">Restart Chapter</button>
+      <button class="util-btn" id="restartBtn">Change Filter</button>
     </div>
   `;
 
   document.getElementById('flashcard').onclick = () => flipCurrentCard(card);
   document.getElementById('knowBtn').onclick = (e) => { e.stopPropagation(); markCard(true); };
   document.getElementById('learningBtn').onclick = (e) => { e.stopPropagation(); markCard(false); };
-  document.getElementById('shuffleBtn').onclick = (e) => { e.stopPropagation(); startChapter(activeChapterNum); };
-  document.getElementById('restartBtn').onclick = (e) => { e.stopPropagation(); startChapter(activeChapterNum); };
+  document.getElementById('shuffleBtn').onclick = (e) => { e.stopPropagation(); startDeck(); };
+  document.getElementById('restartBtn').onclick = (e) => { e.stopPropagation(); renderSetup(); };
 }
 
 function flipCurrentCard(card){
@@ -263,24 +398,16 @@ function renderDone(){
       <p>You went through all ${deck.length} cards and marked ${knowCount} as known. Nice work.</p>
       <div class="util-row" style="margin-top:16px;">
         <button class="util-btn" id="againBtn">Go Again</button>
+        <button class="util-btn" id="filterBtn">Change Filter</button>
       </div>
     </div>
   `;
-  document.getElementById('againBtn').onclick = () => startChapter(activeChapterNum);
-}
-
-function renderEmpty(){
-  const main = document.getElementById('main');
-  main.innerHTML = `
-    <div class="empty-state">
-      <h3>Pick a chapter above</h3>
-      <p>Flashcards are ready for Chapter 1 and Chapter 2 so far — more chapters get added here as they're built out on the main reference.</p>
-    </div>
-  `;
+  document.getElementById('againBtn').onclick = startDeck;
+  document.getElementById('filterBtn').onclick = renderSetup;
 }
 
 renderChapterChips();
-renderEmpty();
+renderSetup();
 </script>
 
 </body>
