@@ -608,21 +608,7 @@ Payton v. New York holds that, absent exigent circumstances, an officer may not:
 
 ---
 
-### Q44 — Concept
-**LO:** 10.4 · **Source:** Payton v. New York — citation cross-check
-
-This chapter's source material cites "Payton v. New York, 100 US 1371 (1980)." Cross-referencing the actual reporter citation reveals what?
-
-- [x] "100 US 1371" is actually the Supreme Court Reporter (S. Ct.) citation, not the U.S. Reports citation — the correct U.S. Reports citation is 445 U.S. 573 (1980)
-- [ ] The case does not exist and was fabricated
-- [ ] The case was actually decided in 1990, not 1980
-- [ ] "100 US 1371" is the correct and only valid citation for this case
-
-**Explanation:** Payton v. New York is properly cited as 445 U.S. 573, 100 S. Ct. 1371, 63 L. Ed. 2d 639 (1980). The source material's citation swaps the U.S. Reports volume/page for the parallel Supreme Court Reporter volume/page while still labeling it "US" — a mislabeled-reporter issue rather than an error about the holding itself.
-
----
-
-### Q45 — Definition
+### Q44 — Definition
 **LO:** 10.4 · **Source:** CCP Art. 14.051
 
 CCP Art. 14.051 ("Arrest by Peace Officer from Other Jurisdiction") authorizes what?
@@ -636,7 +622,7 @@ CCP Art. 14.051 ("Arrest by Peace Officer from Other Jurisdiction") authorizes w
 
 ---
 
-### Q46 — Recall
+### Q45 — Recall
 **LO:** 10.4 · **Source:** CCP Art. 14.06
 
 CCP Art. 14.06 ("Must Take Offender Before Magistrate") generally requires an arrested person to be taken before a magistrate within what timeframe?
@@ -650,7 +636,7 @@ CCP Art. 14.06 ("Must Take Offender Before Magistrate") generally requires an ar
 
 ---
 
-### Q47 — Definition
+### Q46 — Definition
 **LO:** 10.4 · **Source:** CCP Art. 18.16
 
 CCP Art. 18.16 ("Preventing Consequences of Theft") gives what right to any person (not just peace officers)?
@@ -664,7 +650,7 @@ CCP Art. 18.16 ("Preventing Consequences of Theft") gives what right to any pers
 
 ---
 
-### Q48 — Definition
+### Q47 — Definition
 **LO:** 10.4 · **Source:** CCP Art. 51.13, Sec. 14
 
 CCP Art. 51.13, Sec. 14 (Uniform Criminal Extradition Act — "Arrest Without a Warrant") authorizes what?
@@ -678,7 +664,7 @@ CCP Art. 51.13, Sec. 14 (Uniform Criminal Extradition Act — "Arrest Without a 
 
 ---
 
-### Q49 — Concept
+### Q48 — Concept
 **LO:** 10.4 · **Source:** 22 U.S.C. § 254 (Diplomatic Relations Act)
 
 The federal Diplomatic Relations Act generally provides what protection relevant to arrest?
@@ -692,7 +678,7 @@ The federal Diplomatic Relations Act generally provides what protection relevant
 
 ---
 
-### Q50 — Definition
+### Q49 — Definition
 **LO:** 10.4 · **Source:** CCP Art. 1.21
 
 CCP Art. 1.21 ("Privilege of Legislators") protects sitting Texas legislators from arrest under what circumstances?
@@ -708,7 +694,7 @@ CCP Art. 1.21 ("Privilege of Legislators") protects sitting Texas legislators fr
 
 ## LO 10.5 — Probable cause and warrantless arrest
 
-### Q51 — Concept
+### Q50 — Concept
 **LO:** 10.5 · **Source:** BPOC 10.5
 
 When courts review whether probable cause existed for an arrest or search, what standard do they apply?
@@ -722,7 +708,7 @@ When courts review whether probable cause existed for an arrest or search, what 
 
 ---
 
-### Q52 — Recall
+### Q51 — Recall
 **LO:** 10.5 · **Source:** BPOC 10.5
 
 When a court evaluates whether probable cause existed, which information may it consider?
@@ -736,7 +722,7 @@ When a court evaluates whether probable cause existed, which information may it 
 
 ---
 
-### Q53 — Definition
+### Q52 — Definition
 **LO:** 10.5 · **Source:** Illinois v. Gates, 462 U.S. 213 (1983)
 
 Illinois v. Gates describes probable cause as what kind of standard?
@@ -750,7 +736,7 @@ Illinois v. Gates describes probable cause as what kind of standard?
 
 ---
 
-### Q54 — Recall
+### Q53 — Recall
 **LO:** 10.5 · **Source:** Illinois v. Gates, 462 U.S. 213 (1983)
 
 Illinois v. Gates is most closely associated with which legal standard discussed in this chapter?
@@ -766,7 +752,7 @@ Illinois v. Gates is most closely associated with which legal standard discussed
 
 ## LO 10.6 — Custodial statements
 
-### Q55 — Definition
+### Q54 — Definition
 **LO:** 10.6 · **Source:** Miranda v. Arizona, 384 U.S. 436 (1966)
 
 Miranda v. Arizona requires that persons in custody, prior to interrogation, be clearly informed of what rights?
@@ -780,7 +766,7 @@ Miranda v. Arizona requires that persons in custody, prior to interrogation, be 
 
 ---
 
-### Q56 — Concept
+### Q55 — Concept
 **LO:** 10.6 · **Source:** BPOC 10.6
 
 When a person in custody does not speak or understand English, or is deaf or hard of hearing, what must officers do before eliciting a statement?
@@ -794,7 +780,7 @@ When a person in custody does not speak or understand English, or is deaf or har
 
 ---
 
-### Q57 — Concept
+### Q56 — Concept
 **LO:** 10.6 · **Source:** BPOC 10.6
 
 Once a person in custody invokes their right to remain silent, what must happen?
@@ -808,7 +794,7 @@ Once a person in custody invokes their right to remain silent, what must happen?
 
 ---
 
-### Q58 — Concept
+### Q57 — Concept
 **LO:** 10.6 · **Source:** Maryland v. Shatzer (2010)
 
 If a person in custody requests an attorney, interrogation must cease until an attorney is present, or alternatively, until what occurs?
@@ -822,7 +808,7 @@ If a person in custody requests an attorney, interrogation must cease until an a
 
 ---
 
-### Q59 — Concept
+### Q58 — Concept
 **LO:** 10.6 · **Source:** Maryland v. Shatzer — citation cross-check
 
 This chapter's source material cites "Maryland v. Shatzer, 130 US. 1213 (2010)." What does cross-referencing this citation reveal?
@@ -836,7 +822,7 @@ This chapter's source material cites "Maryland v. Shatzer, 130 US. 1213 (2010)."
 
 ---
 
-### Q60 — Definition
+### Q59 — Definition
 **LO:** 10.6 · **Source:** CCP Art. 38.22, Sec. 1
 
 CCP Art. 38.22, Sec. 1 defines a "written statement" of an accused as one that is:
@@ -850,7 +836,7 @@ CCP Art. 38.22, Sec. 1 defines a "written statement" of an accused as one that i
 
 ---
 
-### Q61 — Recall
+### Q60 — Recall
 **LO:** 10.6 · **Source:** CCP Art. 38.22, Sec. 2
 
 Under CCP Art. 38.22, Sec. 2, a written statement resulting from custodial interrogation is inadmissible unless the face of the statement shows what?
@@ -864,7 +850,7 @@ Under CCP Art. 38.22, Sec. 2, a written statement resulting from custodial inter
 
 ---
 
-### Q62 — Recall
+### Q61 — Recall
 **LO:** 10.6 · **Source:** CCP Art. 38.22, Sec. 3
 
 Under CCP Art. 38.22, Sec. 3, an oral or sign-language custodial statement is generally inadmissible unless what condition is met?
@@ -878,7 +864,7 @@ Under CCP Art. 38.22, Sec. 3, an oral or sign-language custodial statement is ge
 
 ---
 
-### Q63 — Recall
+### Q62 — Recall
 **LO:** 10.6 · **Source:** Creager v. State, 952 S.W.2d 852 (Tex. Crim. App. 1997)
 
 Which Texas case is cited in this chapter alongside CCP Art. 38.22 on the issue of custodial statements?
@@ -894,7 +880,7 @@ Which Texas case is cited in this chapter alongside CCP Art. 38.22 on the issue 
 
 ## LO 10.7 — Arrest warrant criteria
 
-### Q64 — Definition
+### Q63 — Definition
 **LO:** 10.7 · **Source:** CCP Art. 15.01
 
 CCP Art. 15.01 defines a "Warrant of Arrest" as:
@@ -908,7 +894,7 @@ CCP Art. 15.01 defines a "Warrant of Arrest" as:
 
 ---
 
-### Q65 — Recall
+### Q64 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.02
 
 CCP Art. 15.02 ("Requisites of Warrant") requires an arrest warrant to contain how many essential elements?
@@ -922,7 +908,7 @@ CCP Art. 15.02 ("Requisites of Warrant") requires an arrest warrant to contain h
 
 ---
 
-### Q66 — Recall
+### Q65 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.03
 
 CCP Art. 15.03 provides that a magistrate:
@@ -936,7 +922,7 @@ CCP Art. 15.03 provides that a magistrate:
 
 ---
 
-### Q67 — Recall
+### Q66 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.06
 
 CCP Art. 15.06 ("Warrant Extends to Every Part of the State") means:
@@ -950,7 +936,7 @@ CCP Art. 15.06 ("Warrant Extends to Every Part of the State") means:
 
 ---
 
-### Q68 — Recall
+### Q67 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.07
 
 CCP Art. 15.07 ("Warrant Issued by Other Magistrate") addresses:
@@ -964,7 +950,7 @@ CCP Art. 15.07 ("Warrant Issued by Other Magistrate") addresses:
 
 ---
 
-### Q69 — Recall
+### Q68 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.16
 
 CCP Art. 15.16 ("How Warrant Is Executed") requires:
@@ -978,7 +964,7 @@ CCP Art. 15.16 ("How Warrant Is Executed") requires:
 
 ---
 
-### Q70 — Recall
+### Q69 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.171
 
 CCP Art. 15.171 creates a duty for an officer to notify which entity, and under what circumstance?
@@ -992,7 +978,7 @@ CCP Art. 15.171 creates a duty for an officer to notify which entity, and under 
 
 ---
 
-### Q71 — Recall
+### Q70 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.18
 
 CCP Art. 15.18 ("Arrest for Out-of-County Offense") governs:
@@ -1006,7 +992,7 @@ CCP Art. 15.18 ("Arrest for Out-of-County Offense") governs:
 
 ---
 
-### Q72 — Recall
+### Q71 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.19 & Art. 15.20
 
 CCP Arts. 15.19 ("Notice of Arrest") and 15.20 ("Duty of Sheriff Receiving Notice") work together to:
@@ -1020,7 +1006,7 @@ CCP Arts. 15.19 ("Notice of Arrest") and 15.20 ("Duty of Sheriff Receiving Notic
 
 ---
 
-### Q73 — Recall
+### Q72 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.21
 
 CCP Art. 15.21 ("Release on Personal Bond If Not Timely Demanded") generally requires release on personal bond if the arrestee is not demanded/collected within what timeframe?
@@ -1034,7 +1020,7 @@ CCP Art. 15.21 ("Release on Personal Bond If Not Timely Demanded") generally req
 
 ---
 
-### Q74 — Recall
+### Q73 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.23
 
 CCP Art. 15.23 ("Time of Arrest") establishes that a lawful arrest may be made:
@@ -1048,7 +1034,7 @@ CCP Art. 15.23 ("Time of Arrest") establishes that a lawful arrest may be made:
 
 ---
 
-### Q75 — Recall
+### Q74 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.24
 
 CCP Art. 15.24 ("What Force May Be Used") limits the force used in an arrest to:
@@ -1062,7 +1048,7 @@ CCP Art. 15.24 ("What Force May Be Used") limits the force used in an arrest to:
 
 ---
 
-### Q76 — Recall
+### Q75 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.25
 
 CCP Art. 15.25 ("May Break Door") permits an officer to break a door to execute an arrest warrant under what condition?
@@ -1076,7 +1062,7 @@ CCP Art. 15.25 ("May Break Door") permits an officer to break a door to execute 
 
 ---
 
-### Q77 — Recall
+### Q76 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.26
 
 CCP Art. 15.26 ("Authority to Arrest Must Be Made Known") requires:
@@ -1090,7 +1076,7 @@ CCP Art. 15.26 ("Authority to Arrest Must Be Made Known") requires:
 
 ---
 
-### Q78 — Recall
+### Q77 — Recall
 **LO:** 10.7 · **Source:** CCP Art. 15.27
 
 CCP Art. 15.27 ("Notification to Schools Required") requires notification of a student's arrest for certain enumerated offenses to be given to whom, and how quickly?
@@ -1104,7 +1090,7 @@ CCP Art. 15.27 ("Notification to Schools Required") requires notification of a s
 
 ---
 
-### Q79 — Concept
+### Q78 — Concept
 **LO:** 10.7 · **Source:** Steagald v. United States (1981)
 
 Per the instructor note on Steagald v. United States, when may an officer forcibly enter a third party's residence to execute an arrest warrant for someone who does not live there?
@@ -1118,7 +1104,7 @@ Per the instructor note on Steagald v. United States, when may an officer forcib
 
 ---
 
-### Q80 — Concept
+### Q79 — Concept
 **LO:** 10.7 · **Source:** Steagald v. United States — citation cross-check
 
 This chapter's source material cites "Steagald v. United States, 101 US. 1642 (1981)." What does cross-referencing this citation reveal?
@@ -1134,7 +1120,7 @@ This chapter's source material cites "Steagald v. United States, 101 US. 1642 (1
 
 ## LO 10.8 — Warrantless search
 
-### Q81 — Concept
+### Q80 — Concept
 **LO:** 10.8 · **Source:** Brigham City v. Stuart (2006)
 
 Brigham City v. Stuart held that officers may make a warrantless entry into a dwelling when:
@@ -1148,7 +1134,7 @@ Brigham City v. Stuart held that officers may make a warrantless entry into a dw
 
 ---
 
-### Q82 — Concept
+### Q81 — Concept
 **LO:** 10.8 · **Source:** Brigham City v. Stuart — citation and case-name cross-check
 
 This chapter's source material cites the case as "Brigham City, Utah v. Smart, 126 US 1943 (2006)." Cross-referencing this citation reveals two issues. What are they?
@@ -1162,7 +1148,7 @@ This chapter's source material cites the case as "Brigham City, Utah v. Smart, 1
 
 ---
 
-### Q83 — Concept
+### Q82 — Concept
 **LO:** 10.8 · **Source:** Kentucky v. King, 563 U.S. 452 (2011)
 
 Kentucky v. King held that officers may NOT rely on exigent circumstances they themselves created if:
@@ -1176,7 +1162,7 @@ Kentucky v. King held that officers may NOT rely on exigent circumstances they t
 
 ---
 
-### Q84 — Definition
+### Q83 — Definition
 **LO:** 10.8 · **Source:** CCP Art. 14.05
 
 Per CCP Art. 14.05, an officer making a warrantless arrest may enter a residence only if:
@@ -1190,7 +1176,7 @@ Per CCP Art. 14.05, an officer making a warrantless arrest may enter a residence
 
 ---
 
-### Q85 — Definition
+### Q84 — Definition
 **LO:** 10.8 · **Source:** CCP Art. 14.051
 
 CCP Art. 14.051 defines "fresh pursuit" as:
@@ -1204,7 +1190,7 @@ CCP Art. 14.051 defines "fresh pursuit" as:
 
 ---
 
-### Q86 — Recall
+### Q85 — Recall
 **LO:** 10.8 · **Source:** United States v. Santana, 427 U.S. 38 (1976)
 
 United States v. Santana is cited in this chapter in connection with which doctrine?
@@ -1218,7 +1204,7 @@ United States v. Santana is cited in this chapter in connection with which doctr
 
 ---
 
-### Q87 — Scenario
+### Q86 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Consent Scenario #1
 
 An officer arrests a subject outside their home, secures them in the back of a patrol car, then asks for and receives verbal consent to enter and search the residence. What issue does this scenario highlight about the consent?
@@ -1232,7 +1218,7 @@ An officer arrests a subject outside their home, secures them in the back of a p
 
 ---
 
-### Q88 — Concept
+### Q87 — Concept
 **LO:** 10.8 · **Source:** BPOC 10.8, Consent Scenario #1
 
 What must a person who grants consent to search retain the ability to do, for that consent to remain valid throughout the search?
@@ -1246,7 +1232,7 @@ What must a person who grants consent to search retain the ability to do, for th
 
 ---
 
-### Q89 — Scenario
+### Q88 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Consent Scenario #2
 
 Officers respond to a family disturbance; the wife tells officers her husband hid cocaine in a kitchen cabinet drawer and grants consent to search it while the husband is elsewhere in the home. What issue does this scenario raise?
@@ -1260,7 +1246,7 @@ Officers respond to a family disturbance; the wife tells officers her husband hi
 
 ---
 
-### Q90 — Scenario
+### Q89 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Consent Scenario #3
 
 An officer responds to an accidental 911 hang-up and finds a 7-year-old home alone; the officer smells marijuana when the child opens the door. What must the officer be able to articulate regarding entry and any subsequent seizure?
@@ -1274,7 +1260,7 @@ An officer responds to an accidental 911 hang-up and finds a 7-year-old home alo
 
 ---
 
-### Q91 — Scenario
+### Q90 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #1
 
 A juvenile drinking a beer after curfew flees on foot from an officer and runs into an unlocked apartment, leaving the door open, without being followed inside immediately. What does this scenario ask students to weigh?
@@ -1288,7 +1274,7 @@ A juvenile drinking a beer after curfew flees on foot from an officer and runs i
 
 ---
 
-### Q92 — Scenario
+### Q91 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #2
 
 An officer chasing an armed robbery suspect falls during the pursuit; a second officer, who joined mid-chase, continues and the suspect runs into an apartment and shuts the door. What concept does this scenario test?
@@ -1302,7 +1288,7 @@ An officer chasing an armed robbery suspect falls during the pursuit; a second o
 
 ---
 
-### Q93 — Scenario
+### Q92 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #3
 
 A plainclothes officer walking through an apartment complex sees, through slightly open curtains, two people weighing and separating what appears to be cocaine. What two concepts does this scenario ask the student to weigh?
@@ -1316,7 +1302,7 @@ A plainclothes officer walking through an apartment complex sees, through slight
 
 ---
 
-### Q94 — Scenario
+### Q93 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #4
 
 Officers respond to a family violence call, get no answer at the door, but hear what sounds like screaming from the back of the residence. What should officers understand about entry and their continued presence afterward?
@@ -1330,7 +1316,7 @@ Officers respond to a family violence call, get no answer at the door, but hear 
 
 ---
 
-### Q95 — Scenario
+### Q94 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #5
 
 Officers are dispatched to a suicidal subject who reportedly took pills; on arrival, they find an unresponsive person on the floor. How does the permissible scope of a warrantless search here compare to a search for a gas leak or an elderly fall victim?
@@ -1344,7 +1330,7 @@ Officers are dispatched to a suicidal subject who reportedly took pills; on arri
 
 ---
 
-### Q96 — Definition
+### Q95 — Definition
 **LO:** 10.8 · **Source:** BPOC 10.8, Consent Scenario #3
 
 The "plain view" doctrine allows an officer to seize an item without a warrant only if:
@@ -1360,7 +1346,7 @@ The "plain view" doctrine allows an officer to seize an item without a warrant o
 
 ## LO 10.9 — Search warrant criteria
 
-### Q97 — Definition
+### Q96 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.01(a)
 
 CCP Art. 18.01(a) defines a "search warrant" as:
@@ -1374,7 +1360,7 @@ CCP Art. 18.01(a) defines a "search warrant" as:
 
 ---
 
-### Q98 — Recall
+### Q97 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.01(b)
 
 CCP Art. 18.01(b) requires that before a search warrant issues:
@@ -1388,7 +1374,7 @@ CCP Art. 18.01(b) requires that before a search warrant issues:
 
 ---
 
-### Q99 — Definition
+### Q98 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.011
 
 CCP Art. 18.011 ("Sealing of Affidavit") allows a judge to seal a search warrant affidavit if the state establishes a compelling interest, such as:
@@ -1402,7 +1388,7 @@ CCP Art. 18.011 ("Sealing of Affidavit") allows a judge to seal a search warrant
 
 ---
 
-### Q100 — Recall
+### Q99 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.02(a)
 
 Which of the following is explicitly listed among the items CCP Art. 18.02(a) authorizes a search warrant to search for and seize?
@@ -1416,7 +1402,7 @@ Which of the following is explicitly listed among the items CCP Art. 18.02(a) au
 
 ---
 
-### Q101 — Definition
+### Q100 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.021; Family Code Sec. 58.002
 
 CCP Art. 18.021 allows a search warrant to be issued for what specific purpose, and what related Family Code section is cross-referenced?
@@ -1430,7 +1416,7 @@ CCP Art. 18.021 allows a search warrant to be issued for what specific purpose, 
 
 ---
 
-### Q102 — Definition
+### Q101 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.0215
 
 CCP Art. 18.0215 governs a peace officer's ability to search which specific item, and under what general rule?
@@ -1444,7 +1430,7 @@ CCP Art. 18.0215 governs a peace officer's ability to search which specific item
 
 ---
 
-### Q103 — Recall
+### Q102 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.03
 
 CCP Art. 18.03 ("Search Warrant May Order Arrest") provides that:
@@ -1458,7 +1444,7 @@ CCP Art. 18.03 ("Search Warrant May Order Arrest") provides that:
 
 ---
 
-### Q104 — Recall
+### Q103 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.04
 
 CCP Art. 18.04 ("Contents of Warrant") requires a search warrant to contain how many requisites?
@@ -1472,7 +1458,7 @@ CCP Art. 18.04 ("Contents of Warrant") requires a search warrant to contain how 
 
 ---
 
-### Q105 — Definition
+### Q104 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.05
 
 CCP Art. 18.05 ("Warrants for Fire, Health, and Code Inspections") allows a search warrant to be issued to whom, for what purpose?
@@ -1486,7 +1472,7 @@ CCP Art. 18.05 ("Warrants for Fire, Health, and Code Inspections") allows a sear
 
 ---
 
-### Q106 — Recall
+### Q105 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.06
 
 CCP Art. 18.06 ("Execution of Warrants") requires the executing officer to, among other things:
@@ -1500,7 +1486,7 @@ CCP Art. 18.06 ("Execution of Warrants") requires the executing officer to, amon
 
 ---
 
-### Q107 — Recall
+### Q106 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.07
 
 CCP Art. 18.07 ("Days Allowed for Warrant to Run") sets the general execution period for a search warrant (absent a shorter period set by the magistrate or a special DNA/technology-related warrant) at:
@@ -1514,7 +1500,7 @@ CCP Art. 18.07 ("Days Allowed for Warrant to Run") sets the general execution pe
 
 ---
 
-### Q108 — Recall
+### Q107 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.08
 
 CCP Art. 18.08 ("Power of Officer Executing Warrant") allows the executing officer to:
@@ -1528,7 +1514,7 @@ CCP Art. 18.08 ("Power of Officer Executing Warrant") allows the executing offic
 
 ---
 
-### Q109 — Recall
+### Q108 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.09
 
 CCP Art. 18.09 ("Shall Seize Accused and Property") requires the officer, upon finding the property described in the warrant, to:
@@ -1542,7 +1528,7 @@ CCP Art. 18.09 ("Shall Seize Accused and Property") requires the officer, upon f
 
 ---
 
-### Q110 — Definition
+### Q109 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.095
 
 CCP Art. 18.095 gives an officer executing a warrant for a gambling device discretion to seize only what, instead of the entire device?
@@ -1556,7 +1542,7 @@ CCP Art. 18.095 gives an officer executing a warrant for a gambling device discr
 
 ---
 
-### Q111 — Recall
+### Q110 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.10
 
 CCP Art. 18.10 ("How Return Made") requires the officer to return the search warrant to the proper magistrate within how many days of execution?
@@ -1570,7 +1556,7 @@ CCP Art. 18.10 ("How Return Made") requires the officer to return the search war
 
 ---
 
-### Q112 — Recall
+### Q111 — Recall
 **LO:** 10.9 · **Source:** CCP Art. 18.11
 
 CCP Art. 18.11 ("Custody of Property Found") provides that property seized under a search warrant shall be kept:
@@ -1584,7 +1570,7 @@ CCP Art. 18.11 ("Custody of Property Found") provides that property seized under
 
 ---
 
-### Q113 — Definition
+### Q112 — Definition
 **LO:** 10.9 · **Source:** CCP Art. 18.22
 
 CCP Art. 18.22 ("Testing Certain Defendants or Confined Persons for Communicable Diseases") authorizes a court to order a medical procedure or test on an arrested person when:
@@ -1600,7 +1586,7 @@ CCP Art. 18.22 ("Testing Certain Defendants or Confined Persons for Communicable
 
 ## LO 10.10 — No-knock vs. knock-and-announce warrants
 
-### Q114 — Definition
+### Q113 — Definition
 **LO:** 10.10 · **Source:** BPOC 10.10
 
 The purpose of a "no-knock" warrant is to:
@@ -1614,7 +1600,7 @@ The purpose of a "no-knock" warrant is to:
 
 ---
 
-### Q115 — Concept
+### Q114 — Concept
 **LO:** 10.10 · **Source:** BPOC 10.10
 
 What is a key disadvantage of a "no-knock" warrant?
@@ -1628,7 +1614,7 @@ What is a key disadvantage of a "no-knock" warrant?
 
 ---
 
-### Q116 — Definition
+### Q115 — Definition
 **LO:** 10.10 · **Source:** BPOC 10.10
 
 A "knock and announce" entry is designed to:
@@ -1642,7 +1628,7 @@ A "knock and announce" entry is designed to:
 
 ---
 
-### Q117 — Concept
+### Q116 — Concept
 **LO:** 10.10 · **Source:** BPOC 10.10
 
 What is a key disadvantage of "knock and announce" entry?
@@ -1656,7 +1642,7 @@ What is a key disadvantage of "knock and announce" entry?
 
 ---
 
-### Q118 — Concept
+### Q117 — Concept
 **LO:** 10.10 · **Source:** BPOC 10.10
 
 According to this chapter, how much practical difference typically exists between how a knock-and-announce entry and a no-knock entry are actually carried out?
@@ -1672,7 +1658,7 @@ According to this chapter, how much practical difference typically exists betwee
 
 ## LO 10.11 — Basic court documents required to charge
 
-### Q119 — Definition
+### Q118 — Definition
 **LO:** 10.11 · **Source:** CCP Art. 15.04
 
 CCP Art. 15.04 ("Complaint") defines a complaint as:
@@ -1686,7 +1672,7 @@ CCP Art. 15.04 ("Complaint") defines a complaint as:
 
 ---
 
-### Q120 — Recall
+### Q119 — Recall
 **LO:** 10.11 · **Source:** CCP Art. 15.05
 
 CCP Art. 15.05 ("Requisites of Complaint") requires the complaint to contain how many essential elements?
@@ -1700,7 +1686,7 @@ CCP Art. 15.05 ("Requisites of Complaint") requires the complaint to contain how
 
 ---
 
-### Q121 — Definition
+### Q120 — Definition
 **LO:** 10.11 · **Source:** BPOC 10.11
 
 A "Probable Cause Affidavit" is best described as:
@@ -1716,7 +1702,7 @@ A "Probable Cause Affidavit" is best described as:
 
 ## LO 10.12 — Bail procedure
 
-### Q122 — Definition
+### Q121 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.01
 
 CCP Art. 17.01 defines "bail" as:
@@ -1730,7 +1716,7 @@ CCP Art. 17.01 defines "bail" as:
 
 ---
 
-### Q123 — Recall
+### Q122 — Recall
 **LO:** 10.12 · **Source:** CCP Art. 17.033
 
 CCP Art. 17.033 ("Release on Bond of Certain Persons Arrested Without a Warrant") requires release on bond, absent a magistrate's probable cause finding, within what timeframes for misdemeanor versus felony arrests?
@@ -1744,7 +1730,7 @@ CCP Art. 17.033 ("Release on Bond of Certain Persons Arrested Without a Warrant"
 
 ---
 
-### Q124 — Recall
+### Q123 — Recall
 **LO:** 10.12 · **Source:** CCP Art. 17.15
 
 CCP Art. 17.15 ("Rules for Setting Amount of Bail") lists several factors to be considered, including:
@@ -1758,7 +1744,7 @@ CCP Art. 17.15 ("Rules for Setting Amount of Bail") lists several factors to be 
 
 ---
 
-### Q125 — Definition
+### Q124 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.152
 
 CCP Art. 17.152 authorizes denial of bail in what specific circumstance?
@@ -1772,7 +1758,7 @@ CCP Art. 17.152 authorizes denial of bail in what specific circumstance?
 
 ---
 
-### Q126 — Definition
+### Q125 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.153
 
 CCP Art. 17.153 authorizes denial of bail in cases involving which category of victim?
@@ -1786,7 +1772,7 @@ CCP Art. 17.153 authorizes denial of bail in cases involving which category of v
 
 ---
 
-### Q127 — Recall
+### Q126 — Recall
 **LO:** 10.12 · **Source:** CCP Art. 17.20
 
 CCP Art. 17.20 ("Bail in Misdemeanor") allows which officials to take a defendant's bail in a misdemeanor case?
@@ -1800,7 +1786,7 @@ CCP Art. 17.20 ("Bail in Misdemeanor") allows which officials to take a defendan
 
 ---
 
-### Q128 — Recall
+### Q127 — Recall
 **LO:** 10.12 · **Source:** CCP Art. 17.21
 
 CCP Art. 17.21 ("Bail in Felony") applies when the court with jurisdiction over a felony case is in session in the county where the accused is in custody. What must happen before release on bail?
@@ -1814,7 +1800,7 @@ CCP Art. 17.21 ("Bail in Felony") applies when the court with jurisdiction over 
 
 ---
 
-### Q129 — Recall
+### Q128 — Recall
 **LO:** 10.12 · **Source:** CCP Art. 17.22
 
 CCP Art. 17.22 ("May Take Bail in Felony") applies when:
@@ -1828,7 +1814,7 @@ CCP Art. 17.22 ("May Take Bail in Felony") applies when:
 
 ---
 
-### Q130 — Definition
+### Q129 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.29
 
 CCP Art. 17.29 ("Accused Liberated") provides that once the required bond is given:
@@ -1842,7 +1828,7 @@ CCP Art. 17.29 ("Accused Liberated") provides that once the required bond is giv
 
 ---
 
-### Q131 — Definition
+### Q130 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.291
 
 CCP Art. 17.291 ("Further Detention of Certain Persons") allows continued detention, beyond posting bond, of a person arrested without a warrant in a family violence case for how long, and under what condition?
@@ -1856,7 +1842,7 @@ CCP Art. 17.291 ("Further Detention of Certain Persons") allows continued detent
 
 ---
 
-### Q132 — Definition
+### Q131 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 17.292
 
 CCP Art. 17.292 ("Magistrate's Order for Emergency Protection") allows a magistrate to issue an emergency protective order at a defendant's appearance following arrest for:
@@ -1870,7 +1856,7 @@ CCP Art. 17.292 ("Magistrate's Order for Emergency Protection") allows a magistr
 
 ---
 
-### Q133 — Definition
+### Q132 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 56A.051
 
 CCP Art. 56A.051 ("General Rights") establishes what for crime victims?
@@ -1884,7 +1870,7 @@ CCP Art. 56A.051 ("General Rights") establishes what for crime victims?
 
 ---
 
-### Q134 — Definition
+### Q133 — Definition
 **LO:** 10.12 · **Source:** CCP Art. 56A.052
 
 CCP Art. 56A.052 provides additional rights beyond the general baseline, specifically to victims of which categories of offense?

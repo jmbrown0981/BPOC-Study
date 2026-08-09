@@ -28,6 +28,8 @@
   nav.chips::-webkit-scrollbar{display:none;}
   .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; transition:all 0.15s ease;}
   .chip.active{background:var(--navy); border-color:var(--navy); color:#F3EFE4;}
+  .chip.exam-chip{border-color:var(--brass); color:var(--amber); font-weight:700;}
+  .chip.exam-chip.active{background:var(--brass); border-color:var(--brass); color:#221F19;}
   .chip.disabled{opacity:0.4; cursor:default;}
 
   main{max-width:560px; margin:0 auto; padding:22px 16px 60px;}
@@ -144,6 +146,8 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"case-law", num:0, short:"Case Law", title:"Case Law (Course List)", file:"alt-quizzes/bank/case-law.md"}
 ];
 const SECONDS_PER_QUESTION = 30;
+const EXAM_WEIGHTS_FILE = "alt-quizzes/exam-weights.json";
+const FULL_EXAM_CHAPTER = {key:"full-exam", short:"Full Exam", title:"Full Practice Exam"};
 
 let activeChapter = null;
 let bankQuestions = [];   // full parsed bank for the active chapter
@@ -158,6 +162,9 @@ let timerInterval = null;
 let secondsLeft = 0;
 let selectedOffenseIdx = null;
 let selectedClassIdx = null;
+let examMode = false;
+let examPool = [];
+let examBreakdown = [];
 
 /* ---------- markdown bank parser ---------- */
 
@@ -228,14 +235,158 @@ function renderPrompt(prompt){
   return prompt.split(/\n\s*\n/).map(p => `<p>${inlineMd(p.replace(/\n/g,' ').trim())}</p>`).join('');
 }
 
+/* ---------- full exam: weighted allocation ---------- */
+
+// Capped proportional ("water-filling") allocation: each bank's share of `target`
+// questions is proportional to its weight, but no bank can be asked for more
+// questions than it actually has. Capacity freed up by small/capped banks is
+// redistributed proportionally among the remaining banks, repeated until stable.
+// Leftover fractional seats are handed out by largest remainder.
+function allocateCounts(bankCounts, weights, defaultWeight, target){
+  const pool = bankCounts.map(b => ({
+    key: b.key,
+    count: b.count,
+    weight: Math.max(0, (weights[b.key] !== undefined ? weights[b.key] : defaultWeight) || 0),
+    alloc: 0,
+    active: true
+  }));
+  pool.forEach(p => { if(p.weight <= 0 || p.count <= 0) p.active = false; });
+
+  let remaining = target;
+  let changed = true;
+  while(changed && remaining > 0){
+    changed = false;
+    const activeBanks = pool.filter(p => p.active);
+    const sumW = activeBanks.reduce((s,p) => s + p.weight, 0);
+    if(sumW <= 0) break;
+    for(const p of activeBanks){
+      const ideal = remaining * (p.weight / sumW);
+      const capacity = p.count - p.alloc;
+      if(ideal >= capacity){
+        p.alloc = p.count;
+        p.active = false;
+        remaining -= capacity;
+        changed = true;
+      }
+    }
+  }
+  if(remaining > 0){
+    const activeBanks = pool.filter(p => p.active);
+    const sumW = activeBanks.reduce((s,p) => s + p.weight, 0);
+    if(sumW > 0){
+      const floors = activeBanks.map(p => {
+        const ideal = remaining * (p.weight / sumW);
+        const floor = Math.floor(ideal);
+        return {p, frac: ideal - floor, floor};
+      });
+      floors.forEach(f => { f.p.alloc += f.floor; });
+      let leftover = remaining - floors.reduce((s,f) => s + f.floor, 0);
+      floors.sort((a,b) => b.frac - a.frac);
+      let i = 0, guard = 0;
+      while(leftover > 0 && floors.length > 0 && guard < floors.length * 20){
+        const f = floors[i % floors.length];
+        if(f.p.alloc < f.p.count){ f.p.alloc += 1; leftover -= 1; }
+        i++; guard++;
+      }
+    }
+  }
+  return pool;
+}
+
+async function startFullExam(){
+  examMode = true;
+  activeChapter = FULL_EXAM_CHAPTER;
+  activeTag = 'All';
+  renderChapterChips();
+  const main = document.getElementById('main');
+  main.innerHTML = `<div class="setup-box"><h2>Assembling Full Practice Exam&hellip;</h2><p>Fetching ${ALT_QUIZ_CHAPTERS.length} question banks and the weight config.</p></div>`;
+
+  let config = {totalQuestions: 250, defaultWeight: 1, weights: {}};
+  try{
+    const res = await fetch(EXAM_WEIGHTS_FILE, {cache:'no-store'});
+    if(res.ok) config = Object.assign(config, await res.json());
+  }catch(err){
+    console.warn('Could not load exam-weights.json, using equal-weight defaults.', err);
+  }
+
+  let parsedByBank;
+  try{
+    parsedByBank = await Promise.all(ALT_QUIZ_CHAPTERS.map(async ch => {
+      const res = await fetch(ch.file, {cache:'no-store'});
+      if(!res.ok) throw new Error(`${ch.file}: HTTP ${res.status}`);
+      const text = await res.text();
+      const parsed = parseBank(text).map(q => ({...q, bankKey: ch.key, bankTitle: ch.short || ('Ch ' + ch.num)}));
+      return {key: ch.key, title: ch.short || ('Ch ' + ch.num), fullTitle: ch.title, questions: parsed};
+    }));
+  }catch(err){
+    main.innerHTML = `<div class="load-error"><b>Couldn't assemble the full exam.</b><br>${escapeHtml(String(err.message||err))}<br><br>If you're viewing this file directly (file://) rather than through a web server or GitHub Pages, your browser may block the fetch. Try running a local server (e.g. <code>python3 -m http.server</code>) or use the live site.</div>`;
+    return;
+  }
+
+  const bankCounts = parsedByBank.map(b => ({key: b.key, count: b.questions.length}));
+  const allocation = allocateCounts(bankCounts, config.weights || {}, config.defaultWeight ?? 1, config.totalQuestions ?? 250);
+
+  examPool = [];
+  examBreakdown = [];
+  parsedByBank.forEach(b => {
+    const a = allocation.find(x => x.key === b.key);
+    const n = a ? a.alloc : 0;
+    if(n > 0){
+      const picked = shuffle(b.questions).slice(0, n);
+      examPool = examPool.concat(picked);
+    }
+    examBreakdown.push({key: b.key, title: b.title, fullTitle: b.fullTitle, weight: a ? a.weight : 0, available: b.questions.length, pulled: n});
+  });
+  examPool = shuffle(examPool);
+
+  renderExamSetup(config);
+}
+
+function renderExamSetup(config){
+  clearInterval(timerInterval);
+  const main = document.getElementById('main');
+  const target = (config && config.totalQuestions) || 250;
+  const shortfall = examPool.length < target;
+  main.innerHTML = `
+    <div class="setup-box">
+      <h2>Full Practice Exam</h2>
+      <p>${examPool.length} question${examPool.length === 1 ? '' : 's'} pulled from ${examBreakdown.filter(b => b.pulled > 0).length} of ${examBreakdown.length} banks${shortfall ? ` — fewer than the configured ${target}, since that's all that's currently available at these weights` : ''}. Weights are set in <code>${EXAM_WEIGHTS_FILE}</code>.</p>
+      <div class="mode-row">
+        <button class="mode-btn" id="practiceBtn">
+          <div class="mode-name">Practice Mode</div>
+          <div class="mode-desc">Untimed. See right/wrong instantly with the explanation before moving on.</div>
+        </button>
+        <button class="mode-btn" id="timedBtn">
+          <div class="mode-name">Timed Test</div>
+          <div class="mode-desc">${SECONDS_PER_QUESTION}s per question on the clock. No feedback until you finish.</div>
+        </button>
+      </div>
+    </div>
+    <div class="q-card" style="margin-top:14px;">
+      <div class="q-eyebrow"><span>Bank breakdown</span></div>
+      <div style="font-size:12.5px; line-height:1.9; color:var(--ink-soft);">
+        ${examBreakdown.map(b => `<div style="display:flex; justify-content:space-between; gap:10px;"><span>${escapeHtml(b.fullTitle)}${b.weight !== 1 ? ` <span class="fn-source" style="display:inline;">(weight ${b.weight})</span>` : ''}</span><span style="font-family:'IBM Plex Mono',monospace; white-space:nowrap;">${b.pulled} / ${b.available}</span></div>`).join('')}
+      </div>
+    </div>
+  `;
+  document.getElementById('practiceBtn').onclick = () => startQuiz('practice');
+  document.getElementById('timedBtn').onclick = () => startQuiz('timed');
+}
+
 /* ---------- setup / navigation ---------- */
 
 function renderChapterChips(){
   const wrap = document.getElementById('chapterChips');
   wrap.innerHTML = '';
+  const examBtn = document.createElement('button');
+  examBtn.className = 'chip exam-chip' + (examMode ? ' active' : '');
+  examBtn.textContent = '★ Full Exam';
+  examBtn.title = 'Randomly assembled practice exam pulling from every bank';
+  examBtn.onclick = () => startFullExam();
+  wrap.appendChild(examBtn);
   ALT_QUIZ_CHAPTERS.forEach(ch => {
     const b = document.createElement('button');
-    b.className = 'chip' + (activeChapter && activeChapter.key === ch.key ? ' active' : '');
+    b.className = 'chip' + (!examMode && activeChapter && activeChapter.key === ch.key ? ' active' : '');
     b.textContent = ch.short || ('Ch ' + ch.num);
     b.title = ch.title;
     b.onclick = () => selectChapter(ch);
@@ -244,6 +395,7 @@ function renderChapterChips(){
 }
 
 async function selectChapter(ch){
+  examMode = false;
   activeChapter = ch;
   activeTag = 'All';
   renderChapterChips();
@@ -318,7 +470,8 @@ function shuffle(arr){
 
 function startQuiz(mode){
   quizMode = mode;
-  const pool = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  const source = examMode ? examPool : bankQuestions;
+  const pool = examMode || activeTag === 'All' ? source : source.filter(q => q.tag === activeTag);
   questions = shuffle(pool).map(q => q.dual
     ? {...q, offenseOptions: shuffle(q.offenseOptions), classificationOptions: shuffle(q.classificationOptions)}
     : {...q, options: shuffle(q.options)});
@@ -368,7 +521,7 @@ function renderQuestion(){
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
       <div class="q-card">
-        <div class="q-eyebrow"><span>${escapeHtml(activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
         <div class="q-prompt">${renderPrompt(q.prompt)}</div>
       </div>
       <div class="selector-label">Which offense (if any) applies?</div>
@@ -417,7 +570,7 @@ function renderQuestion(){
     </div>
     <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
     <div class="q-card">
-      <div class="q-eyebrow"><span>${escapeHtml(activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+      <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
       <div class="q-prompt">${renderPrompt(q.prompt)}</div>
     </div>
     <div class="options${tf ? ' tf' : ''}" id="optionsWrap">
@@ -542,7 +695,7 @@ function finishQuiz(){
     ` : ''}
   `;
   document.getElementById('retryBtn').onclick = () => startQuiz(quizMode);
-  document.getElementById('changeModeBtn').onclick = renderSetup;
+  document.getElementById('changeModeBtn').onclick = examMode ? (() => renderExamSetup(null)) : renderSetup;
 }
 
 renderChapterChips();

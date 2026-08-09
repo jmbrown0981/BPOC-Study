@@ -1,0 +1,24 @@
+{
+  "_readme": "Config for the 'Full Practice Exam' mode in alt-quiz.html. Weight = relative pull for each quiz bank when the exam randomly assembles its question set. Equal weights (the default, 1 each) give every bank an equal EXPECTED SHARE of totalQuestions, regardless of how many questions that bank actually contains -- a 31-question bank and a 330-question bank each get pulled from equally often. Raise a bank's weight to make it show up more often on the practice exam relative to the others; lower it (or set it to 0) to make it show up less often or not at all. Bank keys must match the 'key' field used in ALT_QUIZ_CHAPTERS inside alt-quiz.html. Any bank in ALT_QUIZ_CHAPTERS that is NOT listed in 'weights' below automatically falls back to 'defaultWeight', so newly-added banks are included at equal weight without needing to edit this file -- add an explicit entry here only when you want a bank's weight to differ from the default. If the weighted total exceeds how many questions actually exist across all banks, the exam just uses everything available and runs short of totalQuestions.",
+  "totalQuestions": 250,
+  "defaultWeight": 1,
+  "weights": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8-def": 1,
+    "8-off": 1,
+    "9": 1,
+    "10": 1,
+    "10-cases": 1,
+    "13": 1,
+    "14": 1,
+    "24": 1,
+    "25": 1,
+    "case-law": 1
+  }
+}
