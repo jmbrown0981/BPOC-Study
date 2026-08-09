@@ -841,6 +841,314 @@ const chapters = [
          body:"When encountering someone claiming diplomatic immunity, officers can still take action — immunity doesn't mean \"do nothing\":<ul><li><b>C</b>ALL the State Department's Office of Foreign Missions to verify the person's actual immunity status before assuming the claim is valid</li><li><b>A</b>SSIST by documenting the incident thoroughly through normal procedures and issuing any citations that would normally apply — anyone can still receive a traffic citation regardless of immunity status</li><li><b>N</b>OTIFY the State Department by sending copies of all citations and reports to their Office of Foreign Missions</li></ul>Officer and public safety always come first — immunity is respected, but thorough documentation is what allows the State Department to pursue the matter through diplomatic channels afterward (like a tour termination or immunity waiver request)."}
       ]}
     ]
+  },
+  {num:14, title:"Civil Process", status:"live",
+    unit:"Unit Goal: Civil law procedures, consequences associated with law enforcement duties, and vocabulary associated with civil law action, plus how Texas courts are established and their jurisdictions.",
+    topics:[
+      {id:"civil-liability", label:"14.1 Civil Liability for Improper Acts", cards:[
+        {lo:"14.1", title:"Three Levels of Potential Liability",
+         body:"Because of the responsibility a peace officer carries in protecting society, misapplying the law or a procedure can result in damages or harm to those served — and civil liability can attach at three separate levels: <ul><li>A <b>level of government</b> (state, county, municipality, or special district)</li><li>The <b>agency</b> itself, however it was created (legislative action, adopted ordinance, or state constitutional mandate)</li><li>The <b>individual officer</b>, in their personal capacity</li></ul>Failing to understand the law, the Constitution's restraints, and the process due citizens increases liability exposure across all three levels — settlements, agency embarrassment, personal civil responsibility, and reputational harm to the profession."},
+        {lo:"14.1", title:"CPRC §7.001 — Liability for Refusal or Neglect of Official Duties", cite:"Tex. Civ. Prac. & Rem. Code §7.001",
+         body:"A clerk, sheriff, or other officer who neglects or refuses to perform a duty required under the Texas Rules of Civil Procedure (or a Code provision derived from those rules) is liable for <b>actual damages only</b> in a suit by an injured person. The officer can separately be held in contempt — fined not less than $10 nor more than $100, with costs, after 10 days' notice of the motion. A party can pursue damages under §7.001 or Chapter 34, or seek contempt sanctions — but not both for the same conduct."},
+        {lo:"14.1", title:"CPRC §7.003 — Liability for Executing Writs", cite:"Tex. Civ. Prac. & Rem. Code §7.003",
+         body:"An officer isn't liable for damages from executing a writ if they execute or attempt to execute it in good faith, as provided by law and the Texas Rules of Civil Procedure — and they aren't required to post an indemnification bond to do so. Good faith means a reasonably prudent officer, under the same or similar circumstances, could have believed their conduct was justified based on what they knew at the time."},
+        {lo:"14.1", title:"Sheriff & Constable Duties to Execute Process", cite:"Tex. Loc. Gov't Code §85.021 (Sheriff) · §86.024 (Constable)",
+         body:"A <b>sheriff</b> must execute all process/precepts directed to them and return them to the proper court on time; failing to return process, or making a false return, is an offense punishable as contempt by a fine up to $100, and the sheriff is liable for all damages sustained because of the offense. A <b>constable</b> who fails or refuses to execute and return a lawfully directed process, warrant, or precept can be fined for contempt (also $10–$100 with costs, 10 days' notice) on the motion of the injured person."}
+      ]},
+      {id:"civil-vs-criminal-14", label:"14.2 Civil vs. Criminal Law", cards:[
+        {lo:"14.2", title:"Criminal Law",
+         body:"Rooted in the states' <b>Tenth Amendment</b> police powers, criminal laws are enacted by the state legislature and define conduct as unacceptable, prescribing a penalty for it. In Texas, a crime is committed 'against the peace and dignity of the State,' and conduct/penalties are codified in the Penal Code. A person charged is protected by due process, and if found guilty, the penalty is one of three types: <b>fine, imprisonment, or execution</b>. The standard for conviction is <b>proof beyond a reasonable doubt</b> (Penal Code §2.01)."},
+        {lo:"14.2", title:"Civil Law",
+         body:"Involves legal actions between two individual parties — individuals, corporations, associations, or levels of government — where one party alleges a tort (legal harm) inflicted by another. The remedy sought is typically an <b>injunction</b> (to stop continued action) or <b>compensation</b> to restore the harmed party. Civil actions span Tort Law, Family Law, Real Estate Law, and Business/Employment Law, among others. The standard for determining responsibility and awarding remedies is a <b>preponderance of the evidence</b> — a materially lower bar than the criminal standard. Texas's civil procedures live in the Civil Practice and Remedies Code."}
+      ]},
+      {id:"contempt", label:"14.3 Contempt of Court", cards:[
+        {lo:"14.3", title:"What Counts as Contempt",
+         body:"Contempt is conduct that obstructs the proper administration of justice — conduct that brings the authority and administration of the law into disrespect, interferes with or harms parties/witnesses during litigation, or otherwise impedes, embarrasses, or obstructs a court's discharge of its duties. <b>Constructive (indirect) contempt</b> is objectionable behavior occurring outside the court's presence — since the judge has no personal knowledge of the act, a hearing is required, and the accused (the 'contemnor') is entitled to formal written notice and a hearing; oral notice isn't enough."},
+        {lo:"14.3", title:"Punishment Ranges", cite:"Gov't Code §21.002",
+         body:"For courts other than justice or municipal court: a fine up to <b>$500</b>, confinement up to <b>6 months</b>, or both. For justice and municipal courts: a fine up to <b>$100</b>, confinement up to <b>3 days</b>, or both. Confinement for contempt generally can't exceed 18 months total, whether the contempt is criminal (fixed punishment) or civil (coercive, ending once the person complies with the underlying order)."}
+      ]},
+      {id:"court-creation", label:"14.4 How Texas Courts Are Created", cards:[
+        {lo:"14.4", title:"Three Sources of Court Authority",
+         body:"Texas courts trace their authority to one of three sources: <b>constitutional courts</b>, created directly under the state constitution; <b>courts at law</b>, created by acts of the state legislature; and <b>municipal courts</b>, created by the governing body of a chartered municipality."}
+      ]},
+      {id:"court-jurisdiction-14", label:"14.5 General Court Jurisdiction", cards:[
+        {lo:"14.5", title:"What Jurisdiction Means",
+         body:"Jurisdiction is a court's power to hear a case. In a <b>criminal</b> case, jurisdiction is determined by the severity of the offense charged under the Penal Code — any of the five felony levels or three misdemeanor levels. In a <b>civil</b> case, jurisdiction is determined either by the dollar amount of compensation sought or by the specific area of law under which the action is brought."},
+        {lo:"14.5", title:"Appellate Jurisdiction",
+         body:"A court with <b>appellate jurisdiction</b> has the power to hear a case — civil or criminal — where a court of competent jurisdiction already rendered a decision, but a party has filed an appeal or subsequent hearing on a legal issue. Appeals must always go to a court with superior jurisdiction, so that court has the authority to reverse the prior court's decision if warranted."}
+      ]},
+      {id:"civil-action-process", label:"14.6 Civil Action Process", cards:[
+        {lo:"14.6", title:"Petition & Plaintiff",
+         body:"A civil action begins when an aggrieved party files a <b>petition</b> with the court clerk — a complaint detailing the facts of the alleged tort and the remedy sought. Once filed, the aggrieved party is the <b>plaintiff</b>."},
+        {lo:"14.6", title:"Citation, Service & the Defendant",
+         body:"The party alleged to have committed the tort is the <b>defendant</b>. After the petition is filed, the defendant must receive legal notice through service of a <b>citation</b> — usually done face-to-face, though an agent/representative may serve when authorized. If a defendant is uncooperative or evades service, the court may direct alternate service. The citation informs the defendant of the facts and the plaintiff's demand."},
+        {lo:"14.6", title:"Default Judgment & the Answer",
+         body:"If the defendant fails to respond, the court may enter a <b>default judgment</b> in the plaintiff's favor. If the defendant does respond, they file an <b>answer</b> — which may deny the charge, accept the demand, or allege some other explanation or recourse."},
+        {lo:"14.6", title:"Trial, Judgment & Enforcement",
+         body:"If the parties can't settle, the case proceeds to trial before a court of competent jurisdiction. Based on the testimony and evidence, the court renders a decision and may issue a <b>judgment</b> instructing the named party on required action. A judgment is enforceable — if the named party doesn't comply, it can be enforced through the civil enforcement capacity of the local <b>Sheriff's or Constable's Office</b>."}
+      ]}
+    ]
+  },
+  {num:24, title:"Written Communication", status:"live",
+    unit:"Unit Goal: Demonstrate effective written communication skills — from basic sentence mechanics through field notes, observation/description technique, and the essential characteristics of a complete police report.",
+    topics:[
+      {id:"parts-of-speech", label:"24.1 Parts of a Sentence", cards:[
+        {lo:"24.1", title:"Six Core Components",
+         body:"<ul><li><b>Adjective</b> — describes or modifies a noun (quality, quantity, or distinctness): 'a brave officer,' 'some reports,' 'this suspect'</li><li><b>Adverb</b> — modifies a verb, adjective, another adverb, or clause, answering when/how long/where/how/to what degree: 'Please reply at once'</li><li><b>Noun</b> — names a person, animal, place, object, quality, concept, or action: 'The officer received an assignment'</li><li><b>Preposition</b> — combines with a noun/pronoun to form a phrase acting as an adverb, adjective, or noun: 'They expected resistance on their part'</li><li><b>Verb</b> — expresses an act, occurrence, or state of being: 'The suspect ran from the officer'</li><li><b>Pronoun</b> — substitutes for a noun: 'Who is she?'</li></ul>"}
+      ]},
+      {id:"complete-sentences", label:"24.2 Writing Complete Sentences", cards:[
+        {lo:"24.2", title:"What Makes a Sentence Complete",
+         body:"A sentence is a group of words expressing a complete thought — typically containing both a subject and a predicate, beginning with a capital letter, and ending with a punctuation mark. It should be short, simple, concise, and unmistakably clear. Written communication carries extra weight because it's evaluated as evidence of an officer's competence, may reach a diverse audience (agency, courts, the public), and may serve as a source document for judicial or administrative proceedings — unlike speech, a confused reader usually can't just ask the writer to clarify."},
+        {lo:"24.2", title:"Sentence Fragments & Run-Ons",
+         body:"Writing the way you talk causes two common errors. A <b>sentence fragment</b> is only a piece of a complete sentence and can leave the reader unsure of its meaning (e.g., 'The mirror in the hall closet.' — no verb). A <b>run-on sentence</b> combines two or more sentences as if they were one, often when closely related ideas get mistakenly merged (e.g., 'The officer chased the suspect, and the suspect had a gun.' should be two sentences or properly joined)."}
+      ]},
+      {id:"sentence-clarity", label:"24.3 Sentence Clarity", cards:[
+        {lo:"24.3", title:"Misplaced Modifiers",
+         body:"A modifier is a word or phrase that qualifies or limits another word — a <b>misplaced modifier</b> attaches to the wrong word, forcing the reader to guess at the intended meaning. Place every modifier as close as possible to the word it modifies. Wrong: 'We saw many swimming pools flying over California.' Right: 'While flying over California, we saw many swimming pools.'"},
+        {lo:"24.3", title:"Double Negatives",
+         body:"Using two negative words in the same clause creates a double negative. The negative terms no, not, never, none, no one, nobody, nothing, nowhere, and neither should be used one at a time — and barely, scarcely, and hardly are also negative in meaning and shouldn't pair with any of those words. Wrong: 'Nobody saw nothing.' Right: 'Nobody saw anything.' Wrong: 'I can't hardly see the road.' Right: 'I can hardly see the road.'"},
+        {lo:"24.3", title:"Active vs. Passive Voice",
+         body:"In the <b>active voice</b>, the subject performs the action; in the <b>passive voice</b>, the subject receives the action. Active voice is clearer and stronger and should be preferred — passive voice may be necessary only when the actor isn't known. Passive: 'The bystander was hit by a stray bullet.' Active: 'A stray bullet hit a bystander.'"},
+        {lo:"24.3", title:"Quotation Marks — Direct vs. Indirect Quotes",
+         body:"Use quotation marks only when quoting someone's exact words (a direct quote) — not when paraphrasing (an indirect quote). Example: Riley yawned and said, &ldquo;Let&rsquo;s go.&rdquo; (direct — quoted). Riley yawned and said that we should go. (indirect — no quotation marks)."},
+        {lo:"24.3", title:"Slang, Jargon & Nonstandard Abbreviations",
+         body:"Avoid slang and jargon unless quoting it for a purpose (like a suspect's statement). Slang: 'the person said someone trashed their car' should become 'someone damaged their car.' Jargon: '10-50' should become 'traffic crash'; 'dee-wee' should become 'Driving While Intoxicated.' Nonstandard abbreviations should generally be avoided, and if used, must be preceded by the full term on first use — e.g., 'the Texas Commission on Law Enforcement (TCOLE)' before later using 'TCOLE' alone."},
+        {lo:"24.3", title:"Commonly Confused Word Pairs",
+         body:"Report writing is full of words that sound alike but mean different things: <b>affect</b> (verb, to influence) vs. <b>effect</b> (noun, result); <b>its</b> (possessive) vs. <b>it's</b> (contraction for 'it is'); <b>their/there/they're</b>; <b>accept</b> (to receive) vs. <b>except</b> (to exclude); <b>principal</b> (most important; a person in authority) vs. <b>principle</b> (a fundamental truth); <b>lie</b> (to recline) vs. <b>lay</b> (to set an object down); <b>cite/sight/site</b>; <b>council</b> (advisory group) vs. <b>counsel</b> (to advise) — getting these wrong undermines a report's credibility even when the underlying facts are accurate."},
+        {lo:"24.3", title:"Verbosity & 'Deadwood'",
+         body:"Avoid padding a report with unnecessary phrases meant to sound impressive — say 'know' instead of 'have knowledge of,' 'if' instead of 'in the event that,' 'regarding' instead of 'in connection with.' 'Deadwood' phrases should be trimmed the same way: 'ascertain the location of' becomes 'find'; 'utilize' becomes 'use'; 'at the present time' becomes 'now.' Needless repetition ('cooperated together,' 'true facts,' 'very unique') should be cut to the single necessary word."}
+      ]},
+      {id:"punctuation", label:"24.4 Punctuation", cards:[
+        {lo:"24.4", title:"Common Marks & Where Officers Get Them Wrong",
+         body:"The core punctuation marks covered are the apostrophe, brackets, colon, comma, dash/hyphen, ellipsis, exclamation point, parentheses, period, question mark, quotation marks, semicolon, and slash. A few rules that matter most in report writing: periods and commas fall <i>inside</i> closing quotation marks (&ldquo;I am leaving,&rdquo; he said.); a semicolon falls <i>outside</i> closing quotation marks; a colon can introduce a list, an explanation, or lengthy quoted material; and a semicolon (not a comma) is the correct way to join two closely related independent clauses without a coordinating conjunction ('Some people have the ability to write well; others do not.')."}
+      ]},
+      {id:"field-notes", label:"24.5 Field Notes", cards:[
+        {lo:"24.5", title:"What Field Notes Are and Why They Matter",
+         body:"Field notes are brief notations about specific events and circumstances, recorded while fresh in the officer's mind, used to prepare a formal report. They provide the basis for report writing, reduce the need to re-contact parties, and provide greater accuracy relative to time, statements, and events than memory alone."},
+        {lo:"24.5", title:"Handling Notes Carefully",
+         body:"Non-police information and personal comments shouldn't be included in field notes. If a case goes to court, the notes themselves are subject to scrutiny, and if placed into evidence, they may be unavailable until released by the court. Field notes and the resulting report must be consistent — any impeachable discrepancy between them can undermine the case. Agency policy governs whether notes should be destroyed once transcribed into a report."}
+      ]},
+      {id:"observation-description", label:"24.6 Observation & Descriptive Skills", cards:[
+        {lo:"24.6", title:"Observation Is a Perishable Skill",
+         body:"An officer's ability to write descriptively depends directly on their observation skills — all five senses (sight, hearing, touch, taste, smell) play a role. Like any perishable skill, observation must be practiced frequently to stay sharp."},
+        {lo:"24.6", title:"Describing People, Places & Things Systematically",
+         body:"Describing people is one of the hardest tasks for an officer — capture manner of speaking or walking, accents, movements, and anything carried. Describe people systematically: start with race, sex, and age, then move head-to-toe, noting anything that makes the person easily identifiable (scars, tattoos, disfigurements). Describe places by proceeding in one consistent direction (left-to-right, top-to-bottom) so the description is thorough. Describe things by noting distinguishing marks and comparing to commonly known objects — color, size, shape, texture, location, and type."}
+      ]},
+      {id:"field-notebook-info", label:"24.7 What Belongs in a Field Notebook", cards:[
+        {lo:"24.7", title:"Describing Persons Head-to-Toe",
+         body:"For suspects and victims: race and sex, height and weight, hair (color/style), hat (color/style), face (complexion), eyes (color/shape), nose/mouth area and distinguishing marks, shirt, pants, shoes, other distinguishing marks (tattoos, scars, limp, missing teeth), and injuries."},
+        {lo:"24.7", title:"Describing Vehicles — CYMBAL",
+         body:"The mnemonic <b>CYMBAL</b> covers vehicle description, top to bottom: <b>C</b>olor, <b>Y</b>ear, <b>M</b>ake/Model, <b>B</b>ody style, <b>L</b>icense plate (year of expiration, state registered) — plus the VIN, estimated value, distinguishing marks/damage, and whether the vehicle is insured or financed."},
+        {lo:"24.7", title:"Describing Other Property",
+         body:"For other property, capture manufacturer, model name/number, serial number, cost/value, size, color, style, use (if not obvious), and location found (and disposition, when appropriate)."}
+      ]},
+      {id:"5w1h", label:"24.8 The Six Questions Every Report Must Answer", cards:[
+        {lo:"24.8", title:"Who, What, When, Where, Why, How",
+         body:"<ul><li><b>Who</b> — every person's role (suspect/victim/witness), correctly spelled full name, contact info, aliases, sex/race, occupation, age/DOB, and ID document</li><li><b>What</b> — the type of offense, property involved, means/direction of travel, exact statements made, and any unusual characteristics or actions</li><li><b>When</b> — date/time the offense occurred, was discovered, was reported, evidence was located, witnesses/victims were contacted, and arrests were made</li><li><b>Where</b> — exact location of the offense and evidence, reference points, type of area, and the relative location of victims/witnesses/suspects</li><li><b>Why</b> — any statement or evidence supporting a possible motive (revenge, drug addiction, monetary gain, accident)</li><li><b>How</b> — how the offense occurred, how the suspect approached/gained entry/exited, how law enforcement was notified, and how the officer approached the scene</li></ul>"}
+      ]},
+      {id:"report-uses", label:"24.9 Uses of Police Reports", cards:[
+        {lo:"24.9", title:"Why the Report Matters Beyond the Case File",
+         body:"A police report is an official document that serves as a permanent record of facts, coordinates follow-up investigation, forms the basis for both prosecution and defense, feeds into officer performance evaluations, supplies statistical data, and stands as reference material long after the incident."}
+      ]},
+      {id:"report-criteria", label:"24.10 Eight Essential Criteria of a Good Report", cards:[
+        {lo:"24.10", title:"The Eight Criteria",
+         body:"<ul><li>Accurate</li><li>Concise</li><li>Complete</li><li>Clear</li><li>Legible</li><li>Objective</li><li>Grammatically correct</li><li>Correct spelling</li></ul>Whether a report is written in first- or third-person generally depends on agency policy."}
+      ]},
+      {id:"report-types", label:"24.11 Common Types of Police Reports", cards:[
+        {lo:"24.11", title:"Five Common Report Types",
+         body:"Arrest reports, incident reports, offense reports, crash reports, and supplemental reports."}
+      ]},
+      {id:"report-ordering", label:"24.12 Chronological vs. Categorical Ordering", cards:[
+        {lo:"24.12", title:"Two Ways to Organize a Narrative",
+         body:"<b>Chronological</b> ordering arranges information in the order it occurred. <b>Categorical</b> ordering arranges information by category — for example, grouping all witness information together, then all suspect information, then the elements of the crime. Agency policy may dictate which approach is expected."}
+      ]},
+      {id:"report-info-types", label:"24.13 Three Basic Kinds of Report Information", cards:[
+        {lo:"24.13", title:"Identification, Narrative, and Elements",
+         body:"Every police report needs: identification of the involved persons, vehicles, etc.; a narrative description of the offense or incident; and the elements of the offense or the probable cause supporting it. Some procedures involving juveniles, sex offenders, or family-violence victims may be governed separately by statute or agency policy."}
+      ]},
+      {id:"fact-vs-opinion", label:"24.14 Separating Fact From Opinion", cards:[
+        {lo:"24.14", title:"Keep Opinion Out (Unless Labeled)",
+         body:"Unless specifically required, an officer's personal opinions shouldn't appear in a police report. Anything that isn't a directly observed fact must be clearly labeled as such to avoid confusing the reader about what's established versus what's the writer's impression."}
+      ]},
+      {id:"victim-confidentiality", label:"24.15 Sex-Offense Victim Confidentiality", cards:[
+        {lo:"24.15", title:"Pseudonym Option", cite:"CCP Chapter 58",
+         body:"A sex-offense victim may choose a pseudonym to identify themselves in all public files and records concerning the offense, under Code of Criminal Procedure Chapter 58. Agency policy governs exactly how this substitution is documented in the report."}
+      ]}
+    ]
+  },
+  {num:25, title:"Verbal Communication", status:"live",
+    unit:"Unit Goal: The critical nature of effective verbal communication, active listening, empathy, paraphrasing, persuasion, and simple communication patterns officers can rely on in awkward or hostile encounters.",
+    topics:[
+      {id:"eq-foundation", label:"25.1 EQ as the Foundation of Communication", cards:[
+        {lo:"25.1", title:"Why Communication Skill Determines Success",
+         body:"Per Jim Glennon's Arresting Communication, an officer who can't communicate effectively will not succeed, will not be happy, and will not win — regardless of their shooting or case-law skill. Most arrests are made without any physical force at all; effective communication, not force, resolves the vast majority of encounters, and officers who feel like an integral part of their community are less likely to resort to physical force to resolve situations that could be verbally de-escalated."},
+        {lo:"25.1", title:"Emotional Intelligence Is the Foundation",
+         body:"Emotional intelligence (EQ) — the capacity to identify and manage one's own emotional state and be sensitive to emotional signals from others — underlies every other communication technique covered in this chapter. Without it, techniques like active listening and paraphrasing have little foundation to stand on. Cops can unintentionally escalate hostility even in the most benign citizen interactions when they can't communicate properly."}
+      ]},
+      {id:"auth-vs-authoritarian", label:"25.2 Authoritative vs. Authoritarian", cards:[
+        {lo:"25.2", title:"Two Very Different Postures",
+         body:"<b>Authoritative</b> — trusted as accurate and reliable, commanding and self-confident, likely to be respected and obeyed. <b>Authoritarian</b> — enforcing very strict obedience to authority, like an autocrat, dictator, or oppressive tyrant. The simple basics of human interaction that are keys to true success: active listening, asking questions, showing courtesy, engaging empathetically, and observing non-verbal body language."}
+      ]},
+      {id:"crises-def", label:"25.3–25.4 Why Most Arrests Don't Require Force, and What a Crisis Is", cards:[
+        {lo:"25.3", title:"Officers Are Generally Good at This",
+         body:"Officers are generally good at building rapport, communicating alternatives and consequences, and dealing with people in crisis — which explains why most arrests happen without physical force. It's typically not major crimes or critical scenes where officers run into communication trouble — it's the minor, insignificant calls for service (like kids playing basketball in the street), where causes of officer-driven escalation include a good message with failed delivery, an authoritarian thought process, a deficient communication skill set, and 'Contempt of Cop' reactions."},
+        {lo:"25.4", title:"Defining Crisis",
+         body:"A crisis is a temporary state of upset and disorganization, characterized by an inability to cope with a situation using customary problem-solving methods (Kantor/University of Virginia). Framing it as temporary matters — it signals the person's coping breakdown isn't permanent, which should shape how an officer approaches and de-escalates."}
+      ]},
+      {id:"eq-connection", label:"25.5 Emotional Intelligence & Connection", cards:[
+        {lo:"25.5", title:"Defining EQ and Its Key Characteristics",
+         body:"The Institute of Health and Human Potential defines EQ as the ability to recognize, understand, and manage our own emotions, and to recognize, understand, and influence the emotions of others. Key characteristics of high EQ: self-awareness, self-control, motivation and determination, social competency and empathy, understanding others, and influencing others. Experts say people size up new people in somewhere between 30 seconds and two minutes (Elliott Abrams) — first impressions matter enormously."},
+        {lo:"25.5", title:"Maxwell's Three Elements and Four Components of Connection",
+         body:"John C. Maxwell's <b>three essential elements of communication</b>: thought (something we know), emotion (something we feel), and action (something we do) — all three must be present or a breakdown develops; intellect alone rarely motivates anyone. His <b>four components of connection</b>: what people see (visual), understand (intellectual), feel (emotional), and hear (verbal) — humans remember 85–90% of what they see and less than 15% of what they hear. Maxwell's four things that limit connection: immaturity, ego, failure to value everyone, and insecurity. People are subconsciously asking three questions about any officer they encounter: can you help me? do you care for me? can I trust you?"}
+      ]},
+      {id:"questions", label:"25.6 The Power of Questions", cards:[
+        {lo:"25.6", title:"Why Asking Beats Telling",
+         body:"Per Jim Glennon's 'Magic of Questions,' the brain instinctively scans stored data when a question is asked, provoking a thought process — which is why questions are such a powerful de-escalation and rapport-building tool. Most situations take only 3 or 4 good questions, coupled with active listening, to gain control and de-escalate hostilities. Attempting to influence by telling is far less effective than by asking — and a subject may try to control the conversation with off-topic questions to keep an officer off balance; officers don't have to talk in order to communicate."}
+      ]},
+      {id:"active-listening", label:"25.7 Active Listening", cards:[
+        {lo:"25.7", title:"Active vs. Reflective Listening",
+         body:"Active listening requires the listener to fully concentrate, understand, respond, and then remember what is being said — going beyond reflective listening, which just repeats back what was heard to confirm understanding. Talking is natural; active listening is not — it takes deliberate practice, and concentration improves with training and focus (Glennon)."},
+        {lo:"25.7", title:"Body Language While Listening",
+         body:"Getting caught up in your own emotional internal dialog can cause an officer to miss important aspects of an interaction, overlook pre-attack body-language cues, and even neglect lethal warning signs. Repeatedly rubbing the neck, looking away for long stretches, and crossing arms signal 'I'm not interested' or 'I'm not listening.' Instead: open palms, feet pointed toward the speaker, a slightly tilted and aligned head, open arms, and a relaxed, involved, nodding face communicate genuine interest."}
+      ]},
+      {id:"profanity", label:"25.8 Profanity and Danger Cues", cards:[
+        {lo:"25.8", title:"Ignore, But Don't Disregard",
+         body:"A citizen's use of profanity shouldn't be ignored outright — it should be rationally evaluated as a possible precursor to an attack, without letting it distract the officer or trigger a reactive response. Most officer attacks come from someone standing right beside them, and the attacker is always communicating and usually broadcasts the coming attack beforehand. 'Ignore but don't disregard' means not letting profanity itself trigger an emotional reaction, while still listening for what it reveals about danger and intent."}
+      ]},
+      {id:"empathy", label:"25.9 Empathy", cards:[
+        {lo:"25.9", title:"Defining Empathy",
+         body:"Empathy is the psychological identification with or vicarious experiencing of another's feelings, thoughts, or attitudes — a dual level of consciousness, aware of the other person's cognition and feelings while simultaneously remaining aware of your own. Per George Thompson's Verbal Judo, if you cannot empathize with people, you don't stand a chance of getting them to listen to you, much less accepting your attempts to help, no matter how sincere you are."}
+      ]},
+      {id:"paraphrasing", label:"25.10 Paraphrasing", cards:[
+        {lo:"25.10", title:"Definition and Benefits",
+         body:"Paraphrasing is putting another's meaning into your own words and delivering it back to them — combined with identifying their emotional state, it forms empathetic listening. Per Dr. Thompson, paraphrasing is the only way to interrupt someone without generating further resistance. Among its 14 benefits: it creates a degree of empathy, since the other person believes you're trying to understand them, and they appreciate being heard."},
+        {lo:"25.10", title:"Metaphrasing and Reverse Paraphrasing",
+         body:"<b>Metaphrasing</b> is a perversion of paraphrasing — putting inaccurate words into someone's mouth, concerned with what they ought to be saying rather than what they actually said, which can insult and anger people. <b>Reverse paraphrasing</b> asks the other person to give back what they understood the discussion to be about — few people will admit to missing the point if simply asked, 'Do you understand?' — so instead try: 'To be sure I said what I intended to say, would you give back what you understood the point of the discussion has been?'"}
+      ]},
+      {id:"arguments", label:"25.11 You Can't Win an Argument", cards:[
+        {lo:"25.11", title:"Why Arguing Backfires",
+         body:"Arguments create defensiveness, and defensive minds are neither creative nor cooperative — participants tend to entrench further into their positions out of emotional pride rather than change their minds. Even when you technically win an argument (Glennon), you've probably lost the opportunity for a conciliatory relationship. Dale Carnegie's magic phrase for stopping arguments and creating goodwill: 'I don't blame you one iota for feeling as you do... if I were in your shoes, I'd probably feel the same way.' Telling someone 'you're wrong' diminishes their sense of worth and importance, so they respond by deflecting reality rather than accepting logic."}
+      ]},
+      {id:"personalized-respect", label:"25.12–25.13 Personalized Respect & Names", cards:[
+        {lo:"25.12", title:"Personalized Respect and Appreciation",
+         body:"All humans have an innate need for respect and acknowledgement — an officer who genuinely respects and acknowledges a person may be seen as a positive, de-escalating presence. Suggested phrases: 'I hear and understand what you're saying' or 'Thanks for your input, I see where you are coming from.' The hardest part of applying this technique is controlling your own emotional and non-verbal communication."},
+        {lo:"25.13", title:"Names, Apologies & Recognition",
+         body:"Using a person's name signifies recognition, personalizes the encounter, communicates value, and increases the likelihood of compliance — per Dale Carnegie, a person's name is the sweetest and most important sound in any language to them. Apologizing is not a sign of weakness — it's a sign of self-confidence, maturity, and good character; people with high self-esteem admit mistakes, while people with low self-esteem deny them. When someone apologizes to you, accept it, acknowledge it verbally and nonverbally, and thank them — don't smirk, criticize, or ignore it."}
+      ]},
+      {id:"nonverbal-paralinguistic", label:"25.14 Nonverbal & Paralinguistic Communication", cards:[
+        {lo:"25.14", title:"Mehrabian's 7-38-55 Rule",
+         body:"Communication breaks down into three components — <b>verbal</b> (7%), <b>paralinguistic</b> (38% — voice, tone, inflection, rate, pitch, timing, hesitation), and <b>nonverbal/kinesics</b> (55% — gestures, facial expressions, body/eye movements). When words and body language conflict, believe the nonverbal — a person's true message is found in the totality of all three combined. Even well-worded, legally accurate content can add up to a fraction of an 'effective message' if delivered with a sarcastic tone and closed-off body language."}
+      ]},
+      {id:"persuasion-principles", label:"25.15 Six Principles of Persuasion", cards:[
+        {lo:"25.15", title:"Reciprocity, Scarcity, Authority, Consistency, Liking, Consensus",
+         body:"<ul><li><b>Reciprocity</b> — the obligation to give when you receive; people repay in kind what they've been given</li><li><b>Authority</b> — people follow a credible, knowledgeable expert; command presence, fitness, a pressed uniform, and communication skill all signal it</li><li><b>Liking</b> — three factors: people similar to us, people who pay genuine compliments, and people who cooperate</li><li><b>Consensus</b> — people look to the actions of others (especially similar others) to determine their own actions</li><li><b>Scarcity</b> and <b>Consistency</b> round out the six, common in social psychology and observable in everyday settings like a car dealership</li></ul>"}
+      ]},
+      {id:"universal-truths", label:"25.16 Five Universal Truths (Verbal Judo)", cards:[
+        {lo:"25.16", title:"George Thompson's Five Universal Truths",
+         body:"<ul><li>All people want to be treated with <b>dignity and respect</b> — many officer assaults occur when people perceive disrespect</li><li>All people want to be <b>asked, not told</b> — a request is more palatable than an order and lets the person save face</li><li>All people want to know <b>why</b> — 'because I said so' is not a useful answer</li><li>All people want to be given <b>options, not threats</b> — start with the good options (the 'Greed Principle') before moving to negative ones</li><li>All people want a <b>second chance</b> — give one last, safe opportunity to comply before enforcement action</li></ul>"}
+      ]},
+      {id:"communication-blunders", label:"25.17 Common Communication Blunders & the Four Horsemen", cards:[
+        {lo:"25.17", title:"Everyday Blunders",
+         body:"Eye contact should run 60–70% of the time — less than 40% signals disinterest, boredom, or dishonesty. Interrupting sends the message 'I'm more important than you.' <b>Apathy</b> (lack of interest, enthusiasm, or concern) is the opposite of empathy. <b>Mind drift</b> — letting your own thinking (a phone, the TV, a bad attitude) distract you — prevents genuinely hearing the other person. Disagree with a person's words, plans, or actions, not their character — remember, 'the problem is the problem, not this person.'"},
+        {lo:"25.17", title:"The Four Horsemen",
+         body:"Four communication patterns identified as poisonous to a connection: <b>criticism</b> (attacking the person, not the behavior), <b>contempt</b> (name-calling, eye-rolling, mockery — the worst of the four, since it conveys disgust), <b>defensiveness</b> ('the problem isn't me, it's you'), and <b>stonewalling</b> (tuning out and disengaging)."}
+      ]},
+      {id:"leaps-halt", label:"25.18 LEAPS, HALT & Applied Scenarios", cards:[
+        {lo:"25.18", title:"LEAPS and HALT",
+         body:"<b>LEAPS</b> — a counseling-derived pattern for engaging or disengaging a conversation with dignity and respect: <b>L</b>isten actively, <b>E</b>mpathize, <b>A</b>sk questions, <b>P</b>araphrase, <b>S</b>ummarize. <b>HALT</b> — a self-check reminder that you're never at your best for decision-making and communication when Hungry, Angry, Lonely, or Tired, since when the emotional brain runs high, cognition runs low."},
+        {lo:"25.18", title:"Applied Scenarios",
+         body:"<b>Traffic stop:</b> Whren v. United States establishes that any traffic offense committed is a legitimate legal basis for a stop, meaning pretext stops are legal — a defective brake light is a valid, non-pretextual reason for a stop even if the driver believes it's racially motivated. <b>Tennis court:</b> playing catch on a tennis court, while annoying, isn't illegal, so there's no lawful detention triggering the failure-to-identify statute (PC 38.02), and merely annoying, non-criminal behavior most likely doesn't rise to a 'breach of the peace.' <b>Supervisor scenario:</b> when a stressed supervisor rambles with irate body language, paraphrase to confirm understanding, identify and share their emotions to build empathy, and stay alert to the 'sonic attention' trap, where people under stress believe they said things they never actually said."}
+      ]}
+    ]
+  },
+  {num:28, title:"Use of Force Theory", status:"live",
+    unit:"Unit Goal: Use-of-force concepts and legal authorities, force options and alternatives, and excessive use of force and Crew Resource Management (CRM).",
+    topics:[
+      {id:"legal-authorities-28", label:"28.1 Legal Authorities for Use of Force", cards:[
+        {lo:"28.1", title:"Penal Code Chapter 9 Justification Provisions",
+         body:"Deadly Force (PC 9.01(3)), Justification as a Defense (9.02), Confinement as Justifiable Force (9.03), Threats as Justifiable Force (9.04), Reckless Injury of Innocent Third Person (9.05), Civil Remedies Unaffected (9.06), and Arrest and Search (9.51) form the core legal authorities for use of force."},
+        {lo:"28.1", title:"Foundational Cases",
+         body:"<b>Graham v. Connor</b> (1989) established the objective reasonableness standard — judged from the perspective of a reasonable officer on scene, based on the totality of the circumstances, without the benefit of hindsight. <b>Estate of Ceballos v. Bridgwater</b> and <b>Okonkwo v. Fernandez</b> are also cited as case studies. Related qualified-immunity cases — <b>Anderson v. Creighton</b>, <b>Harlow v. Fitzgerald</b>, <b>Saucier v. Katz</b>, <b>Brower v. Inyo County</b> — shield officers from personal civil liability for reasonable, good-faith conduct unless they violate a clearly established right."}
+      ]},
+      {id:"justifications-28", label:"28.2 Justifications for Use of Force", cards:[
+        {lo:"28.2", title:"The Full Justification Map",
+         body:"<ul><li><b>General justification</b> — Public Duty (9.21), Necessity (9.22)</li><li><b>Protection of Persons</b> — Self-Defense (9.31), Deadly Force in Defense of Person (9.32), Defense of Third Person (9.33), Protection of Life or Health (9.34)</li><li><b>Protection of Property</b> — One's Own Property (9.41), Deadly Force to Protect Property (9.42), Third Person's Property (9.43), Use of Device to Protect Property (9.44)</li><li><b>Special Relationships</b> — Parent-child (9.61), Educator-student (9.62), Guardian-incompetent (9.63)</li><li><b>Custody and Escape</b> — Custody/Escape definitions (PC 38.01), Prevention of Escape from Custody (9.52), Maintaining Security in Correctional Facility (9.53)</li><li><b>Affirmative Defense</b> — Civil Immunity (CPRC 83.001), <b>Tennessee v. Garner</b> (1985)</li></ul>"}
+      ]},
+      {id:"case-concepts-28", label:"28.3 Concepts Regarding Use of Force — Key Circuit Cases", cards:[
+        {lo:"28.3", title:"Texas & 5th Circuit Case Studies by Topic",
+         body:"<b>Use of force generally:</b> Fraire v. City of Arlington, Graham v. Connor, Brothers v. Klevenhagen. <b>Taser:</b> Jackson v. City of Schertz, City of Waco v. Williams. <b>Shooting at a moving car:</b> Hathaway v. Bazany. <b>Handcuffing:</b> Baskin v. Smith. <b>Pepper spray:</b> Martinez v. New Mexico Dept. of Public Safety, Jennings v. Jones. <b>Seizure at gunpoint:</b> Robinson v. Solano County. <b>Canine as force:</b> Kuha v. City of Minnetonka, Robinette v. Barnes. <b>Hog-tie/hobble tie:</b> Cruz v. Laramie. Texas sits in the <b>5th Circuit</b> of the federal court system."}
+      ]},
+      {id:"psychological-aspects-28", label:"28.4 Psychological Aspects of Use of Force", cards:[
+        {lo:"28.4", title:"The Officer's Role Is Defensive",
+         body:"In a physical arrest, the police role is essentially defensive — devoted to resisting or preventing aggression, designed to defend and protect the community from criminality. An officer's initiative to confront a law violator is not itself an aggressive act."},
+        {lo:"28.4", title:"Control as a Two-Way Street",
+         body:"Control is the degree of influence an officer must exert over a violator to take them safely into custody. Control is reciprocal — an officer must be in complete self-control to be able to control a violator; self-control results from confidence built through training and practice. Uncertainty during an arrest can produce compensating behaviors: hesitation, verbal abuse, bluff, or unnecessary force."}
+      ]},
+      {id:"arrest-force-factors-28", label:"28.5–28.6 Deciding Factors & Moral Considerations", cards:[
+        {lo:"28.5", title:"Reasonable Force Factors",
+         body:"Only the amount of force reasonably necessary to make an arrest should be used. Factors to weigh: is the suspect submitting or resisting? Are they armed? What's the nature of the crime? Do they have a history showing a pattern of violence? How many suspects, and how much backup is available? What's the risk the chosen force might injure a bystander or other officer?"},
+        {lo:"28.6", title:"Deadly Force — Moral Considerations",
+         body:"Before using deadly force, the key question is whether it can be avoided without risk of injury or death to the officer or others. Administrative/departmental policy should be at least as restrictive as the law. Informal organizational norms (the informal culture of law enforcement) may or may not be stricter than legal/agency restrictions, and individual choice or conscience also shapes an officer's inner controls."}
+      ]},
+      {id:"force-options-28", label:"28.7–28.8 Force Options & Principal Considerations", cards:[
+        {lo:"28.7", title:"The Force Options Ladder",
+         body:"Modeled after frameworks like the Dynamic Resistance-Response Model (DRM): <b>professional presence</b> → <b>verbal communications</b> → <b>weaponless strategies</b> (takedowns, come-along holds) → <b>weapon strategies</b> (chemical/electrical means, stun guns, batons/impact weapons) → <b>deadly force</b>."},
+        {lo:"28.8", title:"Ineffective vs. Excessive Control",
+         body:"<b>Ineffective control</b> is when force is less than the subject's resistance. <b>Excessive control</b> is when force is unreasonably greater than the resistance, risking preventable injury. The force used should be no more than a reasonable officer would use under the totality of the circumstances, following both departmental policy and the law."}
+      ]},
+      {id:"professional-presence-28", label:"28.9 Impact of Professional Presence", cards:[
+        {lo:"28.9", title:"The Scene Has Its Own Dynamic",
+         body:"A scene has its own dynamic long before an officer arrives, and the officer's presence will impact that dynamic on arrival. Officers must think about the scene both as it was before they arrived and as it becomes while present, staying alert to whether elements within a crowd may be supportive or hostile to their duty performance."}
+      ]},
+      {id:"communication-public-28", label:"28.10–28.11 Communication Strategies & Encounter Elements", cards:[
+        {lo:"28.10", title:"97/3 and the Elements of Communication",
+         body:"About 97% of an officer's duties involve verbal skills — only about 3% of contacts require physical force. Elements of communication include words/touch/body movement, content, voice and tone, and non-verbal cues. Roughly 93% of a message is received based on how it's said rather than its literal content. Officers must communicate under uniquely stressful conditions: to unwilling, emotionally charged, or hostile people, often while being watched — and upset people are often incapable of responding to appeals of reason."},
+        {lo:"28.11", title:"Problem, Audience, Constraints, Ethical Presence",
+         body:"Four elements to recognize and control in every encounter: the <b>Problem</b> (analyze and identify it), the <b>Audience</b> (receptive, hostile, or critical — and a friendly bystander may help persuade the subject), <b>Constraints</b> (time of day, weather, noise, the individual's state), and <b>Ethical Presence</b> (self-control, stating purpose rather than personal feelings, maintaining professionalism)."}
+      ]},
+      {id:"verbal-persuasion-28", label:"28.12 Verbal Persuasion Best Practices", cards:[
+        {lo:"28.12", title:"Listen, Empathize, Ask, Paraphrase, Summarize",
+         body:"Five best practices for redirecting behavior: <b>Listen</b> (separate the real problem from its symptoms), <b>Empathize</b> (see through the other person's eyes), <b>Ask</b> (questions gain control, buy time, and show concern), <b>Paraphrase</b> (repeat back in your own words), and <b>Summarize</b> (state the resolution clearly)."},
+        {lo:"28.12", title:"Four Types of Verbal Appeal",
+         body:"<b>Ethical appeal</b> — based on your professional position, useful with upset/emotional people. <b>Rational appeal</b> — based on reasoning and common sense, valuable with people who have a strong sense of right and wrong. <b>Practical appeal</b> — based on urgent, short-term need. <b>Personal appeal</b> — based on the individual's own needs/desires, useful with headstrong people. When words and actions disagree, trust actions."}
+      ]},
+      {id:"violence-assault-calls-28", label:"28.13 Violence & Assault Calls", cards:[
+        {lo:"28.13", title:"Domestic Violence Is the Most Dangerous Call Type",
+         body:"Research shows domestic violence calls are the most dangerous for responding officers. VAWA legislation helps provide detailed guidance for assessing and responding to these calls. With two subjects giving contradicting accounts, officers cannot assume victim/suspect roles based on gender stereotypes — the goals are to establish whether the stories line up and to protect the victim while holding the right person accountable."}
+      ]},
+      {id:"professional-criteria-28", label:"28.14 Professional Use-of-Force Criteria", cards:[
+        {lo:"28.14", title:"Selective, Appropriate, Reversible, Self-Aware",
+         body:"A professional officer's use of force is <b>selective</b> (knows what kind and how much force to use) and <b>appropriate</b> (controlled and purposeful) — plus the ability to return to words and verbal strategies once the safety threat is over, and to self-evaluate and describe their own performance to superiors. Ultimately, an officer must be consciously competent to know the reasons for their actions in any given situation."}
+      ]},
+      {id:"ois-procedures-28", label:"28.15 Officer-Involved Shooting Procedures", cards:[
+        {lo:"28.15", title:"Garrity Protections & Administrative Investigations",
+         body:"Under <b>Garrity v. New Jersey</b> (1967), statements compelled during an internal administrative investigation (and information derived from them) aren't admissible in a criminal trial — which is why many departments run separate criminal and administrative investigations where charges are possible. During an administrative investigation, officers may be compelled to answer questions, sit for a line-up, or take a polygraph; if answers are intended for a criminal trial, the officer must receive the Miranda warning under CCP Art. 38.22. Civil service cities follow Local Gov't Code Ch. 143; Sheriff's Civil Service follows Ch. 158."}
+      ]},
+      {id:"excessive-force-consequences-28", label:"28.16 Consequences of Excessive Force", cards:[
+        {lo:"28.16", title:"Federal Criminal Exposure",
+         body:"Conspiracy Against Rights of Citizens (18 U.S.C. §241) and Deprivation of Rights Under Color of Law (18 U.S.C. §242) create federal criminal exposure for excessive force, alongside Texas PC §39.04 (Violations of the Civil Rights of Person in Custody). Federal civil rights complaints are investigated by the <b>FBI</b>, focused on clearly offensive, deliberate, willful misconduct — and there is <b>no good faith defense</b> for these criminal violations."}
+      ]},
+      {id:"crm-definition-28", label:"28.17–28.18 Crew Resource Management — Definition & Benefits", cards:[
+        {lo:"28.17", title:"What CRM Is",
+         body:"Crew Resource Management (CRM) is a management model giving every crew member an active voice during situations where human error can have a devastating effect — borrowed from aviation, illustrated by case studies like the 1977 Tenerife runway collision and United Flight 173's crash near Portland, Oregon."},
+        {lo:"28.18", title:"Why CRM Helps",
+         body:"CRM supports the <b>duty to intervene</b> — addressing every team member's concerns slows a scene down and lets rational thought override emotion. Crewmembers can recognize a partner's rising emotions (speaking louder, heavy breathing, flushed skin, clenched fist, threatening words) and intervene before those emotions become regrettable actions. It also fosters communication with outside resources, maintains accountability, and alleviates emotional responses — because people support what they help create."}
+      ]},
+      {id:"crm-law-enforcement-28", label:"28.19 CRM Applied to Law Enforcement", cards:[
+        {lo:"28.19", title:"The George Floyd CRM Failure",
+         body:"Body-camera footage from the George Floyd incident shows Officer Lane asking Chauvin, 'Should we roll him on his side?' and being told, 'No, he's staying put where we got him.' LTC Roger Stinson (a retired Army aviator trained in CRM) identified this as a failure of CRM between a junior officer's concern and a senior officer's dismissal of it — an example of <b>Excessive Professional Courtesy</b>, where a junior crew member's deference to a senior member's judgment can prevent the preventative action that avoids serious injury or death."},
+        {lo:"28.19", title:"Shared Responsibility on Scene",
+         body:"Despite the traditional 'my scene, my decisions' mentality, every officer present is responsible for what happens on the scene under CRM. TCOLE's model policies on Duty to Intervene/Report Excessive Force, Prohibition Against Chokeholds, and Duty to Render Aid (tied to HB 3712, 87R) formalize this. A senior officer who proceeds despite a junior officer's objection, due to time constraints, must be able to later articulate the specific errors in that objection as a training opportunity — junior officers may bring valuable outside experience from corporate negotiation, corrections, law, military, or sales."}
+      ]},
+      {id:"crm-field-28", label:"28.20 CRM in the Field", cards:[
+        {lo:"28.20", title:"Get Attention, State Concern, State Problem, Suggest Solution, Obtain Agreement",
+         body:"The field CRM sequence: get the crew member's attention with a loud, clear voice and their name/title/rank; state your concern and own your emotions about it; state the problem specifically ('It seems he is suffering from positional asphyxia'); suggest a solution while acknowledging possible objections; and obtain agreement ('Does that sound good to you?'). In time-sensitive situations, avoid personal pronouns like 'you're' — use names or titles instead, then describe the issue directly ('Danny, the suspect is approaching your right side')."}
+      ]},
+      {id:"excessive-force-factors-28", label:"28.21 Factors Courts Use to Determine Excessive Force", cards:[
+        {lo:"28.21", title:"The Reasonableness Framework, Applied",
+         body:"The <b>Fourth Amendment</b> limits force to what's reasonable. Courts evaluate the feasibility/availability of alternatives and the extent of injury inflicted. Applicable cases: <b>Tennessee v. Garner</b>, <b>Graham v. Connor</b>, and <b>Gordon v. State</b>. An agency's written directives can be used both for and against an officer — exceeding policy increases liability exposure, and following prudent procedures before deciding to use force also matters. Under <b>CCP Art. 2A.051</b>, a supervisor (and every officer) has an affirmative duty to intervene and stop excessive force witnessed in their presence — see <b>Davis v. Rennie</b> and <b>Shaw v. Stroud</b>."}
+      ]}
+    ]
   }
 ];
-for(let i=11;i<=43;i++){ if(i===13) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
+for(let i=11;i<=43;i++){ if([13,14,24,25,28].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
