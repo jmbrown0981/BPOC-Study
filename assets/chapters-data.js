@@ -1149,6 +1149,146 @@ const chapters = [
          body:"The <b>Fourth Amendment</b> limits force to what's reasonable. Courts evaluate the feasibility/availability of alternatives and the extent of injury inflicted. Applicable cases: <b>Tennessee v. Garner</b>, <b>Graham v. Connor</b>, and <b>Gordon v. State</b>. An agency's written directives can be used both for and against an officer — exceeding policy increases liability exposure, and following prudent procedures before deciding to use force also matters. Under <b>CCP Art. 2A.051</b>, a supervisor (and every officer) has an affirmative duty to intervene and stop excessive force witnessed in their presence — see <b>Davis v. Rennie</b> and <b>Shaw v. Stroud</b>."}
       ]}
     ]
+  },
+  {num:30, title:"Traumatic Brain Injury", status:"live",
+    unit:"Unit Goal: Defining a brain injury and the effects/functions of the brain, moving from knowledge to action — recognizing brain injury, communicating effectively with survivors, and understanding an officer's role in prevention, intervention, and resource facilitation.",
+    topics:[
+      {id:"brain-injury-terms", label:"30.1–30.4 Defining Brain Injury", cards:[
+        {lo:"30.1", title:"Many Terms, One Umbrella: Acquired Brain Injury",
+         body:"Brain injury goes by many names — TBI, 'knocked out,' neurological damage, abusive head trauma, stroke, brain damage, Shaken Baby Syndrome, head injury, concussion — and all of them fall under the broad umbrella term <b>Acquired Brain Injury (ABI)</b>: a brain injury that occurs after birth, is not related to a congenital or degenerative disease, and can cause temporary or permanent physical, emotional, and intellectual impairments."},
+        {lo:"30.3", title:"Traumatic vs. Non-Traumatic Brain Injury",
+         body:"A <b>Traumatic Brain Injury (TBI)</b> is caused by an external force — a blow to the head or a penetrating head injury. A <b>closed-head injury</b> keeps the skull intact; an <b>open-head injury</b> is when an object penetrates the skull and enters the brain. A <b>non-traumatic brain injury</b> is caused by an internal event rather than an external force — and it's just as serious and life-altering as a TBI. Both are types of acquired brain injury."}
+      ]},
+      {id:"tbi-causes", label:"30.5, 30.7 & 30.9 Causes, Traumatic and Non-Traumatic", cards:[
+        {lo:"30.7", title:"Causes of Traumatic Brain Injury",
+         body:"Falls (from heights or small slips/tumbles), being struck by or against something (falling debris, vehicles, violence), motor vehicle crashes, violence (domestic, gang, assault, shaken baby syndrome), explosion/blast injury (military, civilians, journalists), and concussion (sports, motor vehicle crashes)."},
+        {lo:"30.9", title:"Causes of Non-Traumatic Brain Injury",
+         body:"Stroke; infection (meningitis, encephalitis); anoxia/hypoxia (no or too little oxygen reaching the brain — near drowning, asphyxiation, strangulation, aspiration); brain tumors; aneurysm; exposure to toxins (cleaning products, pesticides, PCB's, arsenic, ethanol, toluene); and drug-induced injury (cocaine, methamphetamines, inhalants, MDMA)."}
+      ]},
+      {id:"prevalence-30", label:"30.6 Prevalence", cards:[
+        {lo:"30.6", title:"How Common Is a Brain Injury?",
+         body:"TBI is the leading cause of death and disability in children and adults. Over <b>2.2 million</b> people sustain a TBI in the U.S. each year — over <b>144,000</b> of them in Texas. The number of people diagnosed with a brain injury each year exceeds the combined number diagnosed with Alzheimer's, breast cancer, HIV/AIDS, prostate cancer, lung cancer, and ALS. That doesn't even count other brain injuries like stroke (800,000/year in the U.S.), and the number of people who go undiagnosed, misdiagnosed, or untreated is incalculable."}
+      ]},
+      {id:"tbi-percentages", label:"30.8 Leading Causes of TBI, by Percentage", cards:[
+        {lo:"30.8", title:"The Pie Chart Breakdown",
+         body:"Falls — 40%. Struck by/against something — 16%. Motor vehicle crashes — 14%. Assaults — 11%. Other/Unknown — 19%."}
+      ]},
+      {id:"risk-populations", label:"30.10–30.11 Populations at Risk & the Reality of Brain Injury", cards:[
+        {lo:"30.10", title:"Populations at Higher Risk",
+         body:"<ul><li>Children ages 0-4 and adolescents ages 16-19 — most likely to have a TBI-related ED visit or hospitalization</li><li>Older adults age 75+ — highest rates of TBI-related hospitalizations and deaths of any age group</li><li>Domestic violence survivors — estimated TBI prevalence over 35%</li><li>Athletes — over 1.6 million sports/recreation concussions each year in the U.S.</li><li>Adult and juvenile offenders — estimated TBI prevalence of 60.3% in imprisoned populations</li><li>Homeless populations — estimated TBI prevalence between 30% and 40%</li><li>Veterans — 10 to 20% of Iraq veterans/service members estimated to have some level of brain injury</li></ul>"},
+        {lo:"30.11", title:"It Can Happen to Anyone",
+         body:"No one plans to have a brain injury — they often come as a complete shock. People sustain brain injuries while riding in a car, sitting at a desk, playing their favorite sport, and other ordinary activities. While some populations carry higher risk, a brain injury can happen to anyone, anywhere, at any time."}
+      ]},
+      {id:"historical-figures", label:"30.12 Historical & Public Figures", cards:[
+        {lo:"30.12", title:"Notable Brain Injury Survivors",
+         body:"<b>Harriet Tubman</b> — TBI from being struck by a heavy metal weight; suffered epilepsy, headaches, and sleeping spells. <b>Phineas Gage</b> — the first recorded neurological patient, sustained a TBI when an iron rod penetrated his skull. <b>Abraham Lincoln</b> — TBI from being kicked in the head by a mule; suffered depression throughout his life. <b>Charles Dickens</b> — died from a stroke at age 58. Public figures include Tracy Morgan and Stevie Wonder (car crashes), Gabby Giffords (gunshot wound), Natasha Richardson (ski accident), and Bob Woodruff (blast injury)."}
+      ]},
+      {id:"severity-30", label:"30.13–30.14 Severity Classification & the Significance of \"Mild\"", cards:[
+        {lo:"30.13", title:"Classifying Severity: Mild, Moderate, Severe",
+         body:"Severity is generally assessed using four factors: <b>confusion/disorientation</b>, <b>loss of consciousness</b> (which doesn't always occur), <b>memory loss</b>, and <b>MRI/CT/imaging</b>. Imaging can come back normal or abnormal at any severity level — certain chemical and physical reactions aren't picked up by these tests, so imaging alone shouldn't be the only factor used to diagnose a brain injury."},
+        {lo:"30.14", title:"\"Mild\" Doesn't Mean Minor",
+         body:"75% of TBIs seen are classified as mild — but the label is deceptive. A person can look 'normal' and feel 'fine' while still having changes that can't be seen, and mild injuries are often unrecognized and undiagnosed. A 'mild' brain injury can have consequences just as severe as a 'severe' one, and multiple mild injuries can exponentially increase the consequences — even leading to death. All brain injuries need to be taken seriously."}
+      ]},
+      {id:"brain-functions", label:"30.15 Functions of the Brain", cards:[
+        {lo:"30.15", title:"What the Brain Controls",
+         body:"The brain is the control center for physical, emotional, and cognitive activity. When a specific area is injured, the functions tied to that area are affected — for example, the frontal lobe governs attention, decision making, social behavior, concentration, personality, memory, emotions, planning, problem solving, and impulse control. A brain injury often affects multiple parts of the brain at once; <b>diffuse axonal injuries</b> can damage cells throughout the brain."}
+      ]},
+      {id:"three-categories-change", label:"30.16 Three Categories of Change", cards:[
+        {lo:"30.16", title:"Cognitive, Emotional/Behavioral, and Physical Changes",
+         body:"<b>Cognitive:</b> difficulty with memory, personality change, lack of concentration, delayed thinking, reckless decision-making, difficulty communicating/understanding. <b>Emotional/Behavioral:</b> irritability, aggression, anxiety/depression, mood swings, inappropriate social behavior, impulsivity. <b>Physical:</b> poor balance, impaired fine motor skills, impaired hearing/vision, persistent talking or inability to speak, slurred speech, muscle tremors, chronic headaches, incontinence, seizures."},
+        {lo:"30.16", title:"Comorbidities & Individual Variation",
+         body:"A <b>comorbidity</b> is two or more simultaneously present chronic conditions — common ones paired with brain injury include substance use/abuse, sleep problems, depression/suicidality, epilepsy, neurodegenerative disease, and fatigue. Not everyone experiences the same changes: some experience none, some a few, some many; changes range from mild to severe; and many people don't realize the changes they're experiencing have a cause. Overstimulation, being upset, or anxiety can increase how visibly these changes show up."}
+      ]},
+      {id:"recovery-30", label:"30.17 The Recovery Process", cards:[
+        {lo:"30.17", title:"Recovery Is an Ongoing Process",
+         body:"Unlike a broken bone, which heals through a relatively quick process with a clear endpoint, brain injury recovery is ongoing and changing — it's more accurate to think of a brain injury as a <b>chronic condition</b>. Some survivors feel they've returned to 'normal'; others have to learn their 'new normal,' including limitations and adaptations. Recovery differs for everyone."}
+      ]},
+      {id:"first-responder-contexts", label:"30.18 Health Issues First Responders Encounter", cards:[
+        {lo:"30.18", title:"Where First Responders Encounter Brain Injury",
+         body:"Domestic violence, elderly falls, public intoxication, strokes, heart attacks, juvenile misconduct, drug activity, assault, suspicious person/activity, child abuse and neglect, trauma, DWIs, motor vehicle accidents, mental health concerns, welfare concerns, and suicide attempts/completions are all situations where an officer may be interacting with someone affected by a brain injury. Per the World Health Organization, health is 'a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity' — and an officer has real impact on all three."}
+      ]},
+      {id:"prevention-children-elderly", label:"30.19–30.20 Prevention in Children & Older Adults", cards:[
+        {lo:"30.19", title:"Preventing Brain Injury in Children",
+         body:"Clear clutter from stairs/floors, secure area rugs, install window guards, use nonslip bathtub mats, use safety gates at stairs, never leave children unattended near water, teach swimming (as early as age 1), and use shock-absorbing playground surfaces. The <b>Period of PURPLE Crying</b> is an evidence-based approach to preventing abusive head trauma (Shaken Baby Syndrome) through caregiver education. <b>Natasha's Law</b> (Texas Education Code Ch. 38) mandates concussion-management training for coaches/trainers at school and UIL athletic activities, including removal-from-play and return-to-play protocols."},
+        {lo:"30.20", title:"Preventing Brain Injury in Older Adults",
+         body:"Remove tripping hazards, use nonslip bathtub mats, install grab bars and handrails on both sides of stairways, improve lighting, and maintain regular physical activity. <b>'A Matter of Balance'</b> is an evidence-based program aimed at preventing older-adult falls. Stroke prevention overlaps here too: a healthy diet, healthy weight, regular exercise, not smoking, and limiting alcohol."}
+      ]},
+      {id:"prevention-mvc-helmets", label:"30.21–30.22 Preventing Brain Injury in Vehicles & Sports", cards:[
+        {lo:"30.21", title:"Motor Vehicles & Helmets",
+         body:"In a vehicle: always wear a seat belt, never drive (or ride with someone driving) while intoxicated, never drive distracted (phone, eating, makeup), and use age/weight/height-appropriate child safety seats. A properly fitted helmet should be worn for skiing/snowboarding, skateboarding, baseball, contact sports (football, hockey), and riding a motorcycle, bike, ATV, horse, or scooter."}
+      ]},
+      {id:"signs-symptoms-30", label:"30.23 Signs & Symptoms", cards:[
+        {lo:"30.23", title:"Signs & Symptoms Requiring Immediate ER Care",
+         body:"Confusion or disorientation, loss of consciousness, severe headache, nausea or vomiting, dizziness, blood or clear fluid draining from the nose or ears, weakness/numbness/tingling in the limbs, trouble walking, slurred speech or vision, and seizures. Symptoms can appear immediately or may not show up for days, weeks, or even months — encourage continued monitoring."},
+        {lo:"30.23", title:"FAST — Recognizing a Stroke",
+         body:"<b>F</b>ace — does one side droop or feel numb? Ask the person to smile and check for unevenness. <b>A</b>rm — is one arm weak or numb? Ask them to raise both arms and watch for downward drift. <b>S</b>peech — is it slurred, or hard to understand? Ask them to repeat a simple sentence. <b>T</b>ime — call 9-1-1 immediately if any of these symptoms appear, even if they go away, and note the time symptoms started."}
+      ]},
+      {id:"case-studies-30", label:"30.24 Case Studies", cards:[
+        {lo:"30.24", title:"Two Illustrative Case Studies",
+         body:"<b>Marni</b> was in a car crash, appeared confused and shaky, and declined EMS transport to the hospital. Months later she was still struggling at work; she wasn't diagnosed with a brain injury until six months after the crash, and has since been unemployed for two years despite improvement through therapy. <b>Officer Ortega</b> saw an older adult slip and fall with no visible signs or symptoms — he still encouraged them to monitor for symptoms and left them with a handout. Both cases underline that encouraging evaluation and sharing information matters, whether or not someone shows immediate symptoms or accepts care."}
+      ]},
+      {id:"communication-techniques-30", label:"30.25–30.26 Communication Techniques", cards:[
+        {lo:"30.25", title:"Creating a Safe, Positive Communication Environment",
+         body:"Explain limits and rules; be encouraging, respectful, and patient; use a positive or neutral tone; stay calm even with inappropriate behavior; and focus on the person's message, not how it was delivered. <b>Don't:</b> threaten, interrupt, argue, challenge, shame, use a condescending tone, finish their sentences, speak harshly or loudly, or treat the interaction as a competition — these read as aggression, which increases anxiety and stress, which can worsen symptoms."},
+        {lo:"30.26", title:"Accommodating, Collaborating & Why It Matters",
+         body:"Reduce distractions, confirm you have their attention, speak slowly/simply/clearly, focus on one subject at a time, use active listening, and give feedback by paraphrasing. Some brain injury survivors carry a wallet-size emergency contact card. Appropriate communication keeps the officer and individual safe, prevents or resolves conflict, and provides high-quality assistance — while asking directly whether someone has ever had a brain injury can be invasive for some, welcomed by others, and unanswerable for those who don't know themselves. It's not an officer's job to diagnose the cause — just to stop and consider the possibility."}
+      ]},
+      {id:"unmet-needs-resources", label:"30.27–30.28 Unmet Needs & Resources", cards:[
+        {lo:"30.27", title:"Unmet Needs (Maslow's Hierarchy)",
+         body:"<ul><li><b>Physiological</b> — water, food, air, clothing, shelter, health care</li><li><b>Safety</b> — personal, physical, financial, career</li><li><b>Belongingness and love</b> — friendship, intimacy, family</li><li><b>Esteem</b> — self-esteem, self-respect, confidence, independence</li><li><b>Self-actualization</b> — realizing one's potential</li><li><b>Self-transcendence</b> — life being meaningful, giving oneself to a higher goal (altruism, spirituality)</li></ul>"},
+        {lo:"30.28", title:"Where to Refer People",
+         body:"For brain injury-specific resources: the <b>Office of Acquired Brain Injury (OABI)</b> — OABI@hhsc.state.tx.us. For other resources: <b>2-1-1 Texas</b> — dial 2-1-1."}
+      ]},
+      {id:"officer-impact-30", label:"30.29 An Officer's Impact", cards:[
+        {lo:"30.29", title:"Four Ways an Officer Can Have a Positive Impact",
+         body:"<b>Prevention, Intervention, Communication, and Resource Facilitation.</b> The Office of Acquired Brain Injury (OABI) is Texas' premier resource for education, awareness, prevention, and service referral/coordination regarding brain injury, serving survivors, veterans/service members, and partner agencies. An officer has a genuine, daily impact on the physical, mental, and social well-being of the people they interact with — and that impact can be profoundly positive."}
+      ]}
+    ]
+  },
+  {num:37, title:"Civilian Interaction Training", status:"live",
+    unit:"Unit Goal: History and training requirements of the Community Safety Education Act, the role and duties of peace officers, proper civilian behavior during a traffic stop, and how traffic stops are recorded.",
+    topics:[
+      {id:"sb30-history", label:"37.1 Community Safety Education Act (SB 30)", cards:[
+        {lo:"37.1", title:"What SB 30 Does",
+         body:"Senate Bill 30, the <b>Community Safety Education Act</b>, passed the 85th Texas Legislature (Regular Session) in 2017. Its goal is to inform drivers, the public, students, and law enforcement about the expectations each should have during an officer-motorist contact — including instructions to drivers on how to react and communicate during a traffic stop, built into new-officer training, veteran continuing education, and high school/driver-education curricula alike."}
+      ]},
+      {id:"training-requirements-37", label:"37.2 Required Law Enforcement Training", cards:[
+        {lo:"37.2", title:"The Civilian Interaction Training Program", cite:"Occupations Code §1701.268",
+         body:"SB 30 amended <b>Occupations Code §1701.268</b>, requiring TCOLE and the State Board of Education to jointly develop a training program (via memorandum of understanding) covering: the role and duties of peace officers; a person's rights in interactions with officers; proper civilian/officer behavior; laws on questioning/detention (including ID requirements and consequences); and how/where to file a complaint or compliment. The agencies may consult interested parties and must allow public comment before finalizing the program."},
+        {lo:"37.2", title:"Completion Deadlines",
+         body:"A newly licensed officer must complete Civilian Interaction Training no later than the <b>second anniversary</b> of their licensing date, unless it's completed as part of basic training. Officers licensed on or before January 1, 2018 had to complete the training by <b>January 1, 2020</b>."}
+      ]},
+      {id:"seven-step-method", label:"37.3 The Seven Step Violator Contact Method", cards:[
+        {lo:"37.3", title:"Steps One Through Four",
+         body:"<b>1. Greeting and identification of the agency</b> — a natural, courteous greeting that puts the subject at ease. <b>2. Statement of violation</b> — tell the driver at once why they were stopped, in statements rather than questions (with a narrow exception for asking about a reason for excessive speed). <b>3. Identification of driver and vehicle</b> — request a license, have the violator remove it themselves from a wallet/purse, and compare its description to the person. <b>4. Statement of action to be taken</b> — a firm, calm, unambiguous statement of what will happen, favoring 'you' over 'I' so the focus stays on the violation, not the officer's action."},
+        {lo:"37.3", title:"Steps Five Through Seven",
+         body:"<b>5. Take that action</b> — write the citation, make the arrest, or deliver the warning as decided. <b>6. Explain what the violator must do</b> — a short, clear explanation (court date, location, magistrate) reduces uncertainty and missed appearances, since the violator isn't as familiar with the process as the officer. <b>7. Leave</b> — as firm and impersonal as the approach, without gloating; a sincere, business-like parting comment, letting the driver know they're free to go."},
+        {lo:"37.3", title:"Why This Method Matters Now",
+         body:"The Seven Step method, already required in TCOLE-licensed Basic Peace Officer Courses, is now also taught to Texas high school students and driver's ed/safety course students under SB 30 — meaning citizens increasingly expect officers to actually use it, raising the stakes for consistent execution."}
+      ]},
+      {id:"officer-demeanor-37", label:"37.4 Officer Demeanor Expectations", cards:[
+        {lo:"37.4", title:"Dignity, Courtesy & Consent",
+         body:"Officers should treat motorists with dignity and respect — most stops are simple business transactions, and citizens reasonably expect fair, courteous treatment. State law doesn't require an officer to give their name/badge number (though agency policy might, and citations usually include it already). When seeking consent to search, officers should get clear, voluntary consent — ideally a signed statement or recorded affirmation — and the consenting person must stay present and able to withdraw consent at any time. It's not legally required, but recommended, to tell a driver/passenger when they're free to go, since many are nervous and unsure during a stop."}
+      ]},
+      {id:"tension-sources", label:"37.5 Uncertainty & Ignorance as Sources of Tension", cards:[
+        {lo:"37.5", title:"Where Traffic Stop Tension Comes From",
+         body:"Tension often traces back to officer uncertainty and driver ignorance — a driver rummaging for documents can trigger safety concerns and gruff commands, which the driver may not understand, leading to a needlessly confrontational stop. Because Texas drivers historically got little or inconsistent training on how to behave during a stop, SB 30 standardizes what both drivers and officers are taught to expect from each other."}
+      ]},
+      {id:"civilian-behavior-37", label:"37.6 How Civilians Are Taught to Act", cards:[
+        {lo:"37.6", title:"Pulling Over Safely", cite:"Texas Drivers Handbook",
+         body:"Per the Texas Drivers Handbook: slow down and move right, park as far right as possible (shoulder or a well-lit side street/lot if needed), put the vehicle in park, set the brake, turn off the engine, activate hazards (and the interior dome light at night), stay in the car with hands visible on the wheel, and wait for instructions — informing the officer before reaching for documents in a glove box or under a seat."},
+        {lo:"37.6", title:"Obligations, Responsibilities & Safety",
+         body:"Drivers must stop immediately for an emergency vehicle or risk arrest — but if the location feels unsafe or the vehicle's legitimacy is in doubt, a driver can turn on hazards and drive slowly below the speed limit, call 9-1-1 and stay on the line, or head to a well-lit, populated spot (jurisdictions overlap, so 9-1-1 may not instantly confirm who's behind them). Drivers/passengers shouldn't exit the vehicle unasked (it can read as a threat) or dig for documents before the officer approaches; handguns should be stored separately from license/insurance paperwork."},
+        {lo:"37.6", title:"Rights During the Stop",
+         body:"A traffic stop is an <b>investigative detention</b>, limited to a reasonable time. A person can't be punished for refusing to answer questions, but a driver must display a license on request, and — if lawfully arrested — must give their name, address, and date of birth. Giving a false name to an officer who has lawfully arrested/detained you is the <b>False Identification Offense</b>; intentionally fleeing a peace officer is <b>Evading Arrest or Detention</b> (with enhanced penalties for using a vehicle/watercraft or causing injury). An officer can search without consent given probable cause of evidence of a crime, or pat down for a reasonably suspected weapon — physically resisting a search is unlawful, but stating non-consent is always allowed."},
+        {lo:"37.6", title:"Complaints & Contesting a Citation", cite:"Sandra Bland Act, CCP Art. 2.132",
+         body:"A person who believes an officer acted inappropriately should report it to the officer's superiors through the agency's complaint process. The <b>Sandra Bland Act</b> (SB 1849, amending CCP Art. 2.132) requires agencies to publish complaint/compliment contact information with every ticket, citation, or warning. Signing a citation isn't admitting guilt — it just confirms a promise to pay the fine or contact the court; disputing the charge means arguing it before a judge or requesting a jury trial."}
+      ]},
+      {id:"recording-stops", label:"37.7 Recording Traffic Stops", cards:[
+        {lo:"37.7", title:"Everyone's Cameras Are Rolling",
+         body:"Most stops are recorded by officers via body-worn or in-car cameras. Texas citizens also have the right to record almost any transaction they're part of or witnessing — including traffic stops — and a bystander may legally record an officer's interactions with the public. The one limit: a recording citizen can't physically interfere with an officer's duties (like standing between an officer and someone being searched or arrested); officers may reasonably ask a recording bystander to stand at a safe distance or leave an active crime scene to preserve its integrity."}
+      ]}
+    ]
   }
 ];
-for(let i=11;i<=43;i++){ if([13,14,24,25,28].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
+for(let i=11;i<=43;i++){ if([13,14,24,25,28,30,37].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
