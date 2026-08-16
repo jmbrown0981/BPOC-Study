@@ -1,0 +1,88 @@
+HEALTH AND SAFETY CODE
+TITLE 2. HEALTH
+SUBTITLE H. PUBLIC HEALTH PROVISIONS
+CHAPTER 174. SECURITY OF GENETIC INFORMATION
+
+      Sec. 174.001.  SHORT TITLE.  This chapter may be cited as the Texas Genomic Act of 2025.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.002.  DEFINITIONS.  In this chapter:
+            (1)  "Company" means a sole proprietorship, organization, association, corporation, partnership, joint venture, limited partnership, limited liability partnership, or limited liability company that exists to make a profit. The term includes a wholly owned subsidiary, majority-owned subsidiary, parent company, or affiliate of those entities or business associations.
+            (2)  "Domicile" means the country in which:
+                  (A)  a company or nonprofit organization is formed, incorporated, or registered and headquartered;
+                  (B)  a company's or nonprofit organization's affairs are primarily conducted; or
+                  (C)  the majority of the company's ownership shares are held.
+            (3)  "Foreign adversary" has the meaning assigned by 15 C.F.R. Section 791.4(a).
+            (4)  "Genome sequencer" means any device or platform used to conduct genome sequencing, resequencing, or isolation or other genome research.
+            (5)  "Genome sequencing" means any method used to determine the identity and order of nucleotide bases in the human genome. 
+            (6)  "Human genome" means the set of DNA found in human cells.
+            (7)  "Medical facility" means a facility licensed or registered by a state or federal agency to provide health care services that receives any state funding, including pass-through federal money provided to a state agency for grant awards.
+            (8)  "Software" means computer programs and related equipment used for genome sequencing or the operation, control, analysis, research, or other functions of genome sequencers.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.003.  APPLICABILITY.  This chapter applies to a medical facility, research facility, company, or nonprofit organization that conducts research on or testing of genome sequencing or the human genome in this state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.004.  PURPOSE AND LEGISLATIVE POLICY.  (a)  The purpose of this chapter is to ensure that a medical facility, research facility, company, or nonprofit organization subject to this chapter does not provide a foreign adversary access to the genetic information of residents of this state.
+      (b)  The policy of this state is to:
+            (1)  oppose the collection and analysis of genomic information by a foreign adversary or for use by a foreign adversary; and
+            (2)  support sanctions the United States Department of Commerce or the United States Department of Defense imposes on a medical facility, research facility, company, or nonprofit organization engaged in the collection and analysis of genomic information for use by a foreign adversary.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.005.  PROHIBITED USE OF CERTAIN GENOME SEQUENCERS AND GENOME SEQUENCING TECHNOLOGIES.  A medical facility, research facility, company, or nonprofit organization subject to this chapter may not use a genome sequencer or software produced by or on behalf of:
+            (1)  a foreign adversary;
+            (2)  a state-owned enterprise of a foreign adversary;
+            (3)  a company or nonprofit organization domiciled within the borders of a country that is a foreign adversary; or
+            (4)  an owned or controlled subsidiary or affiliate of a company or nonprofit organization domiciled within the borders of a country that is a foreign adversary.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.006.  PROHIBITED SALE OF GENOMIC INFORMATION IN BANKRUPTCY OR REORGANIZATION.  A medical facility, research facility, company, or nonprofit organization subject to this chapter may not sell or otherwise transfer genomic sequencing data of residents of this state as part of a bankruptcy proceeding or pursuant to a plan of reorganization under Chapter 11 of the United States Bankruptcy Code (11 U.S.C. Section 1101 et seq.) to:
+            (1)  a foreign adversary;
+            (2)  a state-owned enterprise of a foreign adversary;
+            (3)  a company or nonprofit organization domiciled within the borders of a country that is a foreign adversary; or
+            (4)  an owned or controlled subsidiary or affiliate of a company or nonprofit organization domiciled within the borders of a country that is a foreign adversary.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.007.  REQUIREMENTS FOR GENOMIC INFORMATION STORAGE.  (a)  A medical facility, research facility, company, or nonprofit organization subject to this chapter may not store any genome sequencing data of a resident of this state at a location within the borders of a country that is a foreign adversary.
+      (b)  A medical facility, research facility, company, or nonprofit organization subject to this chapter that stores genome sequencing data of residents of this state, including storage of genome sequencing data through a contract with a third-party data storage company, shall ensure the security of the genome sequencing data using reasonable encryption methods, restriction on access, and other cybersecurity best practices.
+      (c)  A medical facility, research facility, company, or nonprofit organization subject to this chapter shall ensure genome sequencing data of residents of this state, other than open data, is inaccessible to any person located within the borders of a country that is a foreign adversary.
+      (d)  This section does not apply to the storage of genome sequencing data by a medical facility, research facility, company, or nonprofit organization subject to this chapter that is collected as part of a clinical trial or other biomedical research study subject to, or conducted in accordance with, 28 C.F.R. Part 202.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.008.  REQUIRED ANNUAL CERTIFICATION OF COMPLIANCE.  (a)  Not later than December 31 of each year, a medical facility, research facility, company, or nonprofit organization subject to this chapter shall certify to the attorney general that the facility, company, or organization is in compliance with this chapter.
+      (b)  An attorney representing a medical facility, research facility, company, or nonprofit organization subject to this chapter shall submit the certification required under Subsection (a).
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.009.  INVESTIGATIVE AUTHORITY OF ATTORNEY GENERAL.  (a)  The attorney general may investigate an allegation of a violation of this chapter.
+      (b)  Any person may notify the attorney general of a violation or potential violation of this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.010.  CIVIL PENALTY.  (a)  A medical facility, research facility, company, or nonprofit organization that violates this chapter is liable to this state for a civil penalty of $10,000 for each violation.
+      (b)  The attorney general may bring an action to recover the civil penalty imposed under this section.
+      (c)  An action under this section may be brought in a district court in:
+            (1)  Travis County; or
+            (2)  a county in which any part of the violation occurs.
+      (d)  The attorney general shall deposit a civil penalty collected under this section in the state treasury to the credit of the general revenue fund.
+      (e)  The attorney general may recover reasonable expenses incurred in obtaining a civil penalty under this section, including court costs, reasonable attorney's fees, investigative costs, witness fees, and deposition expenses.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+      Sec. 174.011.  PRIVATE CAUSE OF ACTION.  (a)  A resident of this state who is a patient or research subject of a medical facility, research facility, company, or nonprofit organization subject to this chapter and who is harmed by the storage or use of the patient's or subject's genome sequencing data in violation of this chapter may bring an action against the facility, company, or organization that violated this chapter and is entitled to obtain:
+            (1)  the greater of: 
+                  (A)  actual damages; or
+                  (B)  statutory damages in an amount not to exceed $5,000 for each violation; and
+            (2)  court costs and reasonable attorney's fees.
+      (b)  An action under this section may be brought in the county in which the plaintiff resides.
+      (c)  Sections 41.003 and 41.004, Civil Practice and Remedies Code, do not apply to an action brought under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 368 (H.B. 130), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
