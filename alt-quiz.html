@@ -47,6 +47,22 @@
   .filter-chip{font-family:'IBM Plex Sans',sans-serif; font-size:11.5px; font-weight:600; padding:5px 11px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer;}
   .filter-chip.active{background:var(--brass); border-color:var(--brass); color:#221F19;}
 
+  .wp-toggle-btn{font-family:'IBM Plex Mono',monospace; font-size:10.5px; background:none; border:1px solid var(--rule); border-radius:999px; padding:4px 10px; cursor:pointer; color:var(--ink-soft); white-space:nowrap;}
+  .wp-toggle-btn:hover{border-color:var(--brass); color:var(--ink);}
+  .weight-panel{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 18px 6px; margin-top:14px;}
+  .weight-panel h3{font-family:'IBM Plex Serif',serif; font-size:15px; margin:0 0 4px;}
+  .weight-panel .wp-note{font-size:11.5px; color:var(--ink-soft); line-height:1.55; margin:0 0 12px;}
+  .weight-panel .wp-note code{font-family:'IBM Plex Mono',monospace; background:var(--paper-dim); padding:1px 5px; border-radius:4px;}
+  .weight-row{display:flex; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--rule);}
+  .weight-row:first-of-type{border-top:none;}
+  .weight-row .wr-info{flex:1; min-width:0;}
+  .weight-row .wr-title{font-size:12.5px; color:var(--ink); font-weight:600;}
+  .weight-row .wr-meta{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray); margin-top:2px;}
+  .weight-row input[type=number]{width:64px; padding:6px 8px; border-radius:6px; border:1px solid var(--rule); font-family:'IBM Plex Mono',monospace; font-size:13px; text-align:right; background:#fff; color:var(--ink);}
+  .weight-row input[type=number].overridden{border-color:var(--brass); background:rgba(176,139,60,0.08);}
+  .weight-row .wr-reset{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gray); text-decoration:underline; cursor:pointer; white-space:nowrap; background:none; border:none; padding:0;}
+  .wp-actions{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0 4px; border-top:1px solid var(--rule); margin-top:4px;}
+
   .quiz-status{display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:6px;}
   .timer{font-weight:700; color:var(--rust);}
   .timer.low{animation:pulse 1s infinite;}
@@ -169,6 +185,12 @@ let selectedClassIdx = null;
 let examMode = false;
 let examPool = [];
 let examBreakdown = [];
+let examConfig = null;         // raw config loaded from exam-weights.json, cached after first fetch
+let examParsedByBank = null;   // cached parsed questions per bank, so weight tweaks don't re-fetch everything
+let weightPanelOpen = false;
+
+const WEIGHT_OVERRIDES_KEY = 'altquiz_weight_overrides_v1';
+const TOTAL_OVERRIDE_KEY = 'altquiz_total_override_v1';
 
 /* ---------- markdown bank parser ---------- */
 
@@ -297,25 +319,89 @@ function allocateCounts(bankCounts, weights, defaultWeight, target){
   return pool;
 }
 
+/* ---------- full exam: local weight overrides (per-browser, no repo commit needed) ---------- */
+// Lets a visitor tune exam-weights.json's weights from the Full Practice Exam screen itself.
+// Overrides live only in this browser's localStorage and are merged on top of the checked-in
+// exam-weights.json at read time -- the file on disk/GitHub is never touched.
+
+function loadOverrides(){
+  try{
+    const raw = JSON.parse(localStorage.getItem(WEIGHT_OVERRIDES_KEY) || '{}');
+    return (raw && typeof raw === 'object') ? raw : {};
+  }catch(err){ return {}; }
+}
+function saveOverrides(o){
+  localStorage.setItem(WEIGHT_OVERRIDES_KEY, JSON.stringify(o));
+}
+function setWeightOverride(key, value){
+  const o = loadOverrides();
+  if(value === null || value === undefined || Number.isNaN(value)){
+    delete o[key];
+  }else{
+    o[key] = Math.max(0, value);
+  }
+  saveOverrides(o);
+}
+function loadTotalOverride(){
+  const v = localStorage.getItem(TOTAL_OVERRIDE_KEY);
+  if(v === null) return null;
+  const n = Number(v);
+  return (Number.isFinite(n) && n > 0) ? n : null;
+}
+function setTotalOverride(value){
+  if(value === null || value === undefined || !Number.isFinite(value) || value <= 0){
+    localStorage.removeItem(TOTAL_OVERRIDE_KEY);
+  }else{
+    localStorage.setItem(TOTAL_OVERRIDE_KEY, String(value));
+  }
+}
+function clearAllOverrides(){
+  localStorage.removeItem(WEIGHT_OVERRIDES_KEY);
+  localStorage.removeItem(TOTAL_OVERRIDE_KEY);
+}
+function hasCustomWeights(){
+  return Object.keys(loadOverrides()).length > 0 || loadTotalOverride() !== null;
+}
+// Merges the checked-in exam-weights.json with this browser's local overrides.
+function effectiveConfig(){
+  const base = examConfig || {totalQuestions: 250, defaultWeight: 1, weights: {}};
+  const overrides = loadOverrides();
+  const totalOverride = loadTotalOverride();
+  return {
+    totalQuestions: totalOverride !== null ? totalOverride : (base.totalQuestions ?? 250),
+    defaultWeight: base.defaultWeight ?? 1,
+    weights: Object.assign({}, base.weights || {}, overrides),
+    overrides,
+    totalOverride,
+    hasOverrides: Object.keys(overrides).length > 0 || totalOverride !== null
+  };
+}
+
 async function startFullExam(){
   examMode = true;
   activeChapter = FULL_EXAM_CHAPTER;
   activeTag = 'All';
   renderChapterChips();
   const main = document.getElementById('main');
+
+  if(examConfig && examParsedByBank){
+    recomputeExamPool();
+    renderExamSetup();
+    return;
+  }
+
   main.innerHTML = `<div class="setup-box"><h2>Assembling Full Practice Exam&hellip;</h2><p>Fetching ${ALT_QUIZ_CHAPTERS.length} question banks and the weight config.</p></div>`;
 
-  let config = {totalQuestions: 250, defaultWeight: 1, weights: {}};
+  examConfig = {totalQuestions: 250, defaultWeight: 1, weights: {}};
   try{
     const res = await fetch(EXAM_WEIGHTS_FILE, {cache:'no-store'});
-    if(res.ok) config = Object.assign(config, await res.json());
+    if(res.ok) examConfig = Object.assign(examConfig, await res.json());
   }catch(err){
     console.warn('Could not load exam-weights.json, using equal-weight defaults.', err);
   }
 
-  let parsedByBank;
   try{
-    parsedByBank = await Promise.all(ALT_QUIZ_CHAPTERS.map(async ch => {
+    examParsedByBank = await Promise.all(ALT_QUIZ_CHAPTERS.map(async ch => {
       const res = await fetch(ch.file, {cache:'no-store'});
       if(!res.ok) throw new Error(`${ch.file}: HTTP ${res.status}`);
       const text = await res.text();
@@ -323,16 +409,26 @@ async function startFullExam(){
       return {key: ch.key, title: ch.short || ('Ch ' + ch.num), fullTitle: ch.title, questions: parsed};
     }));
   }catch(err){
+    examConfig = null;
     main.innerHTML = `<div class="load-error"><b>Couldn't assemble the full exam.</b><br>${escapeHtml(String(err.message||err))}<br><br>If you're viewing this file directly (file://) rather than through a web server or GitHub Pages, your browser may block the fetch. Try running a local server (e.g. <code>python3 -m http.server</code>) or use the live site.</div>`;
     return;
   }
 
-  const bankCounts = parsedByBank.map(b => ({key: b.key, count: b.questions.length}));
+  recomputeExamPool();
+  renderExamSetup();
+}
+
+// Rebuilds examPool/examBreakdown from the already-fetched banks using the current
+// effective (file + local-override) weights. Cheap -- no network calls -- so it's safe
+// to call on every weight-panel edit.
+function recomputeExamPool(){
+  const config = effectiveConfig();
+  const bankCounts = examParsedByBank.map(b => ({key: b.key, count: b.questions.length}));
   const allocation = allocateCounts(bankCounts, config.weights || {}, config.defaultWeight ?? 1, config.totalQuestions ?? 250);
 
   examPool = [];
   examBreakdown = [];
-  parsedByBank.forEach(b => {
+  examParsedByBank.forEach(b => {
     const a = allocation.find(x => x.key === b.key);
     const n = a ? a.alloc : 0;
     if(n > 0){
@@ -342,19 +438,90 @@ async function startFullExam(){
     examBreakdown.push({key: b.key, title: b.title, fullTitle: b.fullTitle, weight: a ? a.weight : 0, available: b.questions.length, pulled: n});
   });
   examPool = shuffle(examPool);
-
-  renderExamSetup(config);
 }
 
-function renderExamSetup(config){
+function renderWeightPanelHtml(config){
+  const fileDefaultTotal = (examConfig && examConfig.totalQuestions) || 250;
+  const rows = examParsedByBank.map(b => {
+    const w = config.weights[b.key] !== undefined ? config.weights[b.key] : config.defaultWeight;
+    const isOverridden = config.overrides[b.key] !== undefined;
+    return `
+      <div class="weight-row">
+        <div class="wr-info">
+          <div class="wr-title">${escapeHtml(b.fullTitle)}</div>
+          <div class="wr-meta">${b.questions.length} available</div>
+        </div>
+        ${isOverridden ? `<button class="wr-reset" data-reset-key="${b.key}" type="button">reset</button>` : ''}
+        <input type="number" min="0" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${w}">
+      </div>`;
+  }).join('');
+  return `
+    <div class="weight-panel">
+      <h3>Customize exam weights</h3>
+      <p class="wp-note">Tune how heavily each bank gets pulled into the Full Practice Exam. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Set a bank to weight 0 to exclude it entirely. Clear your browser data or hit "Reset all" below to go back to the file's defaults.</p>
+      <div class="weight-row">
+        <div class="wr-info">
+          <div class="wr-title">Target total questions</div>
+          <div class="wr-meta">file default: ${fileDefaultTotal}</div>
+        </div>
+        ${config.totalOverride !== null ? `<button class="wr-reset" data-reset-total="1" type="button">reset</button>` : ''}
+        <input type="number" min="1" step="5" id="totalQOverride" value="${config.totalQuestions}">
+      </div>
+      ${rows}
+      <div class="wp-actions">
+        <button class="wp-toggle-btn" id="resetAllWeightsBtn" type="button">Reset all to file defaults</button>
+        <span class="wr-meta">${Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)} custom value${(Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)) === 1 ? '' : 's'} active</span>
+      </div>
+    </div>
+  `;
+}
+
+function wireWeightPanel(){
+  document.querySelectorAll('[data-weight-key]').forEach(input => {
+    input.onchange = () => {
+      const key = input.getAttribute('data-weight-key');
+      const num = input.value.trim() === '' ? NaN : Number(input.value);
+      setWeightOverride(key, Number.isFinite(num) ? num : null);
+      recomputeExamPool();
+      renderExamSetup();
+    };
+  });
+  const totalInput = document.getElementById('totalQOverride');
+  if(totalInput){
+    totalInput.onchange = () => {
+      const num = Number(totalInput.value);
+      setTotalOverride(Number.isFinite(num) && num > 0 ? num : null);
+      recomputeExamPool();
+      renderExamSetup();
+    };
+  }
+  document.querySelectorAll('[data-reset-key]').forEach(btn => {
+    btn.onclick = () => {
+      setWeightOverride(btn.getAttribute('data-reset-key'), null);
+      recomputeExamPool();
+      renderExamSetup();
+    };
+  });
+  const resetTotalBtn = document.querySelector('[data-reset-total]');
+  if(resetTotalBtn){
+    resetTotalBtn.onclick = () => { setTotalOverride(null); recomputeExamPool(); renderExamSetup(); };
+  }
+  const resetAllBtn = document.getElementById('resetAllWeightsBtn');
+  if(resetAllBtn){
+    resetAllBtn.onclick = () => { clearAllOverrides(); recomputeExamPool(); renderExamSetup(); };
+  }
+}
+
+function renderExamSetup(){
   clearInterval(timerInterval);
   const main = document.getElementById('main');
-  const target = (config && config.totalQuestions) || 250;
+  const config = effectiveConfig();
+  const target = config.totalQuestions || 250;
   const shortfall = examPool.length < target;
   main.innerHTML = `
     <div class="setup-box">
       <h2>Full Practice Exam</h2>
-      <p>${examPool.length} question${examPool.length === 1 ? '' : 's'} pulled from ${examBreakdown.filter(b => b.pulled > 0).length} of ${examBreakdown.length} banks${shortfall ? ` — fewer than the configured ${target}, since that's all that's currently available at these weights` : ''}. Weights are set in <code>${EXAM_WEIGHTS_FILE}</code>.</p>
+      <p>${examPool.length} question${examPool.length === 1 ? '' : 's'} pulled from ${examBreakdown.filter(b => b.pulled > 0).length} of ${examBreakdown.length} banks${shortfall ? ` — fewer than the configured ${target}, since that's all that's currently available at these weights` : ''}. ${config.hasOverrides ? `Using your <strong>locally customized</strong> weights (saved in this browser).` : `Weights come from <code>${EXAM_WEIGHTS_FILE}</code>.`}</p>
       <div class="mode-row">
         <button class="mode-btn" id="practiceBtn">
           <div class="mode-name">Practice Mode</div>
@@ -367,14 +534,20 @@ function renderExamSetup(config){
       </div>
     </div>
     <div class="q-card" style="margin-top:14px;">
-      <div class="q-eyebrow"><span>Bank breakdown</span></div>
+      <div class="q-eyebrow">
+        <span>Bank breakdown</span>
+        <button class="wp-toggle-btn" id="weightToggleBtn" type="button">${weightPanelOpen ? 'Hide weight controls' : 'Customize weights'}</button>
+      </div>
       <div style="font-size:12.5px; line-height:1.9; color:var(--ink-soft);">
         ${examBreakdown.map(b => `<div style="display:flex; justify-content:space-between; gap:10px;"><span>${escapeHtml(b.fullTitle)}${b.weight !== 1 ? ` <span class="fn-source" style="display:inline;">(weight ${b.weight})</span>` : ''}</span><span style="font-family:'IBM Plex Mono',monospace; white-space:nowrap;">${b.pulled} / ${b.available}</span></div>`).join('')}
       </div>
     </div>
+    ${weightPanelOpen ? renderWeightPanelHtml(config) : ''}
   `;
   document.getElementById('practiceBtn').onclick = () => startQuiz('practice');
   document.getElementById('timedBtn').onclick = () => startQuiz('timed');
+  document.getElementById('weightToggleBtn').onclick = () => { weightPanelOpen = !weightPanelOpen; renderExamSetup(); };
+  if(weightPanelOpen) wireWeightPanel();
 }
 
 /* ---------- setup / navigation ---------- */
@@ -384,8 +557,8 @@ function renderChapterChips(){
   wrap.innerHTML = '';
   const examBtn = document.createElement('button');
   examBtn.className = 'chip exam-chip' + (examMode ? ' active' : '');
-  examBtn.textContent = '★ Full Exam';
-  examBtn.title = 'Randomly assembled practice exam pulling from every bank';
+  examBtn.textContent = '★ Full Exam' + (hasCustomWeights() ? ' •' : '');
+  examBtn.title = 'Randomly assembled practice exam pulling from every bank' + (hasCustomWeights() ? ' — using your locally customized weights' : '');
   examBtn.onclick = () => startFullExam();
   wrap.appendChild(examBtn);
   ALT_QUIZ_CHAPTERS.forEach(ch => {
@@ -699,7 +872,7 @@ function finishQuiz(){
     ` : ''}
   `;
   document.getElementById('retryBtn').onclick = () => startQuiz(quizMode);
-  document.getElementById('changeModeBtn').onclick = examMode ? (() => renderExamSetup(null)) : renderSetup;
+  document.getElementById('changeModeBtn').onclick = examMode ? (() => renderExamSetup()) : renderSetup;
 }
 
 renderChapterChips();
