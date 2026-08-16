@@ -1,0 +1,198 @@
+HEALTH AND SAFETY CODE
+TITLE 2. HEALTH
+SUBTITLE H. PUBLIC HEALTH PROVISIONS
+CHAPTER 171A.  ABORTION-INDUCING DRUGS
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 171A.001.  DEFINITIONS.  In this chapter:
+            (1)  "Abortion" has the meaning assigned by Section 245.002.
+            (2)  "Abortion-inducing drug" has the meaning assigned by Section 171.061.
+            (3)  "Delivery network company," "delivery person," "digital network," "digitally prearranged delivery," "digitally prearranged ride," "driver," and "transportation network company" have the meanings assigned by Section 2402.001, Occupations Code.
+            (4)  "Health care facility" has the meaning assigned by Section 108.002, except the term does not include a hospital.
+            (5)  "Health care provider" means an individual who is licensed, certified, or otherwise authorized by this state to diagnose, prevent, alleviate, or cure a human illness or injury.  The term does not include a physician.
+            (6)  "Hospital" means:
+                  (A)  a hospital licensed under Chapter 241 or 577; or
+                  (B)  a hospital owned, maintained, or operated by this state.
+            (7)  "Medical emergency" means a condition described by Section 170A.002(b)(2).
+            (8)  "Physician" means an individual licensed to practice medicine in this state, including a medical doctor and a doctor of osteopathic medicine.
+            (9)  "Physician group" means an entity, including an entity described in the definition of "physician" under Section 74.001, Civil Practice and Remedies Code, that is formed by a physician or group of physicians to provide medical services.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.002.  APPLICABILITY AND CONSTRUCTION OF CHAPTER.  (a)  This chapter does not apply to and a civil action under this chapter may not be brought against:
+            (1)  a hospital;
+            (2)  a health care facility licensed, owned, maintained, or operated by this state;
+            (3)  a health care provider, other than a provider against whom a qui tam action may be brought in accordance with Section 171A.101(d)(8);
+            (4)  a physician, other than a physician against whom a qui tam action may be brought in accordance with Section 171A.101(d)(8);
+            (5)  a physician group;
+            (6)  an Internet service provider or the provider's affiliates or subsidiaries;
+            (7)  an Internet search engine;
+            (8)  a cloud service provider solely providing access or connection to or from an Internet website or other information or content on the Internet or on a facility, system, or network that is not under the provider's control, including transmission, downloading, intermediate storage, access software, or other services; or
+            (9)  a person who manufactures, distributes, mails, transports, delivers, prescribes, provides, or possesses abortion-inducing drugs in this state solely for one or more of the following purposes:
+                  (A)  treating a medical emergency;
+                  (B)  removing an ectopic pregnancy;
+                  (C)  removing a dead, unborn child whose death was caused by spontaneous abortion; or
+                  (D)  a purpose that does not include performing, inducing, attempting, or assisting an abortion, other than an abortion performed in response to a medical emergency.
+      (b)  This chapter may not be construed to require the actual performance, inducement, or attempted performance of an abortion in order for a person to bring a civil action authorized by this chapter.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+SUBCHAPTER B.  PROTECTION FROM ABORTION-INDUCING DRUGS
+
+      Sec. 171A.051.  PROHIBITIONS RELATED TO ABORTION-INDUCING DRUGS.  (a)  Except as provided by Subsection (b) or Section 171A.002, a person may not:
+            (1)  manufacture or distribute an abortion-inducing drug in this state; or
+            (2)  mail, transport, deliver, prescribe, or provide an abortion-inducing drug in any manner to or from any person or location in this state.
+      (b)  Subsection (a) does not prohibit:
+            (1)  speech or conduct protected by the First Amendment to the United States Constitution, as made applicable to the states through the United States Supreme Court's interpretation of the Fourteenth Amendment to the United States Constitution, or protected by Section 8, Article I, Texas Constitution;
+            (2)  conduct a pregnant woman takes in the course of aborting or attempting to abort the woman's unborn child;
+            (3)  the manufacture, distribution, mailing, transport, delivery, prescribing, provision, or possession of an abortion-inducing drug solely for one or more of the purposes described by Section 171A.002(a)(9); or
+            (4)  conduct a person takes under the direction of a federal agency, contractor, or employee to carry out a duty under federal law, if prohibiting that conduct would violate the doctrine of preemption or intergovernmental immunity.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.052.  EXCLUSIVE ENFORCEMENT; EFFECT OF OTHER LAW.  (a)  This subchapter may be enforced only through a qui tam action brought under Subchapter C.
+      (b)  No other direct or indirect enforcement of this subchapter may be taken or threatened by this state, a political subdivision of this state, a district or county attorney, or any officer or employee of this state or a political subdivision of this state against any person, by any means whatsoever, except as provided in Subchapter C.
+      (c)  This section does not preclude or limit the enforcement of any other law or regulation against conduct that is independently prohibited by the other law or regulation and that would remain prohibited by the other law or regulation in the absence of this subchapter.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+SUBCHAPTER C.  QUI TAM ENFORCEMENT OF PROHIBITIONS RELATING TO ABORTION-INDUCING DRUGS
+
+      Sec. 171A.101.  QUI TAM ACTION AUTHORIZED.  (a)  A person, other than this state, a political subdivision of this state, or an officer or employee of this state or a political subdivision of this state, has standing to bring and may bring a qui tam action against a person who:
+            (1)  violates Section 171A.051; or
+            (2)  intends to violate Section 171A.051.
+      (b)  An action brought under this section must be brought in the name of the qui tam relator, who is an assignee of this state's claim for relief.  Notwithstanding any other law, the transfer of this state's claim to the qui tam relator is absolute, with the state retaining no interest in the subject matter of the claim.
+      (c)  A qui tam relator may not bring an action under this section if the action is preempted by 47 U.S.C. Section 230(c).
+      (d)  A qui tam action may not be brought under this section:
+            (1)  against a woman for using, obtaining, or seeking to obtain abortion-inducing drugs to abort or attempt to abort her unborn child;
+            (2)  against a person acting under the direction of a federal agency, contractor, or employee who is carrying out a duty under federal law if the imposition of liability would violate the doctrine of preemption or intergovernmental immunity;
+            (3)  by any person who:
+                  (A)  impregnated a woman through conduct constituting sexual assault under Section 22.011, Penal Code, or aggravated sexual assault under Section 22.021, Penal Code;
+                  (B)  committed an offense for which an affirmative finding of family violence was made under Article 42.013, Code of Criminal Procedure;
+                  (C)  provided an abortion-inducing drug to a pregnant woman for the purpose of performing, inducing, or attempting an abortion without the woman's consent or knowledge;
+                  (D)  has been convicted of an offense under Section 42.072, Penal Code; or
+                  (E)  acts in concert or participation with a person described by this subdivision;
+            (4)  against a transportation network company or a driver for using a transportation network company's digital network to provide a digitally prearranged ride;
+            (5)  against a delivery network company or a delivery person for using a delivery network company's digital network to provide a digitally prearranged delivery;
+            (6)  against an air carrier conducting domestic or flag operations under 14 C.F.R. Part 121 or a foreign air carrier conducting scheduled operations under 14 C.F.R. Part 129;
+            (7)  against a person to whom this chapter does not apply and against whom a civil action under this chapter may not be brought under Section 171A.002(a);
+            (8)  against a health care provider or physician, unless the qui tam relator pleads and proves that the provider or physician engaged in conduct constituting a violation of Section 171A.051 while located outside this state; or
+            (9)  against a pharmaceutical manufacturer, pharmaceutical distributor, or common carrier, unless the qui tam relator pleads and proves that the defendant failed to adopt and implement a policy to not distribute, mail, transport, deliver, provide, or possess abortion-inducing drugs other than for one or more of the purposes described by Section 171A.002(a)(9).
+      (e)  Notwithstanding any other law, including rules of civil procedure adopted under Chapter 26, Civil Practice and Remedies Code, an action brought under this section may not be litigated on behalf of a claimant class or a defendant class, and a court may not certify a class in the action.
+      (f)  In an action brought under this chapter, a qui tam relator or a defendant against whom an action is brought under this section may not, without the consent of the person to whom the information belongs, publicly disclose or improperly obtain:
+            (1)  any personally identifiable information of a pregnant woman who sought or obtained an abortion-inducing drug from a defendant against whom a qui tam action is brought under this section, including any written, electronic, audio, or visual document or media that identifies the pregnant woman;
+            (2)  any information protected from public disclosure under the Health Insurance Portability and Accountability Act of 1996 (Pub. L. No. 104-191) and regulations adopted under that Act; or
+            (3)  any personal data of a pregnant woman who sought or obtained an abortion-inducing drug from a defendant against whom a qui tam action is brought under this section that is protected from public disclosure under federal or state law.
+      (g)  Notwithstanding any other law, a court may not order in response to the filing of a petition by a qui tam relator the taking of a deposition under Rule 202, Texas Rules of Civil Procedure, of a woman who is the subject of a violation of Section 171A.051 unless the woman consents to the deposition.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.102.  DEFENSES.  (a)  It is an affirmative defense to an action brought under Section 171A.101 that the defendant:
+            (1)  was unaware the defendant was engaged in the conduct prohibited by Section 171A.051; and
+            (2)  took reasonable precautions to ensure the defendant would not violate Section 171A.051.
+      (b)  It is an affirmative defense to an action brought under Section 171A.101 that:
+            (1)  the imposition of civil liability on the defendant will violate the defendant's rights under federal law, including the United States Constitution;
+            (2)  the defendant:
+                  (A)  has standing to assert the rights of a third party under the tests for third-party standing established by the United States Supreme Court; and
+                  (B)  demonstrates that the imposition of civil liability on the defendant will violate the third party's rights under federal law, including the United States Constitution;
+            (3)  the imposition of civil liability on the defendant will violate the defendant's rights under the Texas Constitution; or
+            (4)  the imposition of civil liability on the defendant will violate limits on extraterritorial jurisdiction imposed by the United States Constitution or the Texas Constitution.
+      (c)  The defendant has the burden of proving an affirmative defense under this section by a preponderance of the evidence.
+      (d)  The following are not defenses to an action brought under Section 171A.101:
+            (1)  a defendant's ignorance or mistake of law, including a defendant's mistaken belief that the requirements or provisions of this chapter are unconstitutional or were unconstitutional;
+            (2)  a defendant's reliance on a state or federal court decision that is not binding on the court in which the action has been brought;
+            (3)  a defendant's reliance on a federal agency rule or action that has been repealed, superseded, or declared invalid or unconstitutional, even if the federal agency rule or action had not been repealed, superseded, or declared invalid or unconstitutional when the cause of action accrued;
+            (4)  the laws of another state or jurisdiction, including an abortion shield law, unless the Texas Constitution or federal law compels the court to enforce that law;
+            (5)  non-mutual issue preclusion or non-mutual claim preclusion;
+            (6)  sovereign immunity, governmental immunity, or official immunity, other than sovereign immunity, governmental immunity, or official immunity applicable to:
+                  (A)  a hospital owned, maintained, or operated by this state that facilitates the availability of or makes available abortion-inducing drugs solely for one or more of the purposes described by Section 171A.002(a)(9);
+                  (B)  a political subdivision of this state, including a hospital district, that facilitates the availability of or makes available abortion-inducing drugs solely for one or more of the purposes described by Section 171A.002(a)(9); or
+                  (C)  a physician or health care professional employed by a hospital owned or operated by this state or a political subdivision of this state, including a hospital district, acting within the scope of the physician's or professional's employment who prescribes, distributes, administers, or otherwise makes available abortion-inducing drugs solely for one or more of the purposes described by Section 171A.002(a)(9);
+            (7)  a claim that the enforcement of this chapter or the imposition of civil liability against the defendant will violate the constitutional or federally protected rights of third parties, except as provided by Subsection (b); or
+            (8)  consent to the abortion by the claimant or the unborn child's mother.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.103.  STATUTE OF LIMITATIONS.  A person may bring an action under Section 171A.101 not later than the sixth anniversary of the date the cause of action accrues.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.104.  REMEDIES.  (a)  Notwithstanding any other law and except as provided by Subsection (b), if a qui tam relator prevails in an action brought under Section 171A.101, the court shall award to the relator:
+            (1)  injunctive relief sufficient to prevent the defendant from violating Section 171A.051;
+            (2)  an amount of not less than $100,000 for each violation of Section 171A.051, to be allocated in accordance with Subsection (b); and
+            (3)  costs and reasonable attorney's fees.
+      (b)  In awarding the amount described by Subsection (a)(2), the court shall ensure that:
+            (1)  the qui tam relator receives the entire amount awarded under Subsection (a)(2) for an action in which the relator is:
+                  (A)  a woman who was pregnant at the time the woman obtained or received an abortion-inducing drug that was manufactured, distributed, mailed, transported, delivered, prescribed, provided, or possessed in violation of Section 171A.051; or
+                  (B)  the father, sibling, or grandparent of the unborn child with which the woman described by Paragraph (A) was pregnant at the time the woman obtained or received the abortion-inducing drug; and
+            (2)  for an action in which the qui tam relator is a person other than a person described by Subdivision (1):
+                  (A)  the relator receives $10,000 of the total amount awarded under Subsection (a)(2); and
+                  (B)  the remainder of the amount awarded under Subsection (a)(2) is held in trust by the relator for the benefit of a charitable organization designated by the relator, except that the relator may not designate a charitable organization under this paragraph from which the relator or any of the relator's family members receives a salary, stipend, or any type of remuneration or financial benefit.
+      (c)  A court may not award relief under Subsection (a)(2) or (3) in response to a violation of Section 171A.051 if the defendant demonstrates that:
+            (1)  a court previously ordered the defendant to pay an amount under Subsection (a)(2) in another action for that particular violation; and
+            (2)  the court order described by Subdivision (1) has not been vacated, reversed, or overturned.
+      (d)  A court may not award costs or attorney's fees under the Texas Rules of Civil Procedure or any other rule adopted by the supreme court under Section 22.004, Government Code, to a defendant against whom an action is brought under Section 171A.101.
+      (e)  Subsection (d) does not preclude a court from:
+            (1)  awarding sanctions under Chapter 10, Civil Practice and Remedies Code; or
+            (2)  sanctioning a litigant or attorney for frivolous, malicious, or bad-faith conduct.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.105.  COORDINATED ENFORCEMENT PROHIBITED.  (a)  This state, a political subdivision of this state, or an officer or employee of this state or a political subdivision of this state may not:
+            (1)  act in concert or participation with a qui tam relator bringing an action under Section 171A.101;
+            (2)  establish or attempt to establish any type of agency or fiduciary relationship with a qui tam relator bringing an action under Section 171A.101;
+            (3)  attempt to control or influence a person's decision to bring an action under Section 171A.101 or that person's conduct of the litigation; or
+            (4)  intervene in an action brought under Section 171A.101.
+      (b)  This section does not prohibit this state, a political subdivision of this state, or an officer or employee of this state or a political subdivision of this state from filing an amicus curiae brief in an action brought under Section 171A.101 if this state, the political subdivision, the officer, or the employee does not act in concert or participation with the qui tam relator.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.106.  JURISDICTION; APPLICABILITY OF STATE LAW.  (a)  Notwithstanding any other law, including Subchapter C, Chapter 17, Civil Practice and Remedies Code, the courts of this state have personal jurisdiction over a defendant sued under Section 171A.101 to the maximum extent permitted by the Fourteenth Amendment to the United States Constitution, and the defendant may be served outside this state.
+      (b)  Notwithstanding any other law, the law of this state applies to an action brought under Section 171A.101 to the maximum extent permitted by the Texas Constitution and federal law, including the United States Constitution.
+      (c)  Notwithstanding any other law, any contractual provision that requires or purports to require application of the laws of a different jurisdiction, or that requires or purports to require a qui tam action under Section 171A.101 to be litigated in a particular forum, is void based on this state's public policy and is not enforceable in any court.
+      (d)  Notwithstanding any other law, Chapter 27, Civil Practice and Remedies Code, does not apply to an action brought under Section 171A.101.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.107.  APPEALS.  The Fifteenth Court of Appeals has exclusive intermediate appellate jurisdiction over any appeal or original proceeding arising out of an action brought under Section 171A.101 in the courts of this state.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+      Sec. 171A.108.  APPLICATION OF OTHER LAW.  Notwithstanding any other law, a court may not apply the law of another state or jurisdiction to any qui tam action brought under Section 171A.101 unless the Texas Constitution or federal law compels the court to apply that law.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+SUBCHAPTER D.  PROTECTION FROM CERTAIN COUNTERACTIONS
+
+      Sec. 171A.151.  EFFECT OF CLAWBACK PROVISIONS.  (a)  For purposes of this section, the term "clawback provision" refers to any law of another state or jurisdiction that authorizes the bringing of a civil action against a person for:
+            (1)  bringing or engaging in an action authorized by this chapter, including Subsection (f);
+            (2)  bringing or engaging in an action that alleges a violation of Section 171A.051;
+            (3)  attempting, intending, or threatening to bring or engage in an action described by Subdivision (1) or (2); or
+            (4)  providing legal representation or any type of assistance to a person who brings or engages in an action described by Subdivision (1) or (2).
+      (b)  Notwithstanding any other law and except as otherwise provided by federal law or the Texas Constitution, the laws of this state apply to:
+            (1)  conduct described by Subsection (a);
+            (2)  an action brought against a person for engaging in conduct described by Subsection (a);
+            (3)  an action brought under a clawback provision against a resident of this state; and
+            (4)  an action brought under Subsection (f).
+      (c)  Notwithstanding any other law, in an action described by Subsection (a)(1) or (2), the court shall, on request, issue a temporary, preliminary, or permanent injunction that restrains each defendant in the action, each person in privity with the defendant, and each person with whom the defendant is in active concert or participation from:
+            (1)  bringing an action under any clawback provision against a claimant or prosecutor, a person in privity with the claimant or prosecutor, or a person providing legal representation or any type of assistance to the claimant or prosecutor; and
+            (2)  continuing to litigate an action under any clawback provision that has been brought against a claimant or prosecutor, a person in privity with the claimant or prosecutor, or a person providing legal representation or any type of assistance to the claimant or prosecutor.
+      (d)  Notwithstanding any other law, the doctrines of res judicata and collateral estoppel preclude a defendant against whom a judgment is entered in an action described by Subsection (a)(1) or (2) and each person in privity with the defendant from litigating or relitigating any claim or issue under any clawback provision against a claimant, prosecutor, or person in privity with the claimant or prosecutor that was raised or could have been raised as a claim, cross-claim, counterclaim, or affirmative defense under the federal or this state's rules of civil procedure.
+      (e)  Notwithstanding any other law, a court of this state may not enforce an out-of-state judgment obtained in an action brought under a clawback provision unless federal law or the Texas Constitution requires the court to enforce the judgment.
+      (f)  Notwithstanding any other law, if an action is brought or judgment is entered against a person under a clawback provision based wholly or partly on the person's decision to engage in conduct described by Subsection (a), that person is entitled to injunctive relief and damages from any person who brought the action or obtained the judgment or who sought to enforce the judgment.  Notwithstanding any other law, the relief described by this subsection must include:
+            (1)  compensatory damages, including money damages in an amount equal to the judgment damages and costs, expenses, and reasonable attorney's fees spent in defending the action;
+            (2)  costs, expenses, and reasonable attorney's fees incurred in bringing an action under this subsection;
+            (3)  additional amounts consisting of the greater of:
+                  (A)  twice the sum of the damages, costs, expenses, and fees described by Subdivisions (1) and (2); or
+                  (B)  $100,000; and
+            (4)  injunctive relief that restrains each person who brought the action under the clawback provision, each person in privity with the person, and each person acting in concert or participation with the person from:
+                  (A)  bringing further actions under any clawback provision against the person against whom the action was brought, each person in privity with the person, or any person providing legal representation or any type of assistance to the person;
+                  (B)  continuing to litigate any actions brought under a clawback provision against the persons described by Paragraph (A); and
+                  (C)  enforcing or attempting to enforce any judgment obtained in any actions brought under a clawback provision against the persons described by Paragraph (A).
+      (g)  It is not a defense to an action brought under Subsection (f) that:
+            (1)  the claimant failed to seek recovery under Subsection (f) in an action brought against the claimant under a clawback provision; or
+            (2)  a court in a preceding action brought against the claimant declined to recognize or enforce Subsection (f) or held any provision of that subsection invalid, unconstitutional, or preempted by federal law, notwithstanding the doctrines of issue or claim preclusion.
+      (h)  Notwithstanding any other law, Chapter 27, Civil Practice and Remedies Code, does not apply to an action brought under Subsection (f).
+      (i)  The Fifteenth Court of Appeals has exclusive intermediate appellate jurisdiction over any appeal or original proceeding arising out of a civil action brought under Subsection (f) in the courts of this state.
+Added by Acts 2025, 89th Leg., 2nd C.S., Ch. 5 (H.B. 7), Sec. 2, eff. December 4, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
