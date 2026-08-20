@@ -580,8 +580,46 @@ function renderTrap(){
 function renderDiagrams(){
   const body = document.getElementById('diagramsBody');
   body.innerHTML = DIAGRAMS.map((d,i) =>
-    `<h3>${esc(d.title)}</h3><div class="diagram-wrap"><pre class="mermaid" id="mmd-${i}">${esc(d.code)}</pre></div>`
+    `<h3>${esc(d.title)}</h3><div class="diagram-wrap" id="diagram-target-${i}"><p style="color:var(--ink-soft); font-size:12px; margin:0;">Rendering diagram&hellip;</p></div>`
   ).join('');
+}
+
+/* Render each diagram programmatically via mermaid.render() instead of relying on
+   mermaid's own startOnLoad DOM scan. startOnLoad measures elements in place, which
+   breaks when the diagram sits inside a collapsed (display:none) accordion section —
+   mermaid.render() builds its own offscreen sandbox internally, so it works regardless
+   of whether the destination container is currently visible. */
+async function renderMermaidDiagrams(){
+  const body = document.getElementById('diagramsBody');
+  if(!window.mermaid){
+    body.insertAdjacentHTML('afterbegin', '<div class="warn-box"><strong>Diagram library didn\'t load.</strong> This page loads Mermaid.js from a CDN (cdn.jsdelivr.net) — if that domain is blocked on this network, or you\'re offline, the diagrams below won\'t render. Try reloading, or view them natively on GitHub in <code>22-traffic-code-definitions-hierarchy.md</code>.</div>');
+    return;
+  }
+  mermaid.initialize({
+    startOnLoad:false,
+    theme:'base',
+    themeVariables:{
+      primaryColor:'#EAE4D3',
+      primaryTextColor:'#221F19',
+      primaryBorderColor:'#B08B3C',
+      lineColor:'#5B564A',
+      secondaryColor:'#F3EFE4',
+      tertiaryColor:'#fff',
+      fontFamily:'IBM Plex Sans, sans-serif'
+    }
+  });
+  for(let i=0;i<DIAGRAMS.length;i++){
+    const target = document.getElementById('diagram-target-'+i);
+    try{
+      const result = await mermaid.render('mmd-svg-'+i, DIAGRAMS[i].code);
+      target.innerHTML = result.svg;
+    } catch(err){
+      target.innerHTML = '<p style="color:var(--rust); font-size:12px;">Diagram failed to render: '
+        + esc(err && err.message ? err.message : String(err))
+        + '</p><pre style="font-size:11px; white-space:pre-wrap; background:var(--paper-dim); padding:8px; border-radius:6px;">'
+        + esc(DIAGRAMS[i].code) + '</pre>';
+    }
+  }
 }
 
 /* ===================== SECTION TOGGLE ===================== */
@@ -641,22 +679,7 @@ renderHub();
 renderClusters();
 renderTrap();
 renderDiagrams();
-
-if(window.mermaid){
-  mermaid.initialize({
-    startOnLoad:true,
-    theme:'base',
-    themeVariables:{
-      primaryColor:'#EAE4D3',
-      primaryTextColor:'#221F19',
-      primaryBorderColor:'#B08B3C',
-      lineColor:'#5B564A',
-      secondaryColor:'#F3EFE4',
-      tertiaryColor:'#fff',
-      fontFamily:'IBM Plex Sans, sans-serif'
-    }
-  });
-}
+renderMermaidDiagrams();
 
 window.addEventListener('DOMContentLoaded', function(){
   var first = document.querySelector('.sec-header');
