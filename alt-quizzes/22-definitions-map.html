@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Definitions Map | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  /* page-specific tweaks on top of the shared theme */
+  main{max-width:980px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .hub-table td:first-child, .hub-table th:first-child{font-weight:700;}
+  .hub-count{font-family:'IBM Plex Mono', monospace; color:var(--navy); font-weight:700;}
+  mark{background:var(--brass-light); color:var(--ink); padding:0 2px; border-radius:2px;}
+  tr.no-match{display:none;}
+  .sec-card.no-match{display:none;}
+  .diagram-wrap{background:#fbfaf6; border:1px solid var(--rule); border-radius:8px; padding:14px; overflow-x:auto; margin-top:8px;}
+  .diagram-wrap .mermaid{min-width:520px;}
+  .trap-table td:first-child{font-weight:700; white-space:nowrap;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Definitions Cross-Reference Map</h1>
+      <p class="sub">Which of the 137 defined terms in the Ch.22 bank are built from which other defined terms — hub terms, taxonomy trees, and the "same word, different chapter" traps.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Find a term:</label>
+  <input type="text" id="searchBox" placeholder="e.g. Vehicle, Trailer, Motor Vehicle..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-hub">Hub Terms</a>
+  <a class="chip" href="#sec-c1">Vehicle Taxonomy</a>
+  <a class="chip" href="#sec-c2">Persons &amp; Authorities</a>
+  <a class="chip" href="#sec-c3">Traffic Areas</a>
+  <a class="chip" href="#sec-c4">Misc Terms</a>
+  <a class="chip" href="#sec-c5">Litter/Dumping</a>
+  <a class="chip" href="#sec-c6">DL / CDL</a>
+  <a class="chip" href="#sec-c7">Ch.545 / Automated</a>
+  <a class="chip" href="#sec-c8">Equipment/Inspection</a>
+  <a class="chip" href="#sec-c9">Bicycles/OHV</a>
+  <a class="chip" href="#sec-c10">Motorcycles/Gang</a>
+  <a class="chip" href="#sec-c11">Registration</a>
+  <a class="chip" href="#sec-c12">Size &amp; Weight</a>
+  <a class="chip" href="#sec-c13">Penal Code</a>
+  <a class="chip" href="#sec-c14">BPOC Terms</a>
+  <a class="chip" href="#sec-trap">Redefinition Trap</a>
+  <a class="chip" href="#sec-diagrams">Diagrams</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  Maps every term in the <a href="bank/22-traffic-code-definitions.md">Ch.22 Definitions bank</a> against every other defined term it explicitly builds on. <b>Explicit</b> = the statute names the section directly. <b>Implicit/generic</b> = the definition's text uses another defined term as its genus (e.g. "Motor vehicle" means a self-propelled <b>vehicle</b>&hellip;) or as an inclusion/exclusion. A handful of same-spelled terms are <b>independently redefined</b> chapter to chapter (see the trap table below) rather than inheriting one shared meaning.
+</div>
+
+<div class="sec-card" id="sec-hub">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">HUB</span>
+    <span class="sec-name">Hub Terms — what the most other definitions are built from</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table hub-table" id="hubTable">
+      <thead><tr><th>Term</th><th>Source</th><th># of other Ch.22 terms referencing it</th></tr></thead>
+      <tbody id="hubTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="clusterCards"></div>
+
+<div class="sec-card" id="sec-trap">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">TRAP</span>
+    <span class="sec-name">Same name, different definition — the multi-chapter redefinition trap</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>A handful of terms are <b>not</b> inherited from the TC 541 Subtitle C base definitions — each chapter below independently writes its own version. Common source of missed exam questions.</p>
+    <table class="ladder-table trap-table" id="trapTable">
+      <thead><tr><th>Term</th><th>Independently defined in&hellip;</th><th>Notable difference</th></tr></thead>
+      <tbody id="trapTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-diagrams">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">DIAG</span>
+    <span class="sec-name">Diagrams by cluster</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body" id="diagramsBody"></div>
+</div>
+
+</main>
+
+<footer>Ch.22 Traffic Code Definitions Map &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+/* ===================== DATA ===================== */
+const HUB_TERMS = [
+  ["Vehicle (TC 541.201)","TC 541.201(23)",37],
+  ["Motor Vehicle","TC 541.201(11)",34],
+  ["Person","TC 541.001(4)",20],
+  ["Traffic","TC 541.301",16],
+  ["Roadway","TC 541.302(11)",10],
+  ["Operator","TC 541.001(1-a)",7],
+  ["Pedestrian","TC 541.001(3)",5],
+  ["Bicycle","TC 541.201(2)",4],
+  ["Electric Personal Assistive Mobility Device","TC 551.201",4],
+  ["Department","TC 541.002(1)",4],
+  ["Moped","TC 541.201(8)",4],
+  ["Truck","TC 541.201(21)",4],
+  ["Motorcycle (TC 541.201)","TC 541.201(9)",4],
+  ["Local Authority","TC 541.002(3)",3],
+  ["Individual","PC 1.07(a)(26)",3]
+];
+
+const CLUSTERS = [
+{id:"c1", num:"541.201", name:"Vehicle Taxonomy (TC 541.201)", rows:[
+  ["Vehicle (TC 541.201)","TC 541.201(23)","Person","Operator, Owner, Authorized Emergency Vehicle, Implement of Husbandry, Motor Vehicle, Pole Trailer, Police Vehicle, Road Tractor (TC 541.201), Semitrailer (TC 541.201), Special Mobile Equipment, Towable Recreational Vehicle, Trailer (TC 541.201), Truck Tractor (TC 541.201), Traffic, Ramp, Gross Vehicle Weight, Park or Parking, Right-of-Way, Stand or Standing, Stop or Stopping, Litter, Gross Combination Weight Rating, Gross Vehicle Weight Rating, Pass or Passing, Automated Driving System, Dynamic Driving Task, Highway Maintenance or Construction Vehicle, Road Machinery, Service Vehicle, Slow-Moving Vehicle, Commercial Motor Vehicle (Inspection, TC 548.001), Neighborhood Electric Vehicle, Pocket Bike or Minimotorbike, Sand Rail, Motorcycle (TC 661.001), Farm Semitrailer or Farm Trailer, Power Sweeper"],
+  ["Motor Vehicle","TC 541.201(11)","Electric Bicycle (541.201 cross-ref), Electric Personal Assistive Mobility Device, Vehicle (TC 541.201)","Bus, Farm Tractor, Implement of Husbandry, Moped, Motorcycle (TC 541.201), Multifunction School Activity Bus, Passenger Car, Road Tractor (TC 541.201), School Bus (TC 541.201), Semitrailer (TC 541.201), Towable Recreational Vehicle, Trailer (TC 541.201), Truck, Truck Tractor (TC 541.201), Litter, Driver's License, License, Essential Need, Ignition Interlock Device, Automated Driving System, Automated Motor Vehicle, Slow-Moving Vehicle, Neighborhood Electric Vehicle, Golf Cart, All-Terrain Vehicle, Recreational Off-Highway Vehicle, Utility Vehicle, Motorcycle (TC 661.001), Autocycle, Commercial Motor Vehicle (Registration, TC 502.001), Commercial Motor Vehicle (Size & Weight, TC 621.001), Semitrailer (TC 621.001), Trailer (TC 621.001), Vehicle (TC 621.001)"],
+  ["Authorized Emergency Vehicle","TC 541.201(1)","Department, Police Vehicle, Vehicle (TC 541.201)","—"],
+  ["Bicycle","TC 541.201(2)","Moped","Sidewalk User, Electric Bicycle, Top Assisted Speed, Class 1/2/3 Electric Bicycle"],
+  ["Bus","TC 541.201(3)","Motor Vehicle, Operator, Person","—"],
+  ["Farm Tractor","TC 541.201(4)","Implement of Husbandry, Motor Vehicle","—"],
+  ["House Trailer","TC 541.201(5)","Semitrailer (TC 541.201), Towable Recreational Vehicle, Trailer (TC 541.201)","Special Mobile Equipment"],
+  ["Implement of Husbandry","TC 541.201(6)","Motor Vehicle, Passenger Car, Truck, Vehicle (TC 541.201)","Farm Tractor, Slow-Moving Vehicle"],
+  ["Light Truck","TC 541.201(7)","Truck","—"],
+  ["Moped","TC 541.201(8)","Motor Vehicle","Bicycle, Motorcycle (TC 541.201), Pocket Bike or Minimotorbike, Commercial Motor Vehicle (Registration, TC 502.001)"],
+  ["Motorcycle (TC 541.201)","TC 541.201(9)","Moped, Motor Vehicle","Passenger Car, Pocket Bike or Minimotorbike, Commercial Motor Vehicle (Registration, TC 502.001), Commercial Motor Vehicle (Size & Weight, TC 621.001)"],
+  ["Multifunction School Activity Bus","TC 541.201(11-a)","Motor Vehicle, School Activity Bus, School Bus (TC 541.201)","School Activity Bus, School Bus (TC 545.001, Ch.545 purposes)"],
+  ["Passenger Car","TC 541.201(12)","Motor Vehicle, Motorcycle (TC 541.201), Operator, Person","Implement of Husbandry, Commercial Motor Vehicle (Registration, TC 502.001)"],
+  ["Pole Trailer","TC 541.201(13)","Vehicle (TC 541.201)","Semitrailer (TC 541.201), Trailer (TC 541.201)"],
+  ["Police Vehicle","TC 541.201(13-a)","Department, Vehicle (TC 541.201)","Authorized Emergency Vehicle"],
+  ["Road Tractor (TC 541.201)","TC 541.201(14)","Motor Vehicle, Vehicle (TC 541.201)","—"],
+  ["School Activity Bus","TC 541.201(15)","Multifunction School Activity Bus, Operator, School Bus (TC 541.201)","Multifunction School Activity Bus, Commercial Motor Vehicle (Inspection, TC 548.001)"],
+  ["School Bus (TC 541.201)","TC 541.201(16)","Motor Vehicle","Multifunction School Activity Bus, School Activity Bus"],
+  ["Semitrailer (TC 541.201)","TC 541.201(17)","Motor Vehicle, Pole Trailer, Vehicle (TC 541.201)","House Trailer"],
+  ["Special Mobile Equipment","TC 541.201(18)","House Trailer, Person, Truck, Vehicle (TC 541.201)","—"],
+  ["Towable Recreational Vehicle","TC 541.201(19)","Motor Vehicle, Vehicle (TC 541.201)","House Trailer"],
+  ["Trailer (TC 541.201)","TC 541.201(20)","Motor Vehicle, Pole Trailer, Vehicle (TC 541.201)","House Trailer"],
+  ["Truck","TC 541.201(21)","Motor Vehicle","Implement of Husbandry, Light Truck, Special Mobile Equipment, Service Vehicle"],
+  ["Truck Tractor (TC 541.201)","TC 541.201(22)","Motor Vehicle, Vehicle (TC 541.201)","—"],
+  ["Electric Bicycle (541.201 cross-ref)","TC 541.201(24)","—","Motor Vehicle"]
+]},
+{id:"c2", num:"541.001/.002/.101/.102", name:"Persons, Authorities & Districts", rows:[
+  ["Operator","TC 541.001(1-a)","Person, Vehicle (TC 541.201)","Bus, Passenger Car, School Activity Bus, Ignition Interlock Device, Recreational Off-Highway Vehicle, Utility Vehicle, Motorcycle (TC 661.001)"],
+  ["Owner","TC 541.001(2)","Person, Vehicle (TC 541.201)","Private Road or Driveway, Operate Temporarily on the Highways"],
+  ["Pedestrian","TC 541.001(3)","Person","Traffic, Crosswalk, Safety Zone, Sidewalk, Right-of-Way"],
+  ["Person","TC 541.001(4)","—","Operator, Owner, Pedestrian, School Crossing Guard, Police Officer, Bus, Passenger Car, Special Mobile Equipment, Vehicle (TC 541.201), Limited-Access or Controlled-Access Highway, Private Road or Driveway, Nonresident, Essential Need, Habitual Violator, Human Driver, Minimal Risk Condition, Road Machinery, Safety Glazing Material, Electric Personal Assistive Mobility Device, Vehicle (TC 621.001)"],
+  ["School Crossing Guard","TC 541.001(5)","Local Authority, Person, School Crossing Zone, Traffic","Local Authority"],
+  ["Sidewalk User","TC 541.001(6)","Bicycle, Electric Personal Assistive Mobility Device, Individual, Motor-Assisted Scooter, Sidewalk","—"],
+  ["Escort Flagger","TC 541.001(1)","—","—"],
+  ["Department","TC 541.002(1)","—","Authorized Emergency Vehicle, Police Vehicle, Driver's License, Sunscreening Device"],
+  ["Director","TC 541.002(2)","—","Slow-Moving-Vehicle Emblem"],
+  ["Local Authority","TC 541.002(3)","School Crossing Guard, Traffic","School Crossing Guard, School Crossing Zone, School Crosswalk"],
+  ["Police Officer","TC 541.002(4)","Person, Traffic","Stop or Stopping"],
+  ["State","TC 541.002(5)","—","—"],
+  ["Metropolitan Area","TC 541.101","Urban District","—"],
+  ["Business District","TC 541.102(1)","—","Residence District"],
+  ["Residence District","TC 541.102(2)","Business District","—"],
+  ["Urban District","TC 541.102(3)","—","Metropolitan Area"]
+]},
+{id:"c3", num:"541.301-304, 542.202", name:"Traffic, Traffic Areas & Traffic Control", rows:[
+  ["Traffic","TC 541.301","Pedestrian, Vehicle (TC 541.201)","School Crossing Guard, Local Authority, Police Officer, Alley, Freeway, Freeway Main Lane, Ramp, Official Traffic-Control Device, Railroad Sign or Signal, Traffic-Control Signal, Through Highway, Stop or Stopping, Habitual Violator, Operational Design Domain, Highway Maintenance or Construction Vehicle, Service Vehicle"],
+  ["Alley","TC 541.302(1)","Traffic","Intersection"],
+  ["Crosswalk","TC 541.302(2)","Intersection, Pedestrian, Roadway, Sidewalk","School Crosswalk"],
+  ["Freeway","TC 541.302(3)","Traffic","Freeway Main Lane"],
+  ["Freeway Main Lane","TC 541.302(4)","Freeway, Traffic","—"],
+  ["Highway or Street","TC 541.302(5)","—","—"],
+  ["Improved Shoulder","TC 541.302(6)","Shoulder","—"],
+  ["Laned Roadway","TC 541.302(7)","Roadway","—"],
+  ["Limited-Access or Controlled-Access Highway","TC 541.302(8)","Person, Roadway","—"],
+  ["Private Road or Driveway","TC 541.302(9)","Owner, Person","—"],
+  ["Ramp","TC 541.302(10)","Roadway, Traffic, Vehicle (TC 541.201)","—"],
+  ["Roadway","TC 541.302(11)","Shoulder","Crosswalk, Laned Roadway, Limited-Access or Controlled-Access Highway, Ramp, Safety Zone, Shoulder, Sidewalk, Intersection, Operational Design Domain, Incident"],
+  ["Safety Zone","TC 541.302(12)","Pedestrian, Roadway","—"],
+  ["School Crossing Zone","TC 541.302(13)","Local Authority","School Crossing Guard"],
+  ["School Crosswalk","TC 541.302(14)","Crosswalk, Local Authority","—"],
+  ["Shoulder","TC 541.302(15)","Roadway","Improved Shoulder, Roadway"],
+  ["Sidewalk","TC 541.302(16)","Pedestrian, Roadway","Sidewalk User, Crosswalk"],
+  ["Intersection","TC 541.303","Alley, Roadway","Crosswalk"],
+  ["Official Traffic-Control Device","TC 541.304(1)","Traffic","Through Highway"],
+  ["Railroad Sign or Signal","TC 541.304(2)","Traffic","—"],
+  ["Traffic-Control Signal","TC 541.304(3)","Traffic","—"],
+  ["Through Highway","TC 542.202(b)(2)","Official Traffic-Control Device, Right-of-Way, Traffic","—"]
+]},
+{id:"c4", num:"541.401", name:"Miscellaneous Terms", rows:[
+  ["Daytime","TC 541.401(1)","—","—"],
+  ["Gross Vehicle Weight","TC 541.401(4)","Vehicle (TC 541.201)","Sand Rail"],
+  ["Nighttime","TC 541.401(5)","—","—"],
+  ["Park or Parking","TC 541.401(6)","Vehicle (TC 541.201)","—"],
+  ["Personal Injury","TC 541.401(7)","—","—"],
+  ["Right-of-Way","TC 541.401(8)","Pedestrian, Vehicle (TC 541.201)","Through Highway"],
+  ["Stand or Standing","TC 541.401(9)","Vehicle (TC 541.201)","—"],
+  ["Stop or Stopping","TC 541.401(10)","Police Officer, Traffic, Vehicle (TC 541.201)","—"]
+]},
+{id:"c5", num:"HSC 365.011-.012", name:"Litter / Illegal Dumping", rows:[
+  ["Dispose or Dump","HSC 365.011(5)","Litter","—"],
+  ["Litter","HSC 365.011(6)","Motor Vehicle, Vehicle (TC 541.201)","Dispose or Dump, Illegal Dumping, Power Sweeper"],
+  ["Public Highway (HSC)","HSC 365.011(8)","—","Illegal Dumping"],
+  ["Illegal Dumping","HSC 365.012(a)","Litter, Public Highway (HSC)","—"]
+]},
+{id:"c6", num:"TC 521.001, 521.241, 521.292(b), 522.003", name:"Driver's License / CDL", rows:[
+  ["Driver's License","TC 521.001(a)(3)","Department, License, Motor Vehicle","License"],
+  ["Gross Combination Weight Rating","TC 522.003(17)","Gross Vehicle Weight Rating, Vehicle (TC 541.201)","—"],
+  ["Gross Vehicle Weight Rating","TC 522.003(18)","Vehicle (TC 541.201)","Gross Combination Weight Rating"],
+  ["License","TC 521.001(a)(6)","Driver's License, Motor Vehicle, Nonresident","Driver's License, Commercial Driver's License"],
+  ["Nonresident","TC 521.001(a)(7)","Person","License"],
+  ["Essential Need","TC 521.241(1)","Motor Vehicle, Person","—"],
+  ["Ignition Interlock Device","TC 521.241(2)","Motor Vehicle, Operator","—"],
+  ["Habitual Violator","TC 521.292(b)","Person, Traffic","—"],
+  ["Commercial Driver's License","TC 522.003(3)","Commercial Motor Vehicle (CDL, TC 522.003), Individual, License","—"],
+  ["Commercial Learner's Permit","TC 522.003(4)","Commercial Motor Vehicle (CDL, TC 522.003)","—"],
+  ["Commercial Motor Vehicle (CDL, TC 522.003)","TC 522.003(5)","—","Commercial Driver's License, Commercial Learner's Permit"]
+]},
+{id:"c7", num:"TC 545.001, 545.451", name:"Chapter 545 & Automated Vehicles", rows:[
+  ["Pass or Passing","TC 545.001(2)","Vehicle (TC 541.201)","—"],
+  ["School Bus (TC 545.001, Ch.545 purposes)","TC 545.001(3)","Multifunction School Activity Bus","—"],
+  ["Automated Driving System","TC 545.451(1)","Dynamic Driving Task, Motor Vehicle, Vehicle (TC 541.201)","Automated Motor Vehicle, Minimal Risk Condition, Operational Design Domain"],
+  ["Automated Motor Vehicle","TC 545.451(2)","Automated Driving System, Motor Vehicle","Human Driver, Minimal Risk Condition"],
+  ["Dynamic Driving Task","TC 545.451(6)","Vehicle (TC 541.201)","Automated Driving System, Human Driver"],
+  ["Human Driver","TC 545.451(7)","Automated Motor Vehicle, Dynamic Driving Task, Person","—"],
+  ["Level 3/4/5 Automation","TC 545.451(8)-(10)","—","—"],
+  ["Minimal Risk Condition","TC 545.451(11)","Automated Driving System, Automated Motor Vehicle, Person","—"],
+  ["Operational Design Domain","TC 545.451(12)","Automated Driving System, Roadway, Traffic","—"]
+]},
+{id:"c8", num:"TC 547.001, 548.001", name:"Equipment & Inspection", rows:[
+  ["Highway Maintenance or Construction Vehicle","TC 547.001(2-b)","Traffic, Vehicle (TC 541.201)","—"],
+  ["Light Transmission","TC 547.001(3)","—","—"],
+  ["Road Machinery","TC 547.001(5-a)","Person, Vehicle (TC 541.201)","—"],
+  ["Safety Glazing Material","TC 547.001(6)","Person","—"],
+  ["Service Vehicle","TC 547.001(6-a)","Traffic, Truck, Utility Vehicle, Vehicle (TC 541.201)","—"],
+  ["Slow-Moving Vehicle","TC 547.001(7)","Electric Personal Assistive Mobility Device, Implement of Husbandry, Motor Vehicle, Vehicle (TC 541.201)","—"],
+  ["Slow-Moving-Vehicle Emblem","TC 547.001(8)","Director","—"],
+  ["Sunscreening Device","TC 547.001(9)","Department","—"],
+  ["Commercial Motor Vehicle (Inspection, TC 548.001)","TC 548.001(1)","School Activity Bus, Vehicle (TC 541.201)","—"]
+]},
+{id:"c9", num:"TC 551.201/.301/.351/.401, 664.001, 551A.001", name:"Bicycles, Scooters, Golf Carts, Off-Highway Vehicles", rows:[
+  ["Electric Personal Assistive Mobility Device","TC 551.201","Person","Sidewalk User, Motor Vehicle, Slow-Moving Vehicle, Pocket Bike or Minimotorbike"],
+  ["Neighborhood Electric Vehicle","TC 551.301","Motor Vehicle, Vehicle (TC 541.201)","Pocket Bike or Minimotorbike"],
+  ["Motor-Assisted Scooter","TC 551.351(1)","Pocket Bike or Minimotorbike","Sidewalk User"],
+  ["Pocket Bike or Minimotorbike","TC 551.351(2)","Electric Bicycle, Electric Personal Assistive Mobility Device, Moped, Motorcycle (TC 541.201), Neighborhood Electric Vehicle, Vehicle (TC 541.201)","Motor-Assisted Scooter"],
+  ["Golf Cart","TC 551.401","Motor Vehicle","Utility Vehicle"],
+  ["Electric Bicycle","TC 664.001(4)","Bicycle, Top Assisted Speed","Pocket Bike or Minimotorbike, Class 1/2/3 Electric Bicycle"],
+  ["Top Assisted Speed","TC 664.001(5)","Bicycle","Electric Bicycle, Class 1/2/3 Electric Bicycle"],
+  ["Class 1/2/3 Electric Bicycle","TC 664.001(1)-(3)","Bicycle, Electric Bicycle, Top Assisted Speed","—"],
+  ["All-Terrain Vehicle","TC 551A.001(1)","Motor Vehicle","Off-Highway Vehicle"],
+  ["Off-Highway Vehicle","TC 551A.001(1-d)","All-Terrain Vehicle, Recreational Off-Highway Vehicle, Sand Rail, Utility Vehicle","—"],
+  ["Sand Rail","TC 551A.001(3)","Gross Vehicle Weight, Vehicle (TC 541.201)","Off-Highway Vehicle"],
+  ["Recreational Off-Highway Vehicle","TC 551A.001(5)","Motor Vehicle, Operator","Off-Highway Vehicle"],
+  ["Utility Vehicle","TC 551A.001(6)","Golf Cart, Motor Vehicle, Operator","Service Vehicle, Off-Highway Vehicle"],
+  ["Beach","TC 551A.001(2)","—","—"],
+  ["Public Off-Highway Vehicle Land","TC 551A.001(4)","—","—"]
+]},
+{id:"c10", num:"TC 661.001/.0015, PC 71.01(d)", name:"Motorcycles & Criminal Street Gang", rows:[
+  ["Motorcycle (TC 661.001)","TC 661.001(1)","Motor Vehicle, Operator, Vehicle (TC 541.201)","Autocycle"],
+  ["Autocycle","TC 661.0015(a)","Motor Vehicle, Motorcycle (TC 661.001)","—"],
+  ["Criminal Street Gang","PC 71.01(d)","—","—"]
+]},
+{id:"c11", num:"TC 502.001", name:"Vehicle Registration", rows:[
+  ["Commercial Motor Vehicle (Registration, TC 502.001)","TC 502.001(7)","Moped, Motor Vehicle, Motorcycle (TC 541.201), Passenger Car","—"],
+  ["Farm Semitrailer or Farm Trailer","TC 502.001(15)","Vehicle (TC 541.201)","—"],
+  ["Operate Temporarily on the Highways","TC 502.001(30)","Owner","—"],
+  ["Power Sweeper","TC 502.001(33)","Litter, Vehicle (TC 541.201)","—"],
+  ["Public Property","TC 502.001(36)","—","—"]
+]},
+{id:"c12", num:"TC 621.001", name:"Vehicle Size & Weight", rows:[
+  ["Commercial Motor Vehicle (Size & Weight, TC 621.001)","TC 621.001(1)","Motor Vehicle, Motorcycle (TC 541.201)","Vehicle (TC 621.001)"],
+  ["Semitrailer (TC 621.001)","TC 621.001(6)","Motor Vehicle, Vehicle (TC 621.001)","Vehicle (TC 621.001)"],
+  ["Trailer (TC 621.001)","TC 621.001(7)","Motor Vehicle, Vehicle (TC 621.001)","Vehicle (TC 621.001)"],
+  ["Vehicle (TC 621.001)","TC 621.001(9)","Commercial Motor Vehicle (Size & Weight, TC 621.001), Motor Vehicle, Person, Semitrailer (TC 621.001), Trailer (TC 621.001)","Semitrailer (TC 621.001), Trailer (TC 621.001)"]
+]},
+{id:"c13", num:"PC 1.07", name:"Penal Code Cross-References", rows:[
+  ["Bodily Injury","PC 1.07(a)(8)","—","Serious Bodily Injury"],
+  ["Serious Bodily Injury","PC 1.07(a)(46)","Bodily Injury","—"],
+  ["Individual","PC 1.07(a)(26)","—","Sidewalk User, Commercial Driver's License, Death"],
+  ["Public Place","PC 1.07(a)(40)","—","—"],
+  ["Death","PC 1.07(a)(49)","Individual","—"]
+]},
+{id:"c14", num:"BPOC 22.33/22.37/22.38", name:"Embedded BPOC Terms", rows:[
+  ["Nomograph","BPOC 22.33","—","—"],
+  ["Incident","BPOC 22.37","Roadway","—"],
+  ["Five Areas of a Work Zone","BPOC 22.38","—","—"]
+]}
+];
+
+const REDEF_TRAP = [
+  ["Vehicle","TC 541.201(23) (general/Subtitle C), TC 621.001(9) (size & weight), TC 502.001(45) (registration, not in bank)","621.001's version explicitly lists what it includes (motor vehicle, CMV, truck-tractor, trailer, semitrailer); 541.201's is a plain functional definition"],
+  ["Motor Vehicle","TC 541.201(11) (general), TC 502.001(25) & 621.001(5) (both: \"a vehicle that is self-propelled\"), TC 522.003(21) (CDL: adds \"machine, tractor, trailer, or semitrailer... used on a highway\")","The CDL version is deliberately broader (catches towed combinations) than the general version"],
+  ["Commercial Motor Vehicle","TC 502.001(7) (registration), TC 522.003(5) (CDL — incorporated from 49 C.F.R. §383.5), TC 548.001(1) (inspection — its own 26,000 lb/15-passenger/hazmat test), TC 621.001(1) (size & weight — no weight/passenger threshold at all)","Four separate legal tests; a vehicle can be a \"CMV\" under one chapter and not another"],
+  ["Trailer / Semitrailer","TC 541.201(17)/(20) (general), TC 621.001(6)/(7) (size & weight)","621.001's wording is simplified/restated rather than cross-referenced"],
+  ["Motorcycle","TC 541.201(9) (general, up to 3 wheels), TC 521.001(a)(6-a) (driver's license — adds enclosed 3-wheel autocycle-style vehicles), TC 661.001(1) (motorcycle chapter — excludes cab-equipped 3-wheelers)","TC 502.001(24) explicitly cross-references both 521.001 and 541.201 \"as applicable,\" acknowledging the split"],
+  ["School Bus","TC 541.201(16) (general), TC 545.001(3) (Chapter 545 rules-of-the-road: folds in Multifunction School Activity Bus)","Chapter 545 treats MFSAB the same as a school bus; TC 541.201 keeps them as separate defined terms"],
+  ["Department","TC 541.002(1) & 521.001(a-1) (= DPS), TC 502.001(11) / 545.451(5) / 621.001(3) / 551A.001(1-c) (= TxDMV or TDLR, chapter by chapter)","Same word, different agency, depending on chapter — always check"],
+  ["Public Highway","TC 502.001(35) (registration), HSC 365.011(8) (litter/dumping — also covers public beaches and parks)","The litter-statute version is broader than the registration version"]
+];
+
+const DIAGRAMS = [
+{title:"Vehicle Taxonomy — TC 541.201 (the core hierarchy)", code:`flowchart TD
+  vehicle_541["Vehicle (TC 541.201)"]
+  motor_vehicle["Motor Vehicle"]
+  authorized_emergency_vehicle["Authorized Emergency Vehicle"]
+  bicycle["Bicycle"]
+  bus["Bus"]
+  farm_tractor["Farm Tractor"]
+  house_trailer["House Trailer"]
+  implement_of_husbandry["Implement of Husbandry"]
+  light_truck["Light Truck"]
+  moped["Moped"]
+  motorcycle_541["Motorcycle (TC 541.201)"]
+  mfsab["Multifunction School Activity Bus"]
+  passenger_car["Passenger Car"]
+  pole_trailer["Pole Trailer"]
+  police_vehicle["Police Vehicle"]
+  road_tractor_541["Road Tractor (TC 541.201)"]
+  school_activity_bus["School Activity Bus"]
+  school_bus_541["School Bus (TC 541.201)"]
+  semitrailer_541["Semitrailer (TC 541.201)"]
+  special_mobile_equipment["Special Mobile Equipment"]
+  towable_recreational_vehicle["Towable Recreational Vehicle"]
+  trailer_541["Trailer (TC 541.201)"]
+  truck["Truck"]
+  truck_tractor_541["Truck Tractor (TC 541.201)"]
+  electric_bicycle_ref["Electric Bicycle (541.201 cross-ref)"]
+  department["Department"]
+  motor_vehicle --> electric_bicycle_ref
+  motor_vehicle --> vehicle_541
+  authorized_emergency_vehicle --> department
+  authorized_emergency_vehicle --> police_vehicle
+  authorized_emergency_vehicle --> vehicle_541
+  bicycle --> moped
+  bus --> motor_vehicle
+  farm_tractor --> implement_of_husbandry
+  farm_tractor --> motor_vehicle
+  house_trailer --> semitrailer_541
+  house_trailer --> towable_recreational_vehicle
+  house_trailer --> trailer_541
+  implement_of_husbandry --> motor_vehicle
+  implement_of_husbandry --> passenger_car
+  implement_of_husbandry --> truck
+  implement_of_husbandry --> vehicle_541
+  light_truck --> truck
+  moped --> motor_vehicle
+  motorcycle_541 --> moped
+  motorcycle_541 --> motor_vehicle
+  mfsab --> motor_vehicle
+  mfsab --> school_activity_bus
+  mfsab --> school_bus_541
+  passenger_car --> motor_vehicle
+  passenger_car --> motorcycle_541
+  pole_trailer --> vehicle_541
+  police_vehicle --> department
+  police_vehicle --> vehicle_541
+  road_tractor_541 --> motor_vehicle
+  road_tractor_541 --> vehicle_541
+  school_activity_bus --> mfsab
+  school_activity_bus --> school_bus_541
+  school_bus_541 --> motor_vehicle
+  semitrailer_541 --> motor_vehicle
+  semitrailer_541 --> pole_trailer
+  semitrailer_541 --> vehicle_541
+  special_mobile_equipment --> house_trailer
+  special_mobile_equipment --> truck
+  special_mobile_equipment --> vehicle_541
+  towable_recreational_vehicle --> motor_vehicle
+  towable_recreational_vehicle --> vehicle_541
+  trailer_541 --> motor_vehicle
+  trailer_541 --> pole_trailer
+  trailer_541 --> vehicle_541
+  truck --> motor_vehicle
+  truck_tractor_541 --> motor_vehicle
+  truck_tractor_541 --> vehicle_541`},
+{title:"Traffic Areas — TC 541.301-304, 542.202", code:`flowchart TD
+  traffic["Traffic"]
+  roadway["Roadway"]
+  shoulder["Shoulder"]
+  improved_shoulder["Improved Shoulder"]
+  laned_roadway["Laned Roadway"]
+  crosswalk["Crosswalk"]
+  intersection["Intersection"]
+  alley["Alley"]
+  sidewalk["Sidewalk"]
+  safety_zone["Safety Zone"]
+  ramp["Ramp"]
+  limited_access_highway["Limited-Access or Controlled-Access Highway"]
+  through_highway["Through Highway"]
+  official_traffic_control_device["Official Traffic-Control Device"]
+  pedestrian["Pedestrian"]
+  traffic --> pedestrian
+  roadway --> shoulder
+  shoulder --> roadway
+  improved_shoulder --> shoulder
+  laned_roadway --> roadway
+  crosswalk --> intersection
+  crosswalk --> pedestrian
+  crosswalk --> roadway
+  crosswalk --> sidewalk
+  intersection --> alley
+  intersection --> roadway
+  alley --> traffic
+  sidewalk --> pedestrian
+  sidewalk --> roadway
+  safety_zone --> pedestrian
+  safety_zone --> roadway
+  ramp --> roadway
+  ramp --> traffic
+  limited_access_highway --> roadway
+  through_highway --> official_traffic_control_device
+  through_highway --> traffic
+  official_traffic_control_device --> traffic`},
+{title:"Driver's License / CDL — TC 521.001, 522.003", code:`flowchart TD
+  license["License"]
+  drivers_license["Driver's License"]
+  nonresident["Nonresident"]
+  gcwr["Gross Combination Weight Rating"]
+  gvwr["Gross Vehicle Weight Rating"]
+  cdl["Commercial Driver's License"]
+  commercial_learners_permit["Commercial Learner's Permit"]
+  cmv_522["Commercial Motor Vehicle (CDL, TC 522.003)"]
+  essential_need["Essential Need"]
+  ignition_interlock_device["Ignition Interlock Device"]
+  department["Department"]
+  motor_vehicle["Motor Vehicle"]
+  operator["Operator"]
+  license --> drivers_license
+  license --> motor_vehicle
+  license --> nonresident
+  drivers_license --> department
+  drivers_license --> license
+  drivers_license --> motor_vehicle
+  gcwr --> gvwr
+  cdl --> cmv_522
+  cdl --> license
+  commercial_learners_permit --> cmv_522
+  essential_need --> motor_vehicle
+  ignition_interlock_device --> motor_vehicle
+  ignition_interlock_device --> operator`},
+{title:"Automated Vehicles — TC 545.451", code:`flowchart TD
+  motor_vehicle["Motor Vehicle"]
+  automated_driving_system["Automated Driving System"]
+  automated_motor_vehicle["Automated Motor Vehicle"]
+  dynamic_driving_task["Dynamic Driving Task"]
+  human_driver["Human Driver"]
+  minimal_risk_condition["Minimal Risk Condition"]
+  operational_design_domain["Operational Design Domain"]
+  level_automation["Level 3/4/5 Automation"]
+  roadway["Roadway"]
+  automated_driving_system --> dynamic_driving_task
+  automated_driving_system --> motor_vehicle
+  automated_motor_vehicle --> automated_driving_system
+  automated_motor_vehicle --> motor_vehicle
+  human_driver --> automated_motor_vehicle
+  human_driver --> dynamic_driving_task
+  minimal_risk_condition --> automated_driving_system
+  minimal_risk_condition --> automated_motor_vehicle
+  operational_design_domain --> automated_driving_system
+  operational_design_domain --> roadway`},
+{title:"Bicycles, Scooters, Golf Carts & Off-Highway Vehicles — TC 551.x, 664.001, 551A.001", code:`flowchart TD
+  ohv["Off-Highway Vehicle"]
+  atv["All-Terrain Vehicle"]
+  rohv["Recreational Off-Highway Vehicle"]
+  sand_rail["Sand Rail"]
+  utility_vehicle["Utility Vehicle"]
+  golf_cart["Golf Cart"]
+  motor_vehicle["Motor Vehicle"]
+  gross_vehicle_weight["Gross Vehicle Weight"]
+  epamd["Electric Personal Assistive Mobility Device"]
+  nev["Neighborhood Electric Vehicle"]
+  motor_assisted_scooter["Motor-Assisted Scooter"]
+  pocket_bike["Pocket Bike or Minimotorbike"]
+  moped["Moped"]
+  electric_bicycle["Electric Bicycle"]
+  top_assisted_speed["Top Assisted Speed"]
+  class_ebike["Class 1/2/3 Electric Bicycle"]
+  bicycle["Bicycle"]
+  operator["Operator"]
+  ohv --> atv
+  ohv --> rohv
+  ohv --> sand_rail
+  ohv --> utility_vehicle
+  atv --> motor_vehicle
+  rohv --> motor_vehicle
+  rohv --> operator
+  sand_rail --> gross_vehicle_weight
+  utility_vehicle --> golf_cart
+  utility_vehicle --> motor_vehicle
+  utility_vehicle --> operator
+  golf_cart --> motor_vehicle
+  motor_vehicle --> epamd
+  nev --> motor_vehicle
+  motor_assisted_scooter --> pocket_bike
+  pocket_bike --> electric_bicycle
+  pocket_bike --> epamd
+  pocket_bike --> moped
+  pocket_bike --> nev
+  moped --> motor_vehicle
+  electric_bicycle --> bicycle
+  electric_bicycle --> top_assisted_speed
+  top_assisted_speed --> bicycle
+  class_ebike --> bicycle
+  class_ebike --> electric_bicycle
+  class_ebike --> top_assisted_speed
+  bicycle --> moped`},
+{title:"Penal Code Cross-References — PC 1.07", code:`flowchart TD
+  bodily_injury["Bodily Injury"]
+  serious_bodily_injury["Serious Bodily Injury"]
+  individual["Individual"]
+  death["Death"]
+  public_place["Public Place"]
+  serious_bodily_injury --> bodily_injury
+  death --> individual`}
+];
+
+/* ===================== RENDER ===================== */
+function esc(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderHub(){
+  const tbody = document.getElementById('hubTableBody');
+  tbody.innerHTML = HUB_TERMS.map(([term,source,count]) =>
+    `<tr data-search="${esc((term+' '+source).toLowerCase())}"><td>${esc(term)}</td><td>${esc(source)}</td><td class="hub-count">${count}</td></tr>`
+  ).join('');
+}
+
+function renderClusters(){
+  const wrap = document.getElementById('clusterCards');
+  wrap.innerHTML = CLUSTERS.map(c => {
+    const rows = c.rows.map(([term,source,refs,refby]) =>
+      `<tr data-search="${esc((term+' '+source+' '+refs+' '+refby).toLowerCase())}"><td>${esc(term)}</td><td>${esc(source)}</td><td>${esc(refs)}</td><td>${esc(refby)}</td></tr>`
+    ).join('');
+    return `<div class="sec-card" id="sec-${c.id}">
+      <div class="sec-header" onclick="toggleSec(this)">
+        <span class="sec-num">${esc(c.num)}</span>
+        <span class="sec-name">${esc(c.name)}</span>
+        <span class="toggle">&#9662;</span>
+      </div>
+      <div class="sec-body">
+        <table class="ladder-table">
+          <thead><tr><th>Term</th><th>Source</th><th>References these terms</th><th>Referenced by</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderTrap(){
+  const tbody = document.getElementById('trapTableBody');
+  tbody.innerHTML = REDEF_TRAP.map(([term,chapters,diff]) =>
+    `<tr data-search="${esc((term+' '+chapters+' '+diff).toLowerCase())}"><td>${esc(term)}</td><td>${esc(chapters)}</td><td>${esc(diff)}</td></tr>`
+  ).join('');
+}
+
+function renderDiagrams(){
+  const body = document.getElementById('diagramsBody');
+  body.innerHTML = DIAGRAMS.map((d,i) =>
+    `<h3>${esc(d.title)}</h3><div class="diagram-wrap"><pre class="mermaid" id="mmd-${i}">${esc(d.code)}</pre></div>`
+  ).join('');
+}
+
+/* ===================== SECTION TOGGLE ===================== */
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+
+/* ===================== SEARCH ===================== */
+function runSearch(){
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const countEl = document.getElementById('searchCount');
+  const secCards = document.querySelectorAll('#hubTable, .sec-card table');
+  let totalMatches = 0;
+
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    if(card.id === 'sec-diagrams'){ return; } // diagrams have no rows to filter
+    const rows = card.querySelectorAll('tbody tr');
+    let cardMatches = 0;
+    rows.forEach(function(row){
+      const hay = row.getAttribute('data-search') || '';
+      const isMatch = q === '' || hay.indexOf(q) !== -1;
+      row.classList.toggle('no-match', !isMatch);
+      if(isMatch && q !== '') cardMatches++;
+    });
+    if(q === ''){
+      card.classList.remove('no-match');
+    } else {
+      card.classList.toggle('no-match', cardMatches === 0);
+      const hdr = card.querySelector('.sec-header');
+      const bdy = card.querySelector('.sec-body');
+      if(cardMatches > 0 && hdr && bdy){
+        hdr.classList.add('open');
+        bdy.classList.add('open');
+      }
+      totalMatches += cardMatches;
+    }
+  });
+
+  countEl.textContent = q === '' ? '' : (totalMatches + ' match' + (totalMatches===1?'':'es'));
+}
+
+document.getElementById('searchBox').addEventListener('input', runSearch);
+
+/* ===================== INIT ===================== */
+renderHub();
+renderClusters();
+renderTrap();
+renderDiagrams();
+
+if(window.mermaid){
+  mermaid.initialize({
+    startOnLoad:true,
+    theme:'base',
+    themeVariables:{
+      primaryColor:'#EAE4D3',
+      primaryTextColor:'#221F19',
+      primaryBorderColor:'#B08B3C',
+      lineColor:'#5B564A',
+      secondaryColor:'#F3EFE4',
+      tertiaryColor:'#fff',
+      fontFamily:'IBM Plex Sans, sans-serif'
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', function(){
+  var first = document.querySelector('.sec-header');
+  if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
+});
+</script>
+
+</body>
+</html>
