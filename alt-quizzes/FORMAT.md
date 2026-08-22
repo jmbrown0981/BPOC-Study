@@ -204,6 +204,46 @@ Rules for this shape:
 - A block with only a flat option list (no `**Offense:**`/`**Classification:**` headers) parses
   exactly like before — this shape is fully backward-compatible with every existing bank.
 
+## Fill-in-the-blank term identification (`**Answer:**` questions)
+
+For a bank where the point is "read the full definition, name the term it defines" — as opposed to
+picking the right definition off a list of options — a question block can skip `- [ ]`/`- [x]`
+options entirely and use an `**Answer:**` field instead. The quiz-taker types the term into a text
+box; the engine grades it spelling-exact but case-insensitive (hyphens and spaces are treated as
+interchangeable, so "Right-of-way" and "Right of way" both match).
+
+```markdown
+### Q1 — Term ID
+**LO:** 22.1 · **Source:** TC 541.201(1)
+
+**Answer:** Authorized Emergency Vehicle
+
+"______" means: (A) a fire department or police vehicle; (B) a public or private ambulance
+operated by a person who has been issued a license by the Department of State Health Services...
+
+**Explanation:** The term this defines is "Authorized Emergency Vehicle," straight from TC 541.201(1).
+
+---
+```
+
+Rules for this shape:
+- The heading tag is free text same as any other question — `Term ID` is the convention used so far,
+  parallel to `Definition`/`Recall`/etc., but nothing enforces it.
+- `**Answer:**` must appear before the blank-containing prompt text (right after the `**LO:**` line,
+  same position `- [ ]` options would occupy) and holds the accepted term(s). Use `______` (six
+  underscores, matching the `Fill-in-Blank` convention) at each spot in the prompt where the term
+  would go — for definitions that name the same concept twice under two labels (e.g. Transportation
+  Code's `"Park" or "parking" means...`), blank both.
+- A block with an `**Answer:**` field and *no* `- [ ]` options parses as a fill-in-the-blank
+  question. A block with options and no `**Answer:**` field parses as regular multiple choice, same
+  as before — this is fully backward-compatible.
+- **Multiple acceptable spellings** — when the source text defines two names for the same thing in
+  one subsection — separate them with ` | ` in the `**Answer:**` field: `**Answer:** Park | Parking`.
+  Either one is graded correct; the quiz only needs one match, not both.
+- Keep the prompt text **verbatim** from the source (statute, rule, or lecture material) with only
+  the term itself swapped for the blank — this question type exists specifically so the reader is
+  studying the real defining language, not a paraphrase.
+
 ## What the engine does with this
 
 - Loads every `.md` file in `alt-quizzes/bank/`, one per chapter.

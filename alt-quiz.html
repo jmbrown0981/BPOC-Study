@@ -24,13 +24,16 @@
   .hero p.sub{font-size:12.5px; color:#C8C0AA; line-height:1.55; margin:8px 0 0; max-width:62ch;}
   .back{font-size:12px; color:var(--brass-light); text-decoration:none; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
 
-  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  nav.chips::-webkit-scrollbar{display:none;}
-  .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; transition:all 0.15s ease;}
+  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:12px 16px; display:flex; flex-wrap:wrap; justify-content:center; gap:6px 8px; max-width:1200px; margin:0 auto;}
+  .chip{flex:0 1 calc((100% - 11 * 8px) / 12); box-sizing:border-box; font-family:'IBM Plex Sans', sans-serif; font-size:11.5px; font-weight:600; padding:6px 8px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:normal; text-align:center; line-height:1.25; transition:all 0.15s ease;}
   .chip.active{background:var(--navy); border-color:var(--navy); color:#F3EFE4;}
   .chip.exam-chip{border-color:var(--brass); color:var(--amber); font-weight:700;}
   .chip.exam-chip.active{background:var(--brass); border-color:var(--brass); color:#221F19;}
   .chip.disabled{opacity:0.4; cursor:default;}
+
+  @media (max-width:900px){ .chip{flex-basis:calc((100% - 7 * 8px) / 8);} }
+  @media (max-width:640px){ .chip{flex-basis:calc((100% - 4 * 8px) / 5);} }
+  @media (max-width:420px){ .chip{flex-basis:calc((100% - 3 * 8px) / 4);} }
 
   main{max-width:560px; margin:0 auto; padding:22px 16px 60px;}
 
@@ -91,6 +94,17 @@
 
   .options.tf{flex-direction:row;}
   .options.tf .option{flex:1; text-align:center; font-weight:600;}
+
+  .fill-blank-wrap{display:flex; flex-direction:column; gap:8px;}
+  .fill-blank-input{width:100%; padding:13px 14px; border-radius:8px; border:1px solid var(--rule); font-family:'IBM Plex Sans',sans-serif; font-size:14.5px; color:var(--ink); background:#fff;}
+  .fill-blank-input:focus{outline:none; border-color:var(--brass);}
+  .fill-blank-input.correct{border-color:var(--green); background:rgba(75,106,80,0.08); color:var(--green); font-weight:600;}
+  .fill-blank-input.incorrect{border-color:var(--rust); background:rgba(166,71,46,0.08); color:var(--rust); font-weight:600;}
+  .fill-blank-input:disabled{cursor:default;}
+  .fill-blank-correct-answer{font-size:12.5px; color:var(--green); font-weight:600;}
+  .fill-blank-wrap.multi{gap:4px;}
+  .fill-blank-label{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.04em; margin-top:6px;}
+  .fill-blank-label:first-child{margin-top:0;}
 
   .selector-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--brass); margin:14px 0 8px;}
   .selector-label:first-of-type{margin-top:4px;}
@@ -158,7 +172,8 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"13", num:13, title:"Consular Notification", file:"alt-quizzes/bank/13-consular-notification.md"},
   {key:"14", num:14, title:"Civil Process", file:"alt-quizzes/bank/14-civil-process.md"},
   {key:"22-def", num:22, short:"Ch 22 (Defs)", title:"Traffic Code and Crash Investigations — Definitions", file:"alt-quizzes/bank/22-traffic-code-definitions.md"},
-  {key:"22-day1-3", num:22, short:"Ch 22 (Day 1-3)", title:"Traffic Code and Crash Investigations — Day 1-3 (Substantive Law)", file:"alt-quizzes/bank/22-day1-3.md"},
+  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md"},
+  {key:"22-day1-4", num:22, short:"Ch 22 (Day 1-4)", title:"Traffic Code and Crash Investigations — Day 1-4 (Fill-in-Blank / Multiple Choice)", file:"alt-quizzes/bank/22-day1-4.md"},
   {key:"24", num:24, title:"Written Communication", file:"alt-quizzes/bank/24-written-communication.md"},
   {key:"25", num:25, title:"Verbal Communication", file:"alt-quizzes/bank/25-verbal-communication.md"},
   {key:"28", num:28, title:"Use of Force Theory", file:"alt-quizzes/bank/28-use-of-force-theory.md"},
@@ -217,7 +232,7 @@ function parseBank(text){
     }
     if(hIdx === -1) continue;
     const rest = lines.slice(hIdx+1);
-    let lo = '', source = '';
+    let lo = '', source = '', answerRaw = null;
     const bodyLines = [];
     const optLines = [];
     const offenseLines = [];
@@ -228,6 +243,8 @@ function parseBank(text){
     for(const line of rest){
       const metaM = line.match(/^\*\*LO:\*\*\s*([^·]+?)(?:\s*·\s*\*\*Source:\*\*\s*(.+))?\s*$/);
       if(metaM && !lo){ lo = metaM[1].trim(); source = (metaM[2]||'').trim(); continue; }
+      const ansM = line.match(/^\*\*Answer:\*\*\s*(.+)$/);
+      if(ansM && answerRaw === null){ answerRaw = ansM[1].trim(); continue; }
       const offHdr = line.match(/^\*\*Offense:\*\*\s*$/);
       if(offHdr){ section = 'offense'; continue; }
       const classHdr = line.match(/^\*\*Classification:\*\*\s*$/);
@@ -250,12 +267,26 @@ function parseBank(text){
     if(isDual){
       if(offenseLines.length < 2 || classLines.length < 2) continue;
       out.push({id, tag, lo, source, prompt, dual:true, offenseOptions: offenseLines, classificationOptions: classLines, explanation: explanation.trim()});
+    } else if(answerRaw !== null && optLines.length === 0){
+      const acceptable = answerRaw.split('|').map(s => s.trim()).filter(Boolean);
+      if(acceptable.length === 0) continue;
+      // A block with N>=2 blanks in the prompt and exactly N pipe-separated answers is a
+      // multi-blank question (each blank has its own distinct required answer, e.g. two fine
+      // amounts or a jointly-defined term pair like "Park"/"Parking") -- NOT a single blank
+      // that accepts any one of N alternate phrasings. Render/grade those differently below.
+      const blankCount = (prompt.match(/_{4,}/g) || []).length;
+      const multiBlank = blankCount >= 2 && acceptable.length === blankCount;
+      out.push({id, tag, lo, source, prompt, fillBlank:true, multiBlank, acceptable, answerDisplay: acceptable, blanks: multiBlank ? acceptable : null, explanation: explanation.trim()});
     } else {
       if(optLines.length < 2) continue;
       out.push({id, tag, lo, source, prompt, options: optLines, explanation: explanation.trim()});
     }
   }
   return out;
+}
+
+function normalizeAnswer(s){
+  return String(s || '').trim().toLowerCase().replace(/[-‐-―]/g, ' ').replace(/\s+/g, ' ');
 }
 
 function renderPrompt(prompt){
@@ -652,7 +683,9 @@ function startQuiz(mode){
   const pool = examMode || activeTag === 'All' ? source : source.filter(q => q.tag === activeTag);
   questions = shuffle(pool).map(q => q.dual
     ? {...q, offenseOptions: shuffle(q.offenseOptions), classificationOptions: shuffle(q.classificationOptions)}
-    : {...q, options: shuffle(q.options)});
+    : q.fillBlank
+      ? {...q}
+      : {...q, options: shuffle(q.options)});
   qIndex = 0;
   score = 0;
   missedList = [];
@@ -740,6 +773,74 @@ function renderQuestion(){
     return;
   }
 
+  if(q.fillBlank && q.multiBlank){
+    main.innerHTML = `
+      <div class="quiz-status">
+        <span>Question ${qIndex + 1} of ${questions.length}</span>
+        ${quizMode === 'timed' ? `<span class="timer" id="timerDisplay">${Math.floor(secondsLeft/60)}:${String(secondsLeft%60).padStart(2,'0')}</span>` : `<span>${score} correct so far</span>`}
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="q-card">
+        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-prompt">${renderPrompt(q.prompt)}</div>
+      </div>
+      <div class="fill-blank-wrap multi">
+        ${q.blanks.map((_, i) => `
+          <label class="fill-blank-label">Blank ${i + 1}</label>
+          <input type="text" class="fill-blank-input" data-blank-idx="${i}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type answer for blank ${i + 1}&hellip;">
+        `).join('')}
+      </div>
+      <div id="feedbackArea"></div>
+      <button class="btn" id="submitBtn" disabled>Submit Answer</button>
+      <button class="btn" id="nextBtn" style="display:none;">${qIndex + 1 >= questions.length ? 'See Results' : 'Next Question'}</button>
+    `;
+    const inputs = Array.from(document.querySelectorAll('.fill-blank-input[data-blank-idx]'));
+    inputs[0].focus();
+    const updateSubmitEnabled = () => {
+      document.getElementById('submitBtn').disabled = inputs.some(inp => inp.value.trim() === '');
+    };
+    inputs.forEach((inp, i) => {
+      inp.addEventListener('input', updateSubmitEnabled);
+      inp.addEventListener('keydown', e => {
+        if(e.key !== 'Enter' || locked) return;
+        e.preventDefault();
+        if(i < inputs.length - 1) inputs[i + 1].focus();
+        else if(!document.getElementById('submitBtn').disabled) submitMultiBlank(q);
+      });
+    });
+    document.getElementById('submitBtn').onclick = () => submitMultiBlank(q);
+    document.getElementById('nextBtn').onclick = advanceQuestion;
+    return;
+  }
+
+  if(q.fillBlank){
+    main.innerHTML = `
+      <div class="quiz-status">
+        <span>Question ${qIndex + 1} of ${questions.length}</span>
+        ${quizMode === 'timed' ? `<span class="timer" id="timerDisplay">${Math.floor(secondsLeft/60)}:${String(secondsLeft%60).padStart(2,'0')}</span>` : `<span>${score} correct so far</span>`}
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="q-card">
+        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-prompt">${renderPrompt(q.prompt)}</div>
+      </div>
+      <div class="fill-blank-wrap">
+        <input type="text" class="fill-blank-input" id="fillBlankInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the term the blank stands for&hellip;">
+      </div>
+      <div id="feedbackArea"></div>
+      <button class="btn" id="submitBtn">Submit Answer</button>
+      <button class="btn" id="nextBtn" style="display:none;">${qIndex + 1 >= questions.length ? 'See Results' : 'Next Question'}</button>
+    `;
+    const fbInput = document.getElementById('fillBlankInput');
+    fbInput.focus();
+    fbInput.addEventListener('keydown', e => {
+      if(e.key === 'Enter' && !locked){ e.preventDefault(); submitFillBlank(q); }
+    });
+    document.getElementById('submitBtn').onclick = () => submitFillBlank(q);
+    document.getElementById('nextBtn').onclick = advanceQuestion;
+    return;
+  }
+
   const tf = isTrueFalse(q);
   main.innerHTML = `
     <div class="quiz-status">
@@ -806,6 +907,67 @@ function submitDual(q){
       `<div class="feedback-note">${verdict} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
   } else {
     document.querySelectorAll('#offenseWrap .option, #classWrap .option').forEach(b => b.classList.add('locked'));
+  }
+  document.getElementById('nextBtn').style.display = 'block';
+}
+
+function submitMultiBlank(q){
+  if(locked) return;
+  locked = true;
+  const inputs = Array.from(document.querySelectorAll('.fill-blank-input[data-blank-idx]'))
+    .sort((a, b) => Number(a.dataset.blankIdx) - Number(b.dataset.blankIdx));
+  const n = q.blanks.length;
+  const results = inputs.map((inp, i) => {
+    const userRaw = inp.value;
+    const correct = normalizeAnswer(userRaw) === normalizeAnswer(q.blanks[i]) && normalizeAnswer(userRaw).length > 0;
+    return {userRaw, correct};
+  });
+  const numCorrect = results.filter(r => r.correct).length;
+  const allRight = numCorrect === n;
+  score += numCorrect / n;
+
+  if(!allRight){
+    missedList.push({
+      prompt: q.prompt,
+      you: results.map((r, i) => `Blank ${i + 1}: ${r.userRaw.trim() || '(left blank)'} ${r.correct ? '(correct)' : '(incorrect)'}`).join(' · '),
+      correct: q.blanks.map((b, i) => `Blank ${i + 1}: ${b}`).join(' · '),
+      explanation: q.explanation,
+      source: q.source
+    });
+  }
+
+  inputs.forEach(inp => inp.disabled = true);
+  document.getElementById('submitBtn').style.display = 'none';
+
+  if(quizMode === 'practice'){
+    inputs.forEach((inp, i) => inp.classList.add(results[i].correct ? 'correct' : 'incorrect'));
+    const verdict = allRight
+      ? 'Correct on all blanks.'
+      : (numCorrect > 0 ? `Partial credit — ${numCorrect} of ${n} blanks correct.` : `Not quite on any blank — correct answer${n > 1 ? 's' : ''} below.`);
+    document.getElementById('feedbackArea').innerHTML =
+      `<div class="feedback-note">${verdict} ${!allRight ? `Correct: <span class="fill-blank-correct-answer">${escapeHtml(q.blanks.map((b, i) => `Blank ${i + 1}: ${b}`).join(' · '))}</span>.` : ''} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
+  }
+  document.getElementById('nextBtn').style.display = 'block';
+}
+
+function submitFillBlank(q){
+  if(locked) return;
+  locked = true;
+  const input = document.getElementById('fillBlankInput');
+  const userRaw = input.value;
+  const norm = normalizeAnswer(userRaw);
+  const correct = norm.length > 0 && q.acceptable.some(a => normalizeAnswer(a) === norm);
+  const correctAnswerText = q.answerDisplay.join(' or ');
+
+  if(correct){ score++; } else { missedList.push({prompt: q.prompt, you: userRaw.trim() || '(left blank)', correct: correctAnswerText, explanation: q.explanation, source: q.source}); }
+
+  input.disabled = true;
+  document.getElementById('submitBtn').style.display = 'none';
+
+  if(quizMode === 'practice'){
+    input.classList.add(correct ? 'correct' : 'incorrect');
+    document.getElementById('feedbackArea').innerHTML =
+      `<div class="feedback-note">${correct ? 'Correct.' : `Not quite — correct answer: <span class="fill-blank-correct-answer">${escapeHtml(correctAnswerText)}</span>.`} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
   }
   document.getElementById('nextBtn').style.display = 'block';
 }
