@@ -24,7 +24,13 @@
   .hero p.sub{font-size:12.5px; color:#C8C0AA; line-height:1.55; margin:8px 0 0; max-width:62ch;}
   .back{font-size:12px; color:var(--brass-light); text-decoration:none; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
 
-  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:12px 16px; display:flex; flex-wrap:wrap; justify-content:center; gap:6px 8px; max-width:1200px; margin:0 auto;}
+  .chip-nav-toggle{position:sticky; top:0; z-index:21; width:100%; display:flex; align-items:center; justify-content:center; gap:8px; background:var(--navy); color:#EDE7D6; border:none; border-bottom:1px solid var(--navy-2, var(--navy)); padding:12px 16px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:600; cursor:pointer;}
+  .chip-nav-toggle:hover{background:#1C3552;}
+  .chip-nav-toggle .chip-nav-arrow{font-size:0.8em; transition:transform 0.15s ease; opacity:0.85;}
+  .chip-nav-toggle.open .chip-nav-arrow{transform:rotate(180deg);}
+
+  nav.chips{display:none; background:var(--paper); border-bottom:1px solid var(--rule); padding:12px 16px; flex-wrap:wrap; justify-content:center; gap:6px 8px; max-width:1200px; margin:0 auto;}
+  nav.chips.open{display:flex;}
   .chip{flex:0 1 calc((100% - 11 * 8px) / 12); box-sizing:border-box; font-family:'IBM Plex Sans', sans-serif; font-size:11.5px; font-weight:600; padding:6px 8px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:normal; text-align:center; line-height:1.25; transition:all 0.15s ease;}
   .chip.active{background:var(--navy); border-color:var(--navy); color:#F3EFE4;}
   .chip.exam-chip{border-color:var(--brass); color:var(--amber); font-weight:700;}
@@ -146,6 +152,10 @@
   <p class="sub">Hand-authored questions — fill-in-the-blank, true/false, definitions, and scenario-based multiple choice — pulled straight from the rule text and the BPOC lecture notes. A different engine and a different question bank from the auto-generated Quiz.</p>
 </header>
 
+<button class="chip-nav-toggle" id="chipNavToggle" type="button">
+  <span id="chipNavToggleLabel">Choose a Quiz</span>
+  <span class="chip-nav-arrow">&#9662;</span>
+</button>
 <nav class="chips" id="chapterChips"></nav>
 
 <main id="main"></main>
@@ -176,6 +186,8 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"22-day1-4", num:22, short:"Ch 22 (Day 1-4)", title:"Traffic Code and Crash Investigations — Day 1-4 (Fill-in-Blank / Multiple Choice)", file:"alt-quizzes/bank/22-day1-4.md"},
   {key:"22-day5", num:22, short:"Ch 22 (Day 5)", title:"Traffic Code and Crash Investigations — Day 5 (Emergency Vehicles & Equipment/Lighting)", file:"alt-quizzes/bank/22-day5.md"},
   {key:"22-day6", num:22, short:"Ch 22 (Day 6)", title:"Traffic Code and Crash Investigations — Day 6 (Brakes, Warning Devices, Equipment, Inspection, Bicycles/Mopeds)", file:"alt-quizzes/bank/22-day6.md"},
+  {key:"22-day7", num:22, short:"Ch 22 (Day 7)", title:"Traffic Code and Crash Investigations — Day 7 (EPAMD/NEV/Scooters/Golf Carts/OHVs, Pedestrians, Arrest Procedure, DRP, Motorcycles, Privileged Parking)", file:"alt-quizzes/bank/22-day7.md"},
+  {key:"22-day1-7", num:22, short:"Ch 22 (Days 1-7)", title:"Traffic Code and Crash Investigations — Days 1-7 Combined (640 Questions)", file:"alt-quizzes/bank/22-day1-7.md"},
   {key:"24", num:24, title:"Written Communication", file:"alt-quizzes/bank/24-written-communication.md"},
   {key:"25", num:25, title:"Verbal Communication", file:"alt-quizzes/bank/25-verbal-communication.md"},
   {key:"28", num:28, title:"Use of Force Theory", file:"alt-quizzes/bank/28-use-of-force-theory.md"},
@@ -201,6 +213,7 @@ let secondsLeft = 0;
 let selectedOffenseIdx = null;
 let selectedClassIdx = null;
 let examMode = false;
+let chipNavOpen = false;
 let examPool = [];
 let examBreakdown = [];
 let examConfig = null;         // raw config loaded from exam-weights.json, cached after first fetch
@@ -593,16 +606,26 @@ function renderChapterChips(){
   examBtn.className = 'chip exam-chip' + (examMode ? ' active' : '');
   examBtn.textContent = '★ Full Exam' + (hasCustomWeights() ? ' •' : '');
   examBtn.title = 'Randomly assembled practice exam pulling from every bank' + (hasCustomWeights() ? ' — using your locally customized weights' : '');
-  examBtn.onclick = () => startFullExam();
+  examBtn.onclick = () => { chipNavOpen = false; startFullExam(); };
   wrap.appendChild(examBtn);
   ALT_QUIZ_CHAPTERS.forEach(ch => {
     const b = document.createElement('button');
     b.className = 'chip' + (!examMode && activeChapter && activeChapter.key === ch.key ? ' active' : '');
     b.textContent = ch.short || ('Ch ' + ch.num);
     b.title = ch.title;
-    b.onclick = () => selectChapter(ch);
+    b.onclick = () => { chipNavOpen = false; selectChapter(ch); };
     wrap.appendChild(b);
   });
+  wrap.classList.toggle('open', chipNavOpen);
+
+  const toggleBtn = document.getElementById('chipNavToggle');
+  const toggleLabel = document.getElementById('chipNavToggleLabel');
+  if(toggleBtn && toggleLabel){
+    const current = examMode ? '★ Full Exam' : (activeChapter ? (activeChapter.short || ('Ch ' + activeChapter.num)) : null);
+    toggleLabel.textContent = current ? `Quiz: ${current} — tap to change` : 'Choose a Quiz';
+    toggleBtn.classList.toggle('open', chipNavOpen);
+    toggleBtn.onclick = () => { chipNavOpen = !chipNavOpen; renderChapterChips(); };
+  }
 }
 
 async function selectChapter(ch){
@@ -634,7 +657,7 @@ function renderSetup(){
   clearInterval(timerInterval);
   const main = document.getElementById('main');
   if(!activeChapter){
-    main.innerHTML = `<div class="setup-box"><h2>Pick a chapter above</h2><p>Alt Quizzes are hand-authored, chapter by chapter — more get added as banks are built out.</p></div>`;
+    main.innerHTML = `<div class="setup-box"><h2>Tap "Choose a Quiz" above</h2><p>Alt Quizzes are hand-authored, chapter by chapter — more get added as banks are built out.</p></div>`;
     return;
   }
   const tags = availableTags();
@@ -1041,7 +1064,7 @@ function finishQuiz(){
 }
 
 renderChapterChips();
-document.getElementById('main').innerHTML = `<div class="setup-box"><h2>Pick a chapter above</h2><p>Alt Quizzes are hand-authored, chapter by chapter.</p></div>`;
+document.getElementById('main').innerHTML = `<div class="setup-box"><h2>Tap "Choose a Quiz" above</h2><p>Alt Quizzes are hand-authored, chapter by chapter.</p></div>`;
 </script>
 
 </body>
