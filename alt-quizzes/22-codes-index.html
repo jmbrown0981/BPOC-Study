@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Codes &amp; Sections Index | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1040px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .idx-table td:first-child{font-weight:600;}
+  .idx-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12.5px;}
+  .idx-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .idx-table td:nth-child(2) a:hover{color:var(--rust);}
+  .idx-table td:nth-child(2) a .ext{font-size:9px; vertical-align:super;}
+  .idx-table td:last-child{white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft);}
+  tr.no-match{display:none;}
+  .sec-card.no-match{display:none;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  .code-tag{display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.03em; padding:1px 5px; border-radius:3px; margin-right:5px; vertical-align:1px;}
+  .code-tag.TC{background:#E7EFE8; color:#3C5C40;}
+  .code-tag.PC{background:#F3E6E1; color:#8A4A32;}
+  .code-tag.HSC{background:#EAE4D3; color:#7A5F1E;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Codes &amp; Sections Index</h1>
+      <p class="sub">Every code section the Ch.22 BPOC material cites &mdash; grouped the way the chapter teaches it (Day 1&ndash;8), each one linked straight to the current statute text on statutes.capitol.texas.gov.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Find a term or section:</label>
+  <input type="text" id="searchBox" placeholder="e.g. Golf cart, 551.401, Reckless Driving..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-d1">Day 1</a>
+  <a class="chip" href="#sec-d2">Day 2</a>
+  <a class="chip" href="#sec-d3">Day 3</a>
+  <a class="chip" href="#sec-d4">Day 4</a>
+  <a class="chip" href="#sec-d5">Day 5</a>
+  <a class="chip" href="#sec-d6">Day 6</a>
+  <a class="chip" href="#sec-d7">Day 7</a>
+  <a class="chip" href="#sec-d8">Day 8</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to use this:</b> every term, offense name, or topic below is exactly as the <a href="../resources/BPOC_markdown/22.%20Traffic%20Code%20and%20Crash%20Investigations.md">Ch.22 BPOC outline</a> cites it, tagged with the code chapter/section it comes from and linked to that section on the Legislature's own statute site. Example: <b>&ldquo;Golf cart&rdquo;</b> has the meaning assigned by <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.551.htm#551.401" target="_blank" rel="noopener">Transportation Code &sect; 551.401</a> &mdash; find it under Day 7 below, or just search &ldquo;golf cart&rdquo;. <b>LO</b> = the BPOC learning-objective number the item is taught under. Offenses here show only the citation &mdash; for classification, fines, and jail time see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
+</div>
+
+<div id="clusterCards"></div>
+
+</main>
+
+<footer>Ch.22 Traffic Code &mdash; Codes &amp; Sections Index &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+/* ===================== DATA ===================== */
+/* Each row: [item label, code (TC/PC/HSC), section string, LO tag] */
+
+const CLUSTERS = [
+{id:"d1", num:"Day 1", name:"Vehicles, Persons, Authorities, Traffic Areas (LO 22.1–22.3)", rows:[
+  ["Authorized Emergency Vehicle","TC","541.201","22.1"],
+  ["Bicycle","TC","541.201","22.1"],
+  ["Bus","TC","541.201","22.1"],
+  ["Farm Tractor","TC","541.201","22.1"],
+  ["House Trailer","TC","541.201","22.1"],
+  ["Implement of Husbandry","TC","541.201","22.1"],
+  ["Light Truck","TC","541.201","22.1"],
+  ["Moped","TC","541.201","22.1"],
+  ["Motorcycle","TC","541.201","22.1"],
+  ["Motor Vehicle","TC","541.201","22.1"],
+  ["Multifunction School Activity Bus","TC","541.201","22.1"],
+  ["Passenger Car","TC","541.201","22.1"],
+  ["Pole Trailer","TC","541.201","22.1"],
+  ["Police Vehicle","TC","541.201","22.1"],
+  ["Road Tractor","TC","541.201","22.1"],
+  ["School Activity Bus","TC","541.201","22.1"],
+  ["School Bus","TC","541.201","22.1"],
+  ["Semi-Trailer","TC","541.201","22.1"],
+  ["Special Mobile Equipment","TC","541.201","22.1"],
+  ["Towable Recreational Vehicle","TC","541.201","22.1"],
+  ["Trailer","TC","541.201","22.1"],
+  ["Truck","TC","541.201","22.1"],
+  ["Truck Tractor","TC","541.201","22.1"],
+  ["Vehicle","TC","541.201","22.1"],
+  ["Electric Bicycle (cross-ref)","TC","541.201","22.1"],
+  ["Rail Transportation","TC","541.202","22.1"],
+  ["Equipment","TC","541.203","22.1"],
+  ["Escort Flagger","TC","541.001","22.2"],
+  ["Operator","TC","541.001","22.2"],
+  ["Owner","TC","541.001","22.2"],
+  ["Pedestrian","TC","541.001","22.2"],
+  ["Person","TC","541.001","22.2"],
+  ["School Crossing Guard","TC","541.001","22.2"],
+  ["Sidewalk User","TC","541.001","22.2"],
+  ["Department","TC","541.002","22.2"],
+  ["Director","TC","541.002","22.2"],
+  ["Local Authority","TC","541.002","22.2"],
+  ["Police Officer","TC","541.002","22.2"],
+  ["State","TC","541.002","22.2"],
+  ["Metropolitan Area","TC","541.101","22.2"],
+  ["Restricted Districts (Business/Residence/Urban District)","TC","541.102","22.2"],
+  ["Bodily Injury","PC","1.07(a)(8)","22.2"],
+  ["Serious Bodily Injury","PC","1.07(a)(46)","22.2"],
+  ["Individual","PC","1.07(a)(26)","22.2"],
+  ["Public Place","PC","1.07(a)(40)","22.2"],
+  ["Death","PC","1.07(a)(49)","22.2"],
+  ["Traffic","TC","541.301","22.3"],
+  ["Alley","TC","541.302","22.3"],
+  ["Crosswalk","TC","541.302","22.3"],
+  ["Freeway","TC","541.302","22.3"],
+  ["Freeway Main Lane","TC","541.302","22.3"],
+  ["Highway or Street","TC","541.302","22.3"],
+  ["Improved Shoulder","TC","541.302","22.3"],
+  ["Laned Roadway","TC","541.302","22.3"],
+  ["Limited-Access or Controlled-Access Highway","TC","541.302","22.3"],
+  ["Private Road or Driveway","TC","541.302","22.3"],
+  ["Ramp","TC","541.302","22.3"],
+  ["Roadway","TC","541.302","22.3"],
+  ["Safety Zone","TC","541.302","22.3"],
+  ["School Crossing Zone","TC","541.302","22.3"],
+  ["School Crosswalk","TC","541.302","22.3"],
+  ["Shoulder","TC","541.302","22.3"],
+  ["Sidewalk","TC","541.302","22.3"],
+  ["Through Highway","TC","542.202(b)(2)","22.3"],
+  ["Intersection","TC","541.303","22.3"],
+  ["Official Traffic-Control Device","TC","541.304","22.3"],
+  ["Railroad Sign or Signal","TC","541.304","22.3"],
+  ["Traffic-Control Signal","TC","541.304","22.3"]
+]},
+{id:"d2", num:"Day 2", name:"Misc. Terms, Litter, Obedience &amp; Offenses, Driver's License Codes (LO 22.4–22.7)", rows:[
+  ["Daytime","TC","541.401","22.4"],
+  ["Gross Vehicle Weight","TC","541.401","22.4"],
+  ["Nighttime","TC","541.401","22.4"],
+  ["Park or Parking","TC","541.401","22.4"],
+  ["Personal Injury","TC","541.401","22.4"],
+  ["Right-of-Way","TC","541.401","22.4"],
+  ["Stand or Standing","TC","541.401","22.4"],
+  ["Stop or Stopping","TC","541.401","22.4"],
+  ["Dispose or Dump","HSC","365.011(5)","22.5"],
+  ["Litter","HSC","365.011(6)","22.5"],
+  ["Public Highway","HSC","365.011(8)","22.5"],
+  ["Illegal Dumping; Discarding Lighted Materials; Criminal Penalties","HSC","365.012","22.5"],
+  ["Vehicles on Highways","TC","542.001","22.6"],
+  ["Government Vehicles","TC","542.002","22.6"],
+  ["Animals and Animal-Drawn Vehicles","TC","542.003","22.6"],
+  ["Persons and Equipment Engaged in Work on Highway Surface","TC","542.004","22.6"],
+  ["Rules on Private Property","TC","542.005","22.6"],
+  ["General Rule of Uniformity","TC","542.201","22.6"],
+  ["Powers of Local Authorities","TC","542.202","22.6"],
+  ["General Offense","TC","542.301","22.6"],
+  ["Offense by Person Owning or Controlling Vehicle","TC","542.302","22.6"],
+  ["Inchoate Offense","TC","542.303","22.6"],
+  ["General Penalty","TC","542.401","22.6"],
+  ["Fine for Offense in Construction or Maintenance Work Zone","TC","542.404","22.6"],
+  ["Penalties for Failure to Yield Right-of-Way Offense Resulting in Collision","TC","542.4045","22.6"],
+  ["Obedience Required to Police Officers, School Crossing Guards, and Escort Flaggers","TC","542.501","22.6"],
+  ["Driver's License (definition)","TC","521.001","22.7"],
+  ["Gross Combination Weight Rating (DL)","TC","521.001","22.7"],
+  ["Gross Vehicle Weight Rating (DL)","TC","521.001","22.7"],
+  ["License (definition)","TC","521.001","22.7"],
+  ["Nonresident (definition)","TC","521.001","22.7"],
+  ["License to Be Carried and Exhibited on Demand; Criminal Penalty","TC","521.025","22.7"],
+  ["Dismissal of Expired License Charge","TC","521.026","22.7"],
+  ["Persons Exempt From License Requirement","TC","521.027","22.7"],
+  ["Effect of Military Service on License Requirement","TC","521.028","22.7"],
+  ["Operation of Motor Vehicle by New State Residents","TC","521.029","22.7"],
+  ["Accident and Conviction Reports; Individual Records","TC","521.042","22.7"],
+  ["Notice of Change of Address or Name","TC","521.054","22.7"],
+  ["Emergency Contact and Medical Information Databases","TC","521.060","22.7"],
+  ["Class A License","TC","521.081","22.7"],
+  ["Class B License","TC","521.082","22.7"],
+  ["Class C License","TC","521.083","22.7"],
+  ["Class M License","TC","521.084","22.7"],
+  ["Type of Vehicle Authorized","TC","521.085","22.7"],
+  ["Personal Identification Certificate","TC","521.101","22.7"],
+  ["Application by New State Resident","TC","521.144","22.7"],
+  ["License Ineligibility in General","TC","521.201","22.7"],
+  ["Learner License","TC","521.222","22.7"],
+  ["Hardship License","TC","521.223","22.7"],
+  ["Restricted Class M License","TC","521.224","22.7"],
+  ["Essential Need (Occupational License)","TC","521.241","22.7"],
+  ["Ignition Interlock Device (Occupational License)","TC","521.241","22.7"],
+  ["Eligibility (Occupational License)","TC","521.242","22.7"],
+  ["Order Granting License","TC","521.248","22.7"],
+  ["Notice to Department; Issuance of Occupational Driver's License","TC","521.249","22.7"],
+  ["Court Order in Operator's Possession","TC","521.250","22.7"],
+  ["Criminal Offense; Penalty (Occupational License)","TC","521.253","22.7"],
+  ["License Expiration","TC","521.271","22.7"],
+  ["License Expiration: Person at Least 85 Years of Age","TC","521.2711","22.7"],
+  ["Department's Determination for License Suspension","TC","521.292","22.7"],
+  ["Habitual Violator (definition)","TC","521.292(b)","22.7"],
+  ["Suspension for Offense Relating to Racing of Motor Vehicle on Public Highway or Street","TC","521.350","22.7"],
+  ["General Violation","TC","521.451","22.7"],
+  ["Fictitious License or Certificate","TC","521.453","22.7"],
+  ["Driving While License Invalid","TC","521.457","22.7"],
+  ["Permitting Unauthorized Person to Drive","TC","521.458","22.7"],
+  ["Motor Vehicle Rentals","TC","521.460","22.7"],
+  ["General Criminal Penalty (DL)","TC","521.461","22.7"],
+  ["Commercial Driver's License (definition)","TC","522.003","22.7"],
+  ["Commercial Driver Learner's Permit (definition)","TC","522.003","22.7"],
+  ["Commercial Motor Vehicle (CDL definition)","TC","522.003","22.7"],
+  ["Gross Combination Weight Rating (CDL)","TC","522.003","22.7"],
+  ["Gross Vehicle Weight Rating (CDL)","TC","522.003","22.7"],
+  ["Applicability (CDL)","TC","522.004","22.7"],
+  ["License or Permit Required; Offense (CDL)","TC","522.011","22.7"],
+  ["Classifications (CDL)","TC","522.041","22.7"],
+  ["Endorsements; Offenses (CDL)","TC","522.042","22.7"],
+  ["Driving While Having Alcohol in System Prohibited (CDL)","TC","522.101","22.7"],
+  ["Surrender of Driver's License or Personal Identification Certificate","TC","521.183","22.7"]
+]},
+{id:"d3", num:"Day 3", name:"Signs, Signals, Markings; Ch.545 Subchapters B–D (LO 22.8–22.11)", rows:[
+  ["Adoption of Sign Manual for State Highways","TC","544.001","22.8"],
+  ["Compliance with Traffic Control Device","TC","544.004","22.8"],
+  ["Interference with Traffic-Control Device or Railroad Sign or Signal","TC","544.005","22.8"],
+  ["Display of Unauthorized Signs, Signals, or Markings","TC","544.006","22.8"],
+  ["Traffic-Control Signals in General","TC","544.007","22.8"],
+  ["Flashing Signals","TC","544.008","22.8"],
+  ["Lane-Direction-Control Signals","TC","544.009","22.8"],
+  ["Stop Signs and Yield Signs","TC","544.010","22.8"],
+  ["Lane Use Signs","TC","544.011","22.8"],
+  ["Pass or Passing (definition)","TC","545.001","22.9"],
+  ["School Bus (Ch.545 definition)","TC","545.001","22.9"],
+  ["Operator (Ch.545)","TC","545.002","22.9"],
+  ["Operation of Motorcycles on Roadway Laned for Traffic","TC","545.0605","22.9"],
+  ["Driving on Right Side of Roadway","TC","545.051","22.9"],
+  ["Driving Past Vehicle Moving in Opposite Direction","TC","545.052","22.9"],
+  ["Passing to the Left, Return; Being Passed","TC","545.053","22.9"],
+  ["Passing to the Left: Safe Distance","TC","545.054","22.9"],
+  ["Passing to the Left: Passing Zones","TC","545.055","22.9"],
+  ["Driving to Left of Center of Roadway: Limitations Other Than Passing","TC","545.056","22.9"],
+  ["Passing to the Right","TC","545.057","22.9"],
+  ["Driving on Improved Shoulder","TC","545.058","22.9"],
+  ["One-Way Roadway and Rotary Traffic Islands","TC","545.059","22.9"],
+  ["Driving on Roadway Laned For Traffic","TC","545.060","22.9"],
+  ["Driving on Multiple-Lane Roadway","TC","545.061","22.9"],
+  ["Following Distance","TC","545.062","22.9"],
+  ["Driving on Divided Highway","TC","545.063","22.9"],
+  ["Restricted Access","TC","545.064","22.9"],
+  ["Restriction of Use of Highway","TC","545.0651","22.9"],
+  ["Passing a School Bus; Offense","TC","545.066","22.9"],
+  ["Turning at Intersection","TC","545.101","22.10"],
+  ["Turning on Curve or Crest of Grade","TC","545.102","22.10"],
+  ["Safely Turning","TC","545.103","22.10"],
+  ["Signaling Turns; Use of Turn Signals","TC","545.104","22.10"],
+  ["Signaling Stops","TC","545.105","22.10"],
+  ["Signals by Hand and Arm or by Signal Lamp","TC","545.106","22.10"],
+  ["Method of Giving Hand and Arm Signals","TC","545.107","22.10"],
+  ["Vehicle Approaching or Entering Intersection","TC","545.151","22.11"],
+  ["Vehicle Turning Left","TC","545.152","22.11"],
+  ["Vehicle Entering Stop or Yield Intersection","TC","545.153","22.11"],
+  ["Vehicle Entering or Leaving Limited-Access or Controlled Access Highway","TC","545.154","22.11"],
+  ["Vehicle Entering Highway from Private Road or Driveway","TC","545.155","22.11"],
+  ["Vehicle Approached by Authorized Emergency Vehicle","TC","545.156","22.11"],
+  ["Passing Certain Vehicles","TC","545.157","22.11"]
+]},
+{id:"d4", num:"Day 4", name:"Ch.545 Subchapters F–I; Automated Motor Vehicles (LO 22.12–22.15)", rows:[
+  ["Obedience to Signal Indicating Approach of Train or Other On-Track Equipment","TC","545.251","22.12"],
+  ["All Vehicles to Stop at Certain Railroad Grade Crossings","TC","545.252","22.12"],
+  ["Buses to Stop at All Railroad Grade Crossings","TC","545.253","22.12"],
+  ["School Buses to Stop at All Railroad Grade Crossings","TC","545.2535","22.12"],
+  ["Vehicles Carrying Explosive Substances or Flammable Liquids","TC","545.254","22.12"],
+  ["Emerging from an Alley, Driveway, or Building","TC","545.256","22.12"],
+  ["Stopping, Standing, or Parking Outside a Business or Residence District","TC","545.301","22.13"],
+  ["Stopping, Standing, or Parking Prohibited in Certain Places","TC","545.302","22.13"],
+  ["Additional Parking Regulations","TC","545.303","22.13"],
+  ["Moving the Vehicle of Another; Unlawful Parking","TC","545.304","22.13"],
+  ["Removal of Unlawfully Stopped Vehicle","TC","545.305","22.13"],
+  ["Removal of Personal Property from Roadway or Right-of-Way","TC","545.3051","22.13"],
+  ["Presumption (stopping/standing/parking)","TC","545.308","22.13"],
+  ["Maximum Speed Requirement","TC","545.351","22.14"],
+  ["Prima Facie Speed Limits","TC","545.352","22.14"],
+  ["Authority of Texas Transportation Commission to Alter Speed Limits","TC","545.353","22.14"],
+  ["Authority of County Commissioners Court to Alter Speed Limits","TC","545.355","22.14"],
+  ["Special Speed Limitations","TC","545.361","22.14"],
+  ["Minimum Speed Regulations","TC","545.363","22.14"],
+  ["Speed Limit Exception for Emergencies; Municipal Regulation","TC","545.365","22.14"],
+  ["Reckless Driving; Offense","TC","545.401","22.15"],
+  ["Moving a Parked Vehicle","TC","545.402","22.15"],
+  ["Driving Through Safety Zone","TC","545.403","22.15"],
+  ["Unattended Motor Vehicle","TC","545.404","22.15"],
+  ["Following or Obstructing Fire Apparatus or Ambulance","TC","545.407","22.15"],
+  ["Crossing Fire Hose","TC","545.408","22.15"],
+  ["Drawbars and Trailer Hitches, Saddle-Mount Towing","TC","545.409","22.15"],
+  ["Towing Safety Chains","TC","545.410","22.15"],
+  ["Child Passenger Safety Seat Systems; Offense","TC","545.412","22.15"],
+  ["Safety Belts; Offense","TC","545.413","22.15"],
+  ["Riding in Open Beds; Offense","TC","545.414","22.15"],
+  ["Riding in or on Boat or Personal Watercraft Drawn by Vehicle; Offense","TC","545.4145","22.15"],
+  ["Backing a Vehicle","TC","545.415","22.15"],
+  ["Riding on Motorcycle or Moped","TC","545.416","22.15"],
+  ["Obstruction of Operator's View or Driving Mechanism","TC","545.417","22.15"],
+  ["Opening Vehicle Doors","TC","545.418","22.15"],
+  ["Riding in House Trailer","TC","545.419","22.15"],
+  ["Person Riding in Trailer or Semi-Trailer Drawn by Truck, Road Tractor, or Truck Tractor","TC","545.4191","22.15"],
+  ["Racing on Highway","TC","545.420","22.15"],
+  ["Fleeing or Attempting to Elude Police Officer; Offense","TC","545.421","22.15"],
+  ["Evading Arrest or Detention (cross-ref)","PC","38.04","22.15"],
+  ["Crossing Sidewalk or Hike and Bike Trail","TC","545.422","22.15"],
+  ["Crossing Property","TC","545.423","22.15"],
+  ["Operation of Vehicle by Person Under 18 Years of Age","TC","545.424","22.15"],
+  ["Use of Wireless Communication Device","TC","545.425","22.15"],
+  ["Use of Portable Wireless Communication Device for Electronic Messaging; Offense","TC","545.4251","22.15"],
+  ["Use of Wireless Communication Device on School Property; Offense","TC","545.4252","22.15"],
+  ["Operation of School Bus","TC","545.426","22.15"],
+  ["Operation of Vehicle with Insufficient Undercarriage Clearance","TC","545.427","22.15"],
+  ["Operation of Miniature Vehicle","TC","545.429","22.15"],
+  ["Definitions (Automated Motor Vehicles)","TC","545.451","22.15"],
+  ["Operator of Automated Motor Vehicle","TC","545.453","22.15"],
+  ["Automated Motor Vehicle Operation","TC","545.454","22.15"]
+]},
+{id:"d5", num:"Day 5", name:"Emergency Vehicles; Vehicle Equipment General &amp; Lighting (LO 22.16–22.17 pt.1)", rows:[
+  ["Permissible Conduct (Emergency Vehicles)","TC","546.001","22.16"],
+  ["When Conduct Permissible","TC","546.002","22.16"],
+  ["Audible or Visual Signals Required","TC","546.003","22.16"],
+  ["Exceptions to Signal Requirement","TC","546.004","22.16"],
+  ["Duty of Care","TC","546.005","22.16"],
+  ["Designated Emergency Vehicle During Declared Disasters","TC","546.006","22.16"],
+  ["Closure of Road or Highway by Firefighter","TC","546.007","22.16"],
+  ["Highway Maintenance Vehicle or Construction Vehicle (definition)","TC","547.001","22.17"],
+  ["Light Transmission (definition)","TC","547.001","22.17"],
+  ["Road Machinery (definition)","TC","547.001","22.17"],
+  ["Safety Glazing Material (definition)","TC","547.001","22.17"],
+  ["Service Vehicle (definition)","TC","547.001","22.17"],
+  ["Slow-Moving Vehicle (definition)","TC","547.001","22.17"],
+  ["Slow-Moving Vehicle Emblem (definition)","TC","547.001","22.17"],
+  ["Sun-Screening Device (definition)","TC","547.001","22.17"],
+  ["Applicability (Vehicle Equipment)","TC","547.002","22.17"],
+  ["Equipment Not Affected","TC","547.003","22.17"],
+  ["General Offenses (Vehicle Equipment)","TC","547.004","22.17"],
+  ["Offense Relating to Violation of Special-Use Provisions","TC","547.005","22.17"],
+  ["Lighting Standards for Certain Vehicles (Maintenance and Service Vehicle)","TC","547.105","22.17"],
+  ["General Provisions Relating to Measurements","TC","547.301","22.17"],
+  ["Duty to Display Lights","TC","547.302","22.17"],
+  ["Color Requirements (Lighting)","TC","547.303","22.17"],
+  ["Applicability (Lighting)","TC","547.304","22.17"],
+  ["Restrictions on Use of Lights","TC","547.305","22.17"],
+  ["LED Ground Effect Lighting Equipment on Motorcycle or Moped","TC","547.306","22.17"],
+  ["Headlamps Required","TC","547.321","22.17"],
+  ["Use of Federal Standard (Lighting)","TC","547.3215","22.17"],
+  ["Taillamps Required","TC","547.322","22.17"],
+  ["Stoplamps Required","TC","547.323","22.17"],
+  ["Turn Signal Lamps Required","TC","547.324","22.17"],
+  ["Reflectors Required","TC","547.325","22.17"],
+  ["Minimum Lighting Equipment Required","TC","547.326","22.17"],
+  ["Spotlamps Permitted","TC","547.327","22.17"],
+  ["Fog Lamps Permitted","TC","547.328","22.17"],
+  ["Auxiliary Driving Lamps Permitted","TC","547.330","22.17"],
+  ["Hazard Lamps Permitted","TC","547.331","22.17"],
+  ["Other Lamps Permitted","TC","547.332","22.17"],
+  ["Multiple-Beam Lighting Equipment Required","TC","547.333","22.17"],
+  ["Single-Beam Lighting Equipment Permitted","TC","547.334","22.17"],
+  ["Applicability (Large Vehicle Lighting)","TC","547.351","22.17"],
+  ["Additional Lighting Equipment Requirements","TC","547.352","22.17"],
+  ["Color Requirements (Large Vehicle Lighting)","TC","547.353","22.17"],
+  ["Mounting Requirements","TC","547.354","22.17"],
+  ["Visibility Requirements","TC","547.355","22.17"]
+]},
+{id:"d6", num:"Day 6", name:"Vehicle Equipment cont'd; Compulsory Inspection; Bicycles &amp; Mopeds (LO 22.17 pt.2–22.18)", rows:[
+  ["General Lighting Equipment Requirements (Farm Tractors/Implements)","TC","547.371","22.17"],
+  ["Lighting Requirements for Combination Vehicle","TC","547.372","22.17"],
+  ["Lighting Equipment on Projecting Loads","TC","547.382","22.17"],
+  ["Lighting Requirements on Parked Vehicles","TC","547.383","22.17"],
+  ["Brakes Required","TC","547.401","22.17"],
+  ["Operation and Maintenance of Brakes","TC","547.402","22.17"],
+  ["Service Brakes Required","TC","547.403","22.17"],
+  ["Parking Brakes Required","TC","547.404","22.17"],
+  ["Breakaway Device Required","TC","547.405(d)(e)","22.17"],
+  ["Audible Warning Devices","TC","547.501","22.17"],
+  ["Visible Warning Devices Required","TC","547.502","22.17"],
+  ["Display of Hazard Lamps","TC","547.503","22.17"],
+  ["Display of Devices When Lighted Lamps Required","TC","547.504","22.17"],
+  ["Display of Devices When Lighted Lamps Are Not Required","TC","547.505","22.17"],
+  ["Safety Belts Required (equipment)","TC","547.601","22.17"],
+  ["Mirrors Required","TC","547.602","22.17"],
+  ["Windshield Wipers Required","TC","547.603","22.17"],
+  ["Muffler Required","TC","547.604","22.17"],
+  ["Emission System Required","TC","547.605","22.17"],
+  ["Safety Guard or Flaps Required","TC","547.606","22.17"],
+  ["Required Label for Sun Screening Devices","TC","547.609","22.17"],
+  ["Use of Certain Video Equipment and Television Receivers","TC","547.611","22.17"],
+  ["Restrictions on Windows","TC","547.613","22.17"],
+  ["Recording Devices","TC","547.615","22.17"],
+  ["Radar Interference Devices; Offense","TC","547.616","22.17"],
+  ["Motorcycle and Moped Footrests and Handholds Required","TC","547.617","22.17"],
+  ["Equipment Required for Certain Automated Motor Vehicles","TC","547.618","22.17"],
+  ["Additional Equipment Requirements for School Buses and Other Buses","TC","547.701","22.17"],
+  ["Requirements for Multifunction School Activity Buses","TC","547.7012","22.17"],
+  ["Additional Equipment Requirements for Authorized Emergency Vehicles","TC","547.702","22.17"],
+  ["Additional Equipment Requirements for Slow-Moving Vehicles","TC","547.703","22.17"],
+  ["Lighting Equipment (Motorcycles/Motor-Driven Cycles)","TC","547.801","22.17"],
+  ["Definitions (Compulsory Inspection)","TC","548.001","22.17"],
+  ["Commercial Motor Vehicle (Inspection definition)","TC","548.001(1)","22.17"],
+  ["Vehicles and Equipment Subject to Inspection","TC","548.051","22.17"],
+  ["Vehicles Not Subject to Inspection","TC","548.052","22.17"],
+  ["Applicability (Persons Affected — Bicycles/Mopeds)","TC","551.001","22.18"],
+  ["Moped and Electric Bicycle Included","TC","551.002","22.18"],
+  ["Rights and Duties (Bicycles)","TC","551.101","22.18"],
+  ["General Operation (Bicycles)","TC","551.102","22.18"],
+  ["Operation on Roadway (Bicycles)","TC","551.103","22.18"],
+  ["Safety Equipment (Bicycles)","TC","551.104","22.18"],
+  ["Operation of Electric Bicycle","TC","551.107","22.18"]
+]},
+{id:"d7", num:"Day 7", name:"EPAMDs, NEVs, Scooters, Golf Carts, E-Bikes, Off-Highway Vehicles; Pedestrians; Arrest &amp; Notice to Appear; Motorcycles; Privileged Parking (LO 22.18 cont.–22.23)", rows:[
+  ["Definition (Electric Personal Assistive Mobility Device)","TC","551.201","22.18"],
+  ["Operation on Roadway (EPAMD)","TC","551.202","22.18"],
+  ["Sidewalks (EPAMD)","TC","551.203","22.18"],
+  ["Definition (Neighborhood Electric Vehicle)","TC","551.301","22.18"],
+  ["Registration (NEV)","TC","551.302","22.18"],
+  ["Operation on Roadways (NEV)","TC","551.303","22.18"],
+  ["Limited Operation (NEV)","TC","551.304","22.18"],
+  ["Motor-Assisted Scooter (definition)","TC","551.351","22.18"],
+  ["Pocket Bike or Mini Motorbike (definition)","TC","551.351","22.18"],
+  ["Operation on Roadways and Sidewalks (Scooters)","TC","551.352","22.18"],
+  ["Application of Subchapter to Pocket Bike or Mini Motorbike","TC","551.353","22.18"],
+  ["Golf Cart (definition)","TC","551.401","22.18"],
+  ["Registration NOT Authorized; License Plates (Golf Carts)","TC","551.402","22.18"],
+  ["Operation Authorized in Certain Areas (Golf Carts)","TC","551.403","22.18"],
+  ["Operation on Highway Authorized by Municipality or Certain Counties (Golf Carts)","TC","551.404","22.18"],
+  ["Crossing Intersections (Golf Carts)","TC","551.405","22.18"],
+  ["Definitions (Electric Bicycles)","TC","664.001","22.18"],
+  ["Definitions (Off-Highway Vehicles)","TC","551A.001","22.18"],
+  ["Operation on Public Land or Beach: Safety Certificate Required","TC","551A.031","22.18"],
+  ["Operation on Public Off-Highway Land by Person Younger Than 14","TC","551A.032","22.18"],
+  ["Operation on Beach","TC","551A.033","22.18"],
+  ["Crossing Highway at Point Other Than Intersection (OHV)","TC","551A.034","22.18"],
+  ["Applicability (OHV on Highway)","TC","551A.051","22.18"],
+  ["Registration; License Plates (OHV)","TC","551A.052","22.18"],
+  ["Operation on Highway Authorized by Municipality or Certain Counties (OHV)","TC","551A.053","22.18"],
+  ["Prohibition of Operation in Certain Areas by Municipality, County, or Department (OHV)","TC","551A.054","22.18"],
+  ["Operation Authorized in Certain Areas (OHV)","TC","551A.055","22.18"],
+  ["Crossing Intersections (OHV)","TC","551A.056","22.18"],
+  ["Agricultural or Utility Operation on Highway (OHV)","TC","551A.057","22.18"],
+  ["Law Enforcement Operation (OHV)","TC","551A.058","22.18"],
+  ["Required Equipment; Display of Lights (OHV)","TC","551A.071","22.18"],
+  ["Safety Apparel Required (OHV)","TC","551A.072","22.18"],
+  ["Reckless or Careless Operation Prohibited (OHV)","TC","551A.073","22.18"],
+  ["Carrying Passengers (OHV)","TC","551A.074","22.18"],
+  ["Violation of Chapter on Public Off-Highway Vehicle Land or Beach","TC","551A.091","22.18"],
+  ["Traffic Control Signals (Pedestrians)","TC","552.001","22.19"],
+  ["Pedestrian Right-of-Way if Control Signal Present","TC","552.002","22.19"],
+  ["Pedestrian Right-of-Way at Crosswalk","TC","552.003","22.19"],
+  ["Pedestrian to Keep to Right","TC","552.004","22.19"],
+  ["Crossing at Point Other Than Crosswalk","TC","552.005","22.19"],
+  ["Use of Sidewalk (Pedestrians)","TC","552.006","22.19"],
+  ["Solicitation by Pedestrians","TC","552.007","22.19"],
+  ["Drivers to Exercise Due Care","TC","552.008","22.19"],
+  ["Blind Pedestrians","TC","552.010","22.19"],
+  ["Operators of Certain Mobility Devices","TC","552A.0101","22.19"],
+  ["Arrest Without Warrant Authorized","TC","543.001","22.20"],
+  ["Person Arrested to Be Taken Before Magistrate","TC","543.002","22.20"],
+  ["Notice to Appear Required: Person Not Taken Before Magistrate","TC","543.003","22.20"],
+  ["Notice to Appear Required: Certain Offenses","TC","543.004","22.20"],
+  ["Promise to Appear; Release","TC","543.005","22.20"],
+  ["Time and Place of Appearance","TC","543.006","22.20"],
+  ["Notice to Appear: Commercial Vehicle or License","TC","543.007","22.20"],
+  ["Violation by Officer","TC","543.008","22.20"],
+  ["Compliance with or Violation of Promise to Appear","TC","543.009","22.20"],
+  ["Specifications of Speeding Charge","TC","543.010","22.20"],
+  ["Failure to Appear (contrast — not a TC violation)","PC","38.10","22.20"],
+  ["Definitions (Motorcycles)","TC","661.001","22.22"],
+  ["Protective Headgear for Autocycle","TC","661.0015","22.22"],
+  ["Offenses Relating to Not Wearing Protective Headgear","TC","661.003","22.22"],
+  ["Criminal Street Gang (definition)","PC","71.01(d)","22.22"],
+  ["Disabled Parking Placard","TC","681.002","22.23"],
+  ["Applicant's Identification","TC","681.0031","22.23"],
+  ["Parking Privileges: Persons with Disabilities","TC","681.006","22.23"],
+  ["Parking Privileges: Certain Veterans and Military Award Recipients","TC","681.008","22.23"],
+  ["Enforcement (Privileged Parking)","TC","681.010","22.23"],
+  ["Enforcement by Certain Appointed Persons","TC","681.0101","22.23"],
+  ["Offenses; Presumption (Privileged Parking)","TC","681.011","22.23"],
+  ["Seizure and Revocation of Placard","TC","681.012","22.23"]
+]},
+{id:"d8", num:"Day 8", name:"Abandoned Vehicles; Registration; Financial Responsibility; Size &amp; Weight; Warning Devices; Implied Consent; Crash Investigation (LO 22.24–22.30)", rows:[
+  ["Abandoned Motor Vehicle (definition)","TC","683.002","22.24"],
+  ["Authority to Take Abandoned Motor Vehicle Into Custody","TC","683.011","22.24"],
+  ["Taking Abandoned Motor Vehicle Into Custody: Notice","TC","683.012","22.24"],
+  ["Commercial Motor Vehicle (Registration definition)","TC","502.001","22.25"],
+  ["Department (Registration definition)","TC","502.001","22.25"],
+  ["Farm Semitrailer or Farm Trailer (definition)","TC","502.001","22.25"],
+  ["Farm Tractor (Registration definition)","TC","502.001","22.25"],
+  ["Implements of Husbandry (Registration definition)","TC","502.001","22.25"],
+  ["Operate Temporarily on the Highways (definition)","TC","502.001","22.25"],
+  ["Power Sweeper (definition)","TC","502.001","22.25"],
+  ["Public Property (Registration definition)","TC","502.001","22.25"],
+  ["Registration of Autocycle","TC","502.005","22.25"],
+  ["Registration Required; General Rule","TC","502.040","22.25"],
+  ["Evidence of Financial Responsibility (Registration)","TC","502.046","22.25"],
+  ["Issuance of Registration Insignia","TC","502.059","22.25"],
+  ["72- or 144-Hour Permits","TC","502.094","22.25"],
+  ["One-Trip or 30-Day Trip License Plates","TC","502.095","22.25"],
+  ["Certain Off Highway Vehicles (Registration Exemption)","TC","502.140","22.25"],
+  ["Manufactured Housing (Registration Exemption)","TC","502.142","22.25"],
+  ["Other Vehicles (Registration Exemption)","TC","502.143","22.25"],
+  ["Vehicles Operated on Public Highway Separating Real Property Under Vehicle Owner's Control","TC","502.144","22.25"],
+  ["Vehicles Operated by Certain Nonresidents","TC","502.145","22.25"],
+  ["Certain Farm Vehicles and Drilling and Construction Equipment","TC","502.146","22.25"],
+  ["Fee: Commercial Farm Motor Vehicle","TC","502.433","22.25"],
+  ["Operation of Vehicle with Expired License Plate","TC","502.407","22.25"],
+  ["General Penalty (Registration)","TC","502.471","22.25"],
+  ["Operation of Vehicle Under Improper Registration","TC","502.472","22.25"],
+  ["Operation of Vehicle Without Registration Insignia","TC","502.473","22.25"],
+  ["Operation of One-Trip Permit Vehicle","TC","502.474","22.25"],
+  ["Wrong, Fictitious, Altered, or Obscured Insignia","TC","502.475","22.25"],
+  ["Deceptively Similar Insignia","TC","502.4755","22.25"],
+  ["Transfer of Vehicle Registration","TC","502.491","22.25"],
+  ["Temporary Transit Permit for a Vehicle Purchased","TC","502.492","22.25"],
+  ["Dealer's License Plates","TC","503.061","22.25"],
+  ["Dealer's Temporary License Plate","TC","503.062","22.25"],
+  ["Dealer's and Converter's Temporary Tag Database","TC","503.0626","22.25"],
+  ["Dealer Issued License Plates for Buyer","TC","503.063","22.25"],
+  ["Database of Dealer-Issued License Plates","TC","503.0631","22.25"],
+  ["Limitation on Use of Dealer's License Plates and Tags","TC","503.068","22.25"],
+  ["Removal of Out-of-State License Plates","TC","503.070","22.25"],
+  ["Criminal Penalty (Dealer's Plates)","TC","503.094","22.25"],
+  ["Transfer of License Plates","TC","504.901","22.25"],
+  ["Antique Vehicles; Offense","TC","504.941","22.25"],
+  ["Operation of Vehicle Without License Plate","TC","504.943","22.25"],
+  ["Operation of Vehicle with Wrong License Plate","TC","504.944","22.25"],
+  ["Wrong, Fictitious, Altered, or Obscured License Plate","TC","504.945","22.25"],
+  ["Deceptively Similar License Plates","TC","504.946","22.25"],
+  ["License Plate Flipper; Offense","TC","504.9465","22.25"],
+  ["Requirement of Financial Responsibility","TC","601.051","22.26"],
+  ["Exceptions to Financial Responsibility Requirement","TC","601.052","22.26"],
+  ["Evidence of Financial Responsibility (Ch.601)","TC","601.053","22.26"],
+  ["Owner May Provide Evidence of Financial Responsibility for Others","TC","601.054","22.26"],
+  ["Motor Vehicle Liability Insurance; Requirements","TC","601.071","22.26"],
+  ["Required Policy Terms","TC","601.073","22.26"],
+  ["Standard Proof of Motor Vehicle Liability Insurance Form","TC","601.081","22.26"],
+  ["Surety Bond","TC","601.121","22.26"],
+  ["Deposit of Cash or Securities with Comptroller","TC","601.122","22.26"],
+  ["Deposit of Cash or Cashier's Check with County Judge","TC","601.123","22.26"],
+  ["Self-Insurance","TC","601.124","22.26"],
+  ["Operation of Motor Vehicle in Violation of Motor Vehicle Liability Insurance Requirement; Offense","TC","601.191","22.26"],
+  ["Defense: Financial Responsibility in Effect at Time of Alleged Offense","TC","601.193","22.26"],
+  ["Defense: Possession of Motor Vehicle for Maintenance or Repair","TC","601.194","22.26"],
+  ["Commercial Motor Vehicle (Size &amp; Weight definition)","TC","621.001","22.26"],
+  ["Department (Size &amp; Weight definition)","TC","621.001","22.26"],
+  ["Semitrailer (Size &amp; Weight definition)","TC","621.001","22.26"],
+  ["Trailer (Size &amp; Weight definition)","TC","621.001","22.26"],
+  ["Vehicle (Size &amp; Weight definition)","TC","621.001","22.26"],
+  ["Vehicle Registration Receipt for Certain Heavy Vehicles","TC","621.002","22.26"],
+  ["Restricted Operation on Certain Holidays","TC","621.006","22.26"],
+  ["Maximum Weight of Vehicle or Combination","TC","621.101","22.26"],
+  ["Maximum Width","TC","621.201","22.26"],
+  ["Maximum Length of Motor Vehicle","TC","621.203","22.26"],
+  ["Maximum Length of Semitrailer or Trailer","TC","621.204","22.26"],
+  ["Maximum Length of Vehicle Combinations","TC","621.205","22.26"],
+  ["Maximum Extended Length of Load","TC","621.206","22.26"],
+  ["Exception to Maximum Extended Length of Load: Certain Motor Vehicles","TC","621.2061","22.26"],
+  ["Maximum Height","TC","621.207","22.26"],
+  ["Failure to Carry or Present Vehicle License Receipt","TC","621.501","22.26"],
+  ["Bridge or Underpass Clearance; Offense","TC","621.504","22.26"],
+  ["Width Exceptions","TC","622.901","22.26"],
+  ["Length Exceptions","TC","622.902","22.26"],
+  ["Tampering with Warning Devices","TC","472.021","22.27"],
+  ["Obeying Warning Signs and Barricades","TC","472.022","22.27"],
+  ["Removing Material From Highway","TC","600.001","22.28"],
+  ["Applicability (Implied Consent)","TC","724.002","22.29"],
+  ["Consent to Taking of Specimen","TC","724.011","22.29"],
+  ["Taking of Specimen","TC","724.012","22.29"],
+  ["Person Incapable of Refusal","TC","724.014","22.29"],
+  ["Information Provided by Officer Before Requesting Specimen","TC","724.015","22.29"],
+  ["Breath Specimen","TC","724.016","22.29"],
+  ["Blood Specimen","TC","724.017","22.29"],
+  ["Furnishing Information Concerning Test Results","TC","724.018","22.29"],
+  ["Additional Analysis by Request","TC","724.019","22.29"],
+  ["Statement Requested on Refusal","TC","724.031","22.29"],
+  ["Officer's Duties for License Suspension; Written Refusal Report","TC","724.032","22.29"],
+  ["Applicability of Chapter (Crash Investigation)","TC","550.001","22.30"],
+  ["Collision Involving Personal Injury or Death","TC","550.021","22.30"],
+  ["Collision Involving Damage to Vehicle","TC","550.022","22.30"],
+  ["Duty To Give Information and Render Aid","TC","550.023","22.30"],
+  ["Duty on Striking Unattended Vehicle","TC","550.024","22.30"],
+  ["Duty on Striking Structure, Fixture or Highway Landscaping","TC","550.025","22.30"],
+  ["Immediate Report of Collision","TC","550.026","22.30"],
+  ["Investigation by Peace Officer","TC","550.041","22.30"],
+  ["Officer's Collision Report","TC","550.062","22.30"],
+  ["Report on Appropriate Form","TC","550.063","22.30"],
+  ["Collision Report Forms","TC","550.064","22.30"],
+  ["Manslaughter","PC","19.04","22.30"],
+  ["Criminally Negligent Homicide","PC","19.05","22.30"],
+  ["Intoxication Assault","PC","49.07","22.30"],
+  ["Intoxication Manslaughter","PC","49.08","22.30"]
+]}
+];
+
+/* ===================== LINK BUILDING ===================== */
+const ABBR = {TC:"TN", PC:"PE", HSC:"HS"};
+function citeLink(code, section){
+  const abbr = ABBR[code] || code;
+  const chapterMatch = section.match(/^[0-9]+[A-Za-z]?/);
+  const chapter = chapterMatch ? chapterMatch[0] : section;
+  const anchorMatch = section.match(/^[0-9]+[A-Za-z]?\.[0-9A-Za-z]+/);
+  const anchor = anchorMatch ? anchorMatch[0] : null;
+  const base = `https://statutes.capitol.texas.gov/Docs/${abbr}/htm/${abbr}.${chapter}.htm`;
+  return anchor ? `${base}#${anchor}` : base;
+}
+function esc(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ===================== RENDER ===================== */
+function renderClusters(){
+  const wrap = document.getElementById('clusterCards');
+  wrap.innerHTML = CLUSTERS.map(c => {
+    const rows = c.rows.map(([term, code, section, lo]) => {
+      const url = citeLink(code, section);
+      const label = `${code} &sect; ${esc(section)}`;
+      return `<tr data-search="${esc((term+' '+code+' '+section+' '+lo).toLowerCase())}">
+        <td>${esc(term)}</td>
+        <td><span class="code-tag ${code}">${code}</span><a href="${url}" target="_blank" rel="noopener">${esc(section)}<span class="ext">&#8599;</span></a></td>
+        <td>${esc(lo)}</td>
+      </tr>`;
+    }).join('');
+    return `<div class="sec-card" id="sec-${c.id}">
+      <div class="sec-header" onclick="toggleSec(this)">
+        <span class="sec-num">${esc(c.num)}</span>
+        <span class="sec-name">${c.name}</span>
+        <span class="toggle">&#9662;</span>
+      </div>
+      <div class="sec-body">
+        <table class="ladder-table idx-table">
+          <thead><tr><th>Item</th><th>Statute</th><th>LO</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ===================== SECTION TOGGLE ===================== */
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+
+/* ===================== SEARCH ===================== */
+function runSearch(){
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const countEl = document.getElementById('searchCount');
+  let totalMatches = 0;
+
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    const rows = card.querySelectorAll('tbody tr');
+    let cardMatches = 0;
+    rows.forEach(function(row){
+      const hay = row.getAttribute('data-search') || '';
+      const isMatch = q === '' || hay.indexOf(q) !== -1;
+      row.classList.toggle('no-match', !isMatch);
+      if(isMatch && q !== '') cardMatches++;
+    });
+    if(q === ''){
+      card.classList.remove('no-match');
+    } else {
+      card.classList.toggle('no-match', cardMatches === 0);
+      const hdr = card.querySelector('.sec-header');
+      const bdy = card.querySelector('.sec-body');
+      if(cardMatches > 0 && hdr && bdy){
+        hdr.classList.add('open');
+        bdy.classList.add('open');
+      }
+      totalMatches += cardMatches;
+    }
+  });
+
+  countEl.textContent = q === '' ? '' : (totalMatches + ' match' + (totalMatches===1?'':'es'));
+}
+
+document.getElementById('searchBox').addEventListener('input', runSearch);
+
+/* ===================== INIT ===================== */
+renderClusters();
+
+window.addEventListener('DOMContentLoaded', function(){
+  var first = document.querySelector('.sec-header');
+  if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Offense &amp; Penalty Reference | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .off-table td:first-child{font-weight:600;}
+  .off-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px;}
+  .off-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .off-table td:nth-child(2) a:hover{color:var(--rust);}
+  .off-table td:nth-child(3){white-space:nowrap;}
+  .off-table td:nth-child(4), .off-table td:nth-child(5){font-size:12px;}
+  tr.no-match{display:none;}
+  .sec-card.no-match{display:none;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  .lvl{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.02em; padding:2px 7px; border-radius:10px; white-space:nowrap;}
+  .lvl.C{background:#EAE4D3; color:#7A5F1E;}
+  .lvl.B{background:#E7D9C5; color:#8A5A28;}
+  .lvl.A{background:#F0DCC8; color:#9A4A1E;}
+  .lvl.SJF{background:#E9D3D3; color:#8A2E2E;}
+  .lvl.F3{background:#E3C7C7; color:#7A1F1F;}
+  .lvl.F2{background:#DDB8B8; color:#6E1414;}
+  .lvl.F1{background:#D6A8A8; color:#5C0F0F;}
+  .lvl.MISD{background:#EDEADF; color:#5B564A;}
+  .lvl.ADMIN{background:#DDE3DD; color:#3C5C40;}
+  .ladder-ref{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px;}
+  .ladder-ref th, .ladder-ref td{border:1px solid var(--rule); padding:6px 10px; text-align:left;}
+  .ladder-ref th{background:var(--paper-dim);}
+  .note-inline{font-size:11.5px; color:var(--ink-soft); font-style:italic;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Offense &amp; Penalty Reference</h1>
+      <p class="sub">Every offense the Ch.22 BPOC material calls out, with its chapter/section, classification, and fine/jail range straight from the statute &mdash; plus the &ldquo;general penalty&rdquo; catchall each subtitle falls back to when a section doesn't state its own punishment.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Find an offense:</label>
+  <input type="text" id="searchBox" placeholder="e.g. Reckless Driving, 545.401, Class B..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-ladder">Punishment Ladder</a>
+  <a class="chip" href="#sec-catchall">General-Penalty Catchalls</a>
+  <a class="chip" href="#sec-o1">Ch.542 / Rules of the Road (General)</a>
+  <a class="chip" href="#sec-o2">Driver's License / CDL</a>
+  <a class="chip" href="#sec-o3">Ch.545 Rules of the Road</a>
+  <a class="chip" href="#sec-o4">Vehicle Equipment (Ch.547)</a>
+  <a class="chip" href="#sec-o5">Motorcycles / OHV / Privileged Parking</a>
+  <a class="chip" href="#sec-o6">Registration &amp; License Plates</a>
+  <a class="chip" href="#sec-o7">Financial Responsibility / Size &amp; Weight</a>
+  <a class="chip" href="#sec-o8">Warning Devices / Litter</a>
+  <a class="chip" href="#sec-o9">Crash Investigation Duties (Ch.550)</a>
+  <a class="chip" href="#sec-o10">Penal Code Charges Tied to Crash Investigation</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> classification and fine/jail figures are quoted or computed straight from current statute text (verified against the cached copies in <code>resources/traffic_code</code>, <code>resources/penal_code</code>, and <code>resources/health_safety_code</code>, cross-checked live against statutes.capitol.texas.gov). Where a section just says &ldquo;Class B misdemeanor&rdquo; without restating the fine, the amount shown comes from the general Penal Code Ch.12 punishment ladder at the top of this page. Where a section creates an offense but states <b>no</b> classification or fine at all, it falls to its subtitle's general-penalty catchall &mdash; see that section below and the &ldquo;Falls to&rdquo; column. This is a study aid, not legal advice &mdash; always verify against current statute before relying on a specific number. For the full list of Ch.22 code sections (definitions, procedure, equipment, etc.) with direct links, see the <a href="22-codes-index.html">Codes &amp; Sections Index</a>.
+</div>
+
+<div class="sec-card" id="sec-ladder">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 12</span>
+    <span class="sec-name">The Punishment Ladder (Penal Code Ch. 12) &mdash; what each classification actually means</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref">
+      <thead><tr><th>Classification</th><th>Fine</th><th>Confinement</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lvl C">Class C Misdemeanor</span></td><td>Up to $500</td><td>None</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.23" target="_blank" rel="noopener">PC 12.23</a></td></tr>
+        <tr><td><span class="lvl B">Class B Misdemeanor</span></td><td>Up to $2,000</td><td>Up to 180 days county jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.22" target="_blank" rel="noopener">PC 12.22</a></td></tr>
+        <tr><td><span class="lvl A">Class A Misdemeanor</span></td><td>Up to $4,000</td><td>Up to 1 year county jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.21" target="_blank" rel="noopener">PC 12.21</a></td></tr>
+        <tr><td><span class="lvl SJF">State Jail Felony</span></td><td>Up to $10,000</td><td>180 days &ndash; 2 years state jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.35" target="_blank" rel="noopener">PC 12.35</a></td></tr>
+        <tr><td><span class="lvl F3">Felony, 3rd Degree</span></td><td>Up to $10,000</td><td>2 &ndash; 10 years TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.34" target="_blank" rel="noopener">PC 12.34</a></td></tr>
+        <tr><td><span class="lvl F2">Felony, 2nd Degree</span></td><td>Up to $10,000</td><td>2 &ndash; 20 years TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.33" target="_blank" rel="noopener">PC 12.33</a></td></tr>
+        <tr><td><span class="lvl F1">Felony, 1st Degree</span></td><td>Up to $10,000</td><td>5 &ndash; 99 years or life TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.32" target="_blank" rel="noopener">PC 12.32</a></td></tr>
+      </tbody>
+    </table>
+    <p class="note-inline" style="display:block; margin-top:8px;">An offense the Transportation Code just calls &ldquo;a misdemeanor&rdquo; with no class specified, and no fine of its own, defaults to Class C under PC 12.03(b). Most TC subtitles instead write their own flat-dollar general penalty (below) rather than relying on that default.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-catchall">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">CATCH-ALL</span>
+    <span class="sec-name">General-Penalty Catchalls &mdash; the bottom rung for each subtitle</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>When a Transportation Code section creates a duty or prohibition but doesn't say what breaking it costs, it falls to whichever of these applies to its subtitle. These are the floor of the ladder for that whole subtitle.</p>
+    <table class="ladder-table off-table" id="catchallTableEl">
+      <thead><tr><th>Catchall</th><th>Statute</th><th>Applies to</th><th>Penalty</th></tr></thead>
+      <tbody id="catchallBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="clusterCards"></div>
+
+</main>
+
+<footer>Ch.22 Traffic Code &mdash; Offense &amp; Penalty Reference &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+/* ===================== HELPERS ===================== */
+const ABBR = {TC:"TN", PC:"PE", HSC:"HS"};
+function citeLink(code, section){
+  const abbr = ABBR[code] || code;
+  const chapterMatch = section.match(/^[0-9]+[A-Za-z]?/);
+  const chapter = chapterMatch ? chapterMatch[0] : section;
+  const anchorMatch = section.match(/^[0-9]+[A-Za-z]?\.[0-9A-Za-z]+/);
+  const anchor = anchorMatch ? anchorMatch[0] : null;
+  const base = `https://statutes.capitol.texas.gov/Docs/${abbr}/htm/${abbr}.${chapter}.htm`;
+  return anchor ? `${base}#${anchor}` : base;
+}
+function esc(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function lvlTag(lvl){
+  const map = {
+    "Class C misdemeanor":"C","Class B misdemeanor":"B","Class A misdemeanor":"A",
+    "State jail felony":"SJF","Felony, 3rd degree":"F3","Felony, 2nd degree":"F2","Felony, 1st degree":"F1",
+    "Misdemeanor (flat fine)":"MISD","Administrative":"ADMIN"
+  };
+  const cls = map[lvl] || "MISD";
+  return `<span class="lvl ${cls}">${esc(lvl)}</span>`;
+}
+
+/* ===================== CATCHALL DATA ===================== */
+const CATCHALLS = [
+  ["General Penalty","TC","542.401","Subtitle C, Rules of the Road (Ch.541&ndash;600 range: 543,544,545,546,547,548,550,551,551A,552,552A, etc.) when no other penalty is stated","Misdemeanor, fine $1&ndash;$200, no jail"],
+  ["General Criminal Penalty","TC","521.461","Ch.521, Driver's Licenses, when no specific penalty is stated","Misdemeanor, fine up to $200"],
+  ["General Penalty","TC","502.471","Ch.502/503/504, Registration &amp; License Plates, when not otherwise specified","Misdemeanor, fine up to $200"]
+];
+
+function renderCatchalls(){
+  const tbody = document.getElementById('catchallBody');
+  tbody.innerHTML = CATCHALLS.map(([name, code, section, appliesTo, penalty]) => {
+    const url = citeLink(code, section);
+    return `<tr><td>${esc(name)}</td><td><a href="${url}" target="_blank" rel="noopener">${code} &sect; ${esc(section)}</a></td><td>${appliesTo}</td><td>${esc(penalty)}</td></tr>`;
+  }).join('');
+}
+
+/* ===================== OFFENSE DATA ===================== */
+/* Each row: [offense name, code, section, level, penalty detail, falls-to note (or "")] */
+
+const CLUSTERS = [
+{id:"o1", num:"542", name:"Ch.542 &mdash; General Obedience, Offenses &amp; Penalties (the Rules-of-the-Road framework)", rows:[
+  ["General Offense (fails to perform/prohibited act under Subtitle C)","TC","542.301","Misdemeanor (flat fine)","Misdemeanor by default; punished per 542.401 unless another section sets its own penalty",""],
+  ["Offense by Person Owning or Controlling Vehicle (requiring/knowingly permitting unlawful operation)","TC","542.302","Misdemeanor (flat fine)","Falls to 542.401 general penalty",""],
+  ["Inchoate Offense (attempt/conspiracy/permitting a Subtitle C violation)","TC","542.303","Misdemeanor (flat fine)","Same grade as the underlying offense attempted/conspired to",""],
+  ["General Penalty (the Subtitle C catchall itself)","TC","542.401","Misdemeanor (flat fine)","Fine of $1&ndash;$200, no jail &mdash; applies whenever a Subtitle C section doesn't state its own penalty",""],
+  ["Fine for Offense in Construction or Maintenance Work Zone (workers present)","TC","542.404","Misdemeanor (flat fine)","Doubles both the min. and max. fine of the underlying offense when committed in an active work zone with workers present (doesn't apply to Ch.548, Ch.552, or 545.412/.413)",""],
+  ["Penalties for Failure to Yield Right-of-Way Offense Resulting in Collision","TC","542.4045","Misdemeanor (flat fine)","Fine $500&ndash;$2,000 if the other party suffered bodily injury; fine $1,000&ndash;$4,000 if serious bodily injury",""]
+]},
+{id:"o2", num:"521/522", name:"Driver's License &amp; Commercial Driver's License Offenses", rows:[
+  ["License to Be Carried and Exhibited on Demand; Criminal Penalty","TC","521.025","Misdemeanor (flat fine)","Fine up to $200; $25&ndash;$200 on 2nd conviction within a year; on 3rd+, fine $25&ndash;$500 and/or 72 hrs&ndash;6 mo. jail; Class A misdemeanor if driving without financial responsibility (601.191) and at fault in a collision causing serious bodily injury/death",""],
+  ["Criminal Offense; Penalty (occupational license violation)","TC","521.253","Class B misdemeanor","Per PC 12.22: fine up to $2,000, up to 180 days jail",""],
+  ["General Violation (fictitious/altered license, lending, multiple valid licenses, false application info)","TC","521.451","Class A misdemeanor","Per PC 12.21: fine up to $4,000, up to 1 year jail",""],
+  ["Fictitious License or Certificate (under-21 fake ID)","TC","521.453","Class C misdemeanor","Per PC 12.23: fine up to $500; court may also order 8&ndash;12 hrs community service",""],
+  ["Driving While License Invalid","TC","521.457","Class C misdemeanor","Per PC 12.23 (fine up to $500) by default; Class B if a prior conviction or driving without financial responsibility; Class A if driving without financial responsibility <em>and</em> at fault in a collision causing serious bodily injury/death",""],
+  ["Permitting Unauthorized Person to Drive","TC","521.458","Misdemeanor (flat fine)","No penalty stated in the section itself","521.461"],
+  ["Motor Vehicle Rentals (renting without verifying a license)","TC","521.460","Misdemeanor (flat fine)","No penalty stated in the section itself","521.461"],
+  ["General Criminal Penalty (Ch.521 catchall itself)","TC","521.461","Misdemeanor (flat fine)","Fine up to $200 &mdash; applies whenever Ch.521 doesn't state its own penalty",""],
+  ["License or Permit Required; Offense (driving a CMV without a valid CDL/permit)","TC","522.011","Misdemeanor (flat fine)","Fine up to $500; up to $1,000 if a prior conviction under this section within the preceding year",""],
+  ["Endorsements; Offense (CDL endorsement violations)","TC","522.042","Class C misdemeanor","Per PC 12.23: fine up to $500",""],
+  ["Driving While Having Alcohol in System Prohibited (CDL)","TC","522.101","Administrative","No criminal fine/jail stated &mdash; violation triggers a mandatory 24-hour out-of-service order, not a standalone criminal penalty in this section",""]
+]},
+{id:"o3", num:"545", name:"Ch.545 &mdash; Rules of the Road Offenses", rows:[
+  ["Passing a School Bus; Offense","TC","545.066","Misdemeanor (flat fine)","Fine $500&ndash;$1,250; $1,000&ndash;$2,000 on a 2nd+ conviction within 5 years; Class A misdemeanor if serious bodily injury results; state jail felony on a subsequent offense after that",""],
+  ["Reckless Driving; Offense","TC","545.401","Misdemeanor (flat fine)","Fine up to $200, up to 30 days county jail, or both",""],
+  ["Child Passenger Safety Seat Systems; Offense","TC","545.412","Misdemeanor (flat fine)","Fine $25&ndash;$250",""],
+  ["Safety Belts; Offense","TC","545.413","Misdemeanor (flat fine)","Fine $25&ndash;$50 (unbelted adult/operator); fine $100&ndash;$200 (unbelted child not covered by the car-seat law)",""],
+  ["Riding in Open Beds; Offense","TC","545.414","Misdemeanor (flat fine)","Fine $25&ndash;$200",""],
+  ["Riding in or on Boat or Personal Watercraft Drawn by Vehicle; Offense","TC","545.4145","Misdemeanor (flat fine)","No penalty stated in the section itself","542.401"],
+  ["Racing on Highway","TC","545.420","Class B misdemeanor","Per PC 12.22 by default; Class A if certain aggravating facts shown; state jail felony on a 3rd offense; felony 3rd degree if bodily injury results; felony 2nd degree if serious bodily injury or death results",""],
+  ["Fleeing or Attempting to Elude Police Officer; Offense","TC","545.421","Class B misdemeanor","Per PC 12.22 by default; Class A misdemeanor if the person recklessly endangers another during the offense (see also PC 38.04, Evading Arrest or Detention, often charged alongside/instead)",""],
+  ["Use of Portable Wireless Communication Device for Electronic Messaging; Offense (texting while driving)","TC","545.4251","Misdemeanor (flat fine)","Fine $25&ndash;$99; Class A misdemeanor (fine up to $4,000, up to 1 year jail) if the person caused a collision resulting in death or serious bodily injury",""],
+  ["Use of Wireless Communication Device on School Property; Offense","TC","545.4252","Misdemeanor (flat fine)","No penalty stated in the section itself","542.401"]
+]},
+{id:"o4", num:"547", name:"Vehicle Equipment Offenses (Ch.547)", rows:[
+  ["General Offenses (unsafe or noncompliant vehicle equipment)","TC","547.004","Misdemeanor (flat fine)","Says only “a misdemeanor” &mdash; no fine of its own stated","542.401"],
+  ["Offense Relating to Violation of Special-Use Provisions (misusing a slow-moving-vehicle emblem or “school bus” markings)","TC","547.005","Misdemeanor (flat fine)","No penalty stated in the section itself","542.401"],
+  ["Radar Interference Devices; Offense","TC","547.616","Class C misdemeanor","Per PC 12.23: fine up to $500",""]
+]},
+{id:"o5", num:"661/551A/681", name:"Motorcycles, Off-Highway Vehicles &amp; Privileged Parking Offenses", rows:[
+  ["Offenses Relating to Not Wearing Protective Headgear","TC","661.003","Misdemeanor (flat fine)","Fine $10&ndash;$50",""],
+  ["Violation of Chapter on Public Off-Highway Vehicle Land or Beach","TC","551A.091","Class C misdemeanor","Per PC 12.23: fine up to $500",""],
+  ["Offenses; Presumption (disabled parking placard misuse)","TC","681.011","Misdemeanor (flat fine)","Fine $500&ndash;$750 (first offense), escalating with priors up to $1,200+ and/or community service; reduced $25&ndash;$400 range for certain lesser subsections",""]
+]},
+{id:"o6", num:"502/503/504", name:"Registration &amp; License Plate Offenses", rows:[
+  ["Operation of Vehicle with Expired License Plate","TC","502.407","Misdemeanor (flat fine)","No penalty stated in the section itself (court may dismiss if remedied within 20 working days)","502.471"],
+  ["General Penalty (the Ch.502/503/504 catchall itself)","TC","502.471","Misdemeanor (flat fine)","Fine up to $200, unless another section specifies otherwise",""],
+  ["Operation of Vehicle Under Improper Registration","TC","502.472","Misdemeanor (flat fine)","No penalty stated in the section itself","502.471"],
+  ["Operation of Vehicle Without Registration Insignia","TC","502.473","Misdemeanor (flat fine)","No penalty stated in the section itself","502.471"],
+  ["Operation of One-Trip Permit Vehicle (without receipt/tag)","TC","502.474","Misdemeanor (flat fine)","No penalty stated in the section itself","502.471"],
+  ["Wrong, Fictitious, Altered, or Obscured Insignia","TC","502.475","Misdemeanor (flat fine)","Fine up to $200 by default; Class B misdemeanor for the fictitious-insignia-manufacture subdivision",""],
+  ["Deceptively Similar Insignia","TC","502.4755","Felony, 3rd degree","Felony 3rd degree for manufacturing/selling; Class C misdemeanor for simple possession (Class B if a prior conviction)",""],
+  ["Criminal Penalty (dealer's license plates)","TC","503.094","Misdemeanor (flat fine)","Fine $50&ndash;$5,000",""],
+  ["Antique Vehicles; Offense","TC","504.941","Misdemeanor (flat fine)","Fine $5&ndash;$200",""],
+  ["Operation of Vehicle Without License Plate","TC","504.943","Misdemeanor (flat fine)","Fine up to $200",""],
+  ["Operation of Vehicle with Wrong License Plate","TC","504.944","Misdemeanor (flat fine)","No penalty stated in the section itself","502.471"],
+  ["Wrong, Fictitious, Altered, or Obscured License Plate","TC","504.945","Misdemeanor (flat fine)","Fine up to $200 by default; Class B for the fictitious-plate-manufacture subdivision; $300&ndash;$600 tiered fine (up to Class B on repeat) for a separate paper-plate/temp-tag subdivision",""],
+  ["Deceptively Similar License Plate","TC","504.946","Felony, 3rd degree","Felony 3rd degree for manufacturing/selling; Class C misdemeanor for simple possession (Class B if a prior conviction)",""],
+  ["License Plate Flipper; Offense","TC","504.9465","Class B misdemeanor","Class B for criminally-negligent purchase/possession; Class A for manufacture/sale/distribution",""]
+]},
+{id:"o7", num:"601/621", name:"Financial Responsibility &amp; Vehicle Size/Weight Offenses", rows:[
+  ["Operation of Motor Vehicle in Violation of Motor Vehicle Liability Insurance Requirement; Offense","TC","601.191","Misdemeanor (flat fine)","Fine $175&ndash;$350; fine $350&ndash;$1,000 if a prior conviction under this section",""],
+  ["Failure to Carry or Present Vehicle License Receipt","TC","621.501","Misdemeanor (flat fine)","Fine up to $200",""],
+  ["Bridge or Underpass Clearance; Offense","TC","621.504","Class C misdemeanor","Per PC 12.23 by default; if the person also lacked required licenses/permits: fine up to $500, up to 30 days jail, or both",""]
+]},
+{id:"o8", num:"472/365", name:"Warning Devices &amp; Litter/Illegal Dumping Offenses", rows:[
+  ["Tampering with Warning Devices","TC","472.021","Misdemeanor (flat fine)","Fine $25&ndash;$1,000, up to 2 years county jail, or both",""],
+  ["Obeying Warning Signs and Barricades","TC","472.022","Misdemeanor (flat fine)","Fine $1&ndash;$200 by default; doubled in an active work zone; Class B misdemeanor for driving around a barricade placed for water over the roadway",""],
+  ["Illegal Dumping; Discarding Lighted Materials; Criminal Penalties","HSC","365.012","Class C misdemeanor","Class C if litter/waste ≤ 5 lb or ≤ 5 gal; Class B if 5&ndash;500 lb or up to 500 cu ft; Class A for larger amounts or certain aggravating facts; state jail felony for the largest/most hazardous quantities",""]
+]},
+{id:"o9", num:"550", name:"Crash Investigation Duties (Ch.550) &mdash; “failure to stop and render aid” charges", rows:[
+  ["Collision Involving Personal Injury or Death (failing to stop/return/render aid per 550.023 after an injury/death collision)","TC","550.021","Felony, 2nd degree","Felony 2nd degree if death results; felony 3rd degree if serious bodily injury results; otherwise punishable by up to 5 years TDCJ or up to 1 year county jail, a fine up to $5,000, or both",""],
+  ["Collision Involving Damage to Vehicle (failing to stop/return/render aid per 550.023 after a property-damage-only collision)","TC","550.022","Class B misdemeanor","Class C if damage to all vehicles is under $200; Class B if $200 or more; Class C for failing to comply with the freeway/collision-investigation-site relocation duty",""],
+  ["Duty to Give Information and Render Aid","TC","550.023","Misdemeanor (flat fine)","This duty has no penalty of its own &mdash; failing to comply is what triggers the 550.021 or 550.022 offense above, depending on whether the collision involved injury/death or property damage only",""],
+  ["Duty on Striking Unattended Vehicle","TC","550.024","Class B misdemeanor","Class C if damage is under $200; Class B if $200 or more",""],
+  ["Duty on Striking Structure, Fixture or Highway Landscaping","TC","550.025","Class B misdemeanor","Class C if damage is under $200; Class B if $200 or more",""],
+  ["Immediate Report of Collision","TC","550.026","Misdemeanor (flat fine)","No penalty stated in the section itself","542.401"]
+]},
+{id:"o10", num:"PC", name:"Penal Code Charges Commonly Associated with Crash Investigation", rows:[
+  ["Manslaughter","PC","19.04","Felony, 2nd degree","Felony 2nd degree; felony 1st degree if committed while operating a commercial motor vehicle intoxicated with a prior intoxication-related conviction",""],
+  ["Criminally Negligent Homicide","PC","19.05","State jail felony","Per PC 12.35",""],
+  ["Intoxication Assault","PC","49.07","Felony, 3rd degree","Per PC 12.34",""],
+  ["Intoxication Manslaughter","PC","49.08","Felony, 2nd degree","Per PC 12.33",""],
+  ["Evading Arrest or Detention (cross-referenced from 545.421)","PC","38.04","Class A misdemeanor","Class A by default; state jail felony, felony 3rd degree, or felony 2nd degree depending on prior convictions, use of a vehicle, or death resulting",""]
+]}
+];
+
+/* ===================== RENDER ===================== */
+function renderClusters(){
+  const wrap = document.getElementById('clusterCards');
+  wrap.innerHTML = CLUSTERS.map(c => {
+    const rows = c.rows.map(([name, code, section, level, detail, fallsTo]) => {
+      const url = citeLink(code, section);
+      const fallsCell = fallsTo ? `<a href="${citeLink(code, fallsTo)}" target="_blank" rel="noopener">${code} &sect; ${esc(fallsTo)}</a>` : '&mdash;';
+      return `<tr data-search="${esc((name+' '+code+' '+section+' '+level+' '+detail).toLowerCase())}">
+        <td>${esc(name)}</td>
+        <td><a href="${url}" target="_blank" rel="noopener">${code} &sect; ${esc(section)}</a></td>
+        <td>${lvlTag(level)}</td>
+        <td>${detail}</td>
+        <td>${fallsCell}</td>
+      </tr>`;
+    }).join('');
+    return `<div class="sec-card" id="sec-${c.id}">
+      <div class="sec-header" onclick="toggleSec(this)">
+        <span class="sec-num">${esc(c.num)}</span>
+        <span class="sec-name">${c.name}</span>
+        <span class="toggle">&#9662;</span>
+      </div>
+      <div class="sec-body">
+        <table class="ladder-table off-table">
+          <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ===================== SECTION TOGGLE ===================== */
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+
+/* ===================== SEARCH ===================== */
+function runSearch(){
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const countEl = document.getElementById('searchCount');
+  let totalMatches = 0;
+
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    if(card.id === 'sec-ladder' || card.id === 'sec-catchall'){ return; }
+    const rows = card.querySelectorAll('tbody tr');
+    let cardMatches = 0;
+    rows.forEach(function(row){
+      const hay = row.getAttribute('data-search') || '';
+      const isMatch = q === '' || hay.indexOf(q) !== -1;
+      row.classList.toggle('no-match', !isMatch);
+      if(isMatch && q !== '') cardMatches++;
+    });
+    if(q === ''){
+      card.classList.remove('no-match');
+    } else {
+      card.classList.toggle('no-match', cardMatches === 0);
+      const hdr = card.querySelector('.sec-header');
+      const bdy = card.querySelector('.sec-body');
+      if(cardMatches > 0 && hdr && bdy){
+        hdr.classList.add('open');
+        bdy.classList.add('open');
+      }
+      totalMatches += cardMatches;
+    }
+  });
+
+  countEl.textContent = q === '' ? '' : (totalMatches + ' match' + (totalMatches===1?'':'es'));
+}
+
+document.getElementById('searchBox').addEventListener('input', runSearch);
+
+/* ===================== INIT ===================== */
+renderCatchalls();
+renderClusters();
+
+window.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('sec-ladder').querySelector('.sec-header').classList.add('open');
+  document.getElementById('sec-ladder').querySelector('.sec-body').classList.add('open');
+  document.getElementById('sec-catchall').querySelector('.sec-header').classList.add('open');
+  document.getElementById('sec-catchall').querySelector('.sec-body').classList.add('open');
+  var first = document.querySelector('#clusterCards .sec-header');
+  if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
+});
+</script>
+
+</body>
+</html>
