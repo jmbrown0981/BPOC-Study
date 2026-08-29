@@ -13,12 +13,24 @@
   .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
   .intro-note b{color:var(--ink);}
   .intro-note a{color:var(--navy); font-weight:600;}
-  .off-table td:first-child{font-weight:600;}
-  .off-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px;}
+  .off-table{table-layout:fixed;}
+  .off-table td{word-wrap:break-word; overflow-wrap:break-word;}
+  .off-table td:first-child{font-weight:600; width:26%;}
+  .off-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px; width:11%;}
   .off-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
   .off-table td:nth-child(2) a:hover{color:var(--rust);}
-  .off-table td:nth-child(3){white-space:nowrap;}
-  .off-table td:nth-child(4), .off-table td:nth-child(5){font-size:12px;}
+  .off-table td:nth-child(3){white-space:nowrap; width:11%;}
+  .off-table td:nth-child(4){font-size:12px; width:38%;}
+  .off-table td:nth-child(5){font-size:12px; width:14%; word-break:break-word;}
+
+  .catchall-table{table-layout:fixed;}
+  .catchall-table td{word-wrap:break-word; overflow-wrap:break-word; white-space:normal;}
+  .catchall-table td:first-child{font-weight:600; width:16%;}
+  .catchall-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px; width:12%;}
+  .catchall-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .catchall-table td:nth-child(2) a:hover{color:var(--rust);}
+  .catchall-table td:nth-child(3){width:42%; font-size:12.5px;}
+  .catchall-table td:nth-child(4){width:30%; font-size:12.5px;}
   tr.no-match{display:none;}
   .sec-card.no-match{display:none;}
   .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
@@ -32,10 +44,25 @@
   .lvl.F1{background:#D6A8A8; color:#5C0F0F;}
   .lvl.MISD{background:#EDEADF; color:#5B564A;}
   .lvl.ADMIN{background:#DDE3DD; color:#3C5C40;}
+  .lvl.TIER{background:#DDD3C5; color:#6E4A28;}
   .ladder-ref{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px;}
   .ladder-ref th, .ladder-ref td{border:1px solid var(--rule); padding:6px 10px; text-align:left;}
   .ladder-ref th{background:var(--paper-dim);}
   .note-inline{font-size:11.5px; color:var(--ink-soft); font-style:italic;}
+
+  /* Value ladder (weight/volume-tiered offenses) — same visual language as the
+     Theft & Criminal Mischief Value Ladder on the Penal Code Offense Reference page */
+  .value-ladder{display:flex; margin:10px 0; border-radius:8px; overflow:hidden; border:1px solid var(--rule); flex-wrap:wrap;}
+  .vl-cell{flex:1; min-width:130px; padding:10px 10px; text-align:center; font-size:11.5px; line-height:1.35; color:#F3EFE4; border-right:1px solid rgba(0,0,0,0.18);}
+  .vl-cell:last-child{border-right:none;}
+  .vl-cell .rng{display:block; font-family:'IBM Plex Mono', monospace; font-size:10px; opacity:0.9; margin-top:4px; line-height:1.5;}
+  .vl-cell .rng2{display:block; font-family:'IBM Plex Mono', monospace; font-size:9.5px; opacity:0.75; margin-top:2px;}
+  .vl-cell.mc{background:#4B6A50;}
+  .vl-cell.mb{background:#6F7A3E;}
+  .vl-cell.ma{background:#9B7E32;}
+  .vl-cell.sj{background:#B4712E;}
+  .ladder-note{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; font-size:12px; line-height:1.6; color:var(--ink-soft); margin-top:10px;}
+  .ladder-note b{color:var(--ink);}
 </style>
 </head>
 <body>
@@ -60,6 +87,7 @@
 <nav class="chips" id="tocChips">
   <a class="chip" href="#sec-ladder">Punishment Ladder</a>
   <a class="chip" href="#sec-catchall">General-Penalty Catchalls</a>
+  <a class="chip" href="#sec-dumping">Illegal Dumping Value Ladder</a>
   <a class="chip" href="#sec-o1">Ch.542 / Rules of the Road (General)</a>
   <a class="chip" href="#sec-o2">Driver's License / CDL</a>
   <a class="chip" href="#sec-o3">Ch.545 Rules of the Road</a>
@@ -113,10 +141,32 @@
   </div>
   <div class="sec-body">
     <p>When a Transportation Code section creates a duty or prohibition but doesn't say what breaking it costs, it falls to whichever of these applies to its subtitle. These are the floor of the ladder for that whole subtitle.</p>
-    <table class="ladder-table off-table" id="catchallTableEl">
+    <table class="ladder-table catchall-table" id="catchallTableEl">
       <thead><tr><th>Catchall</th><th>Statute</th><th>Applies to</th><th>Penalty</th></tr></thead>
       <tbody id="catchallBody"></tbody>
     </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-dumping">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">HSC 365.012</span>
+    <span class="sec-name">Illegal Dumping Value Ladder &mdash; graded by weight/volume, not dollars</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Same idea as the Theft &amp; Criminal Mischief value ladder on the <a href="../supplemental/penal-code.html">Penal Code Offense Reference</a> page, except illegal dumping grades by <b>weight or volume</b> instead of dollar value &mdash; whichever measurement puts the conduct in the higher tier controls. Applies to disposing (a), receiving for disposal (b), or transporting for disposal (c) at a place that isn't an approved solid waste site.</p>
+    <div class="value-ladder">
+      <div class="vl-cell mc">Class C Misdemeanor<span class="rng">&le; 5 lb</span><span class="rng2">or &le; 5 gal</span></div>
+      <div class="vl-cell mb">Class B Misdemeanor<span class="rng">&gt; 5 lb, &lt; 500 lb</span><span class="rng2">or &gt; 5 gal, &lt; 100 cu ft</span></div>
+      <div class="vl-cell ma">Class A Misdemeanor<span class="rng">500&ndash;999 lb or 100&ndash;199 cu ft</span><span class="rng2">commercial: &gt;5&ndash;199 lb or &gt;5 gal&ndash;199 cu ft</span></div>
+      <div class="vl-cell sj">State Jail Felony<span class="rng">&ge; 1,000 lb or &ge; 200 cu ft</span><span class="rng2">commercial: &ge;200 lb/cu ft, or in a closed barrel/drum</span></div>
+    </div>
+    <div class="ladder-note">
+      <b>Discarding lighted materials (Subsec. (a-1)</b> &mdash; a lit match, cigarette, or cigar that starts a fire) is charged under this same section but has its own baseline: a misdemeanor punishable by a <b>fine up to $500 and/or up to 30 days jail</b> when the litter involved weighs under 500&nbsp;lb or under 100&nbsp;cu&nbsp;ft &mdash; it isn't formally labeled a "Class B misdemeanor" even though the numbers land in that neighborhood. Above that quantity, it escalates through the same Class A / state-jail-felony tiers above.<br><br>
+      <b>Repeat offenders</b> (Subsec. (h)) move up one full category on a subsequent conviction under this section &mdash; a second Class C becomes a Class B, and so on.<br><br>
+      <b>Source:</b> <a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.365.htm#365.012" target="_blank" rel="noopener">Health &amp; Safety Code &sect; 365.012</a>. See also <a href="22-codes-index.html">Codes &amp; Sections Index</a> for the related litter definitions (&sect;&sect; 365.011(5), (6), (8)).
+    </div>
   </div>
 </div>
 
@@ -145,7 +195,7 @@ function lvlTag(lvl){
   const map = {
     "Class C misdemeanor":"C","Class B misdemeanor":"B","Class A misdemeanor":"A",
     "State jail felony":"SJF","Felony, 3rd degree":"F3","Felony, 2nd degree":"F2","Felony, 1st degree":"F1",
-    "Misdemeanor (flat fine)":"MISD","Administrative":"ADMIN"
+    "Misdemeanor (flat fine)":"MISD","Administrative":"ADMIN","Tiered: Class C to State Jail Felony":"TIER"
   };
   const cls = map[lvl] || "MISD";
   return `<span class="lvl ${cls}">${esc(lvl)}</span>`;
@@ -162,7 +212,7 @@ function renderCatchalls(){
   const tbody = document.getElementById('catchallBody');
   tbody.innerHTML = CATCHALLS.map(([name, code, section, appliesTo, penalty]) => {
     const url = citeLink(code, section);
-    return `<tr><td>${esc(name)}</td><td><a href="${url}" target="_blank" rel="noopener">${code} &sect; ${esc(section)}</a></td><td>${appliesTo}</td><td>${esc(penalty)}</td></tr>`;
+    return `<tr><td>${esc(name)}</td><td><a href="${url}" target="_blank" rel="noopener">${code} &sect; ${esc(section)}</a></td><td>${appliesTo}</td><td>${penalty}</td></tr>`;
   }).join('');
 }
 
@@ -237,7 +287,7 @@ const CLUSTERS = [
 {id:"o8", num:"472/365", name:"Warning Devices &amp; Litter/Illegal Dumping Offenses", rows:[
   ["Tampering with Warning Devices","TC","472.021","Misdemeanor (flat fine)","Fine $25&ndash;$1,000, up to 2 years county jail, or both",""],
   ["Obeying Warning Signs and Barricades","TC","472.022","Misdemeanor (flat fine)","Fine $1&ndash;$200 by default; doubled in an active work zone; Class B misdemeanor for driving around a barricade placed for water over the roadway",""],
-  ["Illegal Dumping; Discarding Lighted Materials; Criminal Penalties","HSC","365.012","Class C misdemeanor","Class C if litter/waste ≤ 5 lb or ≤ 5 gal; Class B if 5&ndash;500 lb or up to 500 cu ft; Class A for larger amounts or certain aggravating facts; state jail felony for the largest/most hazardous quantities",""]
+  ["Illegal Dumping; Discarding Lighted Materials; Criminal Penalties","HSC","365.012","Tiered: Class C to State Jail Felony","Graded by weight/volume of the litter or waste involved &mdash; see the full <a href=\"#sec-dumping\">Illegal Dumping Value Ladder</a> above",""]
 ]},
 {id:"o9", num:"550", name:"Crash Investigation Duties (Ch.550) &mdash; “failure to stop and render aid” charges", rows:[
   ["Collision Involving Personal Injury or Death (failing to stop/return/render aid per 550.023 after an injury/death collision)","TC","550.021","Felony, 2nd degree","Felony 2nd degree if death results; felony 3rd degree if serious bodily injury results; otherwise punishable by up to 5 years TDCJ or up to 1 year county jail, a fine up to $5,000, or both",""],
@@ -310,7 +360,7 @@ function runSearch(){
   let totalMatches = 0;
 
   document.querySelectorAll('.sec-card').forEach(function(card){
-    if(card.id === 'sec-ladder' || card.id === 'sec-catchall'){ return; }
+    if(card.id === 'sec-ladder' || card.id === 'sec-catchall' || card.id === 'sec-dumping'){ return; }
     const rows = card.querySelectorAll('tbody tr');
     let cardMatches = 0;
     rows.forEach(function(row){
@@ -347,6 +397,8 @@ window.addEventListener('DOMContentLoaded', function(){
   document.getElementById('sec-ladder').querySelector('.sec-body').classList.add('open');
   document.getElementById('sec-catchall').querySelector('.sec-header').classList.add('open');
   document.getElementById('sec-catchall').querySelector('.sec-body').classList.add('open');
+  document.getElementById('sec-dumping').querySelector('.sec-header').classList.add('open');
+  document.getElementById('sec-dumping').querySelector('.sec-body').classList.add('open');
   var first = document.querySelector('#clusterCards .sec-header');
   if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
 });
