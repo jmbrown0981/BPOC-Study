@@ -19,9 +19,9 @@ There's no build step, bundler, or server-side code. Every page is a self-contai
 BPOC-Study/
 ├── index.html                  Hub page — BPOC chapter grid, supplemental materials, links to everything below
 ├── study.html                  Live study reference, built out chapter by chapter as source material comes in
-├── alt-quiz.html               Alt Quiz engine — loads and runs all 17 question banks, plus the "Full Practice
+├── alt-quiz.html               Alt Quiz engine — loads and runs all 24 question banks, plus the "Full Practice
 │                                  Exam" mode (250 questions randomly weighted across every bank)
-├── flashcards.html             Flashcard engine — same 17 banks as Alt Quiz, front/back recall format instead
+├── flashcards.html             Flashcard engine — same 24 banks as Alt Quiz, front/back recall format instead
 │                                  of multiple choice
 ├── case-law.html               Case-law reference — Summary + "Law Enforcement Application" for every case on
 │                                  the master course case-law list
@@ -30,15 +30,27 @@ BPOC-Study/
 │   ├── FORMAT.md                Markdown spec every question bank file follows (see "Quizzes & Flashcards" below)
 │   ├── exam-weights.json        Per-bank weight config for the Full Practice Exam mode — tune this to change how
 │   │                              often a given bank's questions show up, no code changes needed
-│   ├── bank/                    The 17 live question bank files (one .md per BPOC chapter or topic, e.g.
+│   ├── bank/                    The 24 live question bank files (one .md per BPOC chapter or topic, e.g.
 │   │                              06-racial-profiling.md, case-law.md)
-│   └── drafts/                  Work-in-progress bank drafts not yet wired into the site
+│   ├── drafts/                  Work-in-progress bank drafts not yet wired into the site
+│   ├── 22-codes-index.html      Ch.22 mindmap tool — every code section the BPOC Ch.22 material cites, with a
+│   │                              live link to that section on statutes.capitol.texas.gov
+│   ├── 22-definitions-map.html  Ch.22 mindmap tool — defined terms from the traffic-code material, grouped by
+│   │                              topic and cross-linked to their source section
+│   ├── 22-offense-penalties.html  Ch.22 mindmap tool — every offense the Ch.22 material calls out with its
+│   │                              statute, level, and fine/jail range, plus the general-penalty catchalls and
+│   │                              the Illegal Dumping value ladder
+│   └── 22-traffic-code-definitions-hierarchy.md   Working notes behind 22-definitions-map.html
 │
-├── assets/                      Shared theme CSS, Google Fonts config, site favicon, FWPD badge art
+├── assets/                      Shared theme CSS, Google Fonts config, site favicon, FWPD badge art, and
+│                                  chapters-data.js (the shared chapter metadata behind study.html/flashcards.html)
 │
 ├── supplemental/
 │   ├── penal-code.html          Texas Penal Code offense reference (statute, plain-language definition,
 │   │                              punishment range, enhancements, grade/theft-value ladders)
+│   ├── laymans/                 Penal Code Layman's Guide — plain-language, chapter-by-chapter walkthroughs of
+│   │                              what each offense means and how it's graded (26 chapters), plus a standalone
+│   │                              classification chart, value-ladders page, and victim-enhancements page
 │   └── laymans-ccp/             Plain-language Code of Criminal Procedure guide, organized by the CCP articles
 │                                  BPOC actually cites (11 chapters)
 │
@@ -50,8 +62,12 @@ BPOC-Study/
 │   ├── TCOLE_markdown/           TCOLE rules/handbook material in markdown
 │   ├── TCOLE Rules/               Original TCOLE handbook PDF
 │   ├── CCP/                      Texas Code of Criminal Procedure article text, plain .txt per article
-│   ├── penal_code/                Texas Penal Code section text, plain .txt per section, plus the laymans
-│   │                              HTML source used to build supplemental/penal-code.html
+│   ├── penal_code/                Texas Penal Code section text, plain .txt per section, plus html_laymans/ —
+│   │                              the HTML source used to build supplemental/laymans/
+│   ├── traffic_code/              Texas Transportation Code section text, plain .txt per section — source
+│   │                              behind the Ch.22 mindmap tools and the Ch.22 Day 1-8 quiz banks
+│   ├── health_safety_code/        Texas Health & Safety Code section text, plain .txt per section — covers the
+│   │                              litter/illegal-dumping material the Ch.22 material cites
 │   ├── TX Constitution/           Texas Constitution article text
 │   ├── us_constitution/           U.S. Constitution text (markdown + PDF)
 │   ├── case_law.txt               The master, deduplicated list of every case cited across the BPOC chapters
