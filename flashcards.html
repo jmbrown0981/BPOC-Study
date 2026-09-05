@@ -146,11 +146,8 @@ const FLASHCARD_CHAPTERS = [
   {key:"13", num:13, title:"Consular Notification", file:"alt-quizzes/bank/13-consular-notification.md"},
   {key:"14", num:14, title:"Civil Process", file:"alt-quizzes/bank/14-civil-process.md"},
   {key:"15", num:15, title:"Health and Safety Code — Controlled Substances Act (LO 15.1–15.3 so far)", file:"alt-quizzes/bank/15-controlled-substances-act.md"},
-  {key:"22-def", num:22, short:"Ch 22 (Defs)", title:"Traffic Code and Crash Investigations — Definitions", file:"alt-quizzes/bank/22-traffic-code-definitions.md"},
-  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md"},
-  {key:"22-day1-4", num:22, short:"Ch 22 (Day 1-4)", title:"Traffic Code and Crash Investigations — Day 1-4 (Fill-in-Blank / Multiple Choice)", file:"alt-quizzes/bank/22-day1-4.md"},
-  {key:"22-day5-8", num:22, short:"Ch 22 (Day 5-8)", title:"Traffic Code and Crash Investigations — Day 5-8 (Emergency Vehicles, Equipment/Lighting, Bicycles/OHVs, Pedestrians, Registration, Certificate of Title, Financial Responsibility, Size/Weight, Implied Consent & More)", file:"alt-quizzes/bank/22-day5-8.md"},
-  {key:"22-day9", num:22, short:"Ch 22 (Day 9)", title:"Traffic Code and Crash Investigations — Day 9 (Crash Investigation Procedures, Interviewing, Measuring the Scene, CR-3, Traffic Incident Management & Traffic Control)", file:"alt-quizzes/bank/22-day9.md"},
+  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md", sourceHeader:true},
+  {key:"22-main", num:22, short:"Ch 22 (Main)", title:"Traffic Code and Crash Investigations — Full Chapter Bank (Days 1-9)", file:"alt-quizzes/bank/22-main.md"},
   {key:"22-off", num:22, short:"Ch 22 (Offenses)", title:"Traffic Code and Crash Investigations — Offenses & Classifications", file:"alt-quizzes/bank/22-offense-penalties.md"},
   {key:"22-crash-coding", num:22, short:"Ch 22 (Crash Report Coding)", title:"Traffic Code and Crash Investigations — CR-3 Crash Report Coding (CR-3CS / CR-80 / CR-100)", file:"alt-quizzes/bank/22-crash-report-coding.md"},
   {key:"22-plates-temp-tags", num:22, short:"Ch 22 (Plates/Temp Tags)", title:"Traffic Code and Crash Investigations — License Plates & Temporary Tags (Fake Plates, HB 718)", file:"alt-quizzes/bank/22-plates-temp-tags.md"},
@@ -166,7 +163,7 @@ const FLASHCARD_CHAPTERS = [
 let activeChapter = null;
 let chipNavOpen = false;
 let bankQuestions = [];   // full parsed bank for the active chapter
-let activeTag = 'All';
+let activeTags = new Set(['All']); // multi-select tag/subject filter; 'All' is exclusive with any real tag
 
 let deck = [];          // full ordered deck for this session
 let queue = [];         // remaining indices to review this pass
@@ -283,7 +280,7 @@ function renderChapterChips(){
 
 async function selectChapter(ch){
   activeChapter = ch;
-  activeTag = 'All';
+  activeTags = new Set(['All']);
   renderChapterChips();
   const main = document.getElementById('main');
   main.innerHTML = `<div class="setup-box"><h2>Loading ${ch.title}&hellip;</h2><p>Fetching ${ch.file}</p></div>`;
@@ -312,11 +309,12 @@ function renderSetup(){
     return;
   }
   const tags = availableTags();
-  const filtered = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  const filtered = activeTags.has('All') ? bankQuestions : bankQuestions.filter(q => activeTags.has(q.tag));
+  const selectedLabel = activeTags.has('All') ? '' : ` &middot; ${filtered.length} tagged ${Array.from(activeTags).map(t => `"${escapeHtml(t)}"`).join(', ')}`;
   main.innerHTML = `
     <div class="setup-box">
       <h2>${activeChapter.short || ('Ch ' + activeChapter.num)}: ${activeChapter.title}</h2>
-      <p>${bankQuestions.length} cards in this deck${activeTag !== 'All' ? ` &middot; ${filtered.length} tagged "${activeTag}"` : ''}. The question shows first &mdash; no answer choices. Flip it to check yourself.</p>
+      <p>${bankQuestions.length} cards in this deck${selectedLabel}. Pick one or more subject/format tags (or leave "All" selected). The question shows first &mdash; no answer choices. Flip it to check yourself.</p>
       <div class="filter-row" id="filterRow"></div>
       <button class="start-btn" id="startBtn">Start Deck (${filtered.length} cards)</button>
     </div>
@@ -324,9 +322,19 @@ function renderSetup(){
   const filterRow = document.getElementById('filterRow');
   tags.forEach(t => {
     const b = document.createElement('button');
-    b.className = 'filter-chip' + (t === activeTag ? ' active' : '');
+    b.className = 'filter-chip' + (activeTags.has(t) ? ' active' : '');
     b.textContent = t;
-    b.onclick = () => { activeTag = t; renderSetup(); };
+    b.onclick = () => {
+      if(t === 'All'){
+        activeTags = new Set(['All']);
+      } else {
+        const next = new Set(activeTags);
+        next.delete('All');
+        if(next.has(t)) next.delete(t); else next.add(t);
+        activeTags = next.size === 0 ? new Set(['All']) : next;
+      }
+      renderSetup();
+    };
     filterRow.appendChild(b);
   });
   document.getElementById('startBtn').onclick = startDeck;
@@ -344,7 +352,7 @@ function shuffle(arr){
 }
 
 function startDeck(){
-  const pool = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  const pool = activeTags.has('All') ? bankQuestions : bankQuestions.filter(q => activeTags.has(q.tag));
   deck = shuffle(pool);
   queue = deck.map((_, i) => i);
   missed = [];

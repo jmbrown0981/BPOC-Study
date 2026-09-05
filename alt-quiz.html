@@ -182,11 +182,8 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"13", num:13, title:"Consular Notification", file:"alt-quizzes/bank/13-consular-notification.md"},
   {key:"14", num:14, title:"Civil Process", file:"alt-quizzes/bank/14-civil-process.md"},
   {key:"15", num:15, title:"Health and Safety Code — Controlled Substances Act (LO 15.1–15.3 so far)", file:"alt-quizzes/bank/15-controlled-substances-act.md"},
-  {key:"22-def", num:22, short:"Ch 22 (Defs)", title:"Traffic Code and Crash Investigations — Definitions", file:"alt-quizzes/bank/22-traffic-code-definitions.md"},
-  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md"},
-  {key:"22-day1-4", num:22, short:"Ch 22 (Day 1-4)", title:"Traffic Code and Crash Investigations — Day 1-4 (Fill-in-Blank / Multiple Choice)", file:"alt-quizzes/bank/22-day1-4.md"},
-  {key:"22-day5-8", num:22, short:"Ch 22 (Day 5-8)", title:"Traffic Code and Crash Investigations — Day 5-8 (Emergency Vehicles, Equipment/Lighting, Bicycles/OHVs, Pedestrians, Registration, Certificate of Title, Financial Responsibility, Size/Weight, Implied Consent & More)", file:"alt-quizzes/bank/22-day5-8.md"},
-  {key:"22-day9", num:22, short:"Ch 22 (Day 9)", title:"Traffic Code and Crash Investigations — Day 9 (Crash Investigation Procedures, Interviewing, Measuring the Scene, CR-3, Traffic Incident Management & Traffic Control)", file:"alt-quizzes/bank/22-day9.md"},
+  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md", sourceHeader:true},
+  {key:"22-main", num:22, short:"Ch 22 (Main)", title:"Traffic Code and Crash Investigations — Full Chapter Bank (Days 1-9)", file:"alt-quizzes/bank/22-main.md"},
   {key:"22-off", num:22, short:"Ch 22 (Offenses)", title:"Traffic Code and Crash Investigations — Offenses & Classifications", file:"alt-quizzes/bank/22-offense-penalties.md"},
   {key:"22-crash-coding", num:22, short:"Ch 22 (Crash Report Coding)", title:"Traffic Code and Crash Investigations — CR-3 Crash Report Coding (CR-3CS / CR-80 / CR-100)", file:"alt-quizzes/bank/22-crash-report-coding.md"},
   {key:"22-plates-temp-tags", num:22, short:"Ch 22 (Plates/Temp Tags)", title:"Traffic Code and Crash Investigations — License Plates & Temporary Tags (Fake Plates, HB 718)", file:"alt-quizzes/bank/22-plates-temp-tags.md"},
@@ -204,7 +201,7 @@ const FULL_EXAM_CHAPTER = {key:"full-exam", short:"Full Exam", title:"Full Pract
 
 let activeChapter = null;
 let bankQuestions = [];   // full parsed bank for the active chapter
-let activeTag = 'All';
+let activeTags = new Set(['All']); // multi-select tag/subject filter; 'All' is exclusive with any real tag
 let quizMode = null;
 let questions = [];
 let qIndex = 0;
@@ -309,6 +306,17 @@ function normalizeAnswer(s){
 
 function renderPrompt(prompt){
   return prompt.split(/\n\s*\n/).map(p => `<p>${inlineMd(p.replace(/\n/g,' ').trim())}</p>`).join('');
+}
+
+// The eyebrow label above each question: normally the bank/chapter title (or,
+// during the Full Practice Exam, the pooled question's own bankTitle). Banks
+// flagged sourceHeader:true (currently just the Term ID bank) show the
+// question's own Source citation instead, since every question there is a
+// different statute/rule section rather than one shared topic.
+function questionHeaderLabel(q){
+  if(q.bankTitle) return q.bankTitle;
+  if(activeChapter && activeChapter.sourceHeader && q.source) return q.source;
+  return activeChapter ? activeChapter.title : '';
 }
 
 /* ---------- full exam: weighted allocation ---------- */
@@ -430,7 +438,7 @@ function effectiveConfig(){
 async function startFullExam(){
   examMode = true;
   activeChapter = FULL_EXAM_CHAPTER;
-  activeTag = 'All';
+  activeTags = new Set(['All']);
   renderChapterChips();
   const main = document.getElementById('main');
 
@@ -634,7 +642,7 @@ function renderChapterChips(){
 async function selectChapter(ch){
   examMode = false;
   activeChapter = ch;
-  activeTag = 'All';
+  activeTags = new Set(['All']);
   renderChapterChips();
   const main = document.getElementById('main');
   main.innerHTML = `<div class="setup-box"><h2>Loading ${ch.title}&hellip;</h2><p>Fetching ${ch.file}</p></div>`;
@@ -664,11 +672,12 @@ function renderSetup(){
     return;
   }
   const tags = availableTags();
-  const filtered = activeTag === 'All' ? bankQuestions : bankQuestions.filter(q => q.tag === activeTag);
+  const filtered = activeTags.has('All') ? bankQuestions : bankQuestions.filter(q => activeTags.has(q.tag));
+  const selectedLabel = activeTags.has('All') ? '' : ` &middot; ${filtered.length} tagged ${Array.from(activeTags).map(t => `"${escapeHtml(t)}"`).join(', ')}`;
   main.innerHTML = `
     <div class="setup-box">
       <h2>${activeChapter.short || ('Ch ' + activeChapter.num)}: ${activeChapter.title}</h2>
-      <p>${bankQuestions.length} questions in this bank${activeTag !== 'All' ? ` &middot; ${filtered.length} tagged "${activeTag}"` : ''}. Pick a format filter, then how you want to run it.</p>
+      <p>${bankQuestions.length} questions in this bank${selectedLabel}. Pick one or more subject/format tags (or leave "All" selected), then how you want to run it.</p>
       <div class="filter-row" id="filterRow"></div>
       <div class="mode-row" style="margin-top:14px;">
         <button class="mode-btn" id="practiceBtn">
@@ -685,9 +694,19 @@ function renderSetup(){
   const filterRow = document.getElementById('filterRow');
   tags.forEach(t => {
     const b = document.createElement('button');
-    b.className = 'filter-chip' + (t === activeTag ? ' active' : '');
+    b.className = 'filter-chip' + (activeTags.has(t) ? ' active' : '');
     b.textContent = t;
-    b.onclick = () => { activeTag = t; renderSetup(); };
+    b.onclick = () => {
+      if(t === 'All'){
+        activeTags = new Set(['All']);
+      } else {
+        const next = new Set(activeTags);
+        next.delete('All');
+        if(next.has(t)) next.delete(t); else next.add(t);
+        activeTags = next.size === 0 ? new Set(['All']) : next;
+      }
+      renderSetup();
+    };
     filterRow.appendChild(b);
   });
   document.getElementById('practiceBtn').onclick = () => startQuiz('practice');
@@ -708,7 +727,7 @@ function shuffle(arr){
 function startQuiz(mode){
   quizMode = mode;
   const source = examMode ? examPool : bankQuestions;
-  const pool = examMode || activeTag === 'All' ? source : source.filter(q => q.tag === activeTag);
+  const pool = examMode || activeTags.has('All') ? source : source.filter(q => activeTags.has(q.tag));
   questions = shuffle(pool).map(q => q.dual
     ? {...q, offenseOptions: shuffle(q.offenseOptions), classificationOptions: shuffle(q.classificationOptions)}
     : q.fillBlank
@@ -760,7 +779,7 @@ function renderQuestion(){
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
       <div class="q-card">
-        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-eyebrow"><span>${escapeHtml(questionHeaderLabel(q))}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
         <div class="q-prompt">${renderPrompt(q.prompt)}</div>
       </div>
       <div class="selector-label">Which offense (if any) applies?</div>
@@ -809,7 +828,7 @@ function renderQuestion(){
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
       <div class="q-card">
-        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-eyebrow"><span>${escapeHtml(questionHeaderLabel(q))}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
         <div class="q-prompt">${renderPrompt(q.prompt)}</div>
       </div>
       <div class="fill-blank-wrap multi">
@@ -849,7 +868,7 @@ function renderQuestion(){
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
       <div class="q-card">
-        <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-eyebrow"><span>${escapeHtml(questionHeaderLabel(q))}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
         <div class="q-prompt">${renderPrompt(q.prompt)}</div>
       </div>
       <div class="fill-blank-wrap">
@@ -877,7 +896,7 @@ function renderQuestion(){
     </div>
     <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
     <div class="q-card">
-      <div class="q-eyebrow"><span>${escapeHtml(q.bankTitle || activeChapter.title)}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+      <div class="q-eyebrow"><span>${escapeHtml(questionHeaderLabel(q))}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
       <div class="q-prompt">${renderPrompt(q.prompt)}</div>
     </div>
     <div class="options${tf ? ' tf' : ''}" id="optionsWrap">
