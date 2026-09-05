@@ -1,0 +1,44 @@
+TITLE 37. PUBLIC SAFETY AND CORRECTIONS
+PART 1. TEXAS DEPARTMENT OF PUBLIC SAFETY
+CHAPTER 21. EQUIPMENT AND VEHICLE SAFETY STANDARDS
+RULE §21.2. Standards for Vehicle Safety
+
+(a) Standards--Federal Motor Vehicle Safety Standard (FMVSS). The standard for vehicle equipment established by the Texas Department of Public Safety is identical to the applicable federal standard.
+	(1) Lamps, Reflective Devices, and Associated Equipment--FMVSS 108. The standard detailed in this paragraph applies to lamps, reflective devices, and associated equipment installed on a vehicle as original, replacement, or aftermarket equipment. No additional lamp, reflective device, equipment, or other material is permitted to be installed on a vehicle that impairs the effectiveness of, or interferes with, lighting or reflective devices required by this standard. A lamp or reflective device installed in a location and manner described by FMVSS 108 must meet the prescribed color requirements regardless of whether or not the lamp or device is required equipment. The standards for the lamps, reflective devices, and associated equipment in subparagraphs (A) - (R) of this paragraph are described in FMVSS 108:
+		(A) backup lamp;
+		(B) clearance lamp;
+		(C) hazard warning lamp, signal, flashers, and switches;
+		(D) headlamp--sealed and nonsealed beam and housing;
+		(E) identification lamp;
+		(F) license plate lamp;
+		(G) parking lamp (front position lamps);
+		(H) reflex reflector;
+		(I) intermediate side reflex reflectors;
+		(J) replacement lenses;
+		(K) school bus alternating warning lamp, signal, flashers, and switches;
+		(L) side marker lamp;
+		(M) intermediate side marker lamps;
+		(N) stop signal lamp;
+		(O) high-mounted stop lamp;
+		(P) tail lamp (rear position lamps);
+		(Q) turn signal lamp, signal, flashers, and switches; and
+		(R) conspicuity systems (retroreflective and reflex reflectors for truck tractors, and trailers over 80 inches wide and with gross vehicle weights over 10,000 pounds).
+	(2) Warning Devices--FMVSS 125. This standard applies to devices, without self-contained energy sources, designed to be carried in motor vehicles and used to warn approaching traffic of the presence of a stopped vehicle, except for devices designed to be permanently affixed to the vehicle.
+	(3) Safety glass and glazing--FMVSS 205.
+	(4) Seat belts--FMVSS 209.
+(b) Standards--Society of Automotive Engineers (SAE). The standard for vehicle equipment established by the Texas Department of Public Safety in which no federal standard is in effect is identical to the applicable standard adopted by the Society of Automotive Engineers.
+	(1) Lighting devices (auxiliary)--SAE:
+		(A) auxiliary low beam (passing lamp)--J582;
+		(B) driving lamp--J581;
+		(C) fog lamp--J583;
+		(D) spot lamp--J591;
+		(E) high mounted stop and turn signal lamp--J186;
+		(F) cornering lamp--J852;
+		(G) side turn signal lamp--J914;
+		(H) flashing warning lamp for emergency vehicle--J595; and
+		(I) 360-degree emergency warning lamp--J845.
+	(2) Special vehicle equipment--SAE:
+		(A) warning lamp alternating flashers--J1054; and
+		(B) motorcycle auxiliary front lamps--J1306.
+
+Source Note: The provisions of this §21.2 adopted to be effective April 12, 2012, 37 TexReg 2430; amended to be effective January 12, 2015, 40 TexReg 256; amended to be effective November 17, 2022, 47 TexReg 7561.

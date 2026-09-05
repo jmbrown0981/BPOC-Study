@@ -1,0 +1,876 @@
+LO	SECTIONS	CODE	SOURCE
+22.1	541.201	Transportation Code	Direct
+22.1	541.202	Transportation Code	Direct
+22.1	541.203	Transportation Code	Direct
+22.1	546.0065	Transportation Code	Tertiary (via 541.201)
+22.1	51.212	Education Code	Tertiary (via 541.201)
+22.1	170.001	Local Government Code	Tertiary (via 541.201)
+22.1	228.054	Transportation Code	Tertiary (via 541.201)
+22.1	284.070	Transportation Code	Tertiary (via 541.201)
+22.1	366.178	Transportation Code	Tertiary (via 541.201)
+22.1	2A.001	Code of Criminal Procedure	Tertiary (via 541.201)
+22.1	773	Health and Safety Code	Tertiary (via 541.201)
+22.1	1201	Occupations Code	Tertiary (via 541.201)
+22.2	541.001	Transportation Code	Direct
+22.2	541.002	Transportation Code	Direct
+22.2	541.101	Transportation Code	Direct
+22.2	541.102	Transportation Code	Direct
+22.2	1.07(a)(8)	Penal Code	Direct
+22.2	1.07(a)(46)	Penal Code	Direct
+22.2	1.07(a)(26)	Penal Code	Direct
+22.2	1.07(a)(40)	Penal Code	Direct
+22.2	1.07(a)(49)	Penal Code	Direct
+22.2	623.008	Transportation Code	Tertiary (via 541.001)
+22.2	311.005	Government Code	Tertiary (via 541.002)
+22.2	1.04	Alcoholic Beverage Code	Tertiary (via 1.07(a)(8))
+22.2	51.214	Education Code	Tertiary (via 1.07(a)(8))
+22.2	2A.002	Code of Criminal Procedure	Tertiary (via 1.07(a)(8))
+22.2	841	Health and Safety Code	Tertiary (via 1.07(a)(8))
+22.3	541.301	Transportation Code	Direct
+22.3	541.302	Transportation Code	Direct
+22.3	542.202(b)(2)	Transportation Code	Direct
+22.3	541.303	Transportation Code	Direct
+22.3	541.304	Transportation Code	Direct
+22.3	551.106	Transportation Code	Tertiary (via 542.202(b)(2))
+22.4	541.401	Transportation Code	Direct
+22.5	365.011(5)	Health and Safety Code	Direct
+22.5	365.011(6)	Health and Safety Code	Direct
+22.5	365.011(8)	Health and Safety Code	Direct
+22.5	365.012	Health and Safety Code	Direct
+22.5	361	Health and Safety Code	Tertiary (via 365.011(5))
+22.5	42A.304	Code of Criminal Procedure	Tertiary (via 365.012)
+22.5	59	Code of Criminal Procedure	Tertiary (via 365.012)
+22.5	28	Penal Code	Tertiary (via 365.012)
+22.5	15	Penal Code	Tertiary (via 365.012)
+22.6	542.001	Transportation Code	Direct
+22.6	542.002	Transportation Code	Direct
+22.6	542.003	Transportation Code	Direct
+22.6	542.004	Transportation Code	Direct
+22.6	542.005	Transportation Code	Direct
+22.6	542.201	Transportation Code	Direct
+22.6	542.202	Transportation Code	Direct
+22.6	542.301	Transportation Code	Direct
+22.6	542.302	Transportation Code	Direct
+22.6	542.303	Transportation Code	Direct
+22.6	542.401	Transportation Code	Direct
+22.6	542.404	Transportation Code	Direct
+22.6	542.4045	Transportation Code	Direct
+22.6	542.501	Transportation Code	Direct
+22.6	548	Transportation Code	Tertiary (via 542.404)
+22.6	545	Transportation Code	Tertiary (via 542.404)
+22.6	600.004	Transportation Code	Tertiary (via 542.501)
+22.7	521.001	Transportation Code	Direct
+22.7	521.025	Transportation Code	Direct
+22.7	521.026	Transportation Code	Direct
+22.7	521.027	Transportation Code	Direct
+22.7	521.028	Transportation Code	Direct
+22.7	521.029	Transportation Code	Direct
+22.7	521.042	Transportation Code	Direct
+22.7	521.054	Transportation Code	Direct
+22.7	521.060	Transportation Code	Direct
+22.7	521.081	Transportation Code	Direct
+22.7	521.082	Transportation Code	Direct
+22.7	521.083	Transportation Code	Direct
+22.7	521.084	Transportation Code	Direct
+22.7	521.085	Transportation Code	Direct
+22.7	521.101	Transportation Code	Direct
+22.7	521.144	Transportation Code	Direct
+22.7	521.201	Transportation Code	Direct
+22.7	521.222	Transportation Code	Direct
+22.7	521.223	Transportation Code	Direct
+22.7	521.224	Transportation Code	Direct
+22.7	521.241	Transportation Code	Direct
+22.7	521.242	Transportation Code	Direct
+22.7	521.248	Transportation Code	Direct
+22.7	521.249	Transportation Code	Direct
+22.7	521.250	Transportation Code	Direct
+22.7	521.253	Transportation Code	Direct
+22.7	521.271	Transportation Code	Direct
+22.7	521.2711	Transportation Code	Direct
+22.7	521.292	Transportation Code	Direct
+22.7	521.350	Transportation Code	Direct
+22.7	521.451	Transportation Code	Direct
+22.7	521.453	Transportation Code	Direct
+22.7	521.457	Transportation Code	Direct
+22.7	521.458	Transportation Code	Direct
+22.7	521.460	Transportation Code	Direct
+22.7	521.461	Transportation Code	Direct
+22.7	522.003	Transportation Code	Direct
+22.7	522.004	Transportation Code	Direct
+22.7	522.011	Transportation Code	Direct
+22.7	522.041	Transportation Code	Direct
+22.7	522.042	Transportation Code	Direct
+22.7	522.101	Transportation Code	Direct
+22.7	521.183	Transportation Code	Direct
+22.7	hb291.txt	House Bill	Direct
+22.7	51.02	Family Code	Tertiary (via 521.001)
+22.7	508.118	Government Code	Tertiary (via 521.001)
+22.7	508.119	Government Code	Tertiary (via 521.001)
+22.7	201	Family Code	Tertiary (via 521.001)
+22.7	54A	Government Code	Tertiary (via 521.001)
+22.7	574	Health and Safety Code	Tertiary (via 521.001)
+22.7	501	Transportation Code	Tertiary (via 521.001)
+22.7	502	Transportation Code	Tertiary (via 521.001)
+22.7	2301	Occupations Code	Tertiary (via 521.001)
+22.7	521.021	Transportation Code	Tertiary (via 521.025)
+22.7	706	Transportation Code	Tertiary (via 521.042)
+22.7	49	Penal Code	Tertiary (via 521.042)
+22.7	521.121	Transportation Code	Tertiary (via 521.054)
+22.7	521.146	Transportation Code	Tertiary (via 521.054)
+22.7	31.006	Finance Code	Tertiary (via 521.054)
+22.7	521.125	Transportation Code	Tertiary (via 521.060)
+22.7	521.1251	Transportation Code	Tertiary (via 521.060)
+22.7	521.1252	Transportation Code	Tertiary (via 521.060)
+22.7	502.253	Transportation Code	Tertiary (via 521.082)
+22.7	501.008	Transportation Code	Tertiary (via 521.085)
+22.7	522	Transportation Code	Tertiary (via 521.085)
+22.7	521.142	Transportation Code	Tertiary (via 521.101)
+22.7	521.103	Transportation Code	Tertiary (via 521.101)
+22.7	521.102	Transportation Code	Tertiary (via 521.101)
+22.7	62.060	Code of Criminal Procedure	Tertiary (via 521.101)
+22.7	62.2021	Code of Criminal Procedure	Tertiary (via 521.101)
+22.7	62	Transportation Code	Tertiary (via 521.101)
+22.7	521.204	Transportation Code	Tertiary (via 521.201)
+22.7	521.3452	Transportation Code	Tertiary (via 521.201)
+22.7	1001.112	Education Code	Tertiary (via 521.222)
+22.7	521.161	Transportation Code	Tertiary (via 521.222)
+22.7	49.01	Penal Code	Tertiary (via 521.222)
+22.7	62	Code of Criminal Procedure	Tertiary (via 521.222)
+22.7	1001	Education Code	Tertiary (via 521.223)
+22.7	521.145	Transportation Code	Tertiary (via 521.224)
+22.7	49.09	Penal Code	Tertiary (via 521.241)
+22.7	521.294	Transportation Code	Tertiary (via 521.242)
+22.7	524	Transportation Code	Tertiary (via 521.242)
+22.7	601	Transportation Code	Tertiary (via 521.249)
+22.7	623	Transportation Code	Tertiary (via 521.292)
+22.7	521.452	Transportation Code	Tertiary (via 521.451)
+22.7	106.07	Alcoholic Beverage Code	Tertiary (via 521.451)
+22.7	54.044	Family Code	Tertiary (via 521.453)
+22.7	54.04	Family Code	Tertiary (via 521.453)
+22.7	521.341	Transportation Code	Tertiary (via 521.457)
+22.7	601.371	Transportation Code	Tertiary (via 521.457)
+22.7	521.343	Transportation Code	Tertiary (via 521.457)
+22.7	521.313	Transportation Code	Tertiary (via 521.457)
+22.7	522.015	Transportation Code	Tertiary (via 522.003)
+22.7	481	Health and Safety Code	Tertiary (via 522.003)
+22.7	21.155	Transportation Code	Tertiary (via 522.004)
+22.7	22.001	Transportation Code	Tertiary (via 522.004)
+22.7	504.502	Transportation Code	Tertiary (via 522.004)
+22.7	522.102	Transportation Code	Tertiary (via 522.101)
+22.7	49.04	Penal Code	Tertiary (via hb291.txt)
+22.7	521.2421	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2422	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2423	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2424	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.243	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.342	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.244	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.252	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.245	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.344	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.246	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2461	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2462	Transportation Code	Tertiary (via hb291.txt)
+22.7	76.015	Government Code	Tertiary (via hb291.txt)
+22.7	521.2465	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.247	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2475	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.2476	Transportation Code	Tertiary (via hb291.txt)
+22.7	524.001	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.320	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.377	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.372	Transportation Code	Tertiary (via hb291.txt)
+22.7	521.421	Transportation Code	Tertiary (via hb291.txt)
+22.7	601.332	Transportation Code	Tertiary (via hb291.txt)
+22.7	706.005	Transportation Code	Tertiary (via hb291.txt)
+22.7	706.002	Transportation Code	Tertiary (via hb291.txt)
+22.7	706.006	Transportation Code	Tertiary (via hb291.txt)
+22.7	54.042	Family Code	Tertiary (via hb291.txt)
+22.7	75.014	Government Code	Tertiary (via hb291.txt)
+22.7	501.052	Transportation Code	Tertiary (via hb291.txt)
+22.7	123.009	Government Code	Tertiary (via hb291.txt)
+22.7	524.022	Transportation Code	Tertiary (via hb291.txt)
+22.7	42A.403	Code of Criminal Procedure	Tertiary (via hb291.txt)
+22.7	42A.404	Code of Criminal Procedure	Tertiary (via hb291.txt)
+22.7	17.42	Code of Criminal Procedure	Tertiary (via hb291.txt)
+22.7	521	Transportation Code	Tertiary (via hb291.txt)
+22.7	724	Transportation Code	Tertiary (via hb291.txt)
+22.8	544.001	Transportation Code	Direct
+22.8	544.004	Transportation Code	Direct
+22.8	544.005	Transportation Code	Direct
+22.8	544.006	Transportation Code	Direct
+22.8	544.007	Transportation Code	Direct
+22.8	544.008	Transportation Code	Direct
+22.8	544.009	Transportation Code	Direct
+22.8	544.010	Transportation Code	Direct
+22.8	544.011	Transportation Code	Direct
+22.9	545.001	Transportation Code	Direct
+22.9	545.002	Transportation Code	Direct
+22.9	545.0605	Transportation Code	Direct
+22.9	545.051	Transportation Code	Direct
+22.9	545.052	Transportation Code	Direct
+22.9	545.053	Transportation Code	Direct
+22.9	545.054	Transportation Code	Direct
+22.9	545.055	Transportation Code	Direct
+22.9	545.056	Transportation Code	Direct
+22.9	545.057	Transportation Code	Direct
+22.9	545.058	Transportation Code	Direct
+22.9	545.059	Transportation Code	Direct
+22.9	545.060	Transportation Code	Direct
+22.9	545.061	Transportation Code	Direct
+22.9	545.062	Transportation Code	Direct
+22.9	545.063	Transportation Code	Direct
+22.9	545.064	Transportation Code	Direct
+22.9	545.0651	Transportation Code	Direct
+22.9	545.066	Transportation Code	Direct
+22.10	545.101	Transportation Code	Direct
+22.10	545.102	Transportation Code	Direct
+22.10	545.103	Transportation Code	Direct
+22.10	545.104	Transportation Code	Direct
+22.10	545.105	Transportation Code	Direct
+22.10	545.106	Transportation Code	Direct
+22.10	545.107	Transportation Code	Direct
+22.11	545.151	Transportation Code	Direct
+22.11	545.152	Transportation Code	Direct
+22.11	545.153	Transportation Code	Direct
+22.11	545.154	Transportation Code	Direct
+22.11	545.155	Transportation Code	Direct
+22.11	545.156	Transportation Code	Direct
+22.11	545.157	Transportation Code	Direct
+22.11	544.003	Transportation Code	Tertiary (via 545.153)
+22.11	547.751	Transportation Code	Tertiary (via 545.156)
+22.11	547.752	Transportation Code	Tertiary (via 545.156)
+22.11	203.091	Transportation Code	Tertiary (via 545.157)
+22.11	372.001	Transportation Code	Tertiary (via 545.157)
+22.11	223	Transportation Code	Tertiary (via 545.157)
+22.11	2308	Occupations Code	Tertiary (via 545.157)
+22.12	545.251	Transportation Code	Direct
+22.12	545.252	Transportation Code	Direct
+22.12	545.253	Transportation Code	Direct
+22.12	545.2535	Transportation Code	Direct
+22.12	545.254	Transportation Code	Direct
+22.12	545.256	Transportation Code	Direct
+22.13	545.301	Transportation Code	Direct
+22.13	545.302	Transportation Code	Direct
+22.13	545.303	Transportation Code	Direct
+22.13	545.304	Transportation Code	Direct
+22.13	545.305	Transportation Code	Direct
+22.13	545.3051	Transportation Code	Direct
+22.13	545.308	Transportation Code	Direct
+22.13	419.021	Government Code	Tertiary (via 545.3051)
+22.13	26.263	Water Code	Tertiary (via 545.3051)
+22.13	1201.003	Occupations Code	Tertiary (via 545.3051)
+22.13	451	Transportation Code	Tertiary (via 545.3051)
+22.13	452	Transportation Code	Tertiary (via 545.3051)
+22.14	545.351	Transportation Code	Direct
+22.14	545.352	Transportation Code	Direct
+22.14	545.353	Transportation Code	Direct
+22.14	545.355	Transportation Code	Direct
+22.14	545.361	Transportation Code	Direct
+22.14	545.363	Transportation Code	Direct
+22.14	545.365	Transportation Code	Direct
+22.14	548.201	Transportation Code	Tertiary (via 545.352)
+22.14	544.013	Transportation Code	Tertiary (via 545.353)
+22.14	545.357	Transportation Code	Tertiary (via 545.355)
+22.15	545.401	Transportation Code	Direct
+22.15	545.402	Transportation Code	Direct
+22.15	545.403	Transportation Code	Direct
+22.15	545.404	Transportation Code	Direct
+22.15	545.407	Transportation Code	Direct
+22.15	545.408	Transportation Code	Direct
+22.15	545.409	Transportation Code	Direct
+22.15	545.410	Transportation Code	Direct
+22.15	21.5	Texas Administrative Code	Direct
+22.15	545.412	Transportation Code	Direct
+22.15	545.413	Transportation Code	Direct
+22.15	545.414	Transportation Code	Direct
+22.15	545.4145	Transportation Code	Direct
+22.15	545.415	Transportation Code	Direct
+22.15	545.416	Transportation Code	Direct
+22.15	545.417	Transportation Code	Direct
+22.15	545.418	Transportation Code	Direct
+22.15	545.419	Transportation Code	Direct
+22.15	545.4191	Transportation Code	Direct
+22.15	545.420	Transportation Code	Direct
+22.15	545.421	Transportation Code	Direct
+22.15	38.04	Penal Code	Direct
+22.15	545.422	Transportation Code	Direct
+22.15	545.423	Transportation Code	Direct
+22.15	545.424	Transportation Code	Direct
+22.15	545.425	Transportation Code	Direct
+22.15	545.4251	Transportation Code	Direct
+22.15	545.4252	Transportation Code	Direct
+22.15	545.426	Transportation Code	Direct
+22.15	545.427	Transportation Code	Direct
+22.15	545.429	Transportation Code	Direct
+22.15	545.451	Transportation Code	Direct
+22.15	545.453	Transportation Code	Direct
+22.15	545.454	Transportation Code	Direct
+22.15	hb1442.txt	House Bill	Direct
+22.15	hb2899.txt	House Bill	Direct
+22.15	542.402	Transportation Code	Tertiary (via 545.412)
+22.15	71.005	Family Code	Tertiary (via 545.414)
+22.15	31.003	Parks and Wildlife Code	Tertiary (via 545.4145)
+22.15	49.031	Penal Code	Tertiary (via 545.420)
+22.15	42.03	Penal Code	Tertiary (via 545.420)
+22.15	18.23	Code of Criminal Procedure	Tertiary (via 545.420)
+22.15	20.05	Penal Code	Tertiary (via 38.04)
+22.15	46.01	Penal Code	Tertiary (via 38.04)
+22.15	545.456	Transportation Code	Tertiary (via 545.451)
+22.15	15.031	Penal Code	Tertiary (via hb1442.txt)
+22.15	21.11	Penal Code	Tertiary (via hb1442.txt)
+22.15	42.10	Penal Code	Tertiary (via hb1442.txt)
+22.15	46.06	Penal Code	Tertiary (via hb1442.txt)
+22.15	46.14	Penal Code	Tertiary (via hb1442.txt)
+22.15	20.06	Penal Code	Tertiary (via hb1442.txt)
+22.15	71.02	Penal Code	Tertiary (via hb1442.txt)
+22.15	37.11	Penal Code	Tertiary (via hb1442.txt)
+22.15	37.10	Penal Code	Tertiary (via hb1442.txt)
+22.15	38.06	Penal Code	Tertiary (via hb1442.txt)
+22.15	38.07	Penal Code	Tertiary (via hb1442.txt)
+22.15	38.09	Penal Code	Tertiary (via hb1442.txt)
+22.15	59.01	Code of Criminal Procedure	Tertiary (via hb1442.txt)
+22.15	29	Penal Code	Tertiary (via hb1442.txt)
+22.15	30	Penal Code	Tertiary (via hb1442.txt)
+22.15	31	Penal Code	Tertiary (via hb1442.txt)
+22.15	32	Penal Code	Tertiary (via hb1442.txt)
+22.15	33	Penal Code	Tertiary (via hb1442.txt)
+22.15	33A	Penal Code	Tertiary (via hb1442.txt)
+22.15	43	Penal Code	Tertiary (via hb1442.txt)
+22.15	483	Health and Safety Code	Tertiary (via hb1442.txt)
+22.15	151	Finance Code	Tertiary (via hb1442.txt)
+22.15	20A	Penal Code	Tertiary (via hb1442.txt)
+22.15	365	Health and Safety Code	Tertiary (via hb1442.txt)
+22.15	32	Human Resources Code	Tertiary (via hb1442.txt)
+22.15	35A	Penal Code	Tertiary (via hb1442.txt)
+22.15	71	Penal Code	Tertiary (via hb1442.txt)
+22.15	36	Penal Code	Tertiary (via hb1442.txt)
+22.15	34	Penal Code	Tertiary (via hb1442.txt)
+22.15	35	Penal Code	Tertiary (via hb1442.txt)
+22.16	546.001	Transportation Code	Direct
+22.16	546.002	Transportation Code	Direct
+22.16	546.003	Transportation Code	Direct
+22.16	546.004	Transportation Code	Direct
+22.16	546.005	Transportation Code	Direct
+22.16	546.006	Transportation Code	Direct
+22.16	546.007	Transportation Code	Direct
+22.16	2.12	Code of Criminal Procedure	Tertiary (via 546.002)
+22.16	418.013	Government Code	Tertiary (via 546.006)
+22.16	418.014	Government Code	Tertiary (via 546.006)
+22.17	547.001	Transportation Code	Direct
+22.17	547.002	Transportation Code	Direct
+22.17	547.003	Transportation Code	Direct
+22.17	547.004	Transportation Code	Direct
+22.17	547.005	Transportation Code	Direct
+22.17	547.105	Transportation Code	Direct
+22.17	547.301	Transportation Code	Direct
+22.17	547.302	Transportation Code	Direct
+22.17	547.303	Transportation Code	Direct
+22.17	547.304	Transportation Code	Direct
+22.17	547.305	Transportation Code	Direct
+22.17	547.306	Transportation Code	Direct
+22.17	547.321	Transportation Code	Direct
+22.17	547.3215	Transportation Code	Direct
+22.17	21.2	Texas Administrative Code	Direct
+22.17	547.322	Transportation Code	Direct
+22.17	547.323	Transportation Code	Direct
+22.17	547.324	Transportation Code	Direct
+22.17	547.325	Transportation Code	Direct
+22.17	547.326	Transportation Code	Direct
+22.17	547.327	Transportation Code	Direct
+22.17	547.328	Transportation Code	Direct
+22.17	547.330	Transportation Code	Direct
+22.17	547.331	Transportation Code	Direct
+22.17	547.332	Transportation Code	Direct
+22.17	547.333	Transportation Code	Direct
+22.17	547.334	Transportation Code	Direct
+22.17	547.351	Transportation Code	Direct
+22.17	547.352	Transportation Code	Direct
+22.17	547.353	Transportation Code	Direct
+22.17	547.354	Transportation Code	Direct
+22.17	547.355	Transportation Code	Direct
+22.17	547.371	Transportation Code	Direct
+22.17	547.372	Transportation Code	Direct
+22.17	547.382	Transportation Code	Direct
+22.17	547.383	Transportation Code	Direct
+22.17	547.401	Transportation Code	Direct
+22.17	547.402	Transportation Code	Direct
+22.17	547.403	Transportation Code	Direct
+22.17	547.404	Transportation Code	Direct
+22.17	547.405(d)(e)	Transportation Code	Direct
+22.17	547.501	Transportation Code	Direct
+22.17	547.502	Transportation Code	Direct
+22.17	547.503	Transportation Code	Direct
+22.17	547.504	Transportation Code	Direct
+22.17	547.505	Transportation Code	Direct
+22.17	547.601	Transportation Code	Direct
+22.17	547.602	Transportation Code	Direct
+22.17	547.603	Transportation Code	Direct
+22.17	547.604	Transportation Code	Direct
+22.17	547.605	Transportation Code	Direct
+22.17	547.606	Transportation Code	Direct
+22.17	21.4	Texas Administrative Code	Direct
+22.17	547.609	Transportation Code	Direct
+22.17	547.611	Transportation Code	Direct
+22.17	547.613	Transportation Code	Direct
+22.17	547.615	Transportation Code	Direct
+22.17	547.616	Transportation Code	Direct
+22.17	547.617	Transportation Code	Direct
+22.17	547.618	Transportation Code	Direct
+22.17	547.701	Transportation Code	Direct
+22.17	547.7012	Transportation Code	Direct
+22.17	547.702	Transportation Code	Direct
+22.17	547.703	Transportation Code	Direct
+22.17	547.801	Transportation Code	Direct
+22.17	548.001	Transportation Code	Direct
+22.17	548.001(1)	Transportation Code	Direct
+22.17	548.051	Transportation Code	Direct
+22.17	548.052	Transportation Code	Direct
+22.17	623.099	Transportation Code	Tertiary (via 547.001)
+22.17	547.104	Transportation Code	Tertiary (via 547.001)
+22.17	547.206	Transportation Code	Tertiary (via 547.004)
+22.17	1702.108	Occupations Code	Tertiary (via 547.305)
+22.17	1702.002	Occupations Code	Tertiary (via 547.305)
+22.17	547.506	Transportation Code	Tertiary (via 547.504)
+22.17	731.001	Transportation Code	Tertiary (via 547.601)
+22.17	644.001	Transportation Code	Tertiary (via 547.613)
+22.17	34.002	Education Code	Tertiary (via 547.701)
+22.18	551.001	Transportation Code	Direct
+22.18	551.002	Transportation Code	Direct
+22.18	551.101	Transportation Code	Direct
+22.18	551.102	Transportation Code	Direct
+22.18	551.103	Transportation Code	Direct
+22.18	551.104	Transportation Code	Direct
+22.18	551.107	Transportation Code	Direct
+22.18	551.201	Transportation Code	Direct
+22.18	551.202	Transportation Code	Direct
+22.18	551.203	Transportation Code	Direct
+22.18	551.301	Transportation Code	Direct
+22.18	551.302	Transportation Code	Direct
+22.18	551.303	Transportation Code	Direct
+22.18	551.304	Transportation Code	Direct
+22.18	551.351	Transportation Code	Direct
+22.18	551.352	Transportation Code	Direct
+22.18	551.353	Transportation Code	Direct
+22.18	551.401	Transportation Code	Direct
+22.18	551.402	Transportation Code	Direct
+22.18	551.403(1)	Transportation Code	Direct
+22.18	551.403	Transportation Code	Direct
+22.18	551.404	Transportation Code	Direct
+22.18	551.405	Transportation Code	Direct
+22.18	664.001	Transportation Code	Direct
+22.18	551A.001	Transportation Code	Direct
+22.18	551A.031	Transportation Code	Direct
+22.18	551A.032	Transportation Code	Direct
+22.18	551A.033	Transportation Code	Direct
+22.18	551A.034	Transportation Code	Direct
+22.18	551A.051	Transportation Code	Direct
+22.18	551A.052	Transportation Code	Direct
+22.18	551A.053	Transportation Code	Direct
+22.18	551A.054	Transportation Code	Direct
+22.18	551A.055	Transportation Code	Direct
+22.18	551A.056	Transportation Code	Direct
+22.18	551A.057	Transportation Code	Direct
+22.18	551A.058	Transportation Code	Direct
+22.18	551A.071	Transportation Code	Direct
+22.18	551A.072	Transportation Code	Direct
+22.18	551A.073	Transportation Code	Direct
+22.18	551A.074	Transportation Code	Direct
+22.18	551A.091	Transportation Code	Direct
+22.18	hb1281.txt	House Bill	Direct
+22.18	551A	Transportation Code	Tertiary (via 551.107)
+22.18	209.002	Property Code	Tertiary (via 551.403(1))
+22.18	29	Parks and Wildlife Code	Tertiary (via 551A.001)
+22.18	61	Natural Resources Code	Tertiary (via 551A.033)
+22.18	63	Natural Resources Code	Tertiary (via 551A.033)
+22.18	52.002	Agriculture Code	Tertiary (via 551A.057)
+22.18	551.4031	Transportation Code	Tertiary (via hb1281.txt)
+22.19	552.001	Transportation Code	Direct
+22.19	552.002	Transportation Code	Direct
+22.19	552.003	Transportation Code	Direct
+22.19	552.004	Transportation Code	Direct
+22.19	552.005	Transportation Code	Direct
+22.19	552.006	Transportation Code	Direct
+22.19	552.007	Transportation Code	Direct
+22.19	552.008	Transportation Code	Direct
+22.19	552.010	Transportation Code	Direct
+22.19	552A.0101	Transportation Code	Direct
+22.19	91.002	Human Resources Code	Tertiary (via 552.003)
+22.19	121.002	Human Resources Code	Tertiary (via 552.010)
+22.19	542.008	Transportation Code	Tertiary (via 552A.0101)
+22.20	38.10	Penal Code	Direct
+22.20	543.001	Transportation Code	Direct
+22.20	543.002	Transportation Code	Direct
+22.20	543.003	Transportation Code	Direct
+22.20	543.004	Transportation Code	Direct
+22.20	543.005	Transportation Code	Direct
+22.20	543.006	Transportation Code	Direct
+22.20	543.007	Transportation Code	Direct
+22.20	543.008	Transportation Code	Direct
+22.20	543.009	Transportation Code	Direct
+22.20	543.010	Transportation Code	Direct
+22.20	703	Transportation Code	Tertiary (via 543.004)
+22.21	708	Transportation Code	Direct
+22.22	661.001	Transportation Code	Direct
+22.22	661.0015	Transportation Code	Direct
+22.22	661.003	Transportation Code	Direct
+22.22	71.01(d)	Penal Code	Direct
+22.22	662	Transportation Code	Tertiary (via 661.003)
+22.22	1.01	Penal Code	Tertiary (via 71.01(d))
+22.23	681.002	Transportation Code	Direct
+22.23	681.0031	Transportation Code	Direct
+22.23	681.006	Transportation Code	Direct
+22.23	681.008	Transportation Code	Direct
+22.23	681.010	Transportation Code	Direct
+22.23	681.0101	Transportation Code	Direct
+22.23	681.011	Transportation Code	Direct
+22.23	681.012	Transportation Code	Direct
+22.23	sb792.txt	Senate Bill	Direct
+22.23	681.009	Transportation Code	Tertiary (via 681.006)
+22.23	504.201	Transportation Code	Tertiary (via 681.006)
+22.23	504.202	Transportation Code	Tertiary (via 681.008)
+22.23	61.003	Education Code	Tertiary (via 681.008)
+22.23	504.2025	Transportation Code	Tertiary (via 681.008)
+22.23	504.308	Transportation Code	Tertiary (via 681.008)
+22.23	504.310	Transportation Code	Tertiary (via 681.008)
+22.23	504.315	Transportation Code	Tertiary (via 681.008)
+22.23	504.316	Transportation Code	Tertiary (via 681.008)
+22.23	1702	Occupations Code	Tertiary (via 681.010)
+22.23	681.007	Transportation Code	Tertiary (via 681.011)
+22.23	681.003	Transportation Code	Tertiary (via 681.012)
+22.23	502.410	Transportation Code	Tertiary (via sb792.txt)
+22.23	502.060	Transportation Code	Tertiary (via sb792.txt)
+22.23	502.092	Transportation Code	Tertiary (via sb792.txt)
+22.23	502.093	Transportation Code	Tertiary (via sb792.txt)
+22.23	681.004	Transportation Code	Tertiary (via sb792.txt)
+22.23	504.501	Transportation Code	Tertiary (via sb792.txt)
+22.24	683.002	Transportation Code	Direct
+22.24	683.011	Transportation Code	Direct
+22.24	683.012	Transportation Code	Direct
+22.24	644.153	Transportation Code	Tertiary (via 683.002)
+22.24	683.031	Transportation Code	Tertiary (via 683.012)
+22.24	22.901	Transportation Code	Tertiary (via 683.012)
+22.24	683.032	Transportation Code	Tertiary (via 683.012)
+22.24	31	Parks and Wildlife Code	Tertiary (via 683.012)
+22.25	502.001	Transportation Code	Direct
+22.25	502.005	Transportation Code	Direct
+22.25	502.040	Transportation Code	Direct
+22.25	502.046	Transportation Code	Direct
+22.25	502.059	Transportation Code	Direct
+22.25	502.094	Transportation Code	Direct
+22.25	502.095	Transportation Code	Direct
+22.25	502.140	Transportation Code	Direct
+22.25	29.003	Parks and Wildlife Code	Direct
+22.25	502.142	Transportation Code	Direct
+22.25	502.143	Transportation Code	Direct
+22.25	502.144	Transportation Code	Direct
+22.25	502.145	Transportation Code	Direct
+22.25	502.146	Transportation Code	Direct
+22.25	502.433	Transportation Code	Direct
+22.25	502.407	Transportation Code	Direct
+22.25	502.471	Transportation Code	Direct
+22.25	502.472	Transportation Code	Direct
+22.25	502.473	Transportation Code	Direct
+22.25	502.474	Transportation Code	Direct
+22.25	502.475	Transportation Code	Direct
+22.25	502.4755	Transportation Code	Direct
+22.25	502.491	Transportation Code	Direct
+22.25	502.492	Transportation Code	Direct
+22.25	503.061	Transportation Code	Direct
+22.25	503.062	Transportation Code	Direct
+22.25	503.0626	Transportation Code	Direct
+22.25	503.063	Transportation Code	Direct
+22.25	503.0631	Transportation Code	Direct
+22.25	503.068	Transportation Code	Direct
+22.25	503.070	Transportation Code	Direct
+22.25	503.094	Transportation Code	Direct
+22.25	504.901	Transportation Code	Direct
+22.25	504.941	Transportation Code	Direct
+22.25	504.943	Transportation Code	Direct
+22.25	217.27(b)	Texas Administrative Code	Direct
+22.25	504.944	Transportation Code	Direct
+22.25	504.945	Transportation Code	Direct
+22.25	504.946	Transportation Code	Direct
+22.25	504.9465	Transportation Code	Direct
+22.25	501.002	Transportation Code	Tertiary (via 502.001)
+22.25	623.149	Transportation Code	Tertiary (via 502.001)
+22.25	623.142	Transportation Code	Tertiary (via 502.001)
+22.25	502.004	Transportation Code	Tertiary (via 502.005)
+22.25	24.001	Transportation Code	Tertiary (via 502.005)
+22.25	502.043	Transportation Code	Tertiary (via 502.046)
+22.25	601.452	Transportation Code	Tertiary (via 502.046)
+22.25	501.0234	Transportation Code	Tertiary (via 502.046)
+22.25	791	Government Code	Tertiary (via 502.046)
+22.25	119	Local Government Code	Tertiary (via 502.046)
+22.25	504	Transportation Code	Tertiary (via 502.059)
+22.25	601.168	Transportation Code	Tertiary (via 502.094)
+22.25	502.198	Transportation Code	Tertiary (via 502.094)
+22.25	504.401	Transportation Code	Tertiary (via 502.140)
+22.25	502.006	Transportation Code	Tertiary (via 502.140)
+22.25	87.001	Civil Practice and Remedies Code	Tertiary (via 502.146)
+22.25	151.1551	Tax Code	Tertiary (via 502.146)
+22.25	51	Agriculture Code	Tertiary (via 502.146)
+22.25	52	Agriculture Code	Tertiary (via 502.146)
+22.25	502.252	Transportation Code	Tertiary (via 502.433)
+22.25	502.045	Transportation Code	Tertiary (via 502.407)
+22.25	502.003	Transportation Code	Tertiary (via 502.471)
+22.25	502.042	Transportation Code	Tertiary (via 502.471)
+22.25	502.197	Transportation Code	Tertiary (via 502.471)
+22.25	502.401	Transportation Code	Tertiary (via 502.471)
+22.25	502.402	Transportation Code	Tertiary (via 502.472)
+22.25	502.404	Transportation Code	Tertiary (via 502.473)
+22.25	501.145	Transportation Code	Tertiary (via 502.491)
+22.25	503.001	Transportation Code	Tertiary (via 502.491)
+22.25	503	Transportation Code	Tertiary (via 502.491)
+22.25	502.454	Transportation Code	Tertiary (via 502.492)
+22.25	503.024	Transportation Code	Tertiary (via 503.063)
+22.25	683.077	Transportation Code	Tertiary (via 503.063)
+22.25	2175	Government Code	Tertiary (via 503.063)
+22.25	503.065	Transportation Code	Tertiary (via 503.0631)
+22.25	503.0633	Transportation Code	Tertiary (via 503.0631)
+22.25	2308.002	Occupations Code	Tertiary (via 503.068)
+22.25	228.057	Transportation Code	Tertiary (via 504.945)
+22.25	21.001	Transportation Code	Tertiary (via 504.9465)
+22.26	601.051	Transportation Code	Direct
+22.26	601.052	Transportation Code	Direct
+22.26	601.053	Transportation Code	Direct
+22.26	601.054	Transportation Code	Direct
+22.26	601.071	Transportation Code	Direct
+22.26	601.073	Transportation Code	Direct
+22.26	601.081	Transportation Code	Direct
+22.26	601.121	Transportation Code	Direct
+22.26	601.122	Transportation Code	Direct
+22.26	601.123	Transportation Code	Direct
+22.26	601.124	Transportation Code	Direct
+22.26	601.191	Transportation Code	Direct
+22.26	601.193	Transportation Code	Direct
+22.26	601.194	Transportation Code	Direct
+22.26	621.001	Transportation Code	Direct
+22.26	621.002	Transportation Code	Direct
+22.26	621.006	Transportation Code	Direct
+22.26	621.101	Transportation Code	Direct
+22.26	621.201	Transportation Code	Direct
+22.26	621.203	Transportation Code	Direct
+22.26	621.204	Transportation Code	Direct
+22.26	621.205	Transportation Code	Direct
+22.26	621.206	Transportation Code	Direct
+22.26	621.2061	Transportation Code	Direct
+22.26	621.207	Transportation Code	Direct
+22.26	621.501	Transportation Code	Direct
+22.26	621.504	Transportation Code	Direct
+22.26	622.901	Transportation Code	Direct
+22.26	522.902	Transportation Code	Direct
+22.26	51.002	Utilities Code	Tertiary (via 601.053)
+22.26	601.083	Transportation Code	Tertiary (via 601.071)
+22.26	601.072	Transportation Code	Tertiary (via 601.073)
+22.26	601.195	Transportation Code	Tertiary (via 601.193)
+22.26	502.057	Transportation Code	Tertiary (via 621.002)
+22.26	623.052	Transportation Code	Tertiary (via 621.101)
+22.26	502.431	Transportation Code	Tertiary (via 622.901)
+22.26	622.903	Transportation Code	Tertiary (via 622.901)
+22.27	472.021	Transportation Code	Direct
+22.27	472.022	Transportation Code	Direct
+22.27	45A	Code of Criminal Procedure	Tertiary (via 472.022)
+22.28	600.001	Transportation Code	Direct
+22.29	724.002	Transportation Code	Direct
+22.29	724.011	Transportation Code	Direct
+22.29	724.012	Transportation Code	Direct
+22.29	724.014	Transportation Code	Direct
+22.29	724.015	Transportation Code	Direct
+22.29	724.016	Transportation Code	Direct
+22.29	724.017	Transportation Code	Direct
+22.29	724.018	Transportation Code	Direct
+22.29	724.019	Transportation Code	Direct
+22.29	724.031	Transportation Code	Direct
+22.29	724.032	Transportation Code	Direct
+22.29	hb2190.txt	House Bill	Direct
+22.29	hb1163.txt	House Bill	Direct
+22.29	hb558.txt	House Bill	Direct
+22.29	724.013	Transportation Code	Tertiary (via 724.002)
+22.29	106.041	Alcoholic Beverage Code	Tertiary (via 724.011)
+22.29	49.045	Penal Code	Tertiary (via 724.012)
+22.29	49.061	Penal Code	Tertiary (via 724.012)
+22.29	49.05	Penal Code	Tertiary (via 724.012)
+22.29	49.06	Penal Code	Tertiary (via 724.012)
+22.29	38.50	Code of Criminal Procedure	Tertiary (via 724.015)
+22.29	22.085	Transportation Code	Tertiary (via hb2190.txt)
+22.29	112.103	Transportation Code	Tertiary (via hb2190.txt)
+22.29	192.005	Transportation Code	Tertiary (via hb2190.txt)
+22.29	201.806	Transportation Code	Tertiary (via hb2190.txt)
+22.29	550.081	Transportation Code	Tertiary (via hb2190.txt)
+22.29	201.909	Transportation Code	Tertiary (via hb2190.txt)
+22.29	201.911	Transportation Code	Tertiary (via hb2190.txt)
+22.29	222.003	Transportation Code	Tertiary (via hb2190.txt)
+22.29	391.038	Transportation Code	Tertiary (via hb2190.txt)
+22.29	451.108	Transportation Code	Tertiary (via hb2190.txt)
+22.29	451.454	Transportation Code	Tertiary (via hb2190.txt)
+22.29	451.455	Transportation Code	Tertiary (via hb2190.txt)
+22.29	452.062	Transportation Code	Tertiary (via hb2190.txt)
+22.29	452.454	Transportation Code	Tertiary (via hb2190.txt)
+22.29	452.455	Transportation Code	Tertiary (via hb2190.txt)
+22.29	460.110	Transportation Code	Tertiary (via hb2190.txt)
+22.29	463.065	Transportation Code	Tertiary (via hb2190.txt)
+22.29	521.046	Transportation Code	Tertiary (via hb2190.txt)
+22.29	521.045	Transportation Code	Tertiary (via hb2190.txt)
+22.29	521.047	Transportation Code	Tertiary (via hb2190.txt)
+22.29	521.049	Transportation Code	Tertiary (via hb2190.txt)
+22.29	522.081	Transportation Code	Tertiary (via hb2190.txt)
+22.29	523.005	Transportation Code	Tertiary (via hb2190.txt)
+22.29	523.004	Transportation Code	Tertiary (via hb2190.txt)
+22.29	542.206	Transportation Code	Tertiary (via hb2190.txt)
+22.29	543.011	Transportation Code	Tertiary (via hb2190.txt)
+22.29	545.356	Transportation Code	Tertiary (via hb2190.txt)
+22.29	545.3561	Transportation Code	Tertiary (via hb2190.txt)
+22.29	545.4121	Transportation Code	Tertiary (via hb2190.txt)
+22.29	545.428	Transportation Code	Tertiary (via hb2190.txt)
+22.29	545.455	Transportation Code	Tertiary (via hb2190.txt)
+22.29	623.402	Transportation Code	Tertiary (via hb2190.txt)
+22.29	38.01	Penal Code	Tertiary (via hb2190.txt)
+22.29	550.065	Transportation Code	Tertiary (via hb2190.txt)
+22.29	2051.044	Government Code	Tertiary (via hb2190.txt)
+22.29	730.003	Transportation Code	Tertiary (via hb2190.txt)
+22.29	550.066	Transportation Code	Tertiary (via hb2190.txt)
+22.29	550.067	Transportation Code	Tertiary (via hb2190.txt)
+22.29	550.068	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.002	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.003	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.006	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.009	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.056	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.084	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.086	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.151	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.152	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.153	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.154	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.155	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.157	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.158	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.162	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.163	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.164	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.166	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.167	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.169	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.291	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.292	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.293	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.294	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.296	Transportation Code	Tertiary (via hb2190.txt)
+22.29	601.333	Transportation Code	Tertiary (via hb2190.txt)
+22.29	622.954	Transportation Code	Tertiary (via hb2190.txt)
+22.29	623.0172	Transportation Code	Tertiary (via hb2190.txt)
+22.29	623.410	Transportation Code	Tertiary (via hb2190.txt)
+22.29	623.405	Transportation Code	Tertiary (via hb2190.txt)
+22.29	643.105	Transportation Code	Tertiary (via hb2190.txt)
+22.29	643.103	Transportation Code	Tertiary (via hb2190.txt)
+22.29	644.151	Transportation Code	Tertiary (via hb2190.txt)
+22.29	686.001	Transportation Code	Tertiary (via hb2190.txt)
+22.29	686.004	Transportation Code	Tertiary (via hb2190.txt)
+22.29	686.005	Transportation Code	Tertiary (via hb2190.txt)
+22.29	709.002	Transportation Code	Tertiary (via hb2190.txt)
+22.29	723.011	Transportation Code	Tertiary (via hb2190.txt)
+22.29	723.012	Transportation Code	Tertiary (via hb2190.txt)
+22.29	723.013	Transportation Code	Tertiary (via hb2190.txt)
+22.29	726.002	Transportation Code	Tertiary (via hb2190.txt)
+22.29	1006.153	Transportation Code	Tertiary (via hb2190.txt)
+22.29	504.001	Transportation Code	Tertiary (via hb2190.txt)
+22.29	504.002	Transportation Code	Tertiary (via hb2190.txt)
+22.29	17.062	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	30.006	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	72.001	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	72.051	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	72.052	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	522.043	Transportation Code	Tertiary (via hb2190.txt)
+22.29	72.055	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	22.011	Penal Code	Tertiary (via hb2190.txt)
+22.29	22.021	Penal Code	Tertiary (via hb2190.txt)
+22.29	21.02	Penal Code	Tertiary (via hb2190.txt)
+22.29	20A.02	Penal Code	Tertiary (via hb2190.txt)
+22.29	20A.03	Penal Code	Tertiary (via hb2190.txt)
+22.29	22.04	Penal Code	Tertiary (via hb2190.txt)
+22.29	32.32	Penal Code	Tertiary (via hb2190.txt)
+22.29	32.31	Penal Code	Tertiary (via hb2190.txt)
+22.29	32.51	Penal Code	Tertiary (via hb2190.txt)
+22.29	32.53	Penal Code	Tertiary (via hb2190.txt)
+22.29	25.01	Penal Code	Tertiary (via hb2190.txt)
+22.29	43.25	Penal Code	Tertiary (via hb2190.txt)
+22.29	20.04	Penal Code	Tertiary (via hb2190.txt)
+22.29	30.02	Penal Code	Tertiary (via hb2190.txt)
+22.29	34.015	Education Code	Tertiary (via hb2190.txt)
+22.29	54.352	Education Code	Tertiary (via hb2190.txt)
+22.29	1001.1015	Education Code	Tertiary (via hb2190.txt)
+22.29	542.304	Transportation Code	Tertiary (via hb2190.txt)
+22.29	203.007	Family Code	Tertiary (via hb2190.txt)
+22.29	264.513	Family Code	Tertiary (via hb2190.txt)
+22.29	411.019	Government Code	Tertiary (via hb2190.txt)
+22.29	411.0726	Government Code	Tertiary (via hb2190.txt)
+22.29	411.0731	Government Code	Tertiary (via hb2190.txt)
+22.29	411.0736	Government Code	Tertiary (via hb2190.txt)
+22.29	423.002	Government Code	Tertiary (via hb2190.txt)
+22.29	1071.002	Occupations Code	Tertiary (via hb2190.txt)
+22.29	1001.003	Occupations Code	Tertiary (via hb2190.txt)
+22.29	1952.155	Insurance Code	Tertiary (via hb2190.txt)
+22.29	1954.056	Insurance Code	Tertiary (via hb2190.txt)
+22.29	38.18	Penal Code	Tertiary (via hb2190.txt)
+22.29	12.01	Code of Criminal Procedure	Tertiary (via hb2190.txt)
+22.29	12.03	Code of Criminal Procedure	Tertiary (via hb2190.txt)
+22.29	42A.516	Code of Criminal Procedure	Tertiary (via hb2190.txt)
+22.29	49.10	Code of Criminal Procedure	Tertiary (via hb2190.txt)
+22.29	730	Transportation Code	Tertiary (via hb2190.txt)
+22.29	550	Transportation Code	Tertiary (via hb2190.txt)
+22.29	552	Government Code	Tertiary (via hb2190.txt)
+22.29	573	Government Code	Tertiary (via hb2190.txt)
+22.29	644	Transportation Code	Tertiary (via hb2190.txt)
+22.29	41	Civil Practice and Remedies Code	Tertiary (via hb2190.txt)
+22.29	162	Tax Code	Tertiary (via hb2190.txt)
+22.29	1001	Occupations Code	Tertiary (via hb2190.txt)
+22.29	49.065	Penal Code	Tertiary (via hb1163.txt)
+22.29	31.097	Parks and Wildlife Code	Tertiary (via hb1163.txt)
+22.29	49.10	Penal Code	Tertiary (via hb1163.txt)
+22.29	22.011	Transportation Code	Tertiary (via hb1163.txt)
+22.29	22.021	Transportation Code	Tertiary (via hb1163.txt)
+22.29	19.02	Penal Code	Tertiary (via hb1163.txt)
+22.29	12.203	Parks and Wildlife Code	Tertiary (via hb1163.txt)
+22.29	30.05	Penal Code	Tertiary (via hb1163.txt)
+22.29	31.03	Penal Code	Tertiary (via hb1163.txt)
+22.29	31.11	Penal Code	Tertiary (via hb1163.txt)
+22.29	524.011	Transportation Code	Tertiary (via hb1163.txt)
+22.29	524.015	Transportation Code	Tertiary (via hb1163.txt)
+22.29	524.023	Transportation Code	Tertiary (via hb1163.txt)
+22.29	524.042	Transportation Code	Tertiary (via hb1163.txt)
+22.29	16.23	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	17.441	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	18.01	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	18.02	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	18.067	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	42A.102	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	42A.453	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	42A.408	Code of Criminal Procedure	Tertiary (via hb1163.txt)
+22.29	191	Natural Resources Code	Tertiary (via hb1163.txt)
+22.29	160	Tax Code	Tertiary (via hb1163.txt)
+22.29	7	Transportation Code	Tertiary (via hb1163.txt)
+22.29	26	Water Code	Tertiary (via hb1163.txt)
+22.30	550.001	Transportation Code	Direct
+22.30	550.021	Transportation Code	Direct
+22.30	550.022	Transportation Code	Direct
+22.30	550.023	Transportation Code	Direct
+22.30	550.024	Transportation Code	Direct
+22.30	550.025	Transportation Code	Direct
+22.30	550.026	Transportation Code	Direct
+22.30	550.041	Transportation Code	Direct
+22.30	550.062	Transportation Code	Direct
+22.30	550.063	Transportation Code	Direct
+22.30	550.064	Transportation Code	Direct
+22.30	19.04	Penal Code	Direct
+22.30	19.05	Penal Code	Direct
+22.30	49.07	Penal Code	Direct
+22.30	49.08	Penal Code	Direct
+22.30	28.09	Penal Code	Tertiary (via 19.04)
+22.31	546	Transportation Code	Direct
+22.31	545.3051	Transportation Code	Direct
+22.31	600.001	Transportation Code	Direct
+22.31	542.501	Transportation Code	Direct
+22.37	541.002	Transportation Code	Direct
+22.37	546.007	Transportation Code	Direct
+22.37	545.156	Transportation Code	Direct

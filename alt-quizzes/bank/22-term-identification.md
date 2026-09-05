@@ -1472,3 +1472,771 @@ An "______" is any non-recurring event that causes a reduction of roadway capaci
 **Explanation:** The term this defines is "Incident", straight from BPOC 22.37; Traffic Incident Management Handbook (FHWA Office of Travel Management).
 
 ---
+## Additional Terms — 2026 Reference-Material Expansion
+
+*The terms below were added after a full cross-reference chase of every Direct and one-hop-tertiary Chapter 22 citation (new bills HB 291, HB 1281, HB 1442, HB 2190, HB 1163, HB 558, SB 792; new DPS Administrative Rules TAC 21.2/21.4/21.5/217.27; and previously-uncovered definitions embedded in sections Chapter 22 already cites directly). Scope stayed tight to genuine Chapter 22 vocabulary — a term only made the cut if it is self-contained (not itself defined by pointing to an outside code this bank doesn't cover) and substantively relevant to Texas traffic law, crash investigation, or a peace officer's day-to-day enforcement of it. A large number of tertiary hits were excluded as out of scope: general Penal Code Section 1.07(a) definitions that apply to every offense in the code (Act, Actor, Conduct, Felony, and so on), and deep multi-hop chains into unrelated Penal Code chapters (weapons, dog fighting, kidnapping, controlled substances, obscenity) that were only technically reachable through an exemption clause or a crime-victim civil-remedies bill, not content Chapter 22 itself designates for definition.*
+
+## LO 22.1 — Vehicle Types (TC 541.201) — Additional Terms (TC 541.202-.203)
+
+### Q132 — Term ID
+**LO:** 22.1 · **Source:** TC 541.202(1)
+
+**Answer:** Railroad
+
+"______" means a carrier that operates cars, other than streetcars, on stationary rails to transport persons or property.
+
+**Explanation:** The term this defines is "Railroad", straight from TC 541.202(1).
+
+---
+
+### Q133 — Term ID
+**LO:** 22.1 · **Source:** TC 541.202(2)
+
+**Answer:** Railroad Train
+
+"______" means a steam engine or electric or other motor with or without an attached car operated on rails, other than a streetcar.
+
+**Explanation:** The term this defines is "Railroad Train", straight from TC 541.202(2).
+
+---
+
+### Q134 — Term ID
+**LO:** 22.1 · **Source:** TC 541.202(3)
+
+**Answer:** Streetcar
+
+"______" means a car, other than a railroad train, used to transport persons or property and operated on rails located primarily within a municipality.
+
+**Explanation:** The term this defines is "Streetcar", straight from TC 541.202(3).
+
+---
+
+### Q135 — Term ID
+**LO:** 22.1 · **Source:** TC 541.203(3)
+
+**Answer:** Muffler
+
+"______" means a device that reduces noise using: (A) a mechanical design, including a series of chambers or baffle plates, to receive exhaust gas from an internal combustion engine; or (B) turbine wheels to receive exhaust gas from a diesel engine.
+
+**Explanation:** The term this defines is "Muffler", straight from TC 541.203(3).
+
+---
+
+## LO 22.2 — Persons, Governmental Authorities, and Penal Code Cross-References — Additional Terms (TC 623.008)
+
+### Q136 — Term ID
+**LO:** 22.2 · **Source:** TC 623.008(a)(1)
+
+**Answer:** Escort Flag Vehicle
+
+In this section: (1) "______" means a vehicle that precedes or follows an oversize or overweight vehicle operating under a permit issued by the department for the purpose of facilitating the safe movement of the oversize or overweight vehicle over roads.
+
+**Explanation:** The term this defines is "Escort Flag Vehicle", straight from TC 623.008(a)(1) (cross-referenced by TC 541.001).
+
+---
+
+### Q137 — Term ID
+**LO:** 22.2 · **Source:** TC 623.008(a)(2)
+
+**Answer:** Escort Flagger
+
+(2) "______" means a person who: (A) has successfully completed a training program in traffic direction as defined by the basic peace officer course curriculum established by the Texas Commission on Law Enforcement; and (B) in accordance with a permit issued by the department under this subtitle, operates an escort flag vehicle or directs and controls the flow of traffic using a hand signaling device or an automated flagger assistance device.
+
+**Explanation:** The term this defines is "Escort Flagger", straight from TC 623.008(a)(2) (cross-referenced by TC 541.001).
+
+---
+
+## LO 22.7 — Driver's License and Commercial Driver's License Definitions — Additional Terms (TC 521.001, 521.453, 522.003, 524.001)
+
+### Q138 — Term ID
+**LO:** 22.7 · **Source:** TC 521.001(a)(9)
+
+**Answer:** Image Comparison Technology
+
+"______" means any technology that is used to compare facial images, thumbprints, or fingerprints.
+
+**Explanation:** The term this defines is "Image Comparison Technology", straight from TC 521.001(a)(9).
+
+---
+
+### Q139 — Term ID
+**LO:** 22.7 · **Source:** TC 521.453(g)(2)
+
+**Answer:** Personal Identification Certificate
+
+In this section: ... (2) "______" means a personal identification certificate issued by the department, by another agency of this state, by another state, or by the United States.
+
+**Explanation:** The term this defines is "Personal Identification Certificate", straight from TC 521.453(g)(2).
+
+---
+
+### Q140 — Term ID
+**LO:** 22.7 · **Source:** TC 522.003(2)
+
+**Answer:** Alcohol Concentration
+
+"______" means the number of grams of alcohol for each: (A) 100 milliliters of blood; (B) 210 liters of breath; or (C) 67 milliliters of urine.
+
+**Explanation:** The term this defines is "Alcohol Concentration", straight from TC 522.003(2).
+
+---
+
+### Q141 — Term ID
+**LO:** 22.7 · **Source:** TC 522.003(9)
+
+**Answer:** Disqualify
+
+"______" means to withdraw the privilege to drive a commercial motor vehicle, including to suspend, cancel, or revoke that privilege under a state or federal law.
+
+**Explanation:** The term this defines is "Disqualify", straight from TC 522.003(9).
+
+---
+
+### Q142 — Term ID
+**LO:** 22.7 · **Source:** TC 522.003(23)
+
+**Answer:** Out-Of-Service Order
+
+"______" means: (A) a temporary prohibition against driving a commercial motor vehicle issued under Section 522.101, the law of another state, 49 C.F.R. Section 383.5, 386.72, 392.5, 392.9a, 395.13, or 396.9, a law compatible with those federal regulations, or the North American Standard Out-of-Service Criteria; or (B) a declaration by the Federal Motor Carrier Safety Administration or an authorized enforcement officer of a state or local jurisdiction that a driver, commercial motor vehicle, or motor carrier operation is out of service under those same regulations or criteria.
+
+**Explanation:** The term this defines is "Out-Of-Service Order", straight from TC 522.003(23).
+
+---
+
+### Q143 — Term ID
+**LO:** 22.7 · **Source:** TC 522.003(25)
+
+**Answer:** Serious Traffic Violation
+
+"______" means: (A) a conviction arising from the driving of a motor vehicle, other than a parking, vehicle weight, or vehicle defect violation, for: (i) excessive speeding, involving a single charge of driving 15 miles per hour or more above the posted speed limit; (ii) reckless driving, as defined by state or local law; (iii) a violation of a state or local law related to motor vehicle traffic control, including a law regulating the operation of vehicles on highways, arising in connection with a fatal collision; (iv) improper or erratic traffic lane change; (v) following the vehicle ahead too closely; or (vi) a violation of Sections 522.011 or 522.042; or (B) a violation of Section 522.015.
+
+**Explanation:** The term this defines is "Serious Traffic Violation", straight from TC 522.003(25).
+
+---
+
+### Q144 — Term ID
+**LO:** 22.7 · **Source:** TC 524.001(3)
+
+**Answer:** Alcohol-Related Or Drug-Related Enforcement Contact
+
+"______" means a driver's license suspension, disqualification, or prohibition order under the laws of this state or another state resulting from: (A) a conviction of an offense prohibiting the operation of a motor vehicle or watercraft while: (i) intoxicated; (ii) under the influence of alcohol; or (iii) under the influence of a controlled substance; (B) a refusal to submit to the taking of a breath or blood specimen following an arrest for an offense prohibiting the operation of a motor vehicle or an offense prohibiting the operation of a watercraft, if the watercraft was powered with an engine having a manufacturer's rating of 50 horsepower or more, while intoxicated, under the influence of alcohol, or under the influence of a controlled substance; or (C) an analysis of a breath or blood specimen showing an alcohol concentration of a level specified by Section 49.01, Penal Code, following an arrest for an offense prohibiting the operation of a motor vehicle or watercraft while intoxicated.
+
+**Explanation:** The term this defines is "Alcohol-Related Or Drug-Related Enforcement Contact", straight from TC 524.001(3) — the Administrative License Revocation (ALR) chapter.
+
+---
+
+## LO 22.8 — Traffic Signs, Signals, and Markings (TC 544.007)
+
+### Q145 — Term ID
+**LO:** 22.8 · **Source:** TC 544.007(j)(1)
+
+**Answer:** Freeway Entrance Ramp Control Signal
+
+In this section: (1) "______" means a traffic-control signal that controls the flow of traffic entering a freeway.
+
+**Explanation:** The term this defines is "Freeway Entrance Ramp Control Signal", straight from TC 544.007(j)(1).
+
+---
+
+### Q146 — Term ID
+**LO:** 22.8 · **Source:** TC 544.007(j)(2)
+
+**Answer:** Pedestrian Hybrid Beacon
+
+(2) "______" means a pedestrian-controlled traffic-control signal that displays different colored lights successively only when activated by a pedestrian.
+
+**Explanation:** The term this defines is "Pedestrian Hybrid Beacon", straight from TC 544.007(j)(2).
+
+---
+
+## LO 22.9 — Chapter 545 Definitions (TC 545.001) — Additional Term
+
+### Q147 — Term ID
+**LO:** 22.9 · **Source:** TC 545.001(1)
+
+**Answer:** On-Track Equipment
+
+"______" means any car, rolling stock, equipment, or other device that, alone or coupled to another device, is operated on a railroad track.
+
+**Explanation:** The term this defines is "On-Track Equipment", straight from TC 545.001(1).
+
+---
+
+## LO 22.11 — Right-of-Way / Move Over Act (TC 545.157, 372.001)
+
+### Q148 — Term ID
+**LO:** 22.11 · **Source:** TC 545.157(e)(1)
+
+**Answer:** Tow Truck
+
+In this section: (1) "______" means a vehicle that: (A) has been issued a permit under Subchapter C, Chapter 2308, Occupations Code; and (B) is operated by a person licensed under Subchapter D, Chapter 2308, Occupations Code.
+
+**Explanation:** The term this defines is "Tow Truck", straight from TC 545.157(e)(1) — the Move Over/Slow Down Act.
+
+---
+
+### Q149 — Term ID
+**LO:** 22.11 · **Source:** TC 545.157(e)(2)
+
+**Answer:** Traffic Control Channelizing Device
+
+(2) "______" means equipment used to warn and alert drivers of conditions created by work activities in or near the traveled way, to protect workers in a temporary traffic control zone, and to guide drivers and pedestrians safely. The term includes a traffic cone, tubular marker, vertical panel, drum, barricade, temporary raised island, concrete or cable barrier, guardrail, or channelizer.
+
+**Explanation:** The term this defines is "Traffic Control Channelizing Device", straight from TC 545.157(e)(2).
+
+---
+
+### Q150 — Term ID
+**LO:** 22.11 · **Source:** TC 372.001(2)
+
+**Answer:** Toll Project Entity
+
+"______" means an entity authorized by law to acquire, design, construct, finance, operate, and maintain a toll project, including: (A) the department under Chapter 228; (B) a regional tollway authority under Chapter 366; (C) a regional mobility authority under Chapter 370; or (D) a county under Chapter 284.
+
+**Explanation:** The term this defines is "Toll Project Entity", straight from TC 372.001(2) — cross-referenced by the Move Over/Slow Down Act at TC 545.157(a)(6).
+
+---
+
+## LO 22.13 — Stopping, Standing, and Parking; Authorized Vehicle Removal (TC 545.305)
+
+### Q151 — Term ID
+**LO:** 22.13 · **Source:** TC 545.305(e)(1)
+
+**Answer:** Towing Company
+
+In this section: (1) "______" means an individual, corporation, partnership, or other association engaged in the business of towing vehicles on a highway for compensation or with the expectation of compensation for the towing or storage of the vehicles and includes the owner, operator, employee, or agent of a towing company.
+
+**Explanation:** The term this defines is "Towing Company", straight from TC 545.305(e)(1).
+
+---
+
+### Q152 — Term ID
+**LO:** 22.13 · **Source:** TC 545.305(e)(2)
+
+**Answer:** Storage Company
+
+(2) "______" means an individual, corporation, partnership, or other association engaged in the business of storing or repairing vehicles for compensation or with the expectation of compensation for the storage or repair of vehicles and includes the owner, operator, employee, or agent of a storage company.
+
+**Explanation:** The term this defines is "Storage Company", straight from TC 545.305(e)(2).
+
+---
+
+## LO 22.14 — Speed Restrictions (TC 545.352)
+
+### Q153 — Term ID
+**LO:** 22.14 · **Source:** TC 545.352(d)(1)
+
+**Answer:** Interstate Highway
+
+In this section: (1) "______" means a segment of the national system of interstate and defense highways that is: (A) located in this state; (B) officially designated by the Texas Transportation Commission; and (C) approved under Title 23, United States Code.
+
+**Explanation:** The term this defines is "Interstate Highway", straight from TC 545.352(d)(1) — the prima facie speed limits section.
+
+---
+
+## LO 22.15 — Miscellaneous Rules & Automated Vehicles — Additional Terms (TC 545.412-.451; PC 46.01, 49.031)
+
+### Q154 — Term ID
+**LO:** 22.15 · **Source:** PC 46.01(17)
+
+**Answer:** Tire Deflation Device
+
+"______" means a device, including a caltrop or spike strip, that, when driven over, impedes or stops the movement of a wheeled vehicle by puncturing one or more of the vehicle's tires.
+
+**Explanation:** The term this defines is "Tire Deflation Device", straight from PC 46.01(17) — cross-referenced by TC 38.04's evading-arrest offense (a higher degree of offense applies if the actor uses this device against a pursuing officer).
+
+---
+
+### Q155 — Term ID
+**LO:** 22.15 · **Source:** PC 49.031(a)(1)
+
+**Answer:** Open Container
+
+In this section: (1) "______" means a bottle, can, or other receptacle that contains any amount of alcoholic beverage and that is open, that has been opened, that has a broken seal, or the contents of which are partially removed.
+
+**Explanation:** The term this defines is "Open Container", straight from PC 49.031(a)(1) — cross-referenced by TC 545.420(e)(2)'s racing-offense enhancement.
+
+---
+
+### Q156 — Term ID
+**LO:** 22.15 · **Source:** PC 49.031(a)(2)
+
+**Answer:** Passenger Area Of A Motor Vehicle
+
+(2) "______" means the area of a motor vehicle designed for the seating of the operator and passengers of the vehicle. The term does not include: (A) a glove compartment or similar storage container that is locked; (B) the trunk of a vehicle; or (C) the area behind the last upright seat of the vehicle, if the vehicle does not have a trunk.
+
+**Explanation:** The term this defines is "Passenger Area Of A Motor Vehicle", straight from PC 49.031(a)(2).
+
+---
+
+### Q157 — Term ID
+**LO:** 22.15 · **Source:** TC 545.412(f)(1)
+
+**Answer:** Child Passenger Safety Seat System
+
+In this section: (1) "______" means an infant or child passenger restraint system that meets the federal standards for crash-tested restraint systems as set by the National Highway Traffic Safety Administration.
+
+**Explanation:** The term this defines is "Child Passenger Safety Seat System", straight from TC 545.412(f)(1).
+
+---
+
+### Q158 — Term ID
+**LO:** 22.15 · **Source:** TC 545.412(f)(3)
+
+**Answer:** Safety Belt
+
+(3) "______" means a lap belt and any shoulder straps included as original equipment on or added to a vehicle.
+
+**Explanation:** The term this defines is "Safety Belt", straight from TC 545.412(f)(3).
+
+---
+
+### Q159 — Term ID
+**LO:** 22.15 · **Source:** TC 545.420(b)(1)
+
+**Answer:** Drag Race
+
+In this section: (1) "______" means the operation of: (A) two or more vehicles from a point side by side at accelerating speeds in a competitive attempt to outdistance each other; or (B) one or more vehicles over a common selected course, from the same place to the same place, for the purpose of comparing the relative speeds or power of acceleration of the vehicle or vehicles in a specified distance or time.
+
+**Explanation:** The term this defines is "Drag Race", straight from TC 545.420(b)(1) — the racing-on-highway offense.
+
+---
+
+### Q160 — Term ID
+**LO:** 22.15 · **Source:** TC 545.420(b)(2)
+
+**Answer:** Race
+
+(2) "______" means the use of one or more vehicles in an attempt to: (A) outgain or outdistance another vehicle or prevent another vehicle from passing; (B) arrive at a given destination ahead of another vehicle or vehicles; or (C) test the physical stamina or endurance of an operator over a long-distance driving route.
+
+**Explanation:** The term this defines is "Race", straight from TC 545.420(b)(2) — distinct from "Drag Race," defined immediately above it in the same subsection.
+
+---
+
+### Q161 — Term ID
+**LO:** 22.15 · **Source:** TC 545.425(a)(1)
+
+**Answer:** Hands-Free Device
+
+In this section: (1) "______" means speakerphone capability, a telephone attachment, or another function or other piece of equipment, regardless of whether permanently installed in or on a wireless communication device or in a motor vehicle, that allows use of the wireless communication device without use of either of the operator's hands, except to activate or deactivate a function of the wireless communication device or hands-free device. The term includes voice-operated technology and a push-to-talk function.
+
+**Explanation:** The term this defines is "Hands-Free Device", straight from TC 545.425(a)(1) — the school-crossing-zone wireless device statute.
+
+---
+
+### Q162 — Term ID
+**LO:** 22.15 · **Source:** TC 545.425(a)(2)
+
+**Answer:** Wireless Communication Device
+
+(2) "______" means a device that uses a commercial mobile service, as defined by 47 U.S.C. Section 332.
+
+**Explanation:** The term this defines is "Wireless Communication Device", straight from TC 545.425(a)(2).
+
+---
+
+### Q163 — Term ID
+**LO:** 22.15 · **Source:** TC 545.4251(a)(1)
+
+**Answer:** Electronic Message
+
+In this section: (1) "______" means data that is read from or entered into a wireless communication device for the purpose of communicating with another person.
+
+**Explanation:** The term this defines is "Electronic Message", straight from TC 545.4251(a)(1) — the statewide texting-while-driving statute.
+
+---
+
+### Q164 — Term ID
+**LO:** 22.15 · **Source:** TC 545.451(8)
+
+**Answer:** Level 3 Automation
+
+"______" means a standard of automation meeting the criteria for Level 3 specified in the SAE International Standard J3016 (April 2021).
+
+**Explanation:** The term this defines is "Level 3 Automation", straight from TC 545.451(8) — filling out the automated-vehicle vocabulary alongside "Level 4 Automation" and "Level 5 Automation," defined next.
+
+---
+
+### Q165 — Term ID
+**LO:** 22.15 · **Source:** TC 545.451(9)
+
+**Answer:** Level 4 Automation
+
+"______" means a standard of automation meeting the criteria for Level 4 specified in the SAE International Standard J3016 (April 2021).
+
+**Explanation:** The term this defines is "Level 4 Automation", straight from TC 545.451(9).
+
+---
+
+### Q166 — Term ID
+**LO:** 22.15 · **Source:** TC 545.451(10)
+
+**Answer:** Level 5 Automation
+
+"______" means a standard of automation meeting the criteria for Level 5 specified in the SAE International Standard J3016 (April 2021).
+
+**Explanation:** The term this defines is "Level 5 Automation", straight from TC 545.451(10).
+
+---
+
+## LO 22.17 — Vehicle Equipment and Compulsory Inspection Definitions — Additional Terms (TC 547.001, 548.001)
+
+### Q167 — Term ID
+**LO:** 22.17 · **Source:** TC 547.001(5)
+
+**Answer:** Multipurpose Vehicle
+
+"______" means a motor vehicle that is: (A) designed to carry 10 or fewer persons; and (B) constructed on a truck chassis or with special features for occasional off-road use.
+
+**Explanation:** The term this defines is "Multipurpose Vehicle", straight from TC 547.001(5).
+
+---
+
+### Q168 — Term ID
+**LO:** 22.17 · **Source:** TC 547.001(2)
+
+**Answer:** Explosive Cargo Vehicle
+
+"______" means a motor vehicle used to transport explosives or a cargo tank truck used to transport a flammable liquid or compressed gas.
+
+**Explanation:** The term this defines is "Explosive Cargo Vehicle", straight from TC 547.001(2).
+
+---
+
+### Q169 — Term ID
+**LO:** 22.17 · **Source:** TC 547.001(4)
+
+**Answer:** Luminous Reflectance
+
+"______" means the ratio of the amount of light that is reflected by a material to the amount of light that falls on the material.
+
+**Explanation:** The term this defines is "Luminous Reflectance", straight from TC 547.001(4) — used to set the state's window-tint standards.
+
+---
+
+### Q170 — Term ID
+**LO:** 22.17 · **Source:** TC 547.001(10)
+
+**Answer:** Vehicle Equipment
+
+"______" means: (A) a system, part, or device that is manufactured or sold as original or replacement equipment or as a vehicle accessory; or (B) a device or apparel manufactured or sold to protect a vehicle operator or passenger.
+
+**Explanation:** The term this defines is "Vehicle Equipment", straight from TC 547.001(10).
+
+---
+
+### Q171 — Term ID
+**LO:** 22.17 · **Source:** TC 548.001(7)
+
+**Answer:** Inspection Station
+
+"______" means a facility certified to conduct inspections of vehicles under this chapter.
+
+**Explanation:** The term this defines is "Inspection Station", straight from TC 548.001(7).
+
+---
+
+### Q172 — Term ID
+**LO:** 22.17 · **Source:** TC 548.001(10)
+
+**Answer:** Vehicle Inspection Report
+
+"______" means a report issued by an inspector or an inspection station for a vehicle that indicates whether the vehicle has passed an inspection required by this chapter.
+
+**Explanation:** The term this defines is "Vehicle Inspection Report", straight from TC 548.001(10).
+
+---
+
+### Q173 — Term ID
+**LO:** 22.17 · **Source:** TC 548.001(9)
+
+**Answer:** Nonattainment Area
+
+"______" means an area so designated within the meaning of Section 107(d) of the Clean Air Act (42 U.S.C. Section 7407).
+
+**Explanation:** The term this defines is "Nonattainment Area", straight from TC 548.001(9) — relevant to which counties require emissions testing as part of compulsory inspection.
+
+---
+
+## LO 22.19 — Pedestrians (TC 552.003)
+
+### Q174 — Term ID
+**LO:** 22.19 · **Source:** TC 552.003(e)(2)
+
+**Answer:** Disabled
+
+For the purposes of this section: ... (2) "______" means a person who cannot walk without the use or assistance of: (A) a device, including a brace, cane, crutch, prosthesis, or wheelchair; or (B) another person.
+
+**Explanation:** The term this defines is "Disabled", straight from TC 552.003(e)(2) — the pedestrian right-of-way-at-crosswalk statute's enhanced-penalty provision.
+
+---
+
+## LO 22.22 — Motorcycle Definitions and Criminal Street Gang — Additional Terms (PC 71.01)
+
+### Q175 — Term ID
+**LO:** 22.22 · **Source:** PC 71.01(a)
+
+**Answer:** Combination
+
+In this chapter, (a) "______" means three or more persons who collaborate in carrying on criminal activities, although: (1) participants may not know each other's identity; (2) membership in the combination may change from time to time; and (3) participants may stand in a wholesaler-retailer or other arm's-length relationship in illicit distribution operations.
+
+**Explanation:** The term this defines is "Combination", straight from PC 71.01(a) — an element of the "Criminal Street Gang" definition already covered above.
+
+---
+
+### Q176 — Term ID
+**LO:** 22.22 · **Source:** PC 71.01(c)
+
+**Answer:** Profits
+
+(c) "______" means property constituting or derived from any proceeds obtained, directly or indirectly, from an offense listed in Section 71.02.
+
+**Explanation:** The term this defines is "Profits", straight from PC 71.01(c).
+
+---
+
+## LO 22.23 — Privileged Parking (TC 681.001, 504.201, 504.501, 683.077)
+
+### Q177 — Term ID
+**LO:** 22.23 · **Source:** TC 681.001(2)
+
+**Answer:** Disability
+
+In this chapter: ... (2) "______" means a condition in which a person has: (A) mobility problems that substantially impair the person's ability to ambulate; (B) visual acuity of 20/200 or less in the better eye with correcting lenses; or (C) visual acuity of more than 20/200 but with a limited field of vision in which the widest diameter of the visual field subtends an angle of 20 degrees or less.
+
+**Explanation:** The term this defines is "Disability", straight from TC 681.001(2) — the privileged parking chapter.
+
+---
+
+### Q178 — Term ID
+**LO:** 22.23 · **Source:** TC 681.001(3)
+
+**Answer:** Disabled Parking Placard
+
+(3) "______" means a placard issued under Section 681.002.
+
+**Explanation:** The term this defines is "Disabled Parking Placard", straight from TC 681.001(3).
+
+---
+
+### Q179 — Term ID
+**LO:** 22.23 · **Source:** TC 681.001(4)
+
+**Answer:** International Symbol Of Access
+
+(4) "______" means the symbol adopted by Rehabilitation International in 1969 at its Eleventh World Congress on Rehabilitation of the Disabled.
+
+**Explanation:** The term this defines is "International Symbol Of Access", straight from TC 681.001(4) — the familiar blue wheelchair icon.
+
+---
+
+### Q180 — Term ID
+**LO:** 22.23 · **Source:** TC 504.201(a)(2); 681.001(2)(B), (C)
+
+**Answer:** Legally Blind
+
+"______" means a condition described by Section 681.001(2)(B) or (C) — that is, visual acuity of 20/200 or less in the better eye with correcting lenses, or visual acuity of more than 20/200 but with a limited field of vision in which the widest diameter of the visual field subtends an angle of 20 degrees or less.
+
+**Explanation:** The term this defines is "Legally Blind", straight from TC 504.201(a)(2), which incorporates the visual-acuity criteria of TC 681.001(2)(B)-(C) by reference.
+
+---
+
+### Q181 — Term ID
+**LO:** 22.23 · **Source:** TC 504.501(f)(1)
+
+**Answer:** Custom Vehicle
+
+In this section: (1) "______" means a vehicle: (A) that is: (i) at least 25 years old and of a model year after 1948; or (ii) manufactured to resemble a vehicle that is at least 25 years old and of a model year after 1948; and (B) that: (i) has been altered from the manufacturer's original design; or (ii) has a body constructed from materials not original to the vehicle.
+
+**Explanation:** The term this defines is "Custom Vehicle", straight from TC 504.501(f)(1).
+
+---
+
+### Q182 — Term ID
+**LO:** 22.23 · **Source:** TC 504.501(f)(2)
+
+**Answer:** Street Rod
+
+(2) "______" means a vehicle: (A) that was manufactured: (i) before 1949; or (ii) after 1948 to resemble a vehicle manufactured before 1949; and (B) that: (i) has been altered from the manufacturer's original design; or (ii) has a body constructed from materials not original to the vehicle.
+
+**Explanation:** The term this defines is "Street Rod", straight from TC 504.501(f)(2).
+
+---
+
+### Q183 — Term ID
+**LO:** 22.23 · **Source:** TC 683.077(b)(1)
+
+**Answer:** Antique Vehicle
+
+In this section: (1) "______" means a passenger car or truck that is at least 25 years old.
+
+**Explanation:** The term this defines is "Antique Vehicle", straight from TC 683.077(b)(1) — the abandoned motor vehicle chapter's exemption for vehicle collectors.
+
+---
+
+### Q184 — Term ID
+**LO:** 22.23 · **Source:** TC 683.077(b)(2)
+
+**Answer:** Motor Vehicle Collector
+
+(2) "______" means a person who: (A) owns one or more antique or special interest vehicles; and (B) acquires, collects, or disposes of an antique or special interest vehicle or part of an antique or special interest vehicle for personal use to restore and preserve an antique or special interest vehicle for historic interest.
+
+**Explanation:** The term this defines is "Motor Vehicle Collector", straight from TC 683.077(b)(2).
+
+---
+
+### Q185 — Term ID
+**LO:** 22.23 · **Source:** TC 683.077(b)(3)
+
+**Answer:** Special Interest Vehicle
+
+(3) "______" means a motor vehicle of any age that has not been changed from original manufacturer's specifications and, because of its historic interest, is being preserved by a hobbyist.
+
+**Explanation:** The term this defines is "Special Interest Vehicle", straight from TC 683.077(b)(3).
+
+---
+
+## LO 22.25 — Vehicle Registration Definitions — Additional Terms (TC 501.002 Certificate of Title Act, 503.001 Dealer Definitions, 502.001)
+
+### Q186 — Term ID
+**LO:** 22.25 · **Source:** TC 501.002(1-a)
+
+**Answer:** Certificate Of Title
+
+"______" means a printed record of title issued under Section 501.021.
+
+**Explanation:** The term this defines is "Certificate Of Title", straight from TC 501.002(1-a) — the Certificate of Title Act.
+
+---
+
+### Q187 — Term ID
+**LO:** 22.25 · **Source:** TC 501.002(12)
+
+**Answer:** Lien
+
+"______" means: (A) a lien provided for by the constitution or statute in a motor vehicle; (B) a security interest, as defined by Section 1.201, Business & Commerce Code, in a motor vehicle, other than an absolute title, created by any written security agreement, as defined by Section 9.102, Business & Commerce Code, including a lease, conditional sales contract, deed of trust, chattel mortgage, trust receipt, or reservation of title; or (C) a child support lien under Chapter 157, Family Code.
+
+**Explanation:** The term this defines is "Lien", straight from TC 501.002(12).
+
+---
+
+### Q188 — Term ID
+**LO:** 22.25 · **Source:** TC 501.002(31)
+
+**Answer:** Used Motor Vehicle
+
+"______" means: (A) a motor vehicle that has been the subject of a first sale; or (B) an assembled vehicle that has been issued a title.
+
+**Explanation:** The term this defines is "Used Motor Vehicle", straight from TC 501.002(31).
+
+---
+
+### Q189 — Term ID
+**LO:** 22.25 · **Source:** TC 501.002(32)
+
+**Answer:** Vehicle Identification Number
+
+"______" means: (A) the manufacturer's permanent vehicle identification number affixed by the manufacturer to the motor vehicle that is easily accessible for physical examination and permanently affixed on one or more removable parts of the vehicle; or (B) a serial number affixed to a part of a motor vehicle that is: (i) a derivative number of the manufacturer's permanent vehicle identification number; (ii) the motor number; (iii) a vehicle identification number assigned by the department; or (iv) the vehicle identification number assigned by the maker of a kit, if the vehicle is an assembled vehicle that is assembled from a kit.
+
+**Explanation:** The term this defines is "Vehicle Identification Number", straight from TC 501.002(32).
+
+---
+
+### Q190 — Term ID
+**LO:** 22.25 · **Source:** TC 501.002(8)
+
+**Answer:** First Sale
+
+"______" means: (A) the bargain, sale, transfer, or delivery of a motor vehicle, other than an assembled vehicle, that has not been previously registered or titled, with intent to pass an interest in the motor vehicle, other than a lien, regardless of where the bargain, sale, transfer, or delivery occurred; and (B) the registration or titling of that vehicle.
+
+**Explanation:** The term this defines is "First Sale", straight from TC 501.002(8).
+
+---
+
+### Q191 — Term ID
+**LO:** 22.25 · **Source:** TC 503.001(4)
+
+**Answer:** Dealer
+
+"______" means a person who regularly and actively buys, sells, or exchanges vehicles at an established and permanent location. The term includes a franchised motor vehicle dealer, an independent motor vehicle dealer, an independent mobility motor vehicle dealer, and a wholesale motor vehicle dealer.
+
+**Explanation:** The term this defines is "Dealer", straight from TC 503.001(4).
+
+---
+
+### Q192 — Term ID
+**LO:** 22.25 · **Source:** TC 503.001(8)
+
+**Answer:** Franchised Motor Vehicle Dealer
+
+"______" means a person engaged in the business of buying, selling, or exchanging new motor vehicles at an established and permanent place of business under a franchise in effect with a motor vehicle manufacturer or distributor.
+
+**Explanation:** The term this defines is "Franchised Motor Vehicle Dealer", straight from TC 503.001(8).
+
+---
+
+### Q193 — Term ID
+**LO:** 22.25 · **Source:** TC 503.001(17)
+
+**Answer:** Wholesale Motor Vehicle Dealer
+
+"______" means a dealer who sells motor vehicles only to a person who is: (A) the holder of a dealer's general distinguishing number; or (B) a foreign dealer authorized by a law of this state or interstate reciprocity agreement to purchase a vehicle in this state without remitting the motor vehicle sales tax.
+
+**Explanation:** The term this defines is "Wholesale Motor Vehicle Dealer", straight from TC 503.001(17).
+
+---
+
+### Q194 — Term ID
+**LO:** 22.25 · **Source:** TC 503.001(6)
+
+**Answer:** Drive-A-Way Operator
+
+"______" means a person who transports and delivers a vehicle in this state from the manufacturer or another point of origin to a location in this state using the vehicle's own power or using the full-mount method, the saddle-mount method, the tow-bar method, or a combination of those methods.
+
+**Explanation:** The term this defines is "Drive-A-Way Operator", straight from TC 503.001(6).
+
+---
+
+### Q195 — Term ID
+**LO:** 22.25 · **Source:** TC 502.001(6)
+
+**Answer:** Commercial Fleet
+
+"______" means a group of at least 12 nonapportioned motor vehicles, semitrailers, or trailers owned, operated, or leased by a corporation, limited or general partnership, limited liability company, or other business entity and used for the business purposes of that entity.
+
+**Explanation:** The term this defines is "Commercial Fleet", straight from TC 502.001(6).
+
+---
+
+### Q196 — Term ID
+**LO:** 22.25 · **Source:** TC 502.001(17)
+
+**Answer:** Forestry Vehicle
+
+"______" means a vehicle designed and used exclusively for transporting forest products in their natural state, including logs, debarked logs, untreated ties, stave bolts, plywood bolts, pulpwood billets, wood chips, stumps, sawdust, moss, bark, and wood shavings, and property used in production of those products.
+
+**Explanation:** The term this defines is "Forestry Vehicle", straight from TC 502.001(17).
+
+---
+
+### Q197 — Term ID
+**LO:** 22.25 · **Source:** TC 502.001(17-a)
+
+**Answer:** Former Military Vehicle
+
+"______" means a vehicle, including a trailer, that: (A) was manufactured for use in any country's military forces; and (B) is not operated on continuous tracks.
+
+**Explanation:** The term this defines is "Former Military Vehicle", straight from TC 502.001(17-a).
+
+---
+
+### Q198 — Term ID
+**LO:** 22.25 · **Source:** TC 502.001(40)
+
+**Answer:** Token Trailer
+
+"______" means a semitrailer that: (A) has a gross weight of more than 6,000 pounds; and (B) is operated in combination with a truck or a truck-tractor that has been issued an apportioned license plate.
+
+**Explanation:** The term this defines is "Token Trailer", straight from TC 502.001(40).
+
+---
