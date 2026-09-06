@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Vehicle Lighting — Height &amp; Year Exceptions | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note a{color:var(--navy); font-weight:600;}
+
+  /* ---- legend ---- */
+  .legend{display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin:14px 0 16px; font-size:12.5px; color:var(--ink-soft);}
+  .legend-item{display:flex; align-items:center; gap:7px;}
+  .swatch{width:14px; height:14px; border-radius:3px; flex:none;}
+  .swatch.tx{background:var(--brass);}
+  .swatch.fed{background:var(--navy);}
+  .flag-dot{width:8px; height:8px; border-radius:50%; background:var(--rust); flex:none;}
+
+  /* ---- chart ---- */
+  .chart-card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 20px 10px; margin-bottom:22px;}
+  .chart-scroll{overflow-x:auto;}
+  svg{display:block; font-family:'IBM Plex Sans', sans-serif;}
+  .cat-label{font-size:12.5px; fill:var(--ink); font-weight:600;}
+  .cat-sub{font-size:10.5px; fill:var(--ink-soft);}
+  .axis-tick{font-family:'IBM Plex Mono', monospace; font-size:10.5px; fill:var(--ink-soft);}
+  .axis-title{font-size:11px; fill:var(--ink-soft); letter-spacing:.04em;}
+  .val-label{font-family:'IBM Plex Mono', monospace; font-size:10.5px; fill:var(--ink-soft); font-weight:600;}
+  .gridline{stroke:var(--rule); stroke-width:1; opacity:.55;}
+  .baseline{stroke:var(--rule); stroke-width:1.5;}
+  .bar-tx{fill:var(--brass);}
+  .bar-fed{fill:var(--navy);}
+  .flag-mark{fill:var(--rust);}
+  .row-bg{fill:transparent;}
+  .row-bg.alt{fill:var(--paper-dim);}
+
+  /* ---- detail table ---- */
+  .spec-table{table-layout:fixed; width:100%;}
+  .spec-table col.c-device{width:15%;}
+  .spec-table col.c-height{width:15%;}
+  .spec-table col.c-num{width:15%;}
+  .spec-table col.c-cmp{width:21%;}
+  .spec-table col.c-exc{width:24%;}
+  .spec-table col.c-cite{width:10%;}
+  .spec-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px;}
+  .spec-table td .device-name{font-weight:700; color:var(--ink); display:block; font-size:13px;}
+  .spec-table td .device-sub{display:block; font-size:11px; color:var(--ink-soft); font-weight:400; margin-top:1px;}
+  .spec-table td .num{font-family:'IBM Plex Mono', monospace; font-variant-numeric:tabular-nums;}
+  .spec-table td.cite{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft);}
+  .spec-table tr.exception td{background:#FBEDE7;}
+  .spec-table tr td:first-child{position:relative; padding-left:16px;}
+  .spec-table tr.exception td:first-child::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--rust);}
+  .flag-inline{display:inline-flex; align-items:center; gap:5px; font-family:'IBM Plex Mono', monospace; font-size:10px; font-weight:700; color:var(--rust); letter-spacing:.03em; margin-bottom:3px;}
+  .flag-inline::before{content:"●"; font-size:7px;}
+  .muted{color:var(--ink-soft);}
+
+  @media (max-width:640px){
+    .spec-table{table-layout:auto; min-width:640px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Vehicle Lighting — Height &amp; Year Exceptions</h1>
+      <p class="sub">Every mounting-height and count rule Transportation Code Chapter 547 sets for vehicle lamps and reflectors, checked against the federal standard (49 C.F.R. &sect;571.108 / FMVSS 108) Texas incorporates by reference, with every model-year and manufacture-date exception flagged.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> Texas Transportation Code &sect;547.3215 makes the current (or, for an older vehicle, the then-current) federal standard in 49 C.F.R. &sect;571.108 apply to lighting and reflective equipment unless Chapter 547 specifically says otherwise &mdash; and 37 TAC &sect;21.2 adopts FMVSS 108 as the DPS equipment standard on the same terms. Where TC&nbsp;547 states its own height or count, that number is what a Texas officer enforces directly, even where it differs from the federal figure. Federal figures shown are FMVSS 108's Table IV passenger-car requirements, included for comparison only &mdash; always cite the Texas statute for a BPOC exam answer. For the full list of Ch.22 code sections with direct links, see the <a href="22-codes-index.html">Codes &amp; Sections Index</a>; for offense classifications and fines, see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
+</div>
+
+<div class="chart-card">
+  <div class="legend">
+    <div class="legend-item"><span class="swatch tx"></span> Texas (TC 547)</div>
+    <div class="legend-item"><span class="swatch fed"></span> Federal (FMVSS 108, passenger car)</div>
+    <div class="legend-item"><span class="flag-dot"></span> Row has a model-year / manufacture-date exception &mdash; see table below</div>
+  </div>
+  <div class="chart-scroll">
+    <svg id="chart" viewBox="0 0 980 470" width="980" height="470" role="img" aria-label="Mounting height ranges in inches for Texas and federal vehicle lighting standards, by device"></svg>
+  </div>
+</div>
+
+<h3 style="color:var(--navy); font-family:'IBM Plex Serif', serif; font-size:15px; font-weight:700; margin:0 0 4px; padding-left:10px; border-left:3px solid var(--brass);">Full Detail — Height, Count, TX vs. Federal, and Year Exceptions</h3>
+<p style="font-size:12px; color:var(--ink-soft); margin:0 0 12px;">Rows shaded in rust carry a model-year or manufacture-date threshold &mdash; the quiz-bank tag equivalent is <em>Lighting &mdash; Model-Year &amp; Effective-Date Rules</em>.</p>
+
+<div class="chart-scroll">
+  <table class="ladder-table spec-table" id="spec-table">
+    <colgroup>
+      <col class="c-device"><col class="c-height"><col class="c-num"><col class="c-cmp"><col class="c-exc"><col class="c-cite">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>Height (in.)</th>
+        <th>Number required</th>
+        <th>Texas vs. federal standard</th>
+        <th>Year / manufacture-date exception</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+</main>
+
+<footer>Ch.22 Traffic Code &mdash; Vehicle Lighting Height &amp; Year Exceptions &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+(function(){
+  // ---- Chart data: enacted mounting-height ranges (inches) ----
+  // txStated=false means Texas requires the device but states no height in TC 547; the federal
+  // range is drawn as the enforced figure and no TX bar is drawn.
+  var rows = [
+    {label:"Headlamp", sub:"passenger vehicle & motorcycle", tx:[24,54], fed:[22,54], txStated:true, exception:false},
+    {label:"Taillamp", sub:"passenger car / truck", tx:[15,72], fed:[15,72], txStated:true, exception:true},
+    {label:"Taillamp", sub:"motorcycle / moped", tx:[20,72], fed:[15,72], txStated:true, exception:false},
+    {label:"Stoplamp", sub:"height not set by TC — federal governs", tx:null, fed:[15,72], txStated:false, exception:true},
+    {label:"Turn signal lamp", sub:"height not set by TC — federal governs", tx:null, fed:[15,83], txStated:false, exception:true},
+    {label:"Reflector", sub:"general / rear", tx:[15,60], fed:[15,60], txStated:true, exception:true},
+    {label:"Reflector", sub:"vehicle ≥80 in. wide (Subch. F)", tx:[24,60], fed:[15,60], txStated:true, exception:false},
+    {label:"Fog lamp", sub:"permitted, not required", tx:[12,30], fed:null, txStated:true, exception:false},
+    {label:"Auxiliary passing lamp", sub:"permitted, not required", tx:[24,42], fed:null, txStated:true, exception:false},
+    {label:"Auxiliary driving lamp", sub:"permitted, not required", tx:[16,42], fed:null, txStated:true, exception:false}
+  ];
+
+  var svg = document.getElementById('chart');
+  var W = 980, H = 470;
+  var padLeft = 210, padRight = 40, padTop = 10, padBottom = 34;
+  var plotW = W - padLeft - padRight;
+  var rowH = (H - padTop - padBottom) / rows.length;
+  var xMax = 90;
+  function xScale(v){ return padLeft + (v / xMax) * plotW; }
+
+  var ns = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){
+    var e = document.createElementNS(ns, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  rows.forEach(function(r, i){
+    var y = padTop + i * rowH;
+    if (i % 2 === 1){
+      svg.appendChild(el('rect', {x:0, y:y, width:W, height:rowH, class:'row-bg alt'}));
+    }
+  });
+
+  for (var v = 0; v <= xMax; v += 10){
+    var x = xScale(v);
+    svg.appendChild(el('line', {x1:x, y1:padTop, x2:x, y2:H-padBottom, class:'gridline'}));
+    var t = el('text', {x:x, y:H-padBottom+16, class:'axis-tick', 'text-anchor':'middle'});
+    t.textContent = v;
+    svg.appendChild(t);
+  }
+  var axisTitle = el('text', {x:padLeft + plotW/2, y:H-6, class:'axis-title', 'text-anchor':'middle'});
+  axisTitle.textContent = "Mounting height above road surface (inches)";
+  svg.appendChild(axisTitle);
+
+  svg.appendChild(el('line', {x1:padLeft, y1:padTop, x2:padLeft, y2:H-padBottom, class:'baseline'}));
+
+  rows.forEach(function(r, i){
+    var y = padTop + i * rowH;
+    var cy = y + rowH/2;
+
+    var label = el('text', {x:16, y:cy - (r.sub ? 3 : -4), class:'cat-label'});
+    label.textContent = r.label;
+    svg.appendChild(label);
+    if (r.sub){
+      var sub = el('text', {x:16, y:cy + 11, class:'cat-sub'});
+      sub.textContent = r.sub;
+      svg.appendChild(sub);
+    }
+
+    if (r.exception){
+      svg.appendChild(el('circle', {cx: padLeft - 14, cy: cy, r:3.2, class:'flag-mark'}));
+    }
+
+    var barH = 9;
+    var fedY = cy - (r.txStated ? 8 : 0);
+    var txY = cy + 8;
+
+    if (r.fed){
+      var fx = xScale(r.fed[0]), fw = xScale(r.fed[1]) - xScale(r.fed[0]);
+      var by = r.txStated ? fedY - barH/2 : cy - barH/2;
+      svg.appendChild(el('rect', {x:fx, y:by, width:fw, height:barH, rx:3, class:'bar-fed'}));
+      var flx = el('text', {x:fx-6, y:by+barH-1, class:'val-label', 'text-anchor':'end'});
+      flx.textContent = r.fed[0];
+      svg.appendChild(flx);
+      var frx = el('text', {x:fx+fw+6, y:by+barH-1, class:'val-label'});
+      frx.textContent = r.fed[1];
+      svg.appendChild(frx);
+    }
+
+    if (r.txStated && r.tx){
+      var tx0 = xScale(r.tx[0]), tw = xScale(r.tx[1]) - xScale(r.tx[0]);
+      var ty = txY - barH/2;
+      svg.appendChild(el('rect', {x:tx0, y:ty, width:tw, height:barH, rx:3, class:'bar-tx'}));
+      var tlx = el('text', {x:tx0-6, y:ty+barH-1, class:'val-label', 'text-anchor':'end'});
+      tlx.textContent = r.tx[0];
+      svg.appendChild(tlx);
+      var trx = el('text', {x:tx0+tw+6, y:ty+barH-1, class:'val-label'});
+      trx.textContent = r.tx[1];
+      svg.appendChild(trx);
+    }
+  });
+
+  // ---- Detail table ----
+  var detail = [
+    {name:"Headlamp", sub:"passenger vehicle", height:"24–54", num:"at least 2 (one each side of front)", cmp:"TX floor is 2 in. higher than the federal 22 in. floor; ceiling matches at 54 in.", exc:null, cite:"TC 547.321"},
+    {name:"Headlamp", sub:"motorcycle / moped", height:"24–54 (same as passenger vehicle)", num:"not more than 2 (a maximum, not a minimum)", cmp:"Same height band as a passenger vehicle headlamp.", exc:"Must stay illuminated while the motorcycle operates — that rule does not apply to a motorcycle manufactured before model year 1975.", cite:"TC 547.801(a)(1), (d)"},
+    {name:"Taillamp", sub:"passenger car / truck", height:"15–72", num:"at least 2", cmp:"Matches the federal 15–72 in. range exactly.", exc:"A passenger car or truck manufactured or assembled before model year 1960 needs only 1 taillamp.", cite:"TC 547.322(a)–(c)"},
+    {name:"Taillamp", sub:"motorcycle / moped", height:"20–72", num:"at least 1", cmp:"TX floor is 5 in. higher than the general 15 in. federal/TX floor — motorcycles get a narrower, higher-mounted band.", exc:null, cite:"TC 547.801(a)(2)"},
+    {name:"Stoplamp", sub:"passenger car / truck", height:"Not stated in TC 547 — the federal 15–72 in. range governs directly", num:"at least 2", cmp:"Texas sets no separate height; §547.3215 pulls in the FMVSS 108 figure by reference.", exc:"A passenger car manufactured or assembled before model year 1960 needs only 1 stoplamp.", cite:"TC 547.323(a)–(b), 547.3215"},
+    {name:"Turn signal lamp", sub:null, height:"Not stated in TC 547 — the federal 15–83 in. range governs directly", num:"required front and rear, on the turn side", cmp:"Texas sets no separate height for turn signals; the federal figure applies via §547.3215.", exc:"Not required at all on a passenger car or truck less than 80 in. wide that was manufactured or assembled before model year 1960.", cite:"TC 547.324(a)–(b)"},
+    {name:"Reflector", sub:"general / rear", height:"15–60", num:"at least 2, red, on the rear", cmp:"Matches the federal 15–60 in. range exactly.", exc:"A vehicle manufactured or assembled before January 1, 1972 may instead meet a shorter 100–350 ft. upper-beam visibility standard, rather than the standard 100–600 ft. lower-beam standard.", cite:"TC 547.325(a)–(b)"},
+    {name:"Reflector", sub:"vehicle ≥80 in. wide (Subch. F)", height:"24–60 (or as high as practicable, if the vehicle structure is under 24 in.)", num:"4 (one near each corner) plus more on long trailers/pole trailers", cmp:"TX raises the floor 9 in. above the general 15 in. federal/TX floor for these larger vehicles.", exc:null, cite:"TC 547.352, 547.354(a)"},
+    {name:"Clearance / identification / side-marker lamps", sub:"vehicle ≥80 in. wide or ≥30 ft. long (Subch. F)", height:"Mounted on the permanent structure to show extreme height/width — no fixed inch range in TC 547", num:"varies: e.g. 2 front + 2 rear clearance lamps, 4 side-marker lamps, up to 3 ID lamps front and rear", cmp:"Federal standard sets a 15 in. floor for side-marker lamps; Texas ties height to vehicle structure instead of a fixed number.", exc:null, cite:"TC 547.352, 547.353–.355"},
+    {name:"High-beam indicator", sub:"dash-mounted, not an exterior lamp", height:"N/A — visible to the operator without glare", num:"1", cmp:"No federal height/count figure applies; this is a dashboard tell-tale, not exterior equipment.", exc:"Required only on a vehicle of model year 1948 or later that has multiple-beam lighting equipment — not required on an older vehicle.", cite:"TC 547.333(d)"},
+    {name:"Single-beam headlamp system", sub:"permitted alternative to multi-beam", height:"N/A — a lighting system, not a fixed-height device", num:"in lieu of the standard 2-headlamp multi-beam system", cmp:"An enforcement-level exception Texas grants; not a federal figure.", exc:"Permitted only for a farm tractor, or for any motor vehicle manufactured and sold before September 4, 1948.", cite:"TC 547.334(a)"},
+    {name:"Fog lamp", sub:"permitted, not required", height:"12–30", num:"not more than 2", cmp:"No federal mounting-height mandate found — this is a Texas-only enforcement figure (design/photometrics follow SAE J583 under 37 TAC §21.2).", exc:null, cite:"TC 547.328(a)–(b)"},
+    {name:"Auxiliary passing lamp", sub:"permitted, not required", height:"24–42", num:"not more than 2", cmp:"No comparable federal mounting-height mandate found — Texas-only figure.", exc:null, cite:"TC 547.329(a)–(b)"},
+    {name:"Auxiliary driving lamp", sub:"permitted, not required", height:"16–42", num:"not more than 2", cmp:"No comparable federal mounting-height mandate found — Texas-only figure.", exc:null, cite:"TC 547.330(a)–(b)"},
+    {name:"Farm tractor / implement of husbandry lighting package", sub:"headlamps, rear lamp, reflectors, hazard lamps", height:"Per the individual device rules above (headlamps, rear lamp, reflectors)", num:"2 headlamps, 1 rear red lamp, 2 red reflectors, plus hazard lamps", cmp:"Same component figures as the standard rules above, bundled into one required package.", exc:"A unit manufactured or assembled on or before January 1, 1972 must meet this package only at the times specified in §547.302(a) (dusk, darkness, adverse weather) — and is not required to have hazard lamps at all.", cite:"TC 547.371(a)–(b)"}
+  ];
+
+  var tbody = document.querySelector('#spec-table tbody');
+  detail.forEach(function(d){
+    var tr = document.createElement('tr');
+    if (d.exc) tr.className = 'exception';
+
+    var tdName = document.createElement('td');
+    tdName.innerHTML = '<span class="device-name">'+d.name+'</span>' + (d.sub ? '<span class="device-sub">'+d.sub+'</span>' : '');
+    tr.appendChild(tdName);
+
+    var tdHeight = document.createElement('td');
+    tdHeight.innerHTML = '<span class="num">'+d.height+'</span>';
+    tr.appendChild(tdHeight);
+
+    var tdNum = document.createElement('td');
+    tdNum.textContent = d.num;
+    tr.appendChild(tdNum);
+
+    var tdCmp = document.createElement('td');
+    tdCmp.textContent = d.cmp;
+    tr.appendChild(tdCmp);
+
+    var tdExc = document.createElement('td');
+    if (d.exc){
+      tdExc.innerHTML = '<span class="flag-inline">YEAR / DATE RULE</span><br>' + d.exc;
+    } else {
+      tdExc.innerHTML = '<span class="muted">— none —</span>';
+    }
+    tr.appendChild(tdExc);
+
+    var tdCite = document.createElement('td');
+    tdCite.className = 'cite';
+    tdCite.textContent = d.cite;
+    tr.appendChild(tdCite);
+
+    tbody.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>
