@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Valid License Plates, Tags &amp; Permits | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1150px;}
+  .intro-note a{color:var(--navy); font-weight:600;}
+
+  /* ---- status legend ---- */
+  .legend{display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin:0 0 18px; font-size:12px; color:var(--ink-soft);}
+  .legend-item{display:flex; align-items:center; gap:7px;}
+
+  /* ---- status badges ---- */
+  .stat{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.03em; padding:2px 8px; border-radius:10px; white-space:nowrap; text-transform:uppercase;}
+  .stat.valid{background:#DDE7DD; color:#2F4E33;}
+  .stat.interim{background:#EFE4C9; color:#7A5F1E;}
+  .stat.repealed{background:#EAD3CC; color:#8A3A24;}
+
+  /* ---- plate reference tables ---- */
+  .plate-table{table-layout:fixed; width:100%;}
+  .plate-table col.c-item{width:19%;}
+  .plate-table col.c-valid{width:13%;}
+  .plate-table col.c-stat{width:9%;}
+  .plate-table col.c-cite{width:13%;}
+  .plate-table col.c-scen{width:46%;}
+  .plate-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px;}
+  .plate-table td .item-name{font-weight:700; color:var(--ink); display:block; font-size:13px;}
+  .plate-table td .item-sub{display:block; font-size:11px; color:var(--ink-soft); font-weight:400; margin-top:2px; line-height:1.4;}
+  .plate-table td.cite{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft);}
+  .plate-table td.cite a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .plate-table td.cite a:hover{color:var(--rust);}
+  .plate-table td.scen{font-size:12px; line-height:1.55;}
+  .plate-table tr.repealed td{background:#FBEDE7;}
+  .plate-table tr td:first-child{position:relative; padding-left:16px;}
+  .plate-table tr.repealed td:first-child::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--rust);}
+  .plate-table tr.interim td:first-child::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--amber);}
+
+  @media (max-width:640px){
+    .plate-table{table-layout:auto; min-width:640px;}
+  }
+
+  .fake-list{padding-left:1.2em; margin:0 0 10px;}
+  .fake-list li{font-size:13px; line-height:1.65; margin-bottom:8px;}
+  .fake-list b{color:var(--ink);}
+
+  .timeline{display:flex; flex-wrap:wrap; gap:0; margin:12px 0 6px; border:1px solid var(--rule); border-radius:8px; overflow:hidden;}
+  .tl-cell{flex:1; min-width:150px; padding:10px 12px; font-size:11.5px; line-height:1.5; border-right:1px solid var(--rule); background:#fff;}
+  .tl-cell:last-child{border-right:none;}
+  .tl-date{display:block; font-family:'IBM Plex Mono', monospace; font-weight:700; color:var(--navy); font-size:12.5px; margin-bottom:3px;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Valid Texas License Plates, Tags &amp; Permits</h1>
+      <p class="sub">Every plate, temporary tag, permit, and receipt an officer can legally encounter on a Texas roadway &mdash; standard and specialty plates, the four paper documents House Bill 718 (2023) repealed effective July&nbsp;1,&nbsp;2025, the metal plates that replaced them, and the paper documents that survived HB&nbsp;718 intact &mdash; each with its validity period, governing citation, and a sample scenario of legal use.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="tool-bar chips">
+  <a class="chip" href="#sec-standard">Standard &amp; Specialty Plates</a>
+  <a class="chip" href="#sec-placards">Disabled Parking Placards</a>
+  <a class="chip" href="#sec-hb718">HB 718 &mdash; What Changed</a>
+  <a class="chip" href="#sec-repealed">Repealed Paper Documents</a>
+  <a class="chip" href="#sec-new">New HB 718 Plates</a>
+  <a class="chip" href="#sec-survivors">Still-Valid Paper Documents</a>
+  <a class="chip" href="#sec-fake">Spotting a Fake Plate</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> every citation below is checked against current Transportation Code and Texas Administrative Code text. Where the underlying source is TxDPS's own <i>HB 718 Guidance</i> training document rather than a codified section, that's noted instead of a citation link. For the full list of Ch.22 code sections, see the <a href="22-codes-index.html">Codes &amp; Sections Index</a>; for the offenses and fines tied to misusing any of these (fictitious/wrong plate, tampering, operating unregistered, etc.), see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="stat valid">Valid</span> currently issued and in normal use</div>
+  <div class="legend-item"><span class="stat interim">Interim</span> valid, but only for a short, defined window</div>
+  <div class="legend-item"><span class="stat repealed">Repealed</span> no longer issued &mdash; a genuine one can only be a pre-7/1/25 holdover</div>
+</div>
+
+<div class="sec-card" id="sec-standard">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">TC 502&ndash;504</span>
+    <span class="sec-name">Standard &amp; Specialty License Plates &mdash; Untouched by HB 718</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>These plate categories existed before HB 718 and were not part of its 2023/2025 overhaul &mdash; that bill only touched <i>temporary</i> tags, permits, and the point-of-sale process. They're included here because "valid Texas license plates" has to start with the plates that make up the vast majority of traffic.</p>
+    <div class="chart-scroll">
+    <table class="ladder-table plate-table">
+      <colgroup><col class="c-item"><col class="c-valid"><col class="c-stat"><col class="c-cite"><col class="c-scen"></colgroup>
+      <thead><tr><th>Plate</th><th>Validity</th><th>Status</th><th>Citation</th><th>Sample legal-use scenario</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="item-name">General Issue (Standard) Plate</span><span class="item-sub">Any privately owned passenger vehicle, truck, or trailer</span></td>
+          <td>12 months &mdash; a staggered registration year TxDMV assigns to spread renewal workload</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.044" target="_blank" rel="noopener">TC &sect;502.044</a></td>
+          <td class="scen">A trooper runs a plate on a routine stop and TLETS shows registration current through next April &mdash; the plate itself doesn't expire; only the annual registration behind it does, per its own designated 12-month cycle.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Specialty Plate</span><span class="item-sub">Cause, collegiate, or organization design purchased through the state's specialty-plate program</span></td>
+          <td>Same annual cycle as the vehicle's registration, plus a specialty fee</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.851" target="_blank" rel="noopener">TC &sect;504.851</a></td>
+          <td class="scen">A vehicle displays a university-alumni design; the officer treats it exactly like a standard plate for registration-status purposes &mdash; the artwork carries no special renewal rule of its own.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Personalized ("Vanity") Plate</span><span class="item-sub">Custom alphanumeric pattern, subject to DPS/DMV approval</span></td>
+          <td>Same annual cycle as registration</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.601" target="_blank" rel="noopener">TC &sect;504.601</a>; display: <a href="https://www.law.cornell.edu/regulations/texas/43-Tex-Admin-Code-SS-217-27" target="_blank" rel="noopener">43 TAC &sect;217.27</a></td>
+          <td class="scen">A driver argues their approved pattern has an innocent personal meaning after a citizen complaint; 43 TAC &sect;217.27 makes clear DPS/DMV needn't consider the owner's subjective intent when deciding whether a pattern is objectionable &mdash; the plate's registration status is unaffected either way.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Disabled Person Plate</span><span class="item-sub">Vehicle regularly used to transport a person with a qualifying permanent disability</span></td>
+          <td>Same annual registration cycle &mdash; the statute sets no separate term</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.201" target="_blank" rel="noopener">TC &sect;504.201</a></td>
+          <td class="scen">A vehicle displays the international access symbol on a Disabled Person plate; the officer confirms current registration through TLETS exactly as with any standard plate.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Veterans with Disabilities Plate</span><span class="item-sub">50%+ (or 40%+ with lower-extremity amputation) service-connected disabled veteran; one vehicle &le;18,000 lb or a motor home</span></td>
+          <td>1 year (the statute states this explicitly)</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.202" target="_blank" rel="noopener">TC &sect;504.202</a></td>
+          <td class="scen">A veteran renews Veterans with Disabilities plates annually; the disability designation doesn't extend the registration term beyond the one-year cycle the statute itself sets. (2021's SB 792 later let this plate also carry the access symbol and unlock a placard without extra paperwork &mdash; see the chapter's <i>2026 Update &mdash; New House &amp; Senate Bills</i> topic.)</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Antique Plate</span><span class="item-sub">Vehicle 25+ years old; exhibition, club, and parade use only &mdash; not for regular transportation</span></td>
+          <td>5-year fixed term &mdash; expires on the 5th anniversary of issuance</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.502" target="_blank" rel="noopener">TC &sect;504.502</a></td>
+          <td class="scen">A 1978 pickup with a current Antique plate is stopped on a Tuesday commute to the grocery store. The plate's own 5-year registration may still be running, but the vehicle's actual use already violates the same section's "exhibition/club use only, not regular transportation" restriction &mdash; a separate problem from whether the plate itself is current (offense: TC &sect;504.941).</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Classic / Custom Vehicle / Street Rod Plate</span><span class="item-sub">Classic &amp; Custom Vehicle: 25+ years old; Street Rod: pre-1949 or built to resemble one</span></td>
+          <td>Same annual registration cycle &mdash; &sect;504.501 sets no separate multi-year term</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.501" target="_blank" rel="noopener">TC &sect;504.501</a></td>
+          <td class="scen">A modified pre-1949-style roadster displays a Street Rod plate; the officer confirms annual registration the same way as any standard plate, since Chapter 504 doesn't give this category the multi-year term it gives Antique plates.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Dealer's (GDN) License Plate</span><span class="item-sub">Non-temporary metal plate assigned to a GDN-holding dealership &mdash; not the HB 718 Dealer Temporary Plate below</span></td>
+          <td>Tied to the dealership's General Distinguishing Number (GDN) license expiration</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.061" target="_blank" rel="noopener">TC &sect;503.061</a>; use limits <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.068" target="_blank" rel="noopener">&sect;503.068</a></td>
+          <td class="scen">A dealership employee is stopped driving a dealer-plated vehicle to a personal appointment unrelated to the business. &sect;503.068 limits dealer plates to inventory-related business use, so this is an improper-use violation even though the plate's own registration is fully current. HB 718's guidance confirms these standard metal dealer plates were unaffected by the 2023/2025 changes &mdash; only the paper temporary tags were repealed.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-placards">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">TC 681</span>
+    <span class="sec-name">Disabled Parking Placards</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Not a license plate, but the other credential officers routinely check alongside a Disabled Person or Veterans with Disabilities plate &mdash; and one SB 792 (2021) directly modified.</p>
+    <div class="chart-scroll">
+    <table class="ladder-table plate-table">
+      <colgroup><col class="c-item"><col class="c-valid"><col class="c-stat"><col class="c-cite"><col class="c-scen"></colgroup>
+      <thead><tr><th>Placard</th><th>Validity</th><th>Status</th><th>Citation</th><th>Sample legal-use scenario</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="item-name">Permanent (Blue) Placard</span><span class="item-sub">Permanent mobility or visual disability</span></td>
+          <td>4 years, renewable</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.681.htm#681.004" target="_blank" rel="noopener">TC &sect;681.004(a)</a></td>
+          <td class="scen">A blue placard's printed expiration is three years out &mdash; no issue; it stays valid until that printed date, up to the 4-year maximum.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Temporary (Red) Placard</span><span class="item-sub">Temporary disability, per the certifying physician</span></td>
+          <td>Up to 6 months</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.681.htm#681.004" target="_blank" rel="noopener">TC &sect;681.004(a)</a></td>
+          <td class="scen">A red placard was issued eight months ago with no renewal on file &mdash; past its 6-month statutory ceiling, it should be treated as expired regardless of what date is printed on it.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note" style="margin-top:12px;">SB 792 (87th Legislature, 2021) let a Veterans with Disabilities plate under &sect;504.202(b-1) also carry the access symbol, which then qualifies the holder for a &sect;681.004 placard for each set of plates &mdash; without the extra medical documentation a stand-alone Disabled Person plate application would otherwise require. Full bill summary: chapter's <i>2026 Update &mdash; New House &amp; Senate Bills</i> topic in <a href="../study.html">Study Hub &rarr; Ch. 22</a>.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-hb718">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">HB 718</span>
+    <span class="sec-name">HB 718 (2023) &mdash; What Changed, Effective July 1, 2025</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>House Bill 718, enacted by the <b>88th Legislature (2023)</b>, targeted the fraudulent use of paper temporary tags and permits by eliminating six paper documents in favor of new metal temporary license plates and a faster point-of-sale process. Its provisions and the associated DPS/DMV administrative rules took effect <b>July 1, 2025</b>.</p>
+    <p>Because tags issued before the effective date remain valid until their own printed expiration, officers can still legitimately encounter a repealed paper document for a short window after 7/1/25 &mdash; the table below gives each document's own grace period.</p>
+    <div class="timeline">
+      <div class="tl-cell"><span class="tl-date">7/1/2025</span>Dealers stop issuing all six paper documents; the new plates and process take effect.</div>
+      <div class="tl-cell"><span class="tl-date">7/15/2025</span>Paper One-Trip Permits should not be seen as valid beyond this date.</div>
+      <div class="tl-cell"><span class="tl-date">7/30/2025</span>Paper 30-Day Permits should not be seen as valid beyond this date.</div>
+      <div class="tl-cell"><span class="tl-date">~8/31/2025</span>Last date a legitimate Buyer's Tag (60-day expiration) could still be running, if issued right at the 7/1/25 cutoff.</div>
+    </div>
+    <p style="margin-top:10px;"><b>Source:</b> TxDPS Transportation Code Training Program, <i>HB 718 Guidance</i>.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-repealed">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">REPEALED</span>
+    <span class="sec-name">The Six Repealed Paper Documents</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>None of these are issued anymore. A genuine one can only be a holdover issued before 7/1/25 that hasn't yet reached its own printed expiration &mdash; anything past that date, or any of these issued fresh today, is fraudulent.</p>
+    <div class="chart-scroll">
+    <table class="ladder-table plate-table">
+      <colgroup><col class="c-item"><col class="c-valid"><col class="c-stat"><col class="c-cite"><col class="c-scen"></colgroup>
+      <thead><tr><th>Document</th><th>Old validity</th><th>Status</th><th>Replaced by</th><th>Sample scenario</th></tr></thead>
+      <tbody>
+        <tr class="repealed">
+          <td><span class="item-name">30-Day Permit</span><span class="item-sub">Passenger vehicles, private buses, trailers/semitrailers &le;10,000 lb GVW &mdash; unladen only if heavier</span></td>
+          <td>30 days; sunset ~7/30/25</td>
+          <td><span class="stat repealed">Repealed</span></td>
+          <td>Temporary Registration Plate</td>
+          <td class="scen">A 30-Day Permit dated June 20, 2025 hasn't reached its printed expiration when stopped in early July &mdash; still valid on its own terms. The same permit displayed on a laden 12,000-lb commercial vehicle was never a valid use to begin with, permit date aside.</td>
+        </tr>
+        <tr class="repealed">
+          <td><span class="item-name">One-Trip Permit</span><span class="item-sub">Single point-to-point trip that must begin or end in Texas, &le;15 days</span></td>
+          <td>15 days max; sunset ~7/15/25</td>
+          <td><span class="stat repealed">Repealed</span></td>
+          <td>Temporary Registration Plate</td>
+          <td class="scen">A stop reveals a purely intrastate trip (neither begins nor ends in Texas) already 20 days old &mdash; unregistered on two independent grounds: the origin/destination rule and the 15-day cap, permit-repeal timing aside.</td>
+        </tr>
+        <tr class="repealed">
+          <td><span class="item-name">Buyer's Tag</span><span class="item-sub">Paper tag a dealer issued directly to a buyer at time of sale</span></td>
+          <td>60 days; last legitimate ones ran through ~8/31/25</td>
+          <td><span class="stat repealed">Repealed</span></td>
+          <td>Two standard metal plates at sale (TC &sect;503.063)</td>
+          <td class="scen">A dealer stopped issuing Buyer's Tags on 7/1/25, but one issued 6/29/25 is still technically within its 60-day window into late August &mdash; an officer checks the printed issue date rather than assuming every Buyer's Tag is automatically fraudulent.</td>
+        </tr>
+        <tr class="repealed">
+          <td><span class="item-name">Internet Down Tag</span><span class="item-sub">Paper fallback dealers used when TxDMV's online Inventory Management System (IMS) was unreachable</span></td>
+          <td>No longer issued in any form</td>
+          <td><span class="stat repealed">Repealed</span></td>
+          <td>Two standard metal plates, issued anyway</td>
+          <td class="scen">IMS access is down at the exact moment of a sale. The dealer doesn't wait or fall back to paper &mdash; two standard plates go on the vehicle immediately, the sale is entered once IMS access returns, and the buyer gets a form explaining the temporary IMS/TLETS gap.</td>
+        </tr>
+        <tr class="repealed">
+          <td><span class="item-name">Dealer/Converter Temp Tags &amp; Authorized Agent Tags</span><span class="item-sub">Three named paper variants: Dealer Vehicle Specific, Authorized Agent, and Converter tags</span></td>
+          <td>Varied by variant; none valid as fresh issuance after 7/1/25</td>
+          <td><span class="stat repealed">Repealed</span></td>
+          <td>Dealer Temporary Plate</td>
+          <td class="scen">A vehicle in dealer inventory previously would have worn one of these three paper tags for test drives or transit; today it wears a single metal Dealer Temporary Plate instead, whichever of the three former uses applies.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note-inline" style="display:block; margin-top:8px; font-size:11.5px; color:var(--ink-soft); font-style:italic;">HB 718 Guidance counts these as "six paper documents" (30-Day, One-Trip, Buyer's Tag, Internet Down, and the two dealer/converter/authorized-agent variants) &mdash; the last row above bundles three named tag types under one replacement since they all became the same new plate.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-new">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">NEW</span>
+    <span class="sec-name">New HB 718 Metal Plates &amp; the Point-of-Sale Replacement</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <div class="chart-scroll">
+    <table class="ladder-table plate-table">
+      <colgroup><col class="c-item"><col class="c-valid"><col class="c-stat"><col class="c-cite"><col class="c-scen"></colgroup>
+      <thead><tr><th>Plate</th><th>Validity</th><th>Status</th><th>Citation</th><th>Sample legal-use scenario</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="item-name">Two General-Issue Plates (at sale)</span><span class="item-sub">What a dealer now attaches to every sold vehicle instead of a Buyer's Tag</span></td>
+          <td>Standard 12-month registration begins at the sale</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.063" target="_blank" rel="noopener">TC &sect;503.063</a>; receipt <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.0631" target="_blank" rel="noopener">&sect;503.0631(d-2)</a>; insignia <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.059" target="_blank" rel="noopener">&sect;502.059</a></td>
+          <td class="scen">TLETS shows registration already processed on a newly purchased vehicle, but no windshield insignia is displayed yet &mdash; that's reasonable suspicion for a stop. If TLETS instead shows registration <i>not yet</i> processed, no enforcement action is warranted for the missing insignia; the buyer's receipt (carried per &sect;503.0631(d-2)) covers that gap.</td>
+        </tr>
+        <tr class="interim">
+          <td><span class="item-name">Temporary Registration Plate</span><span class="item-sub">Replaces the One-Trip &amp; 30-Day Permits; one plate, rear only; county tax office or TxDMV regional service center</span></td>
+          <td>One-trip variant: &le;15 days, must begin or end in TX. 30-day-style variant: &le;30 days, unladen only if a CMV &gt;10,000 lb GVW</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.095" target="_blank" rel="noopener">TC &sect;502.095</a>; <a href="https://www.law.cornell.edu/regulations/texas/43-Tex-Admin-Code-SS-217-40" target="_blank" rel="noopener">43 TAC &sect;217.40</a></td>
+          <td class="scen">A cross-country move uses the one-trip variant, point to point, beginning in Texas, completed well inside 15 days. A separate local hauler uses the 30-day variant on a light truck under 10,000 lb GVW &mdash; the moment that truck carries a load over that weight, the plate's valid-use condition is broken even though the plate itself hasn't expired.</td>
+        </tr>
+        <tr class="interim">
+          <td><span class="item-name">Buyer Provisional Plate</span><span class="item-sub">Bridges the gap when a dealer doesn't yet have the buyer's ordered specialty/personalized plate in stock</span></td>
+          <td>Valid until the permanent specialty plate is assigned, plus 7 more days, then returned to the dealer</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite">HB 718 Guidance</td>
+          <td class="scen">A buyer orders Veterans with Disabilities plates at purchase, but the dealer doesn't have them in stock yet; the dealer issues a Buyer Provisional Plate to cover the interim, then swaps it for the permanent plates and windshield insignia once they arrive &mdash; the provisional plate goes back to the dealer, not to the buyer as a keepsake.</td>
+        </tr>
+        <tr class="interim">
+          <td><span class="item-name">Out-of-State Buyer Plate</span><span class="item-sub">Buyer lives out of state and won't register the vehicle in Texas; one plate, rear only</span></td>
+          <td>60 days</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite">HB 718 Guidance</td>
+          <td class="scen">A Texas dealer sells to an Oklahoma resident who will title and register the vehicle at home; the dealer issues a single Out-of-State Buyer Plate for the drive home. If the buyer is still on it past 60 days with no other registration obtained, the vehicle should be considered unregistered.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Dealer Temporary Plate</span><span class="item-sub">Dealer's own business-use plate &mdash; test drives, loaners, transit, road testing, charitable use</span></td>
+          <td>Synced to the dealership's GDN license expiration (shown by stickers)</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.062" target="_blank" rel="noopener">TC &sect;503.062</a>, <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.503.htm#503.0671" target="_blank" rel="noopener">&sect;503.0671</a></td>
+          <td class="scen">A dealership loans a customer a vehicle with a Dealer Temporary Plate while the customer's own car is being repaired &mdash; an approved use. A dealer or employee using the same plate for a personal errand, or on a vehicle already sold, a rental/leased vehicle, or a laden commercial vehicle, is a prohibited use even though the plate's own registration is current.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-survivors">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">SURVIVED</span>
+    <span class="sec-name">Paper Documents Still Valid Today &mdash; Not Repealed by HB 718</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>HB 718 eliminated six paper documents but left these four in place &mdash; all still issued on paper, all still fully legal to encounter today.</p>
+    <div class="chart-scroll">
+    <table class="ladder-table plate-table">
+      <colgroup><col class="c-item"><col class="c-valid"><col class="c-stat"><col class="c-cite"><col class="c-scen"></colgroup>
+      <thead><tr><th>Document</th><th>Validity</th><th>Status</th><th>Citation</th><th>Sample legal-use scenario</th></tr></thead>
+      <tbody>
+        <tr class="interim">
+          <td><span class="item-name">72-Hour Permit</span><span class="item-sub">US/Canada/Mexico resident; commercial motor vehicle, trailer, semitrailer, or bus with no TX registration or reciprocity</span></td>
+          <td>72 hours from the date/time on the receipt ($25 fee)</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.094" target="_blank" rel="noopener">TC &sect;502.094</a></td>
+          <td class="scen">A Canadian-registered semitrailer without U.S. reciprocity authority crosses into Texas; the driver buys a 72-Hour Permit to legally reposition it before the window runs out.</td>
+        </tr>
+        <tr class="interim">
+          <td><span class="item-name">144-Hour Permit</span><span class="item-sub">Same eligible parties/vehicles as the 72-Hour Permit, longer window</span></td>
+          <td>144 hours from the date/time on the receipt ($50 fee)</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite"><a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.094" target="_blank" rel="noopener">TC &sect;502.094</a></td>
+          <td class="scen">The same kind of unregistered commercial vehicle needs a longer repositioning trip than 72 hours allows; the 144-Hour Permit covers it instead, at the higher $50 fee.</td>
+        </tr>
+        <tr>
+          <td><span class="item-name">Texas Temporary Insignia</span><span class="item-sub">Issued when a vehicle is assigned a personalized or specialty plate (e.g., Veterans with Disabilities) not yet physically received</span></td>
+          <td>Valid until the owner receives the actual plates</td>
+          <td><span class="stat valid">Valid</span></td>
+          <td class="cite">HB 718 Guidance (functions within the general registration-insignia framework of TC &sect;502.059)</td>
+          <td class="scen">A veteran orders Veterans with Disabilities plates; until they physically arrive, the vehicle displays the Texas Temporary Insignia instead of blank plate slots &mdash; an officer treats this as the vehicle's valid interim registration proof, just like the standard windshield insignia.</td>
+        </tr>
+        <tr class="interim">
+          <td><span class="item-name">Vehicle Transit Permit Receipt</span><span class="item-sub">Private-party sale where the seller keeps their own plates; &le;6,000 lb passenger vehicle or &le;10,000 lb GVW light truck</span></td>
+          <td>5 days, single trip, point of origin to destination; purchased and printed online</td>
+          <td><span class="stat interim">Interim</span></td>
+          <td class="cite"><a href="https://www.law.cornell.edu/regulations/texas/43-Tex-Admin-Code-SS-217-53" target="_blank" rel="noopener">43 TAC &sect;217.53(c)</a></td>
+          <td class="scen">A buyer purchases a car from a private seller who keeps their own plates on sale. The buyer prints a Vehicle Transit Permit Receipt online and drives the vehicle home within the 5-day, single-trip window &mdash; the same document that lets a private sale close without either party needing a dealer's paperwork.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-fake">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">FLIER</span>
+    <span class="sec-name">Spotting a Fake or Invalid Plate</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>From MyPlates.com's "How to Spot a Fake Plate in Texas" flier &mdash; the visual tells that separate a genuine plate from a counterfeit, independent of whatever plate number it displays.</p>
+    <ul class="fake-list">
+      <li><b>Security thread:</b> since August 2012, every genuine Texas plate has had two vertical threads joining the existing round holograms.</li>
+      <li><b>Correct size:</b> passenger, truck, and trailer plates are 6&times;12 in.; motorcycle plates are 4&times;7 in. Any other size is either fake or a legitimate vintage plate issued before 1956 &mdash; Texas has never issued European-sized plates.</li>
+      <li><b>Reflective white characters:</b> genuine designs use reflective white alphanumeric characters that contrast against the plate's background color; a color-on-color pattern (e.g., red characters on a black background) is a common fake.</li>
+      <li><b>Lone Star series character limit:</b> the large-star Lone Star series (black, blue, pink, silver, white, red) holds a maximum of 6 characters &mdash; a 7-character pattern on that design is fake.</li>
+      <li><b>A correct plate number doesn't make a fake plate legal:</b> a novelty/fake plate design printed with the vehicle's own correct, registered plate number is still illegal.</li>
+      <li><b>The offenses:</b> <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.504.htm#504.946" target="_blank" rel="noopener">TC &sect;504.946</a>, Deceptively Similar License Plate (felony 3rd degree to manufacture/sell, Class C to possess), and <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm#502.4755" target="_blank" rel="noopener">TC &sect;502.4755</a>, Deceptively Similar Insignia, are the parallel offenses for a fake plate and a fake registration sticker respectively. Full grading: <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<footer>Ch.22 Traffic Code &mdash; Valid Texas License Plates, Tags &amp; Permits &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+expandAll();
+</script>
+
+</body>
+</html>
