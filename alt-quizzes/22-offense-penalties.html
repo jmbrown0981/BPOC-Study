@@ -31,6 +31,19 @@
   .catchall-table td:nth-child(2) a:hover{color:var(--rust);}
   .catchall-table td:nth-child(3){width:42%; font-size:12.5px;}
   .catchall-table td:nth-child(4){width:30%; font-size:12.5px;}
+
+  .case-group{margin:18px 0 6px;}
+  .case-group h3{color:var(--navy); font-family:'IBM Plex Serif', serif; font-size:14px; font-weight:700; margin:0 0 2px; padding-left:10px; border-left:3px solid var(--brass); display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .case-group h3 a{font-family:'IBM Plex Sans', sans-serif; font-size:11px; font-weight:600; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--rule); white-space:nowrap;}
+  .case-group h3 a:hover{color:var(--rust); border-color:var(--rust);}
+  .case-group p.group-note{font-size:12px; color:var(--ink-soft); margin:2px 0 8px; padding-left:13px;}
+  .case-table{table-layout:fixed;}
+  .case-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px; vertical-align:top;}
+  .case-table td:first-child{font-weight:600; width:24%;}
+  .case-table td:nth-child(2){white-space:normal; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); width:19%; line-height:1.4;}
+  .case-table td:nth-child(3){width:57%;}
+  .case-followup{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:9px 12px; font-size:12px; line-height:1.55; color:var(--ink-soft); margin:8px 0 4px;}
+  .case-followup b{color:var(--ink);}
   tr.no-match{display:none;}
   .sec-card.no-match{display:none;}
   .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
@@ -98,6 +111,7 @@
   <a class="chip" href="#sec-o8">Warning Devices / Litter</a>
   <a class="chip" href="#sec-o9">Crash Investigation Duties (Ch.550)</a>
   <a class="chip" href="#sec-o10">Penal Code Charges Tied to Crash Investigation</a>
+  <a class="chip" href="#sec-caselaw">Case Law</a>
   <span class="chip-spacer">
     <button class="chip" type="button" onclick="expandAll()">Expand All</button>
     <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
@@ -107,7 +121,7 @@
 <main id="mainContent">
 
 <div class="intro-note">
-  <b>How to read this:</b> classification and fine/jail figures are quoted or computed straight from current statute text (verified against the cached copies in <code>resources/traffic_code</code>, <code>resources/penal_code</code>, and <code>resources/health_safety_code</code>, cross-checked live against statutes.capitol.texas.gov). Where a section just says &ldquo;Class B misdemeanor&rdquo; without restating the fine, the amount shown comes from the general Penal Code Ch.12 punishment ladder at the top of this page. Where a section creates an offense but states <b>no</b> classification or fine at all, it falls to its subtitle's general-penalty catchall &mdash; see that section below and the &ldquo;Falls to&rdquo; column. This is a study aid, not legal advice &mdash; always verify against current statute before relying on a specific number. For the full list of Ch.22 code sections (definitions, procedure, equipment, etc.) with direct links, see the <a href="22-codes-index.html">Codes &amp; Sections Index</a>.
+  <b>How to read this:</b> classification and fine/jail figures are quoted or computed straight from current statute text (verified against the cached copies in <code>resources/traffic_code</code>, <code>resources/penal_code</code>, and <code>resources/health_safety_code</code>, cross-checked live against statutes.capitol.texas.gov). Where a section just says &ldquo;Class B misdemeanor&rdquo; without restating the fine, the amount shown comes from the general Penal Code Ch.12 punishment ladder at the top of this page. Where a section creates an offense but states <b>no</b> classification or fine at all, it falls to its subtitle's general-penalty catchall &mdash; see that section below and the &ldquo;Falls to&rdquo; column. This is a study aid, not legal advice &mdash; always verify against current statute before relying on a specific number. For the full list of Ch.22 code sections (definitions, procedure, equipment, etc.) with direct links, see the <a href="22-codes-index.html">Codes &amp; Sections Index</a>. For the constitutional case law behind a traffic stop &mdash; reason for the stop, occupant control, stop duration, and vehicle searches &mdash; see the <a href="#sec-caselaw">Case Law</a> section below or the full <a href="../case-law.html">Case Law Reference</a>.
 </div>
 
 <div class="sec-card" id="sec-ladder">
@@ -171,6 +185,97 @@
 </div>
 
 <div id="clusterCards"></div>
+
+<div class="sec-card" id="sec-caselaw">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">CASE LAW</span>
+    <span class="sec-name">Constitutional Authority Behind a Traffic Stop</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Every offense above still has to be enforced through a stop, a search, or an arrest that itself holds up under the Fourth Amendment. These are the cases that define that authority — why the stop was valid, what officers may do with the occupants, how long it may run, and when the vehicle itself may be searched — pulled from the course's full <a href="../case-law.html">Case Law Reference</a>, which has the complete summary and Law-Enforcement-Application note for every case below (and 60+ more). Click a group's &ldquo;Full summaries&rdquo; link to jump straight to it.</p>
+
+    <div class="case-group">
+      <h3><span>Reason for the Stop &amp; Occupant Control</span> <a href="../case-law.html#traffic-reason" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Whren v. United States</td><td>517 U.S. 806 (1996)</td><td>An officer's subjective motive for a traffic stop is irrelevant to its constitutionality as long as an actual, objective traffic violation occurred.</td></tr>
+          <tr><td>Pennsylvania v. Mimms</td><td>434 U.S. 106 (1977)</td><td>An officer may order a driver out of a lawfully stopped vehicle without any additional justification &mdash; officer safety alone is enough.</td></tr>
+          <tr><td>Maryland v. Wilson</td><td>519 U.S. 408 (1997)</td><td>Mimms's driver-removal rule extends to passengers as well.</td></tr>
+          <tr><td>Arizona v. Johnson</td><td>555 U.S. 323 (2009)</td><td>An officer may frisk a passenger during a lawful stop based on reasonable suspicion the passenger is armed, without extending the stop's length.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-group">
+      <h3><span>How Long the Stop May Last</span> <a href="../case-law.html#stop-duration" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Pryor v. State</td><td>122 Md. App. 671 (1997)</td><td>Two independent valid grounds for a stop don't combine into extra detention time &mdash; an unrelated K-9 wait still needs its own justification.</td></tr>
+          <tr><td>Graham v. State</td><td>119 Md. App. 444 (1998)</td><td>Once a stop's purpose is fulfilled, continuing to detain occupants for a K-9 unit requires new, independent reasonable suspicion.</td></tr>
+          <tr><td>Ferris v. State</td><td>355 Md. 356 (1999)</td><td>Once a citation is issued and documents returned, any further questioning is a new, second seizure requiring its own justification.</td></tr>
+        </tbody>
+      </table>
+      <p class="group-note">These three Maryland cases establish the "mission of the stop" principle. The U.S. Supreme Court later confirmed the same rule nationally in <b>Rodriguez v. United States, 575 U.S. 348 (2015)</b> (not in the course's case-law list): extending a completed stop even briefly &mdash; for a dog sniff or anything else &mdash; requires its own independent reasonable suspicion.</p>
+    </div>
+
+    <div class="case-group">
+      <h3><span>Probable Cause, Reasonable Suspicion &amp; the Automobile Exception</span> <a href="../case-law.html#pc-rs" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Brinegar v. United States</td><td>338 U.S. 160 (1949)</td><td>Probable cause turns on practical, everyday probabilities, not the certainty needed to convict.</td></tr>
+          <tr><td>Beck v. Ohio</td><td>379 U.S. 89 (1964)</td><td>Probable cause is judged by an objective standard; an officer's good-faith belief alone is not enough.</td></tr>
+          <tr><td>Illinois v. Gates</td><td>462 U.S. 213 (1983)</td><td>Informant tips are evaluated under the totality of the circumstances, not a rigid two-pronged test.</td></tr>
+          <tr><td>Carroll v. United States</td><td>267 U.S. 132 (1925)</td><td>Probable cause to believe a vehicle contains contraband justifies a warrantless search under the automobile exception.</td></tr>
+          <tr><td>Terry v. Ohio</td><td>392 U.S. 1 (1968)</td><td>Police may briefly detain someone on reasonable suspicion and frisk for weapons on a separate reasonable suspicion the person is armed.</td></tr>
+        </tbody>
+      </table>
+      <p class="group-note">See also <b>Michigan v. Long, 463 U.S. 1032 (1983)</b> under <a href="../case-law.html#terry-stops" target="_blank" rel="noopener">Investigative Detention (Terry Stops)</a> &mdash; it extends Terry's weapons-frisk logic to the passenger compartment of a vehicle during a stop.</p>
+    </div>
+
+    <div class="case-group">
+      <h3><span>Searching the Vehicle Incident to Arrest</span> <a href="../case-law.html#sia" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Chimel v. California</td><td>395 U.S. 752 (1969)</td><td>A search incident to arrest is limited to the arrestee's person and the area within immediate reach.</td></tr>
+          <tr><td>New York v. Belton</td><td>453 U.S. 454 (1981)</td><td>Original rule (now narrowed): officers could search a vehicle's entire passenger compartment incident to a recent occupant's arrest.</td></tr>
+          <tr><td>Arizona v. Gant</td><td>556 U.S. 332 (2009)</td><td>Narrowed Belton: a vehicle may be searched incident to arrest only if the arrestee is unsecured and within reach, or it's reasonable to believe evidence of the arrest offense is inside.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-group">
+      <h3><span>Odor as Probable Cause (Texas Cases)</span> <a href="../case-law.html#odor-pc" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Moulden v. State</td><td>576 S.W.2d 817 (Tex. Crim. App. 1978)</td><td>The smell of burnt marijuana during a lawful traffic stop can by itself establish probable cause to search the vehicle.</td></tr>
+          <tr><td>State v. Steelman</td><td>93 S.W.3d 102 (Tex. Crim. App. 2002)</td><td>The smell of marijuana alone doesn't establish probable cause to arrest every occupant &mdash; only whoever can be individually connected to it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-group">
+      <h3><span>Crash Scenes &amp; Warrantless &ldquo;Suspicious Places&rdquo; Arrests</span> <a href="../case-law.html#crash-suspicious-place" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Dyar v. State</td><td>125 S.W.3d 460 (Tex. Crim. App. 2003)</td><td>A hospital following a one-vehicle crash can be a &ldquo;suspicious place&rdquo; supporting a warrantless arrest under CCP art. 14.03(a)(1) when the totality of the circumstances shows a crime.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-group">
+      <h3><span>Passenger Standing &amp; State Law</span> <a href="../case-law.html#standing" target="_blank" rel="noopener">Full summaries &rarr;</a></h3>
+      <table class="ladder-table case-table">
+        <tbody>
+          <tr><td>Brendlin v. California</td><td>551 U.S. 249 (2007)</td><td>A passenger is &ldquo;seized&rdquo; for the duration of a traffic stop too, and has standing to challenge the stop's legality.</td></tr>
+          <tr><td>Virginia v. Moore</td><td>553 U.S. 164 (2008)</td><td>An arrest supported by probable cause satisfies the Fourth Amendment even if it violates a state law calling for a citation instead of an arrest.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-followup"><b>A note on two corrected citations:</b> while researching this section, two case entries on the full Case Law Reference page turned out to be mis-described &mdash; Dyar v. State was mislabeled as a marijuana-odor traffic-stop case (it's actually the crash/hospital &ldquo;suspicious places&rdquo; case now shown above), and Creager v. State was mislabeled as an odor-based-probable-cause case (it's actually a custodial-confession-voluntariness case, now moved to that page's Custodial Interrogation group). Both have been corrected there, and the odor-as-probable-cause slot above now cites Moulden v. State and State v. Steelman instead, which are the cases that actually address that doctrine.</div>
+  </div>
+</div>
 
 </main>
 
@@ -360,7 +465,7 @@ function runSearch(){
   let totalMatches = 0;
 
   document.querySelectorAll('.sec-card').forEach(function(card){
-    if(card.id === 'sec-ladder' || card.id === 'sec-catchall' || card.id === 'sec-dumping'){ return; }
+    if(card.id === 'sec-ladder' || card.id === 'sec-catchall' || card.id === 'sec-dumping' || card.id === 'sec-caselaw'){ return; }
     const rows = card.querySelectorAll('tbody tr');
     let cardMatches = 0;
     rows.forEach(function(row){
