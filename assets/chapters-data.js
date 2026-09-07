@@ -1483,11 +1483,12 @@ const chapters = [
       ]},
       {id:"2026-supplemental-links", label:"2026 Update — Supplemental Reference Pages", cards:[
         {title:"Ch. 22 Supplemental Reference Pages",
-         body:"Five standalone reference tools built from this material, linked from the Study Hub's Supplemental Materials section: <ul>" +
+         body:"Six standalone reference tools built from this material, linked from the Study Hub's Supplemental Materials section: <ul>" +
            "<li><a href=\"alt-quizzes/22-codes-index.html\">Codes &amp; Sections Index</a> — every code section Ch.22 cites, organized the way the chapter teaches it, each linked straight to current statute text.</li>" +
            "<li><a href=\"alt-quizzes/22-definitions-map.html\">Definitions Cross-Reference Map</a> — all defined terms mapped against each other, with hub terms, per-cluster tables, and the multi-chapter “same word, different definition” trap table.</li>" +
-           "<li><a href=\"alt-quizzes/22-offense-penalties.html\">Offense &amp; Penalty Reference</a> — every Ch.22 offense with its classification and fine/jail range straight from the statute, plus the Penal Code Ch.12 punishment ladder and general-penalty catchalls.</li>" +
+           "<li><a href=\"alt-quizzes/22-offense-penalties.html\">Offense &amp; Penalty Reference</a> — every Ch.22 offense with its classification and fine/jail range straight from the statute, plus the Penal Code Ch.12 punishment ladder, general-penalty catchalls, and the constitutional case law behind a traffic stop.</li>" +
            "<li><a href=\"alt-quizzes/22-lighting-spec.html\">Vehicle Lighting Height &amp; Year Exceptions</a> — mounting-height range chart (Texas vs. federal FMVSS 108) and full detail table for every TC §547 lamp and reflector, with every model-year/manufacture-date exception flagged.</li>" +
+           "<li><a href=\"alt-quizzes/22-visibility-distance.html\">Vehicle Lighting &amp; Reflector Visibility Distance</a> — required visibility distance in feet for every TC §547 lamp and reflector (plus TC §551 bicycle equipment), broken into motor-vehicle, bicycle, and trailer category charts and detail tables.</li>" +
            "<li><a href=\"alt-quizzes/22-plates-permits.html\">Valid License Plates, Tags &amp; Permits</a> — every standard/specialty plate, disabled parking placard, and HB 718 temporary tag/permit/receipt, with validity period, TC/TAC citation, repealed-vs-valid status, and a sample legal-use scenario for each.</li>" +
            "</ul>"}
       ]}

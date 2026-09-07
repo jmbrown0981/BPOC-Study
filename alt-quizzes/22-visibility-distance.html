@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 22 Vehicle Lighting — Visibility Distance | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note a{color:var(--navy); font-weight:600;}
+
+  /* ---- legend ---- */
+  .legend{display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin:14px 0 16px; font-size:12.5px; color:var(--ink-soft);}
+  .legend-item{display:flex; align-items:center; gap:7px;}
+  .swatch{width:14px; height:14px; border-radius:3px; flex:none;}
+  .swatch.min{background:var(--brass);}
+  .swatch.range{background:var(--navy);}
+  .flag-dot{width:8px; height:8px; border-radius:50%; background:var(--rust); flex:none;}
+
+  /* ---- section chips ---- */
+  nav.chips{top:0;}
+  .cat-heading{color:var(--navy); font-family:'IBM Plex Serif', serif; font-size:17px; font-weight:700; margin:30px 0 4px; padding-left:11px; border-left:4px solid var(--brass); display:flex; align-items:center; gap:10px; scroll-margin-top:66px;}
+  .cat-heading .cat-tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:700; letter-spacing:.05em; color:#fff; background:var(--navy); padding:2px 9px; border-radius:9px; text-transform:uppercase;}
+  .cat-note{font-size:12.5px; color:var(--ink-soft); margin:0 0 12px; max-width:80ch;}
+
+  /* ---- chart ---- */
+  .chart-card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 20px 10px; margin-bottom:18px;}
+  .chart-scroll{overflow-x:auto;}
+  svg{display:block; font-family:'IBM Plex Sans', sans-serif;}
+  .cat-label{font-size:12.5px; fill:var(--ink); font-weight:600;}
+  .cat-sub{font-size:10.5px; fill:var(--ink-soft);}
+  .axis-tick{font-family:'IBM Plex Mono', monospace; font-size:10.5px; fill:var(--ink-soft);}
+  .axis-title{font-size:11px; fill:var(--ink-soft); letter-spacing:.04em;}
+  .val-label{font-family:'IBM Plex Mono', monospace; font-size:10.5px; fill:var(--ink-soft); font-weight:600;}
+  .gridline{stroke:var(--rule); stroke-width:1; opacity:.55;}
+  .baseline{stroke:var(--rule); stroke-width:1.5;}
+  .bar-min{fill:var(--brass);}
+  .bar-range{fill:var(--navy);}
+  .arrow-mark{fill:var(--brass);}
+  .flag-mark{fill:var(--rust);}
+  .row-bg{fill:transparent;}
+  .row-bg.alt{fill:var(--paper-dim);}
+
+  /* ---- detail table ---- */
+  .spec-table{table-layout:fixed; width:100%;}
+  .spec-table col.c-device{width:18%;}
+  .spec-table col.c-dist{width:13%;}
+  .spec-table col.c-applies{width:22%;}
+  .spec-table col.c-note{width:36%;}
+  .spec-table col.c-cite{width:11%;}
+  .spec-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px;}
+  .spec-table td .device-name{font-weight:700; color:var(--ink); display:block; font-size:13px;}
+  .spec-table td .device-sub{display:block; font-size:11px; color:var(--ink-soft); font-weight:400; margin-top:1px;}
+  .spec-table td .num{font-family:'IBM Plex Mono', monospace; font-variant-numeric:tabular-nums;}
+  .spec-table td.cite{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft);}
+  .spec-table tr.exception td{background:#FBEDE7;}
+  .spec-table tr td:first-child{position:relative; padding-left:16px;}
+  .spec-table tr.exception td:first-child::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--rust);}
+  .flag-inline{display:inline-flex; align-items:center; gap:5px; font-family:'IBM Plex Mono', monospace; font-size:10px; font-weight:700; color:var(--rust); letter-spacing:.03em; margin-bottom:3px;}
+  .flag-inline::before{content:"●"; font-size:7px;}
+  .muted{color:var(--ink-soft);}
+
+  .not-stated-box{background:#F7EFD9; border-left:3px solid var(--brass); border-radius:6px; padding:10px 14px; margin:10px 0 22px; font-size:12.5px; line-height:1.55;}
+  .not-stated-box strong{color:#7a5800;}
+
+  @media (max-width:640px){
+    .spec-table{table-layout:auto; min-width:640px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
+      <h1>Vehicle Lighting &amp; Reflectors — Required Visibility Distance</h1>
+      <p class="sub">Every distance Transportation Code Chapter 547 (and Chapter 551 for bicycles) requires a lamp or reflector to be seen from, grouped by vehicle type: motor vehicles, bicycles, and trailers.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips">
+  <a class="chip" href="#sec-motor">Motor Vehicles</a>
+  <a class="chip" href="#sec-bicycle">Bicycles</a>
+  <a class="chip" href="#sec-trailer">Trailers</a>
+  <span class="chip-spacer">
+    <a class="chip" href="22-lighting-spec.html">Height &amp; Year Chart</a>
+    <a class="chip" href="22-codes-index.html">Codes Index</a>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> Transportation Code &sect;547.301(a) says that unless a section states otherwise, a visibility-distance requirement is measured with the vehicle unloaded, on a straight, level, unlighted highway, under normal atmospheric conditions. A <b>brass bar with an arrow</b> is an open-ended minimum &mdash; the device must be visible from <em>at least</em> that many feet, and more is always fine. A <b>navy bar</b> is a true range &mdash; the device (almost always a reflector) must be visible at every distance <em>between</em> the two ends, no more and no less, when directly in front of headlamp beams of the stated type. Unlike the companion <a href="22-lighting-spec.html">Height &amp; Year Exceptions chart</a>, there is no federal comparison series here: FMVSS 108 (49&nbsp;C.F.R. &sect;571.108) measures lamp and reflector performance photometrically (candela at specified test angles), not as a plain-language visibility distance, so no federal "feet" figure exists to place side-by-side with the Texas figure. For offense classifications and fines, see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="swatch min"></span> Minimum &mdash; visible at least this far</div>
+  <div class="legend-item"><span class="swatch range"></span> Range &mdash; visible only between these two distances</div>
+  <div class="legend-item"><span class="flag-dot"></span> Row has a condition, exception, or model-year rule &mdash; see table</div>
+</div>
+
+<!-- ============================= MOTOR VEHICLES ============================= -->
+<h2 class="cat-heading" id="sec-motor"><span class="cat-tag">Category</span> Motor Vehicles</h2>
+<p class="cat-note">Passenger vehicles, trucks, buses, farm tractors and equipment, and motorcycles/mopeds. Figures for trailers towed behind a motor vehicle are broken out separately below.</p>
+
+<div class="chart-card">
+  <div class="chart-scroll">
+    <svg id="chart-motor" viewBox="0 0 980 430" width="980" height="430" role="img" aria-label="Required visibility distance in feet for motor-vehicle lamps and reflectors"></svg>
+  </div>
+</div>
+
+<div class="chart-scroll">
+  <table class="ladder-table spec-table" id="spec-table-motor">
+    <colgroup>
+      <col class="c-device"><col class="c-dist"><col class="c-applies"><col class="c-note"><col class="c-cite">
+    </colgroup>
+    <thead>
+      <tr><th>Device</th><th>Visibility (ft)</th><th>Applies to / condition</th><th>Note</th><th>Source</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- ============================= BICYCLES ============================= -->
+<h2 class="cat-heading" id="sec-bicycle"><span class="cat-tag">Category</span> Bicycles</h2>
+<p class="cat-note">Nighttime equipment required by Transportation Code Chapter 551 (Operation of Bicycles), §551.104 — a much shorter list than motor vehicles, and governed by a different chapter entirely.</p>
+
+<div class="chart-card">
+  <div class="chart-scroll">
+    <svg id="chart-bicycle" viewBox="0 0 980 150" width="980" height="150" role="img" aria-label="Required visibility distance in feet for bicycle lamps and reflectors"></svg>
+  </div>
+</div>
+
+<div class="chart-scroll">
+  <table class="ladder-table spec-table" id="spec-table-bicycle">
+    <colgroup>
+      <col class="c-device"><col class="c-dist"><col class="c-applies"><col class="c-note"><col class="c-cite">
+    </colgroup>
+    <thead>
+      <tr><th>Device</th><th>Visibility (ft)</th><th>Applies to / condition</th><th>Note</th><th>Source</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- ============================= TRAILERS ============================= -->
+<h2 class="cat-heading" id="sec-trailer"><span class="cat-tag">Category</span> Trailers</h2>
+<p class="cat-note">Trailers, semitrailers, and pole trailers — including the added figures for trailers at least 80 in. wide or 30 ft long (Subchapter F), projecting loads, and equipment towed behind a farm tractor.</p>
+
+<div class="chart-card">
+  <div class="chart-scroll">
+    <svg id="chart-trailer" viewBox="0 0 980 350" width="980" height="350" role="img" aria-label="Required visibility distance in feet for trailer lamps and reflectors"></svg>
+  </div>
+</div>
+
+<div class="chart-scroll">
+  <table class="ladder-table spec-table" id="spec-table-trailer">
+    <colgroup>
+      <col class="c-device"><col class="c-dist"><col class="c-applies"><col class="c-note"><col class="c-cite">
+    </colgroup>
+    <thead>
+      <tr><th>Device</th><th>Visibility (ft)</th><th>Applies to / condition</th><th>Note</th><th>Source</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="not-stated-box">
+  <strong>Exemption to note:</strong> §547.304 exempts a farm trailer or fertilizer trailer registered under §502.146, and a boat trailer with a gross weight of 3,000 lb or less, from the fixed-electric-light requirements of this chapter entirely — unless it's being operated at a time or under a condition described by §547.302(a) (darkness, dusk/dawn, or a person/vehicle not clearly discernible at 1,000 ft). No visibility-distance figure applies to these trailers outside those conditions.
+</div>
+
+</main>
+
+<footer>Ch.22 Traffic Code &mdash; Vehicle Lighting &amp; Reflector Visibility Distance &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+(function(){
+  var ns = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){
+    var e = document.createElementNS(ns, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  // Renders one visibility-distance bar chart.
+  // rows: [{label, sub, type:'min'|'range', val: number|[min,max], flag:bool}]
+  function renderChart(svgId, rows, xMax, tickStep){
+    var svg = document.getElementById(svgId);
+    var W = 980, H = svg.viewBox.baseVal.height;
+    var padLeft = 250, padRight = 46, padTop = 10, padBottom = 34;
+    var plotW = W - padLeft - padRight;
+    var rowH = (H - padTop - padBottom) / rows.length;
+    function xScale(v){ return padLeft + (v / xMax) * plotW; }
+
+    rows.forEach(function(r, i){
+      var y = padTop + i * rowH;
+      if (i % 2 === 1){
+        svg.appendChild(el('rect', {x:0, y:y, width:W, height:rowH, class:'row-bg alt'}));
+      }
+    });
+
+    for (var v = 0; v <= xMax; v += tickStep){
+      var x = xScale(v);
+      svg.appendChild(el('line', {x1:x, y1:padTop, x2:x, y2:H-padBottom, class:'gridline'}));
+      var t = el('text', {x:x, y:H-padBottom+16, class:'axis-tick', 'text-anchor':'middle'});
+      t.textContent = v;
+      svg.appendChild(t);
+    }
+    var axisTitle = el('text', {x:padLeft + plotW/2, y:H-6, class:'axis-title', 'text-anchor':'middle'});
+    axisTitle.textContent = "Required visibility distance (feet)";
+    svg.appendChild(axisTitle);
+
+    svg.appendChild(el('line', {x1:padLeft, y1:padTop, x2:padLeft, y2:H-padBottom, class:'baseline'}));
+
+    rows.forEach(function(r, i){
+      var y = padTop + i * rowH;
+      var cy = y + rowH/2;
+
+      var label = el('text', {x:16, y:cy - (r.sub ? 3 : -4), class:'cat-label'});
+      label.textContent = r.label;
+      svg.appendChild(label);
+      if (r.sub){
+        var sub = el('text', {x:16, y:cy + 11, class:'cat-sub'});
+        sub.textContent = r.sub;
+        svg.appendChild(sub);
+      }
+
+      if (r.flag){
+        svg.appendChild(el('circle', {cx: padLeft - 14, cy: cy, r:3.2, class:'flag-mark'}));
+      }
+
+      var barH = 11;
+      var by = cy - barH/2;
+
+      if (r.type === 'min'){
+        var x0 = xScale(0), x1 = xScale(r.val);
+        svg.appendChild(el('rect', {x:x0, y:by, width:x1-x0, height:barH, rx:3, class:'bar-min'}));
+        // arrowhead to show open-ended "at least"
+        var ax = x1, ay = cy;
+        svg.appendChild(el('path', {d:'M '+ax+' '+(ay-6.5)+' L '+(ax+9)+' '+ay+' L '+ax+' '+(ay+6.5)+' Z', class:'arrow-mark'}));
+        var vlabel = el('text', {x:ax+14, y:by+barH-1, class:'val-label'});
+        vlabel.textContent = r.val.toLocaleString() + ' ft';
+        svg.appendChild(vlabel);
+      } else {
+        var lo = xScale(r.val[0]), hi = xScale(r.val[1]);
+        svg.appendChild(el('rect', {x:lo, y:by, width:hi-lo, height:barH, rx:3, class:'bar-range'}));
+        var llabel = el('text', {x:lo-6, y:by+barH-1, class:'val-label', 'text-anchor':'end'});
+        llabel.textContent = r.val[0];
+        svg.appendChild(llabel);
+        var rlabel = el('text', {x:hi+6, y:by+barH-1, class:'val-label'});
+        rlabel.textContent = r.val[1] + ' ft';
+        svg.appendChild(rlabel);
+      }
+    });
+  }
+
+  // Renders one detail table.
+  // detail: [{name, sub, dist, applies, note, cite}]
+  function renderTable(tbodySelector, detail){
+    var tbody = document.querySelector(tbodySelector);
+    detail.forEach(function(d){
+      var tr = document.createElement('tr');
+      if (d.note) tr.className = 'exception';
+
+      var tdName = document.createElement('td');
+      tdName.innerHTML = '<span class="device-name">'+d.name+'</span>' + (d.sub ? '<span class="device-sub">'+d.sub+'</span>' : '');
+      tr.appendChild(tdName);
+
+      var tdDist = document.createElement('td');
+      tdDist.innerHTML = '<span class="num">'+d.dist+'</span>';
+      tr.appendChild(tdDist);
+
+      var tdApplies = document.createElement('td');
+      tdApplies.textContent = d.applies || '—';
+      tr.appendChild(tdApplies);
+
+      var tdNote = document.createElement('td');
+      if (d.note){
+        tdNote.innerHTML = '<span class="flag-inline">CONDITION / EXCEPTION</span><br>' + d.note;
+      } else {
+        tdNote.innerHTML = '<span class="muted">— none —</span>';
+      }
+      tr.appendChild(tdNote);
+
+      var tdCite = document.createElement('td');
+      tdCite.className = 'cite';
+      tdCite.textContent = d.cite;
+      tr.appendChild(tdCite);
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  // ===================== MOTOR VEHICLES =====================
+  var motorRows = [
+    {label:"Headlamp", sub:"upper (high) beam, multi-beam system", type:'min', val:450},
+    {label:"Headlamp", sub:"lower (low) beam, multi-beam system", type:'min', val:150},
+    {label:"Headlamp", sub:"single-beam system (farm tractor / pre-1948 vehicle)", type:'min', val:200, flag:true},
+    {label:"Taillamp", sub:null, type:'min', val:1000},
+    {label:"Rear license-plate lamp", sub:"plate must stay legible", type:'min', val:50},
+    {label:"Stoplamp", sub:"normal sunlight", type:'min', val:300},
+    {label:"Turn signal lamp", sub:"vehicle ≥80 in. wide", type:'min', val:500},
+    {label:"Turn signal lamp", sub:"vehicle <80 in. wide", type:'min', val:300},
+    {label:"Reflector — general/rear", sub:"in front of lawful lower beams", type:'range', val:[100,600]},
+    {label:"Reflector — pre-1972 vehicle", sub:"in front of lawful upper beams", type:'range', val:[100,350], flag:true},
+    {label:"Hazard lamps", sub:"normal sunlight", type:'min', val:500},
+    {label:"Parked-vehicle lamp", sub:"front & rear, when required", type:'min', val:1000}
+  ];
+  renderChart('chart-motor', motorRows, 1150, 100);
+
+  var motorDetail = [
+    {name:"Headlamp", sub:"upper (high) beam", dist:"at least 450", applies:"multi-beam system, all motor vehicles except motorcycle/moped", note:null, cite:"TC 547.333(b)(1)"},
+    {name:"Headlamp", sub:"lower (low) beam", dist:"at least 150", applies:"multi-beam system, all motor vehicles except motorcycle/moped", note:null, cite:"TC 547.333(b)(2)(A)"},
+    {name:"Headlamp", sub:"single-beam system", dist:"at least 200", applies:"permitted in lieu of multi-beam for a farm tractor, or any vehicle manufactured/sold before Sept. 4, 1948", note:"Aim restriction also applies: no part of the high-intensity beam may rise above 5 in. below lamp-center at 25 ft, or above 42 in. off the ground at 75 ft.", cite:"TC 547.334(a)–(b)"},
+    {name:"Headlamp", sub:"alternative road-lighting equipment", dist:"100 (reveals a person/vehicle ahead)", applies:"vehicle operated at 20 mph or less, in lieu of multi- or single-beam equipment", note:null, cite:"TC 547.335"},
+    {name:"Taillamp", sub:null, dist:"1,000", applies:"all motor vehicles (2 lamps; 1 on a pre-1960 passenger car/truck)", note:null, cite:"TC 547.322(a)–(d)"},
+    {name:"Rear license-plate lamp", sub:"white light", dist:"plate legible at 50", applies:"may be the taillamp or a separate lamp", note:null, cite:"TC 547.322(f)"},
+    {name:"Stoplamp", sub:null, dist:"at least 300", applies:"visible in normal sunlight; displayed when service brake applied", note:"A passenger car manufactured/assembled before model year 1960 needs only 1 stoplamp.", cite:"TC 547.323(a),(d)"},
+    {name:"Turn signal lamp", sub:"vehicle ≥80 in. wide", dist:"at least 500", applies:"front and rear, normal sunlight", note:null, cite:"TC 547.324(e)(1)"},
+    {name:"Turn signal lamp", sub:"vehicle <80 in. wide", dist:"at least 300", applies:"front and rear, normal sunlight", note:"Not required at all on a passenger car/truck less than 80 in. wide manufactured/assembled before model year 1960.", cite:"TC 547.324(b),(e)(2)"},
+    {name:"Reflector — general/rear", sub:null, dist:"100–600 (range)", applies:"at night, directly in front of lawful lower beams", note:null, cite:"TC 547.325(a)–(b)(2)(A)"},
+    {name:"Reflector — pre-1972 vehicle", sub:"upper-beam alternative", dist:"100–350 (range)", applies:"vehicle manufactured/assembled before Jan. 1, 1972, measured in front of lawful upper beams instead", note:"Manufacture-date exception to the standard 100–600 ft. lower-beam rule.", cite:"TC 547.325(b)(2)(B)"},
+    {name:"Minimum lighting package", sub:"vehicle with no device-specific requirement (e.g., animal-drawn)", dist:"1,000 front (white) / 1,000 rear (red) OR 1,000 front + reflectors 100–600 rear", applies:"any vehicle not specifically required to carry lamps, plus animal-drawn vehicles", note:null, cite:"TC 547.326"},
+    {name:"Hazard lamps", sub:null, dist:"at least 500", applies:"normal sunlight, all four corners flashing simultaneously", note:null, cite:"TC 547.331(2)"},
+    {name:"Clearance / ID / side-marker lamp", sub:"large vehicle ≥80 in. wide or ≥30 ft. long", dist:"50–500 (range)", applies:"buses, trucks, truck-tractors meeting the Subch. F size threshold", note:"Only applies once the vehicle meets the width/length threshold in §547.352 — not required on a standard passenger vehicle.", cite:"TC 547.352, 547.355(a)"},
+    {name:"Clearance / ID / side-marker reflector", sub:"large vehicle ≥80 in. wide or ≥30 ft. long", dist:"100–600 (range)", applies:"same Subch. F vehicles, at night", note:"Same size-threshold condition as the lamp above.", cite:"TC 547.355(b)"},
+    {name:"Farm tractor / self-propelled farm equipment — rear lamp", sub:null, dist:"at least 1,000", applies:"mounted as far left of center as practicable", note:null, cite:"TC 547.371(a)(2)"},
+    {name:"Farm tractor / equipment — rear reflectors", sub:null, dist:"100–600 (range)", applies:"at least 2, in front of lawful lower beams", note:null, cite:"TC 547.371(a)(3)"},
+    {name:"Farm tractor / equipment — hazard lamps", sub:null, dist:"at least 1,000", applies:"front and rear, normal sunlight", note:null, cite:"TC 547.371(a)(4)"},
+    {name:"Slow-moving-vehicle emblem", sub:null, dist:"at least 500", applies:"reflective triangle, mounted base-down on the rear", note:"Not required on construction/maintenance vehicles in a marked work area, or on a towed implement if the towing vehicle's own emblem isn't obstructed.", cite:"TC 547.703(a)–(c)"},
+    {name:"Parked-vehicle lamp", sub:null, dist:"1,000 front (white/amber) and 1,000 rear (red)", applies:"any vehicle other than a moped or a ≤250cc motorcycle", note:null, cite:"TC 547.383(a)"},
+    {name:"School bus alternating signal lamps", sub:null, dist:"500 (normal sunlight)", applies:"4 lamps: 2 front, 2 rear, alternately flashing red", note:null, cite:"TC 547.701(a)(2)(C)"},
+    {name:"Motorcycle — high (upper) beam", sub:null, dist:"at least 300", applies:"motorcycle over 250cc piston displacement", note:null, cite:"TC 547.801(b)(1)"},
+    {name:"Motorcycle — low (lower) beam", sub:null, dist:"at least 150", applies:"motorcycle over 250cc piston displacement", note:null, cite:"TC 547.801(b)(2)(A)"},
+    {name:"Moped / motorcycle ≤250cc — single-beam", sub:"operated under 25 mph", dist:"at least 100", applies:"alternative to multi-beam equipment", note:null, cite:"TC 547.801(c)(2)(A)(i)"},
+    {name:"Moped / motorcycle ≤250cc — single-beam", sub:"operated 25–34 mph", dist:"at least 200", applies:"alternative to multi-beam equipment", note:null, cite:"TC 547.801(c)(2)(A)(ii)"},
+    {name:"Moped / motorcycle ≤250cc — single-beam", sub:"operated 35 mph or more", dist:"at least 300", applies:"alternative to multi-beam equipment", note:null, cite:"TC 547.801(c)(2)(A)(iii)"},
+    {name:"Motorcycle / moped taillamp", sub:null, dist:"not separately stated", applies:"motorcycle or moped", note:"§547.801(a)(2) sets only a 20–72 in. mounting height for the motorcycle/moped taillamp — it does not cross-reference the 1,000 ft. figure in §547.322(d) the way it does for the plate lamp, stoplamp, and reflector on the same vehicle.", cite:"TC 547.801(a)(2)"}
+  ];
+  renderTable('#spec-table-motor tbody', motorDetail);
+
+  // ===================== BICYCLES =====================
+  var bicycleRows = [
+    {label:"Front lamp", sub:"white light", type:'min', val:500},
+    {label:"Rear reflector", sub:"in front of upper beams", type:'range', val:[50,300]},
+    {label:"Rear lamp (alternative)", sub:"red light, in lieu of reflector", type:'min', val:500}
+  ];
+  renderChart('chart-bicycle', bicycleRows, 620, 50);
+
+  var bicycleDetail = [
+    {name:"Front lamp", sub:"white light", dist:"at least 500", applies:"required at nighttime", note:null, cite:"TC 551.104(b)(1)"},
+    {name:"Rear reflector", sub:"DPS-approved type", dist:"50–300 (range)", applies:"visible when directly in front of lawful upper beams of a motor vehicle's headlamps", note:null, cite:"TC 551.104(b)(2)(A)"},
+    {name:"Rear lamp", sub:"alternative to rear reflector", dist:"500 (red light)", applies:"may be used instead of the rear reflector", note:null, cite:"TC 551.104(b)(2)(B)"}
+  ];
+  renderTable('#spec-table-bicycle tbody', bicycleDetail);
+
+  // ===================== TRAILERS =====================
+  var trailerRows = [
+    {label:"Taillamp", sub:"trailer / semitrailer / pole trailer", type:'min', val:1000},
+    {label:"Stoplamp", sub:"trailer / semitrailer / pole trailer", type:'min', val:300},
+    {label:"Turn signal lamp", sub:"≥80 in. wide", type:'min', val:500},
+    {label:"Turn signal lamp", sub:"<80 in. wide", type:'min', val:300},
+    {label:"Reflector — general/rear", sub:null, type:'range', val:[100,600]},
+    {label:"Clearance / ID / side-marker lamp", sub:"large trailer ≥80 in. wide or ≥30 ft. long", type:'range', val:[50,500], flag:true},
+    {label:"Clearance / ID / side-marker reflector", sub:"large trailer", type:'range', val:[100,600], flag:true},
+    {label:"Hazard lamps", sub:"pole trailer ≥30 ft. long or ≥80 in. wide", type:'min', val:500, flag:true}
+  ];
+  renderChart('chart-trailer', trailerRows, 1150, 100);
+
+  var trailerDetail = [
+    {name:"Taillamp", sub:null, dist:"1,000", applies:"trailer, semitrailer, or pole trailer (same rule as motor vehicles)", note:null, cite:"TC 547.322(a),(d)"},
+    {name:"Stoplamp", sub:null, dist:"at least 300", applies:"trailer, semitrailer, or pole trailer", note:null, cite:"TC 547.323(a),(d)"},
+    {name:"Turn signal lamp", sub:"≥80 in. wide", dist:"at least 500", applies:"trailer, semitrailer, or pole trailer", note:null, cite:"TC 547.324(a),(e)(1)"},
+    {name:"Turn signal lamp", sub:"<80 in. wide", dist:"at least 300", applies:"trailer, semitrailer, or pole trailer", note:null, cite:"TC 547.324(a),(e)(2)"},
+    {name:"Reflector — general/rear", sub:null, dist:"100–600 (range)", applies:"at least 2, red, in front of lawful lower beams", note:null, cite:"TC 547.325(a)–(b)"},
+    {name:"Clearance / ID / side-marker lamp", sub:"large trailer ≥80 in. wide or ≥30 ft. long", dist:"50–500 (range)", applies:"trailer/semitrailer meeting the Subch. F size threshold", note:"Only applies once the trailer meets the size threshold in §547.352(3) — an ordinary small utility trailer does not need these.", cite:"TC 547.352(3), 547.355(a)"},
+    {name:"Clearance / ID / side-marker reflector", sub:"large trailer", dist:"100–600 (range)", applies:"same Subch. F trailers, at night", note:"Same size-threshold condition as the lamp above.", cite:"TC 547.355(b)"},
+    {name:"Hazard lamps", sub:"pole trailer", dist:"at least 500", applies:"pole trailer ≥30 ft. long or ≥80 in. wide", note:"Only pole trailers meeting this size threshold need hazard lamps — not every pole trailer.", cite:"TC 547.352(3)(D), 547.331(2)"},
+    {name:"Projecting-load rear lamps", sub:"load extends ≥4 ft. beyond the bed/body", dist:"at least 500", applies:"2 red lamps on the extreme end of the load", note:null, cite:"TC 547.382(a)(1)"},
+    {name:"Projecting-load reflectors", sub:null, dist:"100–600 (range)", applies:"2 red reflectors marking maximum width, in front of lawful lower beams", note:null, cite:"TC 547.382(a)(2)"},
+    {name:"Projecting-load side (overhang) lamps", sub:null, dist:"at least 500 (from the side)", applies:"2 red lamps, one on each side, marking maximum overhang", note:null, cite:"TC 547.382(a)(3)"},
+    {name:"Towed farm equipment — rear reflectors", sub:"towed object extends >4 ft. behind the tractor", dist:"100–600 (range)", applies:"at least 2 red reflectors, in front of lawful lower beams", note:null, cite:"TC 547.372(a)(1)"},
+    {name:"Towed farm equipment — front amber reflector", sub:"towed object extends >4 ft. left of tractor centerline", dist:"100–600 (range)", applies:"1 amber reflector, in front of lawful lower beams", note:null, cite:"TC 547.372(b)(1)"}
+  ];
+  renderTable('#spec-table-trailer tbody', trailerDetail);
+})();
+</script>
+</body>
+</html>
