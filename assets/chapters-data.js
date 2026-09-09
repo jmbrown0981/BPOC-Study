@@ -1657,4 +1657,4 @@ const chapters = [
     ]
   }
 ];
-for(let i=11;i<=43;i++){ if([13,14,15,18,22,24,25,28,30,37].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
+for(let i=11;i<=43;i++){ if([13,14,22,24,25,28,30,37].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
