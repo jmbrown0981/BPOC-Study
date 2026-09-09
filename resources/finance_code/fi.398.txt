@@ -1,0 +1,132 @@
+FINANCE CODE
+TITLE 5. PROTECTION OF CONSUMERS OF FINANCIAL SERVICES
+CHAPTER 398.  COMMERCIAL SALES-BASED FINANCING
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 398.001.  DEFINITIONS.  In this chapter:
+            (1)  "Commercial sales-based financing" or "commercial sales-based financing transaction" means an extension of sales-based financing to a recipient by a provider, the proceeds of which the recipient does not intend to use primarily for personal, family, or household purposes.
+            (2)  "Commercial sales-based financing broker" means a person who, for compensation or the expectation of compensation, obtains commercial sales-based financing for a recipient or offers to obtain commercial sales-based financing for a recipient from a provider.
+            (3)  "Disbursement amount" means the amounts paid to the recipient or on the recipient's behalf.  The term does not include any finance charges that are deducted or withheld at disbursement.
+            (4)  "Finance charge" means the cost of commercial sales-based financing expressed as a dollar amount.  The term includes a charge payable, directly or indirectly, by the recipient that is imposed, directly or indirectly, by the provider of the financing as an incident to, or a condition of, the extension of financing.
+            (5)  "Person" means an individual, corporation, partnership, limited liability company, joint venture, association, joint stock company, trust, sole proprietorship or other unincorporated organization, or other similar entity.
+            (6)  "Provider" means a person who provides or will provide commercial sales-based financing to a recipient or who extends a specific offer of commercial sales-based financing to a person applying for that financing or the person's authorized representative.
+            (7)  "Recipient" means a person, or the authorized representative of a person, who applies for commercial sales-based financing and is made a specific offer of commercial sales-based financing by a provider.  The term does not include a person acting as a commercial sales-based financing broker.
+            (8)  "Sales-based financing" means a transaction that is repaid by the recipient to the provider of the financing:
+                  (A)  as a percentage of sales or revenue, in which the payment amount may increase or decrease according to the volume of sales made or revenue received by the recipient; or
+                  (B)  according to a fixed payment mechanism that provides for a reconciliation process that adjusts the payment to an amount that is a percentage of sales or revenue.
+            (9)  "Specific offer" means the specific terms of commercial sales-based financing.  The term includes a price or amount quoted to a recipient by a person providing the financing based on information obtained from or about the recipient that, if accepted by the recipient, would be binding on the provider, subject to specific requirements in the financing terms.
+            (10)  "Total repayment amount" means the sum of the disbursement amount and finance charge.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.002.  APPLICABILITY OF CHAPTER.  This chapter applies to a provider or a commercial sales-based financing broker who offers, obtains, or provides commercial sales-based financing services over the Internet to or for a recipient of this state, regardless of whether the provider or broker maintains a physical presence in this state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.003.  EXEMPTIONS.  This chapter does not apply to a provider or broker that is:
+            (1)  a bank, out-of-state bank, bank holding company, credit union, federal credit union, out-of-state credit union, or any subsidiary or affiliate of those financial institutions;
+            (2)  a person acting in the capacity of a technology services provider to an entity exempt under this section as part of the exempt entity's commercial sales-based financing program if the person has no interest, arrangement, or agreement to purchase any interest in the commercial sales-based financing extended in connection with the program;
+            (3)  a lender regulated under the Farm Credit Act of 1971 (12 U.S.C. Section 2001 et seq.); or
+            (4)  a person who extends or brokers:
+                  (A)  a commercial sales-based financing transaction secured by real property;
+                  (B)  a lease, as defined by Section 2A.103, Business & Commerce Code;
+                  (C)  a commercial sales-based financing transaction entered into under a commercial sales-based financing agreement or commercial open-end credit plan of $50,000 or more in which the recipient is:
+                        (i)  a dealer, as defined by Section 503.001, Transportation Code; or
+                        (ii)  a motor vehicle rental company or an affiliate of a motor vehicle rental company; or
+                  (D)  a commercial sales-based financing transaction in connection with the sale of products or services that:
+                        (i)  the person manufactures, licenses, or distributes; or
+                        (ii)  a parent company, subsidiary, or affiliate of the person described by Subparagraph (i) manufactures, licenses, or distributes.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.004.  APPLICATION OF OTHER LAW.  A sales-based financing transaction is not a form of an account purchase transaction for purposes of Section 306.103, regardless of the principal amount of the advance.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.005.  ADMINISTRATION OF CHAPTER; RULEMAKING.  (a)  The Office of Consumer Credit Commissioner shall administer, implement, and enforce this chapter.
+      (b)  Except as provided by Subsection (d), the Office of Consumer Credit Commissioner may:
+            (1)  bring enforcement actions for:
+                  (A)  violations of rules adopted under Subsection (c);
+                  (B)  failures to make disclosures required by Section 398.051; or
+                  (C)  failures to register as required by Section 398.053;
+            (2)  terminate or suspend registrations; and
+            (3)  assess civil penalties.
+      (c)  The Finance Commission of Texas shall adopt rules applicable to providers and commercial sales-based financing brokers that identify unlawful, unfair, deceptive, or abusive acts or practices related to a transaction subject to this chapter.  Rules adopted under this subsection must identify and prohibit specific acts or practices by providers or brokers that:
+            (1)  the commission considers unfair because:
+                  (A)  the act or practice causes or is likely to cause substantial injury to a recipient that the recipient cannot reasonably avoid; and
+                  (B)  the injury outweighs the benefits to recipients or to market competition;
+            (2)  are material acts or practices that will or likely will mislead a recipient who, given the circumstances, has a reasonable interpretation of the act or practice;
+            (3)  materially interfere with a recipient's ability to understand a term or condition of a commercial sales-based financing transaction; or
+            (4)  take unreasonable advantage of:
+                  (A)  a recipient's lack of understanding of the material risks, costs, or conditions of the commercial sales-based financing transaction; or
+                  (B)  a recipient's inability to protect the recipient's interest in selecting or using a commercial sales-based financing product.
+      (d)  The Finance Commission of Texas may not adopt a maximum annual percentage rate, finance charge, or fee for commercial sales-based financing transactions.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER B.  REGULATION AND DISCLOSURE REQUIREMENTS
+
+      Sec. 398.051.  DISCLOSURES.  (a)  If a provider extends a specific offer of commercial sales-based financing of less than $1 million to a recipient in this state, the provider shall disclose to the recipient:
+            (1)  the total amount of the financing;
+            (2)  the disbursement amount;
+            (3)  the finance charge;
+            (4)  the total repayment amount;
+            (5)  the estimated period for the periodic payments to equal the total repayment amount under the terms of the financing;
+            (6)  the payment amounts as follows:
+                  (A)  if the payment amounts are fixed, the amounts and the frequency of payments; or
+                  (B)  if the payment amounts are variable:
+                        (i)  a payment schedule or a description of the method used to calculate the amounts and frequency of payments; and
+                        (ii)  the amount of the average projected payments per month;
+            (7)  a description of all other potential fees and charges not included in the finance charge, including draw fees, late payment fees, and returned payment fees;
+            (8)  any finance charge the recipient will be required to pay if the recipient pays off or refinances the commercial sales-based financing before the transaction is scheduled to be repaid in full;
+            (9)  any additional fees, not included in the finance charge, the recipient will be required to pay if the recipient pays off or refinances the commercial sales-based financing before the transaction is scheduled to be repaid in full;
+            (10)  a description of collateral requirements or security interests, if applicable; and
+            (11)  a statement outlining whether the provider will pay compensation directly to a commercial sales-based financing broker in connection with the specific offer of sales-based financing and, if applicable, the amount of the compensation.
+      (b)  If, as a condition of obtaining commercial sales-based financing, the provider requires the recipient to pay off the outstanding balance of an existing commercial sales-based financing, the provider shall disclose to the recipient:
+            (1)  the amount of the new commercial sales-based financing used to pay off the portion of the outstanding balance of the existing commercial sales-based financing that consists of:
+                  (A)  prepayment charges required to be paid; and
+                  (B)  any unpaid interest expense or finance charges that were not forgiven at the time of renewal of the transaction; and
+            (2)  if the disbursement amount will be reduced to pay down any unpaid portion of the outstanding balance, the actual dollar amount by which the disbursement amount will be reduced.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.052.  SIGNATURE.  The provider shall obtain the recipient's signature on the disclosures required by Section 398.051 before finalizing the application for the commercial sales-based financing transaction.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.053.  PROVIDER AND BROKER REGISTRATION.  (a) A person may not engage in business as a provider or a commercial sales-based financing broker for compensation in this state unless, before conducting business, the person registers with the Office of Consumer Credit Commissioner.  The registration is effective on receipt by the commissioner of a completed registration form as provided by Subsection (d) and the required registration fee and remains effective until renewal or termination by the Office of Consumer Credit Commissioner.
+      (b)  On or before January 31 of each year after filing an initial registration, a provider or broker shall file a renewal registration form with the required renewal registration fee.
+      (c)  The provider or broker shall pay a registration fee on filing an initial registration and a renewal registration fee on filing a renewal registration.
+      (d)  The registration or renewal registration form must include:
+            (1)  the name of the provider or broker;
+            (2)  the name under which the provider or broker transacts business, if different from the name of the provider or broker;
+            (3)  the address of the provider's or broker's principal office, which may be outside this state;
+            (4)  the name and address in this state of a designated agent for service of process; and
+            (5)  any judgment, memorandum of understanding, cease and desist order, or conviction against the provider or broker, or any person that otherwise controls the provider or broker or a director or officer of the provider or broker, related to a violation of law, act of fraud, breach of trust, or money laundering.
+      (e)  The Office of Consumer Credit Commissioner shall:
+            (1)  by rule set the registration fee and registration renewal fee in amounts sufficient to cover the registration costs; and
+            (2)  adopt a form to be used for a registration or renewal registration under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.054.  UPDATE OF REGISTRATION STATEMENT.  A provider or commercial sales-based financing broker shall update information contained in the registration statement not later than the 90th day after the date on which the information changes.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.055.  UNENFORCEABILITY OF CERTAIN CONTRACT PROVISIONS.  A commercial sales-based financing contract that contains a confession of judgment provision or any similar provision is void and unenforceable.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.056.  CERTAIN AUTOMATIC DEBITS PROHIBITED.  A provider or commercial sales-based financing broker may not establish a mechanism for automatically debiting a recipient's deposit account unless the provider or broker holds a validly perfected security interest in the recipient's account under Chapter 9, Business & Commerce Code, with a first priority against the claims of all other persons.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER C.  ENFORCEMENT
+
+      Sec. 398.101.  CIVIL PENALTY.  A person who violates this chapter is subject to a civil penalty of $10,000 for each violation.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+      Sec. 398.102.  PRIVATE RIGHT OF ACTION NOT AUTHORIZED.  This chapter does not create a private right of action against any person based on compliance or noncompliance with this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 723 (H.B. 700), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
