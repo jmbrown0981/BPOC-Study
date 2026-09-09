@@ -67,30 +67,6 @@
     max-width:60ch;
     line-height:1.55;
   }
-  .progress-wrap{
-    margin-top:22px;
-    max-width:420px;
-  }
-  .progress-label{
-    display:flex;
-    justify-content:space-between;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--brass-light);
-    margin-bottom:6px;
-  }
-  .progress-track{
-    height:8px;
-    border-radius:999px;
-    background:rgba(255,255,255,0.12);
-    overflow:hidden;
-  }
-  .progress-fill{
-    height:100%;
-    background:var(--brass);
-    width:25.6%;
-  }
-
   main{max-width:840px; margin:0 auto; padding:22px 16px 60px;}
 
   .section-block{
@@ -235,11 +211,6 @@
   <h1>BPOC Study Hub</h1>
   <p class="sub">Shared chapter references and supplemental code materials for the Basic Peace Officer Course and TCOLE exam prep. Built by the class, for the class — not an official TCOLE or academy publication.</p>
 
-  <div class="progress-wrap">
-    <div class="progress-label"><span>CHAPTERS COVERED</span><span>11 / 43</span></div>
-    <div class="progress-track"><div class="progress-fill"></div></div>
-  </div>
-
   <div style="display:flex; gap:10px; flex-wrap:wrap;">
     <a href="study.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:var(--brass);color:#221F19;font-weight:600;font-size:13.5px;padding:10px 16px;border-radius:8px;text-decoration:none;font-family:'IBM Plex Sans',sans-serif;">Open Study Reference &rarr;</a>
     <a href="flashcards.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:transparent;border:1px solid var(--brass-light);color:var(--brass-light);font-weight:600;font-size:13.5px;padding:10px 16px;border-radius:8px;text-decoration:none;font-family:'IBM Plex Sans',sans-serif;">Flashcards &rarr;</a>
@@ -342,7 +313,7 @@
 
 <script>
   const total = 43;
-  const built = [1,2,3,4,5,6,7,8,9,10,13,14,22,24,25,28,30,37]; // chapters with a live reference page in study.html
+  const built = [1,2,3,4,5,6,7,8,9,10,13,14,15,18,22,24,25,28,30,37]; // chapters with a live reference page in study.html
   const inProgress = 10; // chapters covered in class so far
   const grid = document.getElementById('chapter-grid');
   for(let i=1;i<=total;i++){
