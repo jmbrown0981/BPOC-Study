@@ -219,10 +219,10 @@ let chipNavOpen = false;
 let examPool = [];
 let examBreakdown = [];
 let examConfig = null;         // raw config loaded from exam-weights.json, cached after first fetch
-let examParsedByBank = null;   // cached parsed questions per bank, so weight tweaks don't re-fetch everything
+let examParsedByBank = null;   // cached parsed questions per bank, so percentage tweaks don't re-fetch everything
 let weightPanelOpen = false;
 
-const WEIGHT_OVERRIDES_KEY = 'altquiz_weight_overrides_v1';
+const PERCENT_OVERRIDES_KEY = 'altquiz_percent_overrides_v1';
 const TOTAL_OVERRIDE_KEY = 'altquiz_total_override_v1';
 
 /* ---------- markdown bank parser ---------- */
@@ -379,28 +379,44 @@ function allocateCounts(bankCounts, weights, defaultWeight, target){
   return pool;
 }
 
-/* ---------- full exam: local weight overrides (per-browser, no repo commit needed) ---------- */
-// Lets a visitor tune exam-weights.json's weights from the Full Practice Exam screen itself.
-// Overrides live only in this browser's localStorage and are merged on top of the checked-in
-// exam-weights.json at read time -- the file on disk/GitHub is never touched.
+/* ---------- full exam: local percentage overrides (per-browser, no repo commit needed) ---------- */
+// Lets a visitor tune exam-weights.json's percentages from the Full Practice Exam screen
+// itself. Overrides live only in this browser's localStorage and are merged on top of the
+// checked-in exam-weights.json at read time -- the file on disk/GitHub is never touched.
+//
+// Percentages are "true" percentages: every active bank's on-screen share always sums to
+// exactly 100. Editing one bank's percentage *pins* it at that exact value (clamped so the
+// sum of all pinned banks never exceeds 100); every unpinned bank's percentage is computed
+// fresh -- never stored -- by splitting whatever's left (100 minus the pinned sum)
+// proportionally to that bank's nominal share from exam-weights.json. That's what lets a
+// newly-added bank (or one with no explicit file entry) fall right into the mix at its
+// defaultPercent ratio without the file needing to be hand-balanced to sum to 100.
 
-function loadOverrides(){
+function loadPercentOverrides(){
   try{
-    const raw = JSON.parse(localStorage.getItem(WEIGHT_OVERRIDES_KEY) || '{}');
+    const raw = JSON.parse(localStorage.getItem(PERCENT_OVERRIDES_KEY) || '{}');
     return (raw && typeof raw === 'object') ? raw : {};
   }catch(err){ return {}; }
 }
-function saveOverrides(o){
-  localStorage.setItem(WEIGHT_OVERRIDES_KEY, JSON.stringify(o));
+function savePercentOverrides(o){
+  localStorage.setItem(PERCENT_OVERRIDES_KEY, JSON.stringify(o));
 }
-function setWeightOverride(key, value){
-  const o = loadOverrides();
+// Pins `key` at an exact percentage. Clamped to [0, 100 - (sum of the OTHER currently
+// pinned banks)] so pinned percentages alone can never push the total past 100 -- the
+// unpinned banks always have at least a nominal share of the remainder to absorb.
+// Passing null/undefined/NaN un-pins the bank (it goes back to floating with the rest).
+function setPercentOverride(key, value, activeKeys){
+  const o = loadPercentOverrides();
   if(value === null || value === undefined || Number.isNaN(value)){
     delete o[key];
   }else{
-    o[key] = Math.max(0, value);
+    const activeSet = new Set(activeKeys || []);
+    let otherPinnedSum = 0;
+    for(const k in o){ if(k !== key && activeSet.has(k)) otherPinnedSum += o[k]; }
+    const maxAllowed = Math.max(0, 100 - otherPinnedSum);
+    o[key] = Math.min(Math.max(0, value), maxAllowed);
   }
-  saveOverrides(o);
+  savePercentOverrides(o);
 }
 function loadTotalOverride(){
   const v = localStorage.getItem(TOTAL_OVERRIDE_KEY);
@@ -416,21 +432,67 @@ function setTotalOverride(value){
   }
 }
 function clearAllOverrides(){
-  localStorage.removeItem(WEIGHT_OVERRIDES_KEY);
+  localStorage.removeItem(PERCENT_OVERRIDES_KEY);
   localStorage.removeItem(TOTAL_OVERRIDE_KEY);
 }
 function hasCustomWeights(){
-  return Object.keys(loadOverrides()).length > 0 || loadTotalOverride() !== null;
+  return Object.keys(loadPercentOverrides()).length > 0 || loadTotalOverride() !== null;
 }
-// Merges the checked-in exam-weights.json with this browser's local overrides.
+function formatPct(n){
+  const r = Math.round((n + Number.EPSILON) * 10) / 10;
+  return Number.isInteger(r) ? String(r) : r.toFixed(1);
+}
+// Turns each active bank's nominal (file) share into a percentage that always sums to
+// exactly 100 across `activeKeys` -- see the comment block above for the pin/rescale rule.
+function computeDisplayPercentages(nominalByKey, overrides, activeKeys){
+  const pinned = {};
+  let pinnedSum = 0;
+  for(const key of activeKeys){
+    if(overrides[key] !== undefined){
+      const v = Math.max(0, overrides[key]);
+      pinned[key] = v;
+      pinnedSum += v;
+    }
+  }
+  // Defensive only (setPercentOverride already keeps this from happening in normal use):
+  // if pinned values somehow sum past 100, scale them down so they still fit.
+  if(pinnedSum > 100){
+    const scale = 100 / pinnedSum;
+    for(const key in pinned) pinned[key] *= scale;
+    pinnedSum = 100;
+  }
+  const remaining = Math.max(0, 100 - pinnedSum);
+  const unpinnedKeys = activeKeys.filter(k => pinned[k] === undefined);
+  const nominalSum = unpinnedKeys.reduce((s,k) => s + Math.max(0, nominalByKey[k] || 0), 0);
+  const out = {};
+  for(const key of activeKeys){
+    if(pinned[key] !== undefined){
+      out[key] = pinned[key];
+    }else if(nominalSum > 0){
+      out[key] = remaining * (Math.max(0, nominalByKey[key] || 0) / nominalSum);
+    }else{
+      out[key] = unpinnedKeys.length > 0 ? remaining / unpinnedKeys.length : 0;
+    }
+  }
+  return out;
+}
+// Merges the checked-in exam-weights.json with this browser's local overrides, and
+// normalizes the result into percentages that sum to 100 across the currently-active banks.
 function effectiveConfig(){
-  const base = examConfig || {totalQuestions: 250, defaultWeight: 1, weights: {}};
-  const overrides = loadOverrides();
+  const base = examConfig || {totalQuestions: 250, defaultPercent: 100, percentages: {}};
+  const overrides = loadPercentOverrides();
   const totalOverride = loadTotalOverride();
+  const activeKeys = (examParsedByBank || []).map(b => b.key);
+  const nominalByKey = {};
+  activeKeys.forEach(key => {
+    nominalByKey[key] = (base.percentages && base.percentages[key] !== undefined) ? base.percentages[key] : (base.defaultPercent ?? 100);
+  });
+  const percentages = computeDisplayPercentages(nominalByKey, overrides, activeKeys);
   return {
     totalQuestions: totalOverride !== null ? totalOverride : (base.totalQuestions ?? 250),
-    defaultWeight: base.defaultWeight ?? 1,
-    weights: Object.assign({}, base.weights || {}, overrides),
+    defaultPercent: base.defaultPercent ?? 100,
+    percentages,
+    nominalByKey,
     overrides,
     totalOverride,
     hasOverrides: Object.keys(overrides).length > 0 || totalOverride !== null
@@ -452,7 +514,7 @@ async function startFullExam(){
 
   main.innerHTML = `<div class="setup-box"><h2>Assembling Full Practice Exam&hellip;</h2><p>Fetching ${ALT_QUIZ_CHAPTERS.length} question banks and the weight config.</p></div>`;
 
-  examConfig = {totalQuestions: 250, defaultWeight: 1, weights: {}};
+  examConfig = {totalQuestions: 250, defaultPercent: 100, percentages: {}};
   try{
     const res = await fetch(EXAM_WEIGHTS_FILE, {cache:'no-store'});
     if(res.ok) examConfig = Object.assign(examConfig, await res.json());
@@ -479,12 +541,12 @@ async function startFullExam(){
 }
 
 // Rebuilds examPool/examBreakdown from the already-fetched banks using the current
-// effective (file + local-override) weights. Cheap -- no network calls -- so it's safe
-// to call on every weight-panel edit.
+// effective (file + local-override) percentages. Cheap -- no network calls -- so it's
+// safe to call on every percentage-panel edit.
 function recomputeExamPool(){
   const config = effectiveConfig();
   const bankCounts = examParsedByBank.map(b => ({key: b.key, count: b.questions.length}));
-  const allocation = allocateCounts(bankCounts, config.weights || {}, config.defaultWeight ?? 1, config.totalQuestions ?? 250);
+  const allocation = allocateCounts(bankCounts, config.percentages || {}, config.defaultPercent ?? 100, config.totalQuestions ?? 250);
 
   examPool = [];
   examBreakdown = [];
@@ -495,7 +557,7 @@ function recomputeExamPool(){
       const picked = shuffle(b.questions).slice(0, n);
       examPool = examPool.concat(picked);
     }
-    examBreakdown.push({key: b.key, title: b.title, fullTitle: b.fullTitle, weight: a ? a.weight : 0, available: b.questions.length, pulled: n});
+    examBreakdown.push({key: b.key, title: b.title, fullTitle: b.fullTitle, percent: a ? a.weight : 0, available: b.questions.length, pulled: n});
   });
   examPool = shuffle(examPool);
 }
@@ -503,7 +565,7 @@ function recomputeExamPool(){
 function renderWeightPanelHtml(config){
   const fileDefaultTotal = (examConfig && examConfig.totalQuestions) || 250;
   const rows = examParsedByBank.map(b => {
-    const w = config.weights[b.key] !== undefined ? config.weights[b.key] : config.defaultWeight;
+    const pct = config.percentages[b.key] !== undefined ? config.percentages[b.key] : 0;
     const isOverridden = config.overrides[b.key] !== undefined;
     return `
       <div class="weight-row">
@@ -512,13 +574,13 @@ function renderWeightPanelHtml(config){
           <div class="wr-meta">${b.questions.length} available</div>
         </div>
         ${isOverridden ? `<button class="wr-reset" data-reset-key="${b.key}" type="button">reset</button>` : ''}
-        <input type="number" min="0" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${w}">
+        <input type="number" min="0" max="100" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${formatPct(pct)}">
       </div>`;
   }).join('');
   return `
     <div class="weight-panel">
-      <h3>Customize exam weights</h3>
-      <p class="wp-note">Tune how heavily each bank gets pulled into the Full Practice Exam. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Set a bank to weight 0 to exclude it entirely. Clear your browser data or hit "Reset all" below to go back to the file's defaults.</p>
+      <h3>Customize exam percentages</h3>
+      <p class="wp-note">Tune what share of the Full Practice Exam each bank makes up — these always add up to 100%. Editing a bank's percentage <strong>pins</strong> it at that exact value; every other (unpinned) bank's percentage automatically rescales to split whatever's left, in proportion to its normal share, so the total stays at 100%. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Pin a bank at 0% to exclude it entirely. Clear your browser data or hit "Reset all" below to go back to the file's defaults.</p>
       <div class="weight-row">
         <div class="wr-info">
           <div class="wr-title">Target total questions</div>
@@ -537,11 +599,12 @@ function renderWeightPanelHtml(config){
 }
 
 function wireWeightPanel(){
+  const activeKeys = examParsedByBank.map(b => b.key);
   document.querySelectorAll('[data-weight-key]').forEach(input => {
     input.onchange = () => {
       const key = input.getAttribute('data-weight-key');
       const num = input.value.trim() === '' ? NaN : Number(input.value);
-      setWeightOverride(key, Number.isFinite(num) ? num : null);
+      setPercentOverride(key, Number.isFinite(num) ? num : null, activeKeys);
       recomputeExamPool();
       renderExamSetup();
     };
@@ -557,7 +620,7 @@ function wireWeightPanel(){
   }
   document.querySelectorAll('[data-reset-key]').forEach(btn => {
     btn.onclick = () => {
-      setWeightOverride(btn.getAttribute('data-reset-key'), null);
+      setPercentOverride(btn.getAttribute('data-reset-key'), null, activeKeys);
       recomputeExamPool();
       renderExamSetup();
     };
@@ -581,7 +644,7 @@ function renderExamSetup(){
   main.innerHTML = `
     <div class="setup-box">
       <h2>Full Practice Exam</h2>
-      <p>${examPool.length} question${examPool.length === 1 ? '' : 's'} pulled from ${examBreakdown.filter(b => b.pulled > 0).length} of ${examBreakdown.length} banks${shortfall ? ` — fewer than the configured ${target}, since that's all that's currently available at these weights` : ''}. ${config.hasOverrides ? `Using your <strong>locally customized</strong> weights (saved in this browser).` : `Weights come from <code>${EXAM_WEIGHTS_FILE}</code>.`}</p>
+      <p>${examPool.length} question${examPool.length === 1 ? '' : 's'} pulled from ${examBreakdown.filter(b => b.pulled > 0).length} of ${examBreakdown.length} banks${shortfall ? ` — fewer than the configured ${target}, since that's all that's currently available at these percentages` : ''}. ${config.hasOverrides ? `Using your <strong>locally customized</strong> percentages (saved in this browser).` : `Percentages come from <code>${EXAM_WEIGHTS_FILE}</code>.`}</p>
       <div class="mode-row">
         <button class="mode-btn" id="practiceBtn">
           <div class="mode-name">Practice Mode</div>
@@ -596,10 +659,10 @@ function renderExamSetup(){
     <div class="q-card" style="margin-top:14px;">
       <div class="q-eyebrow">
         <span>Bank breakdown</span>
-        <button class="wp-toggle-btn" id="weightToggleBtn" type="button">${weightPanelOpen ? 'Hide weight controls' : 'Customize weights'}</button>
+        <button class="wp-toggle-btn" id="weightToggleBtn" type="button">${weightPanelOpen ? 'Hide percentage controls' : 'Customize percentages'}</button>
       </div>
       <div style="font-size:12.5px; line-height:1.9; color:var(--ink-soft);">
-        ${examBreakdown.map(b => `<div style="display:flex; justify-content:space-between; gap:10px;"><span>${escapeHtml(b.fullTitle)}${b.weight !== 1 ? ` <span class="fn-source" style="display:inline;">(weight ${b.weight})</span>` : ''}</span><span style="font-family:'IBM Plex Mono',monospace; white-space:nowrap;">${b.pulled} / ${b.available}</span></div>`).join('')}
+        ${examBreakdown.map(b => `<div style="display:flex; justify-content:space-between; gap:10px;"><span>${escapeHtml(b.fullTitle)} <span class="fn-source" style="display:inline;">(${formatPct(b.percent)}%)</span></span><span style="font-family:'IBM Plex Mono',monospace; white-space:nowrap;">${b.pulled} / ${b.available}</span></div>`).join('')}
       </div>
     </div>
     ${weightPanelOpen ? renderWeightPanelHtml(config) : ''}
@@ -618,7 +681,7 @@ function renderChapterChips(){
   const examBtn = document.createElement('button');
   examBtn.className = 'chip exam-chip' + (examMode ? ' active' : '');
   examBtn.textContent = '★ Full Exam' + (hasCustomWeights() ? ' •' : '');
-  examBtn.title = 'Randomly assembled practice exam pulling from every bank' + (hasCustomWeights() ? ' — using your locally customized weights' : '');
+  examBtn.title = 'Randomly assembled practice exam pulling from every bank' + (hasCustomWeights() ? ' — using your locally customized percentages' : '');
   examBtn.onclick = () => { chipNavOpen = false; startFullExam(); };
   wrap.appendChild(examBtn);
   ALT_QUIZ_CHAPTERS.forEach(ch => {

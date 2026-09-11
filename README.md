@@ -33,6 +33,9 @@ BPOC-Study/
 │   ├── bank/                    The 24 live question bank files (one .md per BPOC chapter or topic, e.g.
 │   │                              06-racial-profiling.md, case-law.md)
 │   ├── drafts/                  Work-in-progress bank drafts not yet wired into the site
+│   ├── 15-penalty-groups-chart.html  Ch.15 reference tool — what's in Penalty Groups 1, 1-A, 1-B, 2, 2-A, 3, and 4
+│   │                              by common drug name, plus color-coded value ladders for manufacture/delivery vs.
+│   │                              possession classification, marijuana's separate ladder, and drug-free zones
 │   ├── 22-codes-index.html      Ch.22 mindmap tool — every code section the BPOC Ch.22 material cites, with a
 │   │                              live link to that section on statutes.capitol.texas.gov
 │   ├── 22-definitions-map.html  Ch.22 mindmap tool — defined terms from the traffic-code material, grouped by

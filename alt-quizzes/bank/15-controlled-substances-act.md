@@ -1,1165 +1,880 @@
 # Chapter 15: Health and Safety Code — Controlled Substances Act — Question Bank (LO 15.1–15.17)
 
-*Covers all of LO 15.1 through 15.17 — HSC 481.002 definitions, the six major categories of controlled substances, penalty-group/offense citations under HSC Chapters 444, 481, and 482, punishment enhancements, seizure and destruction of controlled substance and dangerous drug property, dangerous drug terms and violations (HSC Chapter 483), the Texas Compassionate-Use Program (Occupations Code Chapter 169), marijuana/hemp (HSC 481.002(26), Agriculture Code Chapter 121), commonly abused drugs and paraphernalia, identifying suspected substances, drug interdiction and load-car characteristics, probable cause factors and interview techniques, common places of concealment, and uncorroborated-testimony rules (HSC 483.072, CCP 38.14, 38.141). Fill-in-the-blank and multiple choice questions are paired so each term or citation is tested more than once.*
+*Covers LO 15.1 through 15.17. LO 15.1-15.4 are built around field-usable knowledge rather than citation recall: what a term actually lets an officer do, which common drugs fall in which Penalty Group, and how weight/quantity drives an offense's classification for manufacture-or-delivery versus simple possession, across Penalty Groups 1, 1-A, 1-B, 2, 2-A, 3, and 4, marijuana's separate offense ladder, and the drug-free-zone and other punishment enhancements. Pair this section with the [Penalty Groups & Offense Chart](15-penalty-groups-chart.html) for the full quantity tables at a glance. LO 15.5-15.17 cover seizure/destruction procedure, dangerous drugs (HSC Chapter 483), the Texas Compassionate-Use Program (Occupations Code Chapter 169), marijuana/hemp (Agriculture Code Chapter 121), commonly abused drugs and paraphernalia, field identification, drug interdiction and load-car characteristics, probable cause factors and interview techniques, common places of concealment, and uncorroborated-testimony rules (HSC 483.072, CCP 38.14, 38.141).*
 
 ## LO 15.1: Controlled Substances Act — Key Terms (HSC 481.002)
 
-### Q1 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(1)
+Fewer citation-matching questions here than before — the point of LO 15.1 is knowing what these words let an officer do and not do in the field, not reciting subsection numbers. For the full definition list with statute links, see the Chapter 15 reference page; for the definitions that actually decide an offense's degree (penalty groups, quantities), see LO 15.3 below and the Penalty Groups & Offense Chart (15-penalty-groups-chart.html).
 
-**Answer:** Administer
+### Q1 — Concept
+**LO:** 15.1 · **Source:** HSC 481.002(1), (8), (12), (14)
 
-"______" means to directly apply a controlled substance by injection, inhalation, ingestion, or other means to the body of a patient or research subject by a practitioner (or the practitioner's agent) in the practitioner's presence, or by the patient/research subject at the practitioner's direction and in the practitioner's presence.
+A pharmacist fills a prescription and hands the pills across the counter to the patient. A doctor gives a flu shot directly to a patient in the exam room. A street-level seller texts a buyer "I've got what you need" without a sale happening yet. Which term applies to the street-level seller's text?
 
-**Explanation:** "Administer" under 481.002(1) requires direct application to the body, done either by the practitioner (or agent) in person, or by the patient personally but only under the practitioner's direction and presence.
+- [ ] Administer — direct application to the body by a practitioner
+- [ ] Dispense — delivery to the ultimate user in the course of professional practice
+- [x] Deliver — because "deliver" expressly includes merely offering to sell
+- [ ] Distribute — the catch-all for anything that isn't administering or dispensing
 
----
-
-### Q2 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(1)
-
-Which HSC 481.002 term means "to directly apply a controlled substance by injection, inhalation, ingestion, or other means to the body of a patient or research subject" by or in the presence of a practitioner?
-
-- [x] Administer
-- [ ] Dispense
-- [ ] Deliver
-- [ ] Prescribe
-
-**Explanation:** "Administer" is the direct, in-person application of the substance to the body — distinct from "Dispense" (delivering it to the ultimate user to take later) or "Prescribe" (authorizing it to be dispensed).
+**Explanation:** "Deliver" (481.002(8)) covers actual or constructive transfers, but it also expressly includes an *offer* to sell — so the text alone is a delivery under the Act even though no substance changed hands. The pharmacist's counter handoff is Dispense; the flu shot is Administer.
 
 ---
 
-### Q3 — Term ID
+### Q2 — Concept
 **LO:** 15.1 · **Source:** HSC 481.002(5)
 
-**Answer:** Controlled substance
+A field test comes back positive for cocaine, but the baggie's contents are mostly baking soda used to cut the product. For weight/offense purposes under the Controlled Substances Act, how does the baking soda factor in?
 
-"______" means a substance, including a drug, an adulterant, and a dilutant, listed in Schedules I through V or Penalty Group 1, 1-A, 1-B, 2, 2-A, 3, or 4; the term does not include hemp or the tetrahydrocannabinols in hemp.
+- [ ] It doesn't count — only the pure cocaine content is weighed
+- [x] It counts — "controlled substance" expressly includes adulterants and dilutants in the aggregate weight
+- [ ] It only counts if the officer can prove the seller knew the baking soda was mixed in
+- [ ] It converts the offense into a Chapter 482 simulated-substance case
 
-**Explanation:** 481.002(5) defines "controlled substance" by reference to the Schedules and Penalty Groups, and expressly excludes hemp and hemp-derived THC.
+**Explanation:** 481.002(5) defines "controlled substance" to include adulterants and dilutants, and the offense sections (e.g. 481.112) price the offense by *aggregate weight, including adulterants or dilutants* — cutting agents count toward the charged weight, they don't reduce it.
+
+---
+
+### Q3 — Concept
+**LO:** 15.1 · **Source:** HSC 481.002(6), 481.106
+
+A chemist tweaks methamphetamine's molecular structure just enough that the new compound isn't itself named in Penalty Group 1, but it's chemically almost identical and produces the same high. How does the Act treat it?
+
+- [ ] It's uncontrolled until the legislature adds the exact new name to Penalty Group 1
+- [x] It's a "controlled substance analogue" and 481.106 folds it into the same penalty group as the substance it mimics
+- [ ] It's automatically classified as a Penalty Group 4 substance, the lowest tier, since it isn't named
+- [ ] It can only be prosecuted as drug paraphernalia
+
+**Explanation:** This is exactly what the analogue provision is for — 481.002(6) defines "controlled substance analogue" by chemical similarity or designed-effect similarity, and 481.106 places an analogue of a PG1/1-A/1-B/2/2-A substance into that same penalty group for prosecution purposes, so "designer drug" tweaks don't escape the law.
 
 ---
 
 ### Q4 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(5)
+**LO:** 15.1 · **Source:** HSC 481.002(7); HSC Ch. 482
 
-Under HSC 481.002(5), which of the following is expressly excluded from the definition of "controlled substance"?
+A counterfeit substance under 481.002(7) is best distinguished from a "simulated controlled substance" under HSC Chapter 482 by which fact?
 
-- [x] Hemp, and the tetrahydrocannabinols in hemp
-- [ ] Any substance listed in Penalty Group 1
-- [ ] Any substance listed in Schedule V
-- [ ] Adulterants and dilutants mixed into a controlled substance
+- [x] A counterfeit substance is an actual controlled substance falsely bearing another maker's brand/label; a simulated controlled substance contains no controlled substance at all, just something represented as one
+- [ ] A counterfeit substance is always marijuana; a simulated controlled substance is always a pill
+- [ ] There's no legal difference — both are prosecuted identically under Chapter 481
+- [ ] A counterfeit substance is a civil violation; a simulated controlled substance is always a felony
 
-**Explanation:** 481.002(5) specifically carves hemp and hemp-derived THC out of the "controlled substance" definition, while adulterants/dilutants are expressly included in the aggregate weight.
-
----
-
-### Q5 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(6)
-
-**Answer:** Controlled substance analogue
-
-"______" means a substance with a chemical structure substantially similar to a controlled substance in Schedule I or II or Penalty Group 1, 1-A, 1-B, 2, or 2-A, or a substance specifically designed to produce a substantially similar (or greater) effect.
-
-**Explanation:** 481.002(6) covers both structural analogues and substances designed to mimic the effect of a listed controlled substance — the two prongs used to reach "designer drugs."
+**Explanation:** Counterfeit substance (481.002(7)) is a real controlled substance with a false identifying mark/label. A simulated controlled substance (Ch. 482) is the opposite problem: no actual controlled substance is present, but it's represented/sold as if it were one — a different chapter entirely.
 
 ---
 
-### Q6 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(6)
-
-A "controlled substance analogue" under HSC 481.002(6) is defined by which two alternative tests?
-
-- [x] Substantially similar chemical structure to a listed controlled substance, OR specifically designed to produce a substantially similar or greater effect
-- [ ] Manufactured in Texas, OR sold for more than $500
-- [ ] Listed in Schedule I only
-- [ ] Possessed by a person under 21 years of age
-
-**Explanation:** The analogue definition is deliberately two-pronged (structure-based or effect-based) so that chemically tweaked "designer drugs" can still be reached even if their exact structure isn't yet scheduled.
-
----
-
-### Q7 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(7)
-
-**Answer:** Counterfeit substance
-
-"______" means a controlled substance that, without authorization, bears or is in a container or has a label that bears an actual or simulated trademark, trade name, or other identifying mark of a manufacturer, distributor, or dispenser other than the person who actually manufactured, distributed, or dispensed it.
-
-**Explanation:** "Counterfeit substance" is about false branding/identifying marks on the substance or its packaging — not about the substance's chemical purity.
-
----
-
-### Q8 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(7)
-
-Under HSC 481.002(7), a "counterfeit substance" is best described as:
-
-- [x] A controlled substance falsely bearing another manufacturer's/distributor's/dispenser's identifying mark or label without authorization
-- [ ] A controlled substance analogue not yet listed in a penalty group
-- [ ] Any drug paraphernalia used to disguise a controlled substance
-- [ ] A substance falsely represented as a controlled substance when it contains no controlled substance at all
-
-**Explanation:** "Counterfeit substance" turns on false branding of an actual controlled substance — the last distractor describes a "simulated controlled substance" under HSC Chapter 482, a different concept.
-
----
-
-### Q9 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(8)
-
-**Answer:** Deliver
-
-"______" means to transfer, actually or constructively, to another a controlled substance, counterfeit substance, or drug paraphernalia, regardless of whether there is an agency relationship; the term includes offering to sell such a substance.
-
-**Explanation:** "Deliver" reaches both actual and constructive transfers and, importantly, includes merely offering to sell — matching BPOC's "Deliver or offer to deliver" term.
-
----
-
-### Q10 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(8)
-
-Under HSC 481.002(8), which of the following is true about the term "deliver"?
-
-- [x] It includes offering to sell a controlled substance, counterfeit substance, or drug paraphernalia
-- [ ] It requires an actual agency relationship between the parties
-- [ ] It applies only to transfers made in exchange for money
-- [ ] It excludes constructive transfers, covering only physical hand-to-hand transfers
-
-**Explanation:** 481.002(8) explicitly extends "deliver" to an offer to sell, and applies "regardless of whether there is an agency relationship" — and it covers constructive as well as actual transfers.
-
----
-
-### Q11 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(12)
-
-**Answer:** Dispense
-
-"______" means the delivery of a controlled substance in the course of professional practice or research, by a practitioner or person acting under a practitioner's lawful order, to an ultimate user or research subject; the term includes the prescribing, administering, packaging, labeling, or compounding necessary to prepare the substance for delivery.
-
-**Explanation:** "Dispense" is delivery to the end user in the course of professional practice, and it bundles in the preparatory steps (prescribing, packaging, compounding, etc.) needed to get the substance ready.
-
----
-
-### Q12 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(12)
-
-Which term under HSC 481.002 refers to a practitioner (or someone under a practitioner's lawful order) delivering a controlled substance to an ultimate user or research subject in the course of professional practice or research?
-
-- [x] Dispense
-- [ ] Distribute
-- [ ] Deliver
-- [ ] Administer
-
-**Explanation:** "Dispense" is specifically the professional-practice delivery to the end user, distinguishing it from the broader "deliver" and from "distribute" (delivery other than by administering or dispensing).
-
----
-
-### Q13 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(14)
-
-**Answer:** Distribute
-
-"______" means to deliver a controlled substance other than by administering or dispensing the substance.
-
-**Explanation:** "Distribute" is defined negatively against the other two delivery-related terms — it's any delivery of a controlled substance that isn't an "administer" or a "dispense."
-
----
-
-### Q14 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(14)
-
-Under HSC 481.002(14), "distribute" means to deliver a controlled substance:
-
-- [x] Other than by administering or dispensing the substance
-- [ ] Only through a licensed pharmacy
-- [ ] Only in exchange for payment
-- [ ] Only across state lines
-
-**Explanation:** "Distribute" is the residual category of delivery — any delivery that isn't accomplished by administering or dispensing.
-
----
-
-### Q15 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(16)
-
-**Answer:** Drug
-
-"______" means a substance, other than a device or a component/part/accessory of a device, that is recognized as a drug in the official pharmacopoeias, is intended for use in diagnosing, curing, mitigating, treating, or preventing disease, or is intended to affect the structure or function of the body (but is not food).
-
-**Explanation:** "Drug" under 481.002(16) is defined broadly by its recognized-pharmacopoeia status or its intended medical/physiological purpose, explicitly excluding devices and food.
-
----
-
-### Q16 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(16)
-
-Under HSC 481.002(16), the definition of "drug" specifically excludes:
-
-- [x] A device, or a component, part, or accessory of a device
-- [ ] Any substance recognized in the official United States Pharmacopoeia
-- [ ] Any substance intended to affect the structure or function of the body
-- [ ] Any substance intended for use in treating disease in animals
-
-**Explanation:** The "drug" definition is written to exclude devices (and their components) while still covering substances recognized in the pharmacopoeias or intended for disease treatment or to affect body structure/function in humans or animals.
-
----
-
-### Q17 — Term ID
+### Q5 — Concept
 **LO:** 15.1 · **Source:** HSC 481.002(17)
 
-**Answer:** Drug paraphernalia
+Which of the following would NOT typically qualify as "drug paraphernalia" under 481.002(17)?
 
-"______" means equipment, a product, or material that is used or intended for use in planting, cultivating, manufacturing, processing, packaging, storing, or concealing a controlled substance in violation of Chapter 481, or in injecting, ingesting, inhaling, or otherwise introducing a controlled substance into the human body in violation of that chapter.
+- [ ] A digital scale found alongside baggies and a large amount of cash
+- [ ] A glass pipe with burnt residue
+- [ ] A hypodermic needle with no legitimate medical use disclosed
+- [x] A prescription pill bottle with the patient's name and the pharmacy's label intact
 
-**Explanation:** "Drug paraphernalia" covers both production/handling equipment (growing, manufacturing, packaging) and consumption equipment (pipes, syringes, etc.), so long as it's used or intended for use in a Chapter 481 violation.
-
----
-
-### Q18 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(17)
-
-Under HSC 481.002(17), "drug paraphernalia" is defined by:
-
-- [x] Its use or intended use in producing, handling, or introducing a controlled substance into the body in violation of Chapter 481
-- [ ] Its manufacturer's stated purpose printed on the packaging
-- [ ] Whether it was purchased from a licensed retailer
-- [ ] Whether it contains any trace of a controlled substance at the time of seizure
-
-**Explanation:** The paraphernalia definition turns on use or intended use in a Chapter 481 violation (production, processing, packaging, or introducing the substance into the body) — not on how or where the item was purchased, or trace residue.
+**Explanation:** "Drug paraphernalia" is equipment/material used or intended for use in producing, packaging, concealing, or introducing a controlled substance into the body in violation of Chapter 481. A properly labeled prescription bottle is lawful possession, not paraphernalia — context (scale + baggies + cash, burnt pipe residue, an unexplained needle) is what turns ordinary objects into paraphernalia.
 
 ---
 
-### Q19 — Term ID
+### Q6 — Concept
+**LO:** 15.1 · **Source:** HSC 481.002(25)
+
+Under 481.002(25), "manufacture" covers producing, preparing, compounding, converting, or processing a controlled substance — with one notable carve-out. What does the definition of "manufacture" expressly exclude?
+
+- [ ] Anything done outside of Texas
+- [x] Marihuana — cultivating/processing the marijuana plant itself is handled under the separate marihuana offense sections, not the general "manufacture" definition
+- [ ] Anything done by a licensed pharmacist
+- [ ] Synthetic substances, which are covered only under Chapter 482
+
+**Explanation:** 481.002(25) defines "manufacture" for controlled substances "other than marihuana" — marihuana cultivation and processing is instead reached through the dedicated marihuana delivery/possession offenses (481.120-.121), not the general manufacture definition used for PG1-4 substances.
+
+---
+
+### Q7 — Concept
+**LO:** 15.1 · **Source:** HSC 481.002(26); Ag. Code 121.001
+
+Which of the following is expressly carved OUT of the legal definition of "marihuana" under 481.002(26)?
+
+- [ ] The plant's leaves and flowering tops
+- [x] The mature stalks of the plant, and hemp as defined by Agriculture Code 121.001
+- [ ] Any part of the plant grown indoors
+- [ ] Marihuana seeds, whether germinated or not
+
+**Explanation:** 481.002(26)'s exclusions are specific: resin extracted from the plant, mature stalks and fiber from them, oil/cake from the seeds, sterilized (non-germinable) seeds, and — critically — hemp as defined by Ag. Code 121.001. Everything else about the Cannabis sativa L. plant is "marihuana."
+
+---
+
+### Q8 — Concept
+**LO:** 15.1 · **Source:** Ag. Code 121.001
+
+Texas draws the legal line between "hemp" and "marihuana" using which single measurable test?
+
+- [ ] Whether the plant was purchased from a licensed dispensary
+- [x] Delta-9 THC concentration of 0.3% or less on a dry-weight basis is hemp; anything above that threshold is marihuana
+- [ ] Whether the plant is smoked versus ingested
+- [ ] The plant's geographic origin — hemp must be grown in Texas, marihuana grown elsewhere
+
+**Explanation:** Agriculture Code 121.001 defines "hemp" as Cannabis sativa L. with a delta-9 THC concentration of no more than 0.3% on a dry-weight basis. Cross the 0.3% line and it's legally marihuana, not hemp — a purely chemical test, not a question of where or how it was grown or sold.
+
+---
+
+### Q9 — Concept
+**LO:** 15.1 · **Source:** HSC 481.002(29)
+
+"Narcotic drug" has a specific legal meaning under 481.002(29) that's narrower than everyday usage. Which of these is a "narcotic drug" in that legal sense?
+
+- [x] Heroin, because it's an opiate/opium derivative
+- [ ] Methamphetamine, because people commonly call all illegal drugs "narcotics"
+- [ ] Xanax, because it's a controlled substance
+- [ ] LSD, because it's a Penalty Group 1-A substance
+
+**Explanation:** 481.002(29)'s "narcotic drug" is built specifically around opium/opiates and cocaine (plus their salts, compounds, and derivatives) — not a synonym for "illegal drug" in general. Methamphetamine, Xanax, and LSD are all controlled substances, but none of them fits the statutory definition of "narcotic drug."
+
+---
+
+### Q10 — Term ID
 **LO:** 15.1 · **Source:** HSC 481.002(21)
 
 **Answer:** Human consumption
 
-"______" means the injection, inhalation, ingestion, or application of a substance to or into a human body.
+"______" means the injection, inhalation, ingestion, or application to the human body of a controlled substance.
 
-**Explanation:** "Human consumption" under 481.002(21) is defined broadly enough to cover any of the four listed routes of introducing a substance into the body, not just swallowing it.
-
----
-
-### Q20 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(21)
-
-Which of the following routes is NOT one of the four listed in HSC 481.002(21)'s definition of "human consumption"?
-
-- [x] Absorption through clothing
-- [ ] Injection
-- [ ] Inhalation
-- [ ] Ingestion
-
-**Explanation:** 481.002(21) lists injection, inhalation, ingestion, or application to or into the human body — "absorption through clothing" isn't one of the statute's listed routes.
+**Explanation:** 481.002(21) limits "human consumption" to exactly those four routes into the body — a term that matters because several offenses (like unlawful use of drug paraphernalia) are defined around introducing a substance into the body "in violation of this chapter."
 
 ---
 
-### Q21 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(22)
+### Q11 — Scenario
+**LO:** 15.1 · **Source:** HSC 481.002(22); 481.077
 
-**Answer:** Immediate precursor
+An officer finds a chemical in a suspect's garage that isn't itself a controlled substance, but is a key building-block chemical the department director has designated by rule as commonly used to manufacture methamphetamine. What is this chemical called under the Act?
 
-"______" means a substance the director finds to be and by rule designates as a principal compound commonly used to manufacture a controlled substance, an immediate chemical intermediary used in that manufacture, and a substance whose control is necessary to prevent, curtail, or limit that manufacture.
+- [ ] A controlled substance analogue
+- [x] An immediate precursor
+- [ ] Drug paraphernalia
+- [ ] A dangerous drug
 
-**Explanation:** "Immediate precursor" is a director-designated category — it isn't self-defining by chemical structure alone but requires an administrative finding and rule under all three listed criteria.
-
----
-
-### Q22 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(22)
-
-Under HSC 481.002(22), a substance becomes an "immediate precursor" when:
-
-- [x] The director finds it meets the statutory criteria and designates it as such by rule
-- [ ] It is chemically identical to a Penalty Group 1 substance
-- [ ] Any law enforcement agency labels it as precursor material
-- [ ] It is imported from outside the United States
-**Explanation:** The "immediate precursor" designation requires an affirmative finding and rule by the director — it isn't automatic based on chemistry or origin alone.
-
----
-
-### Q23 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(25)
-
-**Answer:** Manufacture
-
-"______" means the production, preparation, propagation, compounding, conversion, or processing of a controlled substance other than marihuana, whether by extraction, chemical synthesis, or a combination of both, and includes packaging, repackaging, labeling, or relabeling.
-
-**Explanation:** "Manufacture" excludes marihuana specifically (marihuana production is handled under separate provisions) and includes packaging/labeling steps, but carves out a practitioner's incidental preparation/dispensing or research/teaching use.
-
----
-
-### Q24 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(25)
-
-Under HSC 481.002(25), the definition of "manufacture" specifically excludes production of:
-
-- [x] Marihuana
-- [ ] Any Penalty Group 1 substance
-- [ ] Any narcotic drug
-- [ ] Any controlled substance analogue
-
-**Explanation:** 481.002(25) defines "manufacture" as applying to a controlled substance "other than marihuana" — marihuana-specific conduct is instead addressed by 481.120/481.121 and the definition of "marihuana" itself.
-
----
-
-### Q25 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(26)
-
-**Answer:** Marihuana
-
-"______" means the plant Cannabis sativa L., whether growing or not, the seeds of that plant, and every compound, manufacture, salt, derivative, mixture, or preparation of that plant or its seeds — but the term does not include hemp, as defined by the Agriculture Code.
-
-**Explanation:** 481.002(26) defines "marihuana" broadly around the Cannabis sativa L. plant and its derivatives, while expressly excluding hemp (along with the mature stalks, fiber, and sterilized seeds, among other listed exclusions).
-
----
-
-### Q26 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(26)
-
-Under HSC 481.002(26), which of the following is expressly excluded from the definition of "marihuana"?
-
-- [x] Hemp, as defined by the Agriculture Code
-- [ ] The seeds of the Cannabis sativa L. plant
-- [ ] Any compound or derivative of the plant
-- [ ] Any mixture or preparation of the plant
-
-**Explanation:** Hemp is carved out of the "marihuana" definition (along with items like the mature stalks and sterilized seeds), while the plant's seeds and its compounds/derivatives/mixtures generally remain within the definition.
-
----
-
-### Q27 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(29)
-
-**Answer:** Narcotic drug
-
-"______" means opium and opiates and their salts/compounds/derivatives, the opium poppy and poppy straw, and cocaine (including its salts, isomers, and coca leaves) — produced by extraction, chemical synthesis, or a combination of both.
-
-**Explanation:** "Narcotic drug" under 481.002(29) is defined around opium/opiates and cocaine (and their derivatives), not around a general dictionary sense of "narcotic."
-
----
-
-### Q28 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(29)
-
-Under HSC 481.002(29), which of the following is specifically included within the definition of "narcotic drug"?
-
-- [x] Cocaine, including its salts, isomers, and coca leaves
-- [ ] Methamphetamine
-- [ ] LSD
-- [ ] Any Penalty Group 2 stimulant
-
-**Explanation:** The statutory "narcotic drug" definition is centered on opium/opiates and cocaine — methamphetamine, LSD, and Penalty Group 2 stimulants fall under other penalty-group classifications rather than this specific definition.
-
----
-
-### Q29 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(30)
-
-**Answer:** Opiate
-
-"______" means a substance that has an addiction-forming or addiction-sustaining liability similar to morphine or is capable of conversion into a drug having that liability, including its racemic and levorotatory forms.
-
-**Explanation:** "Opiate" is defined functionally by its addiction-forming/sustaining potential relative to morphine, rather than by a specific chemical list — and it specifically excludes dextromethorphan unless separately designated as controlled.
-
----
-
-### Q30 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(30)
-
-Under HSC 481.002(30), the definition of "opiate" is based on:
-
-- [x] Having an addiction-forming or addiction-sustaining liability similar to morphine, or being convertible into a drug with that liability
-- [ ] Being derived exclusively from the opium poppy
-- [ ] Being listed by name in Penalty Group 1
-- [ ] Being available only by prescription
-
-**Explanation:** The "opiate" definition is functional (addiction liability similar to morphine, or convertibility into such a drug) rather than tied to a specific botanical source or penalty-group listing.
-
----
-
-### Q31 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(33)
-
-**Answer:** Person
-
-"______" means an individual, corporation, government, business trust, estate, trust, partnership, association, or any other legal entity.
-
-**Explanation:** "Person" under 481.002(33) is defined broadly to include not just individuals but also entities like corporations, trusts, and governments.
-
----
-
-### Q32 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(33)
-
-Under HSC 481.002(33), the definition of "person" includes which of the following?
-
-- [x] A corporation, government, or trust — not just an individual
-- [ ] Only a natural, individual human being
-- [ ] Only a business licensed by the state
-- [ ] Only a registrant with a current DEA registration number
-
-**Explanation:** 481.002(33)'s "person" definition sweeps in corporations, governments, trusts, partnerships, and other legal entities in addition to individuals.
-
----
-
-### Q33 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(38)
-
-**Answer:** Possession
-
-"______" means actual care, custody, control, or management.
-
-**Explanation:** "Possession" under 481.002(38) is a short, functional definition — actual care, custody, control, or management of the substance — rather than requiring outright ownership.
-
----
-
-### Q34 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(38)
-
-Under HSC 481.002(38), "possession" means:
-
-- [x] Actual care, custody, control, or management
-- [ ] Legal ownership of the substance, evidenced by a receipt or title
-- [ ] Physical touching of the substance at the moment of arrest
-- [ ] Registration of the substance with the Department of Public Safety
-
-**Explanation:** The statutory definition is deliberately broad and functional — care, custody, control, or management — which is why possession can be actual or constructive under the case law applying this definition.
-
----
-
-### Q35 — Term ID
-**LO:** 15.1 · **Source:** HSC 481.002(43)
-
-**Answer:** Production
-
-"______" includes the manufacturing, planting, cultivating, growing, or harvesting of a controlled substance.
-
-**Explanation:** "Production" under 481.002(43) is written broadly to include not just manufacturing but also the agricultural steps — planting, cultivating, growing, and harvesting — relevant to plant-based controlled substances like marihuana.
-
----
-
-### Q36 — Definition
-**LO:** 15.1 · **Source:** HSC 481.002(43)
-
-Under HSC 481.002(43), "production" specifically includes which agricultural activities, in addition to manufacturing?
-
-- [x] Planting, cultivating, growing, or harvesting
-- [ ] Importing and exporting
-- [ ] Packaging and labeling only
-- [ ] Testing and analyzing only
-
-**Explanation:** "Production" is defined to sweep in the plant-based/agricultural steps (planting, cultivating, growing, harvesting) alongside manufacturing — distinguishing it from purely chemical or administrative terms like "manufacture" or "dispense."
+**Explanation:** 481.002(22) defines "immediate precursor" as a substance the director designates by rule as a principal compound used to manufacture a controlled substance (or a chemical intermediary in that process) — it's a distinct legal category from the finished controlled substance itself, and separately triggers precursor-possession offenses under 481.124.
 
 ---
 
 ## LO 15.2: The Six Major Categories of Controlled Substances
 
-### Q37 — Fill-in-Blank
+Knowing the six categories only pays off once you can put real drug names into each bucket — that's the emphasis below. The specific *penalty group* each drug falls into (which is what actually drives the criminal charge) is covered in LO 15.3.
+
+### Q12 — Fill-in-Blank
 **LO:** 15.2 · **Source:** BPOC 15.2
 
 The six major categories of controlled substances are narcotics, depressants, stimulants, hallucinogens, marihuana, and ______ controlled substances.
 
-**Answer:** simulated
+- [x] simulated
+- [ ] synthetic
+- [ ] designer
+- [ ] scheduled
 
-**Explanation:** BPOC's six major categories are narcotics, depressants, stimulants, hallucinogens, marihuana, and simulated controlled substances (the last of which is separately addressed under HSC Chapter 482).
+**Explanation:** The six categories are narcotics, depressants, stimulants, hallucinogens, marihuana, and simulated controlled substances — the last of which is its own separate chapter (HSC Ch. 482), covering look-alikes that don't actually contain a controlled substance.
 
 ---
 
-### Q38 — Multiple Choice
+### Q13 — Concept
 **LO:** 15.2 · **Source:** BPOC 15.2
 
-Which of the following is one of the six major categories of controlled substances identified in BPOC training?
+Which of the following drug names belong in the "narcotics" (opioid) category?
 
-- [x] Depressants
-- [ ] Antibiotics
-- [ ] Analgesics
-- [ ] Vitamins
+- [x] Heroin, oxycodone, and fentanyl
+- [ ] Methamphetamine, cocaine, and MDMA
+- [ ] Alprazolam (Xanax), diazepam (Valium), and phenobarbital
+- [ ] LSD, PCP, and psilocybin
 
-**Explanation:** The six categories are narcotics, depressants, stimulants, hallucinogens, marihuana, and simulated controlled substances — antibiotics, analgesics, and vitamins are not among them.
+**Explanation:** Narcotics in the BPOC sense track the opioids: heroin, oxycodone, hydrocodone, fentanyl, morphine, and codeine are all narcotics. Stimulants (meth, cocaine, MDMA), depressants (benzodiazepines, barbiturates), and hallucinogens (LSD, PCP, psilocybin) are separate categories with very different effects.
 
 ---
 
-### Q39 — Fill-in-Blank
+### Q14 — Concept
 **LO:** 15.2 · **Source:** BPOC 15.2
 
-Among the six major categories of controlled substances, ______ are substances that slow down or inhibit central nervous system activity, in contrast to stimulants.
+A depressant and a stimulant are opposite ends of the same effect spectrum. Which pairing correctly matches a depressant with a stimulant?
 
-**Answer:** depressants
+- [x] Depressant: diazepam (Valium) — Stimulant: methamphetamine
+- [ ] Depressant: cocaine — Stimulant: heroin
+- [ ] Depressant: LSD — Stimulant: marihuana
+- [ ] Depressant: MDMA — Stimulant: alprazolam (Xanax)
 
-**Explanation:** Depressants and stimulants are opposite ends of the same category pairing within BPOC's six major categories — depressants slow CNS activity, stimulants speed it up.
+**Explanation:** Depressants (benzodiazepines like Valium/Xanax, barbiturates) slow central nervous system activity; stimulants (methamphetamine, cocaine, amphetamine, MDMA) speed it up. Cocaine and MDMA are stimulants, not depressants — a common mix-up.
 
 ---
 
-### Q40 — Multiple Choice
+### Q15 — Concept
 **LO:** 15.2 · **Source:** BPOC 15.2
 
-Which of the six major categories of controlled substances is defined by producing perception-altering or mind-altering effects, distinct from simply speeding up or slowing down the central nervous system?
+Hallucinogens are grouped separately from depressants/stimulants because their defining effect is altering perception, not simply speeding up or slowing down the CNS. Which drug belongs in this category?
 
-- [x] Hallucinogens
-- [ ] Depressants
-- [ ] Stimulants
-- [ ] Narcotics
+- [x] LSD
+- [ ] Alprazolam (Xanax)
+- [ ] Methamphetamine
+- [ ] Codeine
 
-**Explanation:** Hallucinogens are grouped separately from depressants/stimulants precisely because their defining effect is altering perception rather than simply raising or lowering CNS activity.
+**Explanation:** LSD (and PCP, mescaline, psilocybin, ketamine) are hallucinogens — defined by perception-altering effects rather than a straightforward CNS-speed-up or CNS-slow-down. Xanax is a depressant, methamphetamine is a stimulant, and codeine is a narcotic.
 
 ---
 
-### Q41 — Fill-in-Blank
+### Q16 — Scenario
+**LO:** 15.2 · **Source:** BPOC 15.2; HSC 481.120-.121
+
+Marihuana gets its own standalone major category rather than being folded into "narcotics" or "hallucinogens." What else sets marihuana apart from the other five categories, structurally, under the Act?
+
+- [ ] It's the only category with no criminal penalty attached at all
+- [x] It's the only category prosecuted under its own dedicated offense sections (481.120 delivery, 481.121 possession) rather than the Penalty Group 1-4 scheme that governs the other controlled-substance categories
+- [ ] It's the only category that requires a jury trial regardless of the amount involved
+- [ ] It's the only category that can never be charged as a felony
+
+**Explanation:** Every other category's substances sit inside Penalty Groups 1 through 4 (Ch. 481, Subch. D) with penalties keyed to those groups. Marihuana instead gets its own dedicated offense sections — 481.120 (delivery) and 481.121 (possession) — with their own separate quantity/classification ladder, covered in LO 15.3.
+
+---
+
+### Q17 — Concept
+**LO:** 15.2 · **Source:** BPOC 15.2; HSC Ch. 482
+
+"Simulated controlled substances" — the sixth category — are governed by an entirely separate chapter, HSC Chapter 482, rather than the Chapter 481 penalty groups. What makes something a "simulated" controlled substance?
+
+- [ ] It's a real controlled substance being transported in an unmarked container
+- [x] It's represented as being a controlled substance (by appearance, packaging, or the seller's claims) but doesn't actually contain a scheduled controlled substance
+- [ ] It's a controlled substance analogue chemically similar to a real drug
+- [ ] It's any drug seized during a simulated (undercover) police operation
+
+**Explanation:** Chapter 482 covers substances that are marketed or represented as controlled substances — by color, shape, packaging, or the seller's sales pitch — but that lab testing shows contain no actual scheduled controlled substance. It's a deliberately separate offense scheme from Chapter 481, since no real controlled substance is ever involved.
+
+---
+
+### Q18 — Scenario
+**LO:** 15.2 · **Source:** BPOC 15.2; HSC Ch. 481 & 482
+
+A confidential informant buys what's sold to him as "Xanax bars" on the street. Lab analysis confirms the pills actually contain alprazolam. A week later, the same informant buys pills sold the same way from a different dealer — but this time the lab finds no controlled substance in them at all, just an inert filler pressed to look like a Xanax bar.
+
+**Offense:**
+- [x] First buy: Penalty Group 3 offense (HSC 481.113 / 481.117) — Second buy: Simulated controlled substance offense (HSC Ch. 482)
+- [ ] Both buys: Penalty Group 3 offense, since both were sold as Xanax
+- [ ] First buy: Simulated controlled substance offense — Second buy: Penalty Group 3 offense
+- [ ] Both buys: no offense, since neither transaction involved marihuana
+
+**Classification:**
+- [ ] Class A Misdemeanor for both
+- [ ] Second-degree felony for both
+- [x] First buy classified under Ch. 481 penalty-group rules; second buy classified under Ch. 482's own offense scheme
+- [ ] No classification applies to either
+
+**Explanation:** Alprazolam is a real Penalty Group 3 substance, so the first sale is prosecuted under the Ch. 481 manufacture/delivery-of-PG3 offense with its own weight-based classification. The second sale contained no actual controlled substance at all — that's a Chapter 482 "simulated controlled substance" offense, classified entirely under that chapter's own scheme, not the PG3 ladder.
+
+---
+
+### Q19 — Concept
 **LO:** 15.2 · **Source:** BPOC 15.2
 
-Of the six major categories, ______ is its own standalone category despite also being one of the specific controlled-substance types addressed by its own HSC sections (481.120–481.121).
+Why does it matter operationally that "simulated controlled substances" (Ch. 482) are handled separately from the real thing (Ch. 481)?
 
-**Answer:** marihuana
+- [ ] It doesn't — the penalties and elements are identical either way
+- [x] Because a field test or lab result showing NO controlled substance present doesn't mean there's no crime — it may mean the correct charge is under Chapter 482 instead of Chapter 481
+- [ ] Because Chapter 482 offenses can only be charged against minors
+- [ ] Because Chapter 482 only applies to marihuana look-alikes
 
-**Explanation:** Marihuana gets its own major category (rather than being folded into "narcotics" or another category) and also has its own dedicated offense sections under HSC 481.120 (delivery) and 481.121 (possession).
+**Explanation:** A negative lab result for a controlled substance can feel like a dead end, but if the substance was being sold/represented as a real drug, Chapter 482's simulated-controlled-substance offense may still apply — the case doesn't just evaporate because the substance itself isn't real.
 
 ---
 
-### Q42 — Multiple Choice
-**LO:** 15.2 · **Source:** BPOC 15.2, HSC Ch.482
+## LO 15.3: Penalty Groups — What's In Them, and What They're Worth
 
-Which of the six major categories of controlled substances is governed by an entirely separate HSC chapter (Chapter 482) rather than being folded into the Chapter 481 penalty groups?
+This is the heart of Chapter 15 in practice: knowing roughly what's in each Penalty Group, and knowing how weight/quantity drives the offense classification for manufacture/delivery versus simple possession. Full quantity tables and color-coded value ladders live on the companion Penalty Groups & Offense Chart (15-penalty-groups-chart.html) — treat the questions below as the practice version of that chart, not a replacement for the citation-heavy questions this bank used to lean on.
 
-- [x] Simulated controlled substances
-- [ ] Narcotics
-- [ ] Stimulants
+### Substance ↔ Penalty Group
+
+### Q20 — Concept
+**LO:** 15.3 · **Source:** HSC 481.102
+
+Penalty Group 1 — the most heavily punished tier — includes which of these commonly encountered drugs?
+
+- [x] Heroin, cocaine, and methamphetamine
+- [ ] Marihuana and hemp
+- [ ] Alprazolam (Xanax) and diazepam (Valium)
+- [ ] Anabolic steroids
+
+**Explanation:** PG1 (481.102) is the "worst of the worst" tier: heroin and other opium derivatives, cocaine, methamphetamine, PCP, GHB, and ketamine all live here. Xanax/Valium are PG3, anabolic steroids are PG3, and marihuana isn't in the penalty-group scheme at all.
+
+---
+
+### Q21 — Concept
+**LO:** 15.3 · **Source:** HSC 481.102
+
+A person is found with methamphetamine. A separate person is found with plain amphetamine (no meth). How does the Act classify these two drugs?
+
+- [ ] Both are Penalty Group 1 — they're chemically nearly identical
+- [x] Methamphetamine is Penalty Group 1; amphetamine (its salts, optical isomers) is Penalty Group 2 — a lower tier despite the similar name
+- [ ] Amphetamine is Penalty Group 1; methamphetamine is Penalty Group 2
+- [ ] Both are Penalty Group 4, the lowest tier
+
+**Explanation:** This is a classic trap: methamphetamine is listed by name in Penalty Group 1 (481.102(6)), but plain amphetamine (and its salts/optical isomers) sits in Penalty Group 2 (481.103(a)(3)) — one letter of difference in the drug name, one full penalty-group difference in exposure.
+
+---
+
+### Q22 — Concept
+**LO:** 15.3 · **Source:** HSC 481.1021
+
+Penalty Group 1-A is a narrow, specific category. What does it consist of?
+
+- [x] LSD and the "NBOMe" family of synthetic hallucinogens
+- [ ] All benzodiazepines
+- [ ] Cocaine and crack cocaine
+- [ ] Marihuana concentrates
+
+**Explanation:** PG1-A (481.1021) is built around LSD and a defined family of structurally related compounds nicknamed "NBOMe" or "N-bombs" — a narrow, chemically-defined category that (unusually) is measured in "abuse units" rather than weight for offense-classification purposes. See LO 15.3's offense questions below.
+
+---
+
+### Q23 — Concept
+**LO:** 15.3 · **Source:** HSC 481.1022
+
+Penalty Group 1-B was added specifically to address which drug and its analogs, given their outsized role in overdose deaths?
+
+- [x] Fentanyl and fentanyl analogs (e.g. carfentanil, sufentanil)
+- [ ] Marihuana concentrates
+- [ ] Anabolic steroids
+- [ ] Synthetic cannabinoids (K2/Spice)
+
+**Explanation:** PG1-B (481.1022) was carved out in 2021 specifically for fentanyl and its analogs (carfentanil, sufentanil, alfentanil, remifentanil, and others) — reflecting the outsized overdose risk these synthetic opioids carry even in tiny quantities, and it comes with its own, harsher offense-classification ladder (LO 15.3 below).
+
+---
+
+### Q24 — Concept
+**LO:** 15.3 · **Source:** HSC 481.103
+
+Penalty Group 2 covers a wide range of hallucinogens and stimulants. Which of these is a Penalty Group 2 substance?
+
+- [x] MDMA ("ecstasy/molly")
+- [ ] Heroin
+- [ ] Fentanyl
 - [ ] Marihuana
 
-**Explanation:** Simulated controlled substances — look-alike substances represented as being a real controlled substance — are addressed under their own chapter, HSC Chapter 482, rather than the Chapter 481 penalty-group scheme that governs the other five categories.
+**Explanation:** PG2 (481.103) covers MDMA, mescaline, psilocybin/psilocin (mushrooms), PCP analogs, amphetamine, and the synthetic "bath salts" cathinones — a broad hallucinogen/stimulant tier one notch below PG1. Note PCP itself is PG1 (481.102(8)), but several PCP *analogs* are PG2 — read the specific compound, not just the family name.
 
 ---
 
-## LO 15.3: Penalty Groups & Offense Citations (HSC Ch.444, 481, 482)
+### Q25 — Concept
+**LO:** 15.3 · **Source:** HSC 481.1031
 
-### Q43 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.112
+Synthetic cannabinoids — commonly known by street names like "K2" or "Spice" — fall into which penalty group?
 
-Manufacture or delivery of a substance in Penalty Group 1 is addressed under HSC ______.
+- [ ] Penalty Group 1
+- [x] Penalty Group 2-A
+- [ ] Penalty Group 4
+- [ ] They're not controlled substances at all
 
-**Answer:** 481.112
-
-**Explanation:** 481.112 is the manufacture-or-delivery offense for Penalty Group 1 substances — the group containing many of the most heavily controlled narcotics.
-
----
-
-### Q44 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.112
-
-Which HSC section addresses manufacture or delivery of a substance in Penalty Group 1?
-
-- [x] 481.112
-- [ ] 481.115
-- [ ] 481.113
-- [ ] 481.114
-
-**Explanation:** 481.112 is the Penalty Group 1 manufacture/delivery offense; 481.115 is the corresponding possession offense, while 481.113 and 481.114 cover other penalty groups' manufacture/delivery offenses.
+**Explanation:** PG2-A (481.1031) was created specifically for synthetic cannabinoids (JWH-018 and similar compounds) — lab-made chemicals sprayed on plant material and sold as a marihuana substitute. Note PG2-A has its own, unusual offense-classification scale for possession, covered in LO 15.3's scenario questions below.
 
 ---
 
-### Q45 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.1121
+### Q26 — Concept
+**LO:** 15.3 · **Source:** HSC 481.104
 
-Manufacture or delivery of a substance in Penalty Group 1-A is addressed under HSC ______.
+Penalty Group 3 is a large, mixed category. Which of these groupings correctly belongs together as Penalty Group 3 substances?
 
-**Answer:** 481.1121
+- [x] Benzodiazepines (alprazolam/Xanax, diazepam/Valium), barbiturates, anabolic steroids, and peyote
+- [ ] Heroin, cocaine, and methamphetamine
+- [ ] LSD and NBOMe compounds
+- [ ] Fentanyl and its analogs
 
-**Explanation:** 481.1121 is the dedicated manufacture-or-delivery section for Penalty Group 1-A (a group graded by "abuse units" rather than weight alone).
-
----
-
-### Q46 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.1121
-
-Which HSC section addresses manufacture or delivery of a substance in Penalty Group 1-A?
-
-- [x] 481.1121
-- [ ] 481.1151
-- [ ] 481.1161
-- [ ] 481.116
-
-**Explanation:** 481.1121 covers Penalty Group 1-A manufacture/delivery; 481.1151 is that group's possession offense, and 481.1161/481.116 belong to Penalty Group 2-A/2 instead.
+**Explanation:** PG3 (481.104) is the largest and most varied group: prescription benzodiazepines (Xanax, Valium, Klonopin, Ativan), barbiturates, anabolic steroids, peyote, Salvia divinorum, and tramadol are all here — generally substances with real medical uses and a lower (but real) abuse potential than PG1/PG2.
 
 ---
 
-### Q47 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.1123
+### Q27 — Concept
+**LO:** 15.3 · **Source:** HSC 481.105
 
-Manufacture or delivery of a substance in Penalty Group 1-B is addressed under HSC ______.
+Penalty Group 4 — the lowest tier — is defined by what common thread?
 
-**Answer:** 481.1123
+- [x] Compounds/preparations containing only small, limited quantities of a narcotic (like codeine or buprenorphine) combined with other non-narcotic active ingredients
+- [ ] Any Schedule I hallucinogen
+- [ ] Marihuana concentrates only
+- [ ] Only over-the-counter medications with no abuse potential at all
 
-**Explanation:** 481.1123 is the manufacture-or-delivery section for Penalty Group 1-B — per BPOC's instructor note, its manufacture/delivery penalties are the same as or more severe than Penalty Group 1's.
-
----
-
-### Q48 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.1123
-
-Per BPOC instructor guidance, how does the manufacture/delivery penalty for Penalty Group 1-B (HSC 481.1123) compare to Penalty Group 1 (HSC 481.112)?
-
-- [x] Penalty Group 1-B's manufacture/delivery penalties are the same as, or more severe than, Penalty Group 1's
-- [ ] Penalty Group 1-B always carries a lighter penalty than Penalty Group 1
-- [ ] The two penalty groups are identical in every respect, including possession penalties
-- [ ] Penalty Group 1-B has no manufacture/delivery offense at all
-
-**Explanation:** BPOC's instructor note draws a specific contrast: while possession of PG-1-B is penalized the same as possession of PG-1, manufacture or delivery of PG-1-B carries penalties equal to or harsher than PG-1's.
+**Explanation:** PG4 (481.105) covers narrow, limited-dose narcotic combination products — low-dose codeine cough preparations and buprenorphine (e.g. Suboxone) formulations — where the narcotic content is capped and blended with non-narcotic ingredients, making it the least severely punished penalty group.
 
 ---
 
-### Q49 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.113
+### Q28 — Concept
+**LO:** 15.3 · **Source:** HSC 481.102, .103, .104
 
-Manufacture or delivery of a substance in Penalty Group 2 or 2-A is addressed under HSC ______.
+A person is found with a small amount of psilocybin mushrooms, a separate bag of powder cocaine, and a bottle of prescription Xanax with no prescription. Which penalty groups are actually in play here?
 
-**Answer:** 481.113
+- [x] Psilocybin: Penalty Group 2 — Cocaine: Penalty Group 1 — Xanax: Penalty Group 3
+- [ ] All three are Penalty Group 1
+- [ ] Psilocybin: Penalty Group 1 — Cocaine: Penalty Group 2 — Xanax: Penalty Group 4
+- [ ] All three are the same penalty group, since they were found together
 
-**Explanation:** 481.113 covers manufacture or delivery for both Penalty Group 2 and Penalty Group 2-A in a single section.
-
----
-
-### Q50 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.113
-
-A single HSC section covers manufacture or delivery of a substance in both Penalty Group 2 and Penalty Group 2-A. Which section is it?
-
-- [x] 481.113
-- [ ] 481.116
-- [ ] 481.1161
-- [ ] 481.114
-
-**Explanation:** 481.113 combines Penalty Group 2 and 2-A manufacture/delivery offenses; the corresponding possession offenses are split between 481.116 (PG2) and 481.1161 (PG2-A) instead.
+**Explanation:** Each substance is classified independently by what it actually is, not by what else was found alongside it: psilocybin is PG2, cocaine is PG1, and alprazolam (Xanax) is PG3 — meaning this scenario would likely be charged as three separate offenses under three different offense sections.
 
 ---
 
-### Q51 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.114
+### Manufacture / Delivery / Possession-With-Intent-to-Deliver — Classification by Weight
 
-Manufacture or delivery of a substance in Penalty Groups 3 and 4 is addressed under HSC ______.
+A quick but important concept before the scenarios: manufacture, delivery, and possession with intent to deliver are all graded on the exact same weight ladder within a penalty group — the statute doesn't punish "making" it differently from "selling" it or "holding it to sell." Simple possession (no intent to deliver) uses a different, generally lower ladder — see the possession scenarios further down.
 
-**Answer:** 481.114
+### Q29 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.112(b)
 
-**Explanation:** 481.114 combines the manufacture/delivery offense for both Penalty Group 3 and Penalty Group 4 into one section.
+A search turns up 0.7 grams (aggregate weight, including cutting agent) of methamphetamine, individually packaged into a dozen small baggies consistent with street-level sales, plus a scale and a ledger of names and dollar amounts.
 
----
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
+- [ ] Possession of drug paraphernalia only
 
-### Q52 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.114
+**Classification:**
+- [x] State Jail Felony
+- [ ] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+- [ ] Class A Misdemeanor
 
-Which HSC section combines the manufacture-or-delivery offense for both Penalty Group 3 and Penalty Group 4 substances?
-
-- [x] 481.114
-- [ ] 481.117
-- [ ] 481.118
-- [ ] 481.113
-
-**Explanation:** 481.114 is the shared manufacture/delivery section for Penalty Groups 3 and 4; their possession offenses are instead split between 481.117 (PG3) and 481.118 (PG4).
-
----
-
-### Q53 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.115
-
-Possession of a substance in Penalty Group 1 is addressed under HSC ______.
-
-**Answer:** 481.115
-
-**Explanation:** 481.115 is the Penalty Group 1 possession offense — the possession counterpart to the manufacture/delivery offense in 481.112.
+**Explanation:** Methamphetamine is Penalty Group 1. The packaging, scale, and ledger support intent to deliver, so this is charged under 481.112 (manufacture/delivery/possession-with-intent), not simple possession. At under 1 gram aggregate weight, 481.112(b) makes it a state jail felony — the lowest tier of that section, but still a felony.
 
 ---
 
-### Q54 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.115
+### Q30 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.112(d)
 
-Which HSC section addresses possession of a substance in Penalty Group 1?
+An undercover buy nets 15 grams of heroin from a dealer, with additional quantities recovered from his vehicle during the arrest.
 
-- [x] 481.115
-- [ ] 481.112
-- [ ] 481.1151
-- [ ] 481.116
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 3 substance
+- [ ] Delivery of a controlled substance to a child
 
-**Explanation:** 481.115 is Penalty Group 1's possession offense; 481.112 is that same group's manufacture/delivery offense, and 481.1151/481.116 belong to other penalty groups.
+**Classification:**
+- [ ] State Jail Felony
+- [ ] Felony, 2nd Degree
+- [x] Felony, 1st Degree
+- [ ] Felony, 1st Degree, 10-99 years/life (enhanced minimum)
 
----
-
-### Q55 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.1151
-
-Possession of a substance in Penalty Group 1-A is addressed under HSC ______.
-
-**Answer:** 481.1151
-
-**Explanation:** 481.1151 is the dedicated possession offense for Penalty Group 1-A substances.
+**Explanation:** Heroin is Penalty Group 1. At 15 grams — within the "4 grams or more but less than 200 grams" bracket — 481.112(d) makes this a straight felony of the first degree (no enhanced minimum yet; that kicks in at 200 grams under 481.112(e)).
 
 ---
 
-### Q56 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.1151
+### Q31 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.112(f)
 
-Which HSC section addresses possession of a substance in Penalty Group 1-A?
+A raid on a stash house recovers 450 grams of cocaine, along with press equipment and packaging materials.
 
-- [x] 481.1151
-- [ ] 481.1121
-- [ ] 481.115
-- [ ] 481.1161
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
+- [ ] Simple possession of a Penalty Group 1 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
 
-**Explanation:** 481.1151 is Penalty Group 1-A's possession offense; 481.1121 is that same group's manufacture/delivery offense.
+**Classification:**
+- [ ] Felony, 1st Degree
+- [x] Felony, 1st Degree, punishable by life or 15-99 years, fine up to $250,000
+- [ ] Felony, 1st Degree, punishable by life or 10-99 years, fine up to $100,000
+- [ ] Felony, 2nd Degree
 
----
-
-### Q57 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.115, BPOC 15.3
-
-Per BPOC instructor guidance, possession of a substance in Penalty Group 1-B is penalized the same as possession of Penalty Group 1, and is addressed under the same section: HSC ______.
-
-**Answer:** 481.115
-
-**Explanation:** Unlike manufacture/delivery (where PG-1-B is harsher than PG-1), BPOC notes that PG-1-B's possession penalty tracks PG-1's possession penalty, under the same 481.115 section.
+**Explanation:** Cocaine is Penalty Group 1. At 400 grams or more, 481.112(f) sets an enhanced first-degree floor: life or 15-99 years imprisonment and up to a $250,000 fine — the top tier of the PG1 manufacture/delivery ladder.
 
 ---
 
-### Q58 — Multiple Choice
-**LO:** 15.3 · **Source:** BPOC 15.3
+### Q32 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.1121(b)
 
-Per BPOC's instructor note, how does the possession penalty for Penalty Group 1-B compare to Penalty Group 1?
+A suspect is found with 45 dosage units ("abuse units") of LSD-soaked blotter paper, individually perforated for sale.
 
-- [x] They are the same — possession of PG-1-B is penalized identically to possession of PG-1
-- [ ] PG-1-B possession is always a lesser offense than PG-1 possession
-- [ ] PG-1-B possession is always more severe than PG-1 possession
-- [ ] PG-1-B has no possession offense — only manufacture/delivery is criminalized
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1-A substance
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 1-A substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
 
-**Explanation:** This is the flip side of the PG-1/PG-1-B contrast: manufacture/delivery of PG-1-B is equal to or harsher than PG-1's, but possession of PG-1-B matches PG-1's possession penalty exactly.
+**Classification:**
+- [ ] State Jail Felony
+- [x] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+- [ ] Felony, 1st Degree, enhanced minimum
 
----
-
-### Q59 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.116
-
-Possession of a substance in Penalty Group 2 is addressed under HSC ______.
-
-**Answer:** 481.116
-
-**Explanation:** 481.116 is the Penalty Group 2 possession offense.
+**Explanation:** LSD is Penalty Group 1-A, which is unusual in that it's measured in "abuse units" (individual doses), not weight. At 45 units — within the "20 or more but fewer than 80" bracket — 481.1121(b)(2) makes this a felony of the second degree.
 
 ---
 
-### Q60 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.116
+### Q33 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.1123(c)
 
-Which HSC section addresses possession of a substance in Penalty Group 2?
+A search of a vehicle turns up 2.5 grams of fentanyl powder, pressed pill molds, and packaging consistent with counterfeit pill production.
 
-- [x] 481.116
-- [ ] 481.113
-- [ ] 481.1161
-- [ ] 481.117
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1-B substance
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 1-B substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
 
-**Explanation:** 481.116 is Penalty Group 2's possession offense; 481.113 covers that same group's manufacture/delivery (shared with PG2-A), and 481.1161 is PG2-A's own possession section.
+**Classification:**
+- [ ] Felony, 3rd Degree
+- [x] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+- [ ] State Jail Felony
 
----
-
-### Q61 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.1161
-
-Possession of a substance in Penalty Group 2-A is addressed under HSC ______.
-
-**Answer:** 481.1161
-
-**Explanation:** 481.1161 is the dedicated possession offense for Penalty Group 2-A substances.
+**Explanation:** Fentanyl is Penalty Group 1-B, which starts at a *higher* baseline than PG1 itself (a third-degree felony for under 1 gram, versus PG1's state jail felony) given fentanyl's lethality. At 2.5 grams — the "1 gram or more but less than 4 grams" bracket — 481.1123(c) makes this a felony of the second degree.
 
 ---
 
-### Q62 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.1161
+### Q34 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.113(d)
 
-Which HSC section addresses possession of a substance in Penalty Group 2-A?
+An officer recovers 120 grams of MDMA ("molly") pressed into pills, along with a large quantity of cash and multiple cell phones.
 
-- [x] 481.1161
-- [ ] 481.116
-- [ ] 481.113
-- [ ] 481.1151
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 2 or 2-A substance
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 2 substance
+- [ ] Delivery of marihuana
 
-**Explanation:** 481.1161 is Penalty Group 2-A's possession offense, separate from Penalty Group 2's possession offense in 481.116.
+**Classification:**
+- [ ] Felony, 2nd Degree
+- [x] Felony, 1st Degree
+- [ ] State Jail Felony
+- [ ] Felony, 1st Degree, enhanced minimum
 
----
-
-### Q63 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.117
-
-Possession of a substance in Penalty Group 3 is addressed under HSC ______.
-
-**Answer:** 481.117
-
-**Explanation:** 481.117 is the Penalty Group 3 possession offense.
+**Explanation:** MDMA is Penalty Group 2. Under 481.113, Penalty Group 2 and 2-A manufacture/delivery share one ladder: at 120 grams — within "4 grams or more but less than 400 grams" — 481.113(d) makes this a straight felony of the first degree (note PG2's felony-1 bracket is much wider than PG1's, running all the way to 400 grams before the enhanced-minimum tier kicks in).
 
 ---
 
-### Q64 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.117
+### Q35 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.114(b)
 
-Which HSC section addresses possession of a substance in Penalty Group 3?
+A suspect is caught selling individual Xanax (alprazolam) pills without a prescription; the total recovered weight is 12 grams.
 
-- [x] 481.117
-- [ ] 481.114
-- [ ] 481.118
-- [ ] 481.116
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 3 or 4 substance
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 3 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
 
-**Explanation:** 481.117 is Penalty Group 3's possession offense; 481.114 covers that group's manufacture/delivery (shared with PG4), and 481.118 is PG4's own possession section.
+**Classification:**
+- [x] State Jail Felony
+- [ ] Felony, 2nd Degree
+- [ ] Class A Misdemeanor
+- [ ] Felony, 3rd Degree
 
----
-
-### Q65 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.118
-
-Possession of a substance in Penalty Group 4 is addressed under HSC ______.
-
-**Answer:** 481.118
-
-**Explanation:** 481.118 is the Penalty Group 4 possession offense.
+**Explanation:** Alprazolam (Xanax) is Penalty Group 3. Manufacture/delivery of PG3 or PG4 substances uses its own ladder under 481.114, starting much higher on the weight scale (28 grams) than PG1/PG2 before escalating — at 12 grams (under 28), this is a state jail felony.
 
 ---
 
-### Q66 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.118
+### Simple Possession — Classification by Weight
 
-Which HSC section addresses possession of a substance in Penalty Group 4?
+Same substances, different ladder: simple possession (no intent to deliver) is graded on its own scale, and — with the sole exception of Penalty Group 2-A below — it runs *lower* than the manufacture/delivery ladder for the same weight, because delivering to others is treated as more serious than personal possession.
 
-- [x] 481.118
-- [ ] 481.117
-- [ ] 481.114
-- [ ] 481.119
+### Q36 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.115(c)
 
-**Explanation:** 481.118 is Penalty Group 4's possession offense, distinct from Penalty Group 3's possession offense in 481.117.
+A traffic stop turns up 2 grams of heroin in the driver's pocket, with nothing suggesting it was for sale.
 
----
+**Offense:**
+- [x] Possession of a Penalty Group 1 or 1-B substance
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Possession of a Penalty Group 3 substance
+- [ ] Possession of drug paraphernalia
 
-### Q67 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.119
+**Classification:**
+- [ ] State Jail Felony
+- [x] Felony, 3rd Degree
+- [ ] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
 
-Manufacture, delivery, or possession of miscellaneous substances is addressed under HSC ______.
-
-**Answer:** 481.119
-
-**Explanation:** 481.119 is a catchall offense covering miscellaneous substances that don't fit neatly into one of the numbered penalty groups.
-
----
-
-### Q68 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.119
-
-Which HSC section addresses manufacture, delivery, or possession of "miscellaneous substances"?
-
-- [x] 481.119
-- [ ] 481.118
-- [ ] 481.124
-- [ ] 481.125
-
-**Explanation:** 481.119 is the miscellaneous-substances offense, distinct from the Penalty Group 4 possession offense (481.118) and the chemical-precursor and paraphernalia offenses (481.124, 481.125).
+**Explanation:** Heroin is Penalty Group 1; with no evidence of intent to deliver, this is simple possession under 481.115. At 2 grams — the "1 gram or more but less than 4 grams" bracket — that's a felony of the third degree, one full grade lower than the same 2 grams would be if charged as manufacture/delivery under 481.112(c) (felony of the second degree).
 
 ---
 
-### Q69 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.120
+### Q37 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.1151(b)
 
-Delivery of marihuana is addressed under HSC ______.
+A suspect is found with 90 hits of LSD blotter paper for personal use, with no indicators of sale.
 
-**Answer:** 481.120
+**Offense:**
+- [x] Possession of a Penalty Group 1-A substance
+- [ ] Manufacture or delivery of a Penalty Group 1-A substance
+- [ ] Possession of a Penalty Group 1 substance
+- [ ] Possession of a Penalty Group 2 substance
 
-**Explanation:** 481.120 is marihuana's dedicated delivery offense, separate from the general Chapter 481 penalty-group delivery sections since marihuana is excluded from "manufacture" under 481.002(25).
+**Classification:**
+- [x] Felony, 2nd Degree
+- [ ] Felony, 3rd Degree
+- [ ] State Jail Felony
+- [ ] Felony, 1st Degree
 
----
-
-### Q70 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.120
-
-Which HSC section addresses delivery of marihuana specifically (as opposed to a Chapter 481 penalty-group substance)?
-
-- [x] 481.120
-- [ ] 481.112
-- [ ] 481.121
-- [ ] 481.122
-
-**Explanation:** 481.120 is marihuana's own delivery offense; 481.121 is marihuana's possession offense, and 481.122 addresses delivery of a controlled substance or marihuana to a child.
+**Explanation:** LSD is Penalty Group 1-A, possessed (not delivered) here, so 481.1151 applies. At 90 abuse units — the "80 or more but fewer than 4,000" bracket — that's a felony of the second degree.
 
 ---
 
-### Q71 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.121
+### Q38 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.116(d)
 
-Possession of marihuana is addressed under HSC ______.
+A person is found with 50 grams of MDMA pills for personal use at a music festival, no sales activity observed.
 
-**Answer:** 481.121
+**Offense:**
+- [x] Possession of a Penalty Group 2 substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
+- [ ] Possession of a Penalty Group 2-A substance
+- [ ] Possession of a Penalty Group 1 substance
 
-**Explanation:** 481.121 is marihuana's dedicated possession offense.
+**Classification:**
+- [ ] State Jail Felony
+- [ ] Felony, 3rd Degree
+- [x] Felony, 2nd Degree
+- [ ] Felony, 1st Degree, enhanced minimum
 
----
-
-### Q72 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.121
-
-Which HSC section addresses possession of marihuana?
-
-- [x] 481.121
-- [ ] 481.120
-- [ ] 481.115
-- [ ] 481.119
-
-**Explanation:** 481.121 is marihuana's possession offense, paired with 481.120's delivery offense for the same substance.
+**Explanation:** MDMA is Penalty Group 2, and with no delivery indicators this is possession under 481.116. At 50 grams — the "4 grams or more but less than 400 grams" bracket — that's a felony of the second degree, the same bracket that would run all the way from 4 to 400 grams before hitting the enhanced first-degree floor.
 
 ---
 
-### Q73 — Fill-in-Blank
+### Q39 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.1161(b)
+
+A search turns up 3 pounds of plant material sprayed with a synthetic cannabinoid ("K2"/"Spice"), packaged for the suspect's own use.
+
+**Offense:**
+- [x] Possession of a Penalty Group 2-A substance
+- [ ] Possession of a Penalty Group 2 substance
+- [ ] Possession of marihuana
+- [ ] Manufacture or delivery of a Penalty Group 2-A substance
+
+**Classification:**
+- [x] State Jail Felony
+- [ ] Felony, 3rd Degree
+- [ ] Class A Misdemeanor
+- [ ] Felony, 2nd Degree
+
+**Explanation:** Synthetic cannabinoids are Penalty Group 2-A, and PG2-A possession is the one penalty group measured in **ounces/pounds instead of grams** — a deliberate quirk worth remembering. At 3 pounds — the "more than 4 ounces but 5 pounds or less" bracket — 481.1161(b)(3) makes this a state jail felony.
+
+---
+
+### Q40 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.1161(b)
+
+A search turns up 1.5 ounces of synthetic cannabinoid-sprayed plant material, for personal use.
+
+**Offense:**
+- [x] Possession of a Penalty Group 2-A substance
+- [ ] Possession of a Penalty Group 2 substance
+- [ ] Possession of marihuana
+- [ ] Possession of drug paraphernalia only
+
+**Classification:**
+- [x] Class B Misdemeanor
+- [ ] Class A Misdemeanor
+- [ ] State Jail Felony
+- [ ] Felony, 3rd Degree
+
+**Explanation:** Still Penalty Group 2-A, still measured in ounces/pounds. At 1.5 ounces — "two ounces or less" — 481.1161(b)(1) makes this only a Class B misdemeanor, the lightest possession charge on the entire PG2-A/PG2 spectrum, despite K2/Spice being a synthetic cannabinoid that would otherwise sound serious.
+
+---
+
+### Q41 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.117(c)
+
+A person is found with 40 grams of Xanax (alprazolam) tablets, no prescription, no sales indicators.
+
+**Offense:**
+- [x] Possession of a Penalty Group 3 substance
+- [ ] Manufacture or delivery of a Penalty Group 3 substance
+- [ ] Possession of a Penalty Group 1 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
+
+**Classification:**
+- [ ] Class A Misdemeanor
+- [x] Felony, 3rd Degree
+- [ ] Felony, 2nd Degree
+- [ ] State Jail Felony
+
+**Explanation:** Alprazolam is Penalty Group 3. At 40 grams — the "28 grams or more but less than 200 grams" bracket — 481.117(c) makes this a felony of the third degree; under 28 grams, the same possession would only be a Class A misdemeanor (481.117(b)).
+
+---
+
+### Q42 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.118(b)
+
+A suspect has 10 grams of a low-dose codeine cough preparation (Penalty Group 4) with no prescription and no sales indicators.
+
+**Offense:**
+- [x] Possession of a Penalty Group 4 substance
+- [ ] Possession of a Penalty Group 3 substance
+- [ ] Manufacture or delivery of a Penalty Group 4 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
+
+**Classification:**
+- [x] Class B Misdemeanor
+- [ ] Class A Misdemeanor
+- [ ] State Jail Felony
+- [ ] Felony, 3rd Degree
+
+**Explanation:** This is Penalty Group 4, the lowest tier. At 10 grams — under the 28-gram threshold — 481.118(b) makes simple possession only a Class B misdemeanor, the lightest possession charge on the standard (non-PG2-A) possession ladder.
+
+---
+
+### Marihuana — Its Own Ladder
+
+### Q43 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.121(b)
+
+A passenger is found with 1.5 ounces of marihuana in a backpack, for personal use.
+
+**Offense:**
+- [x] Possession of marihuana
+- [ ] Delivery of marihuana
+- [ ] Possession of a Penalty Group 1 substance
+- [ ] Possession of drug paraphernalia
+
+**Classification:**
+- [ ] Class C Misdemeanor
+- [x] Class B Misdemeanor
+- [ ] Class A Misdemeanor
+- [ ] State Jail Felony
+
+**Explanation:** Marihuana possession runs its own ladder under 481.121, entirely separate from the Penalty Group scheme. At 1.5 ounces — "two ounces or less" — 481.121(b)(1) makes this a Class B misdemeanor.
+
+---
+
+### Q44 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.121(b)
+
+A search of a residence turns up 3 pounds of marihuana, individually vacuum-sealed, alongside a digital scale — but the suspect insists it's all for personal use and no sale is otherwise proven.
+
+**Offense:**
+- [x] Possession of marihuana
+- [ ] Delivery of marihuana
+- [ ] Manufacture of a Penalty Group 3 substance
+- [ ] Possession of a Penalty Group 2-A substance
+
+**Classification:**
+- [ ] Class A Misdemeanor
+- [x] State Jail Felony
+- [ ] Felony, 3rd Degree
+- [ ] Felony, 2nd Degree
+
+**Explanation:** Without provable delivery/intent-to-deliver, this is still charged as possession under 481.121, not delivery. At 3 pounds — "five pounds or less but more than four ounces" — 481.121(b)(3) makes it a state jail felony, regardless of the packaging that might otherwise suggest sales.
+
+---
+
+### Q45 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.120(b)
+
+An undercover buy: the suspect delivers a quarter-ounce or less of marihuana to the officer in exchange for cash.
+
+**Offense:**
+- [x] Delivery of marihuana
+- [ ] Possession of marihuana
+- [ ] Manufacture of a Penalty Group 3 substance
+- [ ] Delivery of a controlled substance or marihuana to a child
+
+**Classification:**
+- [ ] Class B Misdemeanor
+- [x] Class A Misdemeanor
+- [ ] State Jail Felony
+- [ ] Felony, 2nd Degree
+
+**Explanation:** Marihuana delivery (481.120) treats a quarter-ounce-or-less sale differently depending on whether the seller was paid: no remuneration is only a Class B misdemeanor (481.120(b)(1)), but delivery *for cash or anything of value*, even at that tiny quantity, bumps it to a Class A misdemeanor under 481.120(b)(2) — receiving payment is what drives the enhancement here, not the amount.
+
+---
+
+### Q46 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.120(b)
+
+A dealer is caught delivering 30 pounds of marihuana to a buyer.
+
+**Offense:**
+- [x] Delivery of marihuana
+- [ ] Possession of marihuana
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
+
+**Classification:**
+- [ ] State Jail Felony
+- [x] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+- [ ] Felony, 1st Degree, enhanced minimum
+
+**Explanation:** At 30 pounds — "50 pounds or less but more than five pounds" — 481.120(b)(4) makes marihuana delivery a felony of the second degree. Compare the possession scenario above: the *same weight class* possessed rather than delivered would be one grade lower.
+
+---
+
+### Special Offense Provisions
+
+### Q47 — Concept
 **LO:** 15.3 · **Source:** HSC 481.122
 
-Delivery of a controlled substance or marihuana to a child is addressed under HSC ______.
+A 24-year-old knowingly delivers a small amount of cocaine to a 16-year-old. Regardless of the exact weight involved, what classification applies under 481.122?
 
-**Answer:** 481.122
+- [ ] It follows the normal Penalty Group 1 weight ladder like any other delivery
+- [x] It's a flat felony of the second degree, regardless of the amount delivered
+- [ ] It's automatically a state jail felony, the lowest felony tier
+- [ ] It can only be charged as a Class A misdemeanor
 
-**Explanation:** 481.122 creates a distinct, aggravated offense for delivering a controlled substance or marihuana specifically to a child, apart from the general delivery offenses.
-
----
-
-### Q74 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.122
-
-Which HSC section specifically addresses delivery of a controlled substance or marihuana to a child?
-
-- [x] 481.122
-- [ ] 481.120
-- [ ] 481.121
-- [ ] 444.004
-
-**Explanation:** 481.122 is the child-delivery offense; 444.004 is a separate, similarly-purposed offense but specific to distributing or selling a kratom product to a minor.
+**Explanation:** 481.122 (Delivery of Controlled Substance or Marihuana to a Child) is a flat felony of the second degree — it doesn't matter how little was delivered, or what the weight-based classification would otherwise have been under 481.112-.114 or 481.120. Delivering to a child, a person enrolled in primary/secondary school, or someone the actor believes will pass it to a child all qualify.
 
 ---
 
-### Q75 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 444.004
+### Q48 — Concept
+**LO:** 15.3 · **Source:** HSC 481.122(b)
 
-Distribution or sale of a kratom product to a minor is addressed under HSC ______.
+481.122's delivery-to-a-child enhancement has a built-in affirmative defense for close-in-age, no-payment marihuana transfers. What does that defense require?
 
-**Answer:** 444.004
+- [x] The actor was younger than 21, delivered only marihuana in an amount of one-fourth ounce or less, and received no payment for it
+- [ ] The actor had no prior criminal record
+- [ ] The recipient consented in writing
+- [ ] The delivery happened more than 1,000 feet from a school
 
-**Explanation:** Unlike the other offenses in this LO, the kratom-to-a-minor offense sits outside Chapter 481 entirely, in HSC Chapter 444.
-
----
-
-### Q76 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 444.004
-
-Which HSC chapter contains the offense of distributing or selling a kratom product to a minor?
-
-- [x] Chapter 444
-- [ ] Chapter 481
-- [ ] Chapter 482
-- [ ] Chapter 483
-
-**Explanation:** The kratom-to-a-minor offense (444.004) is the one offense in this LO that falls outside the Controlled Substances Act (Chapter 481) and the Simulated Controlled Substances chapter (482) — it's housed in Chapter 444 instead.
+**Explanation:** 481.122(b)(2) is a narrow affirmative defense: the actor was under 21 at the time, delivered only marihuana (nothing else), the amount was a quarter-ounce or less, and no remuneration changed hands. Miss any one of those elements and the flat second-degree-felony classification applies in full.
 
 ---
 
-### Q77 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.124
+### Q49 — Concept
+**LO:** 15.3 · **Source:** HSC 481.119
 
-Possession or transport of certain chemicals with intent to manufacture a controlled substance is addressed under HSC ______.
+A newly emerging synthetic drug gets added to a DPS-commissioner schedule by rule, but hasn't yet been assigned to one of the four Penalty Groups by the legislature. A first-time offender is caught delivering it. What's the default classification?
 
-**Answer:** 481.124
+- [ ] Automatically Penalty Group 1, since it's new and unclassified
+- [x] A Class A misdemeanor — the default for manufacture/delivery of a scheduled-but-not-penalty-grouped substance, absent priors
+- [ ] No offense at all until the legislature formally assigns it a penalty group
+- [ ] A felony of the first degree, treated the same as an unknown Schedule I substance
 
-**Explanation:** 481.124 targets the precursor-chemical stage of drug manufacturing — possessing or transporting the chemicals themselves with manufacturing intent, before any controlled substance actually exists.
-
----
-
-### Q78 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.124
-
-Which HSC section addresses possession or transport of certain chemicals with intent to manufacture a controlled substance?
-
-- [x] 481.124
-- [ ] 481.125
-- [ ] 481.119
-- [ ] 481.113
-
-**Explanation:** 481.124 covers the chemical/precursor stage; 481.125 instead covers possession or delivery of drug paraphernalia — a related but distinct offense.
+**Explanation:** 481.119(a) is the catch-all for substances the commissioner has scheduled by rule but that haven't (yet) been slotted into a Penalty Group: manufacture/delivery/possession-with-intent defaults to a Class A misdemeanor, escalating to a state jail felony on a first prior conviction under this same subsection, and a third-degree felony on two or more priors — a graduated repeat-offender ladder rather than a flat classification.
 
 ---
 
-### Q79 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.125
+### Q50 — Concept
+**LO:** 15.3 · **Source:** HSC 481.124(d)
 
-Possession or delivery of drug paraphernalia is addressed under HSC ______.
+A suspect is caught with pseudoephedrine, lithium strips, and other classic "meth lab" precursor materials, with clear intent to manufacture. The intended end product is methamphetamine (Penalty Group 1). What's the classification of the precursor-possession offense itself?
 
-**Answer:** 481.125
+- [x] Felony of the second degree
+- [ ] State jail felony
+- [ ] Class A misdemeanor
+- [ ] Felony of the third degree
 
-**Explanation:** 481.125 is the drug-paraphernalia offense, applying the 481.002(17) definition of "drug paraphernalia."
-
----
-
-### Q80 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.125
-
-Which HSC section addresses possession or delivery of drug paraphernalia?
-
-- [x] 481.125
-- [ ] 481.124
-- [ ] 483.041
-- [ ] 483.042
-
-**Explanation:** 481.125 is the drug-paraphernalia offense under the Controlled Substances Act; 483.041/483.042 are the parallel possession/delivery offenses for dangerous drugs under Chapter 483, a different chapter covered later in this course.
+**Explanation:** 481.124 (Possession or Transport of Certain Chemicals With Intent to Manufacture) grades the *precursor* offense by which penalty group the intended finished substance belongs to: 481.124(d)(1) makes it a felony of the second degree when the target substance is Penalty Group 1, 1-A, or 1-B; a felony of the third degree for Penalty Group 2; and a state jail felony for Penalty Group 3 or 4 — the precursor possession offense is charged even though no finished controlled substance exists yet.
 
 ---
 
-### Q81 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.133
+### Q51 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.125(d)-(f)
 
-Falsifying drug test results is addressed under HSC ______.
+An officer finds a suspect merely possessing a glass pipe with drug residue, no sales activity. A second suspect is caught knowingly selling glass pipes to customers he knows intend to use them with methamphetamine. A third suspect, an adult, sells the same pipes specifically targeting customers he knows are minors. How do these three scenarios differ in classification?
 
-**Answer:** 481.133
+- [x] Simple possession: Class C misdemeanor — Knowing sale to a user: Class A misdemeanor (enhanced to a higher minimum jail term on a prior conviction) — Knowing sale targeting a minor: state jail felony
+- [ ] All three are Class A misdemeanors
+- [ ] All three are state jail felonies, since paraphernalia is inherently a felony-level offense
+- [ ] Simple possession: state jail felony — Sale to a user: Class C misdemeanor — Sale to a minor: Class A misdemeanor
 
-**Explanation:** 481.133 is a standalone offense for falsifying drug test results, separate from the manufacture/delivery/possession framework.
-
----
-
-### Q82 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.133
-
-Which HSC section addresses falsifying drug test results?
-
-- [x] 481.133
-- [ ] 481.141
-- [ ] 481.124
-- [ ] 481.119
-
-**Explanation:** 481.133 is the falsified-drug-test-results offense; 481.141 instead covers manufacture/delivery causing death or serious bodily injury.
-
----
-
-### Q83 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.141
-
-Manufacture or delivery of a controlled substance causing death or serious bodily injury is addressed under HSC ______.
-
-**Answer:** 481.141
-
-**Explanation:** 481.141 is a result-of-conduct enhancement offense — it applies when manufacture or delivery of a controlled substance actually causes a death or serious bodily injury.
-
----
-
-### Q84 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.141
-
-Which HSC section addresses manufacture or delivery of a controlled substance that causes death or serious bodily injury to another person?
-
-- [x] 481.141
-- [ ] 481.133
-- [ ] 482.002
-- [ ] 481.122
-
-**Explanation:** 481.141 is specifically the death-or-serious-bodily-injury offense tied to manufacture/delivery, distinct from the child-delivery offense (481.122) and the simulated-substance offense (482.002).
-
----
-
-### Q85 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 482.001
-
-Simulated controlled substances are defined and addressed under HSC ______.
-
-**Answer:** 482.001
-
-**Explanation:** 482.001 is where "simulated controlled substance" is defined, kicking off Chapter 482's separate framework for look-alike drugs.
-
----
-
-### Q86 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 482.001
-
-Which HSC section defines "simulated controlled substances," the sixth of BPOC's six major categories?
-
-- [x] 482.001
-- [ ] 481.002
-- [ ] 482.002
-- [ ] 481.119
-
-**Explanation:** 482.001 is the definitional section for simulated controlled substances; 482.002 is instead the offense section for their unlawful delivery/manufacture with intent to deliver.
-
----
-
-### Q87 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 482.002
-
-Unlawful delivery or manufacture of a simulated controlled substance with intent to deliver is a criminal offense addressed under HSC ______.
-
-**Answer:** 482.002
-
-**Explanation:** 482.002 is Chapter 482's operative offense section — criminalizing unlawful delivery or manufacture with intent to deliver a simulated controlled substance.
-
----
-
-### Q88 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 482.002
-
-Which HSC section makes it a criminal offense to unlawfully deliver or manufacture, with intent to deliver, a simulated controlled substance?
-
-- [x] 482.002
-- [ ] 482.001
-- [ ] 481.141
-- [ ] 481.120
-
-**Explanation:** 482.002 is the operative simulated-controlled-substance offense; 482.001 is only the definitional section that precedes it.
-
----
-
-### Q89 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.115(g), 481.1151(c), 481.116(f), 481.1161(c), 481.117(f), 481.118(f), 481.119(c), 481.121(c)
-
-For each penalty-group possession offense, the Controlled Substances Act includes its own defense-to-prosecution subsection — for example, the defense to a Penalty Group 1 or 1-B possession charge is found in HSC 481.115, subsection ______.
-
-**Answer:** g
-
-**Explanation:** 481.115(g) is where the defense to prosecution for Penalty Group 1/1-B possession is found; each other penalty group's possession section carries its own parallel defense subsection.
-
----
-
-### Q90 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.1151(c), 481.116(f)
-
-Where is the defense to prosecution located for a Penalty Group 1-A possession charge, versus a Penalty Group 2 possession charge?
-
-- [x] 481.1151(c) for Penalty Group 1-A; 481.116(f) for Penalty Group 2
-- [ ] 481.115(g) for both
-- [ ] 481.1161(c) for Penalty Group 1-A; 481.117(f) for Penalty Group 2
-- [ ] Neither penalty group has its own defense-to-prosecution subsection
-
-**Explanation:** Each Chapter 481 possession offense carries its own defense subsection: 481.1151(c) for Penalty Group 1-A and 481.116(f) for Penalty Group 2, distinct from the 481.115(g) defense used for Penalty Group 1/1-B.
-
----
-
-### Q91 — Fill-in-Blank
-**LO:** 15.3 · **Source:** HSC 481.1161(c), 481.117(f), 481.118(f)
-
-The defense-to-prosecution subsections for Penalty Group 2-A, Penalty Group 3, and Penalty Group 4 possession are found, respectively, at 481.1161(c), 481.117(f), and HSC ______(f).
-
-**Answer:** 481.118
-
-**Explanation:** Following the pattern established across the penalty groups, Penalty Group 4's possession defense sits in 481.118(f), paralleling 481.1161(c) for PG2-A and 481.117(f) for PG3.
-
----
-
-### Q92 — Multiple Choice
-**LO:** 15.3 · **Source:** HSC 481.119(c), 481.121(c)
-
-Besides the numbered penalty groups, which two other Chapter 481 possession-type offenses also carry their own defense-to-prosecution subsections?
-
-- [x] Miscellaneous substances (481.119(c)) and possession of marihuana (481.121(c))
-- [ ] Drug paraphernalia (481.125) and falsifying drug test results (481.133)
-- [ ] Delivery to a child (481.122) and manufacture causing death (481.141)
-- [ ] Simulated controlled substances (482.001) and their delivery (482.002)
-
-**Explanation:** The defense-to-prosecution pattern extends beyond the numbered penalty groups to the miscellaneous-substances offense (481.119(c)) and marihuana possession (481.121(c)) as well.
+**Explanation:** 481.125 tiers paraphernalia offenses by conduct: simple possession/use under (a) is a Class C misdemeanor per (d); knowingly delivering/possessing-with-intent-to-deliver/manufacturing-with-intent-to-deliver paraphernalia under (b) is a Class A misdemeanor per (e) (with an enhanced 90-day-to-1-year minimum jail term on a prior conviction under (b) or (c)); and doing that specifically to a minor at least 3 years younger, by an adult, under (c) is a state jail felony per (f) — a meaningful escalation for targeting minors.
 
 ---
 
 ## LO 15.4: Enhancements Affecting Punishment (PC 12.35, Gov't Code 508.145, HSC 481.1122 & 481.1285, PC 22.041 & 71.023)
 
-### Q93 — Term ID
+### Q52 — Term ID
 **LO:** 15.4 · **Source:** PC 1.07(a)(17)
 
 **Answer:** deadly weapon
@@ -1170,7 +885,7 @@ Besides the numbered penalty groups, which two other Chapter 481 possession-type
 
 ---
 
-### Q94 — Multiple Choice
+### Q53 — Multiple Choice
 **LO:** 15.4 · **Source:** PC 12.35(a), (c)(1)
 
 Under PC 12.35, a state jail felony drug offense is punished as a felony of the third degree instead of a state jail felony when:
@@ -1184,7 +899,7 @@ Under PC 12.35, a state jail felony drug offense is punished as a felony of the 
 
 ---
 
-### Q95 — Fill-in-Blank
+### Q54 — Fill-in-Blank
 **LO:** 15.4 · **Source:** Gov't Code 508.145(d), (f)
 
 **Answer:** one-half
@@ -1195,7 +910,7 @@ Under Government Code 508.145(d), an inmate whose judgment contains an affirmati
 
 ---
 
-### Q96 — Multiple Choice
+### Q55 — Multiple Choice
 **LO:** 15.4 · **Source:** Gov't Code 508.145(d), (f)
 
 Per BPOC 15.4, an affirmative deadly-weapon finding affects a convicted drug offender's parole eligibility how?
@@ -1209,7 +924,7 @@ Per BPOC 15.4, an affirmative deadly-weapon finding affects a convicted drug off
 
 ---
 
-### Q97 — Multiple Choice
+### Q56 — Multiple Choice
 **LO:** 15.4 · **Source:** HSC 481.1122
 
 Under HSC 481.1122, if a child younger than 18 was present on the premises when a Penalty Group 1 substance was manufactured, what happens to the punishment at the punishment phase of trial?
@@ -1223,7 +938,7 @@ Under HSC 481.1122, if a child younger than 18 was present on the premises when 
 
 ---
 
-### Q98 — Fill-in-Blank
+### Q57 — Fill-in-Blank
 **LO:** 15.4 · **Source:** HSC 481.1285(b), (c)
 
 **Answer:** third
@@ -1234,7 +949,7 @@ Under HSC 481.1285, a registrant or dispenser who knowingly diverts a controlled
 
 ---
 
-### Q99 — Multiple Choice
+### Q58 — Multiple Choice
 **LO:** 15.4 · **Source:** HSC 481.1285(b), (c)
 
 "Diversion of Controlled Substance by Registrants, Dispensers, and Certain Other Persons" under HSC 481.1285 distinguishes between which two culpable acts?
@@ -1248,7 +963,7 @@ Under HSC 481.1285, a registrant or dispenser who knowingly diverts a controlled
 
 ---
 
-### Q100 — Multiple Choice
+### Q59 — Multiple Choice
 **LO:** 15.4 · **Source:** PC 22.041(c-1)(3)
 
 Under PC 22.041(c-1)(3) (Endangering a Child), what creates a presumption that a person placed a child, elderly individual, or disabled individual in imminent danger of death, bodily injury, or physical/mental impairment?
@@ -1262,7 +977,7 @@ Under PC 22.041(c-1)(3) (Endangering a Child), what creates a presumption that a
 
 ---
 
-### Q101 — Multiple Choice
+### Q60 — Multiple Choice
 **LO:** 15.4 · **Source:** PC 71.023(a), (b)
 
 Under PC 71.023, a gang or foreign-terrorist-organization leader who knowingly finances, directs, or supervises the manufacture, delivery, or possession of more than 4 grams of a Penalty Group 1-B substance by gang/organization members commits an offense classified as:
@@ -1276,7 +991,7 @@ Under PC 71.023, a gang or foreign-terrorist-organization leader who knowingly f
 
 ---
 
-### Q102 — Multiple Choice
+### Q61 — Multiple Choice
 **LO:** 15.4 · **Source:** BPOC 15.4
 
 Which of the following is NOT one of the drug-law punishment enhancements listed in BPOC 15.4?
@@ -1290,9 +1005,95 @@ Which of the following is NOT one of the drug-law punishment enhancements listed
 
 ---
 
+### Drug-Free Zones (HSC 481.134)
+
+### Q62 — Concept
+**LO:** 15.4 · **Source:** HSC 481.134(b)-(c)
+
+An offense that would otherwise be a state jail felony under 481.112 (PG1 manufacture/delivery) is committed on a public school's campus. What does the drug-free-zone enhancement in 481.134 do to the classification?
+
+- [ ] Nothing changes — drug-free zones only affect fines, not the offense grade
+- [x] The state jail felony is bumped up to a felony of the third degree
+- [ ] The offense becomes a capital felony
+- [ ] The offense is reduced, since school proximity triggers a diversion program instead
+
+**Explanation:** 481.134(b) escalates the *grade* by one full step for offenses that would otherwise be a state jail felony, third-degree felony, or second-degree felony under 481.112, 481.1121, 481.1123, 481.113, 481.114, or 481.120, when committed within a drug-free zone — a state jail felony becomes a third-degree felony, and so on up the ladder.
+
+---
+
+### Q63 — Concept
+**LO:** 15.4 · **Source:** HSC 481.134(a), (c)
+
+Which of the following is NOT one of the drug-free zone locations that can trigger the 481.134 enhancement?
+
+- [ ] Within 1,000 feet of a school, youth center, or playground
+- [ ] On a school bus
+- [x] Within 1,000 feet of a private residence with no minors present
+- [ ] Within 1,000 feet of premises owned by an institution of higher education (for the grade-escalation enhancement under (b))
+
+**Explanation:** 481.134(g) specifically carves out offenses committed inside a private residence when no minor was present — that scenario does NOT trigger the enhancement. Schools, youth centers, playgrounds, school buses, and (for certain offenses) institutions of higher education are all drug-free-zone triggers.
+
+---
+
+### Q64 — Concept
+**LO:** 15.4 · **Source:** HSC 481.134(c)
+
+Beyond bumping the offense grade, what else can the drug-free-zone enhancement do to an offense that's already punished under one of the higher brackets (e.g. 481.112(c), (d), (e), or (f))?
+
+- [ ] Nothing further — grade-bumping is the only effect
+- [x] It adds five years to the minimum term of confinement/imprisonment and doubles the maximum fine
+- [ ] It caps the sentence at five years regardless of the underlying offense
+- [ ] It converts the offense into a civil penalty only
+
+**Explanation:** 481.134(c) is a separate enhancement layer from (b): for offenses already punished under the higher brackets of 481.112 (and the parallel higher brackets of the other manufacture/delivery/possession sections), a drug-free-zone finding adds five years to the *minimum* term and doubles the *maximum* fine — stacking on top of, not replacing, the underlying weight-based classification.
+
+---
+
+### Q65 — Concept
+**LO:** 15.4 · **Source:** HSC 481.134(h)
+
+Can a drug-free-zone-enhanced sentence run concurrently (at the same time) with a sentence for another criminal statute?
+
+- [ ] Yes, always, at the judge's discretion
+- [x] No — 481.134(h) specifically prohibits the enhanced punishment from running concurrently with punishment for a conviction under any other criminal statute
+- [ ] Only if the other offense is also a drug offense
+- [ ] Only for misdemeanor-level offenses
+
+**Explanation:** 481.134(h) is explicit: punishment that's increased under this section may not run concurrently with punishment for a conviction under any other criminal statute — it must be served consecutively (stacked), not simultaneously.
+
+---
+
+### Q66 — Scenario
+**LO:** 15.4 · **Source:** HSC 481.134(a)(5)
+
+An officer is evaluating whether a location a dealer operated near counts as a "school" for drug-free-zone purposes. Which of these fits the statutory definition of "school" under 481.134(a)(5)?
+
+- [ ] A private or public elementary or secondary school
+- [ ] A community college
+- [ ] A four-year university
+- [x] A private daycare, as defined by Human Resources Code 42.002 — as well as a private or public elementary/secondary school
+
+**Explanation:** 481.134(a)(5) defines "school" to include a private or public elementary or secondary school *or* a day-care center as defined by Human Resources Code 42.002 — pulling in a definition from an entirely different code. Colleges and universities are covered separately as "institutions of higher education" under 481.134(a)(2), which cross-references Education Code 61.003 and carries its own, narrower enhancement scope under subsection (b) only.
+
+---
+
+### Q67 — Concept
+**LO:** 15.4 · **Source:** HSC 481.134(a)(3), (6), (7)
+
+481.134 pulls in several "youth-oriented location" definitions beyond just schools. Which of these correctly matches a defined term to its distance trigger?
+
+- [x] A public swimming pool or video arcade facility — within 300 feet
+- [ ] A youth center — within 300 feet
+- [ ] A playground — within 1,000 feet, but only if it's on the same premises as a school
+- [ ] A school bus — within 1,000 feet of where it's parked
+
+**Explanation:** 481.134(a) defines "playground" and "youth center" as 1,000-foot triggers (grouped with schools), while a public swimming pool or video arcade facility gets its own shorter 300-foot radius under (b)(2) — smaller, tightly-defined locations get a smaller buffer than the broader school/youth-center/playground category. Being on a school bus itself is a separate, distance-independent trigger.
+
+---
+
 ## LO 15.5: Seizure & Destruction of Controlled Substance Property (HSC 481.153-481.160)
 
-### Q103 — Fill-in-Blank
+### Q68 — Fill-in-Blank
 **LO:** 15.5 · **Source:** HSC 481.153(a)
 
 **Answer:** 481.153
@@ -1303,7 +1104,7 @@ Under HSC ______, controlled substance property that is manufactured, delivered,
 
 ---
 
-### Q104 — Multiple Choice
+### Q69 — Multiple Choice
 **LO:** 15.5 · **Source:** HSC 481.153(b)
 
 Once controlled substance property is seized and forfeited under HSC 481.153, who may order its disposition, summary destruction, or other disposal?
@@ -1317,7 +1118,7 @@ Once controlled substance property is seized and forfeited under HSC 481.153, wh
 
 ---
 
-### Q105 — Multiple Choice
+### Q70 — Multiple Choice
 **LO:** 15.5 · **Source:** HSC 481.154(b)
 
 Under HSC 481.154(b), rules for the destruction of controlled substance property or plants must require which of the following?
@@ -1331,7 +1132,7 @@ Under HSC 481.154(b), rules for the destruction of controlled substance property
 
 ---
 
-### Q106 — Fill-in-Blank
+### Q71 — Fill-in-Blank
 **LO:** 15.5 · **Source:** HSC 481.159(c)
 
 **Answer:** 481.159
@@ -1342,7 +1143,7 @@ When a law enforcement agency retains controlled substance property or a plant f
 
 ---
 
-### Q107 — Multiple Choice
+### Q72 — Multiple Choice
 **LO:** 15.5 · **Source:** HSC 481.160(a)
 
 Under HSC 481.160, before a law enforcement agency may summarily destroy an excess quantity of forfeited controlled substance property without a court order, it must ensure which of the following?
@@ -1356,7 +1157,7 @@ Under HSC 481.160, before a law enforcement agency may summarily destroy an exce
 
 ---
 
-### Q108 — Multiple Choice
+### Q73 — Multiple Choice
 **LO:** 15.5 · **Source:** BPOC 15.5 (Instructor Note)
 
 Per BPOC 15.5's instructor note, in addition to HSC 481.153, which other HSC sections should instructors discuss regarding seizure and destruction procedures?
@@ -1372,7 +1173,7 @@ Per BPOC 15.5's instructor note, in addition to HSC 481.153, which other HSC sec
 
 ## LO 15.6: Dangerous Drug Terms (HSC 483.001)
 
-### Q109 — Term ID
+### Q74 — Term ID
 **LO:** 15.6 · **Source:** HSC 483.001(2)
 
 **Answer:** Dangerous drug
@@ -1383,7 +1184,7 @@ Per BPOC 15.5's instructor note, in addition to HSC 481.153, which other HSC sec
 
 ---
 
-### Q110 — Definition
+### Q75 — Definition
 **LO:** 15.6 · **Source:** HSC 483.001(2)
 
 Which term is defined in HSC 483.001 as "a device or a drug that is unsafe for self-medication and that is not included in Schedules I through V or Penalty Groups 1 through 4 of Chapter 481"?
@@ -1397,7 +1198,7 @@ Which term is defined in HSC 483.001 as "a device or a drug that is unsafe for s
 
 ---
 
-### Q111 — Term ID
+### Q76 — Term ID
 **LO:** 15.6 · **Source:** HSC 483.001(3)
 
 **Answer:** Deliver
@@ -1408,7 +1209,7 @@ Which term is defined in HSC 483.001 as "a device or a drug that is unsafe for s
 
 ---
 
-### Q112 — Definition
+### Q77 — Definition
 **LO:** 15.6 · **Source:** HSC 483.001(3)
 
 Under HSC 483.001, "Deliver" means:
@@ -1422,7 +1223,7 @@ Under HSC 483.001, "Deliver" means:
 
 ---
 
-### Q113 — Term ID
+### Q78 — Term ID
 **LO:** 15.6 · **Source:** HSC 483.001(6)
 
 **Answer:** Manufacturer
@@ -1433,7 +1234,7 @@ Under HSC 483.001, "Deliver" means:
 
 ---
 
-### Q114 — Multiple Choice
+### Q79 — Multiple Choice
 **LO:** 15.6 · **Source:** HSC 483.001(13)
 
 Under HSC 483.001(13), a valid "Prescription" for a dangerous drug must include which of the following, among other required elements?
@@ -1449,7 +1250,7 @@ Under HSC 483.001(13), a valid "Prescription" for a dangerous drug must include 
 
 ## LO 15.7: Commonly Abused Drugs
 
-### Q115 — Multiple Choice
+### Q80 — Multiple Choice
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 Per BPOC 15.7, narcotics/opioids (e.g., heroin, fentanyl, prescription pain relievers) primarily produce which effect?
@@ -1463,7 +1264,7 @@ Per BPOC 15.7, narcotics/opioids (e.g., heroin, fentanyl, prescription pain reli
 
 ---
 
-### Q116 — Fill-in-Blank
+### Q81 — Fill-in-Blank
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 **Answer:** Stimulants
@@ -1474,7 +1275,7 @@ ______ (such as cocaine and methamphetamine) speed up the body's systems, produc
 
 ---
 
-### Q117 — Multiple Choice
+### Q82 — Multiple Choice
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 Which commonly-abused-drug category listed in BPOC 15.7 includes cocaine and methamphetamine?
@@ -1488,7 +1289,7 @@ Which commonly-abused-drug category listed in BPOC 15.7 includes cocaine and met
 
 ---
 
-### Q118 — Multiple Choice
+### Q83 — Multiple Choice
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 Depressants, as discussed in BPOC 15.7, primarily affect the body by:
@@ -1502,7 +1303,7 @@ Depressants, as discussed in BPOC 15.7, primarily affect the body by:
 
 ---
 
-### Q119 — Fill-in-Blank
+### Q84 — Fill-in-Blank
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 **Answer:** Narcotic/opioid
@@ -1513,7 +1314,7 @@ The ______ drug category is the one most closely associated with the current ove
 
 ---
 
-### Q120 — Multiple Choice
+### Q85 — Multiple Choice
 **LO:** 15.7 · **Source:** BPOC 15.7 (NIDA)
 
 Which of the following is one of the three major categories of commonly abused drugs identified in BPOC 15.7?
@@ -1529,7 +1330,7 @@ Which of the following is one of the three major categories of commonly abused d
 
 ## LO 15.8: Common Paraphernalia
 
-### Q121 — Multiple Choice
+### Q86 — Multiple Choice
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 Per BPOC 15.8, needles and syringes are examples of paraphernalia associated with which method of drug use?
@@ -1543,7 +1344,7 @@ Per BPOC 15.8, needles and syringes are examples of paraphernalia associated wit
 
 ---
 
-### Q122 — Fill-in-Blank
+### Q87 — Fill-in-Blank
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 **Answer:** Inhalation
@@ -1554,7 +1355,7 @@ Small plastic bags and balloons used to hold powdered or gaseous substances for 
 
 ---
 
-### Q123 — Multiple Choice
+### Q88 — Multiple Choice
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 Gelatin capsules and tablets, as discussed in BPOC 15.8, are examples of paraphernalia associated with which method of drug use?
@@ -1568,7 +1369,7 @@ Gelatin capsules and tablets, as discussed in BPOC 15.8, are examples of paraphe
 
 ---
 
-### Q124 — Fill-in-Blank
+### Q89 — Fill-in-Blank
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 **Answer:** Application
@@ -1579,7 +1380,7 @@ Transdermal patches, drops, foam, and gel containers are examples of paraphernal
 
 ---
 
-### Q125 — Multiple Choice
+### Q90 — Multiple Choice
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 Per BPOC 15.8, which of the following is the correct pairing of paraphernalia item to method of use?
@@ -1593,7 +1394,7 @@ Per BPOC 15.8, which of the following is the correct pairing of paraphernalia it
 
 ---
 
-### Q126 — Multiple Choice
+### Q91 — Multiple Choice
 **LO:** 15.8 · **Source:** BPOC 15.8
 
 BPOC 15.8 organizes common drug paraphernalia into four categories based on:
@@ -1609,7 +1410,7 @@ BPOC 15.8 organizes common drug paraphernalia into four categories based on:
 
 ## LO 15.9: Dangerous Drug Violations (HSC 483.041-483.050)
 
-### Q127 — Fill-in-Blank
+### Q92 — Fill-in-Blank
 **LO:** 15.9 · **Source:** HSC 483.041(a)
 
 **Answer:** 483.041
@@ -1620,7 +1421,7 @@ Under HSC ______, a person commits an offense if the person possesses a dangerou
 
 ---
 
-### Q128 — Multiple Choice
+### Q93 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.041
 
 Possession of a dangerous drug in violation of HSC 483.041, absent an applicable exception, is classified as:
@@ -1634,7 +1435,7 @@ Possession of a dangerous drug in violation of HSC 483.041, absent an applicable
 
 ---
 
-### Q129 — Multiple Choice
+### Q94 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.041(c)
 
 HSC 483.041(c) lists several exceptions to the dangerous-drug possession offense. Which of the following is one of them?
@@ -1648,7 +1449,7 @@ HSC 483.041(c) lists several exceptions to the dangerous-drug possession offense
 
 ---
 
-### Q130 — Fill-in-Blank
+### Q95 — Fill-in-Blank
 **LO:** 15.9 · **Source:** HSC 483.042
 
 **Answer:** 483.042
@@ -1659,7 +1460,7 @@ Delivering, or offering to deliver, a dangerous drug in violation of HSC ______ 
 
 ---
 
-### Q131 — Multiple Choice
+### Q96 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.042
 
 Delivery of a dangerous drug, or an offer to deliver one, under HSC 483.042 is classified as:
@@ -1673,7 +1474,7 @@ Delivery of a dangerous drug, or an offer to deliver one, under HSC 483.042 is c
 
 ---
 
-### Q132 — Fill-in-Blank
+### Q97 — Fill-in-Blank
 **LO:** 15.9 · **Source:** HSC 483.043
 
 **Answer:** 483.043
@@ -1684,7 +1485,7 @@ Manufacturing a dangerous drug in violation of HSC ______ is a state jail felony
 
 ---
 
-### Q133 — Multiple Choice
+### Q98 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.045
 
 Under HSC 483.045, forging or altering a prescription for a dangerous drug is normally classified as:
@@ -1698,7 +1499,7 @@ Under HSC 483.045, forging or altering a prescription for a dangerous drug is no
 
 ---
 
-### Q134 — Multiple Choice
+### Q99 — Multiple Choice
 **LO:** 15.9 · **Source:** BPOC 15.9 (Instructor Note)
 
 Per BPOC 15.9's instructor note, in addition to 483.041-483.045, which other HSC sections should instructors also cover regarding dangerous drug violations?
@@ -1712,7 +1513,7 @@ Per BPOC 15.9's instructor note, in addition to 483.041-483.045, which other HSC
 
 ---
 
-### Q135 — Multiple Choice
+### Q100 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.047
 
 Under HSC 483.047, refilling a dangerous drug prescription without the practitioner's authorization is prohibited, subject to:
@@ -1726,7 +1527,7 @@ Under HSC 483.047, refilling a dangerous drug prescription without the practitio
 
 ---
 
-### Q136 — Multiple Choice
+### Q101 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.050
 
 Under HSC 483.050, it is an offense for a person subject to Chapter 483 to:
@@ -1742,7 +1543,7 @@ Under HSC 483.050, it is an offense for a person subject to Chapter 483 to:
 
 ## LO 15.10: Texas Compassionate-Use Program (Occ. Code Ch. 169)
 
-### Q137 — Term ID
+### Q102 — Term ID
 **LO:** 15.10 · **Source:** Occ. Code 169.001
 
 **Answer:** Low-THC cannabis
@@ -1753,7 +1554,7 @@ Under HSC 483.050, it is an offense for a person subject to Chapter 483 to:
 
 ---
 
-### Q138 — Multiple Choice
+### Q103 — Multiple Choice
 **LO:** 15.10 · **Source:** Occ. Code 169.001
 
 Under Occupations Code 169.001, which term is defined as the dried flowers/derivatives of Cannabis sativa L. containing not more than 1% THC by weight, used under the Compassionate-Use Program?
@@ -1767,7 +1568,7 @@ Under Occupations Code 169.001, which term is defined as the dried flowers/deriv
 
 ---
 
-### Q139 — Multiple Choice
+### Q104 — Multiple Choice
 **LO:** 15.10 · **Source:** Occ. Code 169.002
 
 Under Occupations Code 169.002, a physician who wishes to prescribe low-THC cannabis under the Compassionate-Use Program must:
@@ -1781,7 +1582,7 @@ Under Occupations Code 169.002, a physician who wishes to prescribe low-THC cann
 
 ---
 
-### Q140 — Fill-in-Blank
+### Q105 — Fill-in-Blank
 **LO:** 15.10 · **Source:** Occ. Code 169.003
 
 **Answer:** 90-day
@@ -1792,7 +1593,7 @@ Under Occupations Code 169.003, a low-THC cannabis prescription for a qualifying
 
 ---
 
-### Q141 — Multiple Choice
+### Q106 — Multiple Choice
 **LO:** 15.10 · **Source:** Occ. Code 169.004
 
 Under Occupations Code 169.004, the compassionate-use registry maintained by DPS is used to register:
@@ -1806,7 +1607,7 @@ Under Occupations Code 169.004, the compassionate-use registry maintained by DPS
 
 ---
 
-### Q142 — Multiple Choice
+### Q107 — Multiple Choice
 **LO:** 15.10 · **Source:** Occ. Code 169.005
 
 Under Occupations Code 169.005, a physician prescribing low-THC cannabis must document a patient treatment plan that includes:
@@ -1820,7 +1621,7 @@ Under Occupations Code 169.005, a physician prescribing low-THC cannabis must do
 
 ---
 
-### Q143 — Multiple Choice
+### Q108 — Multiple Choice
 **LO:** 15.10 · **Source:** BPOC 15.10
 
 The Texas Compassionate-Use Program, as discussed in BPOC 15.10, authorizes which of the following?
@@ -1836,7 +1637,7 @@ The Texas Compassionate-Use Program, as discussed in BPOC 15.10, authorizes whic
 
 ## LO 15.11: Marijuana & Hemp (HSC 481.002(26), Ag. Code Ch. 121)
 
-### Q144 — Term ID
+### Q109 — Term ID
 **LO:** 15.11 · **Source:** HSC 481.002(26)
 
 **Answer:** Marihuana
@@ -1847,7 +1648,7 @@ The Texas Compassionate-Use Program, as discussed in BPOC 15.10, authorizes whic
 
 ---
 
-### Q145 — Multiple Choice
+### Q110 — Multiple Choice
 **LO:** 15.11 · **Source:** HSC 481.002(26)(F); Ag. Code 121.001
 
 Under HSC 481.002(26)(F), "marihuana" excludes hemp as defined by Agriculture Code 121.001. What is the THC threshold that distinguishes legal hemp from illegal marijuana?
@@ -1861,7 +1662,7 @@ Under HSC 481.002(26)(F), "marihuana" excludes hemp as defined by Agriculture Co
 
 ---
 
-### Q146 — Fill-in-Blank
+### Q111 — Fill-in-Blank
 **LO:** 15.11 · **Source:** HSC 481.159(c)(1)
 
 **Answer:** quantitative
@@ -1872,7 +1673,7 @@ Because hemp and marijuana are visually and by-smell indistinguishable, HSC 481.
 
 ---
 
-### Q147 — Multiple Choice
+### Q112 — Multiple Choice
 **LO:** 15.11 · **Source:** Ag. Code 121.002
 
 Under Agriculture Code 121.002 (Legislative Intent), the State of Texas asserted:
@@ -1886,7 +1687,7 @@ Under Agriculture Code 121.002 (Legislative Intent), the State of Texas asserted
 
 ---
 
-### Q148 — Multiple Choice
+### Q113 — Multiple Choice
 **LO:** 15.11 · **Source:** Ag. Code 121.003
 
 Under Agriculture Code 121.003, the Texas Department of Agriculture (TDA) is required to:
@@ -1900,7 +1701,7 @@ Under Agriculture Code 121.003, the Texas Department of Agriculture (TDA) is req
 
 ---
 
-### Q149 — Multiple Choice
+### Q114 — Multiple Choice
 **LO:** 15.11 · **Source:** Ag. Code 121.004
 
 Agriculture Code 121.004 authorizes the Texas Department of Agriculture to:
@@ -1914,7 +1715,7 @@ Agriculture Code 121.004 authorizes the Texas Department of Agriculture to:
 
 ---
 
-### Q150 — Multiple Choice
+### Q115 — Multiple Choice
 **LO:** 15.11 · **Source:** BPOC 15.11
 
 Per BPOC 15.11, if a plant sample cannot be quantitatively tested for its delta-9 THC concentration, an officer:
@@ -1930,7 +1731,7 @@ Per BPOC 15.11, if a plant sample cannot be quantitatively tested for its delta-
 
 ## LO 15.12: Identifying Suspected Substances
 
-### Q151 — Multiple Choice
+### Q116 — Multiple Choice
 **LO:** 15.12 · **Source:** BPOC 15.12
 
 Per BPOC 15.12, definitive identification of an unknown controlled substance for prosecution purposes is typically performed by:
@@ -1944,7 +1745,7 @@ Per BPOC 15.12, definitive identification of an unknown controlled substance for
 
 ---
 
-### Q152 — Fill-in-Blank
+### Q117 — Fill-in-Blank
 **LO:** 15.12 · **Source:** BPOC 15.12 (Instructor Note)
 
 **Answer:** field test kit
@@ -1955,7 +1756,7 @@ In the field, an officer may use a presumptive ______ to develop probable cause,
 
 ---
 
-### Q153 — Multiple Choice
+### Q118 — Multiple Choice
 **LO:** 15.12 · **Source:** BPOC 15.12 (Instructor Note)
 
 BPOC 15.12's instructor note references which resources for identifying unfamiliar pills or substances, in addition to laboratory testing?
@@ -1969,7 +1770,7 @@ BPOC 15.12's instructor note references which resources for identifying unfamili
 
 ---
 
-### Q154 — Multiple Choice
+### Q119 — Multiple Choice
 **LO:** 15.12 · **Source:** BPOC 15.12 (Instructor Note)
 
 BPOC 15.12's instructor note raises which officer-safety concern related to field testing or handling unknown substances?
@@ -1985,7 +1786,7 @@ BPOC 15.12's instructor note raises which officer-safety concern related to fiel
 
 ## LO 15.13: Seizure & Destruction of Dangerous Drugs (HSC 483.074)
 
-### Q155 — Term ID
+### Q120 — Term ID
 **LO:** 15.13 · **Source:** HSC 483.074
 
 **Answer:** 483.074
@@ -1996,7 +1797,7 @@ The seizure and destruction of dangerous drug property under the Texas Dangerous
 
 ---
 
-### Q156 — Multiple Choice
+### Q121 — Multiple Choice
 **LO:** 15.13 · **Source:** HSC 483.074
 
 HSC 483.074 (Seizure and Destruction) applies to which category of property?
@@ -2010,7 +1811,7 @@ HSC 483.074 (Seizure and Destruction) applies to which category of property?
 
 ---
 
-### Q157 — Multiple Choice
+### Q122 — Multiple Choice
 **LO:** 15.13 · **Source:** BPOC 15.13
 
 Per BPOC 15.13, why does Chapter 483 need its own seizure-and-destruction provision (483.074) separate from Chapter 481's (481.153-481.160)?
@@ -2026,7 +1827,7 @@ Per BPOC 15.13, why does Chapter 483 need its own seizure-and-destruction provis
 
 ## LO 15.14: Drug Interdiction & Load-Car Characteristics
 
-### Q158 — Multiple Choice
+### Q123 — Multiple Choice
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 Per BPOC 15.14, a "load car" used to transport drugs is often chosen by traffickers because it is:
@@ -2040,7 +1841,7 @@ Per BPOC 15.14, a "load car" used to transport drugs is often chosen by traffick
 
 ---
 
-### Q159 — Fill-in-Blank
+### Q124 — Fill-in-Blank
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 **Answer:** false compartments
@@ -2051,7 +1852,7 @@ A common load-car characteristic officers are trained to look for is the presenc
 
 ---
 
-### Q160 — Multiple Choice
+### Q125 — Multiple Choice
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 Which of the following is listed in BPOC 15.14 as a physical/mechanical indicator of a possible load car?
@@ -2065,7 +1866,7 @@ Which of the following is listed in BPOC 15.14 as a physical/mechanical indicato
 
 ---
 
-### Q161 — Multiple Choice
+### Q126 — Multiple Choice
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 Per BPOC 15.14, which registration/ownership detail is a recognized load-car red flag?
@@ -2079,7 +1880,7 @@ Per BPOC 15.14, which registration/ownership detail is a recognized load-car red
 
 ---
 
-### Q162 — Multiple Choice
+### Q127 — Multiple Choice
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 BPOC 15.14 identifies certain driving behaviors as load-car indicators. Which of the following is one of them?
@@ -2093,7 +1894,7 @@ BPOC 15.14 identifies certain driving behaviors as load-car indicators. Which of
 
 ---
 
-### Q163 — Fill-in-Blank
+### Q128 — Fill-in-Blank
 **LO:** 15.14 · **Source:** BPOC 15.14
 
 **Answer:** nervousness
@@ -2106,7 +1907,7 @@ Driver ______, fidgeting, and avoidance of eye contact are behavioral (as oppose
 
 ## LO 15.15: Probable Cause Factors & Interview Techniques
 
-### Q164 — Multiple Choice
+### Q129 — Multiple Choice
 **LO:** 15.15 · **Source:** BPOC 15.15
 
 Per BPOC 15.15, which of the following is listed as a probable-cause factor supporting further investigation during a traffic stop?
@@ -2120,7 +1921,7 @@ Per BPOC 15.15, which of the following is listed as a probable-cause factor supp
 
 ---
 
-### Q165 — Fill-in-Blank
+### Q130 — Fill-in-Blank
 **LO:** 15.15 · **Source:** BPOC 15.15
 
 **Answer:** mismatched stories
@@ -2131,7 +1932,7 @@ When multiple occupants give conflicting or ______ about their travel plans, ori
 
 ---
 
-### Q166 — Multiple Choice
+### Q131 — Multiple Choice
 **LO:** 15.15 · **Source:** BPOC 15.15
 
 BPOC 15.15 lists characteristics of a possible "smuggler" profile. Which of the following is one of them?
@@ -2145,7 +1946,7 @@ BPOC 15.15 lists characteristics of a possible "smuggler" profile. Which of the 
 
 ---
 
-### Q167 — Multiple Choice
+### Q132 — Multiple Choice
 **LO:** 15.15 · **Source:** BPOC 15.15 (Instructor Note)
 
 BPOC 15.15's instructor note cautions that some "probable cause" or "smuggler profile" traits can also be exhibited by:
@@ -2159,7 +1960,7 @@ BPOC 15.15's instructor note cautions that some "probable cause" or "smuggler pr
 
 ---
 
-### Q168 — Multiple Choice
+### Q133 — Multiple Choice
 **LO:** 15.15 · **Source:** BPOC 15.15
 
 Per BPOC 15.15, when interviewing multiple occupants of a stopped vehicle, a recommended technique is to:
@@ -2173,7 +1974,7 @@ Per BPOC 15.15, when interviewing multiple occupants of a stopped vehicle, a rec
 
 ---
 
-### Q169 — Multiple Choice
+### Q134 — Multiple Choice
 **LO:** 15.15 · **Source:** BPOC 15.15
 
 Which of the following documents does BPOC 15.15 recommend an officer ask for during a vehicle interview, beyond license and registration?
@@ -2189,7 +1990,7 @@ Which of the following documents does BPOC 15.15 recommend an officer ask for du
 
 ## LO 15.16: Common Places of Concealment
 
-### Q170 — Multiple Choice
+### Q135 — Multiple Choice
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 Per BPOC 15.16, which of the following is an example of concealment "on the person," as opposed to in a vehicle or building?
@@ -2203,7 +2004,7 @@ Per BPOC 15.16, which of the following is an example of concealment "on the pers
 
 ---
 
-### Q171 — Fill-in-Blank
+### Q136 — Fill-in-Blank
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 **Answer:** toilet tank
@@ -2214,7 +2015,7 @@ A common in-building concealment location listed in BPOC 15.16 is the ______, al
 
 ---
 
-### Q172 — Multiple Choice
+### Q137 — Multiple Choice
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 Which of the following is listed in BPOC 15.16 as a common concealment location specific to vehicles?
@@ -2228,7 +2029,7 @@ Which of the following is listed in BPOC 15.16 as a common concealment location 
 
 ---
 
-### Q173 — Multiple Choice
+### Q138 — Multiple Choice
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 BPOC 15.16 organizes common concealment locations into which three broad categories?
@@ -2242,7 +2043,7 @@ BPOC 15.16 organizes common concealment locations into which three broad categor
 
 ---
 
-### Q174 — Fill-in-Blank
+### Q139 — Fill-in-Blank
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 **Answer:** spare tire
@@ -2253,7 +2054,7 @@ Among vehicle concealment locations, BPOC 15.16 specifically lists the ______ as
 
 ---
 
-### Q175 — Multiple Choice
+### Q140 — Multiple Choice
 **LO:** 15.16 · **Source:** BPOC 15.16
 
 Which of the following is listed in BPOC 15.16 as an on-the-person concealment method?
@@ -2269,7 +2070,7 @@ Which of the following is listed in BPOC 15.16 as an on-the-person concealment m
 
 ## LO 15.17: Uncorroborated Testimony (HSC 483.072, CCP 38.14, 38.141)
 
-### Q176 — Term ID
+### Q141 — Term ID
 **LO:** 15.17 · **Source:** HSC 483.072
 
 **Answer:** uncorroborated testimony
@@ -2280,7 +2081,7 @@ Which of the following is listed in BPOC 15.16 as an on-the-person concealment m
 
 ---
 
-### Q177 — Multiple Choice
+### Q142 — Multiple Choice
 **LO:** 15.17 · **Source:** HSC 483.072
 
 Under HSC 483.072, a conviction for a Chapter 483 (Dangerous Drug Act) offense may be obtained:
@@ -2294,7 +2095,7 @@ Under HSC 483.072, a conviction for a Chapter 483 (Dangerous Drug Act) offense m
 
 ---
 
-### Q178 — Fill-in-Blank
+### Q143 — Fill-in-Blank
 **LO:** 15.17 · **Source:** CCP Art. 38.14
 
 **Answer:** accomplice
@@ -2305,7 +2106,7 @@ Under CCP Art. 38.14, a conviction generally cannot be had upon the testimony of
 
 ---
 
-### Q179 — Multiple Choice
+### Q144 — Multiple Choice
 **LO:** 15.17 · **Source:** CCP Art. 38.14
 
 CCP Art. 38.14 (Testimony of Accomplice) requires that accomplice testimony be:
@@ -2319,7 +2120,7 @@ CCP Art. 38.14 (Testimony of Accomplice) requires that accomplice testimony be:
 
 ---
 
-### Q180 — Term ID
+### Q145 — Term ID
 **LO:** 15.17 · **Source:** CCP Art. 38.141
 
 **Answer:** undercover peace officer or special investigator
@@ -2330,7 +2131,7 @@ Under CCP Art. 38.141, a defendant may not be convicted of certain offenses unde
 
 ---
 
-### Q181 — Multiple Choice
+### Q146 — Multiple Choice
 **LO:** 15.17 · **Source:** CCP Art. 38.141
 
 CCP Art. 38.141 requires corroboration of whose testimony, specifically in HSC Chapter 481 prosecutions?
@@ -2344,7 +2145,7 @@ CCP Art. 38.141 requires corroboration of whose testimony, specifically in HSC C
 
 ---
 
-### Q182 — Multiple Choice
+### Q147 — Multiple Choice
 **LO:** 15.17 · **Source:** BPOC 15.17
 
 Comparing the three uncorroborated/corroborated-testimony provisions in BPOC 15.17, which statement is accurate?

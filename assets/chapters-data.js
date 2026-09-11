@@ -963,6 +963,12 @@ const chapters = [
       {id:"15-17-uncorroborated", label:"15.17 Uncorroborated Testimony (HSC 483.072, CCP 38.14, 38.141)", cards:[
         {lo:"15.17", title:"<a href=\"https://statutes.capitol.texas.gov/Docs/HS/htm/HS.483.htm#483.072\">The Chapter 483 Uncorroborated-Testimony Rule</a>", cite:"HSC 483.072", body:"<a href='https://statutes.capitol.texas.gov/Docs/HS/htm/HS.483.htm#483.072'>HSC \u00a7483.072</a> permits a Chapter 483 (dangerous drug) conviction to be obtained on the uncorroborated testimony of a party to the offense \u2014 a notable exception to the general accomplice-corroboration rule."},
         {lo:"15.17", title:"<a href=\"https://statutes.capitol.texas.gov/Docs/CR/htm/CR.38.htm#38.14\">Accomplice & Undercover-Officer Corroboration Requirements</a>", cite:"CCP 38.14, 38.141", body:"By contrast, <a href='https://statutes.capitol.texas.gov/Docs/CR/htm/CR.38.htm#38.14'>CCP art. 38.14</a> sets the general rule: a conviction can't rest on accomplice testimony unless corroborated by other evidence tending to connect the defendant to the offense \u2014 corroboration that merely shows the offense occurred isn't enough. <a href='https://statutes.capitol.texas.gov/Docs/CR/htm/CR.38.htm#38.141'>CCP art. 38.141</a> applies the same style of corroboration requirement specifically to an undercover peace officer's or special investigator's testimony in certain HSC Chapter 481 prosecutions, subject to statutory exceptions."}
+      ]},
+      {id:"15-supplemental-links", label:"Supplemental Reference Page", cards:[
+        {title:"Ch. 15 Supplemental Reference Page",
+         body:"One standalone reference tool built from this material, linked from the Study Hub's Supplemental Materials section: <ul>" +
+           "<li><a href=\"alt-quizzes/15-penalty-groups-chart.html\">Penalty Groups &amp; Offense Chart</a> \u2014 what's actually in Penalty Groups 1, 1-A, 1-B, 2, 2-A, 3, and 4 by common drug name, plus color-coded value ladders showing how weight/quantity drives the offense classification for manufacture-or-delivery versus simple possession, marijuana's separate ladder, drug-free zone enhancements, and the special offense provisions.</li>" +
+           "</ul>"}
       ]}
     ]
   },
@@ -1657,4 +1663,4 @@ const chapters = [
     ]
   }
 ];
-for(let i=11;i<=43;i++){ if([13,14,22,24,25,28,30,37].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }
+for(let i=11;i<=43;i++){ if([13,14,15,18,22,24,25,28,30,37].includes(i)) continue; chapters.push({num:i, title:"Chapter "+i, status:"locked"}); }

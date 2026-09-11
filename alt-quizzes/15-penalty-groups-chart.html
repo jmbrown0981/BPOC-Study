@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 15 Penalty Groups &amp; Offense Chart | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+
+  .subst-table{table-layout:fixed;}
+  .subst-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px; vertical-align:top;}
+  .subst-table td:first-child{font-weight:600; width:16%;}
+  .subst-table td:nth-child(2){width:54%;}
+  .subst-table td:nth-child(3){width:30%; font-size:11.5px; color:var(--ink-soft);}
+
+  .pg-note{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; font-size:12px; line-height:1.6; color:var(--ink-soft); margin:10px 0;}
+  .pg-note b{color:var(--ink);}
+
+  .ladder-ref{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px;}
+  .ladder-ref th, .ladder-ref td{border:1px solid var(--rule); padding:6px 10px; text-align:left;}
+  .ladder-ref th{background:var(--paper-dim);}
+
+  .lvl{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.02em; padding:2px 7px; border-radius:10px; white-space:nowrap;}
+  .lvl.C{background:#EAE4D3; color:#7A5F1E;}
+  .lvl.B{background:#E7D9C5; color:#8A5A28;}
+  .lvl.A{background:#F0DCC8; color:#9A4A1E;}
+  .lvl.SJF{background:#E9D3D3; color:#8A2E2E;}
+  .lvl.F3{background:#E3C7C7; color:#7A1F1F;}
+  .lvl.F2{background:#DDB8B8; color:#6E1414;}
+  .lvl.F1{background:#D6A8A8; color:#5C0F0F;}
+
+  /* Value ladder -- weight/unit-tiered offense classification, deepening in
+     severity left to right. Same visual language as the other Study Hub
+     reference pages' value ladders. */
+  .value-ladder{display:flex; margin:10px 0; border-radius:8px; overflow:hidden; border:1px solid var(--rule); flex-wrap:wrap;}
+  .vl-cell{flex:1; min-width:110px; padding:9px 8px; text-align:center; font-size:11px; line-height:1.35; color:#F3EFE4; border-right:1px solid rgba(0,0,0,0.18);}
+  .vl-cell:last-child{border-right:none;}
+  .vl-cell .rng{display:block; font-family:'IBM Plex Mono', monospace; font-size:10px; opacity:0.92; margin-top:4px; line-height:1.5;}
+  .vl-cell .rng2{display:block; font-family:'IBM Plex Mono', monospace; font-size:9px; opacity:0.75; margin-top:2px;}
+  .vl-cell.cb{background:#7B7660;}
+  .vl-cell.ca{background:#9B7E32;}
+  .vl-cell.sjf{background:#B4712E;}
+  .vl-cell.f3{background:#A6472E;}
+  .vl-cell.f2{background:#8A3A26;}
+  .vl-cell.f1{background:#6E2E1F;}
+  .vl-cell.f1e{background:#4A1F15;}
+  .ladder-label{font-family:'IBM Plex Sans', sans-serif; font-size:11.5px; font-weight:600; color:var(--ink); margin:14px 0 2px;}
+  .ladder-label .unit{font-weight:400; color:var(--ink-soft); font-size:11px;}
+
+  .special-table{table-layout:fixed;}
+  .special-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px; vertical-align:top;}
+  .special-table td:first-child{font-weight:600; width:24%;}
+  .special-table td:nth-child(2){width:14%; white-space:nowrap;}
+  .special-table td:nth-child(3){width:62%;}
+  .special-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy); font-family:'IBM Plex Mono', monospace; font-size:11.5px;}
+  .special-table td:nth-child(2) a:hover{color:var(--rust);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 15 &middot; Controlled Substances Act</p>
+      <h1>Penalty Groups &amp; Offense Chart</h1>
+      <p class="sub">What's actually in each Penalty Group, and how weight or quantity drives the offense classification for manufacture/delivery versus simple possession &mdash; straight from HSC Chapter 481, cross-checked against the cached copy in <code>resources/health_safety_code/hs.481.txt</code> and statutes.capitol.texas.gov.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-ladder">Punishment Ladder</a>
+  <a class="chip" href="#sec-pg1">Penalty Group 1</a>
+  <a class="chip" href="#sec-pg1a">Penalty Group 1-A</a>
+  <a class="chip" href="#sec-pg1b">Penalty Group 1-B</a>
+  <a class="chip" href="#sec-pg2">Penalty Group 2 &amp; 2-A</a>
+  <a class="chip" href="#sec-pg34">Penalty Group 3 &amp; 4</a>
+  <a class="chip" href="#sec-marijuana">Marijuana</a>
+  <a class="chip" href="#sec-special">Special Offense Provisions</a>
+  <a class="chip" href="#sec-dfz">Drug-Free Zones</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> <b>manufacture, delivery, and possession-with-intent-to-deliver</b> a controlled substance are all graded on the same weight ladder within a penalty group &mdash; the law doesn't grade "making" it differently from "selling" it or "holding it to sell." <b>Simple possession</b> (no intent to deliver) uses a separate, generally lower ladder. Every ladder below is keyed to <b>aggregate weight, including adulterants and dilutants</b> (cutting agents count), except Penalty Group 1-A (measured in individual dosage/"abuse units") and Penalty Group 2-A possession (measured in ounces/pounds, not grams &mdash; the one outlier). This is a study aid, not legal advice &mdash; always verify against current statute before relying on a specific number. For practice questions built from this same chart, open the <a href="../alt-quiz.html">Alt Quiz app</a> and pick Chapter 15, LO 15.3.
+</div>
+
+<div class="sec-card" id="sec-ladder">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 12</span>
+    <span class="sec-name">The Punishment Ladder (Penal Code Ch. 12) &mdash; what each classification actually means</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref">
+      <thead><tr><th>Classification</th><th>Fine</th><th>Confinement</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lvl C">Class C Misdemeanor</span></td><td>Up to $500</td><td>None</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.23" target="_blank" rel="noopener">PC 12.23</a></td></tr>
+        <tr><td><span class="lvl B">Class B Misdemeanor</span></td><td>Up to $2,000</td><td>Up to 180 days county jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.22" target="_blank" rel="noopener">PC 12.22</a></td></tr>
+        <tr><td><span class="lvl A">Class A Misdemeanor</span></td><td>Up to $4,000</td><td>Up to 1 year county jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.21" target="_blank" rel="noopener">PC 12.21</a></td></tr>
+        <tr><td><span class="lvl SJF">State Jail Felony</span></td><td>Up to $10,000</td><td>180 days &ndash; 2 years state jail</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.35" target="_blank" rel="noopener">PC 12.35</a></td></tr>
+        <tr><td><span class="lvl F3">Felony, 3rd Degree</span></td><td>Up to $10,000</td><td>2 &ndash; 10 years TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.34" target="_blank" rel="noopener">PC 12.34</a></td></tr>
+        <tr><td><span class="lvl F2">Felony, 2nd Degree</span></td><td>Up to $10,000</td><td>2 &ndash; 20 years TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.33" target="_blank" rel="noopener">PC 12.33</a></td></tr>
+        <tr><td><span class="lvl F1">Felony, 1st Degree</span></td><td>Up to $10,000</td><td>5 &ndash; 99 years or life TDCJ</td><td><a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm#12.32" target="_blank" rel="noopener">PC 12.32</a></td></tr>
+      </tbody>
+    </table>
+    <p class="pg-note">Several Chapter 481 offenses go past the standard Felony 1st Degree range at the top of their ladder &mdash; a Ch.481-specific enhanced minimum (10, 15, or 20 years instead of 5) and a raised maximum fine ($100,000&ndash;$500,000 instead of $10,000). Those "enhanced 1st degree" tiers are marked <span class="lvl F1" style="background:#4A1F15; color:#F3EFE4;">F1 ENHANCED</span> in the ladders below.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-pg1">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PG 1</span>
+    <span class="sec-name">Penalty Group 1 &mdash; HSC 481.102</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref subst-table">
+      <thead><tr><th>Common name</th><th>Notes</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr><td>Heroin &amp; other opium derivatives</td><td>Includes morphine, hydrocodone (not listed in PG3), oxycodone, hydromorphone</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.102" target="_blank" rel="noopener">481.102(2)-(3)</a></td></tr>
+        <tr><td>Cocaine</td><td>Includes crack cocaine, coca leaves</td><td>481.102(3)(D)</td></tr>
+        <tr><td>Methamphetamine</td><td>Note: plain <b>amphetamine</b> (no "meth") is Penalty Group 2, not PG1 &mdash; a common mix-up</td><td>481.102(6)</td></tr>
+        <tr><td>PCP (phencyclidine)</td><td>Several PCP <i>analogs</i>, however, are Penalty Group 2</td><td>481.102(8)</td></tr>
+        <tr><td>GHB</td><td>Gamma hydroxybutyric acid ("date rape" drug)</td><td>481.102(9)</td></tr>
+        <tr><td>Ketamine</td><td>Legitimate veterinary/medical anesthetic with abuse potential</td><td>481.102(10)</td></tr>
+        <tr><td>Rohypnol (flunitrazepam)</td><td>"Date rape" drug</td><td>481.102(5)</td></tr>
+      </tbody>
+    </table>
+    <div class="ladder-label">Manufacture / Delivery / Possession-with-Intent &mdash; HSC 481.112 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 1 gram</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">1 g &ndash; &lt; 4 g</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">4 g &ndash; &lt; 200 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">200 g &ndash; &lt; 400 g</span><span class="rng2">min. 10 yrs, fine &le;$100k</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 15 yrs, fine &le;$250k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; HSC 481.115 (shared with Penalty Group 1-B) <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 1 gram</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">1 g &ndash; &lt; 4 g</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">4 g &ndash; &lt; 200 g</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">200 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 10 yrs, fine &le;$100k</span></div>
+    </div>
+    <p class="pg-note"><b>481.1122 enhancement:</b> if a child under 18 was present on the premises when a PG1 substance was manufactured, the punishment at the state-jail and 2nd-degree tiers above is bumped up one degree, and the two enhanced-1st-degree tiers' minimums/fines rise further (to 15/20 years and $150k/$300k respectively).</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-pg1a">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PG 1-A</span>
+    <span class="sec-name">Penalty Group 1-A &mdash; HSC 481.1021</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="pg-note"><b>What's in it:</b> LSD (lysergic acid diethylamide) and the "NBOMe" family of structurally related synthetic hallucinogens (25I-NBOMe and similar compounds), by name and by a defined chemical-substitution test. The whole group is measured in <b>individual dosage ("abuse") units</b>, not weight &mdash; the one penalty group that works this way.</p>
+    <div class="ladder-label">Manufacture / Delivery / Possession-with-Intent &mdash; HSC 481.1121 <span class="unit">(abuse units)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 20 units</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">20 &ndash; &lt; 80</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">80 &ndash; &lt; 4,000</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 4,000</span><span class="rng2">min. 15 yrs, fine &le;$250k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; HSC 481.1151 <span class="unit">(abuse units)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 20 units</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">20 &ndash; &lt; 80</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">80 &ndash; &lt; 4,000</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">4,000 &ndash; &lt; 8,000</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 8,000</span><span class="rng2">min. 15 yrs, fine &le;$250k</span></div>
+    </div>
+    <p class="pg-note">Notice possession has <i>five</i> tiers where manufacture/delivery only has four &mdash; the possession ladder splits the top of the range into a plain Felony 1st Degree band (4,000&ndash;8,000 units) before the enhanced tier kicks in at 8,000+, while manufacture/delivery jumps straight from Felony 1st Degree to the enhanced tier at 4,000 units.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-pg1b">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PG 1-B</span>
+    <span class="sec-name">Penalty Group 1-B &mdash; HSC 481.1022</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="pg-note"><b>What's in it:</b> Fentanyl and fentanyl analogs &mdash; carfentanil, sufentanil, alfentanil, remifentanil, acetylfentanyl, and others. Added in 2021 given the outsized overdose risk these synthetic opioids carry even in tiny quantities; possession uses the <i>same</i> ladder as Penalty Group 1 (481.115), but manufacture/delivery gets its own, harsher ladder that starts a full grade higher than PG1's.</p>
+    <div class="ladder-label">Manufacture / Delivery / Possession-with-Intent &mdash; HSC 481.1123 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">&lt; 1 gram</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">1 g &ndash; &lt; 4 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">4 g &ndash; &lt; 200 g</span><span class="rng2">min. 10 yrs, fine &le;$20k</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">200 g &ndash; &lt; 400 g</span><span class="rng2">min. 15 yrs, fine &le;$200k</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 20 yrs, fine &le;$500k</span></div>
+    </div>
+    <p class="pg-note">Compare the starting point: PG1 manufacture/delivery under 1 gram is only a <i>state jail felony</i> (481.112(b)), but the same weight of fentanyl under 481.1123(b) is already a <i>felony of the third degree</i> &mdash; two full grades higher at the bottom of the ladder. Simple possession of a PG1-B substance, though, is charged under 481.115 and uses the ordinary Penalty Group 1 possession ladder shown in the PG1 section above.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-pg2">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PG 2 / 2-A</span>
+    <span class="sec-name">Penalty Group 2 &amp; 2-A &mdash; HSC 481.103, 481.1031</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref subst-table">
+      <thead><tr><th>Common name</th><th>Notes</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr><td>MDMA ("ecstasy"/"molly")</td><td>&mdash;</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.103" target="_blank" rel="noopener">481.103(a)(1)</a></td></tr>
+        <tr><td>Mescaline, psilocybin/psilocin</td><td>Peyote itself, however, is Penalty Group 3</td><td>481.103(a)(1)</td></tr>
+        <tr><td>Amphetamine</td><td>Its salts &amp; optical isomers; note methamphetamine is PG1, not PG2</td><td>481.103(a)(3)</td></tr>
+        <tr><td>Synthetic cathinones ("bath salts")</td><td>Mephedrone, MDPV, and similar compounds</td><td>481.103(a)(3)-(4)</td></tr>
+        <tr><td>Synthetic cannabinoids ("K2"/"Spice") &mdash; Penalty Group <b>2-A</b></td><td>JWH-018 and structurally related compounds sprayed on plant material</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.1031" target="_blank" rel="noopener">481.1031</a></td></tr>
+      </tbody>
+    </table>
+    <div class="ladder-label">Manufacture / Delivery / Possession-with-Intent (PG2 <i>or</i> 2-A) &mdash; HSC 481.113 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 1 gram</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">1 g &ndash; &lt; 4 g</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">4 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 10 yrs, fine &le;$100k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; Penalty Group 2 only &mdash; HSC 481.116 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 1 gram</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">1 g &ndash; &lt; 4 g</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">4 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 5 yrs, fine &le;$50k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; Penalty Group 2-A ONLY &mdash; HSC 481.1161 <span class="unit">outlier: ounces / pounds, not grams</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell cb">Class B Misd.<span class="rng">&le; 2 oz</span></div>
+      <div class="vl-cell ca">Class A Misd.<span class="rng">&gt; 2 oz &ndash; 4 oz</span></div>
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&gt; 4 oz &ndash; 5 lb</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">&gt; 5 lb &ndash; 50 lb</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">&gt; 50 lb &ndash; 2,000 lb</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&gt; 2,000 lb</span><span class="rng2">min. 5 yrs, fine &le;$50k</span></div>
+    </div>
+    <p class="pg-note"><b>The PG2-A possession outlier:</b> synthetic cannabinoids are bulky, low-potency-by-weight plant material, so the legislature measures PG2-A <i>possession</i> in ounces and pounds instead of grams &mdash; the only possession ladder on this whole chart that isn't gram-based. Manufacture/delivery of PG2-A, by contrast, is folded into the ordinary gram-based PG2/2-A ladder above.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-pg34">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PG 3 / 4</span>
+    <span class="sec-name">Penalty Group 3 &amp; 4 &mdash; HSC 481.104, 481.105</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref subst-table">
+      <thead><tr><th>Group</th><th>Common name / what's in it</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr><td>Penalty Group 3</td><td>Benzodiazepines &mdash; alprazolam (Xanax), diazepam (Valium), clonazepam (Klonopin), lorazepam (Ativan); barbiturates; anabolic steroids; peyote; Salvia divinorum; tramadol</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.104" target="_blank" rel="noopener">481.104</a></td></tr>
+        <tr><td>Penalty Group 4</td><td>Limited-dose narcotic combination products &mdash; low-dose codeine cough preparations, buprenorphine (e.g. Suboxone) formulations</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.105" target="_blank" rel="noopener">481.105</a></td></tr>
+      </tbody>
+    </table>
+    <div class="ladder-label">Manufacture / Delivery / Possession-with-Intent (PG3 <i>or</i> 4) &mdash; HSC 481.114 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&lt; 28 grams</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">28 g &ndash; &lt; 200 g</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">200 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 10 yrs, fine &le;$100k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; Penalty Group 3 &mdash; HSC 481.117 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell ca">Class A Misd.<span class="rng">&lt; 28 grams</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">28 g &ndash; &lt; 200 g</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">200 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 5 yrs, fine &le;$50k</span></div>
+    </div>
+    <div class="ladder-label">Simple Possession &mdash; Penalty Group 4 &mdash; HSC 481.118 <span class="unit">(aggregate weight)</span></div>
+    <div class="value-ladder">
+      <div class="vl-cell cb">Class B Misd.<span class="rng">&lt; 28 grams</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">28 g &ndash; &lt; 200 g</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">200 g &ndash; &lt; 400 g</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&ge; 400 g</span><span class="rng2">min. 5 yrs, fine &le;$50k</span></div>
+    </div>
+    <p class="pg-note">PG3 and PG4 possession share the exact same weight breakpoints (28g / 200g / 400g) &mdash; the only difference is where each starts on the ladder: PG3 starts at a Class A misdemeanor, PG4 (the least severe group) starts one notch lower at Class B.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-marijuana">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">MJ</span>
+    <span class="sec-name">Marijuana &mdash; Its Own Ladder (Not a Penalty Group)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="pg-note">Marihuana isn't in Penalty Groups 1&ndash;4 at all &mdash; it gets its own dedicated offense sections, 481.120 (delivery) and 481.121 (possession), with their own weight ladder measured in ounces and pounds.</p>
+    <div class="ladder-label">Delivery &mdash; HSC 481.120</div>
+    <div class="value-ladder">
+      <div class="vl-cell cb">Class B Misd.<span class="rng">&le; &frac14; oz</span><span class="rng2">no payment received</span></div>
+      <div class="vl-cell ca">Class A Misd.<span class="rng">&le; &frac14; oz</span><span class="rng2">payment received</span></div>
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&gt; &frac14; oz &ndash; 5 lb</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">&gt; 5 lb &ndash; 50 lb</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">&gt; 50 lb &ndash; 2,000 lb</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&gt; 2,000 lb</span><span class="rng2">min. 10 yrs, fine &le;$100k</span></div>
+    </div>
+    <div class="ladder-label">Possession &mdash; HSC 481.121</div>
+    <div class="value-ladder">
+      <div class="vl-cell cb">Class B Misd.<span class="rng">&le; 2 oz</span></div>
+      <div class="vl-cell ca">Class A Misd.<span class="rng">&gt; 2 oz &ndash; 4 oz</span></div>
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">&gt; 4 oz &ndash; 5 lb</span></div>
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">&gt; 5 lb &ndash; 50 lb</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">&gt; 50 lb &ndash; 2,000 lb</span></div>
+      <div class="vl-cell f1e">F1 Enhanced<span class="rng">&gt; 2,000 lb</span><span class="rng2">min. 5 yrs, fine &le;$50k</span></div>
+    </div>
+    <p class="pg-note"><b>Delivery's quarter-ounce quirk:</b> a quarter-ounce-or-less delivery is only a Class B misdemeanor if no payment changed hands, but jumps to a Class A misdemeanor the moment any remuneration is received &mdash; the amount doesn't change, only whether it was a sale. Don't confuse marijuana with <b>hemp</b> (Ag. Code 121.001): hemp is Cannabis sativa L. at 0.3% delta-9 THC or less by dry weight, and isn't a controlled substance at all.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-special">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">SPECIAL</span>
+    <span class="sec-name">Special Offense Provisions</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref special-table">
+      <thead><tr><th>Offense</th><th>Cite</th><th>Classification</th></tr></thead>
+      <tbody>
+        <tr><td>Delivery of a controlled substance or marijuana to a child</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.122" target="_blank" rel="noopener">481.122</a></td><td>Flat <span class="lvl F2">Felony, 2nd Degree</span>, regardless of amount &mdash; affirmative defense if the actor was under 21, delivered &le;&frac14; oz of marihuana only, and received no payment</td></tr>
+        <tr><td>Manufacture/delivery of a scheduled-but-not-penalty-grouped ("miscellaneous") substance</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.119" target="_blank" rel="noopener">481.119(a)</a></td><td><span class="lvl A">Class A Misdemeanor</span> by default; <span class="lvl SJF">State Jail Felony</span> on 1 prior; <span class="lvl F3">Felony, 3rd Degree</span> on 2+ priors</td></tr>
+        <tr><td>Possession of a "miscellaneous" scheduled substance</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.119" target="_blank" rel="noopener">481.119(b)</a></td><td><span class="lvl B">Class B Misdemeanor</span></td></tr>
+        <tr><td>Possession/transport of precursor chemicals with intent to manufacture</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.124" target="_blank" rel="noopener">481.124(d)</a></td><td>Graded by the <i>intended</i> substance's penalty group: <span class="lvl F2">F2</span> for PG1/1-A/1-B, <span class="lvl F3">F3</span> for PG2, <span class="lvl SJF">SJF</span> for PG3/4, <span class="lvl A">Class A</span> for a miscellaneous substance</td></tr>
+        <tr><td>Drug paraphernalia &mdash; simple possession/use</td><td><a href="https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm#481.125" target="_blank" rel="noopener">481.125(a), (d)</a></td><td><span class="lvl C">Class C Misdemeanor</span></td></tr>
+        <tr><td>Drug paraphernalia &mdash; knowing delivery / possession or manufacture with intent to deliver</td><td>481.125(b), (e)</td><td><span class="lvl A">Class A Misdemeanor</span> (90-day&ndash;1-year jail minimum on a prior conviction)</td></tr>
+        <tr><td>Drug paraphernalia &mdash; delivered by an adult to a minor 3+ years younger</td><td>481.125(c), (f)</td><td><span class="lvl SJF">State Jail Felony</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-dfz">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">DFZ</span>
+    <span class="sec-name">Drug-Free Zone Enhancements &mdash; HSC 481.134</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="pg-note"><b>What it does:</b> committing a qualifying manufacture/delivery/possession offense in a drug-free zone can (a) bump the offense grade up one step at the lower tiers, and/or (b) add 5 years to the minimum sentence and double the maximum fine at the higher tiers. The enhanced sentence may <b>not</b> run concurrently with any other criminal statute's punishment (481.134(h)).</p>
+    <table class="ladder-ref">
+      <thead><tr><th>Zone</th><th>Distance</th></tr></thead>
+      <tbody>
+        <tr><td>School (public/private, or a licensed day-care center), youth center, or playground</td><td>Within 1,000 feet</td></tr>
+        <tr><td>School bus</td><td>On the bus itself</td></tr>
+        <tr><td>Public swimming pool or video arcade facility</td><td>Within 300 feet</td></tr>
+        <tr><td>Institution of higher education (grade-escalation enhancement only)</td><td>Within 1,000 feet</td></tr>
+        <tr><td>General residential operation / residential treatment center (unauthorized person 18+)</td><td>Within 1,000 feet</td></tr>
+      </tbody>
+    </table>
+    <p class="pg-note"><b>Exception:</b> the grade-escalation enhancement under 481.134(f) does not apply to an offense committed inside a private residence where no minor was present at the time.</p>
+  </div>
+</div>
+
+</main>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    card.querySelector('.sec-header').classList.add('open');
+    card.querySelector('.sec-body').classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
