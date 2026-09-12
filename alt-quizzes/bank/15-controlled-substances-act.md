@@ -872,6 +872,153 @@ An officer finds a suspect merely possessing a glass pipe with drug residue, no 
 
 ---
 
+### Q148 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.112(c)
+
+A search of a suspect's jacket turns up 2.5 grams (aggregate weight, including cutting agent) of heroin, individually packaged into a dozen small baggies, plus a scale and a notebook of names and amounts owed.
+
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Simple possession of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 3 substance
+- [ ] Possession of drug paraphernalia only
+
+**Classification:**
+- [ ] State Jail Felony
+- [x] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+- [ ] Felony, 1st Degree, enhanced minimum
+
+**Explanation:** The packaging, scale, and ledger show intent to deliver, not simple possession. At 2.5 grams — one gram or more but less than four grams — the aggregate-weight ladder for Penalty Group 1 manufacture/delivery lands on a felony of the second degree, one tier up from the under-one-gram state jail felony floor and one tier below the four-to-200-gram first-degree tier.
+
+---
+
+### Q149 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.112(e)
+
+A raid on a stash house recovers 250 grams of cocaine, staged in kilogram-style wrapping alongside a press and packaging materials consistent with resale.
+
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
+- [ ] Simple possession of a Penalty Group 1 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
+
+**Classification:**
+- [ ] Felony, 1st Degree, punishable by life or 15-99 years, fine up to $250,000
+- [x] Felony, 1st Degree, punishable by life or 10-99 years, fine up to $100,000
+- [ ] Felony, 2nd Degree
+- [ ] State Jail Felony
+
+**Explanation:** At 200 grams or more but less than 400 grams, Penalty Group 1 manufacture/delivery sits in the middle enhanced first-degree tier — life or 10-99 years, up to a $100,000 fine — distinct from the top tier (400 grams or more), which raises the minimum to 15 years and the maximum fine to $250,000.
+
+---
+
+### Q150 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.115(b)
+
+A person is searched incident to an unrelated arrest and found with 0.5 grams of heroin in a shirt pocket — nothing else on or near them suggests any intent to sell.
+
+**Offense:**
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [x] Possession of a Penalty Group 1 or 1-B substance
+- [ ] Possession of a Penalty Group 3 substance
+- [ ] Possession of drug paraphernalia
+
+**Classification:**
+- [x] State Jail Felony
+- [ ] Felony, 3rd Degree
+- [ ] Felony, 2nd Degree
+- [ ] Class A Misdemeanor
+
+**Explanation:** With no indicators of an intent to deliver, this is simple possession under 481.115. At less than one gram by aggregate weight, that's the bottom tier of the possession ladder — a state jail felony — one tier below the one-to-four-gram, third-degree-felony tier.
+
+---
+
+### Q151 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.115(e)
+
+A search of a residence turns up 250 grams of methamphetamine in a single container. There's no scale, no packaging materials, and no other indicator of resale — just the suspect's own account that it's for personal use.
+
+**Offense:**
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [x] Possession of a Penalty Group 1 or 1-B substance
+- [ ] Possession of a Penalty Group 2 substance
+- [ ] Possession of a Penalty Group 2-A substance
+
+**Classification:**
+- [ ] Felony, 2nd Degree
+- [x] Felony, 1st Degree
+- [ ] Felony, 1st Degree, enhanced minimum (life or 10-99 years)
+- [ ] State Jail Felony
+
+**Explanation:** Absent proof of intent to deliver, this is possession, not manufacture/delivery. At 200 grams or more but less than 400 grams, the possession ladder under 481.115 reaches a plain felony of the first degree — the enhanced life-or-10-to-99-year floor doesn't kick in for possession until 400 grams or more.
+
+---
+
+### Q152 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.120(b)
+
+An officer observes a hand-to-hand transaction and recovers 2 pounds of marihuana that the suspect had just sold to a buyer for cash.
+
+**Offense:**
+- [x] Delivery of marihuana
+- [ ] Possession of marihuana
+- [ ] Manufacture or delivery of a Penalty Group 3 substance
+- [ ] Delivery of a controlled substance or marihuana to a child
+
+**Classification:**
+- [ ] Class A Misdemeanor
+- [x] State Jail Felony
+- [ ] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
+
+**Explanation:** Marihuana delivery of five pounds or less but more than one-fourth ounce is a state jail felony — the tier between the misdemeanor range for a quarter-ounce or less and the second-degree-felony range that starts above five pounds.
+
+---
+
+### Q153 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.120(b)
+
+A warehouse search turns up 3,200 pounds of baled marihuana staged for distribution.
+
+**Offense:**
+- [x] Delivery of marihuana
+- [ ] Possession of marihuana
+- [ ] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Manufacture, delivery, or possession of miscellaneous substances
+
+**Classification:**
+- [ ] Felony, 1st Degree
+- [x] Felony, 1st Degree, punishable by life or 10-99 years, fine up to $100,000
+- [ ] Felony, 2nd Degree
+- [ ] State Jail Felony
+
+**Explanation:** Marihuana delivery of more than 2,000 pounds is the top of the marihuana ladder — a first-degree felony enhanced to life or 10-99 years with a fine up to $100,000, distinct from the plain first-degree tier that covers 50 to 2,000 pounds.
+
+---
+
+### Q154 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.122(a), (c)
+
+A 30-year-old sells an eighth of an ounce of marihuana to a 16-year-old for $20.
+
+**Offense:**
+- [ ] Delivery of marihuana
+- [x] Delivery of a controlled substance or marihuana to a child
+- [ ] Possession of marihuana
+- [ ] Delivery of a Penalty Group 1 substance
+
+**Classification:**
+- [ ] Class B Misdemeanor
+- [ ] Class A Misdemeanor
+- [x] Felony, 2nd Degree
+- [ ] State Jail Felony
+
+**Explanation:** Delivering marihuana to a person known to be a child is charged under 481.122, not the ordinary marihuana-delivery ladder — and it's a flat felony of the second degree regardless of the amount involved. The narrow affirmative defense for small, unpaid marihuana transfers only covers an actor younger than 21; at 30 years old, this seller doesn't qualify for it.
+
+---
+
 ## LO 15.4: Enhancements Affecting Punishment (PC 12.35, Gov't Code 508.145, HSC 481.1122 & 481.1285, PC 22.041 & 71.023)
 
 ### Q52 — Term ID
@@ -1091,18 +1238,28 @@ An officer is evaluating whether a location a dealer operated near counts as a "
 
 ---
 
-## LO 15.5: Seizure & Destruction of Controlled Substance Property (HSC 481.153-481.160)
+### Q155 — Scenario
+**LO:** 15.4 · **Source:** HSC 481.134(c), 481.112(b)
 
-### Q68 — Fill-in-Blank
-**LO:** 15.5 · **Source:** HSC 481.153(a)
+A search of a suspect on the sidewalk directly in front of an elementary school turns up 0.8 grams of heroin, individually packaged into small baggies, with a digital scale in his backpack.
 
-**Answer:** 481.153
+**Offense:**
+- [x] Manufacture or delivery of a Penalty Group 1 substance
+- [ ] Possession of a Penalty Group 1 substance
+- [ ] Manufacture or delivery of a Penalty Group 2 substance
+- [ ] Possession of drug paraphernalia only
 
-Under HSC ______, controlled substance property that is manufactured, delivered, or possessed in violation of Chapter 481 is subject to seizure and summary forfeiture to the state.
+**Classification:**
+- [ ] State Jail Felony
+- [x] Felony, 3rd Degree
+- [ ] Felony, 2nd Degree
+- [ ] Felony, 1st Degree
 
-**Explanation:** HSC 481.153(a) is the core seizure/summary-forfeiture provision BPOC 15.5 cites for controlled substance property.
+**Explanation:** At 0.8 grams with packaging and a scale, this would normally be a state jail felony under 481.112(b)'s under-one-gram tier — but the drug-free-zone enhancement under 481.134(c) bumps a state jail felony up to a felony of the third degree when the offense occurs on or near a school, exactly as it does in the general drug-free-zone rule already covered earlier in this LO.
 
 ---
+
+## LO 15.5: Seizure & Destruction of Controlled Substance Property (HSC 481.153-481.160)
 
 ### Q69 — Multiple Choice
 **LO:** 15.5 · **Source:** HSC 481.153(b)
@@ -1132,17 +1289,6 @@ Under HSC 481.154(b), rules for the destruction of controlled substance property
 
 ---
 
-### Q71 — Fill-in-Blank
-**LO:** 15.5 · **Source:** HSC 481.159(c)
-
-**Answer:** 481.159
-
-When a law enforcement agency retains controlled substance property or a plant for use in an ongoing investigation (rather than immediate destruction), the security, analysis, and logging requirements for that property are set out in HSC ______.
-
-**Explanation:** HSC 481.159(c) requires a qualified individual to analyze the property before and after its use in an investigation, secure storage accessible only to specific personnel, and a detailed log of issue/return dates, amounts, and the officers involved.
-
----
-
 ### Q72 — Multiple Choice
 **LO:** 15.5 · **Source:** HSC 481.160(a)
 
@@ -1154,20 +1300,6 @@ Under HSC 481.160, before a law enforcement agency may summarily destroy an exce
 - [ ] The property has been held in evidence storage for at least one full year
 
 **Explanation:** HSC 481.160(a) sets these three safeguards — sampling, photographing, and weighing/measuring — before excess-quantity property can be summarily destroyed pre-disposition.
-
----
-
-### Q73 — Multiple Choice
-**LO:** 15.5 · **Source:** BPOC 15.5 (Instructor Note)
-
-Per BPOC 15.5's instructor note, in addition to HSC 481.153, which other HSC sections should instructors discuss regarding seizure and destruction procedures?
-
-- [ ] Only Chapter 483 (Dangerous Drugs)
-- [x] 481.151, 481.152, 481.154, 481.159, and 481.160
-- [ ] Only 481.112 through 481.121 (the penalty-group offense sections)
-- [ ] Only the Code of Criminal Procedure's search warrant chapter
-
-**Explanation:** BPOC 15.5's instructor note directs discussion of definitions in 481.151 alongside 481.152 (plant seizure/forfeiture), 481.154 (destruction rules), 481.159 (disposition), and 481.160 (excess-quantity disposition).
 
 ---
 
@@ -1410,17 +1542,6 @@ BPOC 15.8 organizes common drug paraphernalia into four categories based on:
 
 ## LO 15.9: Dangerous Drug Violations (HSC 483.041-483.050)
 
-### Q92 — Fill-in-Blank
-**LO:** 15.9 · **Source:** HSC 483.041(a)
-
-**Answer:** 483.041
-
-Under HSC ______, a person commits an offense if the person possesses a dangerous drug unless the person obtained the drug from a valid prescription or order, or is otherwise authorized to possess it.
-
-**Explanation:** HSC 483.041(a) is the core possession-of-dangerous-drug offense; a Class A misdemeanor absent an applicable exception.
-
----
-
 ### Q93 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.041
 
@@ -1449,17 +1570,6 @@ HSC 483.041(c) lists several exceptions to the dangerous-drug possession offense
 
 ---
 
-### Q95 — Fill-in-Blank
-**LO:** 15.9 · **Source:** HSC 483.042
-
-**Answer:** 483.042
-
-Delivering, or offering to deliver, a dangerous drug in violation of HSC ______ is a state jail felony.
-
-**Explanation:** HSC 483.042 makes delivery or offer-to-deliver of a dangerous drug a state jail felony — a step up from the Class A misdemeanor possession offense.
-
----
-
 ### Q96 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.042
 
@@ -1474,17 +1584,6 @@ Delivery of a dangerous drug, or an offer to deliver one, under HSC 483.042 is c
 
 ---
 
-### Q97 — Fill-in-Blank
-**LO:** 15.9 · **Source:** HSC 483.043
-
-**Answer:** 483.043
-
-Manufacturing a dangerous drug in violation of HSC ______ is a state jail felony, on par with the delivery offense under 483.042.
-
-**Explanation:** HSC 483.043 makes manufacture of a dangerous drug a state jail felony.
-
----
-
 ### Q98 — Multiple Choice
 **LO:** 15.9 · **Source:** HSC 483.045
 
@@ -1496,20 +1595,6 @@ Under HSC 483.045, forging or altering a prescription for a dangerous drug is no
 - [x] A Class B misdemeanor, enhanced to a Class A misdemeanor if the person has a prior conviction under this section
 
 **Explanation:** HSC 483.045 sets the base offense at a Class B misdemeanor, enhanced to a Class A misdemeanor for a person previously convicted under that section.
-
----
-
-### Q99 — Multiple Choice
-**LO:** 15.9 · **Source:** BPOC 15.9 (Instructor Note)
-
-Per BPOC 15.9's instructor note, in addition to 483.041-483.045, which other HSC sections should instructors also cover regarding dangerous drug violations?
-
-- [x] 483.046 (failure to retain prescription), 483.047 (refilling without authorization), 483.050 (refusal to permit inspection), and 481.1285 (diversion)
-- [ ] Only the Penal Code fraud chapter
-- [ ] Only sections found in Chapter 481 (Controlled Substances Act)
-- [ ] Only the Occupations Code pharmacy-licensing sections
-
-**Explanation:** BPOC 15.9's instructor note flags 483.046, 483.047, 483.050, and (by cross-reference) 481.1285 as additional dangerous-drug-related violations worth discussing alongside the core possession/delivery/manufacture/forgery offenses.
 
 ---
 
@@ -1785,17 +1870,6 @@ BPOC 15.12's instructor note raises which officer-safety concern related to fiel
 ---
 
 ## LO 15.13: Seizure & Destruction of Dangerous Drugs (HSC 483.074)
-
-### Q120 — Term ID
-**LO:** 15.13 · **Source:** HSC 483.074
-
-**Answer:** 483.074
-
-The seizure and destruction of dangerous drug property under the Texas Dangerous Drug Act is governed by HSC ______, the Chapter 483 counterpart to the Chapter 481 seizure/destruction provisions (481.153, 481.154, 481.159, 481.160).
-
-**Explanation:** HSC 483.074 is the dangerous-drug-chapter seizure and destruction provision, paralleling the controlled-substance seizure/destruction sections covered in LO 15.5.
-
----
 
 ### Q121 — Multiple Choice
 **LO:** 15.13 · **Source:** HSC 483.074
