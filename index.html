@@ -181,6 +181,67 @@
     line-height:1.5;
   }
 
+  .supp-group{margin-bottom:10px;}
+  .supp-group-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    cursor:pointer;
+    user-select:none;
+    background:#fff;
+    border:1px solid var(--rule);
+    border-left-width:5px;
+    border-left-color:var(--navy);
+    border-radius:6px;
+    padding:12px 16px;
+    transition:box-shadow 0.1s ease;
+  }
+  .supp-group-header:hover{box-shadow:0 3px 10px rgba(19,35,57,0.10);}
+  .supp-group-name{
+    font-family:'IBM Plex Serif', serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--ink);
+    display:flex;
+    align-items:baseline;
+    gap:9px;
+  }
+  .supp-group-count{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:400;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .supp-group-toggle{
+    font-size:13px;
+    color:var(--brass);
+    transition:transform 0.15s ease;
+    flex-shrink:0;
+  }
+  .supp-group-header.open .supp-group-toggle{transform:rotate(180deg);}
+  .supp-group-body{
+    display:none;
+    padding:10px 2px 2px;
+  }
+  .supp-group-body.open{display:block;}
+
+  .mini-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--navy);
+    background:transparent;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:3px 8px;
+    cursor:pointer;
+  }
+  .mini-btn:hover{border-color:var(--brass); color:var(--amber);}
+  .section-controls{display:flex; align-items:center; gap:8px;}
+  .section-controls .count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft);}
+
   .legend{
     display:flex;
     gap:16px;
@@ -240,69 +301,105 @@
 
 <div class="section-block">
   <h2>Supplemental Materials</h2>
-  <span class="count">Codes &amp; statutes</span>
+  <span class="section-controls">
+    <span class="count">12 resources · 5 groups</span>
+    <button type="button" class="mini-btn" onclick="expandAllGroups()">Expand all</button>
+    <button type="button" class="mini-btn" onclick="collapseAllGroups()">Collapse all</button>
+  </span>
 </div>
 
-<a class="supp-card status-live" href="supplemental/penal-code.html">
-  <div class="supp-name">Texas Penal Code — Offense Reference</div>
-  <div class="supp-desc">Statute, plain-language definition, punishment range, and enhancements by title. Includes the felony/misdemeanor grade ladder and theft value ladder.</div>
-</a>
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Texas Penal Code <span class="supp-group-count">2 resources</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <a class="supp-card status-live" href="supplemental/penal-code.html">
+      <div class="supp-name">Texas Penal Code — Offense Reference</div>
+      <div class="supp-desc">Statute, plain-language definition, punishment range, and enhancements by title. Includes the felony/misdemeanor grade ladder and theft value ladder.</div>
+    </a>
+    <a class="supp-card status-live" href="supplemental/laymans/index.html">
+      <div class="supp-name">Texas Penal Code — Layman's Guide</div>
+      <div class="supp-desc">Chapter-by-chapter plain-language walkthroughs (26 chapters) plus three lookup tools: a dollar-amount value-ladder search, a victim-status enhancement browser, and a classification chart sorting every offense by grade.</div>
+    </a>
+  </div>
+</div>
 
-<a class="supp-card status-live" href="supplemental/laymans/index.html">
-  <div class="supp-name">Texas Penal Code — Layman's Guide</div>
-  <div class="supp-desc">Chapter-by-chapter plain-language walkthroughs (26 chapters) plus three lookup tools: a dollar-amount value-ladder search, a victim-status enhancement browser, and a classification chart sorting every offense by grade.</div>
-</a>
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Code of Criminal Procedure <span class="supp-group-count">1 resource</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <a class="supp-card status-live" href="supplemental/laymans-ccp/index.html">
+      <div class="supp-name">Code of Criminal Procedure — Layman's Guide</div>
+      <div class="supp-desc">Plain-language walkthroughs of every CCP article cited anywhere in the BPOC curriculum — who's a peace officer, officer/sheriff duties, search warrants, bail, family violence and protective-order procedure, and victim-rights requirements. 15 chapters, expanding.</div>
+    </a>
+  </div>
+</div>
 
-<a class="supp-card status-live" href="alt-quizzes/15-penalty-groups-chart.html">
-  <div class="supp-name">Ch. 15 Controlled Substances Act — Penalty Groups &amp; Offense Chart</div>
-  <div class="supp-desc">What's actually in Penalty Groups 1, 1-A, 1-B, 2, 2-A, 3, and 4 (by common drug name, not just chemical listings), plus color-coded value ladders showing how weight or quantity drives the offense classification for manufacture/delivery versus simple possession — including marijuana's separate ladder, drug-free zone enhancements, and the special offense provisions (delivery to a child, paraphernalia, precursor chemicals).</div>
-</a>
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Ch. 15 — Controlled Substances Act <span class="supp-group-count">1 resource</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <a class="supp-card status-live" href="alt-quizzes/15-penalty-groups-chart.html">
+      <div class="supp-name">Ch. 15 Controlled Substances Act — Penalty Groups &amp; Offense Chart</div>
+      <div class="supp-desc">What's actually in Penalty Groups 1, 1-A, 1-B, 2, 2-A, 3, and 4 (by common drug name, not just chemical listings), plus color-coded value ladders showing how weight or quantity drives the offense classification for manufacture/delivery versus simple possession — including marijuana's separate ladder, drug-free zone enhancements, and the special offense provisions (delivery to a child, paraphernalia, precursor chemicals).</div>
+    </a>
+  </div>
+</div>
 
-<a class="supp-card status-live" href="alt-quizzes/22-definitions-map.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Definitions Cross-Reference Map</div>
-  <div class="supp-desc">Interactive tool mapping all 137 defined terms in the Ch.22 bank against each other — hub terms, per-cluster reference tables (searchable), the multi-chapter "same word, different definition" trap table, and Mermaid hierarchy diagrams for Vehicle Taxonomy, Traffic Areas, DL/CDL, Automated Vehicles, and more.</div>
-</a>
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Ch. 21 — Human Trafficking <span class="supp-group-count">2 resources</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <a class="supp-card status-live" href="alt-quizzes/21-trafficking-terminology.html">
+      <div class="supp-name">Ch. 21 Human Trafficking — Trafficker Terminology Glossary</div>
+      <div class="supp-desc">Street/control language a trafficker or trafficking victim may use — roles within a "stable," control and recruitment terms, and the trade's own vocabulary — plus the six operational roles a trafficking business is built from (Farr, 2005). Searchable, sourced from the DHS glossary BPOC Ch.21.12 cites.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/21-smuggling-prostitution-trafficking.html">
+      <div class="supp-name">Smuggling vs. Prostitution vs. Trafficking — Comparison Aid</div>
+      <div class="supp-desc">How BPOC actually draws the line between these three constantly-conflated offenses — consent, exploitation, and border-crossing as the three-part test, the mens rea continuum, and exactly where they overlap (the prostitution affirmative defense, the trafficking-into-prostitution charge theory). Includes every underlying statute — PC 20.05/20.06 (smuggling), 43.02/43.05 (prostitution), 20A.02/20A.03 (trafficking) — with its punishment ladder and a live link to current statute text.</div>
+    </a>
+  </div>
+</div>
 
-<a class="supp-card status-live" href="alt-quizzes/22-codes-index.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Codes &amp; Sections Index</div>
-  <div class="supp-desc">Every code section the Ch.22 material cites, organized Day 1&ndash;8 exactly as the chapter teaches it, each one linked straight to the current statute text on statutes.capitol.texas.gov &mdash; over 500 searchable terms and citations.</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/22-offense-penalties.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Offense &amp; Penalty Reference</div>
-  <div class="supp-desc">Every offense Ch.22 calls out with its classification, fine, and jail range straight from the statute, the Penal Code Ch.12 punishment ladder for reference, and the general-penalty catchall each subtitle falls back to when a section doesn't state its own punishment.</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/22-lighting-spec.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Vehicle Lighting Height &amp; Year Exceptions</div>
-  <div class="supp-desc">Mounting-height range chart (Texas vs. federal FMVSS 108) and full detail table for every TC 547 lamp and reflector — count required, how the Texas figure compares to the federal standard, and every model-year or manufacture-date exception (1948 beam indicators, 1960 taillamp/stoplamp/turn-signal relief, pre-1972 farm equipment, 1975 motorcycle headlamps).</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/22-plates-permits.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Valid License Plates, Tags &amp; Permits</div>
-  <div class="supp-desc">Every standard/specialty plate, disabled parking placard, and HB 718 (2025) temporary tag, permit, and receipt — validity period, TC/TAC citation, what was repealed vs. what remains valid, and a sample legal-use scenario for each. Includes a Vehicle Transit Permit Receipt entry and a fake-plate spotting guide.</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/22-visibility-distance.html">
-  <div class="supp-name">Ch. 22 Traffic Code — Vehicle Lighting &amp; Reflector Visibility Distance</div>
-  <div class="supp-desc">Required visibility distance in feet for every TC 547 lamp and reflector (plus TC 551 bicycle equipment), broken into three category charts and detail tables: motor vehicles (headlamps, taillamps, stoplamps, turn signals, reflectors, farm tractors, motorcycles/mopeds), bicycles, and trailers (including large trailers, pole trailers, and projecting-load lamps).</div>
-</a>
-
-<a class="supp-card status-live" href="supplemental/laymans-ccp/index.html">
-  <div class="supp-name">Code of Criminal Procedure — Layman's Guide</div>
-  <div class="supp-desc">Plain-language walkthroughs of every CCP article cited anywhere in the BPOC curriculum — who's a peace officer, officer/sheriff duties, search warrants, bail, family violence and protective-order procedure, and victim-rights requirements. 15 chapters, expanding.</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/21-trafficking-terminology.html">
-  <div class="supp-name">Ch. 21 Human Trafficking — Trafficker Terminology Glossary</div>
-  <div class="supp-desc">Street/control language a trafficker or trafficking victim may use — roles within a "stable," control and recruitment terms, and the trade's own vocabulary — plus the six operational roles a trafficking business is built from (Farr, 2005). Searchable, sourced from the DHS glossary BPOC Ch.21.12 cites.</div>
-</a>
-
-<a class="supp-card status-live" href="alt-quizzes/21-smuggling-prostitution-trafficking.html">
-  <div class="supp-name">Smuggling vs. Prostitution vs. Trafficking — Comparison Aid</div>
-  <div class="supp-desc">How BPOC actually draws the line between these three constantly-conflated offenses — consent, exploitation, and border-crossing as the three-part test, the mens rea continuum, and exactly where they overlap (the prostitution affirmative defense, the trafficking-into-prostitution charge theory). Includes every underlying statute — PC 20.05/20.06 (smuggling), 43.02/43.05 (prostitution), 20A.02/20A.03 (trafficking) — with its punishment ladder and a live link to current statute text.</div>
-</a>
-
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Ch. 22 — Traffic Code <span class="supp-group-count">6 resources</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <a class="supp-card status-live" href="alt-quizzes/22-definitions-map.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Definitions Cross-Reference Map</div>
+      <div class="supp-desc">Interactive tool mapping all 137 defined terms in the Ch.22 bank against each other — hub terms, per-cluster reference tables (searchable), the multi-chapter "same word, different definition" trap table, and Mermaid hierarchy diagrams for Vehicle Taxonomy, Traffic Areas, DL/CDL, Automated Vehicles, and more.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/22-codes-index.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Codes &amp; Sections Index</div>
+      <div class="supp-desc">Every code section the Ch.22 material cites, organized Day 1&ndash;8 exactly as the chapter teaches it, each one linked straight to the current statute text on statutes.capitol.texas.gov &mdash; over 500 searchable terms and citations.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/22-offense-penalties.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Offense &amp; Penalty Reference</div>
+      <div class="supp-desc">Every offense Ch.22 calls out with its classification, fine, and jail range straight from the statute, the Penal Code Ch.12 punishment ladder for reference, and the general-penalty catchall each subtitle falls back to when a section doesn't state its own punishment.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/22-lighting-spec.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Vehicle Lighting Height &amp; Year Exceptions</div>
+      <div class="supp-desc">Mounting-height range chart (Texas vs. federal FMVSS 108) and full detail table for every TC 547 lamp and reflector — count required, how the Texas figure compares to the federal standard, and every model-year or manufacture-date exception (1948 beam indicators, 1960 taillamp/stoplamp/turn-signal relief, pre-1972 farm equipment, 1975 motorcycle headlamps).</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/22-plates-permits.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Valid License Plates, Tags &amp; Permits</div>
+      <div class="supp-desc">Every standard/specialty plate, disabled parking placard, and HB 718 (2025) temporary tag, permit, and receipt — validity period, TC/TAC citation, what was repealed vs. what remains valid, and a sample legal-use scenario for each. Includes a Vehicle Transit Permit Receipt entry and a fake-plate spotting guide.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/22-visibility-distance.html">
+      <div class="supp-name">Ch. 22 Traffic Code — Vehicle Lighting &amp; Reflector Visibility Distance</div>
+      <div class="supp-desc">Required visibility distance in feet for every TC 547 lamp and reflector (plus TC 551 bicycle equipment), broken into three category charts and detail tables: motor vehicles (headlamps, taillamps, stoplamps, turn signals, reflectors, farm tractors, motorcycles/mopeds), bicycles, and trailers (including large trailers, pole trailers, and projecting-load lamps).</div>
+    </a>
+  </div>
+</div>
 
 <div class="note">
   <b>Have a supplemental resource to add?</b> Send the source material (PDF, statute excerpt, agency policy, etc.) and it'll get built out in this same format.
@@ -327,6 +424,19 @@
 <footer>Built for study purposes by and for the FWPD Academy class · Not an official TCOLE or academy publication · Always verify against current statute and academy materials</footer>
 
 <script>
+  function toggleGroup(el){
+    el.classList.toggle('open');
+    el.nextElementSibling.classList.toggle('open');
+  }
+  function expandAllGroups(){
+    document.querySelectorAll('.supp-group-header').forEach(function(h){h.classList.add('open');});
+    document.querySelectorAll('.supp-group-body').forEach(function(b){b.classList.add('open');});
+  }
+  function collapseAllGroups(){
+    document.querySelectorAll('.supp-group-header').forEach(function(h){h.classList.remove('open');});
+    document.querySelectorAll('.supp-group-body').forEach(function(b){b.classList.remove('open');});
+  }
+
   const total = 43;
   const built = [1,2,3,4,5,6,7,8,9,10,13,14,15,18,19,20,21,22,24,25,28,30,37]; // chapters with a live reference page in study.html
   const inProgress = 10; // chapters covered in class so far
