@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Ch. 18 – Search Warrants | TX CCP Layman's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Code of Criminal Procedure &middot; Layman's Guide</p>
+      <h1>Chapter 18: Search Warrants</h1>
+    </div>
+    <a class="back" href="index.html">&larr; Guide Index</a>
+  </div>
+  <p class="sub">BPOC 10.9 &mdash; the basic criteria for obtaining, executing, and returning a search warrant. Cited in BPOC Chapter 10 (Arrest, Search &amp; Seizure).</p>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-18-01">Art. 18.01–.011</a>
+  <a class="chip" href="#sec-18-02">Art. 18.02–.03</a>
+  <a class="chip" href="#sec-18-04">Art. 18.04</a>
+  <a class="chip" href="#sec-18-05">Art. 18.05</a>
+  <a class="chip" href="#sec-18-06">Art. 18.06–.07</a>
+  <a class="chip" href="#sec-18-08">Art. 18.08–.095</a>
+  <a class="chip" href="#sec-18-10">Art. 18.10–.11</a>
+  <a class="chip" href="#sec-18-16">Art. 18.16</a>
+  <a class="chip" href="#sec-18-021">Art. 18.021</a>
+  <a class="chip" href="#sec-18-0215">Art. 18.0215</a>
+  <a class="chip" href="#sec-18-22">Art. 18.22</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main>
+
+<div class="note">
+  <b>Knock-and-announce isn't in this chapter.</b> BPOC 10.10 asks students to compare "no-knock" vs. "knock and announce" warrants — but Chapter 18 doesn't actually codify either concept. Knock-and-announce is a Fourth Amendment/common-law doctrine (<em>Wilson v. Arkansas</em>), and the closest Texas statutory text is <a href="ccp-15.html#sec-15-22">Art. 15.25</a> (an arrest-warrant provision letting an officer break a door "if he be refused admittance after giving notice of his authority and purpose"). There's no separate "no-knock warrant" category in Texas statute — exceptions to announcing are justified case-by-case on the warrant affidavit's specific facts, not through a distinct kind of warrant.
+</div>
+
+<div class="sec-card" id="sec-18-01">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.01–.011</span>
+    <span class="sec-name">SEARCH WARRANT &amp; SEALING OF AFFIDAVIT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.01 – SEARCH WARRANT</h3>
+    <p><em>The foundational definition — and the probable-cause-affidavit requirement everything else in this chapter builds on.</em></p>
+    <p>A "search warrant" is a written order from a magistrate, directed to a peace officer, commanding a search for property/things (and their seizure), or a search for and photograph of a child. No warrant may issue for any purpose without a sworn affidavit filed first, setting forth substantial facts establishing probable cause. Once the warrant is executed, that affidavit becomes public record (subject to sealing under Art. 18.011).</p>
+    <ul>
+      <li><strong>Telephonic/electronic warrants:</strong> a magistrate may consider information communicated by phone or other reliable electronic means — the applicant is sworn, testimony is recorded/transcribed, and the magistrate signs and dates the resulting warrant. Evidence isn't suppressed solely because this process was used, absent bad faith.</li>
+      <li><strong>Evidence warrants (Art. 18.02(a)(10)):</strong> have extra restrictions — only certain judges/magistrates may issue them (not just any magistrate), and a follow-up warrant on the same person/place/thing needs a higher-level judge.</li>
+      <li><strong>Newsroom protection:</strong> evidence warrants generally can't be used to search a newspaper, magazine, TV, or radio station's office for material outside the narrower listed categories.</li>
+      <li><strong>DWI blood warrants (subsection (j)):</strong> any magistrate who's a licensed attorney may issue an evidence warrant to draw blood from someone arrested for intoxication offenses (PC §49.04–.08) who refuses a breath/blood test.</li>
+    </ul>
+
+    <h3>Art. 18.011 – SEALING OF AFFIDAVIT</h3>
+    <p><em>Lets the state protect a witness or an active wiretap without hiding the warrant itself.</em></p>
+    <p>A state's attorney prosecuting felonies may ask a district or appellate judge to seal a search-warrant affidavit — on a compelling-state-interest showing that disclosure would endanger a victim/witness/informant or destroy evidence, or that the affidavit contains active wiretap information. A sealing order expires 31 days after the warrant is executed, with one 30-day extension available on a new showing. Sealing can never hide the warrant's own contents, the return, or the inventory, and can't defeat a defendant's discovery rights.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-02">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.02–.03</span>
+    <span class="sec-name">GROUNDS FOR ISSUANCE &amp; WARRANT MAY ORDER ARREST</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.02 – GROUNDS FOR ISSUANCE</h3>
+    <p><em>The complete menu of what a search warrant can be issued for.</em></p>
+    <p>A search warrant may issue to search for and seize: (1) stolen property; (2) property specially made/used for committing an offense; (3) insurrection/riot weapons; (4) PC-prohibited weapons; (5) gambling devices/equipment/paraphernalia; (6) obscene material kept for commercial distribution; (7) drugs/controlled substances/paraphernalia; (8) property whose possession is illegal; (9) implements/instruments of crime; (10) evidence of an offense, or evidence a particular person committed one (excluding the accused's personal writings); (11) persons; (12) Chapter 59 forfeiture contraband; (13) electronic customer data in electronic storage; or (14) a cellular telephone/wireless device (subject to Art. 18.0215).</p>
+
+    <h3>Art. 18.03 – SEARCH WARRANT MAY ORDER ARREST</h3>
+    <p><em>One warrant, two functions, when the same facts support both.</em></p>
+    <p>If the facts that justify the search warrant also establish probable cause that a specific person committed an offense, the same warrant can additionally order that person's arrest — no separate arrest warrant needed.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-04">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.04</span>
+    <span class="sec-name">CONTENTS OF WARRANT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.04 – CONTENTS OF WARRANT</h3>
+    <p><em>The five things that make a search warrant valid on its face.</em></p>
+    <p>A search warrant is sufficient if it: (1) runs in the name of "The State of Texas"; (2) identifies what's to be seized and names/describes the person, place, or thing to be searched as nearly as possible; (3) commands a peace officer of the proper county to search forthwith; (4) is dated and signed by the magistrate; and (5) shows the magistrate's name in clearly legible handwriting or typed form alongside the signature.</p>
+    <div class="def-box"><strong>Why it matters:</strong> requirement (5) — the legible-name rule — was added specifically because an illegible magistrate signature has been used to challenge a warrant's validity. It's a small thing to check on a warrant before executing it.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-05">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.05</span>
+    <span class="sec-name">WARRANTS FOR FIRE, HEALTH, AND CODE INSPECTIONS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.05 – WARRANTS FOR FIRE, HEALTH, AND CODE INSPECTIONS</h3>
+    <p><em>A completely different animal from an evidence search warrant — this is administrative inspection authority.</em></p>
+    <p>Fire marshals, health officers, and code enforcement officials may get a magistrate's warrant to inspect specified premises for a fire hazard, health hazard, unsafe building condition, or code violation. Probable cause here isn't tied to a specific crime — the magistrate can weigh the age/condition of the premises, prior violations, the type and use of the premises, and hazards found nearby. Cities and counties may each designate their own code enforcement officials for this purpose; other political subdivisions get only one, and only if they routinely conduct these inspections. (Counties of 3.3 million+ population can't use this article for unsafe-building/code-violation inspections specifically.)</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-06">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.06–.07</span>
+    <span class="sec-name">EXECUTION OF WARRANTS &amp; DAYS ALLOWED TO RUN</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.06 – EXECUTION OF WARRANTS</h3>
+    <p><em>What the officer has to hand over, and to whom, while on scene.</em></p>
+    <p>The officer must execute the warrant without delay and return it to the issuing magistrate. While searching, the officer presents a copy of the warrant to the owner if present — or to whoever else is present and in possession of the place. Before removing any property, the officer prepares a written inventory, legibly signs it, and gives a copy to the owner/possessor. If no one is present at all, the officer leaves copies of both the warrant and the inventory at the location.</p>
+
+    <h3>Art. 18.07 – DAYS ALLOWED FOR WARRANT TO RUN</h3>
+    <p><em>The execution clock — and it's not the same number for every warrant.</em></p>
+    <p>Unless the magistrate sets a shorter period, a warrant must be executed (excluding the day of issuance and the day of execution) within:</p>
+    <ul>
+      <li><strong>3 whole days</strong> — the default, for any warrant not covered by the exceptions below.</li>
+      <li><strong>15 whole days</strong> — if the warrant is issued solely to collect DNA specimens (blood/saliva) from a specific person.</li>
+      <li><strong>10 whole days</strong> — if issued under Chapter 18B's tracking-device/Subchapter G-1 provisions.</li>
+    </ul>
+    <p>The magistrate must endorse the date and hour of issuance on the warrant. For a digital-device warrant (computer, drive, cell phone, etc.), the warrant counts as timely executed if the <em>device itself</em> is seized within the allowed window — the forensic extraction and analysis of its data can lawfully continue after that window closes.</p>
+    <div class="warn-box"><strong>Why it matters on patrol:</strong> "3 days to execute" is the number most people remember, but it's the default, not the universal rule — a DNA-only warrant runs 15 days, and a digital-device warrant is satisfied by seizing the device, not by finishing the forensic download, within the window.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-08">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.08–.095</span>
+    <span class="sec-name">OFFICER'S POWER, SEIZURE DUTY &amp; GAMBLING CIRCUIT BOARDS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.08 – POWER OF OFFICER EXECUTING WARRANT</h3>
+    <p><em>The officer can deputize bystanders on the spot to help execute the warrant.</em></p>
+    <p>In executing a search warrant, the officer may call on any number of citizens in the county to help, and those citizens are bound to assist.</p>
+
+    <h3>Art. 18.09 – SHALL SEIZE ACCUSED AND PROPERTY</h3>
+    <p><em>Once you find what the warrant describes, taking it is mandatory, not optional.</em></p>
+    <p>When the officer finds the property described in the warrant, they take possession of it and carry it before the magistrate. If the warrant also directs an arrest, the officer arrests that person and immediately brings them before the magistrate too. "Seizure" of property is defined broadly here — restraint by physical force <em>or</em> by a display of the officer's authority, including simply taking possession.</p>
+
+    <h3>Art. 18.095 – SEIZURE OF CIRCUIT BOARD OF GAMBLING DEVICE, EQUIPMENT, OR PARAPHERNALIA</h3>
+    <p><em>A narrow evidence-storage shortcut for gambling cases.</em></p>
+    <p>Instead of seizing an entire gambling machine, an officer may — at their discretion — seize only the programmable main circuit board if it's a separable subassembly essential to the device's operation, carry just that board before the magistrate, and retain custody of it as the seized property under the warrant.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-10">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.10–.11</span>
+    <span class="sec-name">HOW RETURN MADE &amp; CUSTODY OF PROPERTY FOUND</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.10 – HOW RETURN MADE</h3>
+    <p><em>The paperwork deadline after execution — and what happens if you miss it.</em></p>
+    <p>The officer must return the warrant no later than 3 whole days after executing it, noting on the back (or an attached paper) how it was executed, plus a copy of the inventory. The officer keeps custody of seized property until the magistrate orders how it's to be safeguarded. Property generally can't leave the county where it was seized without a magistrate's order — except sending items to a lab for scientific analysis, which never needs one.</p>
+    <div class="def-box"><strong>Missing the return deadline doesn't suppress the evidence.</strong> A late return, or failing to submit the inventory, does not by itself bar the evidence under Art. 38.23 — but it's still a compliance failure worth avoiding.</div>
+
+    <h3>Art. 18.11 – CUSTODY OF PROPERTY FOUND</h3>
+    <p>One-line rule: seized property is kept exactly as directed by the magistrate's Art. 18.10 order — custody isn't the seizing agency's unilateral call.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-16">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.16</span>
+    <span class="sec-name">PREVENTING CONSEQUENCES OF THEFT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.16 – PREVENTING CONSEQUENCES OF THEFT</h3>
+    <p><em>Not a warrant provision — a citizen's-seizure right for recovering apparently stolen property on the spot.</em></p>
+    <p>Anyone (not just officers) has the right to prevent the consequences of theft by seizing personal property reasonably believed stolen, and bringing it — along with the suspected thief, if they can be taken — before a magistrate, or delivering the property and person to a peace officer for that purpose. The seizure must be openly made, on reasonable grounds, and the proceedings must happen without delay. This is the statutory basis referenced elsewhere in this guide for an officer's warrantless authority in "preventing consequences of theft" scenarios.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-021">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.021</span>
+    <span class="sec-name">ISSUANCE OF SEARCH WARRANT TO PHOTOGRAPH INJURED CHILD</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.021 – ISSUANCE OF SEARCH WARRANT TO PHOTOGRAPH INJURED CHILD</h3>
+    <p><em>A specialized warrant limited to one purpose: photographing a suspected child-abuse victim.</em></p>
+    <p>This warrant may issue to search for and photograph a child alleged to be a victim of injury to a child (PC §22.04), sexual assault of a child (§22.011(a)), aggravated sexual assault of a child (§22.021), or continuous sexual abuse of a young child/disabled individual (§21.02). A law-enforcement photographer may accompany the executing officer with the same access to the child. The warrant must identify the child, name/describe the place to be searched, and command the officer to search for and cause the child to be photographed. After photographing, the officer delivers the exposed film to the magistrate — the child generally cannot be removed from the premises except through Family Code Chapter 262 procedures.</p>
+    <div class="warn-box"><strong>Same-sex execution requirement:</strong> the warrant must be executed by a peace officer of the same sex as the alleged victim — or, if not, the officer must be assisted by someone of the same sex who stays with the child during the photographing.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-0215">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.0215</span>
+    <span class="sec-name">ACCESS TO CELLULAR TELEPHONE OR OTHER WIRELESS COMMUNICATIONS DEVICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.0215 – ACCESS TO CELLULAR TELEPHONE OR OTHER WIRELESS COMMUNICATIONS DEVICE</h3>
+    <p><em>You cannot search a phone incident to arrest — a phone always needs its own warrant, with narrow exceptions.</em></p>
+    <p>A peace officer may not search a person's cell phone or wireless device incident to a lawful arrest without a warrant obtained specifically under this article. The warrant must come from a judge in the judicial district where the officer's agency is located (if the officer has the device) or where the device is likely located; the written, sworn application must identify the device, its owner/possessor, and the facts establishing probable cause that evidence of criminal activity is on it.</p>
+    <ul>
+      <li><strong>Warrantless search is allowed only if:</strong> the owner/possessor consents; the device was reported stolen; the officer reasonably believes it's in the possession of a felony fugitive with an active arrest warrant; or there's an immediate life-threatening situation.</li>
+      <li><strong>After an emergency/fugitive-based warrantless search</strong>, the officer must apply for a warrant as soon as practicable. If the judge finds the emergency/fugitive situation didn't actually exist and declines the warrant, any evidence obtained is inadmissible.</li>
+    </ul>
+    <div class="def-box"><strong>2025 update:</strong> the 89th Legislature (S.B. 1497, eff. Sept. 1, 2025) narrowed what counts as a "wireless communications device" for this article — a card skimmer, or a device made to illicitly obtain payment-card or identifying information, is explicitly excluded. Those items don't get this article's warrant protection; an actual cell phone or wireless device still does.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-18-22">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 18.22</span>
+    <span class="sec-name">TESTING CERTAIN DEFENDANTS OR CONFINED PERSONS FOR COMMUNICABLE DISEASES</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 18.22 – TESTING CERTAIN DEFENDANTS OR CONFINED PERSONS FOR COMMUNICABLE DISEASES</h3>
+    <p><em>What happens when an arrestee's bodily fluids contact a first responder.</em></p>
+    <p>If a person arrested for a misdemeanor or felony causes their bodily fluids to contact an emergency response employee or volunteer during the offense or the arrest, the court with jurisdiction over the arrestee can order (on its own motion or the employee/volunteer's request) a medical procedure or test for communicable disease — and can compel it if the person refuses voluntarily. Results go only to the local health authority and the employer's designated infection-control officer, who then notify the affected employee/volunteer. The fact that a test was performed, or its results, may <strong>never</strong> be used against the tested person in a criminal proceeding arising from the alleged offense. Testing must follow written protocols adopted by the Department of State Health Services.</p>
+  </div>
+</div>
+
+</main>
+
+<footer>CCP Layman's Guide &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+</script>
+
+</body>
+</html>
