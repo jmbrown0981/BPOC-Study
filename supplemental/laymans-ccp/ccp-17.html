@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Ch. 17 – Bail | TX CCP Layman's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Code of Criminal Procedure &middot; Layman's Guide</p>
+      <h1>Chapter 17: Bail</h1>
+    </div>
+    <a class="back" href="index.html">&larr; Guide Index</a>
+  </div>
+  <p class="sub">BPOC 10.12 &mdash; the bail procedure: how it's set, who can take it, when release is mandatory, and when it can be denied or delayed. Cited in BPOC Chapter 10 (Arrest, Search &amp; Seizure) and Chapter 17 (Sexual Assault &amp; Family Violence).</p>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-17-01">Art. 17.01</a>
+  <a class="chip" href="#sec-17-033">Art. 17.033</a>
+  <a class="chip" href="#sec-17-15">Art. 17.15</a>
+  <a class="chip" href="#sec-17-20">Art. 17.20–.22</a>
+  <a class="chip" href="#sec-17-29">Art. 17.29</a>
+  <a class="chip" href="#sec-17-291">Art. 17.291</a>
+  <a class="chip" href="#sec-17-292">Art. 17.292</a>
+  <a class="chip" href="#sec-17-49">Art. 17.49</a>
+  <a class="chip" href="#sec-17-152">Art. 17.152–.153</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main>
+
+<div class="warn-box" style="margin:0 0 18px;"><strong>BPOC's citation label is slightly off.</strong> BPOC lists Art. 17.01 as "Definition of 'Bail Bond'" — the statute's actual heading is <strong>Definition of "Bail."</strong> "Bail Bond" is separately defined next door in Art. 17.02 (not itself BPOC-cited): a written undertaking by the defendant and sureties to appear, or a cash deposit in lieu of sureties — last substantively amended by the 2021 Damon Allen Act. "Bail" is the broader umbrella term; a "bail bond" is one way of giving it.</div>
+
+<div class="note">
+  <b>Two big recent developments to know about, neither of which is itself a Chapter 17 article:</b> <strong>Senate Bill 9 (89th Leg., 2025)</strong> was a sweeping bail-reform bill touching several Chapter 17 articles (most relevantly Art. 17.21, below) plus a new public-safety-report system (Art. 17.021/17.022). And <strong>Proposition 3</strong> — a constitutional amendment approved by Texas voters November 4, 2025, adding Art. I, §11d to the Texas Constitution — makes bail denial <em>mandatory</em> (not just discretionary) for nine enumerated violent/sexual felonies once the state meets a flight-risk or safety standard. It doesn't yet have implementing Chapter 17 procedure spelled out in the statute text below — treat it as binding constitutional law layered on top of this chapter, not a replacement for it.
+</div>
+
+<div class="sec-card" id="sec-17-01">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.01</span>
+    <span class="sec-name">DEFINITION OF "BAIL"</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.01 – DEFINITION OF "BAIL"</h3>
+    <p><em>The one-sentence umbrella definition everything else in this chapter hangs off of.</em></p>
+    <p>"Bail" is the security given by the accused that they'll appear and answer, before the proper court, the accusation against them — and it includes both a bail bond and a personal (PR) bond.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-033">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.033</span>
+    <span class="sec-name">RELEASE ON BOND OF CERTAIN PERSONS ARRESTED WITHOUT A WARRANT</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.033 – RELEASE ON BOND OF CERTAIN PERSONS ARRESTED WITHOUT A WARRANT</h3>
+    <p><em>The booking-desk clock: how long you can hold a warrantless arrestee before a PC finding without releasing them.</em></p>
+    <p>A person arrested without a warrant and held in jail must be released on bond if no magistrate has yet found probable cause:</p>
+    <ul>
+      <li><strong>Misdemeanor:</strong> released on bond (max $5,000) by the <strong>24th hour</strong> after arrest.</li>
+      <li><strong>Felony:</strong> released on bond (max $10,000) by the <strong>48th hour</strong> after arrest.</li>
+      <li>Either way — if the person can't afford a surety or can't deposit the cash amount, they must be released on a <strong>personal bond</strong> instead.</li>
+    </ul>
+    <p>On the state's application explaining the PC delay, a magistrate may postpone release once, up to 72 hours total after arrest. The clock pauses entirely for anyone taken to a hospital/clinic before magistration — it doesn't start running until medical staff's own records show the person was released from care.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-15">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.15</span>
+    <span class="sec-name">RULES FOR SETTING AMOUNT OF BAIL</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.15 – RULES FOR SETTING AMOUNT OF BAIL</h3>
+    <p><em>The seven factors that govern every bail-amount decision in Texas.</em></p>
+    <p>Bail amount and conditions are regulated by the court/judge/magistrate/officer taking bail, under the Constitution and these rules:</p>
+    <ul>
+      <li>Bail must reasonably assure the defendant will comply with the undertaking (appear in court).</li>
+      <li>The power to require bail cannot be used as an instrument of oppression.</li>
+      <li>Consider the nature/circumstances of the offense — including whether it's a violent offense (Art. 17.03) or involved violence against a peace officer.</li>
+      <li>Consider the defendant's ability to pay (proof may be taken on this).</li>
+      <li>Consider the future safety of the victim, law enforcement, and the community.</li>
+      <li>Consider criminal history — via DPS's statewide system and the Art. 17.021 public safety report — including family violence history, other pending charges, and prior failures to appear.</li>
+      <li>Consider the defendant's <strong>citizenship status</strong>.</li>
+    </ul>
+    <div class="def-box"><strong>Damon Allen Act tie:</strong> the safety-focused factors and the citizenship-status factor were added/strengthened by the 2021 Damon Allen Act (S.B. 6) — this is the version of Art. 17.15 currently in force.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-20">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.20–.22</span>
+    <span class="sec-name">BAIL IN MISDEMEANOR &amp; FELONY</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.20 – BAIL IN MISDEMEANOR</h3>
+    <p><em>When a sheriff, officer, or jailer can personally take a misdemeanor defendant's bail.</em></p>
+    <p>A sheriff, other peace officer, or licensed jailer may take a misdemeanor defendant's bail whether or not court is in session. Before doing so, they must pull the defendant's criminal history through DPS's statewide system and the Art. 17.021 public safety report system — except for a fine-only misdemeanor or an Art. 14.06(c) citation, where that history check can be skipped. If the defendant is charged with (or has a prior conviction for) a violent offense under Art. 17.03, the officer <strong>cannot set</strong> the bail amount themselves — only a court can — though the officer may still take bail once a court has set the figure.</p>
+
+    <h3>Art. 17.21 – BAIL IN FELONY</h3>
+    <p><em>When court is in session — the court sets it, the officer takes it, no appearance required.</em></p>
+    <p>When a felony defendant is in custody and the trial court is in session in that county, the court fixes the bail amount and decides personal-bond eligibility; the sheriff, other peace officer (other than city police), or licensed jailer then takes the bond at that court-set amount and releases the defendant. Neither the defendant nor their sureties need to appear in court for this.</p>
+    <div class="warn-box"><strong>2025 update (S.B. 9):</strong> before releasing a felony defendant on bail, a magistrate must now ensure the defendant has appeared before the magistrate <em>and</em> that the magistrate has considered the public safety report prepared under the new Art. 17.022.</div>
+
+    <h3>Art. 17.22 – MAY TAKE BAIL IN FELONY</h3>
+    <p><em>The after-hours companion to 17.21 — for when court isn't in session.</em></p>
+    <p>If the trial court is <strong>not</strong> in session in the county holding the defendant, the sheriff/officer/jailer may take bail at the court- or magistrate-set amount — or, if none has been set, in an amount the officer considers reasonable under Art. 17.15. Same DPS/public-safety-report history-check duty and the same "can't set your own bail amount for a violent-offense defendant" restriction as Art. 17.20 apply here too.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-29">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.29</span>
+    <span class="sec-name">ACCUSED LIBERATED</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.29 – ACCUSED LIBERATED</h3>
+    <p><em>Once bond is posted, release is immediate — with one mandatory victim-notice step in FV/stalking cases.</em></p>
+    <p>Once the required bond is given — to the magistrate or the officer holding the person — the accused must be set at liberty at once. But before releasing someone arrested for stalking (PC §42.072) or arrested/held without warrant to prevent family violence, the holding agency must make a reasonable attempt to give personal notice of the imminent release to the victim (or a person the victim designated). Attempting notice at the victim's last known phone number or address on the agency's records satisfies this duty. The arresting officer should collect the victim's contact info at the time of arrest and pass it to the holding agency to make that notice possible. The agency and its employees aren't liable for damages from complying — or failing to comply — with this notice duty.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-291">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.291</span>
+    <span class="sec-name">FURTHER DETENTION OF CERTAIN PERSONS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.291 – FURTHER DETENTION OF CERTAIN PERSONS</h3>
+    <p><em>The one exception to "release immediately" in Art. 17.29 — a narrow family-violence safety hold.</em></p>
+    <p>Art. 17.29's immediate-release rule doesn't apply when someone was arrested/held without warrant to prevent family violence, if there's probable cause the violence would continue on immediate release. The agency holding the person may hold them <strong>4 additional hours</strong> after bond is posted automatically. A magistrate can authorize up to <strong>48 more hours</strong> in writing, on finding violence would continue if released — and if the extension goes past 24 hours total, there must also be probable cause the person was arrested, within the preceding 10 years, either more than once for family violence or for any offense involving a deadly weapon.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-292">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.292</span>
+    <span class="sec-name">MAGISTRATE'S ORDER FOR EMERGENCY PROTECTION</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.292 – MAGISTRATE'S ORDER FOR EMERGENCY PROTECTION</h3>
+    <p><em>The short-term, no-application-needed protective order issued right at magistration.</em></p>
+    <p>At a defendant's magistration appearance after arrest for family violence, or for trafficking, sexual assault, aggravated sexual assault, or stalking (PC §20A.02, 20A.03, 22.011, 22.012, 22.021, 42.072), the magistrate may issue an order for emergency protection (EPO) — on their own motion, or on request of the victim, the victim's guardian, a peace officer, or the state's attorney. Issuance is <strong>mandatory</strong> if the family-violence arrest involved serious bodily injury to the victim or the use/exhibition of a deadly weapon during an assault.</p>
+    <ul>
+      <li><strong>What it can prohibit:</strong> committing further family violence/assault; threatening or harassing communication (or all contact, on a good-cause finding); going near the victim's home, work, or a protected child's school/childcare; possessing a firearm (unless the defendant is an on-duty peace officer); and tracking/monitoring the victim's property, vehicle, or person.</li>
+      <li><strong>Duration:</strong> a standard EPO runs at least 61 but not more than 91 days; an EPO issued for serious-bodily-injury or deadly-weapon cases runs at least 91 but not more than 121 days.</li>
+      <li><strong>Officer duties:</strong> the arresting/custody officer must give the magistrate available information about the defendant and victim to help issue the order. The magistrate must send a copy to the victim's local police chief or sheriff by the next business day, and — if the victim wasn't present when issued — order a peace officer to make a good-faith attempt to notify the victim within 24 hours. The law enforcement agency must enter the order into the statewide system within 3 business days. A handgun license held by the defendant is automatically suspended while the order is in effect.</li>
+    </ul>
+    <div class="def-box"><strong>17.292 vs. a Chapter 7B protective order — don't confuse them.</strong> An Art. 17.292 EPO is issued by a <strong>magistrate</strong>, automatically at (or right after) a qualifying <strong>arrest</strong>, with no application needed, and lasts weeks (61–121 days). A <a href="ccp-7b.html">Chapter 7B protective order</a> is issued by a <strong>judge</strong>, on a formally filed <strong>application</strong> (no arrest required), and can last up to two years or longer. Think of 17.292 as the immediate bridge-gap order tied to the arrest itself, and Ch. 7B as the longer-term judicial order that can follow it.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-49">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.49</span>
+    <span class="sec-name">CONDITIONS FOR DEFENDANT CHARGED WITH OFFENSE INVOLVING FAMILY VIOLENCE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.49 – CONDITIONS FOR DEFENDANT CHARGED WITH OFFENSE INVOLVING FAMILY VIOLENCE</h3>
+    <p><em>Bond conditions built around GPS monitoring — including a victim-side alert device.</em></p>
+    <p>A magistrate may condition an FV defendant's bond on: staying away from specifically described locations the victim frequents; wearing a GPS monitoring device (defendant generally pays a fee, sliding-scale for indigent defendants); the victim receiving (with consent, after being informed) an electronic receptor device that alerts them if the defendant enters a restricted zone; and not tracking/monitoring the victim's property or vehicle without consent. Before imposing the stay-away or receptor-device conditions, the magistrate must give the victim specific information about the program (how GPS works, its limits, available support services) and let them request termination of their own participation at any time, without penalty. The magistrate weighs whether monitoring will actually deter the defendant from killing, injuring, stalking, or threatening the victim before trial. An indigent defendant's partial reimbursement payment (on a sliding scale) must be accepted as payment in full — the county isn't on the hook for the rest.</p>
+    <div class="def-box"><strong>Ties to 17.292:</strong> an emergency protective order under Art. 17.292 can incorporate these same GPS/receptor-device conditions directly.</div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-17-152">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 17.152–.153</span>
+    <span class="sec-name">DENIAL OF BAIL FOR VIOLATION OF COURT ORDERS / BOND CONDITIONS</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 17.152 – DENIAL OF BAIL FOR VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF BOND IN A FAMILY VIOLENCE CASE</h3>
+    <p><em>A bond-condition violation in an FV case can get bail denied outright, not just revoked.</em></p>
+    <p>Someone who violates PC §25.07 (violating certain court orders/bond conditions) tied to a family violence case, and whose bail is revoked or forfeited for that violation, can be taken into custody and denied bail pending trial if a judge/magistrate finds by a preponderance of the evidence that the violation related to victim safety or community safety. A narrower rule applies to a §25.07(a)(3) violation (going near a prohibited place) — bail can only be denied there on a further finding of intent to commit or threaten family violence or a §42.072 (stalking) act. The person must be taken before a magistrate under Art. 15.17 within 48 hours of arrest for this hearing.</p>
+
+    <h3>Art. 17.153 – DENIAL OF BAIL FOR VIOLATION OF CONDITION OF BOND WHERE CHILD ALLEGED VICTIM</h3>
+    <p><em>Same mechanism as 17.152, for felony sex-offense/trafficking cases with a victim under 14.</em></p>
+    <p>Applies to defendants charged with a felony sexual offense, prohibited sexual conduct, sexual performance by a child, certain trafficking, or compelling prostitution, where the alleged victim is younger than 14. On a preponderance finding that a bond-condition violation related to victim or community safety, the magistrate can revoke the bond and order the defendant immediately returned to custody. Revocation discharges the sureties from <em>future</em> liability (they still owe on any prior forfeiture).</p>
+  </div>
+</div>
+
+</main>
+
+<footer>CCP Layman's Guide &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+</script>
+
+</body>
+</html>

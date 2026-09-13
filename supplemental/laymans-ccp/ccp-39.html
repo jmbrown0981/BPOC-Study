@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Ch. 39 – Discovery | TX CCP Layman's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Code of Criminal Procedure &middot; Layman's Guide</p>
+      <h1>Chapter 39: Discovery</h1>
+    </div>
+    <a class="back" href="index.html">&larr; Guide Index</a>
+  </div>
+  <p class="sub">Not a BPOC 9.x citation itself &mdash; added because Chapter 2A's Art. 2A.209 (BPOC 9.3, agency filing duties) requires certifying compliance with this exact article. Covers only the article that citation reaches.</p>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-39-14">Art. 39.14</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main>
+
+<div class="sec-card" id="sec-39-14">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 39.14</span>
+    <span class="sec-name">DISCOVERY (THE "MICHAEL MORTON ACT")</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 39.14 – DISCOVERY</h3>
+    <p><em>The state's discovery-disclosure obligation to the defense — and the statute Art. 2A.209's agency certification duty exists to enforce.</em></p>
+    <p>On a timely request from the defendant, the State must produce — and let the defense inspect or electronically copy, as soon as practicable — offense reports, witness statements (including officers' own statements), documents, photographs, physical objects, and other tangible items in the State's possession, custody, or control (prosecution work product is excluded). Texas courts read "the State" broadly here: it includes material held by the investigating law-enforcement agency, not just what's physically sitting in the prosecutor's file.</p>
+    <ul>
+      <li><strong>Expert witnesses (subsection (b)):</strong> on a request made 30+ days before trial, the State must disclose each expert's name, address, and qualifications no later than 20 days before trial.</li>
+      <li><strong>Mandatory exculpatory/impeachment/mitigating disclosure (subsection (h)):</strong> the State must turn over <em>any</em> document, item, or information that tends to negate guilt or reduce punishment — automatically, whether or not the defense asked for it. This is the codification of the <em>Brady</em>/<em>Giglio</em> duty.</li>
+      <li><strong>Jailhouse informants (subsection (h-1)):</strong> if the State plans to use testimony from someone who was incarcerated with the defendant, it must disclose that informant's full criminal history, any leniency deal, and other cases where they've testified against a fellow inmate.</li>
+      <li><strong>Continuing duty (subsection (k)):</strong> exculpatory, impeachment, or mitigating material discovered after the initial disclosure — even mid-trial or post-trial — must be disclosed <strong>promptly</strong>, not held for the next case.</li>
+    </ul>
+    <div class="def-box"><strong>Why this matters for an officer:</strong> a report, note, photo, or piece of evidence sitting in an agency's file — even something the prosecutor never asked for or didn't know existed — is still discoverable material under current case law (<em>State v. Heath</em>, Tex. Crim. App. 2024; <em>Moten v. State</em>, Tex. Crim. App. 2025). "The prosecutor didn't have it" is not a defense to a disclosure failure if the agency had it. That's exactly the gap Art. 2A.209's certification requirement is designed to close — see <a href="ccp-2a.html#sec-2a-209">Ch. 2A, Art. 2A.209</a>.</div>
+  </div>
+</div>
+
+</main>
+
+<footer>CCP Layman's Guide &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+</script>
+
+</body>
+</html>

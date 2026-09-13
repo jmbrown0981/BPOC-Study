@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Ch. 42 – Finding of Bias or Prejudice | TX CCP Layman's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Code of Criminal Procedure &middot; Layman's Guide</p>
+      <h1>Chapter 42: Judgment and Sentence</h1>
+    </div>
+    <a class="back" href="index.html">&larr; Guide Index</a>
+  </div>
+  <p class="sub">Not a BPOC 9.x citation itself &mdash; added because Chapter 7B's Art. 7B.101 (BPOC 9.5, bias-motivated-offense protective order) is keyed directly to this finding. Covers only the article that citation reaches.</p>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-42-014">Art. 42.014</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main>
+
+<div class="sec-card" id="sec-42-014">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">Art. 42.014</span>
+    <span class="sec-name">FINDING THAT OFFENSE WAS COMMITTED BECAUSE OF BIAS OR PREJUDICE</span>
+    <span class="toggle">▾</span>
+  </div>
+  <div class="sec-body">
+    <h3>Art. 42.014 – FINDING THAT OFFENSE WAS COMMITTED BECAUSE OF BIAS OR PREJUDICE</h3>
+    <p><em>Texas's "hate crime" finding — a fact-finding made during the underlying prosecution, not a separate charge.</em></p>
+    <p>Applies to any offense under Penal Code Title 5 (offenses against the person), plus arson (PC §28.02), criminal mischief (§28.03), graffiti (§28.08), and false alarm or report (§42.0601). The trier of fact — judge or jury, at the guilt/innocence phase — must find <strong>beyond a reasonable doubt</strong> that the defendant intentionally selected the victim, or the victim's property, <strong>because of</strong> bias or prejudice against a group defined by race, color, disability, religion, national origin or ancestry, age, gender, or sexual preference — or because the victim was a peace officer or judge.</p>
+    <p>If the trier of fact makes that finding, the judge <strong>must</strong> enter it as an affirmative finding in the judgment — it isn't discretionary once the underlying determination is made. The finding is what Penal Code §12.47 hooks into to bump the offense up one punishment category, and it's also what qualifies the offense for an <a href="ccp-7b.html#sec-7b-101">Art. 7B.101 protective order</a>.</p>
+    <div class="def-box"><strong>Reading 42.014 alongside Ch. 7B:</strong> a victim seeking a Ch. 7B, Art. 7B.101 protective order for a bias-motivated offense is relying on this same finding, made on the record in the criminal case itself — not a standalone civil determination.</div>
+  </div>
+</div>
+
+</main>
+
+<footer>CCP Layman's Guide &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var first = document.querySelector('.sec-header');
+  if(first){first.classList.add('open'); first.nextElementSibling.classList.add('open');}
+});
+</script>
+
+</body>
+</html>
