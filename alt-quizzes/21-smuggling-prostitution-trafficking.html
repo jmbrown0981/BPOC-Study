@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Smuggling vs. Prostitution vs. Trafficking | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  .cite{font-family:'IBM Plex Mono', monospace; letter-spacing:0.01em;}
+  main{max-width:1100px;}
+
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin:16px 0;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .verify-note{font-size:11.5px; line-height:1.6; color:var(--ink-soft); background:#F7E9DC; border:1px solid #DEBB93; border-radius:8px; padding:10px 14px; margin:10px 0;}
+  .verify-note b{color:var(--rust);}
+
+  h2.section-title{font-family:'IBM Plex Serif', serif; font-size:17px; font-weight:700; margin:26px 0 4px; padding-bottom:6px; border-bottom:2px solid var(--navy);}
+
+  .sec-body p{font-size:13px; line-height:1.6; margin:0 0 10px;}
+  .sec-body p:last-child{margin-bottom:0;}
+  .sec-body b{color:var(--ink);}
+
+  /* Quick-reference 3-way grid */
+  .compare-wrap{overflow-x:auto; margin:14px 0;}
+  table.compare{width:100%; border-collapse:collapse; font-size:12.5px; min-width:640px;}
+  table.compare th, table.compare td{border:1px solid var(--rule); padding:9px 11px; text-align:left; vertical-align:top; line-height:1.5;}
+  table.compare thead th{background:var(--navy); color:#EDE7D6; font-family:'IBM Plex Serif',serif; font-size:13.5px; font-weight:600;}
+  table.compare thead th:first-child{background:var(--navy-2);}
+  table.compare tbody th{background:var(--paper-dim); font-weight:600; white-space:nowrap; width:15%;}
+  table.compare td.smg{border-left:3px solid var(--amber);}
+  table.compare td.pros{border-left:3px solid var(--rust);}
+  table.compare td.traf{border-left:3px solid var(--green);}
+
+  .continuum{display:flex; flex-wrap:wrap; gap:0; margin:12px 0; border-radius:8px; overflow:hidden; border:1px solid var(--rule);}
+  .cstep{flex:1; min-width:150px; padding:12px 12px; font-size:11.5px; line-height:1.5; color:#F3EFE4;}
+  .cstep b{display:block; font-family:'IBM Plex Serif',serif; font-size:12.5px; margin-bottom:4px;}
+  .cstep.c1{background:#7B7660;}
+  .cstep.c2{background:#B4712E;}
+  .cstep.c3{background:#6E2E1F;}
+
+  .vl-cell.b{background:#7B7660;}
+  .vl-cell.a{background:#9B7E32;}
+  .vl-cell.sjf{background:#B4712E;}
+  .vl-cell.f1e{background:#4A1F15;}
+  .ladder-label{font-family:'IBM Plex Sans', sans-serif; font-size:11.5px; font-weight:600; color:var(--ink); margin:14px 0 2px;}
+  .ladder-label .unit{font-weight:400; color:var(--ink-soft); font-size:11px;}
+  .stat-note{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; font-size:12px; line-height:1.6; color:var(--ink-soft); margin:10px 0;}
+  .stat-note b{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 21 Human Trafficking &middot; Related to Ch.18.14</p>
+      <h1>Smuggling vs. Prostitution vs. Trafficking</h1>
+      <p class="sub">Three crimes that get conflated constantly in the field &mdash; here's how BPOC and the Texas Penal Code actually draw the lines, plus every statute involved with its punishment ladder and a live link to the current text on statutes.capitol.texas.gov.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-quickref">Quick Reference</a>
+  <a class="chip" href="#sec-smg-traf">Smuggling vs. Trafficking</a>
+  <a class="chip" href="#sec-pros-traf">Prostitution vs. Trafficking</a>
+  <a class="chip" href="#sec-overlap">Where They Overlap</a>
+  <a class="chip" href="#sec-statutes">Statute &amp; Punishment Reference</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>Why BPOC drills this:</b> law enforcement's historic &ldquo;prostitution/VICE-styled&rdquo; approach to these cases, and press releases that announce &ldquo;50 prostitutes arrested&rdquo; as if it were a trafficking bust, misinform the public and can cause officers to misidentify (or fail to identify) an actual trafficking victim in the field &mdash; see BPOC Ch.21.2, 21.8, and 21.25. This page is a study aid, not legal advice; always verify current statute text before relying on a specific number or classification.
+</div>
+
+<div class="verify-note">
+  <b>Sourcing note:</b> PC 20.05 (Smuggling), 20.06 (Continuous Smuggling), and 43.02 (Prostitution) were checked word-for-word against this site's own cached statute text (<code>resources/penal_code/pe.20.txt</code>, <code>pe.43.txt</code>) and match. PC 43.05 (Compelling Prostitution) is <i>not</i> in this site's cached <code>pe.43.txt</code> &mdash; that file's Subchapter A cuts off after &sect;43.03 &mdash; so its figures were verified against current published mirrors instead; the trafficking (PC 20A.01&ndash;.04) and Family/CCP citations came straight from this site's own cached statute text. Cross-check anything here against <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.20.htm" target="_blank" rel="noopener">PE.20.htm</a> and <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm" target="_blank" rel="noopener">PE.43.htm</a> before treating it as exam-final.
+</div>
+
+<h2 class="section-title" id="sec-quickref">Quick Reference</h2>
+<div class="compare-wrap">
+<table class="compare">
+<thead><tr><th>&nbsp;</th><th>Human Smuggling</th><th>Prostitution</th><th>Human Trafficking</th></tr></thead>
+<tbody>
+<tr><th>What it is</th><td class="smg">Providing a service &mdash; usually transportation or fraudulent documents &mdash; to someone who voluntarily seeks illegal entry into a country</td><td class="pros">Knowingly offering or agreeing to receive a fee from another to engage in sexual conduct</td><td class="traf">Obtaining/exploiting a person through force, fraud, or coercion for labor/services or a commercial sex act &mdash; or by any means at all, if the victim is a minor</td></tr>
+<tr><th>Crime against</th><td class="smg">The <b>nation</b> &mdash; a crime against a country's sovereignty/immigration law</td><td class="pros">Public order (a regulatory/morals offense)</td><td class="traf">The <b>person</b> &mdash; a crime against an individual human being</td></tr>
+<tr><th>Consent</th><td class="smg">Given by the smuggled person at the outset</td><td class="pros">Given, by definition of the offense itself</td><td class="traf">Legally <b>irrelevant</b> once exploitation occurs &mdash; and never a defense at all when the victim is a minor</td></tr>
+<tr><th>Border crossing required?</th><td class="smg">Yes &mdash; always involves an illegal international border crossing</td><td class="pros">No</td><td class="traf">No &mdash; trafficking can occur entirely within a single home, city, or state; movement isn't an element at all</td></tr>
+<tr><th>When does it end?</th><td class="smg">At the destination &mdash; the smuggler and the smuggled person part ways once the border is crossed</td><td class="pros">N/A</td><td class="traf">It doesn't &mdash; the trafficker continues exploiting the victim at the destination and/or throughout the journey</td></tr>
+<tr><th>Is there a &ldquo;victim&rdquo;?</th><td class="smg">Not in the legal sense &mdash; unless the smuggling converts into trafficking once the person is exploited</td><td class="pros">The person engaging in prostitution can themselves be a trafficking or compelling-prostitution victim (see Overlap, below)</td><td class="traf">Always &mdash; a trafficking victim is entitled to full CCP Ch.56A crime-victim rights, and BPOC frames a sex-trafficking victim as a sexual-assault victim</td></tr>
+<tr><th>Primary statute</th><td class="smg cite">PC 20.05, 20.06</td><td class="pros cite">PC 43.02</td><td class="traf cite">PC 20A.02, 20A.03</td></tr>
+<tr><th>BPOC's core teaching point</th><td class="smg">&ldquo;Smuggling is a crime against a country.&rdquo;</td><td class="pros">&ldquo;A prostitute can be trafficked, but a trafficking victim cannot correctly be called a prostitute.&rdquo;</td><td class="traf">&ldquo;Human trafficking is a crime against a person and their exploitation.&rdquo;</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="section-title" id="sec-smg-traf">Smuggling vs. Trafficking</h2>
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">21.2 / 21.8</span>
+    <span class="sec-name">Consent, Exploitation & Transnationality &mdash; the Three-Part Test</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>BPOC draws the line using three factors. <b>Consent:</b> the smuggled person agrees to being moved; a trafficking victim either never agreed to be moved, or agreed only because they were deceived by false promises. <b>Exploitation:</b> smuggling ends at the destination when the smuggler and smuggled person part ways; trafficking continues exploiting the victim at the destination and/or during the journey itself. <b>Transnationality:</b> smuggling always requires crossing an international border; trafficking occurs regardless of whether any border was crossed, or whether the victim moved at all.</p>
+    <p><b>The critical legal point:</b> per the Palermo Protocol and U.S./Texas law, a person's initial consent &mdash; even consent to be smuggled illegally across a border &mdash; becomes irrelevant the instant they're forced into labor or exploited against their will at the destination. <i>Any smuggled migrant becomes a trafficking victim the moment that happens</i>, regardless of what they agreed to at the outset.</p>
+  </div>
+</div>
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">21.10</span>
+    <span class="sec-name">The Mens Rea Continuum &mdash; Reading Victim Knowledge as an Indicator</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Webb &amp; Myers frame this as a continuum of the victim's own knowledge/awareness of what travel would actually involve &mdash; a useful investigative lens, not a legal test on its own:</p>
+    <div class="continuum">
+      <div class="cstep c1"><b>Full knowledge, no demands</b>Collusion with complete awareness of the outcome, and no demands placed on the person afterward &mdash; points toward <b>smuggling</b>, not trafficking.</div>
+      <div class="cstep c2"><b>Some knowledge, demands attached</b>Some awareness of the outcome, plus demands (e.g., work in the entertainment industry) &mdash; not necessarily trafficking <i>unless</i> the work is induced by force, ID documents are confiscated, or the person is denied freedom.</div>
+      <div class="cstep c3"><b>No knowledge of outcome or demands</b>No awareness at all of what travel would involve or what would be demanded &mdash; a clear trafficking indicator, and a likely sign of organized criminal activity.</div>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title" id="sec-pros-traf">Prostitution vs. Trafficking</h2>
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">21.2</span>
+    <span class="sec-name">&ldquo;Being Prostituted Out&rdquo; Is Not an Accurate Description of Trafficking</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Law enforcement has historically described a trafficking victim as someone &ldquo;being prostituted out to clients&rdquo; &mdash; BPOC calls this incorrect. A person engaged in prostitution <i>can</i> be a trafficking victim, but a trafficking victim should never be labeled a &ldquo;prostitute.&rdquo; A sex-trafficking victim is legally and functionally a <b>sexual assault victim</b>, not someone voluntarily selling sex &mdash; even where a commercial-sex offense is technically what a bystander or officer observes.</p>
+    <p>For a <b>minor</b>, this isn't even a close call: because a child cannot legally consent, child sex trafficking and Commercial Sexual Exploitation of Children (CSEC) require <i>no</i> proof of force, fraud, or coercion at all &mdash; unlike adult trafficking, where those three elements must be shown.</p>
+  </div>
+</div>
+
+<h2 class="section-title" id="sec-overlap">Where They Overlap</h2>
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">OVERLAP</span>
+    <span class="sec-name">The Escalation Chain & the Statutory Cross-References</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>Prostitution &rarr; Compelling Prostitution &rarr; Trafficking:</b> <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.20A.htm#20A.02" target="_blank" rel="noopener">PC &sect;20A.02(a)(3)-(4)</a> makes it trafficking to traffic another person and, through force/fraud/coercion, cause them to engage in conduct prohibited by the prostitution-family offenses &mdash; PC &sect;43.02 (Prostitution), &sect;43.03/.031 (Promotion), &sect;43.04/.041 (Aggravated Promotion), or &sect;43.05 (Compelling Prostitution) &mdash; or to receive a benefit from a venture involving that activity. In other words: the same underlying conduct can be charged as prostitution, as compelling prostitution, or folded into a trafficking charge, depending on how the person came to be doing it and who benefits.</p>
+    <p><b>The affirmative defense runs the other way, too:</b> <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm#43.02" target="_blank" rel="noopener">PC &sect;43.02(d)</a> gives a person charged with prostitution an affirmative defense if they engaged in that conduct <i>because</i> they were themselves a victim of trafficking (&sect;20A.02) or compelling prostitution (&sect;43.05). This is the statutory backbone of BPOC's instruction not to simply arrest a suspected trafficking victim on a prostitution charge.</p>
+    <p><b>Smuggling &rarr; Trafficking:</b> BPOC Ch.21.11 notes that trafficker roles are &ldquo;sometimes assigned to human smugglers who are not looking to traffic anyone, yet the smuggling turns into trafficking once a person is in the United States&rdquo; &mdash; the conversion described in the Smuggling vs. Trafficking section above.</p>
+    <p><b>Victim protections that follow from the trafficking label:</b> <a href="https://statutes.capitol.texas.gov/Docs/FA/htm/FA.261.htm#261.001" target="_blank" rel="noopener">Family Code &sect;261.001(1)(G) &amp; (L)</a> write trafficking (PC &sect;20A.02) directly into the definition of child &ldquo;abuse.&rdquo; And <a href="https://statutes.capitol.texas.gov/Docs/CR/htm/CR.56A.htm#56A.052" target="_blank" rel="noopener">CCP Art. 56A.052(e)</a> gives a victim convicted of (or placed on deferred adjudication for) an offense committed <i>solely</i> as a result of being trafficked &mdash; prostitution being the textbook example &mdash; the right to be informed they may petition for nondisclosure of that criminal history record.</p>
+  </div>
+</div>
+
+<h2 class="section-title" id="sec-statutes">Statute &amp; Punishment Reference</h2>
+
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 20.05</span>
+    <span class="sec-name">Smuggling of Persons</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>Elements &mdash; a person commits an offense if they knowingly:</b> (1) use a motor vehicle, aircraft, or watercraft to transport an individual with intent to conceal that individual from a peace officer, or to flee from a person the actor knows is a peace officer attempting to arrest/detain the actor; (2) encourage or induce a person to enter or remain in the U.S. in violation of federal law, by concealing, harboring, or shielding that person; or (3) assist two or more individuals to enter or remain on agricultural land without the effective consent of the owner.</p>
+    <div class="ladder-label">Punishment &mdash; <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.20.htm#20.05" target="_blank" rel="noopener">PC &sect;20.05(b)</a></div>
+    <div class="value-ladder">
+      <div class="vl-cell f3">Felony, 3rd Degree<span class="rng">Base offense</span><span class="rng2">enhanced min. ~10 yrs</span></div>
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">SBI/death substantial likelihood; victim &lt;18; pecuniary benefit; firearm; or fleeing a peace officer</span><span class="rng2">enhanced min. ~10 yrs</span></div>
+      <div class="vl-cell f1e">Felony, 1st Degree<span class="rng">Victim suffers sexual assault, or serious bodily injury/death results</span><span class="rng2">heightened minimum &mdash; verify exact figure against current statute</span></div>
+    </div>
+    <p class="stat-note"><b>Mitigation:</b> the base 3rd-degree minimum can drop to <b>5 years</b> if the state certifies the defendant gave &ldquo;significant cooperation&rdquo; to law enforcement, or if the actor is related to the smuggled person within the third degree of consanguinity/affinity. A relationship within the <i>second</i> degree of consanguinity/affinity is a full affirmative defense (with exceptions for the more serious enhanced scenarios).</p>
+  </div>
+</div>
+
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 20.06</span>
+    <span class="sec-name">Continuous Smuggling of Persons</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>Elements:</b> engaging two or more times in conduct that constitutes an offense under &sect;20.05, over a period of 10 or more days. As with continuous trafficking (PC &sect;20A.03), a jury doesn't need to unanimously agree on the specific act or exact date &mdash; only that the pattern of two-or-more instances occurred within that 10+ day window. A defendant generally can't be convicted of both a &sect;20.05 offense and &sect;20.06 for the same victim, except where the &sect;20.05 charge is pled in the alternative, falls outside the alleged continuous-smuggling period, or is a lesser-included offense.</p>
+    <div class="ladder-label">Punishment &mdash; <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.20.htm#20.06" target="_blank" rel="noopener">PC &sect;20.06</a></div>
+    <div class="value-ladder">
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">Base offense</span><span class="rng2">enhanced min. ~10 yrs</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">Substantial risk of SBI/death, or victim &lt;18</span><span class="rng2">enhanced min. ~10 yrs</span></div>
+      <div class="vl-cell f1e">Felony, 1st Degree<span class="rng">Sexual assault, aggravated sexual assault, SBI, or death actually resulted</span><span class="rng2">25&ndash;99 yrs or life</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 43.02</span>
+    <span class="sec-name">Prostitution</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>Elements:</b> a person commits an offense if they knowingly offer to engage, agree to engage, or engage in sexual conduct for a fee, <i>or</i> knowingly solicit another in a public place to engage in sexual conduct for hire. Punishment escalates with prior convictions for this same offense (whether the sentence was imposed, probated, or resulted from deferred adjudication).</p>
+    <div class="ladder-label">Punishment &mdash; <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm#43.02" target="_blank" rel="noopener">PC &sect;43.02</a></div>
+    <div class="value-ladder">
+      <div class="vl-cell b">Class B Misd.<span class="rng">1st offense</span></div>
+      <div class="vl-cell a">Class A Misd.<span class="rng">1&ndash;2 prior convictions</span></div>
+      <div class="vl-cell sjf">State Jail Felony<span class="rng">3+ prior convictions</span></div>
+    </div>
+    <p class="stat-note"><b>Affirmative defense (&sect;43.02(d)):</b> it's a defense to prosecution that the actor engaged in the conduct because they were themselves a victim of trafficking (&sect;20A.02) or compelling prostitution (&sect;43.05) &mdash; see Overlap, above.</p>
+  </div>
+</div>
+
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 43.05</span>
+    <span class="sec-name">Compelling Prostitution</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>Elements &mdash; a person commits an offense if they knowingly:</b> (1) cause another <i>by force, threat, coercion, or fraud</i> to commit prostitution; (2) cause a child younger than 18 to commit prostitution, by any means, regardless of whether the actor knows the child's age; or (3) cause a disabled individual to commit prostitution, by any means, regardless of whether the actor knows the individual is disabled. Coercion here is defined broadly &mdash; it includes withholding a victim's identifying documents and causing (or exploiting) intoxication or chemical dependency to impair resistance. Lack of the victim's mental capacity, or an incomplete act, is not a defense in the child/disabled-individual scenarios.</p>
+    <div class="ladder-label">Punishment &mdash; <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm#43.05" target="_blank" rel="noopener">PC &sect;43.05</a></div>
+    <div class="value-ladder">
+      <div class="vl-cell f1e">Felony, 1st Degree<span class="rng">Flat classification &mdash; no lesser tier, regardless of theory</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-card">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 20A.02 / 20A.03</span>
+    <span class="sec-name">Trafficking of Persons &amp; Continuous Trafficking (condensed &mdash; full detail on the Ch.21 study page)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p><b>&sect;20A.02:</b> knowingly trafficking another person intending forced labor/services; receiving a benefit from a venture involving forced labor/services while knowing it's forced (no direct trafficking act required); trafficking someone into a prostitution-family offense through force/fraud/coercion; or trafficking a child/disabled individual into forced labor or specified sexual offenses &mdash; with the age/disability-knowledge requirement expressly waived.</p>
+    <div class="ladder-label">Punishment &mdash; <a href="https://statutes.capitol.texas.gov/Docs/PE/htm/PE.20A.htm#20A.02" target="_blank" rel="noopener">PC &sect;20A.02(b)</a></div>
+    <div class="value-ladder">
+      <div class="vl-cell f2">Felony, 2nd Degree<span class="rng">Base offense</span></div>
+      <div class="vl-cell f1">Felony, 1st Degree<span class="rng">Child/disabled victim, SBI/death results, deadly weapon, strangulation, or victim recruited from a shelter/correctional facility</span></div>
+      <div class="vl-cell f1e">Felony, 1st Degree<span class="rng">Committed near a school or similar protected location</span><span class="rng2">life or 25&ndash;99 yrs</span></div>
+    </div>
+    <div class="ladder-label">&sect;20A.03 &mdash; Continuous Trafficking (2+ &sect;20A.02 violations over 30+ days)</div>
+    <div class="value-ladder">
+      <div class="vl-cell f1e">Felony, 1st Degree<span class="rng">Flat classification</span><span class="rng2">life or 25&ndash;99 yrs</span></div>
+    </div>
+    <p class="stat-note">See <a href="../study.html?ch=21">study.html?ch=21, LO 21.20</a> for the full definitions (&sect;20A.01), accomplice-witness/immunity provisions (&sect;20A.04), and enhancement detail.</p>
+  </div>
+</div>
+
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Not an official TCOLE or academy publication &middot; Verify all punishment figures against current statute before relying on them</footer>
+
+<script>
+function toggleSec(el){
+  el.classList.toggle('open');
+  var body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    card.querySelector('.sec-header').classList.add('open');
+    card.querySelector('.sec-body').classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
