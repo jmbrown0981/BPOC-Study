@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 18 Missing Persons Map | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  /* page-specific tweaks on top of the shared theme */
+  main{max-width:980px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .ladder-table td:first-child, .ladder-table th:first-child{font-weight:700; white-space:nowrap;}
+  mark{background:var(--brass-light); color:var(--ink); padding:0 2px; border-radius:2px;}
+  tr.no-match{display:none;}
+  .sec-card.no-match{display:none;}
+  .diagram-wrap{background:#fbfaf6; border:1px solid var(--rule); border-radius:8px; padding:14px; overflow-x:auto; margin-top:8px;}
+  .diagram-wrap .mermaid{min-width:520px;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  .cite-table td:first-child{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--navy); font-weight:700;}
+  .alert-name{font-weight:700; color:var(--navy);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 18 &middot; Missing &amp; Exploited Persons</p>
+      <h1>Missing Persons Response Map</h1>
+      <p class="sub">Types of missing persons, the circumstances that classify a case, the statewide alert system, and the Code of Criminal Procedure Ch.63 reporting timeline &mdash; mapped from the Ch.18 bank and the full text of CCP Chapter 63.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Find a term:</label>
+  <input type="text" id="searchBox" placeholder="e.g. AMBER, NamUs, Runaway, 63.009..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-types">Types</a>
+  <a class="chip" href="#sec-circ">Circumstances</a>
+  <a class="chip" href="#sec-flow">Reporting Timeline</a>
+  <a class="chip" href="#sec-db">Databases &amp; Systems</a>
+  <a class="chip" href="#sec-alerts">Statewide Alerts</a>
+  <a class="chip" href="#sec-exploit">Exploitation</a>
+  <a class="chip" href="#sec-traffic">Trafficking</a>
+  <a class="chip" href="#sec-cite">CCP 63 Citations</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  A missing person case is <b>never out of jurisdiction</b> &mdash; every law enforcement agency that receives a report must act on it (CCP 63.009(a), 63.00905(a)). This page maps how a case is <b>classified</b> (type + circumstance), how it moves through the <b>reporting timeline</b> (CCP Ch.63 deadlines), which <b>database</b> or <b>statewide alert</b> applies, and how <b>exploitation</b> and <b>trafficking</b> are separately defined once a person is found to be a victim rather than simply missing.
+</div>
+
+<div class="sec-card" id="sec-types">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.1</span>
+    <span class="sec-name">Types of Missing Persons</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>A single case can fit more than one type &mdash; these are not mutually exclusive categories, they are lenses for what response and urgency the case needs.</p>
+    <table class="ladder-table" id="typesTable">
+      <thead><tr><th>Type</th><th>Definition</th><th>Notes</th></tr></thead>
+      <tbody id="typesTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-circ">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.2</span>
+    <span class="sec-name">Circumstances Surrounding a Disappearance</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table" id="circTable">
+      <thead><tr><th>Circumstance</th><th>Key Points</th><th>Citation / Note</th></tr></thead>
+      <tbody id="circTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-flow">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">63.009</span>
+    <span class="sec-name">Reporting &amp; Investigation Timeline</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>CCP 63.009 sets the general timeline for any missing-person report; CCP 63.00905 runs a tighter clock specifically for a missing <b>child</b> (bracketed figures below). Both share the same shape: receive &rarr; investigate &rarr; enter &rarr; broadcast &rarr; escalate to a national system &rarr; close out on recovery.</p>
+    <div class="diagram-wrap" id="diagram-target-0"><p style="color:var(--ink-soft); font-size:12px; margin:0;">Rendering diagram&hellip;</p></div>
+    <table class="ladder-table" style="margin-top:14px;">
+      <thead><tr><th>Step</th><th>General (63.009)</th><th>Missing Child (63.00905)</th></tr></thead>
+      <tbody>
+        <tr><td>Investigation begins</td><td>Immediately if known dementia/Alzheimer's; otherwise "due diligence"</td><td>Immediately, always</td></tr>
+        <tr><td>Clearinghouse + NCIC entry</td><td>&le; 2 hours</td><td>&le; 2 hours &mdash; plus NCMEC and TLETS</td></tr>
+        <tr><td>Broadcast to agencies within 200 miles</td><td>&le; 48 hours</td><td>&le; 48 hours</td></tr>
+        <tr><td>Enter into NamUs</td><td>&le; 60 days</td><td>&le; 30 days</td></tr>
+        <tr><td>On recovery</td><td colspan="2">Clear the NCIC entry; notify NamUs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-db">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.3</span>
+    <span class="sec-name">Databases &amp; Reporting Systems</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table" id="dbTable">
+      <thead><tr><th>System</th><th>Function</th><th>Citation / Scope</th></tr></thead>
+      <tbody id="dbTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-alerts">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.4</span>
+    <span class="sec-name">Statewide Alert Comparison</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table" id="alertsTable">
+      <thead><tr><th>Alert</th><th>Who It Helps Locate</th><th>Criteria / Notes</th></tr></thead>
+      <tbody id="alertsTableBody"></tbody>
+    </table>
+    <p style="margin-top:10px;">To activate <b>any</b> of these alerts there must be sufficient information to disseminate to the public to help locate the individual, a suspect, or a vehicle used in the incident. AMBER's local-area activation is the one exception where statewide criteria don't have to be verified first &mdash; see the row above.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-exploit">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.13</span>
+    <span class="sec-name">Types of Exploitation</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="def-box"><strong>Exploitation</strong> means the illegal or improper use of a child, elderly individual, or disabled individual &mdash; or of their resources &mdash; for monetary or personal benefit, profit, or gain (PC 32.53). Instructors note the definition is legally anchored to those three groups but the underlying conduct extends beyond them.</p>
+    <table class="ladder-table" id="exploitTable">
+      <thead><tr><th>Type</th><th>Definition</th><th>Citation</th></tr></thead>
+      <tbody id="exploitTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-traffic">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">18.14</span>
+    <span class="sec-name">Types of Human Trafficking</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p class="def-box"><strong>Traffic</strong> means to transport, entice, recruit, harbor, provide, or otherwise obtain another person by any means (PC 20A.02). Trafficking is involuntary, involves forced exploitation, and can occur anywhere &mdash; including the victim's own residence.</p>
+    <table class="ladder-table" id="trafficTable">
+      <thead><tr><th>Type</th><th>Definition</th><th>Citation / Note</th></tr></thead>
+      <tbody id="trafficTableBody"></tbody>
+    </table>
+    <p class="warn-box"><strong>Prostitution vs. trafficking:</strong> prostitution can become trafficking, but trafficking must never be treated as prostitution &mdash; a sex trafficking victim is a rape victim.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-cite">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">CITE</span>
+    <span class="sec-name">CCP Chapter 63 Quick Citations</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>Every article below is from Code of Criminal Procedure <b>Chapter 63 &mdash; Missing Children and Missing Persons</b>. Subchapter A (63.001&ndash;.022) is the general reporting framework; Subchapter B (63.051&ndash;.066) is the separate UNT Health Science Center DNA database program for high-risk cases.</p>
+    <table class="ladder-table cite-table" id="citeTable">
+      <thead><tr><th>Art.</th><th>Title</th><th>Plain-Language Note</th></tr></thead>
+      <tbody id="citeTableBody"></tbody>
+    </table>
+    <p class="warn-box"><strong>Not CCP 63:</strong> falsely reporting a missing child or person is a separate Penal Code offense &mdash; PC 37.081. A report made in good faith, where the reporter genuinely believed the person was missing, is not a false report.</p>
+  </div>
+</div>
+
+</main>
+
+<footer>Ch.18 Missing &amp; Exploited Persons Map &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+/* ===================== DATA ===================== */
+const TYPES = [
+  ["Disability","Mental, physical, intellectual, and/or developmental impairment that increases the possibility of putting the person at risk of immediate harm; congenital or acquired.","Low/nonverbal individuals and those with high support needs may struggle to communicate their whereabouts or seek help."],
+  ["Endangered","A person of any age who is missing and is in the company of another person under circumstances that place them in danger.","Any age."],
+  ["Involuntary","A person of any age who is missing under circumstances that indicate the disappearance was not voluntary.","Any age."],
+  ["Voluntary Missing Adult","An adult who is reported missing but who has left of their own free will.","May include an intent to commit suicide."],
+  ["Disaster Victim","A person of any age who is reported missing and assumed to be a victim of a man-made or natural disaster.","Any age."],
+  ["Juvenile","An unemancipated person, as defined by law, who does not meet the Disability, Endangered, Disaster, or Involuntary criteria.","Texas Family Code 31.001 requirements."],
+  ["Missing from Care &mdash; Adult","Missing from a place such as a hospital, residential care home, or mental health facility.","—"],
+  ["Missing from Care &mdash; Child","A child missing from care who is not in the physical custody of the agency, individual, or institution with whom they were placed; whereabouts may or may not be known.","Neglect, mental health, lack of financial/emotional support, disability, and illness all raise vulnerability to trafficking and exploitation."],
+  ["Other","Doesn't meet the criteria for any other category, but there is reasonable concern for the person's safety &mdash; or the person is under age 21 and declared emancipated.","Catch-all category."]
+];
+
+const CIRC = [
+  ["Abduction (general)","Victims can be any age, including adults; may or may not know the abductor. An attempted abduction is a failure to complete the crime after significant action was taken toward it.","—"],
+  ["Family Abduction","A child is taken, wrongfully retained, or concealed by a parent or other family member, depriving another person of custody or visitation rights &mdash; even if the child willingly goes along.","PC 25.03, Interference With Child Custody."],
+  ["Non-Family Abduction","By someone known but unrelated to the victim (neighbor, teacher, coworker, online acquaintance) or by a stranger.","Children are far more likely to be abducted by someone they know than by a stranger."],
+  ["Runaway","Under 18, voluntarily leaves home or a care placement without permission.","Common drivers: escaping a negative home/placement environment, abuse, mental health conditions, substance use. Risk of running away increases sharply after the first incident."],
+  ["Throwaway / Giveaway Youth","Asked to leave, forced to leave, or given away by a parent/caregiver with no alternate care arranged.","Lack of support heightens the risk of trafficking and exploitation."],
+  ["Wandering &mdash; Goal-Directed","Purposeful movement toward something of interest (water, train tracks, a familiar place) or sensory-seeking (e.g., toward traffic sounds).","—"],
+  ["Wandering &mdash; Bolting/Fleeing","Sudden running or bolting, usually to escape a stressful situation or out of excitement; can be a startle response to sensory overload.","—"],
+  ["Wandering &mdash; Other","Disorientation, nighttime wandering, transition/confusion, mental health crisis, being under the influence, becoming lost, or cognitive impairment.","Includes dementia, such as Alzheimer's disease."],
+  ["At-Risk / Endangered Person","High risk of trafficking, sexual assault, exploitation, abuse, or neglect.","Disappeared in a dangerous environment; is the victim of a crime; has medical/mental/behavioral needs; has an intellectual or developmental disability; was last seen with an adult unknown to the family."],
+  ["Displaced by Disaster","An event causing widespread material, economic, or environmental impact exceeding a community's ability to cope with its own resources.","Extreme weather, violence (e.g., mass shootings), major sporting events, large festivals/concerts, transportation incidents."]
+];
+
+const DIAGRAM = {title:"CCP 63.009 / 63.00905 &mdash; Reporting &amp; Investigation Timeline", code:`flowchart TD
+  report["Report Received<br/>any jurisdiction &mdash; never refused"]
+  invest["Investigation Begins<br/>immediate: dementia/Alzheimer's or child<br/>due diligence: other adults"]
+  entry["Within 2 Hours<br/>Enter Clearinghouse + NCIC<br/>+ NCMEC and TLETS if child"]
+  alert["Alert Criteria Assessed<br/>AMBER / Silver / EMP / Camo / CLEAR"]
+  broadcast["Within 48 Hours<br/>Submit to agencies within 200 miles"]
+  namus["30 Days (child) / 60 Days (adult)<br/>Enter into NamUs"]
+  recovery["Recovery<br/>Clear NCIC entry, notify NamUs, reunify"]
+  report --> invest
+  invest --> entry
+  entry --> broadcast
+  entry --> alert
+  broadcast --> namus
+  namus --> recovery
+  alert --> recovery`};
+
+const DATABASES = [
+  ["MPCH &mdash; Missing Persons Clearinghouse","Central Texas repository for missing children, missing persons, and attempted child abductions; also tracks unidentified bodies statewide; cross-checks and matches them against open cases.","CCP 63.002 (established within DPS), 63.003 (function), 63.005, 63.014, 63.017"],
+  ["NCIC &mdash; National Crime Information Center","Computerized national index of missing persons and criminal information for rapid exchange between criminal-justice agencies; exchanges data with the MPCH.","Federal (FBI)"],
+  ["TCIC &mdash; Texas Crime Information Center","Statewide database of missing persons and other criminal information; directly linked to NCIC.","Texas DPS"],
+  ["NamUs &mdash; National Missing and Unidentified Persons System","National centralized repository and resource center for missing, unidentified, and unclaimed person cases; connects agencies with tools for resolving long-term cases.","Entry required &le; 60 days (adult) / &le; 30 days (child) &mdash; CCP 63.009(a)(5), 63.00905(a)(5)"],
+  ["NCMEC &mdash; National Center for Missing &amp; Exploited Children","Federal clearinghouse specifically for missing children; entry required within 2 hours of a missing-child report.","CCP 63.00905(a)(3)(B)"],
+  ["Alzheimer's Association Safe Return","Nationwide emergency response service for people living with Alzheimer's disease or another dementia; specializes in wandering incidents and related medical emergencies.","—"]
+];
+
+const ALERTS = [
+  ["AMBER","An abducted child, or a missing person with an intellectual disability.","Local activation allowed before statewide criteria are verified: within a 100-mile radius of where the child went missing/was last seen, and in all adjacent counties &mdash; if the chief law enforcement officer believes activation is warranted."],
+  ["Silver","Missing senior citizens or persons with Alzheimer's disease.","Statewide."],
+  ["Endangered Missing Persons (EMP)","Missing persons with an intellectual disability.","Statewide."],
+  ["Camo","Missing current or former U.S. armed forces members &mdash; including National Guard or a reserve/auxiliary unit of any branch.","Statewide."],
+  ["CLEAR","Missing, kidnapped, or abducted adults, or adults in immediate danger of injury or death.","Statewide; also used to help locate potential suspects."]
+];
+
+const EXPLOIT = [
+  ["Sexual Exploitation","Actual or attempted abuse of a position of vulnerability, power, or trust for sexual purposes &mdash; including profiting monetarily, socially, or politically from the exploitation of another. Sexual abuse is the actual or threatened physical intrusion of a sexual nature, by force or under unequal/coercive conditions.","PC 43.25 (Sexual Performance by a Child), PC 43.251 (Employment Harmful to Children)"],
+  ["Labor Exploitation","Abuse of people in the workplace for profit.","—"],
+  ["Financial Exploitation","The wrongful or unauthorized taking, withholding, appropriation, or use of a person's money, assets, other property, or identifying information.","Most often found with elderly adults or adults with disabilities. Finance Code 281.001(3)"],
+  ["Online Exploitation &mdash; Coercion &amp; Extortion","Sharing, or threatening to share, sexual images or information online, using digital technology as the means of coercion &mdash; aimed at causing distress, gaining financially, or sexually abusing/exploiting the victim.","PC 33.021 (Online Solicitation of a Minor), PC 21.18 (Sexual Coercion)"]
+];
+
+const TRAFFIC = [
+  ["Sex Trafficking","Human trafficking for the purpose of sexual exploitation.","A sex trafficking victim is a rape victim; prostitution can become trafficking, but trafficking is never mere prostitution."],
+  ["Child Trafficking","Children who are recruited, transported, transferred, harbored, or received for the purpose of exploitation.","—"],
+  ["Labor Trafficking","Recruitment, harboring, transportation, provision, or obtaining of a person for labor or services using force, fraud, or coercion, for subjection to involuntary servitude, peonage, debt bondage, or slavery.","Least known but most widely used method of trafficking. Includes bonded/debt labor and forced labor or services (domestic servitude, agricultural labor, sweatshop/factory labor, janitorial, food service, begging)."]
+];
+
+const CITATIONS = [
+  ["63.001","Definitions","Defines missing child, missing person, abduct, clearinghouse, legal custodian, and related terms for the whole chapter."],
+  ["63.002","Clearinghouse Established","The missing children and missing persons information clearinghouse is created within DPS, under the director's administrative direction."],
+  ["63.003","Function of Clearinghouse","Central repository; intrastate exchange system; NCIC communication; statewide toll-free report line; abduction-prevention outreach; receives attempted-abduction info."],
+  ["63.004","Report Forms","DPS distributes the forms; a report can be made in person, by phone, by another indirect method, or completed by the reporter and delivered to an officer."],
+  ["63.0041","Reporting of Attempted Child Abduction","Local agency relays relevant info to the clearinghouse as soon as practicable, not later than 8 hours, via TLETS or its successor system."],
+  ["63.006 / 63.007","Dental &amp; Medical Record Release","Standard release forms let law enforcement pull dental/medical records to aid identification; a judge may authorize release for good cause; releasing providers are immune from liability."],
+  ["63.008","Missing Children Program","Texas Education Agency runs a program (coordinated with the clearinghouse) to locate missing children who may be enrolled in Texas schools."],
+  ["63.009","Law Enforcement Requirements &mdash; General","Sets the general investigation and reporting timeline: immediate/due-diligence investigation, &le;2-hr clearinghouse/NCIC entry, &le;48-hr 200-mile broadcast, &le;60-day NamUs entry, NCIC clear-out on recovery."],
+  ["63.00905","Law Enforcement Requirements &mdash; Missing Child","Tighter, child-specific version of 63.009: immediate investigation always, &le;2-hr entry into clearinghouse/NCIC/NCMEC/TLETS, &le;48-hr broadcast, &le;30-day NamUs entry; also triggers a DFPS abuse/neglect notification path."],
+  ["63.0091","Requirements for Certain Missing Children","DPS rules for children reported missing 4+ times in 24 months, in DFPS/foster care and missing 2+ times in 24 months, or otherwise at high risk (trafficking, abuse, dangerous environment, IDD, last seen with an unknown adult) &mdash; requires a high-risk flag and a 100-mile, 2-hour agency notification."],
+  ["63.010","Attorney General to Require Compliance","AG can compel agency compliance with the chapter, including by writ of mandamus."],
+  ["63.011 / 63.012","Missing Children Investigations / Report of Inquiry","A custodian can request clearinghouse info in writing; the agency must report results back within 14 days."],
+  ["63.013","Information to Clearinghouse","Agencies must forward any info aiding location/identification of a missing child, and any attempted-abduction info they receive."],
+  ["63.014","Cross-Checking and Matching","Clearinghouse cross-checks unidentified bodies against missing-person reports; DPS notifies agencies of a possible match."],
+  ["63.017","Confidentiality of Certain Records","Clearinghouse investigation records, and internal notations on missing children/persons/unidentified bodies, are confidential."],
+  ["63.019 &ndash; 63.022","School Records Flagging System","Schools/day cares/birth-certificate agencies flag the records of a missing child under 11 on notice from law enforcement; the flag is removed once the child is recovered."],
+  ["63.051 &ndash; 63.066 (Subch. B)","UNTHSC Missing Persons DNA Database","Separate program at UNT Health Science Center-Fort Worth: DNA database for high-risk missing persons and unidentified remains; voluntary family sampling; confidential results; misuse is a Class B misdemeanor plus $5,000 civil liability per violation."]
+];
+
+/* ===================== RENDER ===================== */
+function esc(s){
+  return String(s).replace(/&(?!\w+;)/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+/* Note: content strings above already contain a handful of intentional HTML entities
+   (&mdash;, &ndash;, &rarr;, &le;) for display — esc() leaves any "&something;" run alone
+   so those keep rendering, while still escaping stray "&", "<", ">" for safety. */
+
+function renderRows(bodyId, rows){
+  const tbody = document.getElementById(bodyId);
+  tbody.innerHTML = rows.map(cells =>
+    `<tr data-search="${esc(cells.join(' ').replace(/<[^>]+>/g,' ').toLowerCase())}"><td>${cells.map(c=>c).join('</td><td>')}</td></tr>`
+  ).join('');
+}
+
+function renderTypes(){ renderRows('typesTableBody', TYPES); }
+function renderCirc(){ renderRows('circTableBody', CIRC); }
+function renderDb(){ renderRows('dbTableBody', DATABASES); }
+function renderAlerts(){
+  const tbody = document.getElementById('alertsTableBody');
+  tbody.innerHTML = ALERTS.map(([name,who,crit]) =>
+    `<tr data-search="${esc((name+' '+who+' '+crit).toLowerCase())}"><td class="alert-name">${name}</td><td>${who}</td><td>${crit}</td></tr>`
+  ).join('');
+}
+function renderExploit(){ renderRows('exploitTableBody', EXPLOIT); }
+function renderTraffic(){ renderRows('trafficTableBody', TRAFFIC); }
+function renderCite(){ renderRows('citeTableBody', CITATIONS); }
+
+function renderDiagramShell(){
+  const wrap = document.getElementById('diagram-target-0');
+  wrap.innerHTML = '<p style="color:var(--ink-soft); font-size:12px; margin:0;">Rendering diagram&hellip;</p>';
+}
+
+/* Render via mermaid.render() rather than startOnLoad — startOnLoad measures elements
+   in place, which breaks when the diagram sits inside a collapsed (display:none)
+   accordion section. mermaid.render() builds its own offscreen sandbox internally, so
+   it works regardless of whether the destination container is currently visible. */
+async function renderMermaidDiagram(){
+  const target = document.getElementById('diagram-target-0');
+  if(!window.mermaid){
+    target.innerHTML = '<div class="warn-box"><strong>Diagram library didn\'t load.</strong> This page loads Mermaid.js from a CDN (cdn.jsdelivr.net) — if that domain is blocked on this network, or you\'re offline, the diagram above won\'t render. Try reloading, or use the table below the diagram, which has the same information.</div>';
+    return;
+  }
+  mermaid.initialize({
+    startOnLoad:false,
+    theme:'base',
+    themeVariables:{
+      primaryColor:'#EAE4D3',
+      primaryTextColor:'#221F19',
+      primaryBorderColor:'#B08B3C',
+      lineColor:'#5B564A',
+      secondaryColor:'#F3EFE4',
+      tertiaryColor:'#fff',
+      fontFamily:'IBM Plex Sans, sans-serif'
+    }
+  });
+  try{
+    const result = await mermaid.render('mmd-svg-0', DIAGRAM.code);
+    target.innerHTML = result.svg;
+  } catch(err){
+    target.innerHTML = '<p style="color:var(--rust); font-size:12px;">Diagram failed to render: '
+      + esc(err && err.message ? err.message : String(err))
+      + '</p><pre style="font-size:11px; white-space:pre-wrap; background:var(--paper-dim); padding:8px; border-radius:6px;">'
+      + esc(DIAGRAM.code) + '</pre>';
+  }
+}
+
+/* ===================== SECTION TOGGLE ===================== */
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  var body = hdr.nextElementSibling;
+  hdr.classList.toggle('open');
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+
+/* ===================== SEARCH ===================== */
+function runSearch(){
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const countEl = document.getElementById('searchCount');
+  let totalMatches = 0;
+
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    if(card.id === 'sec-flow'){ return; } // diagram/timeline section — not row-filterable
+    const rows = card.querySelectorAll('tbody tr');
+    if(rows.length === 0){ return; }
+    let cardMatches = 0;
+    rows.forEach(function(row){
+      const hay = row.getAttribute('data-search') || '';
+      const isMatch = q === '' || hay.indexOf(q) !== -1;
+      row.classList.toggle('no-match', !isMatch);
+      if(isMatch && q !== '') cardMatches++;
+    });
+    if(q === ''){
+      card.classList.remove('no-match');
+    } else {
+      card.classList.toggle('no-match', cardMatches === 0);
+      const hdr = card.querySelector('.sec-header');
+      const bdy = card.querySelector('.sec-body');
+      if(cardMatches > 0 && hdr && bdy){
+        hdr.classList.add('open');
+        bdy.classList.add('open');
+      }
+      totalMatches += cardMatches;
+    }
+  });
+
+  countEl.textContent = q === '' ? '' : (totalMatches + ' match' + (totalMatches===1?'':'es'));
+}
+
+document.getElementById('searchBox').addEventListener('input', runSearch);
+
+/* ===================== INIT ===================== */
+renderTypes();
+renderCirc();
+renderDb();
+renderAlerts();
+renderExploit();
+renderTraffic();
+renderCite();
+renderDiagramShell();
+renderMermaidDiagram();
+
+window.addEventListener('DOMContentLoaded', function(){
+  var first = document.querySelector('.sec-header');
+  if(first){ first.classList.add('open'); first.nextElementSibling.classList.add('open'); }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="HGffKWbAnY29lAxnsUYs">
+    <mxGraphModel dx="1653" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Death Notification&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;" value="Establish identity of deceased" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;" value="Get medical info about person to be informed of death" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;" value="Go.&lt;div&gt;DO NOT CALL.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;" value="At least one person should be in uniform." vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" value="Talk about feelings with partner." vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FFFF;" value="If a child answers the door, ask to speak to parents." vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FFFF;" value="Present credentials and ask to enter" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FFFF;" value="Sit Down.&lt;div&gt;DO NOT BE STIFF.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="Convey the information simply and directly" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="Ask parents if they want to tell children, or if they want you to tell children" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="DO NOT discount anyone&#39;s feelings (theirs or yours)" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="Be prepared if the bereaved goes into shock" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="EMPATHIZE with the survivors" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="Answer questions honestly. Provide information that will not jeopardize investigation." vertex="1">
+          <mxGeometry height="60" width="200" x="440" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="Offer to make calls for them" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Inform survivors they may need to identify the deceased" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Explain why an autopsy is necessary and how they can get a copy of the report" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="Tell hospital personnel what info the family has been given" vertex="1">
+          <mxGeometry height="60" width="120" x="800" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Inform survivors that law enforcement may need to contact them later" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="DO NOT leave survivors alone" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Stay with the survivors and help with decisions" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Provide survivors with names and phone numbers of officers" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFF99;" value="&lt;b&gt;PREPARATION&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" value="&lt;b&gt;ON THE WAY&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99FFFF;" value="&lt;b&gt;UPON ARRIVAL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" value="&lt;b&gt;NOTIFICATION STEPS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="&lt;b&gt;ADMINISTRATIVE WITH FAMILY&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="&lt;b&gt;ADMINISTRATIVE WITH OTHER AGENCIES&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="800" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="Contact agencies in other jurisdictions to notify additional family" vertex="1">
+          <mxGeometry height="60" width="120" x="800" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="Preserve and label package containing deceased&#39;s clothes and personal effects" vertex="1">
+          <mxGeometry height="60" width="120" x="800" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="Allow hospitals adequate time to prepare remains for identification" vertex="1">
+          <mxGeometry height="60" width="120" x="800" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Provide survivors with sufficient time with the deceased" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Talk to the media ONLY if the family has given permission" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="Provide the family with an info sheet with pertinant information" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCFF;" value="&lt;b&gt;THE NEXT DAY&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="960" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCFF;" value="Make a call to the family" vertex="1">
+          <mxGeometry height="60" width="120" x="960" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tjCSE-g3T6pwhyQRhLR4-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCFF;" value="Let them know you care" vertex="1">
+          <mxGeometry height="60" width="120" x="960" y="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
