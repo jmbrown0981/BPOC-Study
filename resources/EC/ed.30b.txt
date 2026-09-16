@@ -1,0 +1,187 @@
+EDUCATION CODE
+TITLE 2. PUBLIC EDUCATION
+SUBTITLE F. CURRICULUM, PROGRAMS, AND SERVICES
+CHAPTER 30B.  VIRTUAL AND HYBRID CAMPUSES, PROGRAMS, AND COURSES
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 30B.001.  DEFINITIONS.  In this chapter:
+            (1)  "Full-time hybrid campus" means a school district or open-enrollment charter school campus at which at least 50 percent of the enrolled students are enrolled in a full-time hybrid program authorized under Subchapter C.
+            (2)  "Full-time hybrid program" means a full-time educational program offered by a school district or open-enrollment charter school campus in which:
+                  (A)  a student is in attendance in person for less than 90 percent of the minutes of instruction provided in a school year; and
+                  (B)  the instruction and content may be delivered synchronously or asynchronously over the Internet, in person, or through other means.
+            (3)  "Full-time virtual campus" means a school district or open-enrollment charter school campus at which at least 50 percent of the enrolled students are enrolled in a full-time virtual program authorized under Subchapter C.
+            (4)  "Full-time virtual program" means a full-time educational program offered by a school district or open-enrollment charter school campus in which:
+                  (A)  a student is in attendance in person minimally or not at all; and
+                  (B)  the instruction and content are delivered synchronously or asynchronously primarily over the Internet.
+            (5)  "Hybrid course" means a course in which:
+                  (A)  a student is in attendance in person for less than 90 percent of the minutes of instruction provided; and
+                  (B)  the instruction and content may be delivered synchronously or asynchronously over the Internet, in person, or through other means.
+            (6)  "Parent" means a student's parent or a person standing in parental relation to a student.
+            (7)  "Virtual course" means a course in which instruction and content are delivered synchronously or asynchronously primarily over the Internet.
+            (8)  "Whole program virtual instruction provider" means a private or third-party service that provides oversight and management of the virtual instruction services or otherwise provides a preponderance of those services for a full-time virtual or full-time hybrid campus or program.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.002.  RULES.  (a)  The commissioner shall adopt rules as necessary to administer this chapter.
+      (b)  To the extent practicable, the commissioner shall consult school districts, open-enrollment charter schools, and parents in adopting rules under this section.
+      (c)  The agency may form an advisory committee to comply with the provisions of this section.  Chapter 2110, Government Code, does not apply to an advisory committee formed under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.003.  GRANTS AND FEDERAL FUNDS.  (a)  For purposes of this chapter, the commissioner may seek and accept a grant from a public or private person.
+      (b)  For purposes of this chapter, the commissioner may accept federal funds and shall use those funds in compliance with applicable federal law, regulations, and guidelines.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.004.  PROVISION OF COMPUTER EQUIPMENT OR INTERNET SERVICE.  This chapter does not:
+            (1)  require a school district, an open-enrollment charter school, a virtual course provider, or the state to provide a student with home computer equipment or Internet access for a virtual course provided by a school district or open-enrollment charter school; or
+            (2)  prohibit a school district or open-enrollment charter school from providing a student with home computer equipment or Internet access for a virtual course provided by the district or school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.005.  EXTRACURRICULAR ACTIVITY.  A student enrolled in a virtual or hybrid course, program, or campus offered under this chapter may participate in an extracurricular activity sponsored or sanctioned by the school district or open-enrollment charter school in which the student is enrolled or by the University Interscholastic League in the same manner as other district or school students.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.006.  HYBRID AND VIRTUAL INSTRUCTION PERMITTED.  (a)  A school district or open-enrollment charter school may deliver instruction through hybrid courses, virtual courses, full-time hybrid programs, and full-time virtual programs in the manner provided by this chapter.
+      (b)  The following entities may deliver instruction through hybrid or virtual courses under this chapter in the same manner provided for a school district or open-enrollment charter school:
+            (1)  a consortium of school districts or open-enrollment charter schools;
+            (2)  an institution of higher education, as that term is defined by Section 61.003; or
+            (3)  a regional education service center.
+      (c)  A school district or open-enrollment charter school that delivers instruction through a hybrid or virtual course shall develop written information describing each hybrid or virtual course available for enrollment and complying with any other requirement of Section 26.0031.
+      (d)  A school district or open-enrollment charter school shall make information under this section available to students and parents at the time students ordinarily select courses and may provide that information to students and parents at other times as determined by the district or school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.007.  FOUNDATION SCHOOL PROGRAM FUNDING.  The commissioner by rule shall adopt procedures for reporting and verifying the attendance of a student enrolled in a hybrid course, virtual course, full-time hybrid program, or full-time virtual program provided by a school district or open-enrollment charter school under this chapter.  The procedures must:
+            (1)  provide a district or school with flexibility to provide instruction over the Internet, through synchronous or asynchronous delivery; and
+            (2)  allow for the district or school to, without requiring in-person attendance or synchronous instruction at a specific time or location, receive the same amount of funding per student for a course or program described by this section that the district or school would receive per student for that course or program if the course or program was provided fully in person.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+SUBCHAPTER B.  HYBRID AND VIRTUAL COURSES
+
+      Sec. 30B.051.  HYBRID OR VIRTUAL COURSE QUALITY REQUIREMENTS.  (a)  A school district or open-enrollment charter school that offers a hybrid or virtual course under this chapter must certify to the commissioner that the course:
+            (1)  includes the appropriate essential knowledge and skills adopted under Subchapter A, Chapter 28;
+            (2)  provides instruction at the appropriate level of rigor for the grade level at which the course is offered and will prepare a student enrolled in the course for the student's next grade level or a subsequent course in a similar subject matter; and
+            (3)   except as provided by Subsection (b), meets standards for hybrid or virtual courses adopted by the commissioner.
+      (b)  If the commissioner has not adopted applicable standards for hybrid or virtual courses, a school district or open-enrollment charter school that offers a hybrid or virtual course must instead certify to the commissioner that the course meets the National Standards for Quality Online Courses published by the Virtual Learning Leadership Alliance, Quality Matters, and DLAC, or a successor publication.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.052.  RIGHTS OF STUDENTS REGARDING HYBRID AND VIRTUAL COURSES.  (a)  Except as provided by Section 30B.104(b), a school district or open-enrollment charter school may not require a student to enroll in a hybrid or virtual course.
+      (b)  A hybrid or virtual course offered under this chapter to a student receiving special education services or other accommodations must meet the needs of the participating student in a manner consistent with Subchapter A, Chapter 29, and with federal law, including the Individuals with Disabilities Education Act (20 U.S.C. Section 1400 et seq.) and Section 504, Rehabilitation Act of 1973 (29 U.S.C. Section 794), as applicable.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.053.  RIGHTS OF TEACHERS REGARDING HYBRID AND VIRTUAL COURSES.  (a)  Except as provided by Subsection (a-1), a school district or open-enrollment charter school may not require a classroom teacher to provide both virtual instruction and in-person instruction for a course offered under this chapter during the same class period.  The commissioner may waive the requirements of this subsection for courses included in the enrichment curriculum under Section 28.002.
+      (a-1)  Subsection (a) does not apply to a requirement that a classroom teacher simulcast the teacher's in-person instruction provided that the teacher is not required to interact with students observing the instruction virtually.
+      (b)  A classroom teacher may not provide instruction for a hybrid or virtual course offered under this chapter unless:
+            (1)  the teacher has received appropriate professional development in hybrid or virtual instruction, as determined by the school district or open-enrollment charter school at which the teacher is employed; or
+            (2)  the  district or school has determined that the teacher has sufficient previous experience to not require the professional development described by Subdivision (1).
+      (c)  A school district or open-enrollment charter school may not directly or indirectly coerce any classroom teacher hired to provide in-person instruction to agree to an assignment to teach a hybrid or virtual course.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.054.  ASSESSMENTS.  Except as authorized by commissioner rule, an assessment instrument administered under Section 39.023 or 39.025 to a student enrolled in a hybrid or virtual course offered under this chapter shall be administered to the student in the same manner in which the assessment instrument is administered to a student enrolled in an in-person course at the student's school district or open-enrollment charter school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.055.  TUITION AND FEES.  A school district or open-enrollment charter school may charge tuition and fees for a hybrid or virtual course provided to a student who:
+            (1)  is not eligible to enroll in a public school in this state; or
+            (2)  is not enrolled in the school district or open-enrollment charter school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.056.  ATTENDANCE FOR CLASS CREDIT OR GRADE.  Notwithstanding Section 25.092, a school district or open-enrollment charter school shall establish the participation necessary to earn credit or a grade for a hybrid or virtual course offered by the district or school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.057.  AGENCY PUBLICATION OF AVAILABLE VIRTUAL COURSES.  (a)  The agency shall publish a list of virtual courses offered by school districts and open-enrollment charter schools in this state that includes:
+            (1)  whether the course is available to a student who is not otherwise enrolled in the offering district or school;
+            (2)  the cost of the course; and
+            (3)  information regarding any third-party provider involved in the delivery of the course.
+      (b)  A school district or open-enrollment charter school shall provide to the agency information required to publish the list under Subsection (a).
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+SUBCHAPTER C.  FULL-TIME HYBRID AND FULL-TIME VIRTUAL CAMPUSES
+
+      Sec. 30B.101.  FULL-TIME HYBRID OR FULL-TIME VIRTUAL CAMPUS AUTHORIZATION.  (a)  A school district or open-enrollment charter school may operate a full-time hybrid campus or a full-time virtual campus if authorized by the commissioner in accordance with this section.
+      (b)  The commissioner shall adopt rules establishing the requirements for and process by which a school district or open-enrollment charter school may apply for authorization to operate a full-time hybrid campus or a full-time virtual campus.  The rules adopted by the commissioner may require certain written application materials and interviews and shall require a school district or open-enrollment charter school to:
+            (1)  engage in a year of planning before offering a course under this chapter to verify the course is designed in accordance with high-quality criteria;
+            (2)  develop an academic plan that incorporates:
+                  (A)  curriculum and instructional practices aligned with the appropriate essential knowledge and skills provided under Subchapter A, Chapter 28;
+                  (B)  monitoring of the progress of student performance and interventions;
+                  (C)  a method for meeting the needs of and complying with federal and state requirements for special populations and at-risk students; and
+                  (D)  compliance with the requirements of this chapter;
+            (3)  develop an operations plan that addresses:
+                  (A)  staffing models;
+                  (B)  the designation of selected school leaders;
+                  (C)  professional development for staff;
+                  (D)  student and family engagement;
+                  (E)  school calendars and schedules;
+                  (F)  student enrollment eligibility;
+                  (G)  cybersecurity and student data privacy measures; and
+                  (H)  any educational services to be provided by a private or third party; and
+            (4)  demonstrate the capacity to execute the district's or school's plan successfully.
+      (c)  A full-time hybrid campus or full-time virtual campus authorized under this section must include:
+            (1)  at least one grade level in which an assessment instrument is required to be administered under Section 39.023(a) or (c), including each subject or course for which an assessment instrument is required in that grade level;
+            (2)  sufficient grade levels, as determined by the commissioner, to allow for the annual evaluation of the performance of students who complete the courses offered; or
+            (3)  for a campus that does not include grade levels described by Subdivision (1) or (2), another performance evaluation measure approved by the commissioner during the authorization process.
+      (d)  A campus approved under this subchapter may only apply for and receive authorization to operate as a full-time hybrid campus or a full-time virtual campus.  A campus may not change its operation designation during the authorization process or after the campus is authorized.
+      (e)  The commissioner may only authorize a school district or open-enrollment charter school to operate a full-time hybrid campus or a full-time virtual campus if the commissioner determines that the authorization of the campus is likely to result in improved student learning opportunities.  If a district or school will use a private or third party in operating the campus, the commissioner shall consider the historical performance of the private or third party, if known, in making a determination under this section.
+      (f)  A determination made by the commissioner under this section is final and not subject to appeal.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.102.  REVOCATION.  (a)  Unless revoked as provided by this section, the commissioner's authorization of a full-time hybrid campus or full-time virtual campus under Section 30B.101 continues indefinitely.
+      (b)  The commissioner shall revoke the authorization of a full-time hybrid campus or full-time virtual campus if the campus has been assigned, for the three preceding school years:
+            (1)  a needs improvement or unacceptable performance rating under Subchapter C, Chapter 39;
+            (2)  a rating of performance that needs improvement or unacceptable, as determined by the commissioner, on a performance evaluation approved by the commissioner under Section 30B.101(c)(3); or
+            (3)  any combination of the ratings described by Subdivision (1) or (2).
+      (c)  The commissioner may, based on a special investigation conducted under Section 39.003:
+            (1)  revoke an authorization of a full-time hybrid campus or full-time virtual campus; or
+            (2)  require any intervention authorized under that section.
+      (d)  If a private or third party is determined to be ineligible under Section 30B.152, the commissioner shall revoke an authorization of a full-time hybrid campus or full-time virtual campus for which the private or third party acts as a whole program virtual instruction provider, unless the commissioner approves a request by the school district or open-enrollment charter school that operates the campus to use an alternative private or third party.
+      (e)  An appeal by a school district or open-enrollment charter school of a revocation of an authorization under this chapter that results in the closure of a campus must be made under Section 39A.301.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.103.  STUDENT ELIGIBILITY.  (a)  A student eligible to enroll in a public school of this state is eligible to enroll at a full-time hybrid campus.
+      (b)  A student is eligible to enroll in a full-time virtual campus if the student:
+            (1)  attended a public school in this state for a minimum of six weeks in the current school year or in the preceding school year;
+            (2)  is, in the school year in which the student first seeks to enroll in the full-time virtual campus, enrolled in the first grade or a lower grade level;
+            (3)  was not required to attend public school in this state due to nonresidency during the preceding school year;
+            (4)  is a dependent of a member of the United States military who has been deployed; or
+            (5)  has been placed in substitute care in this state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.104.  STUDENT RIGHTS REGARDING FULL-TIME HYBRID AND FULL-TIME VIRTUAL CAMPUSES.  (a)  A student enrolled in a school district may not be compelled to enroll in a full-time hybrid or full-time virtual campus.  A school district must offer the option for a student's parent to select in-person instruction for the student.
+      (b)  Notwithstanding Subsection (a) or Section 30B.052, an open-enrollment charter school may require a student to attend a full-time hybrid or full-time virtual campus.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.105.  CAMPUS DESIGNATIONS.  The commissioner shall determine and assign a unique campus designation number to each full-time hybrid campus or full-time virtual campus authorized under this subchapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.106.  FUNDING.  (a)  For purposes of calculating the average daily attendance of students attending a full-time hybrid campus or full-time virtual campus, the commissioner shall use the number of full-time equivalent students enrolled in the full-time hybrid or full-time virtual campus multiplied by the average attendance rate of the school district or open-enrollment charter school that offers the full-time hybrid or full-time virtual campus not including any student enrolled full-time in a full-time hybrid or full-time virtual campus.  In the event that a reliable attendance rate cannot be determined under this section, the commissioner shall use the statewide average attendance rate.
+      (b)  The commissioner shall provide proportionate funding to the applicable school district or open-enrollment charter school for a student that alternates attendance between a traditional, in-person campus setting and the full-time hybrid or full-time virtual campus of any single district or school in the same school year.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+SUBCHAPTER D.  PRIVATE AND THIRD-PARTY PROVIDERS
+
+      Sec. 30B.151.  NOTICE AND USE OF PRIVATE OR THIRD PARTY.  (a)  A school district or open-enrollment charter school shall provide notice to the commissioner of the use of or change in affiliation of a private or third party acting as a whole program virtual instruction provider for a full-time hybrid or full-time virtual campus or program.
+      (b)  Except as provided by Section 30B.152, a school district or open-enrollment charter school may not use a private or third party to act as a whole program virtual instruction provider if the party has been determined to be ineligible under that section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.152.  PRIVATE OR THIRD-PARTY ACCOUNTABILITY.  (a)  The commissioner shall, to the extent feasible, evaluate the performance of a private or third party acting as a whole program virtual instruction provider for a school district or open-enrollment charter school.
+      (b)  The commissioner shall establish a standard to determine if a private or third party is ineligible to act as a whole program virtual instruction provider.  A private or third party determined to be ineligible under this section remains ineligible until after the fifth anniversary of that determination.
+      (c)  A school district or open-enrollment charter school may use a private or third party determined to be ineligible under Subsection (b) as a whole program virtual instruction provider if:
+            (1)  the district or school requests approval from the commissioner; and
+            (2)  the commissioner determines that the reasons the private or third party was declared ineligible under Subsection (b) will not affect the operation of the party as a whole program virtual instruction provider at the district or school.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+SUBCHAPTER E.  STATE SUPPORT
+
+      Sec. 30B.201.  EDUCATOR PROFESSIONAL DEVELOPMENT.  From funds appropriated or otherwise available, the agency shall develop professional development courses and materials aligned with research-based practices for educators in providing high-quality virtual education.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+      Sec. 30B.202.  DEVELOPMENT GRANTS FOR VIRTUAL EDUCATION.  From funds appropriated or otherwise available, the agency shall provide grants and technical assistance to school districts and open-enrollment charter schools to aid in the establishment of high-quality full-time hybrid or full-time virtual campuses.
+Added by Acts 2025, 89th Leg., R.S., Ch. 5 (S.B. 569), Sec. 7, eff. May 6, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

@@ -1,0 +1,108 @@
+GOVERNMENT CODE
+TITLE 8. PUBLIC RETIREMENT SYSTEMS
+SUBTITLE H.  TEXAS EMERGENCY SERVICES RETIREMENT SYSTEM
+CHAPTER 861.  GENERAL PROVISIONS
+
+      Sec. 861.001.  DEFINITIONS.  In this subtitle:
+            (1)  "Actuarially sound" means circumstances under which the amount of contributions to the pension system is sufficient to cover the normal cost of and amortize the unfunded actuarial accrued liability of the pension system in a period that does not exceed the later of the following:
+                  (A)  15 years after the date of the actuarial valuation on which the determination of whether the retirement system is actuarially sound is made; or
+                  (B)  September 1, 2055.
+            (2)  "Amortization period" means:
+                  (A)  if amortizing a liability loss layer, the period necessary to fully pay the liability loss layer;
+                  (B)  if amortizing a liability gain layer, the period described by Section 865.015(b)(4); or
+                  (C)  if referring to the amortization period of all liability layers of the pension system, the number of years incorporated in a weighted average amortization factor for the sum of all liability layers as determined in each biennial actuarial valuation of assets and liabilities of the system.
+            (3)  Repealed by Acts 2013, 83rd Leg., R.S., Ch. 1316, Sec. 4.01(2), eff. June 14, 2013.
+            (4)  "Dependent" means an unmarried child, natural or adopted, who:
+                  (A)  is less than 18 years of age;
+                  (B)  is less than 19 years of age and a full-time student at an elementary or secondary school; or
+                  (C)  became permanently disabled before the child's 22nd birthday, as determined by the executive director.
+            (5)  "Emergency services" means only those services relating to fire, rescue, emergency medical services, and emergency response services.
+            (5-a)  "Executive director" means the person appointed executive director under Section 865.0095.
+            (6)  "Fund" means the Texas emergency services retirement fund.
+            (6-a)  "Governing body of a department" or "governing body of a participating department" means:
+                  (A)  the board of trustees or other governing body of the department; or 
+                  (B)  if the department does not have a governing body, the governing body of the political subdivision.
+            (6-b)  "Governing body of a political subdivision" means the governing body of the political subdivision or unit of government of which the department is a part.
+            (7)  "Legacy liability" means the total unfunded actuarial accrued liability of the pension system:
+                  (A)  determined as of August 31, 2024, using an assumed rate of investment return of seven percent; and
+                  (B)  for each calendar year following 2024, that total adjusted as follows:
+                        (i)  reduced by the contribution amount made under Section 865.015 for the calendar year allocated to the amortization of the legacy liability; and
+                        (ii)  adjusted by the assumed rate of investment return of seven percent.
+            (7-a)  "Liability gain layer" means a liability layer that decreases the unfunded actuarial accrued liability of the pension system.
+            (7-b)  "Liability layer" means:
+                  (A)  the legacy liability; or
+                  (B)  for each fiscal year after August 31, 2024, the amount by which the pension system's unfunded actuarial accrued liability increases or decreases in a fiscal year, as applicable, due to the unanticipated change in revenue caused by factors, other than changes to a benefit formula, as determined in the actuarial valuation analyzing that fiscal year.
+            (7-c)  "Liability loss layer" means a liability layer that increases the unfunded actuarial accrued liability.  For the purposes of this subtitle, the legacy liability is a liability loss layer.
+            (7-d)  "Local board" means a local board of trustees established under Section 865.012.
+            (8)  "Member" means a person having membership in the pension system under Section 862.002.
+            (8-a)  "Participating department" means a department that elects to participate in the pension system under Section 862.001.
+            (8-b)  "Participating department head" means the person designated as a participating department head under Section 865.0115.
+            (9)  "Pension system" means the Texas Emergency Services Retirement System.
+            (10)  "Qualified service" means service performed:
+                  (A)  for a participating department that conducts at least 48 hours of training in a calendar year; and
+                  (B)  by a member in good standing in the department who:
+                        (i)  attends at least 20 hours of annual training and at least 25 percent of the department's emergencies in a calendar year;
+                        (ii)  attends at least 20 hours of annual training and provides support services for at least 25 percent of the department's emergencies in a calendar year; or
+                        (iii)  does not attend because the member is absent because of military duty.
+            (10-a)  "Retiree" means a person who receives a service or disability retirement benefit from the pension system.
+            (11)  "State board" means the state board of trustees established under Section 865.001.
+            (11-a)  "Support services" means services that directly assist in the delivery of emergency services.  The term includes:
+                  (A)  directing traffic at an emergency scene;
+                  (B)  dispatching emergency services personnel;
+                  (C)  driving an emergency services vehicle;
+                  (D)  supplying or maintaining equipment at an emergency scene;
+                  (E)  providing essential recordkeeping for a participating department; and
+                  (F)  other similar services as determined by a participating department.
+            (12)  "Unfunded actuarial accrued liability" means, as determined in an actuarial valuation, the difference between the actuarial accrued liability and the actuarial value of assets, where the liability is determined using an expected rate of investment return not greater than:
+                  (A)  seven percent; or
+                  (B)  if greater than seven percent, the average of the rates used by the Employees Retirement System of Texas and the Teacher Retirement System of Texas in the most recently published actuarial valuations preceding the actuarial valuation in which the unfunded actuarial accrued liability is being determined.
+            (12-a)  "Volunteer" means a person who performs emergency services for civic, charitable, or humanitarian reasons, receives no monetary compensation from a participating department, and is not subject to the compensation requirements provided for employees by the Fair Labor Standards Act of 1938 (29 U.S.C. Section 201 et seq.).
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+Amended by: 
+      Acts 2009, 81st Leg., R.S., Ch. 697 (H.B. 2751), Sec. 1, eff. September 1, 2009.
+      Acts 2013, 83rd Leg., R.S., Ch. 1316 (S.B. 220), Sec. 1.01, eff. June 14, 2013.
+      Acts 2013, 83rd Leg., R.S., Ch. 1316 (S.B. 220), Sec. 4.01(2), eff. June 14, 2013.
+      Acts 2019, 86th Leg., R.S., Ch. 1165 (H.B. 3247), Sec. 1, eff. September 1, 2019.
+      Acts 2019, 86th Leg., R.S., Ch. 1165 (H.B. 3247), Sec. 38(1), eff. September 1, 2019.
+      Acts 2025, 89th Leg., R.S., Ch. 36 (S.B. 2065), Sec. 2, eff. May 15, 2025.
+
+      Sec. 861.002.  PENSION SYSTEM.  The pension system is a public entity.  The Texas Emergency Services Retirement System is the name by which all its business shall be transacted, all its funds invested, and all its cash, securities, and other property held.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.003.  POWERS AND PRIVILEGES.  The pension system has the powers, privileges, and immunities of a corporation as well as the powers, privileges, and immunities conferred by this subtitle.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.004.  EXEMPTION FROM EXECUTION.  All benefit payments, contributions, money in the pension system fund, and rights accrued or accruing under this subtitle to any person are exempt from garnishment, attachment, state and local taxation, levies, and any other process and are unassignable.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.005.  NO DIVERSION OF ASSETS.  The fund must be maintained for the exclusive benefit of members, retirees, and their beneficiaries.  At no time before the termination of the fund and the satisfaction of all liabilities with respect to members, retirees, and their beneficiaries may any part of the principal of or interest from fund assets be used for or diverted to a purpose other than the exclusive benefit of the members, retirees, and their beneficiaries.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.006.  PLAN QUALIFICATION AND DISTRIBUTIONS.  (a)  The legislature intends that this subtitle be construed and administered in a manner so that the pension system's benefit plan will be considered a qualified plan under Section 401(a) of the Internal Revenue Code of 1986 (26 U.S.C. Section 401).  The state board may adopt rules that modify the plan as necessary to meet those qualification requirements.
+      (b)  Notwithstanding any other provision of this subtitle, all distributions under this subtitle must be made in accordance with applicable provisions of the Internal Revenue Code of 1986 and regulations adopted under that code.
+      (c)  The state board by rule may authorize an eligible rollover distribution to be made in the form of a direct trustee-to-trustee transfer.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.007.  FORFEITURE NOT TO INCREASE BENEFITS.  A forfeiture that occurs under this subtitle may not be used to increase the benefits that any member would otherwise receive under this subtitle.
+Added by Acts 2005, 79th Leg., Ch. 803 (S.B. 522), Sec. 1, eff. September 1, 2005.
+
+      Sec. 861.008.  IMMUNITY FROM LIABILITY.  The state board, the executive director, a local board, each participating department head, and employees of the pension system are not liable for any action taken or omission made or suffered by them in good faith in the performance of any duty or prerogative in connection with the administration of the pension system.
+Added by Acts 2007, 80th Leg., R.S., Ch. 321 (H.B. 2400), Sec. 1, eff. September 1, 2007.
+Amended by: 
+      Acts 2013, 83rd Leg., R.S., Ch. 1316 (S.B. 220), Sec. 1.02, eff. June 14, 2013.
+      Acts 2019, 86th Leg., R.S., Ch. 1165 (H.B. 3247), Sec. 2, eff. September 1, 2019.
+
+      Sec. 861.009.  VENUE.  An action in state court by or against the pension system shall be brought in Travis County.
+Added by Acts 2007, 80th Leg., R.S., Ch. 321 (H.B. 2400), Sec. 1, eff. September 1, 2007.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

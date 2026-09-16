@@ -1,0 +1,87 @@
+GOVERNMENT CODE
+TITLE 10. GENERAL GOVERNMENT
+SUBTITLE F. STATE AND LOCAL CONTRACTS AND FUND MANAGEMENT
+CHAPTER 2273.  PROHIBITED TRANSACTIONS
+
+      Sec. 2273.001.  DEFINITIONS.  In this chapter:
+            (1)  "Abortion" has the meaning assigned by Section 245.002, Health and Safety Code.
+            (1-a)  "Abortion assistance entity" means a person that procures or facilitates a woman's procurement of an abortion by engaging in any of the following acts:
+                  (A)  offering or providing money to pay for, reimburse, or offset the costs of obtaining an abortion or the costs incurred by or associated with seeking an abortion, regardless of the location at which the abortion occurs;
+                  (B)  paying for, planning, or executing plans for travel accommodations, including transportation, meals, or lodging, with the intent of facilitating the procurement of an abortion, regardless of the location at which the abortion occurs;
+                  (C)  offering, providing, or paying for any type of service or logistical support, including child care or abortion doula services, to facilitate the procurement of an abortion; or
+                  (D)  collecting or distributing an abortion-inducing drug, as that term is defined by Section 171.061, Health and Safety Code, to increase access to those drugs.
+            (2)  "Abortion provider" means a person who performs or induces an abortion.
+            (3)  "Affiliate" means a person or entity who enters into with another person or entity a legal relationship created or governed by at least one written instrument, including a certificate of formation, a franchise agreement, standards of affiliation, bylaws, or a license, that demonstrates:
+                  (A)  common ownership, management, or control between the parties to the relationship;
+                  (B)  a franchise granted by the person or entity to the affiliate; or
+                  (C)  the granting or extension of a license or other agreement authorizing the affiliate to use the other person's or entity's brand name, trademark, service mark, or other registered identification mark.
+            (4)  "Governmental entity" means this state, a state agency in the executive, judicial, or legislative branch of state government, or a political subdivision of this state.
+            (5)  "Taxpayer resource transaction" means a sale, purchase, lease, donation of money, goods, services, or real property, or any other transaction between a governmental entity and a private entity that provides to the private entity something of value derived from state or local tax revenue, regardless of whether the governmental entity receives something of value in return.  The term does not include the provision of basic public services, including fire and police protection and utilities, by a governmental entity to an abortion provider or affiliate in the same manner as the entity provides the services to the general public.  The term includes advocacy or lobbying by or on behalf of a governmental entity on behalf of the interests of an abortion provider or affiliate, but does not include:
+                  (A)  an officer or employee of a governmental entity providing information to a member of the legislature or appearing before a legislative committee at the request of the member or committee;
+                  (B)  an elected official advocating for or against or otherwise influencing or attempting to influence the outcome of legislation pending before the legislature while acting in the capacity of an elected official; or
+                  (C)  an individual speaking as a private citizen on a matter of public concern.
+Added by Acts 2019, 86th Leg., R.S., Ch. 501 (S.B. 22), Sec. 1, eff. September 1, 2019.
+Redesignated by Acts 2021, 87th Leg., R.S., Ch. 915 (H.B. 3607), Sec. 21.001(52), eff. September 1, 2021.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 759 (S.B. 33), Sec. 1, eff. September 1, 2025.
+
+      Sec. 2273.002.  APPLICABILITY.    (a)  This chapter does not apply to:
+            (1)  a hospital licensed under Chapter 241, Health and Safety Code;
+            (2)  the office of a physician licensed under Subtitle B, Title 3, Occupations Code, that performs 50 or fewer abortions in any 12-month period;
+            (3)  a state hospital as defined by Section 552.0011, Health and Safety Code;
+            (4)  a teaching hospital of a public or private institution of higher education; or
+            (5)  an accredited residency program providing training to resident physicians.
+      (b)  For purposes of this chapter, a facility is not considered to be an abortion provider solely based on the performance of an abortion at the facility during a medical emergency as defined by Section 171.002, Health and Safety Code.
+Added by Acts 2019, 86th Leg., R.S., Ch. 501 (S.B. 22), Sec. 1, eff. September 1, 2019.
+Redesignated by Acts 2021, 87th Leg., R.S., Ch. 915 (H.B. 3607), Sec. 21.001(52), eff. September 1, 2021.
+
+      Sec. 2273.003.  ABORTION PROVIDER AND AFFILIATE TRANSACTIONS PROHIBITED; EXCEPTION.  (a)  Except as provided by Subsection (b), a governmental entity may not enter into a taxpayer resource transaction with:
+            (1)  an abortion provider or an affiliate of an abortion provider; or
+            (2)  an abortion assistance entity for the purpose of providing an abortion or abortion assistance.
+      (b)  This section does not apply to a taxpayer resource transaction that is subject to a federal law in conflict with Subsection (a) as determined by the executive commissioner of the Health and Human Services Commission and confirmed in writing by the attorney general.
+Added by Acts 2019, 86th Leg., R.S., Ch. 501 (S.B. 22), Sec. 1, eff. September 1, 2019.
+Redesignated by Acts 2021, 87th Leg., R.S., Ch. 915 (H.B. 3607), Sec. 21.001(52), eff. September 1, 2021.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 759 (S.B. 33), Sec. 2, eff. September 1, 2025.
+
+      Sec. 2273.0031.  LOGISTICAL SUPPORT PROHIBITED.  (a)  Except as provided by Subsection (b), a governmental entity may not enter into a taxpayer resource transaction or appropriate or spend money to provide to any person logistical support for the express purpose of assisting a woman with procuring an abortion or the services of an abortion provider.  Logistical support includes providing money for:
+            (1)  child care;
+            (2)  travel or any form of transportation to or from an abortion provider;
+            (3)  lodging;
+            (4)  food or food preparation;
+            (5)  counseling that encourages a woman to have an abortion; and
+            (6)  any other service that facilitates the provision of an abortion.
+      (b)  This section does not apply to a taxpayer resource transaction entered into or money appropriated or spent by a governmental entity that is subject to a federal law in conflict with Subsection (a) as determined by the executive commissioner of the Health and Human Services Commission and confirmed in writing by the attorney general.
+Added by Acts 2025, 89th Leg., R.S., Ch. 759 (S.B. 33), Sec. 3, eff. September 1, 2025.
+
+      Sec. 2273.004.  CIVIL REMEDY; WAIVER OF IMMUNITY.  (a)  The attorney general may bring an action against any party, other than the woman who may procure or procures an abortion, to the actual or proposed prohibited transaction, appropriation, or expenditure, as applicable, of a governmental entity that violates or is seeking to violate Section 2273.003 or 2273.0031 and is entitled to recover in the action:
+            (1)  declaratory relief;
+            (2)  injunctive relief that terminates and reimburses any value conferred by the prohibited transaction, appropriation, or expenditure and enjoins the party from entering into a prohibited transaction, appropriation, or expenditure in the future;
+            (3)  court costs; and
+            (4)  reasonable attorney's fees.
+      (b)  Sovereign or governmental immunity, as applicable, of a governmental entity to suit and from liability is waived and abolished to the extent of liability created by Subsection (a).
+      (c)  Notwithstanding any other law:
+            (1)  a court may not award costs or attorney's fees under Rule 91a, Texas Rules of Civil Procedure, to any defendant against whom an action is brought under this section; and
+            (2)  Chapters 27 and 110, Civil Practice and Remedies Code, do not apply to an action brought under this section.
+Added by Acts 2019, 86th Leg., R.S., Ch. 501 (S.B. 22), Sec. 1, eff. September 1, 2019.
+Redesignated by Acts 2021, 87th Leg., R.S., Ch. 915 (H.B. 3607), Sec. 21.001(52), eff. September 1, 2021.
+Amended by: 
+      Acts 2023, 88th Leg., R.S., Ch. 768 (H.B. 4595), Sec. 10.008, eff. September 1, 2023.
+      Acts 2025, 89th Leg., R.S., Ch. 759 (S.B. 33), Sec. 4, eff. September 1, 2025.
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.06, eff. December 4, 2025.
+
+      Sec. 2273.005.  CONSTRUCTION OF CHAPTER.  This chapter may not be construed to restrict a municipality or county from prohibiting abortion.
+Added by Acts 2019, 86th Leg., R.S., Ch. 501 (S.B. 22), Sec. 1, eff. September 1, 2019.
+Redesignated by Acts 2021, 87th Leg., R.S., Ch. 915 (H.B. 3607), Sec. 21.001(52), eff. September 1, 2021.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

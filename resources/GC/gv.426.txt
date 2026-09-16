@@ -1,0 +1,150 @@
+GOVERNMENT CODE
+TITLE 4. EXECUTIVE BRANCH
+SUBTITLE B. LAW ENFORCEMENT AND PUBLIC PROTECTION
+Chapter 426, consisting of Secs. 426.001 to 426.102, was added by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1.
+For another Chapter 426, consisting of Secs. 426.001 to 426.003, added by Acts 2025, 89th Leg., R.S., Ch. 750 (H.B. 3185), Sec. 1, see 426.001 et seq., post. 
+CHAPTER 426.  FINANCIAL CRIMES INTELLIGENCE CENTER
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 426.001.  DEFINITIONS.  In this chapter:
+            (1)  "Card fraud" means an act that constitutes the offense of fraudulent use or possession of a credit card or debit card under Section 32.315, Penal Code.
+            (2)  "Center" means the financial crimes intelligence center established under this chapter.
+            (2-a)  "Check fraud" means conduct that constitutes an offense under Section 32.21, Penal Code, with respect to a sight order, as defined by Section 1.07, Penal Code.
+            (3)  "Commission" means the Texas Commission of Licensing and Regulation.
+            (4)  "Department" means the Texas Department of Licensing and Regulation.
+ 
+Text of subdivision as added by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1
+ 
+            (4-a)  "Electronic fund transfer" means any transfer of funds, other than a transaction originated by check, money order, or similar paper instrument, that is initiated through an electronic terminal, telephonic instrument, computer, or magnetic tape and that orders, instructs, or authorizes a financial institution to debit or credit an account.
+ 
+Text of subdivision as added by Acts 2025, 89th Leg., R.S., Ch. 542  (H.B. 201), Sec. 1
+ 
+            (4-a)  "Motor fuel manipulation device" means a mechanism manufactured, assembled, or adapted to manipulate or alter a motor fuel metering device or a motor fuel unattended payment terminal for an unlawful purpose.
+ 
+Text of subdivision as added by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1
+ 
+            (4-b)  "Payment fraud" means:
+                  (A)  conduct constituting card fraud or check fraud;
+                  (B)  sending an unauthorized payment order;
+                  (C)  initiating an electronic fund transfer without the consent of the account holder; or
+                  (D)  any other act involving a fraudulent order for payment of money, as defined by commission rule.
+ 
+Text of subdivision as added by Acts 2025, 89th Leg., R.S., Ch. 542  (H.B. 201), Sec. 1
+ 
+            (4-b)  "Motor fuel theft" means an act that:
+                  (A)  constitutes an offense under Section 31.03, Penal Code; and
+                  (B)  qualifies for an affirmative finding of motor fuel theft under Article 42.019, Code of Criminal Procedure.
+            (5)  "Skimmer" means an electronic, mechanical, or other device that may be used to unlawfully intercept electronic communications or data to perpetrate card fraud. The term includes a credit card shimmer.
+            (6)  "Unauthorized payment order" means a payment order received by a receiving bank that is not:
+                  (A)  an authorized order of a customer identified as sender under Section 4A.202(a), Business & Commerce Code; or
+                  (B)  effective as an order of the customer under Section 4A.202(b) of that code.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.002.  RULES.  The commission shall adopt rules as necessary to implement this chapter.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER B.  PURPOSE AND ADMINISTRATION
+
+      Sec. 426.051.  FINANCIAL CRIMES INTELLIGENCE CENTER ESTABLISHED.  The commission shall establish the center within the department.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.052.  PURPOSES OF CENTER.  The purposes of the center are to:
+            (1)  serve as the state's primary entity for the planning, coordination, and integration of law enforcement agencies and other governmental agencies that respond to criminal activity related to payment fraud, including through the use of skimmers, and motor fuel theft; and
+            (2)  maximize the ability of the department, law enforcement agencies, and other governmental agencies to detect, prevent, and respond to criminal activities related to payment fraud and motor fuel theft.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 2, eff. September 1, 2025.
+
+      Sec. 426.053.  OPERATION AGREEMENTS AUTHORIZED; DIRECTOR.  (a)  The department:
+            (1)  may enter into agreements with law enforcement agencies or other governmental agencies for the operation of the center; and
+            (2)  shall enter into an agreement with a law enforcement agency or other governmental agency for the appointment of a director to supervise and manage the operation of the center.
+      (b)  The director appointed under the agreement required by Subsection (a)(2) may be a licensed peace officer.  The agreement must provide that the commission of a director who is a licensed peace officer will be carried by the agency with which the department enters into the agreement under that subdivision.
+      (c)  Information a law enforcement agency or other governmental agency collects and maintains under an agreement entered into with the department under this chapter is the intellectual property of the center.  On termination of the agreement, the contracting agency shall transfer the information to the department in accordance with the terms of the agreement.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.054.  POWERS AND DUTIES.  (a)  The center may collaborate with federal, state, and local governmental agencies to accomplish the purposes of the center.
+ 
+Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1
+ 
+      (b)  The center shall assist law enforcement agencies, other governmental agencies, financial institutions, credit card issuers, debit card issuers, payment card networks, institutions of higher education, and merchants in their efforts to develop and implement strategies to:
+            (1)  prevent and respond to payment fraud;
+            (2)  detect skimmers; and
+            (3)  ensure an effective response if a skimmer is found.
+ 
+Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 3
+ 
+      (b)  The center shall assist law enforcement agencies, other governmental agencies, financial institutions, credit card issuers, debit card issuers, payment card networks, institutions of higher education, and merchants in their efforts to develop and implement strategies to:
+            (1)  detect skimmers and motor fuel manipulation devices;
+            (2)  ensure an effective response if a skimmer or motor fuel manipulation device is found; and
+            (3)  prevent card fraud and motor fuel theft.
+      (b-1)  On request of a law enforcement or other governmental agency, the center may provide assistance to that agency regarding any matter within the center's expertise.
+      (c)  The center may:
+            (1)  serve as a centralized collection point for information related to payment fraud and motor fuel theft;
+            (2)  provide training and educational opportunities to law enforcement;
+            (3)  provide outreach to the public; and
+            (4)  release information to affected financial institutions, credit card issuers, debit card issuers, payment card networks, institutions of higher education, and merchants if the center does not consider the information to be sensitive to law enforcement.
+      (d)  For purposes of Subsection (c)(4), information is considered sensitive to law enforcement if the information could cause harm to law enforcement activities or jeopardize an investigation or operation if disclosed.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 3, eff. September 1, 2025.
+
+      Sec. 426.055.  ANNUAL REPORT.  (a)  Not later than December 1 of each year, the director shall file a report with the department.
+      (b)  The report must include:
+            (1)  a plan of operation for the center and an estimate of the amount of money necessary to implement that plan;
+            (2)  an assessment of the current state of payment fraud and motor fuel theft in this state, including:
+                  (A)  an identification of the geographic locations in this state that have the highest statistical probability for payment fraud and motor fuel theft; and
+                  (B)  a summary of payment fraud and motor fuel theft statistics for the year in which the report is filed;
+            (3)  a detailed plan of operation for combatting payment fraud and motor fuel theft;
+            (4)  a communications plan for outreach to law enforcement agencies, financial institutions, credit card issuers, debit card issuers, payment card networks, merchants, and the public; and
+            (5)  a list of expenditures made since the most recent report was filed with the department.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 4, eff. September 1, 2025.
+
+SUBCHAPTER C.  FINANCIAL PROVISIONS
+
+      Sec. 426.101.  FUNDING.  The department may solicit and accept gifts, grants, and other donations to fund, administer, and carry out the purposes of the center, except that the department may not solicit or accept a gift, grant, or other donation from a license holder as defined by Section 2310.151, Occupations Code.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.102.  AWARD OF GRANTS.  (a)  Subject to the availability of appropriated money, the department may award grants for the purposes of this chapter by entering into a contract with each grant recipient.
+      (b)  A grant recipient may use grant money to:
+            (1)  reduce payment fraud by removing skimmers;
+            (2)  purchase or upgrade payment fraud deterrence equipment, including unique locking systems, cameras, and lights;
+            (3)  provide training opportunities regarding payment fraud and skimmers; and
+            (4)  conduct public outreach regarding payment fraud and motor fuel theft.
+Added by Acts 2019, 86th Leg., R.S., Ch. 863 (H.B. 2945), Sec. 2, eff. September 1, 2019.
+Transferred, redesignated and amended by Acts 2021, 87th Leg., R.S., Ch. 336 (H.B. 2106), Sec. 11, eff. September 1, 2021.
+Transferred, redesignated and amended from Occupations Code, Chapter 2312 by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 542 (H.B. 201), Sec. 5, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

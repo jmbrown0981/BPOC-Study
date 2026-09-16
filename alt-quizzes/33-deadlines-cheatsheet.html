@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Deadlines &amp; Thresholds Cheat Sheet | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+  .cite{font-family:'IBM Plex Mono', monospace; letter-spacing:0.01em;}
+  main{max-width:1080px; margin:0 auto; padding:0 16px 60px;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:28px 20px 24px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; max-width:1080px; margin:0 auto;}
+  .hero-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:25px; line-height:1.18; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:66ch; line-height:1.55;}
+  .back{color:var(--brass-light); text-decoration:none; font-size:12.5px; font-weight:600; white-space:nowrap; border:1px solid rgba(215,182,103,0.4); padding:7px 12px; border-radius:6px;}
+  .back:hover{background:rgba(215,182,103,0.1);}
+
+  nav.chips{display:flex; gap:8px; flex-wrap:wrap; padding:14px 16px; max-width:1080px; margin:0 auto; position:sticky; top:0; background:var(--paper); z-index:5; border-bottom:1px solid var(--rule);}
+  .chip{font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; color:var(--navy); background:#fff; border:1px solid var(--rule); border-radius:20px; padding:6px 13px; text-decoration:none; cursor:pointer;}
+  .chip:hover{border-color:var(--brass);}
+  .chip.ghost{background:transparent;}
+  .chip-spacer{margin-left:auto; display:flex; gap:8px;}
+
+  .search-wrap{padding:16px 0 4px;}
+  #searchBox{width:100%; padding:11px 14px; border:1px solid var(--rule); border-radius:8px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; background:#fff; color:var(--ink);}
+  #searchBox:focus{outline:2px solid var(--brass-light); outline-offset:-1px;}
+  .result-count{font-size:11.5px; color:var(--ink-soft); margin:6px 2px 0; font-family:'IBM Plex Mono',monospace;}
+
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin:16px 0;}
+  .intro-note b{color:var(--ink);}
+
+  .sec-card{background:#fff; border:1px solid var(--rule); border-radius:8px; margin:14px 0; overflow:hidden;}
+  .sec-header{display:flex; align-items:center; gap:10px; padding:12px 16px; cursor:pointer; user-select:none; background:var(--paper-dim);}
+  .sec-num{font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:700; color:#fff; background:var(--navy); padding:3px 8px; border-radius:4px; white-space:nowrap;}
+  .sec-name{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:14.5px; flex:1;}
+  .sec-count{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  .toggle{font-size:12px; color:var(--ink-soft); transition:transform 0.15s ease;}
+  .sec-header.open .toggle{transform:rotate(180deg);}
+  .sec-body{display:none;}
+  .sec-body.open{display:block;}
+
+  table.dl{width:100%; border-collapse:collapse; font-size:12.5px;}
+  table.dl th{text-align:left; padding:8px 14px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); border-bottom:1px solid var(--rule);}
+  table.dl td{padding:9px 14px; border-top:1px solid var(--rule); vertical-align:top; line-height:1.5;}
+  table.dl tr.frow:hover td{background:var(--paper-dim);}
+  table.dl td.time{font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--rust); white-space:nowrap;}
+  table.dl td.cite{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+  table.dl tr.hidden{display:none;}
+  @media (max-width:640px){
+    table.dl, table.dl tbody, table.dl tr, table.dl td{display:block; width:100%;}
+    table.dl thead{display:none;}
+    table.dl tr.frow{border-top:1px solid var(--rule); padding:8px 14px;}
+    table.dl td{padding:2px 0; border-top:none;}
+    table.dl td.time::before{content:"Timeframe: ";color:var(--ink-soft); font-weight:400; font-family:'IBM Plex Sans',sans-serif;}
+    table.dl td.cite::before{content:"Cite: ";color:var(--ink-soft);}
+  }
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &mdash; All LOs</p>
+      <h1>Deadlines &amp; Numeric Thresholds Cheat Sheet</h1>
+      <p class="sub">Chapter 33 is unusually deadline-heavy &mdash; every numeric time limit and age/quantity threshold across the chapter's statutes, in one searchable table, grouped by subject area.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-custody">Custody &amp; Detention</a>
+  <a class="chip" href="#sec-records">Records &amp; Statements</a>
+  <a class="chip" href="#sec-abuse">Abuse/Neglect Reporting</a>
+  <a class="chip" href="#sec-school">School Notification</a>
+  <a class="chip" href="#sec-missing">Missing Children</a>
+  <a class="chip" href="#sec-emergency">Emergency Possession &amp; CAC</a>
+  <a class="chip" href="#sec-thresholds">Numeric Thresholds</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="search-wrap">
+  <input type="text" id="searchBox" placeholder="Search a deadline, statute, or topic (e.g. &quot;6 hours&quot;, &quot;school&quot;, &quot;fingerprint&quot;)" oninput="filterTerms()">
+  <div class="result-count" id="resultCount"></div>
+</div>
+
+<div class="intro-note">
+  <b>Two different kinds of numbers:</b> the first six tables are true <i>deadlines</i> &mdash; a clock that starts running on an event. The last table is <i>thresholds</i> &mdash; ages, dollar amounts, and offense grades that don't involve a clock at all. Mixing the two up (e.g., treating an age cutoff like a deadline) is an easy way to miss a test question that's really asking which category a number belongs to.
+</div>
+
+<div class="sec-card" id="sec-custody">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">CUSTODY</span>
+    <span class="sec-name">Custody &amp; Detention Timing</span>
+    <span class="sec-count">12 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">6 hours</td><td>Max time in a Juvenile Processing Office</td><td class="cite">FC 52.025(d)</td></tr>
+        <tr class="frow"><td class="time">6 hours</td><td>Max time in a Place of Nonsecure Custody</td><td class="cite">CCP 45A.453(f)</td></tr>
+        <tr class="frow"><td class="time">2nd working day (1st if detained Fri/Sat)</td><td>Deadline to hold a detention hearing if the child is not released</td><td class="cite">FC 54.01(a)</td></tr>
+        <tr class="frow"><td class="time">24 hours (excl. weekend/holiday)</td><td>Detention hearing deadline for status offenders/nonoffenders</td><td class="cite">FC 54.011(a)</td></tr>
+        <tr class="frow"><td class="time">24 hours (excl. weekend/holiday)</td><td>Detention hearing deadline, county jail/51.12(l) placement</td><td class="cite">FC 54.01(p)</td></tr>
+        <tr class="frow"><td class="time">48 hours</td><td>Deadline for a probable-cause finding to continue holding a child taken without a warrant/directive</td><td class="cite">FC 54.01(o)</td></tr>
+        <tr class="frow"><td class="time">10 working days per order (15 in counties without a certified facility)</td><td>Max length of each detention order before a fresh hearing is required</td><td class="cite">FC 54.01(h)</td></tr>
+        <tr class="frow"><td class="time">72 hours, extendable one more 72-hr period</td><td>Max detention for a valid-court-order violation by a status offender</td><td class="cite">FC 54.011(b)-(c)</td></tr>
+        <tr class="frow"><td class="time">10 days</td><td>Max detention under a signed voluntary "request for shelter" (out-of-county/state transport)</td><td class="cite">FC 54.01(i)</td></tr>
+        <tr class="frow"><td class="time">30 working days</td><td>Deadline to release if no petition filed &mdash; capital/agg. controlled substance felony/1st-degree felony allegation</td><td class="cite">FC 54.01(q)(1)</td></tr>
+        <tr class="frow"><td class="time">15 working days</td><td>Deadline to release if no petition filed &mdash; other offenses</td><td class="cite">FC 54.01(q)(2)</td></tr>
+        <tr class="frow"><td class="time">90 days</td><td>Lookback window after First Offender Program completion before new custody reopens the case</td><td class="cite">FC 52.031(j)(3)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-records">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">RECORDS</span>
+    <span class="sec-name">Records, Fingerprints &amp; Statements</span>
+    <span class="sec-count">3 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">10 calendar days</td><td>Deadline for referral to juvenile court before the agency must destroy fingerprints/photos/records</td><td class="cite">FC 58.001(c)</td></tr>
+        <tr class="frow"><td class="time">90 days</td><td>Extra retention window after First Offender Program completion, eligibility-determination only</td><td class="cite">FC 58.001(f)</td></tr>
+        <tr class="frow"><td class="time">20 days before the proceeding</td><td>Deadline to give defense counsel a copy of a recorded statement</td><td class="cite">FC 51.095(a)(5)(D); CCP 38.22 Sec. 3(a)(5)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-abuse">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">ABUSE</span>
+    <span class="sec-name">Child Abuse/Neglect Reporting &amp; Investigation</span>
+    <span class="sec-count">5 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">24 hours</td><td>A "professional's" reporting deadline after reasonable cause arises</td><td class="cite">FC 261.101(b)</td></tr>
+        <tr class="frow"><td class="time">Immediate</td><td>CPS response &mdash; imminent risk of death/substantial bodily harm</td><td class="cite">FC 261.301(d)(1)</td></tr>
+        <tr class="frow"><td class="time">24 hours</td><td>CPS response &mdash; highest priority (other than imminent)</td><td class="cite">FC 261.301(d)(2)</td></tr>
+        <tr class="frow"><td class="time">72 hours</td><td>CPS response &mdash; second-highest priority</td><td class="cite">FC 261.301(d)(3)</td></tr>
+        <tr class="frow"><td class="time">60 days</td><td>Window after investigation closes in which DFPS may still reopen/change its finding for good cause &mdash; barred after</td><td class="cite">FC 261.301(l)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-school">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">SCHOOL</span>
+    <span class="sec-name">School Notification</span>
+    <span class="sec-count">6 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">24 hrs or before next school day (earlier controls)</td><td>Oral notice to superintendent of an arrest/referral</td><td class="cite">CCP Art. 15.27(a)</td></tr>
+        <tr class="frow"><td class="time">7 days after oral notice</td><td>Follow-up written notice, marked "PERSONAL and CONFIDENTIAL"</td><td class="cite">CCP Art. 15.27(a)</td></tr>
+        <tr class="frow"><td class="time">24 hrs or before next school day</td><td>Superintendent notifies instructional/support personnel</td><td class="cite">CCP Art. 15.27(a)</td></tr>
+        <tr class="frow"><td class="time">24 hrs or before next school day</td><td>Oral notice of a conviction/adjudication</td><td class="cite">CCP Art. 15.27(b)</td></tr>
+        <tr class="frow"><td class="time">24 hrs or before next school day</td><td>Notice upon a student's transfer to a new school/district</td><td class="cite">CCP Art. 15.27(c)</td></tr>
+        <tr class="frow"><td class="time">2 working days</td><td>Notify the district if prosecution was declined or dismissed with prejudice</td><td class="cite">CCP Art. 15.27(g)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-missing">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">MISSING</span>
+    <span class="sec-name">Missing Children Reporting</span>
+    <span class="sec-count">9 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">None</td><td>Waiting period to take an initial missing-child report &mdash; there isn't one</td><td class="cite">BPOC 33.21</td></tr>
+        <tr class="frow"><td class="time">2 hours</td><td>Enter missing child into the clearinghouse and NCIC</td><td class="cite">CCP 63.009</td></tr>
+        <tr class="frow"><td class="time">2 hours</td><td>Enter applicable information into TLETS</td><td class="cite">CCP 63.009</td></tr>
+        <tr class="frow"><td class="time">2 hours</td><td>High-risk case: notify all agencies within 100 miles (incl. other states)</td><td class="cite">CCP 63.0091</td></tr>
+        <tr class="frow"><td class="time">48 hours</td><td>Minimum window to make a reasonable effort to locate/verify well-being (non-family-violence taking/retention)</td><td class="cite">CCP 63.009</td></tr>
+        <tr class="frow"><td class="time">48 hours</td><td>Submit report/info to agencies within 200 miles</td><td class="cite">CCP 63.009</td></tr>
+        <tr class="frow"><td class="time">30 days</td><td>Enter child's name into NamUS</td><td class="cite">CCP 63.009</td></tr>
+        <tr class="frow"><td class="time">30 days (90 if born outside U.S.)</td><td>Proof of identity/age for school enrollment, child under 11</td><td class="cite">CCP 63.019</td></tr>
+        <tr class="frow"><td class="time">45 days</td><td>Window for an entity to get law enforcement confirmation before removing a records flag on its own</td><td class="cite">CCP 63.022</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-emergency">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">EMERGENCY</span>
+    <span class="sec-name">Emergency Possession &amp; Child Advocacy Centers</span>
+    <span class="sec-count">3 deadlines</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Timeframe</th><th>Governs</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">5 days</td><td>Max DFPS retention without a court order &mdash; missing child delivered to DFPS</td><td class="cite">FC 262.007(c)</td></tr>
+        <tr class="frow"><td class="time">5 days</td><td>Max DFPS retention without a court order &mdash; emergency possession with intent to return home</td><td class="cite">FC 262.110(b)</td></tr>
+        <tr class="frow"><td class="time">3 years (or on significant/signatory change)</td><td>CAC interagency MOU reexecution cycle</td><td class="cite">FC 264.403(c)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-thresholds">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">THRESHOLDS</span>
+    <span class="sec-name">Numeric Thresholds (Not Deadlines)</span>
+    <span class="sec-count">10 thresholds</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="dl">
+      <thead><tr><th>Value</th><th>What It Defines</th><th>Cite</th></tr></thead>
+      <tbody>
+        <tr class="frow"><td class="time">10&ndash;16 (or 17, for pre-17 conduct)</td><td>"Child" &mdash; Family Code Title 3</td><td class="cite">FC 51.02(2)</td></tr>
+        <tr class="frow"><td class="time">Under 18</td><td>"Child" &mdash; Texas Missing Persons and Missing Children's Act</td><td class="cite">CCP 63.001</td></tr>
+        <tr class="frow"><td class="time">17 or younger</td><td>"Abducted child" &mdash; AMBER Alert</td><td class="cite">GV 411.351(1)</td></tr>
+        <tr class="frow"><td class="time">16+, living independently, self-supporting</td><td>Threshold for a child to consent to their own medical/dental/psych/surgical treatment</td><td class="cite">FC 32.003(a)(2)</td></tr>
+        <tr class="frow"><td class="time">16+</td><td>A child's refusal blocks a non-consensual FC 32.005 abuse/neglect examination</td><td class="cite">FC 32.005(c)</td></tr>
+        <tr class="frow"><td class="time">More than 3 years older, unrelated</td><td>AMBER Alert abductor age-gap/relationship criterion</td><td class="cite">GV 411.355(a)(1)(B)</td></tr>
+        <tr class="frow"><td class="time">Under 21</td><td>"Minor" &mdash; Alcoholic Beverage Code</td><td class="cite">AB Code 106.01</td></tr>
+        <tr class="frow"><td class="time">$1,000</td><td>Civil penalty for a false CPS report</td><td class="cite">FC 261.107(e)</td></tr>
+        <tr class="frow"><td class="time">State jail felony &rarr; 3rd degree (repeat)</td><td>Grading for a knowing false CPS report</td><td class="cite">FC 261.107(a)</td></tr>
+        <tr class="frow"><td class="time">Class A misdemeanor &rarr; state jail felony (aggravated)</td><td>Grading for failure to report abuse/neglect</td><td class="cite">FC 261.109(b)-(c)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Source: Family Code Title 3 &amp; Title 5, Code of Criminal Procedure Ch. 15/38/45A/63, Government Code Ch. 411, Alcoholic Beverage Code Ch. 106, as cited above &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+function toggleSec(el){
+  el.classList.toggle('open');
+  var body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+function filterTerms(){
+  var q = document.getElementById('searchBox').value.trim().toLowerCase();
+  var rows = document.querySelectorAll('tr.frow');
+  var shown = 0;
+  rows.forEach(function(r){
+    var text = r.textContent.toLowerCase();
+    var match = !q || text.indexOf(q) !== -1;
+    r.classList.toggle('hidden', !match);
+    if(match) shown++;
+  });
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    var hdr = card.querySelector('.sec-header');
+    var body = card.querySelector('.sec-body');
+    var rs = card.querySelectorAll('tr.frow');
+    var anyVisible = Array.prototype.some.call(rs, function(r){ return !r.classList.contains('hidden'); });
+    if(q){
+      hdr.classList.toggle('open', anyVisible);
+      body.classList.toggle('open', anyVisible);
+      card.style.display = anyVisible ? '' : 'none';
+    } else {
+      card.style.display = '';
+    }
+  });
+  document.getElementById('resultCount').textContent = q ? (shown + ' of ' + rows.length + ' rows match') : '';
+}
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    card.querySelector('.sec-header').classList.add('open');
+    card.querySelector('.sec-body').classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

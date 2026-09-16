@@ -1,0 +1,334 @@
+GOVERNMENT CODE
+TITLE 2. JUDICIAL BRANCH
+SUBTITLE A. COURTS
+CHAPTER 25A.  BUSINESS COURT
+
+      Sec. 25A.001.  DEFINITIONS.  In this chapter:
+            (1)  "Controlling person" means a person who directly or indirectly controls a governing person, officer, or organization.
+            (2)  "Derivative proceeding" means a civil action brought in the right of a domestic or foreign corporation, a domestic or foreign limited liability company, or a domestic or foreign limited partnership, to the extent provided by the Business Organizations Code.
+            (3)  "Governing documents" means the instruments, documents, or agreements adopted under an organization's governing law to govern the organization's formation and internal affairs.  The term includes:
+                  (A)  a certificate of formation, articles of incorporation, and articles of organization;
+                  (B)  bylaws;
+                  (C)  a partnership agreement;
+                  (D)  a company agreement or operating agreement;
+                  (E)  a shareholder agreement;
+                  (F)  a voting agreement or voting trust agreement; and
+                  (G)  an agreement among owners restricting the transfer of ownership interests.
+            (4)  "Governing law" means the law governing the formation and internal affairs of an organization.
+            (5)  "Governing person" means a person who is entitled, alone or as part of a group, to manage and direct an organization's affairs under the organization's governing documents and governing law.  The term includes:
+                  (A)  a member of the board of directors of a corporation or other organization;
+                  (B)  a general partner of a general or limited partnership;
+                  (C)  a manager of a limited liability company that is managed by its managers;
+                  (D)  a member of a limited liability company that is managed by its members;
+                  (E)  a trust manager of a real estate investment trust; and
+                  (F)  a trustee of a business trust.
+            (6)  "Governmental entity" means:
+                  (A)  this state; or
+                  (B)  a political subdivision of this state, including a municipality, a county, or any kind of district.
+            (7)  "Internal affairs" means:
+                  (A)  the rights, powers, and duties of an organization's governing persons, officers, owners, and members; and
+                  (B)  matters relating to the organization's membership or ownership interests.
+            (8)  "Managerial official" means a governing person or officer.
+            (9)  "Officer" means a person elected, appointed, or designated as an officer of an organization by the organization's governing persons or governing documents.
+            (10)  "Organization" means a foreign or domestic entity or association, regardless of whether the organization is for profit or nonprofit.  The term includes:
+                  (A)  a corporation;
+                  (B)  a limited partnership;
+                  (C)  a general partnership;
+                  (D)  a limited liability partnership;
+                  (E)  a limited liability company;
+                  (F)  a business trust;
+                  (G)  a real estate investment trust;
+                  (H)  a joint venture;
+                  (I)  a joint stock company;
+                  (J)  a cooperative;
+                  (K)  a bank;
+                  (L)  a credit union;
+                  (M)  a savings and loan association;
+                  (N)  an insurance company; and
+                  (O)  a series of a limited liability company or of another entity.
+            (11)  "Owner" means an owner of an organization. The term includes:
+                  (A)  a shareholder or stockholder of a corporation or other organization;
+                  (B)  a general or limited partner of a partnership or an assignee of a partnership interest in a partnership;
+                  (C)  a member of, or an assignee of a membership interest in, a limited liability company; and
+                  (D)  a member of a nonprofit organization.
+            (12)  "Ownership interest" means an owner's interest in an organization, including an owner's economic, voting, and management rights.
+            (13)  "Publicly traded company" means an entity whose voting equity securities are listed on a national securities exchange registered with the United States Securities and Exchange Commission under Section 6, Securities Exchange Act of 1934 (15 U.S.C. Section 78f) and any entity that is majority owned or controlled by such an entity.
+            (14)  "Qualified transaction" means a transaction, or series of related transactions other than a transaction involving a loan or an advance of money or credit by a bank, credit union, or savings and loan institution, under which a party:
+                  (A)  pays or receives, or is obligated to pay or is entitled to receive, consideration with an aggregate value of at least $5 million; or
+                  (B)  lends, advances, borrows, receives, is obligated to lend or advance, or is entitled to borrow or receive money or credit with an aggregate value of at least $5 million.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 43, eff. September 1, 2025.
+
+      Sec. 25A.002.  CREATION.  The business court is a statutory court created under Section 1, Article V, Texas Constitution.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.003.  BUSINESS COURT JUDICIAL DISTRICT; DIVISIONS.  (a)  The judicial district of the business court is composed of all counties in this state.
+      (b)  The business court is composed of divisions as provided by this section.
+      (c)  The First Business Court Division is composed of the counties composing the First Administrative Judicial Region under Section 74.042(b).
+      (d)  The Second Business Court Division is composed of the counties composing the Second Administrative Judicial Region under Section 74.042(c), excluding Montgomery County and Bastrop County, subject to funding through legislative appropriations.
+      (e)  The Third Business Court Division is composed of the counties composing the Third Administrative Judicial Region under Section 74.042(d) and Bastrop County.
+      (f)  The Fourth Business Court Division is composed of the counties composing the Fourth Administrative Judicial Region under Section 74.042(e).
+      (g)  The Fifth Business Court Division is composed of the counties composing the Fifth Administrative Judicial Region under Section 74.042(f), subject to funding through legislative appropriations. 
+      (h)  The Sixth Business Court Division is composed of the counties composing the Sixth Administrative Judicial Region under Section 74.042(g), subject to funding through legislative appropriations. 
+      (i)  The Seventh Business Court Division is composed of the counties composing the Seventh Administrative Judicial Region under Section 74.042(h), subject to funding through legislative appropriations. 
+      (j)  The Eighth Business Court Division is composed of the counties composing the Eighth Administrative Judicial Region under Section 74.042(i).
+      (k)  The Ninth Business Court Division is composed of the counties composing the Ninth Administrative Judicial Region under Section 74.042(j), subject to funding through legislative appropriations. 
+      (l)  The Tenth Business Court Division is composed of the counties composing the Tenth Administrative Judicial Region under Section 74.042(k), subject to funding through legislative appropriations. 
+      (m)  The Eleventh Business Court Division is composed of the counties composing the Eleventh Administrative Judicial Region under Section 74.042(l) and Montgomery County.
+      (n)  Repealed by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(1), eff. September 1, 2025.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 44, eff. September 1, 2025.
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(1), eff. September 1, 2025.
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 7.06, eff. December 4, 2025.
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 7.07, eff. December 4, 2025.
+
+      Sec. 25A.004.  JURISDICTION AND POWERS.  (a)  Subject to Subsections (b), (c), (d), (d-1), (e), and (f), the business court has the powers provided to district courts by Chapter 24, including the power to:
+            (1)  issue writs of injunction, mandamus, sequestration, attachment, garnishment, and supersedeas; and
+            (2)  grant any relief that may be granted by a district court.
+      (b)  Subject to Subsection (c), the business court has civil jurisdiction concurrent with district courts in the following actions, including actions in which a district court has exclusive jurisdiction, in which the amount in controversy exceeds $5 million, excluding interest, statutory damages, exemplary damages, penalties, attorney's fees, and court costs:
+            (1)  a derivative proceeding;
+            (2)  an action regarding the governance, governing documents, or internal affairs of an organization;
+            (3)  an action in which a claim under a state or federal securities or trade regulation law is asserted against:
+                  (A)  an organization;
+                  (B)  a controlling person or managerial official of an organization for an act or omission by the organization or by the person in the person's capacity as a controlling person or managerial official;
+                  (C)  an underwriter of securities issued by the organization; or
+                  (D)  the auditor of an organization;
+            (4)  an action by an organization, or an owner of an organization, if the action:
+                  (A)  is brought against an owner, controlling person, or managerial official of the organization; and
+                  (B)  alleges an act or omission by the person in the person's capacity as an owner, controlling person, or managerial official of the organization;
+            (5)  an action alleging that an owner, controlling person, or managerial official breached a duty owed to an organization or an owner of an organization by reason of the person's status as an owner, controlling person, or managerial official, including the breach of a duty of loyalty or good faith;
+            (6)  an action seeking to hold an owner or governing person of an organization liable for an obligation of the organization, other than on account of a written contract signed by the person to be held liable in a capacity other than as an owner or governing person; and
+            (7)  an action arising out of the Business Organizations Code.
+      (c)  The business court has civil jurisdiction concurrent with district courts in an action described by Subsection (b) regardless of the amount in controversy if a party to the action is a publicly traded company.
+      (d)  The business court has civil jurisdiction concurrent with district courts in the following actions in which the amount in controversy exceeds $5 million, excluding interest, statutory damages, exemplary damages, penalties, attorney's fees, and court costs:
+            (1)  an action arising out of a qualified transaction;
+            (2)  an action arising out of a business, commercial, or investment contract or transaction in which the parties to the contract or transaction agreed in the contract or a subsequent agreement that the business court has jurisdiction of the action, except an action that arises out of an insurance contract;
+            (3)  subject to Subsection (g), an action arising out of a violation of the Finance Code or Business & Commerce Code by an organization or an officer or governing person acting on behalf of an organization other than a bank, credit union, or savings and loan association;
+            (4)  an action arising out of or relating to the ownership, use, licensing, lease, installation, or performance of intellectual property, including:
+                  (A)  computer software, software applications, information technology and systems, data and data security, pharmaceuticals, biotechnology products, and bioscience technologies; and
+                  (B)  a trade secret, as that term is defined in Section 134A.002, Civil Practice and Remedies Code; and
+            (5)  an action arising out of Chapter 134A, Civil Practice and Remedies Code.
+      (d-1)  The business court has civil jurisdiction concurrent with district courts in an action to enforce an arbitration agreement, appoint an arbitrator, or review an arbitral award, or in other judicial actions authorized by an arbitration agreement, Chapter 171 or 172, Civil Practice and Remedies Code, or the Federal Arbitration Act (9 U.S.C. Sections 1 through 16), if a claim included in the controversy in arbitration is described by Subsection (b) or (d).
+      (e)  The business court has civil jurisdiction concurrent with district courts in an action seeking injunctive relief or a declaratory judgment under Chapter 37, Civil Practice and Remedies Code, involving a dispute based on a claim within the court's jurisdiction under Subsection (b), (c), or (d).
+      (f)  Except as provided by Subsection (h), in an action in which the business court has jurisdiction under Subsection (b), (c), (d), or (e), the court has supplemental jurisdiction over any other claim so related to the action that the claim forms part of the same case or controversy.  A claim within the business court's supplemental jurisdiction may proceed in the business court only on the agreement of all parties to the claim and a judge of the division of the court before which the action is pending.  If the parties involved in a claim within the business court's supplemental jurisdiction do not agree on the claim proceeding in the business court, the claim may proceed in a court of original jurisdiction concurrently with any related claims proceeding in the business court.
+      (g)  Unless the claim falls within the business court's supplemental jurisdiction, the business court does not have jurisdiction of:
+            (1)  a claim in a civil action:
+                  (A)  brought by or against a governmental entity; or
+                  (B)  seeking to foreclose on a lien on real or personal property an individual owns at the time the action is filed;
+            (2)  a claim arising out of:
+                  (A)  Subchapter E, Chapter 15, and Chapter 17, Business & Commerce Code;
+                  (B)  the Estates Code;
+                  (C)  the Family Code;
+                  (D)  the Insurance Code; or
+                  (E)  Chapter 53 and Title 9, Property Code;
+            (3)  a claim arising out of the production or sale of a farm product, as that term is defined by Section 9.102, Business & Commerce Code; or
+            (4)   a claim related to the duties and obligations under an insurance policy.
+      (h)  The business court does not have jurisdiction of the following claims regardless of whether the claim is otherwise within the court's supplemental jurisdiction under Subsection (f):
+            (1)  a claim arising under Chapter 74, Civil Practice and Remedies Code;
+            (2)  a claim in which a party seeks recovery of monetary damages for bodily injury or death;
+            (3)  a claim of legal malpractice; or
+            (4)  a claim related to a consumer transaction, as that term is defined by Section 601.001, Business & Commerce Code, to which a consumer in this state is a party, arising out of a violation of federal or state law.
+      (i)  The amount in controversy for jurisdictional purposes under Subsection (b) or (d) is the total amount of all joined parties' claims.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 45, eff. September 1, 2025.
+
+      Sec. 25A.0041.  RULES RELATED TO JURISDICTIONAL DETERMINATION.  (a)  The supreme court by rule shall establish procedures for the prompt, efficient, and final determination of business court jurisdiction on the filing of an action in the business court.  In adopting rules under this section, the supreme court must consider:
+            (1)  the business court's purpose of efficiently addressing complex business litigation in a manner comparable to or more effective than the business and commercial courts operating in other states;
+            (2)  the commonalities of law and procedure existing between the business court and district courts as trial courts functioning under the Texas Constitution and within the judicial branch of this state;
+            (3)  the limited potential for the movement of an action between a district court and the business court as it relates to issues of fundamental fairness or the preservation of constitutionally or statutorily protected rights of the parties; and
+            (4)  the need for guidance on evolving usage of the business court and the Fifteenth Court of Appeals over time by business litigants and their counsel as the courts develop a body of precedent and practice.
+      (b)  In adopting rules under this section, the supreme court may:
+            (1)  provide for jurisdictional determinations based on pleadings or summary proceedings;
+            (2)  establish appropriate standards of proof;
+            (3)  establish limited periods during which issues or rights must be asserted, considered agreed to, or waived;
+            (4)  establish procedures for the review of jurisdictional determinations by the business court by another judge or panel of judges, including a regional presiding judge or the administrative presiding judge of the business court;
+            (5)  allow, require, or prohibit interlocutory appeals;
+            (6)  provide for accelerated appeals; or
+            (7)  provide for any other procedures necessary for the prompt, efficient, and final determination of business court jurisdiction.
+Added by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 46, eff. September 1, 2025.
+
+      Sec. 25A.005.  JUDICIAL AUTHORITY.  A business court judge has all powers, duties, immunities, and privileges of a district judge.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.006.  INITIAL FILING; REMOVAL AND REMAND.  (a)  An action within the jurisdiction of the business court may be filed in the business court.  The party filing the action must plead facts to establish venue in a county in a division of the business court, and the business court shall assign the action to that division.  Venue may be established as provided by:
+            (1)  law;
+            (2)  a party's governing documents in an action described by Section 25A.004(b)(2), (4), (5), or (7); or
+            (3)  a written contract, if the contract specifies a county as venue for the action.
+      (b)  If the business court does not have jurisdiction of the action, the court shall, at the option of the party filing the action:
+            (1)  transfer the action to a district court or county court at law in a county of proper venue; or
+            (2)  dismiss the action without prejudice to the party's rights.
+      (c)  If, after an action is assigned to a division of the business court, the court determines that the division's geographic territory does not include a county of proper venue for the action, the court shall:
+            (1)  if an operating division of the court includes a county of proper venue, transfer the action to that division; or
+            (2)  if there is not an operating division of the court that includes a county of proper venue, at the option of the party filing the action, transfer the action to a district court or county court at law in a county of proper venue.
+      (d)  A party to an action filed in a district court or county court at law that is within the jurisdiction of the business court may remove the action to the business court.  If the business court does not have jurisdiction of the action, the business court shall remand the action to the court in which the action was originally filed.
+      (e)  A party to an action filed in a district court or county court at law in a county of proper venue that is not within an operating division of the business court or the judge of the court in which the action is filed may not remove or transfer the action to the business court.
+      (f)  A party may file an agreed notice of removal at any time during the pendency of the action.  If all parties to the action have not agreed to remove the action, the notice of removal must be filed:
+            (1)  not later than the 30th day after the later of:
+                  (A)  the date the party requesting removal of the action was served with process in accordance with rules adopted by the supreme court; or
+                  (B)  the date the party requesting removal of the action discovered, or reasonably should have discovered, facts establishing the business court's jurisdiction over the action; or
+            (2)  if an application for temporary injunction is pending on the date the party requesting removal of the action discovered, or reasonably should have discovered, facts establishing the business court's jurisdiction over the action, not later than the 30th day after the date the application is granted, denied, or denied as a matter of law.
+      (g)  The notice of removal must be filed with the business court and the court in which the action was originally filed.  On receipt of the notice, the clerk of the court in which the action was originally filed shall immediately transfer the action to the business court in accordance with rules adopted by the supreme court, and the business court clerk shall assign the action to the appropriate division of the business court.
+      (h)  The filing of an action or a notice of removal in the business court is subject to Section 10.001, Civil Practice and Remedies Code.
+      (i)  Removal of a case to the business court is not subject to the statutes or rules governing the due order of pleading.
+      (j)  Removal of a case does not waive a defect in venue or constitute an appearance to determine personal jurisdiction.
+      (k)  The judge of a court in which an action is filed may request the presiding judge for the court's administrative region to transfer the action to the business court if the action is within the business court's jurisdiction.  The judge shall notify all parties of the transfer request and request a hearing on the transfer request.  After a hearing on the request, the presiding judge may transfer the action to the business court if the presiding judge finds the transfer will facilitate the fair and efficient administration of justice.  The business court clerk shall assign an action transferred under this subsection to the appropriate division of the business court.
+      (l)  The business court judge on establishment of jurisdiction and venue over an action shall by order declare the county in which any jury trial for the action will be held as determined under Section 25A.015.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 47, eff. September 1, 2025.
+
+      Sec. 25A.007.  APPEALS.  (a)  Notwithstanding any other law, and except in instances when the supreme court has concurrent or exclusive jurisdiction, the Fifteenth Court of Appeals has exclusive jurisdiction over an appeal from an order or judgment of the business court or an original proceeding related to an action or order of the business court.
+      (b)  Repealed by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(2), eff. September 1, 2025.
+      (c)  The procedure governing an appeal or original proceeding from the business court is the same as the procedure for an appeal or original proceeding from a district court.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 48, eff. September 1, 2025.
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(2), eff. September 1, 2025.
+
+      Sec. 25A.008.  QUALIFICATIONS OF JUDGE.  (a)  A business court judge must:
+            (1)  be at least 35 years of age;
+            (2)  be a United States citizen;
+            (3)  have been a resident of a county within the division of the business court to which the judge is appointed for at least five years before appointment; and
+            (4)  be a licensed attorney in this state who has 10 or more years of experience in:
+                  (A)  practicing complex civil business litigation;
+                  (B)  practicing business transaction law;
+                  (C)  serving as a judge of a court in this state with civil jurisdiction; or
+                  (D)  any combination of experience described by Paragraphs (A)-(C).
+      (b)  A business court judge may not have had the judge's license to practice law revoked, suspended, or subject to a probated suspension.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.009.  APPOINTMENT OF JUDGES; TERM; PRESIDING JUDGE; EXCHANGE OF BENCHES.  (a)  The governor, with the advice and consent of the senate, shall appoint:
+            (1)  two judges to each of the First, Third, Fourth, Eighth, and Eleventh Divisions of the business court; and
+            (2)  one judge to each of the Second, Fifth, Sixth, Seventh, Ninth, and Tenth Divisions of the business court.
+      (a-1)  A judge appointed to the business court may begin state employment and receive compensation for service as a judge for not more than 30 days before the beginning of the judge's term to allow time for training, organization of staff and chambers, and study of business court precedent, procedure, and pending cases.
+      (b)  A business court judge shall serve for a term of two years, beginning on September 1 of every even-numbered year.
+      (c)  A business court judge may be reappointed.
+      (d)  Not later than September 15 of each even-numbered year, the business court judges by majority vote shall select a judge of the court to serve as administrative presiding judge and a judge serving a different division of the court to serve as administrative presiding judge pro tempore for a term of two years.  If a vacancy occurs in the position of administrative presiding judge, the administrative presiding judge pro tempore  shall serve as administrative presiding judge and the business court judges by majority vote shall select a judge of the court to serve as successor administrative presiding judge pro tempore for the remainder of the unexpired term as soon as practicable.
+      (d-1)  The administrative presiding judge pro tempore shall act as administrative presiding judge in any matter in which the administrative presiding judge:
+            (1)  has delegated the judge's official duties to the administrative presiding judge pro tempore; or 
+            (2)  is unable to perform the judge's official duties.
+      (e)  A business court judge shall take the constitutional oath of office required of appointed officers of this state and file the oath with the secretary of state.
+      (f)  To promote the orderly and efficient administration of justice, the business court judges may exchange benches and sit and act for each other in any matter pending before the court.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 49, eff. September 1, 2025.
+
+      Sec. 25A.010.  VACANCY.  If a vacancy occurs in an office of a business court judge, the governor, with the advice and consent of the senate, shall appoint, in the same manner as the original appointment, another person to serve for the remainder of the unexpired term.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.011.  JUDGE'S SALARY.  The salary of a business court judge is the amount provided by Section 659.012 and shall be paid in equal monthly installments.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.00111.  JUDGE'S EXPENSES; OFFICIAL DUTIES.  (a)  A business court judge engaged in the discharge of official duties in a location other than the county in which the judge maintains chambers is entitled to travel expenses as provided by Chapter 660.
+      (b)  A business court judge is entitled to receive from this state the actual and necessary postage, telephone, and telecommunications expenses incurred in the discharge of the judge's official duties.
+      (c)  The official duties of a business court judge include:
+            (1)  presenting educational information regarding the business court to legal and business groups; and 
+            (2)  attending educational meetings in this state and other states of the United States relating to business law, business litigation, and the function of the business court.
+Added by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 50, eff. September 1, 2025.
+
+      Sec. 25A.012.  REMOVAL; DISQUALIFICATION AND RECUSAL.  (a)  A business court judge may be removed from office in the same manner and for the same reasons as a district judge.
+      (b)  A business court judge is disqualified and subject to mandatory recusal for the same reasons a district judge is subject to disqualification or recusal in a pending case. Disqualification or recusal of a business court judge shall be governed by the same procedure as disqualification or recusal of a district judge.
+      (c)  If a business court judge determines on the judge's own motion the judge should not hear a case pending in the judge's court because the judge is disqualified or subject to recusal, the judge shall:
+            (1)  enter a recusal order;
+            (2)  request the administrative presiding judge of the business court to assign another judge of the business court to hear the case; and
+            (3)  take no further action in the case except for good cause as stated in the order in which the action is taken.
+      (d)  The administrative presiding judge is not required to assign a case described by Subsection (c) to a different division of the business court.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 51, eff. September 1, 2025.
+
+      Sec. 25A.013.  PRIVATE PRACTICE OF LAW.  A business court judge shall diligently discharge the duties of the office on a full-time basis and may not engage in the private practice of law.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.0135.  EXEMPTION FROM CERTAIN JUDICIAL TRAINING REQUIREMENTS.  A judge of the business court is exempt from the judicial training requirements under Chapter 22 that are not germane to the jurisdiction of the business court, including the training requirements of Sections 22.012 and 22.110.
+Added by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 52, eff. September 1, 2025.
+
+      Sec. 25A.014.  VISITING JUDGE.  (a)  An active, retired, or former judge or justice who has the qualifications prescribed by Section 25A.008 may be assigned as a visiting judge of a division of the business court by the chief justice of the supreme court.  A visiting judge of a division of the business court is subject to objection, disqualification, or recusal under Chapter 74 in the same manner as a judge or justice is subject to objection, disqualification, or recusal if appointed as a visiting district judge.
+      (b)  Repealed by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(3), eff. September 1, 2025.
+      (c)  The chief justice of the supreme court may assign an active judge of the business court to serve as a visiting judge of a district court, a constitutional county court, or a statutory county court located in the division served by the judge of the business court.  The judge of the business court serving as a visiting judge is subject to objection, disqualification, or recusal under Chapter 74 in the same manner as an active judge or justice or an active district court judge is subject to objection, disqualification, or recusal if appointed as a visiting judge.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 53, eff. September 1, 2025.
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 70(3), eff. September 1, 2025.
+
+      Sec. 25A.015.  JURY PRACTICE AND PROCEDURE; VENUE FOR JURY TRIAL.  (a)  A party in an action pending in the business court has the right to a trial by jury when required by the constitution.
+      (b)  Subject to Subsection (d), a jury trial in a case filed initially in the business court shall be held in any county in which the case could have been filed under Section 15.002, Civil Practice and Remedies Code, as chosen by the plaintiff.
+      (c)  Subject to Subsections (b) and (d), a jury trial in a case removed to the business court shall be held in the county in which the action was originally filed.
+      (d)  A jury trial for a case in which a written contract specifies a county as venue for suits shall be held in that county.
+      (e)  The parties and the business court judge may agree to hold the jury trial in any other county.  A party may not be required to agree to hold the jury trial in a different county.
+      (f)  The drawing of jury panels, selection of jurors, and other jury-related practice and procedure in the business court shall be the same as for the district court in the county in which the trial is held.
+      (g)  Practice, procedure, rules of evidence, issuance of process and writs, and all other matters pertaining to the conduct of trials, hearings, and other business in the business court are governed by the laws and rules prescribed for district courts, unless otherwise provided by this chapter.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.016.  WRITTEN OPINIONS.  The supreme court shall adopt rules for the issuance of written opinions by the business court.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.017.  COURT LOCATION; STAFFING.  (a)  In this section, "remote proceeding" means a proceeding before the business court in which one or more of the participants, including a judge, party, attorney, witness, court reporter, or other individual attends the proceeding remotely through the use of technology.
+      (b)  The administrative presiding judge of the business court shall manage administrative and personnel matters on behalf of the court.  The administrative presiding judge of the business court shall appoint a clerk, whose office shall be located in Travis County in facilities provided by this state.  The clerk shall:
+            (1)  accept all filings in the business court; and
+            (2)  fulfill the legal and administrative functions of a district clerk.
+      (c)  Each business court judge shall maintain chambers in the county with the largest population within the geographic boundaries of the division to which the judge is appointed, or in a county adjacent to that county and within the geographic boundaries of the division, as the judge selects, in facilities provided by this state.  The chief justice of the supreme court may approve the location of a business court judge's chambers in a county other than a county described by this subsection that is within the geographic boundaries of the division.  For purposes of this section, the Office of Court Administration of the Texas Judicial System may contract for the use of facilities with a public or private party.
+      (d)  Subject to Section 25A.015, a business court judge may hold court at any courtroom within the geographic boundaries of the division to which the judge is appointed as the court determines necessary or convenient for a particular civil action.  A county shall accommodate the business court in the conduct of the court's hearings and other proceedings in courtrooms and facilities equivalent to those provided to district courts.  A county is entitled to reimbursement from this state in an amount equal to the market rate for those facilities in the county as calculated by the Texas Facilities Commission for this purpose.  A county shall consider the reasonably anticipated requirements of the business court in the planning for and implementation of additions and improvements to the county's courtrooms and facilities only if the business court is currently operational in that county.
+      (e)  The business court may conduct a proceeding other than a jury trial as a remote proceeding to facilitate the resolution of a matter before the court.  The business court may not require a party or attorney to remotely attend a court proceeding in which oral testimony is heard, absent the agreement of the parties.
+      (f)  The business court shall conduct a remote proceeding from a courtroom or the facilities provided to a business court judge by this state.
+      (g)  The business court shall provide reasonable notice to the public that a proceeding will be conducted remotely and an opportunity for the public to observe the remote proceeding.
+      (h)  In a county in which a division of the business court sits or a judge of the business court maintains chambers, the business court or Office of Court Administration of the Texas Judicial System may require the sheriff, sheriff's deputy, or other licensed peace officer employed by the state or local governmental entity, including the Department of Public Safety, to attend the business court and provide security for the business court's judges.  The officers providing such services are entitled to reimbursement from this state for the cost of attending the business court and providing security for the business court's judges.
+      (i)  The business court may appoint personnel necessary for the operation of the court, including:
+            (1)  personnel to assist the clerk of the court;
+            (2)  staff attorneys for the court;
+            (3)  staff attorneys for each judge of the business court;
+            (4)  court coordinators; and
+            (5)  administrative assistants.
+      (j)  Subject to Subsection (k), the court officials shall perform the duties and responsibilities of their offices and are entitled to the compensation, fees, and allowances prescribed by law for the offices.
+      (k)  All personnel, including the business court clerk, appointed under this section are employees of the Office of Court Administration of the Texas Judicial System and are state employees for all purposes, including accrual of leave time, insurance benefits, retirement benefits, and travel regulations.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 54, eff. September 1, 2025.
+
+      Sec. 25A.0171.  ADMINISTRATIVE ATTACHMENT TO OFFICE OF COURT ADMINISTRATION; REPORT.  (a)  The business court is administratively attached to the Office of Court Administration of the Texas Judicial System.
+      (b)  The Office of Court Administration of the Texas Judicial System shall provide administrative support to the business court as necessary to enable the business court to carry out its duties under this chapter.
+      (c)  The Office of Court Administration of the Texas Judicial System may employ personnel necessary to provide administrative support to the business court under this chapter.
+      (d)  Only the business court may exercise the duties of the business court under this chapter.  Except as otherwise provided by this chapter, the Office of Court Administration of the Texas Judicial System does not have any authority or responsibility related to the duties of the business court under this chapter.
+      (e)  Not later than December 1 of each year, the Office of Court Administration of the Texas Judicial System shall submit to the legislature a report on the case activity of the business court in the preceding year that includes:
+            (1)  a summary of the caseload of each business court judge in the preceding year;
+            (2)  a summary of the extent to which business court judges have been assigned to hear cases in other divisions to equalize caseloads;
+            (3)  a projection of the expected caseloads of the business court judges for the following two years; and
+            (4)  recommendations regarding action by the legislature, the governor, the chief justice of the supreme court, or the business court to ensure the business court meets existing and projected demand for the business court's services in the following two years.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 55, eff. September 1, 2025.
+
+      Sec. 25A.018.  FEES.  The supreme court shall set fees for filings and actions in the business court in amounts sufficient to cover the costs of administering this chapter, taking into account fee waivers necessary for the interest of justice.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.019.  SEAL.  The seal of the business court is the same as that provided by law for a district court except that the seal must contain the name "The Business Court of Texas."
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+      Sec. 25A.020.  RULES.  (a)  The supreme court shall adopt rules of civil procedure as the court determines necessary, including rules providing for:
+            (1)  the timely and efficient removal and remand of cases to and from the business court; and
+            (2)  the assignment of cases to judges of the business court.
+      (b)  The business court may adopt rules of practice and procedure consistent with the Texas Rules of Civil Procedure and the Texas Rules of Evidence.
+Added by Acts 2023, 88th Leg., R.S., Ch. 380 (H.B. 19), Sec. 1, eff. September 1, 2023.
+
+For expiration of this section, see Subsection (b).
+      Sec. 25A.021.  ACTIONS COMMENCED BEFORE SEPTEMBER 1, 2024.  (a)  Notwithstanding Section 8, Chapter 380 (H.B. 19), Acts of the 88th Legislature, Regular Session, 2023, a civil action commenced before September 1, 2024, that is within the jurisdiction of the business court may be transferred to and heard by the business court on an agreed motion of a party and permission of the business court under rules adopted by the supreme court for the purpose.  When adopting rules under this section, the supreme court shall:
+            (1)  prioritize complex civil actions of longer duration that have proven difficult for a district court to resolve because of the other demands on the district court's caseload;
+            (2)  consider the capacity of the business court to accept the transfer of the action without impairing the business court's efficiency and effectiveness in resolving actions commenced on or after September 1, 2024; and
+            (3)  ensure the facilitation of the fair and efficient administration of justice.
+      (b)  This section expires September 1, 2035.
+Added by Acts 2025, 89th Leg., R.S., Ch. 912 (H.B. 40), Sec. 56, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

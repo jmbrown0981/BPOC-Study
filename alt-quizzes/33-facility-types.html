@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Facility Types | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+  .cite{font-family:'IBM Plex Mono', monospace; letter-spacing:0.01em;}
+  main{max-width:1000px; margin:0 auto; padding:0 16px 60px;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:28px 20px 24px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; max-width:1000px; margin:0 auto;}
+  .hero-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:25px; line-height:1.18; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:64ch; line-height:1.55;}
+  .back{color:var(--brass-light); text-decoration:none; font-size:12.5px; font-weight:600; white-space:nowrap; border:1px solid rgba(215,182,103,0.4); padding:7px 12px; border-radius:6px;}
+  .back:hover{background:rgba(215,182,103,0.1);}
+
+  nav.chips{display:flex; gap:8px; flex-wrap:wrap; padding:14px 16px; max-width:1000px; margin:0 auto; position:sticky; top:0; background:var(--paper); z-index:5; border-bottom:1px solid var(--rule);}
+  .chip{font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; color:var(--navy); background:#fff; border:1px solid var(--rule); border-radius:20px; padding:6px 13px; text-decoration:none; cursor:pointer;}
+  .chip:hover{border-color:var(--brass);}
+
+  .callout{background:#fff; border:1px solid var(--rule); border-left:4px solid var(--rust); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:13px; line-height:1.6;}
+  .callout b{color:var(--rust);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:17px; margin:26px 0 4px; color:var(--navy);}
+  p.section-sub{font-size:12.5px; color:var(--ink-soft); margin:0 0 14px; line-height:1.5;}
+
+  /* head-to-head comparison */
+  .vs-wrap{display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch; margin:14px 0;}
+  .vs-card{background:#fff; border:1px solid var(--rule); border-radius:8px; padding:16px;}
+  .vs-card.correctional{border-top:4px solid var(--rust);}
+  .vs-card.detention{border-top:4px solid var(--navy);}
+  .vs-card h3{font-family:'IBM Plex Serif',serif; font-size:15px; margin:0 0 8px;}
+  .vs-card.correctional h3{color:var(--rust);}
+  .vs-card.detention h3{color:var(--navy);}
+  .vs-card .stat{display:flex; justify-content:space-between; gap:8px; font-size:12.5px; padding:6px 0; border-top:1px solid var(--rule);}
+  .vs-card .stat:first-of-type{border-top:none;}
+  .vs-card .stat .k{color:var(--ink-soft);}
+  .vs-card .stat .v{font-weight:600; text-align:right;}
+  .vs-mid{display:flex; align-items:center; justify-content:center; padding:0 14px; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:13px;}
+  @media (max-width:640px){
+    .vs-wrap{grid-template-columns:1fr;}
+    .vs-mid{padding:8px 0;}
+  }
+
+  /* custody journey timeline */
+  .journey{position:relative; margin:20px 0 30px; padding-left:26px;}
+  .journey::before{content:""; position:absolute; left:9px; top:6px; bottom:6px; width:2px; background:var(--rule);}
+  .jstep{position:relative; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:12px 14px; margin-bottom:12px;}
+  .jstep::before{content:""; position:absolute; left:-22px; top:16px; width:12px; height:12px; border-radius:50%; background:var(--brass); border:2px solid var(--paper);}
+  .jstep .jtitle{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:14px; color:var(--navy); margin-bottom:3px;}
+  .jstep .jmeta{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-bottom:5px;}
+  .jstep .jbody{font-size:12.5px; line-height:1.55; color:var(--ink);}
+  .jstep.pre::before{background:var(--navy);}
+  .jstep.post::before{background:var(--rust);}
+  .badge{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:2px 7px; border-radius:4px; margin-right:6px;}
+  .badge.pre{background:#E3EAF2; color:var(--navy);}
+  .badge.post{background:#F3DDD0; color:var(--rust);}
+  .badge.either{background:var(--paper-dim); color:var(--ink-soft);}
+
+  /* comparison table for all custody/detention location types */
+  table.cmp{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--rule); border-radius:8px; overflow:hidden; font-size:12.5px; margin:16px 0;}
+  table.cmp th{background:var(--navy); color:#EDE7D6; text-align:left; padding:9px 11px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.04em; text-transform:uppercase;}
+  table.cmp td{padding:9px 11px; border-top:1px solid var(--rule); vertical-align:top; line-height:1.5;}
+  table.cmp tr:hover td{background:var(--paper-dim);}
+  table.cmp td.term{font-family:'IBM Plex Serif',serif; font-weight:700; color:var(--ink); white-space:nowrap;}
+  table.cmp td.cite{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &mdash; LO 33.2 &amp; 33.5</p>
+      <h1>Secure Correctional vs. Secure Detention &mdash; and Every Other Facility Type</h1>
+      <p class="sub">BPOC specifically flags this distinction as one to reinforce with questions. Here's the head-to-head comparison, plus a walk through every custody/detention location a child can pass through and when each one applies.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-headtohead">Head-to-Head</a>
+  <a class="chip" href="#sec-journey">Custody Journey</a>
+  <a class="chip" href="#sec-table">All Facility Types</a>
+</nav>
+
+<main id="mainContent">
+
+<div class="callout">
+  <b>The one-line rule:</b> a <b>Secure Detention Facility</b> holds a child who is only <i>accused</i> &mdash; pending proceedings, pre-adjudication. A <b>Secure Correctional Facility</b> holds a child who has already been <i>adjudicated</i> &mdash; post-disposition. Both share nearly identical physical-security language ("construction fixtures designed to physically restrict... movements and activities") &mdash; that part does <u>not</u> distinguish them. The adjudication status of the child is what distinguishes them. <span class="cite">FC 51.02(13)-(14)</span>
+</div>
+
+<h2 class="section-title" id="sec-headtohead">Head-to-Head Comparison</h2>
+<p class="section-sub">Family Code 51.02(13)-(14) definitions, side by side.</p>
+<div class="vs-wrap">
+  <div class="vs-card detention">
+    <h3>Secure Detention Facility</h3>
+    <div class="stat"><span class="k">Who's held there</span><span class="v">Accused (pre-adjudication)</span></div>
+    <div class="stat"><span class="k">Purpose</span><span class="v">Temporary placement</span></div>
+    <div class="stat"><span class="k">Also houses</span><span class="v">Nonoffenders; accused adults in related contexts</span></div>
+    <div class="stat"><span class="k">Statute</span><span class="v">FC 51.02(14)</span></div>
+  </div>
+  <div class="vs-mid">VS</div>
+  <div class="vs-card correctional">
+    <h3>Secure Correctional Facility</h3>
+    <div class="stat"><span class="k">Who's held there</span><span class="v">Adjudicated (post-disposition)</span></div>
+    <div class="stat"><span class="k">Purpose</span><span class="v">Placement after a finding of committing an offense</span></div>
+    <div class="stat"><span class="k">Also houses</span><span class="v">Nonoffenders; individuals convicted of a criminal offense</span></div>
+    <div class="stat"><span class="k">Statute</span><span class="v">FC 51.02(13)</span></div>
+  </div>
+</div>
+
+<h2 class="section-title" id="sec-journey">A Child's Custody Journey &mdash; Where They Can Legally Be Held, In Order</h2>
+<p class="section-sub"><span class="badge either">Either</span> pre- or post-adjudication use &middot; <span class="badge pre">Pre</span> pre-adjudication only &middot; <span class="badge post">Post</span> post-adjudication only</p>
+<div class="journey">
+
+  <div class="jstep pre">
+    <span class="badge pre">Pre</span>
+    <div class="jtitle">1. Taken into custody</div>
+    <div class="jmeta">FC 52.01 &middot; CCP 45A.453</div>
+    <div class="jbody">Under a court order, the laws of arrest, an officer's probable cause, a probation officer's probable cause, or a directive to apprehend. This is not legally an "arrest," except for search/custody-validity purposes.</div>
+  </div>
+
+  <div class="jstep pre">
+    <span class="badge pre">Pre</span>
+    <div class="jtitle">2. Juvenile Processing Office <i>or</i> Place of Nonsecure Custody</div>
+    <div class="jmeta">FC 52.025 &middot; CCP 45A.453 &middot; max 6 hours each</div>
+    <div class="jbody">An unlocked, multipurpose area (lobby, office, interview room) &mdash; never a cell. Limited to identification, paperwork, authorized photographing/fingerprinting, required warnings, and taking certain statements. The child may not be cuffed to a stationary object, held residentially, or left without continuous visual supervision.</div>
+  </div>
+
+  <div class="jstep pre">
+    <span class="badge pre">Pre</span>
+    <div class="jtitle">3a. Released to parent/guardian/custodian</div>
+    <div class="jmeta">FC 52.02(a)(1) &middot; FC 53.02</div>
+    <div class="jbody">The default outcome absent one of the statutory detention-warranting conditions (flight risk, no suitable supervision, danger to self/public, prior delinquency history, or the FC 53.02(f) firearm trigger).</div>
+  </div>
+
+  <div class="jstep pre">
+    <span class="badge pre">Pre</span>
+    <div class="jtitle">3b. Secure Detention Facility (if not released)</div>
+    <div class="jmeta">FC 51.12(j) &middot; FC 51.02(14)</div>
+    <div class="jbody">Holds the child <i>while still only accused</i>, pending a detention hearing (2nd working day generally; 24 hours for status offenders/nonoffenders) and, if detained, pending adjudication. Must be sight-and-sound separated from adults. Detention orders cap at 10 working days each (15 in counties without a certified facility), renewable only through fresh hearings.</div>
+  </div>
+
+  <div class="jstep either">
+    <span class="badge either">Either</span>
+    <div class="jtitle">3c. County jail / other facility (narrow exception)</div>
+    <div class="jmeta">FC 51.12(l) &middot; FC 53.02(f)</div>
+    <div class="jbody">Used only when no certified juvenile detention facility or 51.12(j) secure detention facility is available in-county or in an adjacent county, with strict sight-and-sound separation, no shared staff contact, and only in a non-metro county with annual judicial certification.</div>
+  </div>
+
+  <div class="jstep">
+    <div class="jtitle">4. Adjudication Hearing</div>
+    <div class="jmeta">FC 54.03</div>
+    <div class="jbody">The juvenile court determines whether the child engaged in the alleged delinquent conduct/CINS. This is the dividing line between "accused" and "adjudicated" &mdash; and therefore between Secure Detention and Secure Correctional facility eligibility.</div>
+  </div>
+
+  <div class="jstep post">
+    <span class="badge post">Post</span>
+    <div class="jtitle">5. Secure Correctional Facility (if adjudicated and committed)</div>
+    <div class="jmeta">FC 51.12(c) &middot; FC 51.02(13)</div>
+    <div class="jbody">Now holds the child <i>because they have been adjudicated</i> as having committed an offense &mdash; e.g., commitment to the Texas Juvenile Justice Department under FC 54.04. This is a fundamentally different legal basis than the pre-adjudication detention facility, even though the physical security features may look similar.</div>
+  </div>
+
+  <div class="jstep either">
+    <span class="badge either">Either</span>
+    <div class="jtitle">Nonsecure Correctional Facility (alternate track, pre-adjudication)</div>
+    <div class="jmeta">FC 51.12(j-1)</div>
+    <div class="jbody">Despite the name "correctional," this is a <i>pre-adjudication</i> option under 51.12(j-1) &mdash; used when no certified secure detention facility is available, the facility is registered/certified and meets short-term detention standards, and the county juvenile board has designated it. Don't assume "correctional" always means post-adjudication &mdash; this is the one statutory exception to that pattern.</div>
+  </div>
+
+</div>
+
+<h2 class="section-title" id="sec-table">All Facility / Custody-Location Types at a Glance</h2>
+<table class="cmp">
+  <tr><th>Term</th><th>Pre/Post-Adjudication</th><th>Time Cap</th><th>Key Feature</th><th>Cite</th></tr>
+  <tr><td class="term">Juvenile Processing Office</td><td>Pre (or informal disposition)</td><td>6 hours</td><td>Unlocked office/room; limited purposes only; no cuffing to fixtures</td><td class="cite">FC 52.025</td></tr>
+  <tr><td class="term">Place of Nonsecure Custody</td><td>Pre</td><td>6 hours</td><td>Unlocked, multipurpose area; may be an unlocked juvenile processing office</td><td class="cite">CCP 45A.453</td></tr>
+  <tr><td class="term">Secure Detention Facility</td><td>Pre only</td><td>10 working days per order (15 without a certified facility in-county)</td><td>Sight-and-sound separated from adults; certified &amp; registered with TJJD</td><td class="cite">FC 51.02(14); FC 51.12(j)</td></tr>
+  <tr><td class="term">Nonsecure Correctional Facility</td><td>Pre only (despite the name)</td><td>Until release or detention hearing</td><td>Alternate to secure detention when none is available; registered &amp; certified</td><td class="cite">FC 51.12(j-1)</td></tr>
+  <tr><td class="term">County Jail / Other Facility</td><td>Pre (narrow exception)</td><td>Until release or hearing under 54.01(p)</td><td>Only when no certified/secure detention facility is available in- or adjacent-county; non-metro counties</td><td class="cite">FC 51.12(l)</td></tr>
+  <tr><td class="term">Secure Correctional Facility</td><td>Post only</td><td>Per disposition order</td><td>Houses adjudicated juveniles, nonoffenders, and convicted individuals</td><td class="cite">FC 51.02(13); FC 51.12(c)</td></tr>
+</table>
+
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Source: Family Code &sect;&sect;51.02, 51.12, 52.01-52.025, 53.02, 54.01, 54.03; CCP Art. 45A.453, as cited above &middot; Not an official TCOLE or academy publication</footer>
+
+</body>
+</html>

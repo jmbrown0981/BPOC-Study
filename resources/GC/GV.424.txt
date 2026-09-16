@@ -1,0 +1,136 @@
+GOVERNMENT CODE
+TITLE 4. EXECUTIVE BRANCH
+SUBTITLE B. LAW ENFORCEMENT AND PUBLIC PROTECTION
+CHAPTER 424.  PROTECTION OF CRITICAL INFRASTRUCTURE FACILITIES
+
+SUBCHAPTER A. GENERAL PROVISIONS
+
+      Sec. 424.001.  DEFINITION.  In this chapter, "critical infrastructure facility" has the meaning assigned by Section 423.0045(a)(1-a) and also includes:
+            (1)  any pipeline transporting oil or gas or the products or constituents of oil or gas;
+            (2)  a public or private airport depicted in any current aeronautical chart published by the Federal Aviation Administration;
+            (3)  a military installation owned or operated by or for the federal government, this state, or another governmental entity;
+            (4)  any property, including a temporary hazard area related to the operation of a launch complex authorized by the Federal Aviation Administration, or facility used for the launch, landing, recovery, or testing of spacecraft, as defined by Section 507.001, Local Government Code; and
+            (5)  a property, facility, or pipeline described by this section that is under construction and all equipment and appurtenances used during that construction.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+Amended by: 
+      Acts 2023, 88th Leg., R.S., Ch. 1096 (S.B. 1308), Sec. 3, eff. September 1, 2023.
+      Acts 2025, 89th Leg., R.S., Ch. 803 (S.B. 1198), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER B. CRIMINAL LIABILITY
+
+      Sec. 424.051.  OFFENSE: DAMAGING OR DESTROYING CRITICAL INFRASTRUCTURE FACILITY.  (a)  A person commits an offense if, without the effective consent of the owner, the person enters or remains on or in a critical infrastructure facility and intentionally or knowingly damages or destroys the facility.
+      (b)  An offense under this section is a felony of the third degree.
+      (c)  If conduct constituting an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both.
+      (d)  It is a defense to prosecution under this section that the damage caused to the critical infrastructure facility was only superficial.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.052.  OFFENSE: IMPAIRING OR INTERRUPTING OPERATION OF CRITICAL INFRASTRUCTURE FACILITY.  (a)  A person commits an offense if, without the effective consent of the owner, the person enters or remains on or in a critical infrastructure facility and intentionally or knowingly impairs or interrupts the operation of the facility.
+      (b)  An offense under this section is a state jail felony.
+      (c)  If conduct constituting an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.053.  OFFENSE: INTENT TO DAMAGE OR DESTROY CRITICAL INFRASTRUCTURE FACILITY.  (a)  A person commits an offense if, without the effective consent of the owner, the person enters or remains on or in a critical infrastructure facility with the intent to damage or destroy the facility.
+      (b)  An offense under this section is a state jail felony.
+      (c)  If conduct constituting an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both.
+      (d)  It is a defense to prosecution under this section that the actor intended to cause only superficial damage to the critical infrastructure facility.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.054.  OFFENSE: INTENT TO IMPAIR OR INTERRUPT OPERATION OF CRITICAL INFRASTRUCTURE FACILITY.  (a)  A person commits an offense if, without the effective consent of the owner, the person enters or remains on or in a critical infrastructure facility with the intent to impair or interrupt the operation of the facility.
+      (b)  An offense under this section is a Class A misdemeanor.
+      (c)  If conduct constituting an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.055.  PUNISHMENT FOR CORPORATIONS AND ASSOCIATIONS.  Notwithstanding Section 12.51, Penal Code, a court shall sentence a corporation or association adjudged guilty of an offense under this subchapter to pay a fine not to exceed $500,000.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.056.  RESTITUTION.  If a defendant is convicted of an offense under this subchapter and the offense results in damage to or destruction of property, a court may, in accordance with Article 42.037, Code of Criminal Procedure, order the defendant to make restitution to the owner of the damaged or destroyed property, or the owner's designee, in an amount equal to the value of the property on the date of the damage or destruction.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+SUBCHAPTER C.  CIVIL LIABILITY
+
+      Sec. 424.101.  CIVIL LIABILITY FOR DAMAGE TO CRITICAL INFRASTRUCTURE FACILITY.  (a)  A defendant who engages in conduct constituting an offense under Section 424.051, 424.052, 424.053, or 424.054 is liable to the property owner, as provided by this subchapter, for damages arising from that conduct.
+      (b)  It is not a defense to liability under this section that a defendant has been acquitted or has not been prosecuted or convicted under Section 424.051, 424.052, 424.053, or 424.054, or has been convicted of a different offense or of a different type or class of offense, for the conduct that is alleged to give rise to liability under this section.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.102.  CERTAIN ADDITIONAL LIABILITY.  In addition to any liability under Section 424.101, an organization that, acting through an officer, director, or other person serving in a managerial capacity, knowingly compensates a person for engaging in conduct occurring on the premises of a critical infrastructure facility is liable to the property owner, as provided by this subchapter, for damages arising from the conduct if the conduct constituted an offense under Section 424.051, 424.052, 424.053, or 424.054.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.103.  DAMAGES.  (a)  A claimant who prevails in a suit under this subchapter shall be awarded:
+            (1)  actual damages; and
+            (2)  court costs.
+      (b)  In addition to an award under Subsection (a), a claimant who prevails in a suit under this subchapter may recover exemplary damages.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.104.  CAUSE OF ACTION CUMULATIVE.  The cause of action created by this subchapter is cumulative of any other remedy provided by common law or statute.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+      Sec. 424.105.  NONAPPLICABILITY.  The following provisions of the Civil Practice and Remedies Code do not apply to a cause of action arising under this subchapter:
+            (1)  Chapter 27; and
+            (2)  Section 41.008.
+Added by Acts 2019, 86th Leg., R.S., Ch. 1297 (H.B. 3557), Sec. 2, eff. September 1, 2019.
+
+SUBCHAPTER D. EMERGENCY RESPONSE MAP AND GRANT PROGRAM
+
+      Sec. 424.151.  DEFINITIONS.  In this subchapter:
+            (1)  "Division" means the Texas Division of Emergency Management.
+            (2)  "Fund" means the critical infrastructure emergency response map fund created under Section 424.155.
+            (3)  "Grant program" means the critical infrastructure emergency response map grant program established under Section 424.154.
+            (4)  "Public safety agency" and "public safety answering point" have the meanings assigned by Section 771.001, Health and Safety Code.
+Added by Acts 2025, 89th Leg., R.S., Ch. 655 (H.B. 4341), Sec. 1, eff. September 1, 2025.
+
+      Sec. 424.152.  APPLICABILITY.  (a)  This subchapter applies only to a critical infrastructure facility that is:
+            (1)  a public or private airport depicted in any current aeronautical chart published by the Federal Aviation Administration; or
+            (2)  a military installation owned or operated by or for this state or another governmental entity.
+      (b)  A critical infrastructure facility to which this subchapter applies is required to comply with the requirements of this subchapter only if the facility is awarded a grant under Section 424.154.
+Added by Acts 2025, 89th Leg., R.S., Ch. 655 (H.B. 4341), Sec. 1, eff. September 1, 2025.
+
+      Sec. 424.153.  EMERGENCY RESPONSE MAP AND TOUR.  (a)  Each critical infrastructure facility to which this subchapter applies shall provide to the division and appropriate public safety agencies:
+            (1)  an accurate emergency response map of the facility that is developed in accordance with the standards described by Subsection (b); and
+            (2)  an opportunity to tour the facility using the map described by Subdivision (1) to verify the map's accuracy.
+      (b)  An emergency response map must:
+            (1)  include:
+                  (A)  an accurate floor plan overlaid on current, verified aerial imagery of the facility and its surrounding land and a site-specific label for each building of the facility;
+                  (B)  a label for each:
+                        (i)  room;
+                        (ii)  named hallway; and
+                        (iii)  external door or stairwell number; and
+                  (C)  the location of each:
+                        (i)  known hazard;
+                        (ii)  critical utility;
+                        (iii)  key box;
+                        (iv)  automated external defibrillator; and
+                        (v)  trauma kit;
+            (2)  conform to, integrate with, and be accessible by software used by the division, entities operating a local public safety answering point, or appropriate public safety agencies without imposing a fee or requiring the purchase of additional software to access the map and associated data;
+            (3)  be in a format capable of being printed, shared electronically, or integrated into an interactive software application; and
+            (4)  be in a format easily modified or updated.
+      (c)  A critical infrastructure facility to which this subchapter applies may only provide an emergency response map to the division and appropriate public safety agencies for purposes of developing a verified source of critical infrastructure mapping data in this state and ensuring efficient emergency response for the facility.
+      (d)  A critical infrastructure facility to which this subchapter applies may not provide or make available to the public an emergency response map.
+Added by Acts 2025, 89th Leg., R.S., Ch. 655 (H.B. 4341), Sec. 1, eff. September 1, 2025.
+
+      Sec. 424.154.  CRITICAL INFRASTRUCTURE EMERGENCY RESPONSE MAP GRANT PROGRAM.  (a)  The division shall establish and administer a grant program to provide mapping services for critical infrastructure facilities to which this subchapter applies to develop emergency response maps required under Section 424.153.
+      (b)  A grant awarded under this section may only be used to obtain mapping services for a critical infrastructure facility to which this subchapter applies to provide the emergency response map required under Section 424.153.
+      (c)  A mapping service provider who is a recipient of grant money shall provide an emergency response map to the critical infrastructure facility, the division, and appropriate public safety agencies and may only charge a fee for the initial production cost for the map.
+      (d)  The division shall adopt rules to administer the grant program established under this section, including eligibility standards and procedures for applying for a grant under this section.
+      (e)  The division may award a grant under the grant program only in accordance with a contract between the division and a grant recipient.  The contract must include provisions under which the division is granted sufficient control to ensure the public purpose of providing emergency response mapping services to critical infrastructure facilities to which this subchapter applies is accomplished and the state receives a return benefit.
+Added by Acts 2025, 89th Leg., R.S., Ch. 655 (H.B. 4341), Sec. 1, eff. September 1, 2025.
+
+      Sec. 424.155.  CRITICAL INFRASTRUCTURE EMERGENCY RESPONSE MAP FUND.  (a)  The critical infrastructure emergency response map fund is a dedicated account in the general revenue fund administered by the division.
+      (b)  The fund consists of:
+            (1)  legislative appropriations of money to the division for deposit to the credit of the fund for purposes of this subchapter;
+            (2)  any revenue that by law is dedicated for deposit to the fund;
+            (3)  interest or other earnings on money credited to or allocable to the fund; and
+            (4)  gifts, grants, including federal grants, or donations received by the division for the fund.
+      (c)  Money in the fund may be appropriated only to the division to administer the grant program and award grants under Section 424.154.
+Added by Acts 2025, 89th Leg., R.S., Ch. 655 (H.B. 4341), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

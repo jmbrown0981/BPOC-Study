@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Adult vs. Juvenile Terminology | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+  .cite{font-family:'IBM Plex Mono', monospace; letter-spacing:0.01em;}
+  main{max-width:1000px; margin:0 auto; padding:0 16px 60px;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:28px 20px 24px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; max-width:1000px; margin:0 auto;}
+  .hero-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:25px; line-height:1.18; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:64ch; line-height:1.55;}
+  .back{color:var(--brass-light); text-decoration:none; font-size:12.5px; font-weight:600; white-space:nowrap; border:1px solid rgba(215,182,103,0.4); padding:7px 12px; border-radius:6px;}
+  .back:hover{background:rgba(215,182,103,0.1);}
+
+  nav.chips{display:flex; gap:8px; flex-wrap:wrap; padding:14px 16px; max-width:1000px; margin:0 auto; position:sticky; top:0; background:var(--paper); z-index:5; border-bottom:1px solid var(--rule);}
+  .chip{font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; color:var(--navy); background:#fff; border:1px solid var(--rule); border-radius:20px; padding:6px 13px; text-decoration:none; cursor:pointer;}
+  .chip:hover{border-color:var(--brass);}
+  .chip.ghost{background:transparent;}
+  .chip-spacer{margin-left:auto; display:flex; gap:8px;}
+
+  .search-wrap{padding:16px 0 4px;}
+  #searchBox{width:100%; padding:11px 14px; border:1px solid var(--rule); border-radius:8px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; background:#fff; color:var(--ink);}
+  #searchBox:focus{outline:2px solid var(--brass-light); outline-offset:-1px;}
+  .result-count{font-size:11.5px; color:var(--ink-soft); margin:6px 2px 0; font-family:'IBM Plex Mono',monospace;}
+
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin:16px 0;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+
+  .sec-card{background:#fff; border:1px solid var(--rule); border-radius:8px; margin:14px 0; overflow:hidden;}
+  .sec-header{display:flex; align-items:center; gap:10px; padding:12px 16px; cursor:pointer; user-select:none; background:var(--paper-dim);}
+  .sec-num{font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:700; color:#fff; background:var(--navy); padding:3px 8px; border-radius:4px; white-space:nowrap;}
+  .sec-name{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:14.5px; flex:1;}
+  .sec-count{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  .toggle{font-size:12px; color:var(--ink-soft); transition:transform 0.15s ease;}
+  .sec-header.open .toggle{transform:rotate(180deg);}
+  .sec-body{display:none; padding:4px 0;}
+  .sec-body.open{display:block;}
+
+  /* paired-terms row: adult | juvenile side by side */
+  .pair{display:grid; grid-template-columns:1fr 22px 1fr; gap:0 10px; align-items:center; padding:12px 16px; border-top:1px solid var(--rule);}
+  .pair:first-child{border-top:none;}
+  .pair .side{font-size:13px; line-height:1.5;}
+  .pair .side .label{display:block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px;}
+  .pair .adult .term{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:14px; color:var(--ink-soft);}
+  .pair .juv .term{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:14px; color:var(--rust);}
+  .pair .arrow{text-align:center; color:var(--brass); font-size:15px;}
+  .pair.hidden{display:none;}
+  @media (max-width:620px){
+    .pair{grid-template-columns:1fr; gap:6px;}
+    .pair .arrow{display:none;}
+  }
+
+  .gterm{display:grid; grid-template-columns:220px 1fr; gap:4px 16px; padding:10px 16px; border-top:1px solid var(--rule);}
+  .gterm:first-child{border-top:none;}
+  .gterm .term{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:13.5px; color:var(--rust); align-self:start;}
+  .gterm .def{font-size:13px; line-height:1.55; color:var(--ink);}
+  .gterm .def .cite{color:var(--ink-soft); font-size:11.5px;}
+  .gterm.hidden{display:none;}
+  @media (max-width:560px){
+    .gterm{grid-template-columns:1fr;}
+    .gterm .term{margin-bottom:1px;}
+  }
+
+  .callout{background:#fff; border:1px solid var(--rule); border-left:4px solid var(--rust); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:13px; line-height:1.6;}
+  .callout b{color:var(--rust);}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &mdash; LO 33.2</p>
+      <h1>Adult vs. Juvenile Terminology Map</h1>
+      <p class="sub">Every juvenile-system term has an adult-court counterpart it maps to &mdash; the terminology pairs and court-process analogs straight from BPOC LO 33.2, plus what each juvenile-side term actually means under Family Code Title 3.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-terms">Adult &harr; Juvenile Terms</a>
+  <a class="chip" href="#sec-process">Court Process Analogs</a>
+  <a class="chip" href="#sec-glossary">Juvenile-Term Definitions</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="search-wrap">
+  <input type="text" id="searchBox" placeholder="Search a term (e.g. &quot;adjudication&quot;, &quot;respondent&quot;, &quot;directive to apprehend&quot;)" oninput="filterTerms()">
+  <div class="result-count" id="resultCount"></div>
+</div>
+
+<div class="intro-note">
+  <b>Why this matters:</b> the juvenile system deliberately avoids adult-court vocabulary &mdash; a child isn't "convicted," they're "adjudicated"; there's no "arrest warrant," there's a "directive to apprehend." Mixing up the two vocabularies in a report or in court testimony is a quick way to look like you don't know the system you're working in. Every juvenile-side term below traces back to a specific Family Code or CCP section &mdash; this isn't just relabeling, the underlying legal process is genuinely different (see the <a href="#sec-glossary">glossary</a> below for each one).
+</div>
+
+<div class="sec-card" id="sec-terms">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">TERMS</span>
+    <span class="sec-name">Adult Case Terminology vs. Juvenile Case Terminology</span>
+    <span class="sec-count">8 pairs</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Criminal Offense</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Delinquent Conduct</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Code of Criminal Procedure</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Family Code</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Arrest Warrant</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Directive to Apprehend</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Indictment / Information</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Juvenile Petition</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Defendant</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Respondent</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Conviction</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Adjudication</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Sentencing Hearing</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Disposition Hearing</span></div></div>
+    <div class="pair"><div class="side adult"><span class="label">Adult</span><span class="term">Guilty / Not Guilty Plea</span></div><div class="arrow">&harr;</div><div class="side juv"><span class="label">Juvenile</span><span class="term">Plea of True / Not True</span></div></div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-process">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PROCESS</span>
+    <span class="sec-name">Juvenile Court Process and Adult Court Process Analogs</span>
+    <span class="sec-count">6 pairs</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Juvenile Processing Center</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">County Jail</span></div></div>
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Detention Hearing</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">Arraignment</span></div></div>
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Petition</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">Indictment or Information</span></div></div>
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Adjudication Hearing</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">Plea or Trial</span></div></div>
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Disposition Hearing</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">Sentencing</span></div></div>
+    <div class="pair"><div class="side juv"><span class="label">Juvenile</span><span class="term">Petition to Modify Disposition</span></div><div class="arrow">=</div><div class="side adult"><span class="label">Adult</span><span class="term">Motion to Revoke Probation</span></div></div>
+  </div>
+</div>
+
+<div class="callout">
+  <b>Careful &mdash; adjudication is NOT legally a "conviction" in most cases.</b> Under FC 51.13(a), an order of adjudication or disposition is generally <i>not</i> a conviction of crime and doesn't carry the civil disabilities a conviction would. There are narrow exceptions: FC 51.13(d) treats certain felony adjudications resulting in TJJD commitment as a final felony conviction only for repeat-offender punishment enhancement purposes (PC 12.42(a)-(c)(1), 12.425), and FC 51.13(b)(3) allows use in civil commitment proceedings under Health &amp; Safety Code Ch. 841. Don't casually call a juvenile disposition a "conviction" in a report &mdash; it isn't one, with those narrow statutory exceptions.
+</div>
+
+<div class="sec-card" id="sec-glossary">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">GLOSSARY</span>
+    <span class="sec-name">What Each Juvenile-Side Term Actually Means</span>
+    <span class="sec-count">14 terms</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <div class="gterm"><div class="term">Delinquent Conduct</div><div class="def">Conduct (other than a traffic offense) that violates a penal law punishable by imprisonment/jail, certain contempt-of-court conduct, PC 49.04-49.08 (DWI-family offenses), or a 3rd+ DUI-minor offense under AB Code 106.041. <span class="cite">FC 51.03(a)</span></div></div>
+    <div class="gterm"><div class="term">Conduct Indicating a Need for Supervision (CINS)</div><div class="def">Fine-only misdemeanor/ordinance violations, unauthorized absence from home ("running away"), certain inhalant/vape offenses, expellable student-conduct violations, and a short list of specific Penal Code sections. <span class="cite">FC 51.03(b)</span></div></div>
+    <div class="gterm"><div class="term">Directive to Apprehend</div><div class="def">A juvenile court order, requested by a law enforcement or probation officer, directing that a child be taken into custody upon a probable cause finding. Not subject to appeal. <span class="cite">FC 52.015</span></div></div>
+    <div class="gterm"><div class="term">Juvenile Petition</div><div class="def">The formal pleading that opens a delinquency/CINS proceeding in juvenile court &mdash; functionally the juvenile system's charging instrument.</div></div>
+    <div class="gterm"><div class="term">Respondent</div><div class="def">The child (or, in a discretionary-transfer proceeding against an adult for conduct committed as a juvenile, the person) against whom the juvenile petition is brought.</div></div>
+    <div class="gterm"><div class="term">Adjudication</div><div class="def">The juvenile court's finding, at the adjudication hearing, that the child engaged in delinquent conduct or CINS &mdash; not legally a "conviction" except in the narrow circumstances described in the callout above. <span class="cite">FC 51.13</span></div></div>
+    <div class="gterm"><div class="term">Disposition Hearing</div><div class="def">The hearing (following adjudication) where the juvenile court decides the outcome/consequence &mdash; probation, commitment to TJJD, etc. <span class="cite">FC 54.04</span></div></div>
+    <div class="gterm"><div class="term">Plea of True / Not True</div><div class="def">The juvenile-system equivalent of an adult guilty/not guilty plea, entered at the adjudication hearing in response to the petition's allegations.</div></div>
+    <div class="gterm"><div class="term">Juvenile Processing Office</div><div class="def">A designated office or room (not a cell) where a child may be temporarily held &mdash; capped at 6 hours, limited to specific purposes (return to parent, paperwork, authorized photographing/fingerprinting, required warnings, certain statements). <span class="cite">FC 52.025</span></div></div>
+    <div class="gterm"><div class="term">Detention Hearing</div><div class="def">A hearing (without a jury) held within strict statutory deadlines to decide whether a detained child should be released or remain in detention pending further proceedings. <span class="cite">FC 54.01</span></div></div>
+    <div class="gterm"><div class="term">Adjudication Hearing</div><div class="def">The hearing where the juvenile court determines whether the child engaged in the alleged delinquent conduct/CINS &mdash; the juvenile analog to trial or a guilty plea proceeding. <span class="cite">FC 54.03</span></div></div>
+    <div class="gterm"><div class="term">Petition to Modify Disposition</div><div class="def">A filing seeking to change a prior disposition order (e.g., because the child violated probation conditions) &mdash; the juvenile analog to a motion to revoke community supervision.</div></div>
+    <div class="gterm"><div class="term">Status Offender</div><div class="def">A child accused, adjudicated, or convicted for conduct that would not be a crime if committed by an adult &mdash; running away, violating school conduct standards, minors-only alcohol violations, etc. <span class="cite">FC 51.02(15)</span></div></div>
+    <div class="gterm"><div class="term">Nonoffender</div><div class="def">A child in the juvenile system for reasons unrelated to their own prohibited conduct (e.g., an abuse/neglect/dependency case), or held solely for deportation. <span class="cite">FC 51.02(8)</span></div></div>
+  </div>
+</div>
+
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Source: BPOC Ch.33 LO 33.2, Family Code Title 3 &amp; Title 5, and Code of Criminal Procedure as cited above &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+function toggleSec(el){
+  el.classList.toggle('open');
+  var body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+function filterTerms(){
+  var q = document.getElementById('searchBox').value.trim().toLowerCase();
+  var items = document.querySelectorAll('.gterm, .pair');
+  var shown = 0;
+  items.forEach(function(it){
+    var text = it.textContent.toLowerCase();
+    var match = !q || text.indexOf(q) !== -1;
+    it.classList.toggle('hidden', !match);
+    if(match) shown++;
+  });
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    var hdr = card.querySelector('.sec-header');
+    var body = card.querySelector('.sec-body');
+    var rows = card.querySelectorAll('.gterm, .pair');
+    var anyVisible = Array.prototype.some.call(rows, function(it){ return !it.classList.contains('hidden'); });
+    if(q){
+      hdr.classList.toggle('open', anyVisible);
+      body.classList.toggle('open', anyVisible);
+      card.style.display = anyVisible ? '' : 'none';
+    } else {
+      card.style.display = '';
+    }
+  });
+  document.getElementById('resultCount').textContent = q ? (shown + ' of ' + items.length + ' rows match') : '';
+}
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    card.querySelector('.sec-header').classList.add('open');
+    card.querySelector('.sec-body').classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

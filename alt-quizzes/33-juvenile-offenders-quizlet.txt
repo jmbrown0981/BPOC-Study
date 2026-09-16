@@ -1,0 +1,50 @@
+Child (Family Code 51.02)	A person 10 or older and under 17, or 17 and under 18 if alleged/found to have engaged in delinquent conduct or CINS before turning 17
+Custodian	The adult with whom the child resides
+Guardian	The person who, under court order, is the guardian of the person of the child, or the public/private agency the child has been placed with by a court
+Judge / Juvenile Court Judge	The judge of a juvenile court
+Juvenile Court	A court designated under FC 51.04 to exercise jurisdiction over Title 3 proceedings
+Nonoffender	A child subject to a court's jurisdiction under abuse/dependency/neglect statutes for reasons other than the child's own conduct, or held solely for deportation
+Parent (Family Code 51.02)	The mother or father of a child, not including a parent whose parental rights have been terminated
+Referral to Juvenile Court	Referral of a child or the child's case to the office or official (intake or probation officer) designated by the juvenile board to process children in the juvenile justice system
+Res Gestae	Latin for "things done"; excited utterances made under the stress of excitement, admissible even without Miranda-style warnings because they weren't the product of interrogation
+Secure Correctional Facility	A facility with movement-restricting construction fixtures used for the placement of a juvenile already ADJUDICATED as having committed an offense (post-adjudication), a nonoffender, or a convicted individual
+Secure Detention Facility	A facility with movement-restricting construction fixtures used for the TEMPORARY placement of a juvenile only ACCUSED of an offense (pre-adjudication), a nonoffender, or an accused individual
+Status Offender	A child accused, adjudicated, or convicted for conduct that would not be a crime if committed by an adult (e.g., running away, violating student conduct standards, minors-only alcohol violations)
+Traffic Offense (Family Code 51.02)	A penal statute violation under Transportation Code Ch. 729 (except conduct punishable by imprisonment/jail) or a municipal traffic ordinance violation
+Valid Court Order	An FC 54.04 order concerning a child adjudicated to have engaged in conduct indicating a need for supervision as a status offender
+Delinquent Conduct	Conduct (other than a traffic offense) that violates a penal law punishable by imprisonment/jail confinement, certain contempt-of-court conduct, PC 49.04-49.08 violations, or a 3rd+ DUI-minor offense under AB Code 106.041
+Conduct Indicating a Need for Supervision (CINS)	Fine-only misdemeanor/ordinance violations, voluntary unauthorized absence from home, certain inhalant offenses, student-conduct expulsion conduct, and specified PC violations not otherwise delinquent conduct
+Directive to Apprehend	A juvenile court order, issued on request of a law enforcement/probation officer upon a probable cause finding, directing that a child be taken into custody — the juvenile-system analog to an adult arrest warrant
+Adjudication	A juvenile court's finding that a child engaged in delinquent conduct or CINS — the juvenile-system analog to an adult conviction
+Disposition Hearing	The juvenile-system analog to an adult sentencing hearing
+Detention Hearing (analog)	The juvenile-system analog to an adult arraignment
+Petition (juvenile)	The juvenile-system analog to an adult indictment or information
+Respondent (juvenile)	The juvenile-system analog to an adult defendant
+Plea of True / Not True	The juvenile-system analog to an adult guilty/not guilty plea
+Juvenile Processing Office	A designated office/room (not a cell) for the temporary detention of a child, limited to specific purposes and capped at 6 hours (FC 52.025)
+Place of Nonsecure Custody	An unlocked, multipurpose area (lobby, office, interview room, or unlocked juvenile processing office) where a child may not be secured to a stationary object; capped at 6 hours (CCP 45A.453)
+First Offender Program	A juvenile-board-established program (FC 52.031) for referring/disposing of lower-level offenders without court referral, requiring child and parent consent and juvenile-board guidelines
+Youth Diversion Coordinator	A person a court may designate (CCP Art. 45A.507) to determine diversion eligibility, employ diversion strategies, and monitor diversion agreements
+Abuse (Family Code 261.001)	Mental/emotional injury causing observable impairment; substantial-harm physical injury; harmful sexual conduct; compelling sexual conduct; forcing marriage; and related acts/omissions by a person responsible for or around a child
+Neglect (Family Code 261.001)	An act or failure to act by a person responsible for a child's care, custody, or welfare evidencing blatant disregard for the consequences, resulting in harm or immediate danger to the child's physical health/safety
+Person Responsible for a Child's Care, Custody, or Welfare	A parent, guardian, conservator, foster parent, household member, parent's cohabitant, school personnel/volunteer, or child-care/residential facility staff or volunteer
+Severe Emotional Disturbance (FC 261.001)	A mental, behavioral, or emotional disorder of sufficient duration to result in functional impairment substantially interfering with family, school, or community functioning
+Child Advocacy Center (CAC)	A center that coordinates a multidisciplinary team response to child abuse/neglect allegations under an interagency MOU with CPS, law enforcement, and prosecuting attorneys (FC 264.403)
+Emergency Possession Without a Court Order (FC 262.104)	Taking possession of a child without a court order based on personal knowledge or corroborated information of immediate danger, sexual abuse, trafficking, or a controlled-substance/meth-manufacture danger — never on a non-examining medical professional's opinion alone
+Nonsecure Custody Procedures	A child in nonsecure custody may not be cuffed to a stationary object, held more than 6 hours, housed residentially, or left without continuous visual supervision
+Place of Detention (CCP 2B.0201)	A police station or similar law-enforcement-operated building used to detain individuals suspected of a penal-law violation; excludes a courthouse
+Electronic Recording of Custodial Interrogation (CCP 2B.0202)	Required for custodial interrogations, occurring in a place of detention, of persons suspected of one of 12 listed serious offenses (murder, capital murder, kidnapping, trafficking, sexual offenses, etc.), absent good cause
+Abducted Child (Government Code 411.351)	A child 17 or younger whose whereabouts are unknown and whose disappearance poses a credible threat to safety/health, as determined by local law enforcement — the AMBER Alert age threshold
+AMBER Alert System	America's Missing: Broadcast Emergency Response — the statewide alert system (administered by DPS) for abducted children and missing persons with an intellectual disability
+Clearinghouse (CCP 63.001)	The state's missing children and missing persons information clearinghouse — the centralized statewide hub for missing-person reporting
+Interference with Child Custody (PC 25.03)	Taking or retaining a child under 18 knowing it violates a court custody order, or during a pending custody suit without court permission, or internationally without permission
+Agreement to Abduct from Custody (PC 25.031)	Agreeing, for remuneration, to abduct a child known to be under someone else's court-ordered care by force, threat, misrepresentation, stealth, or unlawful entry
+Enticing a Child (PC 25.04)	Knowingly enticing, persuading, or taking a child under 18 from the custody of a parent/guardian with intent to interfere with lawful custody
+Harboring Runaway Child (PC 25.06)	Knowingly harboring a child, with criminal negligence as to whether the child is under 18 and has escaped custody or is an unauthorized runaway
+Hindering Apprehension or Prosecution (PC 38.05)	Harboring/concealing a person, aiding their escape, or warning them of impending discovery, with intent to hinder arrest, prosecution, or (for a child) detention/adjudication/disposition
+Interference with Public Duties (PC 38.15)	Criminally negligent interruption, disruption, impediment, or interference with a peace officer or other listed public-duty personnel performing their duties
+Failure to Stop or Report Sexual/Assaultive Offense Against a Child (PC 38.17)	Failing to assist a child or report an observed sexual/assaultive offense against a child when able to do so safely
+Notification to Schools Required (CCP Art. 15.27)	Requires a law enforcement agency to notify a student's school superintendent within 24 hours (or before the next school day) of an arrest or juvenile referral for felony or listed misdemeanor offenses
+Gang Involvement — Five Risk Domains	Individual, Family, School, Peers, and Community — the five domains BPOC identifies as risk factors for youth gang involvement (Peers is described as one of the strongest)
+Consent to Treatment by Child (FC 32.003)	A child may consent to their own treatment if 16+ and living independently while managing their own finances, on active military duty, for certain infectious diseases, unmarried pregnancy care, drug-dependency treatment, as an unmarried parent consenting for their own child, or while TDCJ-confined
+Examination Without Consent of Abuse or Neglect (FC 32.005)	A physician, dentist, or psychologist with reasonable grounds to believe abuse/neglect may examine a child without consent (including X-rays, blood tests, photographs), except a refusing child 16+ or a court-ordered prohibition

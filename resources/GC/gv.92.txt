@@ -1,0 +1,133 @@
+GOVERNMENT CODE
+TITLE 2. JUDICIAL BRANCH
+SUBTITLE H.  INFORMATION RESOURCES AND SECURITY
+CHAPTER 92.  PROTECTION OF PERSONAL IDENTIFYING INFORMATION OF AT-RISK INDIVIDUALS
+
+      Sec. 92.001.  DEFINITIONS.  In this chapter:
+            (1)  "At-risk individual" means:
+                  (A)  a judge, as defined by Section 33.001;
+                  (B)  a federal judge, as defined by Section 411.201, who resides in this state;
+                  (C)  a court clerk; or
+                  (D)  an employee of a state court, a court clerk, the office, or another agency in the judicial branch of state government.
+            (2)  "Court clerk" means the clerk of a state court.
+            (3)  "Covered information":
+                  (A)  means:
+                        (i)  a home address, including primary and secondary residences;
+                        (ii)  a home or personal telephone number, including a mobile telephone number, used exclusively for purposes other than a business or commercial purpose;
+                        (iii)  an e-mail address;
+                        (iv)  a social security number or driver's license number;
+                        (v)  bank account, credit card, or debit card information;
+                        (vi)  a license plate number or other unique identifier of a vehicle owned, leased, or regularly used;
+                        (vii)  the identity of a child younger than 18 years of age;
+                        (viii)  a person's date of birth;
+                        (ix)  information regarding current or future school or day care attendance, including the name or address of the school or day care, schedules of attendance, or routes taken to or from the school or day care;
+                        (x)  employment information, including the name or address of the employer, employment schedules, or routes taken to or from the employer's location; and
+                        (xi)  photographs or videos that reveal information listed in Subparagraphs (i)-(x); and
+                  (B)  does not include:
+                        (i)  information regarding employment with a state agency; or
+                        (ii)  the display of a property address on a real estate or mapping Internet website, provided the address is not displayed in connection with ownership, occupancy, or other personal identifying information.
+            (4)  "Data broker" has the meaning assigned by Section 509.001, Business & Commerce Code, as added by Chapter 963 (S.B. 2105), Acts of the 88th Legislature, Regular Session, 2023.  The term does not include a commercial entity that:
+                  (A)  is engaged in the business of:
+                        (i)  reporting, news-gathering, speaking, or engaging in other activities intended to inform the public on matters of public interest or public concern;
+                        (ii)  providing 411 directory assistance or directory information services, including name, address, and telephone number, on behalf of or as a function of a telecommunications carrier;
+                        (iii)  using personal information internally, by providing access to businesses under common ownership or affiliated by corporate control, or selling or providing data for a transaction or service requested by or concerning the individual whose personal information is being transferred;
+                        (iv)  providing publicly available information using real-time or near real-time alert services for health or safety purposes; or
+                        (v)  collecting and selling or licensing covered information incidental to conducting the activities described by this subdivision; or
+                  (B)  is engaged in business as:
+                        (i)  a consumer reporting agency subject to Chapter 20, Business & Commerce Code, and the Fair Credit Reporting Act (15 U.S.C. Section 1681 et seq.);
+                        (ii)  a financial institution subject to the Gramm-Leach-Bliley Act (Pub. L. No. 106-102) and regulations implementing that Act; or
+                        (iii)  a covered entity for purposes of the privacy regulations promulgated under Section 264(c), Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. Section 1320d-2 note).
+            (5)  "Immediate family member"  means an individual related to another individual within the first degree by consanguinity or affinity, as described by Subchapter B, Chapter 573.  The term includes a foster child, ward, legal dependent, or individual residing in the same household.
+            (6)  "Office" means the Office of Court Administration of the Texas Judicial System.
+            (7)  "Person" has the meaning assigned by Section 1.07, Penal Code.
+            (8)  "State agency" means a public entity in the executive, judicial, or legislative branch of state government.
+            (9)  "State court" means:
+                  (A)  the supreme court or the court of criminal appeals;
+                  (B)  an appellate court, district court, or  division of the business court;
+                  (C)  a county court, constitutional county court, statutory county court, or statutory probate court;
+                  (D)  a justice court; or
+                  (E)  a municipal court.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 15.06, eff. December 4, 2025.
+
+      Sec. 92.002.  PROHIBITED DISSEMINATION OF COVERED INFORMATION.  (a)  Except as provided by Subsection (b), a person may not knowingly sell, license, trade for consideration, transfer, purchase, or otherwise disseminate covered information of an at-risk individual or an immediate family member of the individual if the individual, or the office, acting on the individual's behalf, submits to the person a written request for the person not to sell, license, trade for consideration, transfer, purchase, or otherwise disseminate the information.
+      (b)  Subsection (a) does not apply to:
+            (1)  the dissemination of personal information as part of a news story, commentary, editorial, or other speech on a matter of public concern to which the information is relevant;
+            (2)  personal information voluntarily published by the at-risk individual or family member of the individual to whom the information refers;
+            (3)  the dissemination of personal information at the request of the individual or family member or as necessary to effectuate a request of the individual or family member;
+            (4)  a business's internal use of the personal information of the individual or family member, including dissemination of the information to a business under common ownership or affiliated by corporate control, or for a transaction or service requested by or concerning the individual or family member;
+            (5)  a business providing publicly available information through real-time or near real-time alert services for health or safety purposes;
+            (6)  a business engaged in the collection, maintenance, disclosure, sale, communication, or use of personal information relating to a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living for use in a consumer credit report, or by a user of a consumer credit report to the extent the collection, maintenance, disclosure, sale, communication, or use is regulated by and authorized under the Fair Credit Reporting Act (15 U.S.C. Section 1681 et seq.);
+            (7)  a consumer reporting agency subject to the Fair Credit Reporting Act (15 U.S.C. Section 1681 et seq.);
+            (8)  a business using personal information collected, processed, sold, or disclosed in compliance with the Driver's Privacy Protection Act of 1994 (18 U.S.C. Section 2721 et seq.);
+            (9)  a business using personal information to:
+                  (A)  prevent, detect, protect against, or respond to security incidents, identity theft, fraud, harassment, malicious or deceptive acts, or any other illegal activity;
+                  (B)  preserve the integrity or security of computer systems; or
+                  (C)  investigate, report, or prosecute a person for engaging in conduct described by Paragraph (A);
+            (10)  a financial institution, affiliate of a financial institution, or data subject to Title V, Gramm-Leach-Bliley Act (15 U.S.C. Section 6801 et seq.);
+            (11)  a covered entity or business associate for purposes of the privacy regulations promulgated under the Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. Section 1320d et seq.);
+            (12)  an insurance or insurance support organization;
+            (13)  a law enforcement agency, law enforcement support organization, or vendor that provides data support services to a law enforcement agency;
+            (14)  the provision of information by 411 directory assistance or a directory information service, including the provision of a name, address, or telephone number, by or on behalf of a telecommunications carrier;
+            (15)  personal information contained in:
+                  (A)  real property records;
+                  (B)  uniform commercial code filings and tax liens; or
+                  (C)  any other records maintained by a governmental entity evidencing title to, or any lien, judgment, or other encumbrance on, real or personal property; or
+            (16)  the collection and sale or licensing of covered information incidental to conducting activities described in this subsection.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.003.  PROHIBITED DISPLAY OF COVERED INFORMATION.  (a)  Except as provided by Subsection (b), a person, including a data broker, may not publicly post or display on a publicly accessible Internet website covered information of an at-risk individual or an immediate family member of the individual if the at-risk individual, or the office, acting on the individual's behalf, submits a written request to that person not to disclose or acquire the covered information subject to the request.
+      (b)  Subsection (a) does not apply to:
+            (1)  covered information of an at-risk individual or an immediate family member of the individual displayed on a publicly accessible Internet website as part of a news story, commentary, editorial, or other speech on a matter of public concern to which the information is relevant;
+            (2)  covered information voluntarily posted on the Internet by the individual or immediate family member to whom the information refers; or
+            (3)  covered information disseminated by a governmental entity or an employee or agent of a governmental entity.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.004.  DUTY TO REMOVE COVERED INFORMATION.  After receiving a written request under Section 92.002 or 92.003, a person, including a data broker, shall:
+            (1)  not later than the 10th business day after the date the request is received:
+                  (A)  remove from the Internet website the covered information identified in the request;
+                  (B)  ensure the information is not made available on any other publicly accessible Internet website or subsidiary website the person controls; and
+                  (C)  identify any other instances of the information that should be removed; and
+            (2)  assist the requestor in locating the covered information posted on any publicly accessible Internet website or subsidiary website controlled by the person.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.005.  OFFICE PROCEDURES.  The judicial security division of the office shall develop a process by which a judge can file a written request with the director of the office to notify a person, including a data broker, on the judge's behalf, of a written request submitted by the judge to remove covered information posted or displayed by the person on a publicly accessible Internet website.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.006.  TRANSFER.  (a)  Except as provided by Subsection (b) and Section 92.002(b), after receiving a written request under Section 92.003, a person, including a data broker, may not transfer the covered information to any other person through any medium.
+      (b)  Subsection (a) does not apply to:
+            (1)  the transfer of the covered information as part of a news story, commentary, editorial, or other speech on a matter of public concern to which the information is relevant;
+            (2)  covered information voluntarily posted on the Internet by the at-risk individual or the immediate family member of the individual to whom the information refers; or
+            (3)  a transfer of the covered information:
+                  (A)  at the request of the individual or family member; or
+                  (B)  as necessary to produce a request to the person from the individual or family member.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.007.  CIVIL REMEDIES.  (a)  If the covered information of an at-risk individual or an immediate family member of the individual is made public as a result of a violation of this chapter, the at-risk individual may bring an action in a court seeking injunctive or declaratory relief.
+      (b)  If the plaintiff prevails in an action brought under Subsection (a), the court, in addition to issuing an order for injunctive or declaratory relief, may:
+            (1)  impose a fine of $500 for each day the covered information remains public after the date on which the order for injunctive or declaratory relief is issued; and
+            (2)  if the defendant is not a state agency, award to the at-risk individual, or the individual's immediate family, exemplary damages, court costs, and reasonable attorney's fees.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+      Sec. 92.008.  CRIMINAL OFFENSES.  (a)  A person commits an offense if:
+            (1)  the person intentionally posts covered information of an at-risk individual or an immediate family member of the individual on a publicly accessible Internet website without first obtaining the consent of the individual or family member to whom the information refers;
+            (2)  the information is posted with intent to cause or threaten to cause harm to or harassment of an at-risk individual or the individual's immediate family member; and
+            (3)  under the circumstances, harm to or harassment of the at-risk individual or immediate family member is a probable consequence of the posting of the information.
+      (b)  A person other than a data broker commits an offense if the person does not remove from a publicly accessible Internet website controlled by the person covered information identified in a written request submitted under Section 92.003 within 10 business days of receiving the request.
+      (c)  An offense under this section is a Class B misdemeanor, except the offense is a Class A misdemeanor if the offense results in the bodily injury of:
+            (1)  the at-risk individual whose covered information was posted on the Internet website; or
+            (2)  an immediate family member of the individual.
+Added by Acts 2025, 89th Leg., R.S., Ch. 672 (H.B. 5081), Sec. 2, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

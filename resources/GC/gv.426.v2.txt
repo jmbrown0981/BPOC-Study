@@ -1,0 +1,57 @@
+GOVERNMENT CODE
+TITLE 4. EXECUTIVE BRANCH
+SUBTITLE B. LAW ENFORCEMENT AND PUBLIC PROTECTION
+Chapter 426, consisting of Secs. 426.001 to 426.003 was added by Acts 2025, 89th Leg., R.S., Ch. 750 (H.B. 3185), Sec. 1.
+For another Chapter 426, consisting of Secs. 426.001 to 426.102, added by Acts 2025, 89th Leg., R.S., Ch. 17 (S.B. 1499), Sec. 1, see 426.001 et seq., post.
+CHAPTER 426.  CYBERCRIMES
+
+      Sec. 426.001.  DEFINITION.  In this chapter, "cybercrime" means an offense:
+            (1)  under Chapter 31, 32, 33, 33A, 34, 35, 42, 71, 72, or 76, Penal Code; and
+            (2)  that is committed using an Internet website or an electronic service account provided through an electronic communication service or remote computing service.
+Added by Acts 2025, 89th Leg., R.S., Ch. 750 (H.B. 3185), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.002.  ADMINISTRATIVE SUBPOENA.  (a)  A prosecuting attorney may issue and cause to be served an administrative subpoena that requires the production of records or other documentation as described by Subsection (c) if:
+            (1)  the subpoena relates to an investigation of a cybercrime; and
+            (2)  there is reasonable cause to believe that the Internet or electronic service account provided through an electronic communication service or remote computing service has been used in the commission of a cybercrime.
+      (b)  A subpoena under Subsection (a) must:
+            (1)  describe any objects or items to be produced; and
+            (2)  prescribe a reasonable return date by which those objects or items must be assembled and made available.
+      (c)  Except as provided by Subsection (d), a subpoena issued under Subsection (a) may require the production of any records or other documentation relevant to the investigation, including:
+            (1)  a name;
+            (2)  an address;
+            (3)  a local or long distance telephone connection record, satellite-based Internet service provider connection record, or record of session time and duration;
+            (4)  the duration of the applicable service, including the start date for the service and the type of service used;
+            (5)  a telephone or instrument number or other number used to identify a subscriber, including a temporarily assigned network address; and
+            (6)  the source of payment for the service, including a credit card or bank account number.
+      (d)  A provider of an electronic communication service or remote computing service may not disclose the following information in response to a subpoena issued under Subsection (a):
+            (1)  an in-transit electronic communication;
+            (2)  an account membership related to an Internet group, newsgroup, mailing list, or specific area of interest;
+            (3)  an account password; or
+            (4)  any account content, including:
+                  (A)  any form of electronic mail;
+                  (B)  an address book, contact list, or buddy list; or
+                  (C)  Internet proxy content or Internet history.
+      (e)  A provider of an electronic communication service or remote computing service shall disclose the information described by Subsection (d) if that disclosure is required by court order or warrant, to the extent that the disclosure is not prohibited by other law.
+      (f)  A person authorized to serve process under the Texas Rules of Civil Procedure may serve a subpoena issued under Subsection (a).  The person shall serve the subpoena in accordance with the Texas Rules of Civil Procedure.
+      (g)  Before the return date specified on a subpoena issued under Subsection (a), the person receiving the subpoena may, in an appropriate court located in the county where the subpoena was issued, petition for an order to modify or quash the subpoena or to prohibit disclosure of applicable information by a court.
+      (h)  If a criminal case or proceeding does not result from the production of records or other documentation under this section within a reasonable period, the prosecuting attorney shall, as appropriate:
+            (1)  destroy the records or documentation; or
+            (2)  return the records or documentation to the person who produced the records or documentation.
+Added by Acts 2025, 89th Leg., R.S., Ch. 750 (H.B. 3185), Sec. 1, eff. September 1, 2025.
+
+      Sec. 426.003.  CONFIDENTIALITY OF INFORMATION.  Any information, records, or data reported or obtained under a subpoena issued under Section 426.002(a):
+            (1)  is confidential; and
+            (2)  may not be disclosed to any other person unless the disclosure is made as part of a criminal case related to those materials.
+Added by Acts 2025, 89th Leg., R.S., Ch. 750 (H.B. 3185), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

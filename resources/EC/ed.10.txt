@@ -1,0 +1,82 @@
+EDUCATION CODE
+TITLE 2. PUBLIC EDUCATION
+SUBTITLE B. STATE AND REGIONAL ORGANIZATION AND GOVERNANCE
+CHAPTER 10.  EARLY CHILDHOOD INTEGRATED DATA SYSTEM
+
+      Sec. 10.001.  DEFINITIONS.  In this chapter:
+            (1)  "Cooperating entity" means the:
+                  (A)  Children's Learning Institute at The University of Texas Health Science Center at Houston;
+                  (B)  Health and Human Services Commission;
+                  (C)  Texas Education Agency; and
+                  (D)  Texas Workforce Commission.
+            (2)  "Early childhood interagency work group" means the work group established to promote collaboration across state agencies serving families with young children and that consists of representatives from the following state agencies:
+                  (A)  Department of Family and Protective Services;
+                  (B)  Department of State Health Services;
+                  (C)  Health and Human Services Commission;
+                  (D)  Texas Education Agency; and
+                  (E)  Texas Workforce Commission.
+            (3)  "Lead agency" means the Texas Education Agency.
+            (4)  "System" means the early childhood integrated data system established under this subchapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+      Sec. 10.002.  INITIAL DEVELOPMENT OF EARLY CHILDHOOD INTEGRATED DATA SYSTEM.  (a)  Subject to Section 10.003(1), the early childhood interagency work group shall initiate the development of the early childhood integrated data system for the purpose of facilitating the sharing of data from early childhood programs across state agencies to:
+            (1)  inform policy related to early childhood programs at the state level; and
+            (2)  guide improvements to early childhood programs to provide better outcomes for children and families.
+      (b)  The system must be developed in a manner that:
+            (1)  allows for the integration of existing state and federal data systems that are accessible to the cooperating entities and that contain data derived from early childhood services and programs;
+            (2)  allows for the identification of and reporting on:
+                  (A)  specific outcome measures using aggregated data that does not contain any identifying information, to the extent state or federal law, as applicable, expressly authorizes that use of the information;
+                  (B)  gaps in services;
+                  (C)  opportunities to align services and programs; and
+                  (D)  coordination needs across services and programs; and
+            (3)  complies with state and federal laws relating to privacy, cybersecurity, and data collection, including rules establishing procedures to ensure that there is no unauthorized duplication or removal of confidential information.
+      (c)  Nothing in this chapter may be construed to authorize the collection of data other than that described by Subsection (b)(1).
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+      Sec. 10.003.  LEAD AGENCY DUTIES.  The lead agency shall:
+            (1)  oversee the completion of the system initially developed under Section 10.002 in a manner consistent with the requirements of that section;
+            (2)  implement and maintain the system with assistance from the early childhood interagency work group;
+            (3)  provide staff to operate the system;
+            (4)  using system data, conduct data matching using a protocol approved by the cooperating entities; and
+            (5)  in coordination with the cooperating entities, oversee research projects related to the system.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+      Sec. 10.004.  COOPERATING ENTITIES.  (a)  The lead agency and each cooperating entity shall enter into a memorandum of understanding regarding the sharing of data for purposes of the system.  The memorandum of understanding must specify the data to be shared consistent with Sections 10.002(b)(1) and (c) and the frequency and manner of that data sharing.
+      (b)  Each cooperating entity shall participate in the system and share data for purposes of the system as required by the memorandum of understanding.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+      Sec. 10.005.  REPORTING REQUIREMENTS.  (a)  Not later than September 1 of each year, the lead agency shall submit to the governor and the legislature a report on the progress in developing, establishing, and operating the system.
+      (b)  The initial report required by Subsection (a) must include:
+            (1)  an interagency data governance plan that includes:
+                  (A)  objectives relevant to the system and a framework for achieving those objectives;
+                  (B)  the roles and responsibilities of all state entities involved in establishing and maintaining the system; and
+                  (C)  documentation of relevant state and federal privacy, cybersecurity, and data collection laws, including rules;
+            (2)  a design plan that includes:
+                  (A)  data integration, security, storage, retention, management, processing, and analytics and other products; and
+                  (B)  roles and responsibilities of relevant state entity personnel regarding data integration; and
+            (3)  information on the status of:
+                  (A)  hiring staff described by Section 10.003(3);
+                  (B)  funding applied for and secured; and
+                  (C)  the development of an Internet website that includes a preliminary, publicly available consumer data dashboard.
+      (c)  Each report required by Subsection (a) following the initial report must include:
+            (1)  updates to the information required by Subsection (b);
+            (2)  an overview on business use cases the system can support; and 
+            (3)  information on the development of analytic tools based on the business use cases described by Subdivision (2). 
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+      Sec. 10.006.  FUNDING; ACCEPTANCE OF GIFTS, GRANTS, AND DONATIONS.  (a)  The early childhood interagency work group, the cooperating entities, and the lead agency may use any available state or federal money to develop the system.
+      (b)  The lead agency shall actively pursue grants or other money available from the state and federal government to operate the system.
+      (c)  The early childhood interagency work group, the cooperating entities, and the lead agency may accept gifts, grants, and donations from any source for the purposes of this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1088 (H.B. 3963), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

@@ -1,0 +1,152 @@
+EDUCATION CODE
+TITLE 3. HIGHER EDUCATION
+SUBTITLE A. HIGHER EDUCATION IN GENERAL
+CHAPTER 51B.  HIGHER EDUCATION RESEARCH AND PROTECTION
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 51B.001.  DEFINITIONS.  In this chapter:
+            (1)  "Company" has the meaning assigned by Section 117.001, Business & Commerce Code.
+            (2)  "Coordinating board" means the Texas Higher Education Coordinating Board.
+            (3)  "Council" means the Higher Education Research Security Council established under Section 51.957.
+            (4)  "Foreign adversary" means a country:
+                  (A)  identified by the United States Director of National Intelligence as a country that poses a risk to the national security of the United States in at least one of the three most recent Annual Threat Assessments of the U.S. Intelligence Community issued pursuant to Section 108B, National Security Act of 1947 (50 U.S.C. Section 3043b); or
+                  (B)  designated by the governor after consultation with the director of the Department of Public Safety.
+            (5)  "Foreign government" means the government or an agent of a country, nation, or group of nations, or a province or other political subdivision of a country or nation, other than the United States government.
+            (6)  "Foreign source" means:
+                  (A)  a foreign government or agency of a foreign government;
+                  (B)  a legal entity created solely under the laws of a foreign adversary and having its principal place of business in a foreign adversary;
+                  (C)  a partnership, association, organization, or other combination of persons, or a subsidiary of such an entity, organized under the laws of and having its principal place of business in a foreign adversary;
+                  (D)  a political party of a foreign adversary; or
+                  (E)  an agent acting on behalf of an entity described by Paragraph (A), (B), (C), or (D).
+            (7)  "Gift" means any gift of money or property.
+            (8)  "Institution of higher education" has the meaning assigned by Section 61.003, except that the term does not include a public junior college or public technical institute as defined by that section.
+            (9)  "Political party" means an organization or combination of individuals whose aim or purpose is, or who are engaged in an activity devoted to, the establishment, control, or acquisition of administration or control of a government, or the furtherance or influencing of the political or public interest, policies, or relations of a government.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.002.  RULES.  The coordinating board shall adopt rules necessary to implement this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER B.  REQUIREMENTS FOR GIFTS FROM AND CONTRACTS WITH FOREIGN ADVERSARIES AND CERTAIN COMPANIES
+
+      Sec. 51B.051.  GIFT FROM FOREIGN ADVERSARY.  (a)  Except as provided by Subsection (c), an institution of higher education or employee of an institution of higher education may not accept a gift the institution or employee knows is directly or indirectly offered from a foreign source of a foreign adversary unless the gift is of de minimis value, as determined by coordinating board rule in consultation with the council.
+      (b)  An institution of higher education shall:
+            (1)  include the prohibition described by Subsection (a) in the institution's ethics policy; and
+            (2)  create a mechanism by which an employee of the institution may report being offered from a foreign source of a foreign adversary a gift prohibited by Subsection (a).
+      (c)  An institution of higher education may accept a gift of more than de minimis value from a citizen of a foreign adversary only if:
+            (1)  the citizen is an individual;
+            (2)  the institution uses the best practices adopted by the council under Section 51.957(h)(1)(B) to vet and approve the gift; and
+            (3)  if the gift has a value of more than $25,000, the gift is approved by the chief executive officer of the institution and disclosed to the council at an interval established by the council.
+      (d)  A gift described by Subsection (c) is not subject to disclosure under Chapter 552, Government Code, except as otherwise required by federal or state law.
+      (e)  Each institution of higher education that submits reporting on foreign gift and contract disclosures to the United States Department of Education required under Section 117, Higher Education Act of 1965 (20 U.S.C. Section 1001 et seq.), shall submit that reporting to the coordinating board at the time when the institution is required to submit that reporting to the United States Department of Education.
+      (f)  Not later than December 1 of each year, the coordinating board shall submit to the governor, the lieutenant governor, and the speaker of the house of representatives a report detailing the information submitted by institutions of higher education under Subsection (e) for that year.
+      (g)  Information required to be reported under this section is not confidential except as otherwise provided by federal or state law or unless protected as a trade secret by federal or state law.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.052.  INVESTIGATION.  (a)  An institution of higher education shall investigate an alleged violation of this subchapter if the institution receives:
+            (1)  a complaint from a compliance officer of a state agency or the institution; or
+            (2)  a sworn complaint based on substantive information and reasonable belief.
+      (b)  An institution of higher education may request from any person records relevant to a reasonable suspicion of a violation of this subchapter.  A person who receives a request under this subsection shall produce the records not later than the 10th business day after the date the person receives the request, unless the institution and the person agree to a later date.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER C.  ACADEMIC PARTNERSHIPS AND STUDENT ASSOCIATIONS
+
+      Sec. 51B.101.  DEFINITIONS.  In this subchapter:
+            (1)  "Academic partnership" means a written statement of mutual interest in cultural exchange or academic or research collaboration or a faculty or student exchange program, study abroad program, matriculation program, recruiting program, or dual degree program.
+            (2)  "Benefit" and "student organization" have the meanings assigned by Section 51.9315.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.102.  CERTAIN INTERNATIONAL ACADEMIC PARTNERSHIPS PROHIBITED.  (a)  An institution of higher education may not participate in an academic partnership with a foreign source of a foreign adversary, or an entity controlled by a foreign adversary, that:
+            (1)  constrains the institution's freedom of contract;
+            (2)  allows the institution's curriculum or values to be directed, controlled, or influenced by the foreign adversary; or
+            (3)  promotes an agenda detrimental to the safety or security of this state, the residents of this state, or the United States.
+      (b)  The council shall establish:
+            (1)  best practices to be used by an institution of higher education when entering into an academic partnership with a foreign source of a foreign adversary; and
+            (2)  a process by which an institution of higher education annually shall certify to the council the institution's compliance or noncompliance with the best practices established under Subdivision (1).
+      (c)  Not later than December 1 of each year, the council shall submit to the governor, the lieutenant governor, and the speaker of the house of representatives a report identifying each institution of higher education that did not certify the institution's compliance with the best practices under Subsection (b) in the 12 months preceding the date of the report.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.103.  PROHIBITIONS IN RELATION TO CERTAIN FOREIGN INFLUENCE ON STUDENT ORGANIZATION.  (a)  A student organization at an institution of higher education may not:
+            (1)  accept a gift from a foreign adversary or an agent of a foreign adversary; or
+            (2)  enter into a contract or agreement with a foreign adversary or an agent of a foreign adversary under which the student organization receives financial support.
+      (b)  Subsection (a) does not prohibit a student organization at an institution of higher education from accepting member dues or fees.
+      (c)  Each student organization at an institution of higher education annually shall certify to the institution the organization's compliance with Subsection (a).
+      (d)  Notwithstanding Section 51.9315, an institution of higher education may not provide any benefit to a student organization that violates this section.  An institution of higher education that determines a student organization has violated this section shall terminate the organization's recognition or registration, as applicable.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER D.  SCREENING OF FOREIGN RESEARCHERS
+
+      Sec. 51B.151.  SCREENING OF FOREIGN RESEARCHERS REQUIRED.  (a)  Before offering a person employment for a research or research-related support position at the institution or granting a person access to research data or activities or other sensitive data of the institution, an institution of higher education must screen the person as provided by this subchapter if the person:
+            (1)  is a citizen of a foreign country and is not a permanent resident of the United States; or
+            (2)  is affiliated with an institution or program, or has at least one year of employment or training, in a foreign adversary, other than employment or training by an agency of the United States.
+      (b)  A screening under this section must include a background check to determine if the person has any ties to a foreign adversary that would prevent the person from being able to maintain the security or integrity of the institution of higher education and research data or activities or other sensitive data of the institution.  The council may establish a risk-based framework for the screening of a person under this subchapter, which may prescribe low-risk circumstances under which the screening may be waived.
+      (c)  If an institution of higher education procures a third party to conduct a background check under Subsection (b), the institution may consult with the Department of Public Safety and the council in determining whether the third party is qualified to conduct a background check that meets the requirements of that subsection.
+      (d)  An institution of higher education may screen additional persons as provided by this subchapter for a position described by Subsection (a) at the institution's discretion.
+      (e)  An institution of higher education may waive the screening requirement under Subsection (a) for a person who possesses an active United States government security clearance issued by a federal agency.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.152.  EMPLOYMENT: REQUIRED MATERIALS.  (a)  An institution of higher education must require a person subject to screening under Section 51B.151 to submit to the institution:
+            (1)  if the person is a citizen of a foreign country, a copy of the person's passport and nonimmigrant visa application most recently submitted to the United States Department of State; and
+            (2)  any additional information as determined by the council.
+      (b)  An institution of higher education may destroy or return to a person subject to screening under Section 51B.151 the copy of the person's nonimmigrant visa application submitted under Subsection (a)(1) after extracting all information relevant to the requirements of this subchapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.153.  RESEARCH SECURITY OFFICE.  (a)  The chief administrative officer of an institution of higher education shall establish a research security office to:
+            (1)  review the materials submitted to the institution by a person under Section 51B.152;
+            (2)  take reasonable steps to verify the information in the submission; and
+            (3)  take any other action the office considers appropriate.
+      (b)  A research security office established under this section may serve in an institutional or system-wide capacity.
+      (c)  An institution of higher education may direct the research security office to approve persons for hire using a risk-based determination that considers the nature of the research and the person's background and ongoing affiliations.
+      (d)  An institution of higher education must complete the requirements of this subchapter before:
+            (1)  hiring a person described by Section 51B.151(a) in a research or research-related support position; or
+            (2)  granting the person access to research data or activities or other sensitive data.
+      (e)  An institution of higher education may not employ a person subject to screening under Section 51B.151 in a research or research-related support position if the person fails to disclose in the submission a substantial educational, employment, or research-related activity, publication, or presentation unless the applicable department head or the department head's designee certifies in writing the substance of the failure to disclose and the reasons for disregarding that failure.  A copy of the certification must be kept in the investigative file of the research security office.
+      (f)  The research security office shall report to any law enforcement agency designated by the governor or the institution of higher education's governing board the identity of a person who is rejected for employment based on the screening required by this subchapter or other risk-based screening.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER E.  FOREIGN TRAVEL
+
+      Sec. 51B.201.  FOREIGN TRAVEL.  (a)  An institution of higher education shall establish an international travel approval and monitoring program.
+      (b)  The program must establish a risk-based framework for employment-related foreign travel approval, including health, safety, and security factors.
+      (c)  A research security office must preapprove certain employment-related foreign travel according to the risk-based framework established under the program.  The preapproval must require a traveling employee to review and acknowledge guidance related to foreign adversaries or countries under sanctions or other restrictions by this state or the United States government.
+      (d)  A traveling employee must agree to comply with the institution of higher education's limitation on travel and activities abroad and all applicable federal laws.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+      Sec. 51B.202.  MAINTENANCE OF RECORDS AND REPORT.  (a)  An institution of higher education shall maintain for at least three years, or any longer period of time required by applicable federal or state law, records relating to employment-related foreign travel to and activities involving a foreign adversary by a faculty member, researcher, or research department staff member of the institution, including:
+            (1)  each foreign travel request and approval;
+            (2)  expenses reimbursed by the institution for foreign travel, including for travel, food, and lodging;
+            (3)  payments and honoraria received during foreign travel and activities, including for travel, food, and lodging;
+            (4)  a statement of the purpose of each foreign travel; and
+            (5)  any record related to the foreign activity review.
+      (b)  An institution of higher education shall annually submit to the institution's governing board a report on employment-related foreign travel by a faculty member, researcher, or research department staff member of the institution to a foreign adversary.  The report must list each traveler, foreign location visited, and foreign institution visited.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER F.  FOREIGN ADVERSARY EDUCATION SOFTWARE
+
+      Sec. 51B.251.  REVIEW OF EDUCATION SOFTWARE.  (a)  The council, in coordination with the coordinating board, shall:
+            (1)  conduct a thorough review of the use of testing, tutoring, or other education software owned or controlled by a foreign adversary or a company domiciled or headquartered in a foreign adversary; and
+            (2)  publish a list of prohibited software on the coordinating board's Internet website.
+      (b)  An institution of higher education may not enter into or renew a contract to provide testing, tutoring, or other education software included on the list published under Subsection (a)(2).
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+SUBCHAPTER G.  ENFORCEMENT
+
+      Sec. 51B.301.  ENFORCEMENT.  (a)  An institution of higher education may not spend money appropriated to the institution for a state fiscal year until the governing board of the institution submits to the governor, the legislature, the coordinating board, and the council a report certifying the governing board's compliance with this chapter during the preceding state fiscal year.
+      (b)  In the interim between each regular session of the legislature, the governing board of each institution of higher education, or the board's designee, shall testify before the standing legislative committees with primary jurisdiction over higher education at a public hearing of the committee regarding the board's compliance with this chapter.
+      (c)  The state auditor shall periodically conduct a compliance audit of each institution of higher education to determine whether the institution has spent state money in violation of this section.  The state auditor shall adopt a schedule by which the state auditor will conduct compliance audits under this subsection.  The schedule must ensure that each institution of higher education is audited at least once every four years.
+      (d)  If the state auditor determines pursuant to a compliance audit conducted under Subsection (c) that an institution of higher education has spent state money in violation of this section, the institution:
+            (1)  must cure the violation not later than the 180th day after the date on which the determination is made; and
+            (2)  if the institution fails to cure the violation during the period described by Subdivision (1), is ineligible to receive formula funding increases, institutional enhancements, or exceptional items during the state fiscal biennium immediately following the state fiscal biennium in which the determination is made.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1071 (H.B. 127), Sec. 2, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

@@ -1,0 +1,126 @@
+## 33.1 Identify the purpose of Title III, Juvenile Justice Code, as it relates to juvenile investigations.
+- Purpose and interpretation – Family Code Chapter 51.01
+## 33.2 Define specific terms relating to juvenile proceedings.
+- Definitions – Family Code Chapter 51.02:
+## 33.3 Define delinquent conduct; conduct indicating a need for supervision.
+- Delinquent conduct; conduct indicating a need for supervision – Family Code Chapter 51.03
+**Instructor Note:** See Penal Code Chapter 49.04, Penal Code Chapter 49.05, Penal Code Chapter 49.06, Penal Code Chapter 49.07, Penal Code Chapter 49.08 and Alcoholic Beverage Code
+Chapter 106.04 as these are specifically mentioned within Delinquent Conduct or CINS.
+- Jurisdiction – Family Code Chapter 51.04: “Each County has a juvenile board. That board shall designate 1 or more district, criminal district, domestic relations, juvenile, county courts, county courts at law as the juvenile court.”
+  - If a judge/ alternate of juvenile court is not available, any magistrate may make detention release determination (Family Code Chapter 53.02) or Conduct detention hearings (Family Code Chapter 54.01)
+## 33.4 Identify the legal requirements pertaining to a waiver of rights and requirements for admissibility of statements given by Family Code 51.09 and Family Code Chapter 51.095.
+  - Waiver of rights – Family Code Chapter 51.09
+  - Admissibility of a statement of a child – Family Code Chapter 51.095 statements by a child are admissible in future proceedings if:
+  - If the child isn’t in custody and is not being interrogated, then FC 51.095 and previous court rulings look to “Voluntariness”. Courts will look at the totality of the circumstance including the child’s age, maturity, experience, background, intelligence and education.
+  - If crime occurred when person was under 17, but they are over 18, adult rules apply meaning Officers must follow CCP 38.22 and CCP 2B.0202
+exists that the suspect is a juvenile, it’s safer to conduct interrogation pursuant to juvenile procedures as compliance with those will satisfy CCP 38.22, but not vice versa (if you went with adult procedures and they turned out to be adult).
+2. CCP 2B.0202 - Statements that MUST be recorded – Officers must always electronically records statements/interviews of suspects in the following adult case types:
+- Effect of Guardian Ad Litem – Family Code Chapter 51.11
+- Adjudication or Disposition – Family Code Chapter 51.13
+2. Civil Commitment under Health and Safety Code Chapter 841
+## 33.5 Identify the legal requirements on places and conditions of detention.
+  - Place and conditions of detention – Family Code Chapter 51.12
+  - Designation of juvenile processing office – Family Code Chapter 52.025
+  - Responsibility for transporting juvenile offenders – Family Code Chapter 52.026
+## 33.6 Identify the legal restrictions on fingerprinting and photographing a child and administering a polygraph examination.
+  - Collection of records of children – Family Code Chapter 58.001
+  - Photographs and fingerprints of children – Family Code Chapter 58.002
+  - Fingerprints or photographs for comparison in investigation – Family Code Chapter 58.0021
+  - Fingerprints or photographs to identify runaways – Family Code Chapter 58.0022
+  - Legal restrictions of polygraph examinations – Family Code Chapter 51.151
+## 33.7 Identify the legal requirements for taking a child into custody.
+  - Taking into custody; issuance of warning notice – Family Code Chapter 52.01 – Juveniles may be taken into custody under the following authority:
+3. By a law enforcement officer, including a school district peace officer commissioned under Education Code 37.081, if there is probable cause to believe that the child has engaged in:
+  - Directive to apprehend – Family Code Chapter 52.015
+  - Child taken into custody – Code of Criminal Procedure Art. 45A.453 – Procedures for release of Juveniles who are taken into “custody” for Class C violations include:
+4. Or, is released under Family Code 52.02 (a) (1) – (the same procedures for taking child into custody for offenses that carry confinement as a punishment)
+  - Penal Code Chapter 25.03 Interference with Child Custody
+  - Penal Code Chapter 25.031 Agreeing to Abduct a Child from Custody
+  - Penal Code Chapter 25.04 Enticing A Child
+  - Penal Code Chapter 25.06 Harboring Runaway Child
+  - Penal Code Chapter 25.10 Interference with Rights of Guardian of the Person
+3. An officer must call CPS to file a report and document the CPS report number in an incident report when there is cause for concern for the child’s health or safety (Family Code Chapter 261.101) even when the circumstance dose not:
+1. Penal Code Chapter 38.05 Hindering Apprehension or Prosecution
+2. Penal Code Chapter 38.15 Interference with Public Duties
+## 33.8 Identify the legal requirements for release or delivery to court.
+- Release or delivery to court – Family Code Chapter 52.02
+  - Dispose of case under FC 52.03 – Disposition without Referral
+- Juveniles and intoxication offenses – see FC 52.02 (c) and (d) – juveniles can be asked to provide a breath specimen without an attorney, but the request and response must be videotaped and maintained as evidence in the case. Requests for blood require consent of attorney or the court; therefore, those would be rare.
+- Waiver of Jurisdiction and Discretionary Transfer to Criminal Court – Family Code Chapter 54.02 (j)
+- Referral to juvenile court; notice to parents – Family Code Chapter 52.04 – whenever an officer refers a case to office or official designated by the juvenile board the following shall accompany that referral (Remember referral also refers to custodial arrests – it’s any way a case gets to Juvenile officials):
+## 33.9 Identify the legal requirements for the release of a child brought before the court or delivered to a detention facility.
+- Release from Detention – Family Code Chapter 53.02 – When a child in brought before the court or delivered to detention, the intake or authorized officer (intake at detention or juvenile probation officer if not detention) of the court Shall:
+## 33.10 Identify the legal requirements for a detention hearing without a jury if the child is not released.
+- Detention Hearing – Family Code Chapter 54.01– if a child is detained (see above FC
+## 53.02 for the reasons a child would be detained), then a detention hearing without a jury SHALL be held no later than second working day after the child is taken into custody. (Unless brought in on a Friday/Saturday, then hearing held first working day)
+  - Unless Judge can justify the considerations from FC 53.02, the Court shall order the child released. (But, again, it just means the child won’t be confined. The case is still viable and moving through the system)
+- Detention Hearing for Status Offenders and Non-offenders; Penalty – Family Code Chapter 54.011
+## 33.11 Identify the legal requirements for disposition without referral.
+- Disposition without referral to court – Family Code Chapter 52.03
+- First offender program – Family Code Chapter 52.031 – established by the Juvenile Board for the referral & disposition of children taken into custody or accused of CINS offense, Class C’s, other than traffic, or Delinquent Conduct
+- Informal Disposition Guidelines – Family Code Chapter 52.032
+**Instructor Note:** See also Family Code Chapter 264, Code of Criminal Procedure Chapter 45A.507 (Youth Diversion Plan)
+## 33.12 Identify the rights and duties of parents.
+- Rights and duties of parent – Family Code Chapter 151.001
+- Limitations on State Agency Actions – Family Code Chapter 151.003
+- Rights and duties during period of possession – Family Code Chapter 153.074
+## 33.13 Identify the legal requirements for investigation of report of child abuse or neglect.
+- Definitions – Family Code Chapter 261.001
+- Persons required to report; time to report – Family Code Chapter 261.101
+- Matters to be reported – Family Code Chapter 261.102
+- Report made to appropriate agency – Family Code Chapter 261.103
+- Contents of report – Family Code Chapter 261.104
+- Referral of report by department or law enforcement- Family Code Chapter 261.105
+- Immunities – Family Code Chapter 261.106
+- False report; penalty – Family Code Chapter 261.107
+- Failure to report; penalty – Family Code Chapter 261.109, PC 38.17
+- Privileged communication – Family Code Chapter 261.202
+- Investigation of report – Family Code Chapter 261.301; Code of Criminal Procedure Chapter 2A.057
+- Conduct of investigation – Family Code Chapter 261.302
+- Colocations of Investigators – Family Code Chapter 261.3126
+- Interference with Investigation: Criminal Penalty – Family Code Chapter 261.3032
+- Agency Investigation – Family Code Chapter 261.401
+- Investigations in juvenile justice programs and facilities – Family Code Chapter 261.405
+## 33.14 Identify the legal requirements relating to medical treatment and medical examination of a child.
+- Consent by non-parent – Family Code Chapter 32.001
+- Consent to treatment by child – Family Code Chapter 32.003
+- Examination without consent of abuse or neglect of child – Family Code Chapter 32.005
+## 33.15 Identify the legal requirements for taking possession of a child in an emergency.
+- Civil liability – Family Code Chapter 262.003
+- Accepting voluntary delivery of possession of child – Family Code Chapter 262.004
+- Possession and delivery of missing child – Family Code Chapter 262.007
+- Taking emergency possession without a court order – Family Code Chapter 262.104, Code of Criminal Procedure Chapter 2A.051, Code of Criminal Procedure Chapter 63.00905(b)
+- Unacceptable facilities for housing child – Family Code Chapter 262.108
+- Taking possession of child in emergency with intent to return home – Family Code Chapter 262.110
+## 33.16 Discuss Child Advocacy Centers (CACs)
+- Interagency Memorandum of Understanding – Family Code Chapter 264.403
+- Use of Information and Records; Confidentiality and Ownership – Family Code Chapter 264.408
+## 33.17 Identify law enforcement’s legal requirement to notify schools upon arrest and/or referral to juvenile court.
+- Notification to schools required – Code of Criminal Procedure Chapter 15.27
+## 33.18 Explain the legal definitions for a missing person or a missing child.
+- Definitions - Code of Criminal Procedure Chapter 63.001
+- Presumption regarding parentage - Code of Criminal Procedure Chapter 63.0015
+## 33.19 Identify the function of the State Missing Persons Clearinghouse (SMPC) and the required report forms.
+- Missing children and missing persons information clearinghouse - Code of Criminal Procedure Chapter 63.002
+- Function of clearinghouse - Code of Criminal Procedure Chapter 63.003
+## 33.20 Describe law enforcement requirements once the child is reported missing to law enforcement.
+- Law enforcement requirements - Code of Criminal Procedure Chapter 63.009; Code of Criminal Procedure Chapter 63.00905
+3. Not later than 48 hours after receiving the report, electronically submit to each municipal or county law enforcements agency within 200 miles the report and information that may help determine the present location of the child.
+## 63.0091 – A law enforcement agency who receives a missing child report who is at high risk of human trafficking, sexual assault, exploitation, abuse or neglectful supervision or for any reason the agency considers to be high risk including because the missing child:
+  - Immediately but not later than two hours, notify all law enforcement agencies within 100 miles including from other states of the high-risk designation.
+## 33.21 Identify the steps to take in a missing child investigation.
+- Missing children investigations - Code of Criminal Procedure Chapter 63.011
+- System for flagging records - Code of Criminal Procedure Chapter 63.021
+- Duty of schools & other entities to flag missing children records CCP 63.020
+- Removal of flag from records - Code of Criminal Procedure Chapter 63.022
+- School records system - Code of Criminal Procedure Chapter 63.019
+## 33.22 Identify when records are confidential under the Texas Missing Persons and Missing Children’s Act.
+- Confidentiality of certain records - Code of Criminal Procedure Chapter 63.017
+## 33.23 Identify the proper steps to activate the Statewide AMBER Alert System.
+- Definitions – Government Code Chapter 411.351
+- AMBER alert system for abducted children - Government Code Chapter 411.352
+- Activation - Government Code Chapter 411.355
+- Termination - Government Code Chapter 411.358
+## 33.24 Identify the five domains of risk factors for youth joining gangs.
+## 33.25 Discuss three important points associated with youth gang involvement.
+Recent important caselaw regarding Juvenile Magistration NUMBERS 13-20-00101-CR & 13-20-00102-CR COURT OF APPEALS THIRTEENTH DISTRICT OF TEXAS CORPUS CHRISTI – EDINBURG THE STATE OF TEXAS, Appellant, v. SEBASTIAN TORRES, Appellee. On appeal from the 398th District Court of Hidalgo County, Texas. (State v. Torres, 639 S.W.3d 791) And on 4/19/2023 – Court of Criminal Appeals in Texas AFFIRMED lower court’s judgment. (PD- 0018-22 and PD -0019-22

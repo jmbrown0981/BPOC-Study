@@ -1,0 +1,160 @@
+GOVERNMENT CODE
+TITLE 4. EXECUTIVE BRANCH
+SUBTITLE F. COMMERCE AND INDUSTRIAL DEVELOPMENT
+CHAPTER 483.  TEXAS ADVANCED NUCLEAR ENERGY OFFICE
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 483.001.  DEFINITIONS.  In this chapter:
+            (1)  "Advanced nuclear project" means an electric generation facility that relies on an advanced nuclear reactor to generate power, steam, or heat, a nuclear fuel cycle facility that supplies advanced nuclear reactors, or associated technologies supporting the advanced nuclear energy industry.
+            (2)  "Advanced nuclear reactor" means a range of nuclear reactor technologies determined by the regulatory commission to be either of generation III+ or generation IV, including large light water reactors, small modular reactors, microreactors, and nuclear cogeneration.
+            (3)  "Construction permit" means a permit issued by the regulatory commission for the construction of:
+                  (A)  a nuclear production or utilization facility; or
+                  (B)  a research or test reactor that contributes to the future commercialization of that research or test reactor technology.
+            (4)  "Director" means the director of the office.
+            (5)  "License" means a license issued by the regulatory commission that authorizes the license holder to construct and operate a nuclear power facility, such as a nuclear plant at a specific site, with specified conditions.
+            (6)  "Office" means the Texas Advanced Nuclear Energy Office established under Subchapter B.
+            (7)  "Regulatory commission" means the United States Nuclear Regulatory Commission.
+            (8)  "Utility commission" means the Public Utility Commission of Texas.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.002.  SUNSET PROVISION.  The office is subject to Chapter 325, Government Code (Texas Sunset Act).  Unless continued in existence as provided by that chapter, the office is abolished and this chapter expires September 1, 2035.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER B.  TEXAS ADVANCED NUCLEAR ENERGY OFFICE
+
+      Sec. 483.101.  ESTABLISHMENT AND PURPOSE OF OFFICE.  (a)  The Texas Advanced Nuclear Energy Office is an office within the office of the governor.
+      (b)  The purposes of the office are to:
+            (1)  provide strategic leadership for the advanced nuclear reactor system in this state;
+            (2)  collaborate with interested stakeholders and state and local leaders to craft a statewide strategic advanced nuclear energy public outreach program;
+            (3)  promote the development of advanced nuclear reactors for dispatchable electric generation while creating high-wage advanced manufacturing jobs in this state;
+            (4)  lead the transition to a balanced energy future by advancing innovative nuclear energy generation technologies while delivering safe, reliable, and clean energy solutions that address the state's growing demand;
+            (5)  enhance the state's energy security, foster economic growth, and ensure the safety of future nuclear energy generation development;
+            (6)  identify barriers to the financial viability of nuclear energy generation and regulatory and licensing complexities that increase risk to developers of nuclear energy;
+            (7)  leverage the expertise and capacity of institutions of higher education, the nuclear energy industry, the industrial manufacturing sector, and regulatory stakeholders to develop a comprehensive strategic plan to ensure the development of advanced nuclear energy and associated technologies in this state; and
+            (8)  support the development of an advanced nuclear energy supply chain and associated technologies in this state.
+      (c)  The office may:
+            (1)  subject to Subsection (d), solicit and accept gifts, grants, or loans from and contract with any entity;
+            (2)  establish ad hoc advisory committees as necessary to carry out the office's duties under this chapter; and
+            (3)  exercise any other power necessary to carry out this chapter.
+      (d)  The office may not accept a gift, grant, or loan from or contract with an applicant for or a beneficiary of a grant provided under Subchapter C.
+      (e)  The office may not require an advanced nuclear project to be located in a specific location.
+      (f)  The office may adopt and enforce rules necessary to carry out this chapter.
+      (g)  The office and the utility commission, with the assistance of any other state entity the office or the utility commission determines is necessary, shall conduct a study to identify necessary state regulatory functions related to nuclear energy generation facilities in this state.  The office and the utility commission shall submit the study to the legislature not later than December 1, 2026.  This subsection expires August 31, 2027.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.102.  DIRECTOR; DUTIES.  (a)  The governor shall employ a director of the office. The director serves at the pleasure of the governor.
+      (b)  The director must have demonstrated:
+            (1)  experience in the field of advanced nuclear energy; and
+            (2)  executive and organizational ability.
+      (c)  The director may not have any direct or indirect interests that substantially conflict with the director's duties.
+      (d)  The director shall:
+            (1)  manage the affairs of the office;
+            (2)  administer programs established by this chapter; and
+            (3)  establish appropriate milestones and standards to ensure proper use of money under this chapter.
+      (e)  The director may hire staff as necessary to implement the duties of the office under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.103.  STRATEGIC PLAN.  Not later than December 1 of each even-numbered year, the director shall submit to the governor, the legislature, and the Legislative Budget Board a strategic plan for furthering the goals, purposes, and objectives established by this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.104.  NUCLEAR PERMITTING COORDINATOR.  (a) The director may employ a nuclear permitting coordinator to assist businesses throughout the nuclear energy permitting and regulatory process.
+      (b)  A nuclear permitting coordinator must have a demonstrated familiarity with the permitting and regulatory process in this state.
+      (c)  The nuclear permitting coordinator shall:
+            (1)  act as a single point of contact for stakeholders during the nuclear energy permitting and regulatory process;
+            (2)  identify active or likely siting opportunities and required permits and approvals for nuclear energy generation sites and key personnel; and
+            (3)  provide guidance for regulated persons navigating local, state, and federal regulations for nuclear energy generation facilities.
+      (d)  The nuclear permitting coordinator shall make any assistance provided under this section equally available to all businesses engaged in the nuclear energy permitting and regulatory process.
+      (e)  The nuclear permitting coordinator shall document all activities carried out in the provision of assistance under this section and make that information available to the public on request.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER C.  TEXAS ADVANCED NUCLEAR DEVELOPMENT FUND; GRANT PROGRAMS
+
+      Sec. 483.201.  TEXAS ADVANCED NUCLEAR DEVELOPMENT FUND.  (a)  The Texas advanced nuclear development fund is created as a dedicated account in the general revenue fund. The fund consists of:
+            (1)  subject to Section 483.101(d), gifts, grants, or donations to the fund; and
+            (2)  money from any other source designated by the legislature.
+      (b)  The office may use money in the fund:
+            (1)  to provide reimbursement-based grants to eligible businesses, nonprofit organizations, and governmental entities, including institutions of higher education, through the programs established in this subchapter; and
+            (2)  to pay for reasonable and necessary costs for staff support necessary to facilitate the work of the office.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.202.  REIMBURSEMENT GRANT PROGRAMS ESTABLISHED.  (a)  The office shall establish grant programs under this subchapter and the director shall administer those programs.
+      (b)  The office may provide a grant under this subchapter only to reimburse expenses paid by a recipient using the recipient's own funds.  An applicant for a grant under this subchapter may have received financial assistance or incentives from a local, state, or federal source, but the office may not provide a grant under this subchapter to reimburse expenses paid by a recipient or the recipient's project partner using financial assistance or incentives from the local, state, or federal source.  An applicant shall provide the office with detailed information regarding any financial assistance or incentives requested or received for the project for which it is requesting grant funds.
+      (c)  An applicant that has received state-appropriated money for an advanced nuclear reactor is not eligible to receive a grant under Section 483.204.
+      (d)  The office shall submit to the lieutenant governor and the speaker of the house of representatives a notice of each grant the office proposes to approve. The office may not approve the grant if both those officers submit a written communication to the office disapproving the grant on or before the 30th day after the date the office submits the notice of the proposed grant to those officers.  The lieutenant governor or speaker of the house of representatives may extend the review deadline for an additional 14 days by submitting a written notice to that effect to the office before the expiration of the initial review period.
+      (e)  Before awarding a grant under this subchapter, the office shall enter into a written agreement with the grant recipient. A written agreement under this subsection must:
+            (1)  specify benchmarks and milestones for the completion of the project for which the grant is provided; and
+            (2)  require the grant recipient to repay to the state money received from that grant if the recipient fails to reach the specified benchmarks.
+      (f)  The office may not during a state fiscal biennium award out of money appropriated for grants under this subchapter a total amount greater than:
+            (1)  for grants provided under Section 483.203, 20 percent of the appropriated money; and
+            (2)  for grants provided under Section 483.204, 80 percent of the appropriated money.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.203.  PROJECT DEVELOPMENT AND SUPPLY CHAIN REIMBURSEMENT PROGRAM.  (a)  The office may provide a reimbursement grant from the Texas advanced nuclear development fund under this section for the expenses associated with or required for initial development of an advanced nuclear project in this state.
+      (b)  Expenses that qualify for reimbursement under this section are limited to expenses attributable or allocable to:
+            (1)  technology development, including university technology development;
+            (2)  feasibility studies;
+            (3)  site planning, including conceptual site-specific engineering studies;
+            (4)  front-end engineering design;
+            (5)  site and environmental characterization;
+            (6)  regulatory commission early site permit work;
+            (7)  preparation of the construction permit or license application to the regulatory commission;
+            (8)  developing manufacturing capacity and readiness;
+            (9)  fuel processing, manufacturing, and fabrication activities essential to the fuel cycle supply;
+            (10)  preparation of local, state, and nonregulatory commission federal permits; and
+            (11)  regulatory commission licensing fees.
+      (c)  To be eligible for a reimbursement grant under this section, an applicant must provide with an application proof of incurred expenses described by Subsection (b).
+      (d)  A grant provided under this section may not exceed the lesser of:
+            (1)  50 percent of the amount of qualifying expenses associated with the project; or
+            (2)  $12.5 million.
+      (e)  The office by rule shall establish procedures for the application for and provision of a grant under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.204.  ADVANCED NUCLEAR CONSTRUCTION REIMBURSEMENT PROGRAM.  (a)  The office may provide a reimbursement grant from the Texas advanced nuclear development fund under this section for expenses associated with the construction of an advanced nuclear project in this state.
+      (b)   Expenses that qualify for reimbursement under this section are limited to expenses associated with:
+            (1)  the regulatory commission's review of the construction permit or license application;
+            (2)  procurement and development of long-lead components; or
+            (3)  construction activities, including the manufacture, fabrication, quality assurance, placement, erection, installation, modification, inspection, or testing of an advanced nuclear project.
+      (c)  To be eligible for a reimbursement grant under this section, an applicant must provide with an application proof of incurred expenses described by Subsection (b).
+      (d)  A grant provided under this section may not exceed the lesser of:
+            (1)  50 percent of the amount of qualifying expenses associated with the project; or
+            (2)  $120 million.
+      (e)  The office by rule shall establish procedures for the application for and provision of a grant under this section.
+      (f)  The office may not provide a reimbursement grant for a project under this section until the regulatory commission has docketed a construction permit or license application for the project.
+      (g)  The office by rule shall establish a process to distribute the proceeds of each grant awarded under this section to the grant recipient on a rolling basis for qualifying expenses.  The process must include milestones associated with:
+            (1)  the regulatory commission's permitting process; and
+            (2)  the recipient's financial investment decisions relating to the project.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.205.  COMPLETION BONUS GRANT PROGRAM FOR INTERCONNECTED REACTORS.  (a)  The office may provide a grant under this subchapter for the costs associated with the completion of an operational advanced nuclear reactor in this state that is interconnected with the ERCOT power grid.
+      (b)  The office, in consultation with the utility commission, by rule shall establish the amount of a grant the office will provide under this section on a per megawatt basis according to the generation capacity of the advanced nuclear reactor.
+      (c)  The office, in consultation with the utility commission, by rule shall establish procedures for:
+            (1)  the application for and award of a grant under this section;
+            (2)  the administration of the grant program; and
+            (3)  providing grants according to a tiered system based on the amount of electricity in megawatts provided to the ERCOT power grid by an advanced nuclear reactor.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.206.  GRANT APPLICATION EVALUATION.  The office shall evaluate each application for a grant under this subchapter based on:
+            (1)  the grant applicant's:
+                  (A)  quality of services and management;
+                  (B)  efficiency of operations;
+                  (C)  access to resources essential for operating the project for which the grant is requested, such as land, water, and reliable infrastructure, as applicable;
+                  (D)  application for or docketing of a permit or license with the regulatory commission; and
+                  (E)  ability to repay the grant if project benchmarks are not met; and
+            (2)  the project's potential benefit to this state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+      Sec. 483.207.  CONFIDENTIALITY.  Information submitted to the office in an application for a grant under this subchapter is confidential and not subject to disclosure under Chapter 552.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1067 (H.B. 14), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
