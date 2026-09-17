@@ -437,9 +437,28 @@ function setTotalOverride(value){
     localStorage.setItem(TOTAL_OVERRIDE_KEY, String(value));
   }
 }
-function clearAllOverrides(){
-  localStorage.removeItem(PERCENT_OVERRIDES_KEY);
-  localStorage.removeItem(TOTAL_OVERRIDE_KEY);
+// Any active bank that has never been given an explicit percentage is treated as --
+// and persisted as -- a pinned custom value of 0, rather than floating to a proportional
+// share of exam-weights.json's nominal split. This is what makes every bank start out
+// excluded (0%), so building a custom exam means dialing in just the 5-8 banks you want
+// and leaving everything else alone. Self-heals for newly-added banks too: the first time
+// a bank with no override entry is seen, it gets pinned at 0 right along with the rest.
+function ensureZeroDefaults(activeKeys){
+  const o = loadPercentOverrides();
+  let changed = false;
+  activeKeys.forEach(key => {
+    if(o[key] === undefined){ o[key] = 0; changed = true; }
+  });
+  if(changed) savePercentOverrides(o);
+  return o;
+}
+// Pins every active bank's percentage at 0 (what "Reset all" now does) and clears any
+// custom total-question target back to the file default.
+function resetAllToZero(activeKeys){
+  const o = {};
+  activeKeys.forEach(key => { o[key] = 0; });
+  savePercentOverrides(o);
+  setTotalOverride(null);
 }
 function hasCustomWeights(){
   return Object.keys(loadPercentOverrides()).length > 0 || loadTotalOverride() !== null;
@@ -486,9 +505,9 @@ function computeDisplayPercentages(nominalByKey, overrides, activeKeys){
 // normalizes the result into percentages that sum to 100 across the currently-active banks.
 function effectiveConfig(){
   const base = examConfig || {totalQuestions: 250, defaultPercent: 100, percentages: {}};
-  const overrides = loadPercentOverrides();
-  const totalOverride = loadTotalOverride();
   const activeKeys = (examParsedByBank || []).map(b => b.key);
+  const overrides = ensureZeroDefaults(activeKeys);
+  const totalOverride = loadTotalOverride();
   const nominalByKey = {};
   activeKeys.forEach(key => {
     nominalByKey[key] = (base.percentages && base.percentages[key] !== undefined) ? base.percentages[key] : (base.defaultPercent ?? 100);
@@ -586,7 +605,7 @@ function renderWeightPanelHtml(config){
   return `
     <div class="weight-panel">
       <h3>Customize exam percentages</h3>
-      <p class="wp-note">Tune what share of the Full Practice Exam each bank makes up — these always add up to 100%. Editing a bank's percentage <strong>pins</strong> it at that exact value; every other (unpinned) bank's percentage automatically rescales to split whatever's left, in proportion to its normal share, so the total stays at 100%. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Pin a bank at 0% to exclude it entirely. Clear your browser data or hit "Reset all" below to go back to the file's defaults.</p>
+      <p class="wp-note">Every bank starts at <strong>0%</strong> (excluded) — dial in a percentage for just the handful of banks you want in this exam, and leave the rest alone. Editing a bank's percentage <strong>pins</strong> it at that exact value; any other bank you haven't touched stays pinned at 0. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Clear your browser data or hit "Reset all" below to zero everything back out.</p>
       <div class="weight-row">
         <div class="wr-info">
           <div class="wr-title">Target total questions</div>
@@ -637,7 +656,7 @@ function wireWeightPanel(){
   }
   const resetAllBtn = document.getElementById('resetAllWeightsBtn');
   if(resetAllBtn){
-    resetAllBtn.onclick = () => { clearAllOverrides(); recomputeExamPool(); renderExamSetup(); };
+    resetAllBtn.onclick = () => { resetAllToZero(activeKeys); recomputeExamPool(); renderExamSetup(); };
   }
 }
 
