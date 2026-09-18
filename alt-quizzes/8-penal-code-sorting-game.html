@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 8 Penal Code Offense Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1120px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:76ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1120px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:52px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1120px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  /* type legend + tags */
+  .type-legend{display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px;}
+  .type-legend span{display:inline-flex; align-items:center; gap:5px; font-size:11px; font-family:'IBM Plex Mono',monospace; color:var(--ink-soft);}
+  .type-legend i{width:9px; height:9px; border-radius:2px; display:inline-block;}
+
+  .tag{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600;
+    letter-spacing:0.04em; text-transform:uppercase; padding:2px 6px; border-radius:4px; margin-bottom:5px;
+  }
+  .tag-mentalstate{background:#E4EAF3; color:var(--navy-2);}
+  .tag-baselevel{background:#F3E8CE; color:#7A5A19;}
+  .tag-enhancement{background:#F5DFD3; color:#7C3214;}
+  .tag-defense{background:#E1EBE1; color:#2E4A32;}
+  .tag-doctrine{background:#E7E4DC; color:#57534A;}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:2px;}
+  .bucket-cite{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gray); margin-bottom:6px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-cite{display:none;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:6px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:280px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 8 &middot; Penal Code &middot; Supplemental Practice</p>
+    <h1>Penal Code Offense Sorting Game</h1>
+    <p class="sub">Each box is a real Penal Code offense. Drag (or tap) each card onto the offense it belongs to &mdash; the required culpable mental state, a base offense level tier, an enhancement (with what it bumps the grade to), or a defense/affirmative defense/doctrine. Some rounds also include the three general boxes: mental-state definitions &amp; doctrine, general defenses &amp; justifications, and cross-cutting Ch.12 punishment enhancements.</p>
+    <div class="type-legend">
+      <span><i style="background:#4472A8"></i>Mental State</span>
+      <span><i style="background:#A6821F"></i>Base Level</span>
+      <span><i style="background:#B0501F"></i>Enhancement</span>
+      <span><i style="background:#4B6A50"></i>Defense</span>
+      <span><i style="background:#6B675C"></i>Doctrine</span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Offenses <input type="number" id="numBuckets" min="2" max="65" value="6"></div>
+      <div class="setup-field">Cards/offense <input type="number" id="numCards" min="1" max="8" value="3"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto the offense box you think it belongs to, or <b>tap/click</b> a
+    card to pick it up and then tap/click the offense box. Right answer &rarr; the card locks into that box (green, with a
+    checkmark &mdash; click it to see the statute cite). Wrong answer &rarr; the card shakes, the miss is counted, and it goes
+    back to the tray so you can try a different box. Each card is tagged by type (see the legend above) so you know what
+    kind of fact you're sorting. Finish every card in the round to trigger the round-complete banner, then hit
+    <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Offenses <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse offenses</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Cards to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from the site's Ch.8 Penal Code reference &middot; Not an official TCOLE or academy publication &middot; Statutes change &mdash; cross-check anything you're unsure about before test day</footer>
+
+<script>
+const OFFENSES = [{"name": "Criminal Attempt", "cite": "§15.01", "items": [{"type": "Mental State", "text": "With specific intent to commit an offense, doing an act amounting to more than mere preparation that tends but fails to bring about the offense. It's no defense that the completed offense was actually committed."}, {"type": "Base Level", "text": "Punished one category lower than the offense attempted (e.g., a state-jail-felony attempt is a Class A misdemeanor)."}, {"type": "Enhancement", "text": "Effective Sept. 1, 2025: attempted capital murder of a peace officer is NOT reduced a category — it's a 1st degree felony with a 25-year minimum and no parole eligibility under the standard rules."}]}, {"name": "Criminal Conspiracy", "cite": "§15.02", "items": [{"type": "Mental State", "text": "With intent that a felony be committed, agreeing with one or more persons that they (or one of them) will engage in conduct constituting the offense, plus an overt act by any conspirator in pursuance of the agreement — the overt act itself can be nothing more than preparation."}, {"type": "Base Level", "text": "Punished one category lower than the most serious felony object of the conspiracy."}]}, {"name": "Criminal Solicitation", "cite": "§15.03", "items": [{"type": "Mental State", "text": "With intent that a capital felony or 1st degree felony be committed, requesting, commanding, or attempting to induce another to engage in conduct that would constitute that felony. A conviction requires corroboration — it can't rest on the uncorroborated word of the person solicited."}, {"type": "Base Level", "text": "Solicitation of a capital felony → 1st degree felony. Solicitation of a 1st degree felony → 2nd degree felony."}]}, {"name": "Criminal Solicitation of a Minor", "cite": "§15.031", "items": [{"type": "Mental State", "text": "With intent that certain listed offenses be committed, requesting, commanding, or attempting to induce a minor (under 17) to engage in conduct that would constitute the offense or make the minor a party to it."}, {"type": "Base Level", "text": "Generally one category lower than the felony solicited (e.g., soliciting a 2nd degree felony is a 3rd degree felony) — except that soliciting certain serious offenses (capital murder, trafficking, specified sexual offenses) is itself a 1st degree felony regardless of the underlying grade."}]}, {"name": "Criminal Instruments, Unlawful Interception & Tracking", "cite": "Ch. 16", "items": [{"type": "Base Level", "text": "Possessing a criminal instrument — something specially made or adapted for criminal use — is a state jail felony."}, {"type": "Base Level", "text": "Unlawfully intercepting wire, oral, or electronic communications is a 2nd degree felony."}, {"type": "Base Level", "text": "Unlawfully installing a tracking device on a motor vehicle without the owner's or operator's consent is a state jail felony."}]}, {"name": "Capital Murder", "cite": "§19.03", "items": [{"type": "Mental State", "text": "Murder plus an aggravating factor — e.g. the victim is a peace officer/firefighter on duty, multiple victims, murder for hire, a victim under 10, murder during a kidnapping/robbery/burglary/sexual assault/arson, or while incarcerated."}, {"type": "Base Level", "text": "Life without parole, or death if the State seeks it (juveniles and certain offenders are excluded from LWOP by law)."}]}, {"name": "Murder", "cite": "§19.02", "items": [{"type": "Mental State", "text": "Intentionally or knowingly causing death, or intending serious bodily injury and committing an act clearly dangerous to human life that causes death, or causing death during the commission of a felony."}, {"type": "Base Level", "text": "Reduced to a 2nd degree felony (from a 1st degree felony base) if caused under the immediate influence of sudden passion arising from an adequate cause."}]}, {"name": "Manslaughter", "cite": "§19.04", "items": [{"type": "Mental State", "text": "Recklessly causing the death of an individual."}]}, {"name": "Criminally Negligent Homicide", "cite": "§19.05", "items": [{"type": "Mental State", "text": "Causing a death through criminal negligence — failing to perceive a substantial and unjustifiable risk."}]}, {"name": "Kidnapping", "cite": "§20.03", "items": [{"type": "Mental State", "text": "Intentionally or knowingly abducting another, with none of the further aggravating intent that would make it Aggravated Kidnapping."}]}, {"name": "Aggravated Kidnapping", "cite": "§20.04", "items": [{"type": "Mental State", "text": "Abduction plus intent to hold the victim for ransom, use as a shield/hostage, facilitate a felony, terrorize, or inflict injury or sexual abuse."}, {"type": "Base Level", "text": "1st degree felony — drops to a 2nd degree felony if the actor voluntarily releases the victim in a safe place."}]}, {"name": "Leaving a Child in a Vehicle", "cite": "§22.10", "items": [{"type": "Mental State", "text": "Intentionally or knowingly leaving a child younger than 7 alone in a motor vehicle for longer than five minutes, with no one 14 or older attending them in the vehicle."}]}, {"name": "Unlawful Restraint", "cite": "§20.02", "items": [{"type": "Mental State", "text": "Intentionally or knowingly restricting another's movement without consent so as to interfere substantially with their liberty, by moving or confining them."}, {"type": "Base Level", "text": "Restricting another's movement without consent, with none of the aggravating factors below present, is a Class A misdemeanor."}, {"type": "Enhancement", "text": "State jail felony if the victim is under 17."}, {"type": "Enhancement", "text": "3rd degree felony if committed recklessly exposing the victim to substantial risk of serious bodily injury, against a public servant on duty, or by an actor already in custody or civil commitment."}, {"type": "Enhancement", "text": "2nd degree felony if the victim is a peace officer or judge on duty — this overrides the public-servant 3rd degree tier."}]}, {"name": "Assault", "cite": "§22.01", "items": [{"type": "Mental State", "text": "Intentionally, knowingly, or recklessly causing bodily injury to another; threatening another with imminent bodily injury; or causing offensive or provocative physical contact."}, {"type": "Base Level", "text": "Threat or offensive contact only is a Class C misdemeanor; causing bodily injury is a Class A misdemeanor."}, {"type": "Enhancement", "text": "Class B if against a sports participant (by a non-participant); a separate Class A tier applies if the offensive-contact/threat form targets a pregnant individual to force an abortion."}, {"type": "Enhancement", "text": "3rd degree felony if against: a public servant on duty; a security officer, process server, or emergency-services worker on duty; hospital personnel on hospital property; a utility employee/agent on duty; a pregnant individual (to force an abortion, or simply known to be pregnant); or a family/household member with a prior family-violence conviction."}, {"type": "Enhancement", "text": "2nd degree felony if by strangulation or suffocation, or against a peace officer/judge on duty; strangulation against a family member with a prior conviction is also 2nd degree."}]}, {"name": "Indecent Assault", "cite": "§22.012", "items": [{"type": "Mental State", "text": "Without consent and with intent to arouse or gratify sexual desire, touching another's anus, breast, or genitals (or causing such contact), exposing another's intimate areas, or causing contact with bodily fluids."}, {"type": "Enhancement", "text": "State jail felony with a qualifying prior conviction, or if committed by a health/mental-health provider beyond the scope of treatment."}, {"type": "Enhancement", "text": "3rd degree felony with a prior provider-abuse conviction."}, {"type": "Enhancement", "text": "2nd degree felony if the victim is elderly or disabled."}]}, {"name": "Aggravated Assault", "cite": "§22.02", "items": [{"type": "Mental State", "text": "Assault that causes serious bodily injury, or in which the actor uses or exhibits a deadly weapon."}, {"type": "Base Level", "text": "Causing serious bodily injury, or using/exhibiting a deadly weapon during an assault, with none of the specific aggravating factors below, is a 2nd degree felony."}, {"type": "Enhancement", "text": "1st degree felony if committed against a public servant, informant, or witness in retaliation; a process server or security officer on duty; during a drive-by shooting; or as part of a mass shooting (added 2025)."}, {"type": "Enhancement", "text": "1st degree felony if committed with a deadly weapon causing serious bodily injury to a family/household member, or a traumatic brain/spine injury resulting in a persistent vegetative state or irreversible paralysis (added 2025)."}]}, {"name": "Sexual Assault", "cite": "§22.011", "items": [{"type": "Mental State", "text": "Intentionally or knowingly causing penetration or sexual contact without consent."}, {"type": "Base Level", "text": "2nd degree felony — 1st degree felony if the victim is someone the actor was legally barred from marrying."}]}, {"name": "Aggravated Sexual Assault", "cite": "§22.021", "items": [{"type": "Mental State", "text": "Sexual assault plus a deadly weapon, serious bodily injury, threats, a victim under 6 (or under 14 with aggravating factors), or an elderly or disabled victim."}, {"type": "Base Level", "text": "1st degree felony, with a 25-year minimum if the victim is under 6, or under 14 with threats, serious bodily injury, or a deadly weapon."}]}, {"name": "Injury to a Child, Elderly, or Disabled Individual", "cite": "§22.04", "items": [{"type": "Mental State", "text": "Intentionally, knowingly, recklessly, or negligently causing bodily injury, serious bodily injury, or serious mental deficiency/impairment to a child, elderly, or disabled person."}, {"type": "Base Level", "text": "Criminal negligence causing bodily injury is a state jail felony."}, {"type": "Base Level", "text": "Reckless bodily injury is a state jail felony; reckless serious bodily injury is a 2nd degree felony."}, {"type": "Base Level", "text": "Intentional or knowing bodily injury is a 3rd degree felony; intentional or knowing serious bodily injury is a 1st degree felony."}]}, {"name": "Deadly Conduct", "cite": "§22.05", "items": [{"type": "Mental State", "text": "Recklessly engaging in conduct that places another in imminent danger of serious bodily injury."}, {"type": "Enhancement", "text": "3rd degree felony if committed by discharging a firearm at or in the direction of a person, habitation, building, or vehicle."}]}, {"name": "Terroristic Threat", "cite": "§22.07", "items": [{"type": "Mental State", "text": "Threatening violence with intent to place a person in fear, cause an emergency response, interrupt public services, or influence a government's conduct."}, {"type": "Base Level", "text": "Placing a person in fear, or triggering an emergency response, is a Class B misdemeanor."}, {"type": "Base Level", "text": "A family-violence context, or a threat against public servants/public places, is a Class A misdemeanor."}, {"type": "Base Level", "text": "Causing $1,500+ in pecuniary loss, or targeting a peace officer or judge, is a state jail felony."}, {"type": "Base Level", "text": "Impairing public services or influencing government conduct is a 3rd degree felony."}]}, {"name": "Continuous Family Violence", "cite": "§25.11", "items": [{"type": "Mental State", "text": "Engaging in conduct that constitutes assault causing bodily injury two or more times within a 12-month period against a family/household member or dating partner."}]}, {"name": "Violation of a Protective Order", "cite": "§25.07", "items": [{"type": "Mental State", "text": "Knowingly violating the terms of a protective order or magistrate's order in a family violence, child abuse/neglect, sexual assault/abuse, indecent assault, stalking, or trafficking case."}, {"type": "Enhancement", "text": "State jail felony if the violated order was issued following the defendant's conviction (or deferred adjudication) for an offense against that same victim, or if certain violations (going near the victim, threatening/harassing contact) were committed while possessing a deadly weapon."}, {"type": "Enhancement", "text": "3rd degree felony if the person has two or more prior convictions under this section (or a combination with §25.072), or violated the order by committing assault or stalking."}]}, {"name": "Interference With Child Custody", "cite": "§25.03", "items": [{"type": "Mental State", "text": "Taking or retaining a child in violation of a custody judgment or in a manner that deprives a lawful custodian of custody."}]}, {"name": "Criminal Nonsupport", "cite": "§25.05", "items": [{"type": "Mental State", "text": "Intentionally or knowingly failing to provide support for one's dependent child."}]}, {"name": "Arson (Intentional)", "cite": "§28.02(a), (d)", "items": [{"type": "Mental State", "text": "Starting a fire or causing an explosion with intent to destroy or damage vegetation/property on open-space land, or a habitation, building, or other property, without the owner's consent (or with intent to defraud an insurer, or being reckless about endangering life/property)."}, {"type": "Base Level", "text": "Base is a 2nd degree felony — a 1st degree felony if bodily injury or death resulted, or the property was a habitation or a place of assembly or worship."}]}, {"name": "Arson During Drug Manufacturing", "cite": "§28.02(a-1), (e)", "items": [{"type": "Mental State", "text": "Recklessly (not intentionally) starting a fire or causing an explosion while manufacturing or attempting to manufacture a controlled substance, where the fire or explosion damages a building, habitation, or vehicle."}, {"type": "Base Level", "text": "Base is a state jail felony, rising to a 3rd degree felony if bodily injury or death resulted."}]}, {"name": "Reckless Arson (Collateral Damage/Injury)", "cite": "§28.02(a-2), (f)", "items": [{"type": "Mental State", "text": "Intentionally starting a fire or causing an explosion (e.g., a permitted or otherwise lawful burn), but in doing so recklessly damaging or destroying another's building, or recklessly causing another person to suffer bodily injury or death."}]}, {"name": "Criminal Mischief", "cite": "§28.03", "items": [{"type": "Mental State", "text": "Intentionally or knowingly damaging, destroying, or tampering with another's property without consent."}, {"type": "Base Level", "text": "Graded entirely by pecuniary loss, on the same value ladder as Theft: Class C (under $100) up through 1st degree felony ($300,000+)."}, {"type": "Enhancement", "text": "Loss of $30,000+ on a place of worship, cemetery, monument, or school can bump the grade."}]}, {"name": "Robbery", "cite": "§29.02", "items": [{"type": "Mental State", "text": "While committing theft, intentionally, knowingly, or recklessly causing bodily injury, or threatening/placing another in fear of imminent bodily injury or death."}]}, {"name": "Aggravated Robbery", "cite": "§29.03", "items": [{"type": "Mental State", "text": "Robbery that causes serious bodily injury, uses or exhibits a deadly weapon, or is committed against a person 65 or older or a disabled person."}]}, {"name": "Burglary", "cite": "§30.02", "items": [{"type": "Mental State", "text": "Entering a habitation or building not open to the public, without consent, with intent to commit a felony, theft, or assault (or entering/remaining and committing or attempting one of those)."}, {"type": "Base Level", "text": "A building other than a habitation is a state jail felony."}, {"type": "Base Level", "text": "A habitation is a 2nd degree felony."}, {"type": "Base Level", "text": "A habitation, entered with intent to commit a felony other than theft, is a 1st degree felony."}, {"type": "Enhancement", "text": "3rd degree felony if a building other than a habitation is a pharmacy or other facility that generally stores controlled substances and the intent was to steal a controlled substance; also 3rd degree if committed in connection with a human-smuggling offense."}]}, {"name": "Burglary of a Vehicle", "cite": "§30.04", "items": [{"type": "Mental State", "text": "Breaking into or entering a vehicle, or any part of one, without consent, with intent to commit a felony or theft."}, {"type": "Enhancement", "text": "One prior conviction under this section raises the minimum confinement to 6 months, but it's still a Class A misdemeanor."}, {"type": "Enhancement", "text": "Two or more priors, or the vehicle/part entered being a rail car, makes it a state jail felony. (A niche 3rd degree felony tier also applies to certain wholesale-pharmaceutical-vehicle break-ins with intent to steal a controlled substance.)"}]}, {"name": "Criminal Trespass", "cite": "§30.05", "items": [{"type": "Mental State", "text": "Entering or remaining on property or in a building without consent after notice to depart — a posted sign, fencing, or a verbal warning."}, {"type": "Enhancement", "text": "Class C if on agricultural land within 100 feet of the boundary, or on residential land within 100 feet of a protected freshwater area."}, {"type": "Enhancement", "text": "Class A if in a habitation, on a critical-infrastructure facility, at a residential treatment center, on higher-ed property with a qualifying prior, or while carrying a deadly weapon."}, {"type": "Enhancement", "text": "3rd degree felony if committed in the course of a human-smuggling offense."}]}, {"name": "Theft", "cite": "§31.03", "items": [{"type": "Mental State", "text": "Unlawfully appropriating property with intent to deprive the owner of it."}, {"type": "Base Level", "text": "Property valued under $100 → Class C misdemeanor."}, {"type": "Base Level", "text": "Property valued $100–$750 → Class B misdemeanor."}, {"type": "Base Level", "text": "Property valued $750–$2,500 → Class A misdemeanor."}, {"type": "Base Level", "text": "Property valued $2,500–$30,000 → State Jail Felony."}, {"type": "Base Level", "text": "Property valued $30,000–$150,000 → Felony 3."}, {"type": "Base Level", "text": "Property valued $150,000–$300,000 → Felony 2."}, {"type": "Base Level", "text": "Property valued $300,000 or more → Felony 1."}, {"type": "Enhancement", "text": "Regardless of value, theft of a firearm, a corpse or grave item, or official election material is at least a state jail felony."}, {"type": "Enhancement", "text": "Two or more prior theft convictions bump a low-value theft up a grade."}, {"type": "Enhancement", "text": "Victim being elderly or a nonprofit, or the theft involving a fire-alarm/retail-detector defeat device, raises the grade by one level."}]}, {"name": "Unauthorized Use of a Vehicle", "cite": "§31.07", "items": [{"type": "Mental State", "text": "Intentionally or knowingly operating another's vehicle without the owner's effective consent — the Texas 'joyriding' statute; no intent to permanently deprive is required."}]}, {"name": "Credit/Debit Card Abuse", "cite": "§32.31", "items": [{"type": "Mental State", "text": "Using, possessing, or selling another's credit or debit card without consent, or with intent to fraudulently present an expired, revoked, or fictitious card."}, {"type": "Enhancement", "text": "Raised one grade if the victim is elderly."}]}, {"name": "Fraudulent Use/Possession of Identifying Information", "cite": "§32.51", "items": [{"type": "Mental State", "text": "Obtaining, possessing, transferring, or using another person's identifying information without consent and with intent to harm or defraud."}, {"type": "Base Level", "text": "State jail felony minimum; the grade rises with the number of items of identifying information involved, up to 1st degree for 50 or more."}, {"type": "Enhancement", "text": "One grade higher if the victim is elderly."}]}, {"name": "Resisting Arrest, Search, or Transportation", "cite": "§38.03", "items": [{"type": "Mental State", "text": "Using force against a peace officer or another to prevent a lawful arrest, search, or transport. Knowledge that the person is a peace officer is required, but resistance to a merely unlawful arrest is not a defense."}, {"type": "Enhancement", "text": "3rd degree felony if the actor uses a deadly weapon to resist."}]}, {"name": "Evading Arrest or Detention", "cite": "§38.04", "items": [{"type": "Mental State", "text": "Intentionally fleeing from a person the actor knows is a peace officer lawfully attempting to arrest or detain them."}, {"type": "Enhancement", "text": "State jail felony if the actor has a prior conviction under this section, or uses a vehicle/watercraft while fleeing on a first offense."}, {"type": "Enhancement", "text": "3rd degree felony if the actor uses a vehicle/watercraft while fleeing and has a prior conviction, if the flight causes serious bodily injury to another, if a tire-deflation device is used against the officer, or if committed in the course of a human-smuggling offense."}, {"type": "Enhancement", "text": "2nd degree felony if another person dies as a direct result, or suffers serious bodily injury from the actor's own use of a tire-deflation device."}]}, {"name": "Failure to Identify", "cite": "§38.02", "items": [{"type": "Mental State", "text": "Intentionally refusing to give your name, address, or date of birth to a peace officer after a lawful arrest, or intentionally giving false or fictitious information to an officer who has lawfully arrested or detained you, or who you know is investigating a crime and you're a witness."}, {"type": "Base Level", "text": "Refusing to give information after a lawful arrest is a Class C misdemeanor."}, {"type": "Base Level", "text": "Giving false information — whether arrested, detained, or as a witness — is a Class B misdemeanor."}, {"type": "Enhancement", "text": "If the actor is a fugitive from justice (an outstanding arrest warrant), each tier is raised one level: refusal becomes a Class B, and false information becomes a Class A misdemeanor."}]}, {"name": "Tampering With or Fabricating Physical Evidence", "cite": "§37.09", "items": [{"type": "Mental State", "text": "Knowing an investigation is pending, altering, destroying, or concealing evidence, or fabricating/presenting false evidence, with intent to impair its availability."}, {"type": "Base Level", "text": "3rd degree felony — 2nd degree if the evidence altered or concealed is a human corpse."}, {"type": "Base Level", "text": "Simply failing to report an observed corpse under suspicious circumstances, without more, is a Class A misdemeanor."}]}, {"name": "Perjury", "cite": "§37.02", "items": [{"type": "Mental State", "text": "Making a false statement under oath with intent to deceive."}]}, {"name": "Aggravated Perjury", "cite": "§37.03", "items": [{"type": "Mental State", "text": "Perjury made during or in connection with an official proceeding and material to the proceeding."}]}, {"name": "Bail Jumping and Failure to Appear", "cite": "§38.10", "items": [{"type": "Mental State", "text": "Intentionally or knowingly failing to appear in accordance with the terms of release after being lawfully released on bail, with intent to avoid prosecution."}, {"type": "Base Level", "text": "Same grade as the offense for which the person was released, capped: a fine-only underlying offense → Class C; a misdemeanor → Class A; a felony → 3rd degree felony."}]}, {"name": "Disorderly Conduct", "cite": "§42.01", "items": [{"type": "Mental State", "text": "A broad statute covering offensive language, fighting words, obscene gestures, unreasonable noise, exposing oneself, or displaying a firearm to alarm."}, {"type": "Enhancement", "text": "Class B if committed by discharging a firearm in certain public places, or by displaying a firearm/deadly weapon in public in a manner calculated to alarm."}]}, {"name": "Riot", "cite": "§42.02", "items": [{"type": "Mental State", "text": "Assembling with 7 or more people and engaging in conduct that creates an immediate danger of property damage/injury, substantially obstructs law enforcement, or by force interferes with a government function."}, {"type": "Enhancement", "text": "An offense actually committed in furtherance of the riot's purpose (or reasonably foreseeable from it) is punished one grade higher than mere participation."}]}, {"name": "Harassment", "cite": "§42.07", "items": [{"type": "Mental State", "text": "Intending to annoy, alarm, abuse, torment, or embarrass another via repeated calls, electronic communications, threats, or obscene suggestions."}, {"type": "Enhancement", "text": "Class A if: the actor has a prior conviction under this section; the offense was electronic harassment of a child under 18 intending to cause suicide or self-harm; the actor previously violated a related restraining order/injunction; or (added 2025) the victim is known to be a utility employee/agent or a court employee acting in that role."}, {"type": "Enhancement", "text": "State jail felony if against a court employee and the actor has a prior conviction under this section."}, {"type": "Enhancement", "text": "3rd degree felony if against a judge and the actor has a prior conviction under this section."}]}, {"name": "Stalking", "cite": "§42.072", "items": [{"type": "Mental State", "text": "Engaging in repeated conduct directed at a specific person that the actor knows or should know would cause a reasonable person to fear bodily injury, death, or property damage."}, {"type": "Enhancement", "text": "2nd degree felony (up from a 3rd degree felony base) if the actor has a prior conviction for stalking (Texas or a substantially similar out-of-state, tribal, or federal offense)."}]}, {"name": "Prostitution (Selling)", "cite": "§43.02", "items": [{"type": "Mental State", "text": "Knowingly offering or agreeing to receive a fee from another to engage in sexual conduct."}, {"type": "Enhancement", "text": "Class A misdemeanor (up from a Class B base) with 1–2 prior convictions under this section."}, {"type": "Enhancement", "text": "State jail felony with 3 or more priors, or if the actor is a peace officer, security officer, or public school employee (added 2023)."}]}, {"name": "Solicitation of Prostitution (Buying)", "cite": "§43.021", "items": [{"type": "Mental State", "text": "Knowingly offering or agreeing to pay a fee to another person for the purpose of engaging in sexual conduct with that person or another."}, {"type": "Enhancement", "text": "3rd degree felony (up from a state jail felony base) with a prior conviction under this section (or under the old pre-2021 §43.02(b))."}, {"type": "Enhancement", "text": "2nd degree felony if the person solicited is under 18 — regardless of whether the actor knew or was told the person's real age."}]}, {"name": "Unlawful Carrying Weapons (UCW)", "cite": "§46.02", "items": [{"type": "Mental State", "text": "Carrying a handgun, openly or concealed, while falling into a narrower prohibited category: under 21, carrying while engaged in other criminal activity, intoxicated, a member of a criminal street gang, or already prohibited from possessing a firearm under §46.04."}, {"type": "Enhancement", "text": "3rd degree felony if carried into a place weapons are prohibited under §46.03 (bars/51% establishments, schools, polling places, government meetings, etc.), or if the actor was already prohibited from possessing a firearm under §46.04(b) or (c) — a family-violence or protective-order basis."}, {"type": "Enhancement", "text": "2nd degree felony, with a 5-year minimum, if the actor was prohibited under §46.04(a) — felon status."}]}, {"name": "Unlawful Possession of Firearm by Felon", "cite": "§46.04", "items": [{"type": "Mental State", "text": "A convicted felon possessing a firearm before the 5th anniversary of release from confinement/supervision, or at any other location besides their own premises after that period, or possessing while subject to a family-violence protective order."}, {"type": "Base Level", "text": "Base is a 3rd degree felony — a Class A misdemeanor if the disqualifying basis is a family-violence conviction or an active protective order, rather than felon status."}]}, {"name": "Prohibited Weapons", "cite": "§46.05", "items": [{"type": "Mental State", "text": "Possessing, manufacturing, transporting, or selling specific prohibited devices — explosive weapons (including improvised explosive devices), machine guns, armor-piercing ammunition, chemical dispensing devices, zip guns, and tire deflation devices."}, {"type": "Base Level", "text": "Most listed items are a 3rd degree felony; tire deflation devices specifically are a state jail felony."}]}, {"name": "Driving While Intoxicated (DWI)", "cite": "§49.04", "items": [{"type": "Mental State", "text": "Operating a motor vehicle in a public place while intoxicated — no normal use of mental/physical faculties, or a BAC of 0.08 or higher."}, {"type": "Base Level", "text": "Base (1st offense) is a Class B misdemeanor, with a minimum 72-hour confinement (6 days if an open container was present)."}, {"type": "Enhancement", "text": "Class A if there is one prior DWI-type conviction, or if BAC is 0.15+ on the instant offense (30-day minimum)."}, {"type": "Enhancement", "text": "3rd degree felony with two or more prior convictions."}, {"type": "Enhancement", "text": "DWI with a passenger under 15 is charged separately as a state jail felony (§49.045), regardless of prior record."}]}, {"name": "Intoxication Assault", "cite": "§49.07", "items": [{"type": "Mental State", "text": "By accident or mistake, causing serious bodily injury to another while operating a vehicle, aircraft, watercraft, or amusement ride while intoxicated."}, {"type": "Enhancement", "text": "2nd degree felony (up from the 3rd degree felony base) if the victim is a peace officer, firefighter, or EMS personnel, on or off duty."}]}, {"name": "Intoxication Manslaughter", "cite": "§49.08", "items": [{"type": "Mental State", "text": "By accident or mistake, causing the death of another while operating a vehicle, aircraft, watercraft, or amusement ride while intoxicated."}, {"type": "Enhancement", "text": "1st degree felony (up from the 2nd degree felony base) if the victim is a peace officer, firefighter, or EMS personnel."}]}, {"name": "Public Intoxication", "cite": "§49.02", "items": [{"type": "Mental State", "text": "Appearing in a public place while so intoxicated as to be a danger to oneself or others."}, {"type": "Enhancement", "text": "Three prior convictions for Public Intoxication and/or Disorderly Conduct within 24 months can enhance this to a Class B misdemeanor (§12.43(c))."}]}, {"name": "Engaging in Organized Criminal Activity", "cite": "§71.02", "items": [{"type": "Mental State", "text": "Committing (or conspiring to commit) a listed offense with intent to establish, maintain, or participate in a combination — 3 or more people collaborating in ongoing criminal activity — or as a member of a criminal street gang. Covers a long list of predicate offenses: murder, robbery, aggravated assault, theft, burglary, drug offenses, human trafficking, fraud, and more."}, {"type": "Base Level", "text": "Punished one category higher than the most serious predicate offense listed (e.g., an underlying 3rd degree felony becomes a 2nd degree felony)."}, {"type": "Enhancement", "text": "A deadly weapon finding pushes it a further category higher."}]}, {"name": "Coercing, Inducing, or Soliciting Gang Membership", "cite": "§71.022", "items": [{"type": "Mental State", "text": "Knowingly causing, enabling, encouraging, recruiting, or soliciting another to join a criminal street gang or foreign terrorist organization that requires committing a Class A misdemeanor or felony as a condition of membership."}, {"type": "Enhancement", "text": "A separate, more serious provision covers threatening or injuring a child or the child's family to coerce the child into gang activity, carrying its own elevated punishment range."}]}, {"name": "Directing Activities of Criminal Street Gangs or Foreign Terrorist Organizations", "cite": "§71.023", "items": [{"type": "Mental State", "text": "Knowingly financing, directing, or supervising the activities of a criminal street gang or a foreign terrorist organization, including a drug cartel operating partly outside the U.S."}, {"type": "Base Level", "text": "1st degree felony, with a 25-year minimum sentence."}]}, {"name": "Providing Material Support or Resources to Facilitate Terrorism", "cite": "Ch. 72", "items": [{"type": "Mental State", "text": "Knowingly providing material support or resources — property, services, or personnel — to another, knowing or intending they'll be used to plan, prepare, or carry out an act that would constitute one of a list of serious predicate offenses."}, {"type": "Base Level", "text": "Punished one category higher than the most serious predicate offense supported — the same escalation structure used in the Title 11 organized-crime statute, but aimed at material support for terrorism."}]}, {"name": "General Principles & Doctrine (Titles 1–2, Ch. 6–7)", "cite": "§1.07, Ch. 2, Ch. 6–7", "items": [{"type": "Doctrine", "text": "Felony — an offense so designated by law, or punishable by death or imprisonment. Misdemeanor — an offense punishable only by fine, jail, or both. (§1.07)"}, {"type": "Doctrine", "text": "The State must prove every element of an offense beyond a reasonable doubt; the defendant must prove an affirmative defense only by a preponderance of the evidence — a lower standard. (Ch. 2)"}, {"type": "Doctrine", "text": "The 'law of parties': a person is criminally responsible for an offense committed by another's conduct if they act with intent to promote or assist its commission and solicit, encourage, direct, aid, or attempt to aid the other person. (§7.02)"}, {"type": "Doctrine", "text": "Under §7.02(b), a party can be responsible for a second, unintended felony if it was committed in furtherance of the conspiracy and should have been anticipated."}, {"type": "Mental State", "text": "Intentional — conscious objective or desire to engage in the conduct or cause the result. (§6.03(a))"}, {"type": "Mental State", "text": "Knowing — aware of the nature of the conduct/circumstances, or aware the conduct is reasonably certain to cause the result. (§6.03(b))"}, {"type": "Mental State", "text": "Reckless — aware of but consciously disregards a substantial and unjustifiable risk; a gross deviation from how an ordinary person would act. (§6.03(c))"}, {"type": "Mental State", "text": "Criminal Negligence — should have been aware of a substantial and unjustifiable risk but wasn't; failing to perceive it is a gross deviation from ordinary care. (§6.03(d))"}]}, {"name": "General Defenses & Justifications (Ch. 8–9, §15.04)", "cite": "Ch. 8–9", "items": [{"type": "Defense", "text": "Mistake of Fact — a reasonable belief about a fact that negates the required mental state. (§8.02)"}, {"type": "Defense", "text": "Mistake of Law — a narrow defense limited to reasonable reliance on an official statement of the law later found wrong. (§8.03)"}, {"type": "Doctrine", "text": "Intoxication — voluntary intoxication is NOT a defense to the commission of an offense, though it can be relevant at punishment. (§8.04)"}, {"type": "Defense", "text": "Duress — compulsion by threat of imminent death or serious bodily injury to oneself or another. (§8.05)"}, {"type": "Defense", "text": "Entrapment — law enforcement induced the offense through persuasion likely to cause an otherwise law-abiding person to commit it; merely providing an opportunity is not entrapment. (§8.06)"}, {"type": "Defense", "text": "Age — no criminal responsibility for conduct committed by a child younger than 10 (ages 10–16 generally proceed through the juvenile system). (§8.07)"}, {"type": "Defense", "text": "Insanity — as a result of severe mental disease or defect, the actor did not know their conduct was wrong. (§8.01)"}, {"type": "Defense", "text": "Necessity — conduct is justified when it's immediately necessary to avoid a greater harm, and a reasonable person would agree. (§9.22)"}, {"type": "Defense", "text": "Self-Defense — force is justified when and to the degree the actor reasonably believes it's immediately necessary to protect against another's use or attempted use of unlawful force; deadly force adds further conditions. (§9.31–9.32)"}, {"type": "Defense", "text": "Defense of Third Person — stands in the shoes of the person being defended. (§9.33)"}, {"type": "Defense", "text": "Defense of Property — force, and in limited circumstances deadly force, to protect one's own or another's property from trespass or theft. (§9.41–9.43)"}, {"type": "Defense", "text": "Law Enforcement's Use of Force — an officer making an arrest or search is justified in using force (and, in narrower circumstances, deadly force) to the degree reasonably believed necessary, subject to specific conditions. (§9.51)"}, {"type": "Defense", "text": "Renunciation — an affirmative defense to attempt, conspiracy, or solicitation if the actor voluntarily and completely renounced the criminal objective, and the renunciation wasn't just motivated by fear of getting caught or a decision to postpone or redirect the crime. (§15.04)"}]}, {"name": "General Punishment Enhancements (Ch. 12 & Related)", "cite": "Ch. 12, §46.11, §71.028", "items": [{"type": "Enhancement", "text": "Repeat & Habitual Felony Offender (§12.42) — one prior felony: 3rd degree is punished as 2nd degree; 2nd degree as 1st degree; 1st degree becomes 15–99 years/life. Two sequential prior felonies (any degree except state jail): 25–99 years/life."}, {"type": "Enhancement", "text": "Repeat Misdemeanor Offender (§12.43) — a prior Class A/B conviction (or any felony) raises the minimum on a new Class A or B charge: Class A with a qualifying prior = 90-day minimum; Class B with a qualifying prior = 30-day minimum."}, {"type": "Enhancement", "text": "Deadly Weapon Finding (§1.07(a)(17); Art. 42A.054 CCP) — doesn't change the offense grade directly, but restricts parole eligibility and community supervision, and can bump a state jail felony under §12.35(c) up to a 3rd degree felony."}, {"type": "Enhancement", "text": "Bias or Prejudice Motivation (§12.47) — an affirmative finding that the offense was committed because of bias or prejudice against a group raises punishment to the next higher offense category (not applicable to 1st degree felonies or Class A misdemeanors)."}, {"type": "Enhancement", "text": "Drug-Facilitated Offense (§12.49) — an affirmative finding that a controlled substance was administered to the victim of a robbery, theft, or offense against the person raises punishment to the next higher offense category."}, {"type": "Enhancement", "text": "Disaster / Evacuation Area (§12.50) — assault, robbery, burglary, or theft committed within an area under a declared disaster or emergency evacuation order raises punishment to the next higher category (for a Class A misdemeanor, raises the minimum confinement to 180 days instead)."}, {"type": "Enhancement", "text": "Weapon-Free School Zone (§46.11) — a Chapter 46 weapons offense committed in a place the actor knew was within 300 feet of a school, at a school function, or at a UIL event raises punishment to the next higher offense category."}, {"type": "Enhancement", "text": "Gang-Free Zones (§71.028) — certain drug and weapons offenses committed by a criminal street gang member within 1,000 feet of a school, youth center, playground, or similar area can be enhanced, similar to the weapon-free school zone enhancement."}]}];
+const TYPE_CLASS = {
+  "Mental State": "tag-mentalstate",
+  "Base Level": "tag-baselevel",
+  "Enhancement": "tag-enhancement",
+  "Defense": "tag-defense",
+  "Doctrine": "tag-doctrine"
+};
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] }; // buckets: [{name, cite}]
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(OFFENSES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(8, Number(document.getElementById('numCards').value) || 3));
+
+  const chosen = shuffle(OFFENSES).slice(0, numBuckets);
+  const cards = [];
+  chosen.forEach((off, oi) => {
+    const picked = shuffle(off.items).slice(0, Math.min(numCards, off.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + oi + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        type: item.type,
+        text: item.text,
+        offenseName: off.name,
+        offenseCite: off.cite,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosen.map(o => ({ name: o.name, cite: o.cite }));
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(b => {
+    const solvedHere = round.cards.filter(c => c.offenseName === b.name && c.solved);
+    const totalHere = round.cards.filter(c => c.offenseName === b.name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="tag ${TYPE_CLASS[c.type] || 'tag-doctrine'}">${escapeHtml(c.type)}</span><br>
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        <div class="chip-detail">${escapeHtml(c.offenseCite)}</div>
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(b.name)}">
+        <div class="bucket-name">${escapeHtml(b.name)}</div>
+        <div class="bucket-cite">${escapeHtml(b.cite)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">
+      <span class="tag ${TYPE_CLASS[c.type] || 'tag-doctrine'}">${escapeHtml(c.type)}</span><br>${escapeHtml(c.text)}
+    </div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} offenses. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.offenseName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the offense boxes ---------- */
+const COMPACT_KEY = 'penal_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return OFFENSES.length > 15; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand offenses' : 'Collapse offenses';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

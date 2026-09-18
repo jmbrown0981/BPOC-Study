@@ -76,8 +76,13 @@
   .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
   .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
 
-  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px;}
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
   h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
 
   .bucket-grid{
     display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
@@ -91,6 +96,20 @@
   .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
   .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
   .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
   .chip{
     background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
     font-size:11px; line-height:1.35; cursor:default;
@@ -179,7 +198,7 @@
     <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
   </div>
 
-  <h2 class="section-title">Categories <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span></h2>
+  <h2 class="section-title">Categories <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse categories</button></h2>
   <div class="bucket-grid" id="bucketGrid"></div>
 
   <h2 class="section-title tray-title">Cards to Sort</h2>
@@ -260,8 +279,9 @@ function renderBuckets(){
         <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
         ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
       </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
     return `
-      <div class="bucket" data-bucket="${escapeHtml(name)}">
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
         <div class="bucket-name">${escapeHtml(name)}</div>
         <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
         <div class="bucket-solved">${chips}</div>
@@ -408,6 +428,25 @@ function updateBucketHover(x, y){
   if(bucketEl) bucketEl.classList.add('drag-over');
 }
 
+/* ---------- collapse/expand the category boxes ---------- */
+const COMPACT_KEY = 'victims_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 15; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand categories' : 'Collapse categories';
+}
+
 /* ---------- wiring ---------- */
 document.getElementById('newRoundBtn').onclick = newRound;
 document.getElementById('roundBannerNewRound').onclick = newRound;
@@ -418,7 +457,13 @@ document.getElementById('resetScoreBtn').onclick = () => {
 document.getElementById('hideInstructions').onclick = () => {
   document.getElementById('instructionsNote').style.display = 'none';
 };
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
 
+applyCompactState();
 newRound();
 </script>
 
