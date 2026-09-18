@@ -1,0 +1,241 @@
+- "Fight-or-flight" reaction:
+  - Adrenaline begins to pump through body.
+  - Body may relieve itself of excess materials, like ingested food.
+  - Physical senses, one or more, may become very acute while others "shut down."
+  - Heart rate increases.
+  - Hyperventilation, sweating, etc.
+
+- Cataclysm of emotions
+  - Anger/rage
+  - fear/terror
+  - grief/sorrow
+  - confusion/ frustration
+  - guilt/self- blame
+  - violation/vulnerability
+  - shame/humiliation
+
+- Psychological response to trauma
+  - Stage one: Shock, Disbelief, and Denial
+  - Stage two: Cataclysm of emotions
+  - Stage three: Reconstruction of equilibrium
+
+- Additional Psychological Responses
+  - Slowed thinking
+  - Fearful thoughts
+  - Memory problems
+  - Distressing dreams
+  - Blaming
+  - Illogical thinking
+  - Flashbacks of a previous trauma
+  - Intrusive thoughts
+  - Poor judgment
+  - Difficulty making decisions
+
+- Behavioral Response
+  - Crying spells
+  - Extreme hyperactivity
+  - Change in activity level
+  - Withdrawal
+  - Increase/decrease in appetite, sleep, or sex drive
+  - Increased smoking, drug, and/or alcohol use
+  - Startle easily
+  - Conflicts with others
+  - Change in hygiene and/or self-care
+  - Change in social patterns and/or communication
+  - Significant increase or decrease in productivity
+  - Avoiding reminders of event
+  - Inability to stop focusing on what occurred
+  - Getting immersed in recovery-related tasks
+
+- The Range of the Crisis Reaction:
+  - Shock
+  - Depression and loneliness
+  - Panic
+  - Hostility and resentment
+  - Hope
+  - Emotion
+  - Physical symptoms of distress
+  - Guilt
+  - Inability to resume normal activities
+  - Affirming reality
+
+- Trauma is accompanied by a multitude of losses
+  - Control over one's life
+  - Sense of fairness or justice
+  - A sense of immortality and invulnerability
+  - Trust in God or in other people
+  - Personally significant property, self, or loved ones
+  - Future
+  - Because of the losses, trauma responses involve grief and bereavement.
+
+- Individuals feeling very childlike
+  - Feeling very “little”
+  - Wanting “mommy” or “daddy” to come and take care of them
+  - Feeling very “weak”
+  - Feeling like they did when they were a child, and something went terribly wrong
+  - Singing nursery rhymes
+  - Assuming a fetal position or crawling instead of walking
+  - Calling a law enforcement officer or other authority figure “mommy” or “daddy”
+
+- Recovery from immediate trauma is often affected by
+  - Severity of crisis reaction
+  - Ability to understand in retrospect what happened.
+  - Stability of victim/survivor equilibrium after event
+  - Supportive environment
+  - Validation of experience (e.g., it was terrible; the feelings/thoughts someone is having are natural and understandable given what they have been through, etc.)
+
+- Intensity continuum
+  - Crime-specific
+  - Victim-specific
+  - Cultural differences
+
+- Recovery issues for survivors
+  - Getting control of event in victim/survivor’s mind.
+  - Working out an understanding of event and, as needed, a redefinition of values.
+  - Re-establishing a new equilibrium/life.
+  - Re-establishing trust.
+  - Re-establishing a future.
+  - Re-establishing meaning.
+
+- Trigger events
+  - Identification of the assailant.
+  - Sensing (seeing, hearing touching, smelling, tasting) something similar to something that one was acutely aware of during the trauma.
+  - “Anniversaries” of the event
+  - The proximity of holidays or significant “life events”
+  - Hearings, trials, appeals or other critical phases of the criminal justice proceeding.
+  - Media articles about a similar event.
+
+- PTSD sufferers
+  - Survivors of combat
+  - rape survivors
+  - survivors of floods
+  - survivors of abductions
+  - survivors of airplane crashes
+  - survivors of a kidnapping or hostage situation
+  - Children who have endured an inappropriate sexual experience
+  
+- Criteria for Post-Traumatic Stress Disorder:
+  - The event involved actual or threatened death or serious physical injury to the patient or to others.
+  - The patient felt intense fear, horror, or helplessness.
+  - Intrusive, distressing recollections (thoughts, images).
+  - Repeated, distressing dreams.
+  - Flashbacks, hallucinations, or illusions, feeling or acting as if the event were recurring (includes experiences that occur when intoxicated or awakening).
+  - Marked mental distress in reaction to internal or external cues that symbolize or resemble some part of the event.
+  - Physiological reactions (such as rapid heartbeat, elevated blood pressure) in response to these cues.
+  - Tries to avoid feelings, thoughts, or conversations concerned with the event.
+  - Tries to avoid activities, people, or places that recall the event.
+  - Cannot recall an important feature of the event.
+  - Experiences marked loss of interest or participation in activities important to the patient.
+  - Feels detached or isolated from other people.
+  - Experiences restriction in ability to love or feel other strong emotions.
+  - Feels life will be brief or unfulfilled (lack of marriage, job, children).
+  - Insomnia (initial or interval)
+  - Angry outbursts or irritability
+  - Poor concentration
+  - Excessive vigilance
+  - Increased startle response
+  - Symptoms have lasted longer than one month.
+  - These symptoms cause clinically important distress or impair work, social, or personal functioning.
+
+- The phases of a victim’s reaction to crime (crisis)
+  - Impact
+  - Recoil
+  - Reorganization
+
+- The ripple effect
+  - Immediate victim (1)
+  - Secondary victims: family and friends (2)
+  - Service providers, EMS, police (3)
+
+- Trauma-Informed Approaches:
+  - A trauma-informed approach is a victim-centered collaborative approach using trauma specific principles to understand the impact of trauma and the effects of trauma on a victim and respond to the victim to reduce re-traumatization and to enhance healing of the victim. The trauma-informed approach is based on 4 key assumptions, or the 4R’s and the six (6) key principles.
+- The 4R’s of trauma-informed approach
+  - Realize - Realize the prevalence of trauma and understand trauma can affect individuals, families, groups, and communities. The victim’s experiences and behaviors are understood in context of the coping strategies used to survive an overwhelming incident.
+  - Recognize - Recognize the signs and symptoms of someone that has experienced trauma. Symptoms can include, but are not limited to exhaustion, confusion, sadness, anxiety, agitation, numbness, dissociation, inappropriate laughter, hysteria, or a blunt or flat affect. (Trauma-Informed Care in Behavioral Health Services, 2014) There is no one right way to react to trauma.
+  - Respond - Respond by applying the principles of trauma-informed approach to victims using language, behaviors, policies to consider the experience of trauma.
+  - Resist re-traumatization - Take measures while interacting with the victim to prevent re-traumatizing the victim by using skills learned.
+
+
+- Six key principles of the trauma-informed approach
+  - Safety - The victim feels safe both physically, emotionally, and psychologically.
+  - Trustworthiness and Transparency - Develop trust and be transparent with the victim.
+  - Peer support - Support victims to aid in recovery.
+  - Collaboration and mutuality - Partnering with victims and others such as an advocate, prosecutor to make decisions and sharing power with the victim.
+  - Empowerment and voice and choice - Allow victims to share in decision-making, having a choice, and a voice in the process.
+  - Cultural historical and gender issues - Offer access to services and protocols responsive to cultural needs of the victim, free of cultural stereotypes, and biases.
+
+- Victim Intervention and Response:
+  - Assure victims that their reactions are natural and understandable.
+  - Recognize “frozen fright” or the victim’s complete disassociation between them and the event.
+  - Victims may deny or minimize the impact of the assault or crime they’ve been subjected to.
+  - Victims may start experiencing physical pains such as fatigue, muscle tension, or physical illness as a result of the trauma, and how the trauma was addressed or understood by law enforcement as well as their own family.
+  - Victims may become overly fearful and/or hypervigilant developing a heightened sense of caution, crime prevention, and anxiety.
+
+- How to help victims:
+  - Contact a victim advocate through one of the local area resources.
+  - Communicate empathy and allow the victims to vent. Empathy is crucial in that it helps establish rapport with the victim as well as facilitating cooperation by the victim.
+  - Help victims regain a sense of control. For example, ask the victim if there is anyone who they would like called in their behalf or some responsibility that the officer can help address or resolve.
+  - Establish the victim’s role in the process as part of a team effort through statements such as “we need to review this information together” or “we are going to talk about the incident.”
+  - Consider cultural issues such as the victim’s lack of eye-contact or what the victim may not necessarily trust law enforcement.
+  - If the victim has a specific mental or physical disability, arrangements and/or contacts by responding peace officers should include appropriate notifications.
+
+- Open ended questions
+  - “What are you able to tell me about your experience?”
+  - “What can you tell me about the person who did this (to you)?”
+  - “What can you tell me about anything the person said before, during, or after the incident?”
+  - “What are you able to tell me about the time of the incident?”
+  - “What was the most difficult part of this experience for you?
+  - "What can’t you forget?"
+  - “You mentioned to me that they grabbed you around the neck. Tell me everything about that.”
+  - “Tell me more about ,” or “You mentioned there was a gun. What can you tell me about the gun?”
+  - “There could be potential evidence on the clothing you were wearing. Are those the clothes you had on?” or
+  - “Tell me about the conditions that prohibited you from leaving/escaping.”
+
+- Sources of secondary victimization
+  - The criminal justice system
+  - The media
+  - Family, friends, or acquaintances
+  - Clergy
+  - Hospital and emergency-room personnel
+  - Health and mental health professionals
+  - Social service workers
+  - Victim service workers
+  - Schools or educators
+
+- Potential economic impact to victims:
+  - Medical care
+  - Lost earnings
+  - Property loss/damage
+
+- Recommended Procedures for Notification of Death
+  - Notification should occur as soon as the deceased identity has been established.
+  - Get all the medical information possible about the person(s) to be informed of the death.
+  - Go. Do not call.
+  - At least one person should be in uniform.
+  - Talk about your feelings with your partner.
+  - If a child answers the door, request to speak to their parents.
+  - Present your credentials and ask to come in.
+  - Sit down. Do not be stiff and formal.
+  - Convey the information simply and directly.
+  - Ask parents or spouse if they want to tell the children or if they want you to tell them.
+  - Do not discount feelings -- theirs or yours.
+  - Be prepared if the bereaved goes into shock.
+  - Empathize with the survivors in their grief.
+  - Answer questions honestly.
+  - Provide information without jeopardizing a criminal investigation.
+  - Offer to make calls.
+  - Survivors should be informed that it might be necessary for them to identify the deceased.
+  - Explain why an autopsy is necessary and how to obtain a copy of the report.
+  - Tell hospital personnel what information the family has been given.
+  - Survivors should be informed that law enforcement officials might need to question them at a later time.
+  - Do not leave the survivor(s) alone.
+  - Stay with the survivor(s) if they wish and help with decisions.
+  - Provide the survivor(s) with the officer’s names and telephone numbers.
+  - The law enforcement officers should contact appropriate agencies in other jurisdictions to notify additional surviving family members.
+  - Preserve and label the package containing the deceased's clothing and personal effects.
+  - Allow hospitals adequate time to prepare the body for identification.
+  - Provide survivors with sufficient time with the deceased.
+  - Talk to the media only if the family has given permission.
+  - Give the survivor(s) an information sheet with pertinent information.
+  - Make a call the next day.
+  - Let the survivors know you care.
