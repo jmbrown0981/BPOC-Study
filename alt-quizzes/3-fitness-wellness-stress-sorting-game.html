@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 3 Fitness, Wellness, and Stress Management Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:default;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+  .chip{cursor:pointer;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:260px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 3 &middot; Fitness, Wellness, and Stress Management &middot; Supplemental Practice</p>
+    <h1>Fitness, Wellness &amp; Stress Management Sorting Game</h1>
+    <p class="sub">Drag (or tap) each card onto the category it belongs to. A correct drop scores a point and locks the card in; a miss gets tracked and the card goes back in the tray so you can try again. New rounds pull a fresh, random mix of categories and cards from the full Ch.3 outline &mdash; fitness and wellness fundamentals, nutrition, stress physiology, stress-management techniques, and critical-incident and suicide-awareness content. This chapter covers sensitive topics (suicide, substance abuse, trauma) as part of standard officer-wellness training.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Buckets <input type="number" id="numBuckets" min="2" max="60" value="8"></div>
+      <div class="setup-field">Cards/bucket <input type="number" id="numCards" min="1" max="10" value="3"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a category box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the category box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see any extra detail). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Categories <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse categories</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Cards to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from the Ch.3 Fitness, Wellness, and Stress Management outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "Definition of Physical Fitness", "items": [{"text": "The condition of the body that enables an individual to use his/her body in activities without undue experience of fatigue and exhaustion."}]}, {"name": "Functional and Health-Related Fitness", "items": [{"text": "Cardiovascular fitness or endurance"}, {"text": "Flexibility"}, {"text": "Muscular endurance (dynamic strength)"}, {"text": "Muscular strength (absolute strength)"}, {"text": "Body Composition"}]}, {"name": "Motor Fitness", "items": [{"text": "Agility"}, {"text": "Anaerobic power (Speed)"}, {"text": "Explosive leg strength or power"}]}, {"name": "Definition of Wellness", "items": [{"text": "A person’s health/disease status and risk potential. Wellness ranges on a continuum from death to optimal well-being — it is not just the absence of disease, but a state of positive well-being. Total well-being involves positive lifestyle/health behaviors for balanced physical, mental, spiritual, and socio-emotional wellbeing. A person can be physically fit but not well — wellness goes beyond performance."}]}, {"name": "Leading Causes of Death in the US", "items": [{"text": "Heart Disease (39%)"}, {"text": "Other (27%)"}, {"text": "Cancer (22%)"}, {"text": "Stroke (7%)"}, {"text": "Accidents (5%)"}]}, {"name": "Health and Disability Status of Law Enforcement as a Profession", "items": [{"text": "Higher rate of alcoholism"}, {"text": "Higher rate of suicide"}, {"text": "Elevated divorce rate"}]}, {"name": "Improving Your Position on the Wellness Continuum", "items": [{"text": "Stop — harmful drugs, smoking, and chewing tobacco."}, {"text": "Limit alcohol."}, {"text": "Exercise regularly."}, {"text": "Eat less animal fat, cholesterol, and sodium."}, {"text": "Eat more complex carbohydrates and drink more water."}, {"text": "Achieve and maintain a healthy body weight as discussed with your doctor."}, {"text": "Limit sunlight exposure or wear sunblock."}, {"text": "Get immunizations."}, {"text": "Get regular medical check-ups and self-exams."}]}, {"name": "Par-Q", "items": [{"text": "A useful checklist tool to assist in determining if medical screening is needed."}]}, {"name": "Principles of an Exercise Program", "items": [{"text": "Progressive Overload"}, {"text": "Regularity and Recovery"}, {"text": "Specificity"}, {"text": "Balance"}]}, {"name": "FITT Guidelines", "items": [{"text": "Frequency"}, {"text": "Intensity"}, {"text": "Time"}, {"text": "Type"}]}, {"name": "FITT: Cardiovascular Training", "items": [{"text": "Frequency (cardio)", "detail": "Minimum 3 days a week"}, {"text": "Intensity (cardio)", "detail": "Target Heart Rate (THR) zone — 60–80% of predicted maximum heart rate — or Rating of Perceived Exertion (RPE) 13–15 (Borg)"}, {"text": "Time (cardio)", "detail": "Progress gradually from a starting point (may be 5 minutes) to a minimum of 20 minutes at THR"}, {"text": "Type (cardio)", "detail": "Aerobic (with oxygen) exercise that is rhythmic and uses large muscle groups over an extended period — running, rowing, cross-country skiing, walking, swimming, cycling, aerobic dance"}]}, {"name": "FITT: Strength Training", "items": [{"text": "Frequency (strength)", "detail": "2–4 days a week; allow at least 48 hours between sessions if using the same muscle groups"}, {"text": "Intensity (strength)", "detail": "Begin at 13 RPE and progress to 15–16 RPE. Muscle endurance: low resistance, high repetitions (12–20 reps). Muscle strength: higher resistance, lower repetitions (8–12 reps)."}, {"text": "Time (strength)", "detail": "Time to complete 1–3 sets (begin with 1 set)"}, {"text": "Type (strength)", "detail": "Weight training or calisthenics"}]}, {"name": "FITT: Flexibility Training", "items": [{"text": "Frequency (flexibility)", "detail": "3–7 days a week"}, {"text": "Intensity (flexibility)", "detail": "Hold to an easy point of tension — do not bounce"}, {"text": "Time (flexibility)", "detail": "10–20 seconds per stretch; 3–5 minutes at cool down"}, {"text": "Type (flexibility)", "detail": "Best gains are made after cardiovascular exercise, when muscles and connective tissue are warm; stretches should be short during warm-up and sustained after exercise, always slow and without bouncing"}]}, {"name": "FITT: Anaerobic Training", "items": [{"text": "Frequency (anaerobic)", "detail": "1–2 days a week; can be a stand-alone session or incorporated during/after a cardiovascular workout"}, {"text": "Intensity (anaerobic)", "detail": "All-out effort — 90% of maximum heart rate"}, {"text": "Time (anaerobic)", "detail": "Repeat short bursts of intense exercise (20–60 seconds) followed by a period of rest"}, {"text": "Type (anaerobic)", "detail": "Sprints — cycling, running, leaping, skipping, stair climbing"}]}, {"name": "Components of an Exercise Program", "items": [{"text": "Warm Up (5–10 minutes)"}, {"text": "Work Out (20–30 minutes)"}, {"text": "Cool Down (5–10 minutes)"}]}, {"name": "Heat Index Warnings", "items": [{"text": "80–90°", "detail": "Fatigue is possible with prolonged exposure/activity"}, {"text": "90–104°", "detail": "Heat stress possible with prolonged exposure/activity"}, {"text": "105–129°", "detail": "Heat stress likely; heat stroke possible with prolonged exposure"}, {"text": "130°+", "detail": "Heatstroke highly likely with continued exposure"}]}, {"name": "Fuel Nutrients", "items": [{"text": "Carbohydrates"}, {"text": "Fats"}, {"text": "Proteins"}]}, {"name": "Non-Fuel Nutrients", "items": [{"text": "Vitamins"}, {"text": "Minerals"}, {"text": "Water"}]}, {"name": "Simple Carbohydrates", "items": [{"text": "Sweets"}, {"text": "Soft drinks"}, {"text": "White flour"}, {"text": "Ice cream"}, {"text": "Cake"}]}, {"name": "Complex Carbohydrates", "items": [{"text": "Potatoes"}, {"text": "Whole grains"}, {"text": "Beans"}, {"text": "Fruits"}, {"text": "Vegetables"}]}, {"name": "Nutritional Needs (Recommended Calorie Breakdown)", "items": [{"text": "Fat", "detail": "No more than 30% of total calories; 7–10% for those with heart or cholesterol problems"}, {"text": "Protein", "detail": "10–15% of total calories"}, {"text": "Carbs", "detail": "50–55% of total calories"}]}, {"name": "Making Diet Choices Sensibly", "items": [{"text": "Choose a diet that is low in saturated fat and cholesterol, and moderate in total fat."}, {"text": "Choose beverages and foods to moderate your intake of sugars."}, {"text": "Choose and prepare foods with less salt."}, {"text": "If you drink alcoholic beverages, do so in moderation."}]}, {"name": "Other Healthy Eating Choices", "items": [{"text": "Eat a balanced diet and a variety of foods at each meal."}, {"text": "Make low fat, low cholesterol choices: chicken, fish, low fat milk."}, {"text": "Avoid trans fats found in many packaged crackers, cookies, and processed snack foods."}, {"text": "Establish consistent eating patterns and do not skip meals."}, {"text": "Eat smaller, easily digested meals."}, {"text": "Eat slowly, in a relaxed, pleasant place."}, {"text": "Balance, variety, and moderation are the keys to adequate nutrition."}, {"text": "Learn to read labels to make good nutritional choices."}]}, {"name": "Definition of Stress", "items": [{"text": "A natural reaction of the mind and body to a demand placed on it — pleasant or unpleasant."}, {"text": "Biochemical and hormonal processes occur which affect physical and psychological functioning."}, {"text": "You NEED stress — it adds flavor, challenge, and opportunity, but unmanaged it can seriously affect your physical and mental well-being."}]}, {"name": "Eustress", "items": [{"text": "A promotion"}, {"text": "Getting married"}, {"text": "Achieving an accomplishment"}]}, {"name": "Distress", "items": [{"text": "Injury"}, {"text": "Illness"}, {"text": "Divorce"}, {"text": "Being fired"}]}, {"name": "Acute Stress", "items": [{"text": "Short-term stress with a quick resolution — the type of stress our body handles best."}, {"text": "Example: a threatening dog — the mind and body gear up with the “fight or flight” response to handle the stress quickly, then settle down."}]}, {"name": "Chronic Stress", "items": [{"text": "A prolonged, unrelieved stress; also called cumulative stress."}, {"text": "Prolonged unrelieved wear and tear results from too many demands (like driving with your foot on the brake)."}, {"text": "An extreme example of this is burnout — when a person loses energy and interest because of unrelieved stress."}]}, {"name": "Critical Incident Stress (Definition)", "items": [{"text": "Incident specific."}, {"text": "Causes psychological and physical discomfort for two days to one month."}, {"text": "Considered a “normal” response to an abnormal, extreme incident."}, {"text": "Examples: working a gruesome accident, involvement in a use-of-force incident or shooting, or body recovery of a child."}]}, {"name": "Definition of a Stressor", "items": [{"text": "A demand, real or imagined, that disrupts a person’s equilibrium and initiates the stress response."}, {"text": "Can be social, psychological, spiritual, or physical, and can be positive (eustress) or negative (distress)."}, {"text": "The body’s response is non-specific and varies only in degree and duration — not influenced by the situation or the demand causing the response."}]}, {"name": "Nervous System Parts", "items": [{"text": "Central Nervous System", "detail": "Brain and spinal cord — the command center"}, {"text": "Sympathetic Nervous System", "detail": "Creates biochemical changes to the mind and body to prepare to respond to threat (fight or flight) — like pushing the accelerator of a car"}, {"text": "Parasympathetic Nervous System", "detail": "Responsible for rest, digestion, and nutrient absorption; when the Central Nervous System perceives a threat, the Sympathetic Nervous System activates and the Parasympathetic System is reduced"}]}, {"name": "Effects of Sympathetic Nervous System Activation (the “Stress Cocktail”)", "items": [{"text": "Increases in heart rate, blood pressure, breathing, sweating, oxygen consumption, muscle tension, and alertness"}, {"text": "Major blood flow changes — blood shunted to arms, legs, and brain, and away from noncritical organs (stomach, liver, intestines, immune system)"}, {"text": "Clotting factors change to allow blood to clot more quickly in case of a wound"}]}, {"name": "Cognitive/Behavioral Effects of Stress", "items": [{"text": "Impaired decision making, memory, and the ability to focus or engage in a task."}, {"text": "Alcoholism"}, {"text": "Suicide"}, {"text": "Abrupt change in typical behavior patterns"}, {"text": "Rapid mood changes"}, {"text": "Overly suspicious"}, {"text": "Overly irritable to overly hostile"}, {"text": "Blaming others for problems"}, {"text": "Argumentative"}, {"text": "Depression"}]}, {"name": "Physical Effects of Stress", "items": [{"text": "Digestive disorders"}, {"text": "Headaches"}, {"text": "Excessive illnesses"}, {"text": "High blood pressure"}, {"text": "Sleep disorders"}]}, {"name": "Social Effects of Stress", "items": [{"text": "Emotionally distancing"}, {"text": "Relationship problems"}, {"text": "Divorce resulting from stress"}]}, {"name": "Stressors External to the Agency", "items": [{"text": "Frustration with the judicial system"}, {"text": "Lack of consideration by the courts for scheduling officer appearances"}, {"text": "Perceived lack of public support"}, {"text": "Negative or distorted media coverage of policing"}, {"text": "Officers’ dislike of the decisions and interests of city council, county commissioners, or the legislature"}]}, {"name": "Stressors Internal to the Agency", "items": [{"text": "Policies that are offensive to officers"}, {"text": "Poor training and inadequate career development opportunities"}, {"text": "Lack of identity and recognition for good performance"}, {"text": "Poor economic benefits, working conditions, and equipment"}, {"text": "Excessive paperwork"}, {"text": "Inconsistent discipline"}, {"text": "Perceived favoritism regarding promotions and assignments"}]}, {"name": "Stressors Internal to the Work Itself", "items": [{"text": "Rigors of shift work, especially rotating shifts, which alter body rhythms and personal life"}, {"text": "Frequent exposure to life’s hardships"}, {"text": "Boredom, interrupted by the need for sudden action"}, {"text": "Fear and dangers of the job"}, {"text": "Constant responsibility for protecting other people"}, {"text": "Fragmented nature of the job, which rarely allows following a case through to conclusion"}, {"text": "Work overload"}, {"text": "Crisis-driven and therefore unpredictable, which can be hard on families because of last-minute changes"}, {"text": "Daily routine of family life can seem mundane compared to the brief periods of excitement on the job; when the job becomes commonplace, cynicism, drugs, or alcohol may set in to fill the gap of the adrenaline rush once experienced."}]}, {"name": "Stressors Confronting the Individual Officer", "items": [{"text": "Fears regarding job competence, individual success, and safety"}, {"text": "Necessity to conform, and inclusion in the occupational subculture"}, {"text": "Necessity to take a second job or to further education"}, {"text": "Altered social status in the community due to attitude changes toward a person because he or she is an officer"}, {"text": "The officer’s life is under public scrutiny and a higher expectation of behavior, often called “fishbowl living”"}, {"text": "Work stress comes home, home stress goes to work — family members can become targets for stress produced at work and vice versa"}]}, {"name": "Unhealthy Law Enforcement Personality Traits", "items": [{"text": "Traits that make a good, safe officer can often wreak havoc on the home front."}, {"text": "Cynicism and distrust — the practice of always looking for what is wrong in people; the “us vs. them” mentality."}, {"text": "Emotional control can result in the inability to emotionally engage at home."}, {"text": "The need for control is necessary on the job, but the ability to relinquish or share control may be difficult at home."}, {"text": "Sensation seeker/adrenaline junkie — remaining hypervigilant off duty."}, {"text": "Over-protectiveness of family."}, {"text": "Over-immersion in job."}]}, {"name": "Three Basic Approaches to Stress Management", "items": [{"text": "Avoid"}, {"text": "Alter"}, {"text": "Adapt/Accept"}]}, {"name": "Avoid (Stress Management Approach)", "items": [{"text": "Reducing or eliminating exposure to a stressor"}, {"text": "Avoiding or reducing exposure to biophysical stressors in the environment, such as excessive noise and cigarettes"}, {"text": "Psychic stress caused by feelings of overload and lack of control can be lessened by learning and applying effective time-management techniques — for example, leaving early to avoid traffic or choosing a less busy route"}, {"text": "Saying no, walking away, setting boundaries"}]}, {"name": "Alter (Stress Management Approach)", "items": [{"text": "Minimizing the physiological response of the body to a stressor"}, {"text": "Remove stress by changing something"}, {"text": "Time Management"}, {"text": "Problem Solving"}, {"text": "Planning"}, {"text": "Direct communication"}]}, {"name": "Adapt/Accept (Stress Management Approach)", "items": [{"text": "Nurture the mind and the emotions"}, {"text": "Take time away from work"}, {"text": "Focus on hobbies and outside interests"}, {"text": "Gain knowledge in a variety of areas, not just the job"}, {"text": "Rest and relaxation allow the Parasympathetic Nervous System to engage, allowing digestion, repair, and immune response"}, {"text": "Physical exercise “plays out” the fight-or-flight response to stress, allowing the body and mind to return to equilibrium faster"}, {"text": "Engage in community involvement activities and nurture relationships in and outside of law enforcement"}, {"text": "Engage emotionally with family and friends"}, {"text": "Spiritual/Faith System"}, {"text": "Be positive and supportive of yourself"}, {"text": "Don’t dwell on negative or degrading thoughts"}, {"text": "Identify and rewrite negative thoughts into positive, realistic expectations — e.g. “I should succeed at everything I do” becomes “When I fail, I’ll get up and try again or try something different.”"}]}, {"name": "Visualization", "items": [{"text": "Mental imagery to visualize yourself succeeding at a task, being strong."}]}, {"name": "Guided Imagery", "items": [{"text": "Guided daydreaming elicits a relaxation response."}, {"text": "Imagining being in a beautiful, peaceful place, and mentally engaging the senses with colors, sights, smells, touch, and sounds."}]}, {"name": "Unguided Imagery", "items": [{"text": "Daydreaming without direction."}]}, {"name": "Thought Stopping/Blocking/Focusing", "items": [{"text": "Techniques to force your mind off of stressors — you refuse to allow your mind to dwell on a subject by forcing it to dwell on a specific topic instead."}]}, {"name": "Tactical (Deep) Breathing", "items": [{"text": "Breathe in for a count of 4, hold for 4, and exhale for 4, using diaphragm (belly) breathing."}, {"text": "Slow, deep breathing kicks in the Parasympathetic Nervous System, causing the heart rate and blood pressure to lower and the body to relax."}]}, {"name": "Progressive Muscular Relaxation", "items": [{"text": "A technique that teaches how to recognize muscular tension, and how to make a muscle relax, causing general relaxation."}]}, {"name": "Effects of Stress on Performance — the “Inverted-U Principle”", "items": [{"text": "115 BPM", "detail": "Fine motor skills deteriorate"}, {"text": "145 BPM", "detail": "Complex motor skills deteriorate"}, {"text": "175 BPM", "detail": "Cognitive processing deteriorates"}, {"text": "220 BPM", "detail": "Hypervigilance and irrational behavior"}]}, {"name": "Physical and Psychological Effects of Critical Incident Stress (CIS)", "items": [{"text": "A traumatic event that causes a strong emotional reaction which has the potential to interfere with an individual’s ability to function, at the scene or later, often later."}, {"text": "The incident temporarily disrupts your everyday life, forcing you to face death, your vulnerability, pain, severe loss, or horror (e.g., a shooting, use-of-force incident, heart attack, or catastrophic illness)."}, {"text": "An occupational hazard — most officers will experience CIS in their personal or professional life at some time."}, {"text": "Memory lapses may occur (e.g., the number of shots fired or how many people were involved). Most memories return in 24 to 48 hours — reports written during this time should be considered preliminary."}, {"text": "Memories of a traumatic experience can be categorically different from memories of a non-traumatic one; the person may only encode certain details or recall sensory information like taste, touch, or smell, and traumatic memory may be fragmented or non-linear, returning at different times."}]}, {"name": "Five Phases of Transition After a Traumatic Event", "items": [{"text": "Denial Phase"}, {"text": "Anger Phase"}, {"text": "Bargaining Phase"}, {"text": "Depression Phase"}, {"text": "Acceptance Phase"}]}, {"name": "Assisting Yourself or Someone Else Cope With a Critical Incident", "items": [{"text": "Assist with basic needs first."}, {"text": "Physical presence — sit quietly with them, listen, listen, listen; allow silence if they don’t want to talk."}, {"text": "Don’t offer answers; offer presence, comfort, reality, assistance with logistics and decisions, and listen, listen, listen."}, {"text": "Continued reassurance that what they are experiencing is normal in this abnormal situation."}, {"text": "Assist in keeping routine as much as possible (e.g., rest, exercise, eating)."}, {"text": "Ensure someone is close (e.g., a partner or significant other stays close by)."}, {"text": "Assist with resources (e.g., CISM team, Employee Assistance Program, PEER Network)."}, {"text": "Designate someone to handle media, and follow department guidelines regarding these incidents."}]}, {"name": "Post-Traumatic Stress Disorder (PTSD)", "items": [{"text": "Symptoms are like CIS but are more severe and persist longer than one month after an incident, continuing to affect the person’s life."}, {"text": "The response pattern triggered by a similar stressor is similar in intensity to the original event — as if the person is reliving it, not just remembering it; it may be triggered by a similar sound, sight, smell, or sensation."}, {"text": "Avoidance of reminders of the event, and numbed responses to normal events."}, {"text": "Increased arousal with sleep difficulties, exaggerated startle responses, unusual irritability, or anger outbursts."}, {"text": "Professional psychological help is needed to recover."}]}, {"name": "Awareness of the Prevalence of Suicide", "items": [{"text": "90% of people who die by suicide have a diagnosable and treatable psychiatric disorder at the time of their death."}, {"text": "Frequency in the US: 1 every 14.2 minutes."}, {"text": "Nearly 1,000,000 people make an attempt every year."}, {"text": "Most people with mental illness do not die by suicide."}, {"text": "Recent data puts yearly medical costs for suicide at nearly $100 million (2005)."}, {"text": "Men are nearly four times more likely to die than women; women attempt three times as often as men."}, {"text": "Rates are highest for people between the ages of 40 and 59."}, {"text": "White individuals are most likely to die by suicide, followed by Native American peoples."}, {"text": "Men more often use firearms; women more often use drugs or poisons (2009)."}]}, {"name": "Common Signs of Suicidal Thoughts and Behavior", "items": [{"text": "Losses — loved one, health, divorce, job, cherished possessions, retirement, financial problems, legal problems, victim of a crime, sexual assault, witness to violence."}, {"text": "Loss or change in an important relationship"}, {"text": "Expresses hopelessness, depression, or guilt"}, {"text": "Change in sleep and/or appetite"}, {"text": "Minimal social support"}, {"text": "Alcohol/substance abuse"}, {"text": "Legal problems/financial problems"}, {"text": "Under investigation"}, {"text": "Talks about death or wanting to die"}]}, {"name": "Strategies to Assist a Coworker Contemplating Suicide (AID LIFE)", "items": [{"text": "Ask", "detail": "Don’t be afraid to ask, “Are you thinking of hurting or killing yourself?”"}, {"text": "Intervene", "detail": "Take action immediately; tell the person they are not alone."}, {"text": "Don’t keep it a secret", "detail": "Don’t promise confidentiality — get others involved."}, {"text": "Locate help", "detail": "Seek a mental health professional, peer support, chaplain, family member, or friend."}, {"text": "Inform", "detail": "Inform the supervisor of the situation."}, {"text": "Find", "detail": "Find someone to stay with the person."}, {"text": "Expedite", "detail": "Get help immediately and don’t leave the person alone."}]}, {"name": "Signs and Symptoms of Drug/Alcohol Abuse", "items": [{"text": "Failed attempts to cut back or quit for whatever reason"}, {"text": "Difficulty enjoying life or social settings without alcohol or drugs"}, {"text": "Declining performance"}, {"text": "Feeling guilty about drinking/drug use, or angry if confronted about it"}, {"text": "Drinking alcohol or frequently hung over on the job"}, {"text": "Needing a drink to get going"}, {"text": "Financial or relationship problems related to alcohol or drugs"}, {"text": "Blaming others for one’s own drug or alcohol use"}, {"text": "Hiding alcohol or drugs"}, {"text": "Blackouts or lapses of memory"}, {"text": "Heavy reliance on alcohol for escape or reward"}, {"text": "Use of alcohol to replace direct communication or problem-solving"}, {"text": "Loss of control of drinking"}, {"text": "Drinking despite consequences — alcohol is the perfect solvent, dissolving jobs, homes, and families"}, {"text": "Drinking to “prepare” or “recover” from an event"}]}, {"name": "Steroid Use — Physical and Psychological Changes", "items": [{"text": "Increased cholesterol, triglycerides, and glucose"}, {"text": "Increased irritability and hostility (“road rage”)"}, {"text": "Increased risk of liver cancer, hepatitis, hypertension, and diabetes"}, {"text": "Mood swings and increased aggressiveness"}, {"text": "Acne"}, {"text": "Voice lowering (in females)"}, {"text": "Increases in facial and body hair"}, {"text": "Above-normal gains in muscle mass"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(10, Number(document.getElementById('numCards').value) || 3));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} categories. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the category boxes ---------- */
+const COMPACT_KEY = 'fitness_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 15; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand categories' : 'Collapse categories';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
