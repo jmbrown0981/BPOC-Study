@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 21 Human Trafficking Case Classifier | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:860px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-primary:disabled{opacity:0.45; cursor:not-allowed;}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:860px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  .case-card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:22px 22px 20px; box-shadow:0 2px 10px rgba(19,35,57,0.06);}
+  .case-badge{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); font-weight:600; margin:0 0 10px;}
+  .case-prompt{font-family:'IBM Plex Serif',serif; font-size:16.5px; line-height:1.6; color:var(--ink); margin:0 0 20px;}
+
+  .answer-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:6px;}
+  .answer-btn{
+    text-align:left; background:#fff; border:1.5px solid var(--rule); border-radius:9px; padding:12px 14px;
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13px; color:var(--ink); cursor:pointer;
+    transition:border-color .12s ease, background .12s ease, transform .1s ease;
+  }
+  .answer-btn:hover:not(:disabled){border-color:var(--brass); transform:translateY(-1px);}
+  .answer-btn:disabled{cursor:default;}
+  .answer-btn.picked{border-color:var(--navy); box-shadow:0 0 0 2px var(--navy-2) inset;}
+  .answer-btn.correct-answer{border-color:var(--green); background:#EAF1EA; color:#2E4A32;}
+  .answer-btn.wrong-pick{border-color:var(--rust); background:#FBEDE6; color:#7A2E10;}
+
+  .feedback{display:none; margin-top:18px; padding-top:18px; border-top:1px dashed var(--rule);}
+  .feedback.show{display:block;}
+  .feedback-verdict{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:15px; margin:0 0 8px;}
+  .feedback-verdict.right{color:var(--green);}
+  .feedback-verdict.wrong{color:var(--rust);}
+  .feedback-explain{font-size:13px; line-height:1.6; color:var(--ink-soft); margin:0 0 12px;}
+  .elements-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
+  .elem-chip{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.04em; text-transform:uppercase;
+    border-radius:20px; padding:4px 10px; border:1px solid var(--rule); background:#fff; color:var(--gray);
+  }
+  .elem-chip.active{border-color:var(--brass); background:#FBF6E9; color:#7A5A1E; font-weight:600;}
+  .citation{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin:0 0 16px;}
+  .next-row{display:flex; justify-content:flex-end;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:560px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+    .answer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 21 &middot; Human Trafficking &middot; Supplemental Practice</p>
+    <h1>Trafficking Case Classifier</h1>
+    <p class="sub">Read each short case scenario and classify it: human trafficking, human smuggling, prostitution with
+    no trafficking indicators, or none of these. Answer, then check the explanation and &mdash; for trafficking
+    cases &mdash; which of force, fraud, or coercion apply (or whether the age of a minor victim made that
+    unnecessary). These scenarios cover sensitive subject matter (sexual exploitation, forced labor, minors) as
+    standard officer training content.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">Case: <b id="statProgress">1 / 18</b></span>
+    </div>
+    <div class="setup-row">
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> read the scenario, then pick the single best classification. There's no drag-and-drop here
+    &mdash; just click an answer. Right or wrong, the explanation panel walks through the reasoning and cites the
+    relevant statute, then <b>Next Case</b> moves on. A round is all 18 cases in a fresh random order;
+    finishing one triggers the round-complete banner. Your correct/incorrect count carries across rounds until you
+    hit <b>Reset score</b>.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <div class="case-card">
+    <p class="case-badge" id="caseBadge">Case 1</p>
+    <p class="case-prompt" id="casePrompt"></p>
+    <div class="answer-grid" id="answerGrid"></div>
+
+    <div class="feedback" id="feedback">
+      <p class="feedback-verdict" id="feedbackVerdict"></p>
+      <p class="feedback-explain" id="feedbackExplain"></p>
+      <div class="elements-row" id="elementsRow"></div>
+      <p class="citation" id="citation"></p>
+      <div class="next-row">
+        <button class="btn btn-primary" id="nextCaseBtn" type="button">Next Case</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from the Ch.21 Human Trafficking outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const SCENARIOS = [{"id": "s1", "prompt": "Officers respond to a call about a garment shop operating out of a converted residential building. Inside, they find several immigrant workers sewing clothing up to 18 hours a day for less than $2 an hour. The property owner is holding the workers’ passports, the windows are boarded shut, and the workers say they’ve been told they owe a debt for travel and living costs that never seems to shrink.", "answer": "trafficking", "explanation": "This is labor trafficking. The workers are being held through force (boarded windows, confinement) and coercion (confiscated documents, an unpayable manufactured debt) to compel their labor — the classic debt-bondage pattern. Consent to the original job offer doesn’t matter once force, fraud, or coercion is used to keep someone working against their will.", "elements": {"force": true, "fraud": false, "coercion": true, "minor": false}, "citation": "Tex. Penal Code § 20A.02 — Trafficking of Persons (labor trafficking / debt bondage)"}, {"id": "s2", "prompt": "A man pays a guide $4,000 to help him cross the border into Texas so he can find work. Once across, the guide drops him off at a gas station as agreed, and the two go their separate ways. He finds a construction job on his own the following week.", "answer": "smuggling", "explanation": "This is human smuggling, not trafficking. The border crossing was consensual, the fee was agreed to in advance, and the relationship ended once he reached his destination — no one is exploiting him afterward. Smuggling is a crime against a country’s border; trafficking is a crime against a person.", "elements": {}, "citation": "Tex. Penal Code § 20.05–20.06 — Smuggling of Persons"}, {"id": "s3", "prompt": "An adult woman works independently advertising commercial sex online. She keeps all of her own earnings, sets her own hours, and no one is directing where she goes or taking a cut of what she makes.", "answer": "prostitution", "explanation": "Without evidence that a third party is controlling, profiting from, or using force, fraud, or coercion against her, this is prostitution rather than trafficking. A consensual adult sex worker is not automatically a trafficking victim — and as the chapter puts it, a trafficking victim cannot simultaneously be treated as “a prostitute.” Keep investigating for third-party control, but don’t assume trafficking from the act alone.", "elements": {}, "citation": "Tex. Penal Code § 43.02 — Prostitution"}, {"id": "s4", "prompt": "During a traffic stop, an officer notices a teenage girl in the passenger seat who avoids eye contact and lets the adult male driver answer every question. He gives her first name but can’t provide her last name or date of birth. She turns out to be a runaway the driver has been taking to hotels to meet men for money.", "answer": "trafficking", "explanation": "This is child sex trafficking. When the victim is under 18, the law does not require any proof of force, fraud, or coercion — the commercial sex act itself is enough. The avoided eye contact, the driver answering for her, and the mismatched details are all classic child-trafficking red flags worth stopping to investigate further.", "elements": {"minor": true}, "citation": "Tex. Penal Code § 20A.02(a) — no force/fraud/coercion required when the victim is a minor"}, {"id": "s5", "prompt": "A woman tells officers her husband controls all of the household finances and rarely lets her leave the house without him. She says there’s no job, no third party profiting, and no commercial sex involved — she’s describing their marriage, not any kind of work.", "answer": "not_trafficking", "explanation": "Controlling, isolating behavior is a serious concern, but without forced labor or a commercial sex act being extracted for someone else’s profit, it doesn’t meet the legal definition of human trafficking. This may point to a different offense — like family violence — worth its own investigation, just not this chapter’s crime.", "elements": {}, "citation": ""}, {"id": "s6", "prompt": "A mother brings her 15-year-old daughter to stay with men in exchange for money to help pay rent, and this continues for several weeks.", "answer": "trafficking", "explanation": "This is familial child sex trafficking — a parent or guardian trafficking their own child is explicitly recognized in the chapter as a real and documented pattern. Because the victim is a minor, no proof of force, fraud, or coercion is required.", "elements": {"minor": true}, "citation": "Tex. Penal Code § 20A.02(a) — familial trafficking of a minor"}, {"id": "s7", "prompt": "A group of migrants pays a smuggler for transport across the border. On arrival, instead of releasing them as agreed, the smuggler tells them they now owe an additional $10,000 and forces them to work off the debt at a warehouse, confiscating their phones and IDs.", "answer": "trafficking", "explanation": "What started as smuggling became trafficking the moment exploitation began after arrival. The chapter is explicit that a smuggling case can convert into a trafficking case, and the victims are still entitled to trafficking-victim protections. The new demand for money plus confiscated phones/IDs are fraud and coercion holding them in forced labor.", "elements": {"fraud": true, "coercion": true}, "citation": "Tex. Penal Code § 20A.02 — Trafficking of Persons"}, {"id": "s8", "prompt": "A restaurant owner pays several employees in cash, below minimum wage. The employees say they don’t love the job, but they’re free to quit anytime, and a few have already left for other restaurants this year.", "answer": "not_trafficking", "explanation": "Underpaying workers is a labor-law problem, but without force, fraud that induced the labor, or coercion preventing them from leaving, it doesn’t rise to trafficking — and the fact that employees have freely quit in the past is good evidence against it. Refer this to the appropriate labor authority.", "elements": {}, "citation": ""}, {"id": "s9", "prompt": "Investigators find that a 16-year-old runaway has been advertised for commercial sex online by an adult who provides her hotel rooms and collects all payment from buyers.", "answer": "trafficking", "explanation": "This is internet-facilitated child sex trafficking. Most sex trafficking has moved online because of the anonymity it offers traffickers. As with any minor victim, no proof of force, fraud, or coercion is required — the age alone satisfies the element.", "elements": {"minor": true}, "citation": "Tex. Penal Code § 20A.02(a) — no force/fraud/coercion required when the victim is a minor"}, {"id": "s10", "prompt": "An adult nanny recruited from another country was promised $2,000 a month in a signed contract. After she arrived, her employer confiscated her passport, told her she’d be arrested and deported if she left, and hasn’t paid her anything in eight months.", "answer": "trafficking", "explanation": "This is labor trafficking through fraud and coercion: a false employment promise got her in the door, and document confiscation plus threats of arrest/deportation are keeping her trapped and unpaid. Neither the original signed contract nor her initial consent to travel matters once force, fraud, or coercion is used to hold her in servitude.", "elements": {"fraud": true, "coercion": true}, "citation": "Tex. Penal Code § 20A.02 — Trafficking of Persons (labor trafficking)"}, {"id": "s11", "prompt": "Officers make several arrests during a prostitution sting at a massage parlor. Everyone arrested says they work independently, keep their own earnings, and deny that anyone is controlling or profiting from their activity beyond a standard rent-based business arrangement.", "answer": "prostitution", "explanation": "Absent evidence of a controlling third party or force/fraud/coercion, this reads as prostitution rather than trafficking. It’s worth continuing to screen for trafficking indicators during any prostitution investigation — but an arrest for prostitution shouldn’t automatically be announced or logged as a trafficking rescue when nothing supports it.", "elements": {}, "citation": "Tex. Penal Code § 43.02 — Prostitution"}, {"id": "s12", "prompt": "A farm labor contractor recruits workers, fronts their transportation costs, then tells them they must work off a debt that includes transportation, room, and board. He requires 12-hour days, six or seven days a week, and posts armed guards to keep workers from leaving the property.", "answer": "trafficking", "explanation": "The armed guards preventing escape are force, and the manufactured, ever-growing debt is coercion — together they meet the definition of labor trafficking / debt bondage, regardless of whether the workers initially agreed to the job.", "elements": {"force": true, "coercion": true}, "citation": "Tex. Penal Code § 20A.02 — Trafficking of Persons (labor trafficking / debt bondage)"}, {"id": "s13", "prompt": "A family pays someone to help them cross a river into the U.S. After reaching the other side, the guide leaves, and the family travels on their own to relatives already living in Houston.", "answer": "smuggling", "explanation": "This is smuggling: a consensual, paid border crossing that ends once the destination is reached, with no ongoing exploitation afterward.", "elements": {}, "citation": "Tex. Penal Code § 20.05–20.06 — Smuggling of Persons"}, {"id": "s14", "prompt": "A couple recruits a woman from another country to work as a live-in housekeeper for $300 a month. After she arrives, they confiscate her passport, don’t allow her any contact with anyone outside the home, and require her to work long hours without pay.", "answer": "trafficking", "explanation": "This is domestic-servitude labor trafficking: the promised pay never materialized (fraud), and document confiscation plus total isolation from outside contact (coercion) are keeping her trapped in unpaid forced labor.", "elements": {"fraud": true, "coercion": true}, "citation": "Tex. Penal Code § 20A.02 — Trafficking of Persons (labor trafficking)"}, {"id": "s15", "prompt": "An employee quits her job after her employer refuses to pay the overtime he’d promised. She leaves on her own and later files a complaint with the state labor board.", "answer": "not_trafficking", "explanation": "She was free to leave and did — there’s no force, fraud that induced her labor under threat, or coercion holding her in place. This is a wage dispute for the labor board, not a trafficking case.", "elements": {}, "citation": ""}, {"id": "s16", "prompt": "A 15-year-old runaway who met an adult on social media is found dancing for money at an after-hours club. Investigators learn the adult spent weeks building a relationship and trust with her before he began directing where she worked and keeping the money she earned.", "answer": "trafficking", "explanation": "This is textbook grooming leading into child sex trafficking — gaining trust first, then taking control of the victim’s activity and earnings. Because she’s a minor, no force, fraud, or coercion needs to be separately proven.", "elements": {"minor": true}, "citation": "Tex. Penal Code § 20A.02(a) — no force/fraud/coercion required when the victim is a minor"}, {"id": "s17", "prompt": "A woman pays $6,000 for someone to drive her across the border. Partway through the trip, the driver demands an extra $500 in cash before he’ll continue. She pays it, finishes the trip, and is dropped off exactly as originally planned.", "answer": "smuggling", "explanation": "A price renegotiation mid-trip is unpleasant, but by itself it doesn’t convert a smuggling arrangement into trafficking — there’s still no exploitation continuing after she reaches her destination. Watch for this pattern turning into trafficking if demands for money continue after arrival, the way they do in several other scenarios here.", "elements": {}, "citation": "Tex. Penal Code § 20.05–20.06 — Smuggling of Persons"}, {"id": "s18", "prompt": "During a routine business check, a patrol officer notices a food-service worker who seems nervous and avoids eye contact. The officer has no other information about the person’s living or working conditions.", "answer": "not_trafficking", "explanation": "Nervousness and avoided eye contact alone are not reliable trafficking indicators — the chapter specifically flags that this older assumption is no longer considered a valid indicator on its own. It’s fine to stay observant, but this alone isn’t enough to support any classification yet; more information is needed before concluding anything.", "elements": {}, "citation": ""}];
+const ANSWER_LABELS = {"trafficking": "Human Trafficking", "smuggling": "Human Smuggling", "prostitution": "Prostitution (No Trafficking Indicators)", "not_trafficking": "None of These — Not Trafficking"};
+const ANSWER_ORDER = ["trafficking", "smuggling", "prostitution", "not_trafficking"];
+
+let session = { correct: 0, incorrect: 0 };
+let order = [];
+let pos = 0;
+let answered = false;
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  order = shuffle(SCENARIOS.map((s, i) => i));
+  pos = 0;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderCase();
+}
+
+function currentScenario(){
+  return SCENARIOS[order[pos]];
+}
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = (pos + 1) + ' / ' + order.length;
+}
+
+function renderCase(){
+  answered = false;
+  const s = currentScenario();
+  document.getElementById('caseBadge').textContent = 'Case ' + (pos + 1) + ' of ' + order.length;
+  document.getElementById('casePrompt').textContent = s.prompt;
+  const grid = document.getElementById('answerGrid');
+  grid.innerHTML = ANSWER_ORDER.map(key => `
+    <button class="answer-btn" data-key="${key}" type="button">${escapeHtml(ANSWER_LABELS[key])}</button>
+  `).join('');
+  grid.querySelectorAll('.answer-btn').forEach(btn => {
+    btn.onclick = () => pickAnswer(btn.getAttribute('data-key'));
+  });
+  document.getElementById('feedback').classList.remove('show');
+  updateStats();
+}
+
+function pickAnswer(key){
+  if(answered) return;
+  answered = true;
+  const s = currentScenario();
+  const correct = key === s.answer;
+  if(correct){ session.correct++; } else { session.incorrect++; }
+  updateStats();
+
+  document.querySelectorAll('.answer-btn').forEach(btn => {
+    const k = btn.getAttribute('data-key');
+    btn.disabled = true;
+    if(k === s.answer) btn.classList.add('correct-answer');
+    if(k === key){
+      btn.classList.add('picked');
+      if(!correct) btn.classList.add('wrong-pick');
+    }
+  });
+
+  const verdict = document.getElementById('feedbackVerdict');
+  verdict.textContent = correct ? 'Correct — ' + ANSWER_LABELS[s.answer] : 'Not quite — this one is ' + ANSWER_LABELS[s.answer];
+  verdict.className = 'feedback-verdict ' + (correct ? 'right' : 'wrong');
+  document.getElementById('feedbackExplain').textContent = s.explanation;
+
+  const elementsRow = document.getElementById('elementsRow');
+  const els = s.elements || {};
+  if(els.minor){
+    elementsRow.innerHTML = `<span class="elem-chip active">Minor victim — force/fraud/coercion not required</span>`;
+  } else if(els.force !== undefined || els.fraud !== undefined || els.coercion !== undefined){
+    const parts = ['force', 'fraud', 'coercion'].map(k => {
+      const on = !!els[k];
+      return `<span class="elem-chip${on ? ' active' : ''}">${k}${on ? ' ✓' : ''}</span>`;
+    });
+    elementsRow.innerHTML = parts.join('');
+  } else {
+    elementsRow.innerHTML = '';
+  }
+
+  document.getElementById('citation').textContent = s.citation || '';
+  document.getElementById('feedback').classList.add('show');
+}
+
+function nextCase(){
+  if(pos + 1 >= order.length){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${order.length} cases reviewed this round. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+    return;
+  }
+  pos++;
+  renderCase();
+}
+
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('nextCaseBtn').onclick = nextCase;
+
+newRound();
+</script>
+
+</body>
+</html>
