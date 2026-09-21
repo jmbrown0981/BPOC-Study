@@ -1,48 +1,91 @@
 # Chapter 29: Crisis Intervention Training
 
+## Definitions
+- Deinstitutionalization
+
 ## 29.1 Discuss the origins of Crisis Intervention Training (CIT).
 - Law enforcement is increasingly being called upon to respond to individuals in serious mental health crises.
 - It is necessary for law enforcement personnel to understand mental illness and the tactics and techniques that have been proven to work most effectively when responding to individuals in these situations.
-- These tactics and techniques are different than those routinely taught to officers to manage conflict.
-- Generally, the underlying element behind mental illness-related behavior is usually not criminal or malicious.
+  - These tactics and techniques are different than those routinely taught to officers to manage conflict.
 
-## 29.2 Discuss the problem of mental health crisis as it pertains to law enforcement. About three percent of US adults suffer from a severe form of mental illness according to a report for the Treatment Advocacy Center. By the most conservative estimates, those suffering from severe mental illnesses account for at least a quarter of all fatalities involving law enforcement.
-- There are recurring situations in which law enforcement uses unnecessary, excessive, or deadly force during encounters with individuals in mental health crisis.
-- Although individuals with mental illness comprise fewer than 4 in every 100 adults in America, individuals with mental illness generate no less than 1 in 10 calls for police service, and an estimated 1 in 3 individuals transported to hospital emergency rooms in psychiatric crisis are taken there by police (Torrey, et al., 2010).
-- Deinstitutionalization and lack of community mental health resources resulted in incarceration instead of treatment. Approximately 40,000 to 72,000 people in prison [nationwide] would likely have been in mental hospitals in the past (APA, 2014).
-- The Treatment Advocacy Center in Washington, D.C. reports that the “risk of being killed when approached or stopped by law enforcement in the community is 16 times higher for individuals with untreated serious mental illness than for other civilians” (Fuller, D., Lamb, R., Biasotti, M. & Snook, J, 2015).
+- Generally, the underlying element behind mental illness-related behavior is usually **not criminal or malicious**.
+
+## 29.2 Discuss the problem of mental health crisis as it pertains to law enforcement. 
+- 3% of US adults suffer from a severe form of mental illness
+- Those suffering from severe mental  illlnesses account for at least 25% of all fatalities involving law enforcement.
+- Types of force sometimes used against individuals in a mental health crisis
+  - unnecessary
+  - excessive
+  - deadly
+
+- Individuals with mental illness
+  - Comprise fewer than 4 in 100 adults in the US.
+  - Generate no less than 1 in 10 calls for police service.
+  - 1 in 3 individuals in psychiatric crisis are taken there by police.
+
+- 40,000 to 72,000 people in prison would likely have been in mental hospitals in the past.
+- Risk of being killed when approached or stopped by law enforcement is 16 times higher for individuals with untreated serious mental illness
 - National data on police shootings is unclear “and fail to provide a clear picture of how often, and under what circumstances police in the United States use force.” (Police Executive Research Forum (PERF), 2016).
-- Washington Post investigative reporters undertook a large research endeavor in an attempt to better classify and identify police use of force. Their findings indicated 990 fatal officer-involved shootings in 2015, and in 25% of those shootings the subject displayed signs of mental illness (Lowery, L., Et al, 2015).
-- Often, family members call police in an attempt to assist with a family member who is exhibiting problematic or troubling behavior due to mental illness, and the family desires their loved one be transported to a hospital or mental health facility. In some cases, when the police arrive, the subject is holding an implement that may be
-
-perceived as potentially harmful and results in a deadly force encounter, leading the family and the community to ask if other de-escalation tactics could have been used (Police Executive Research Forum (PERF), 2016).
-- Historically, law enforcement officer training has not focused heavily on crisis intervention or de-escalation tactics.
+- Washington Post investigative reporters undertook a large research endeavor in an attempt to better classify and identify police use of force. Their findings indicated 990 fatal officer-involved shootings in 2015
+  - In 25% of those shootings the subject displayed signs of mental illness (Lowery, L., Et al, 2015).
+- Often, family members call police in an attempt to assist with a family member who is exhibiting problematic or troubling behavior due to mental illness, and the family desires their loved one be transported to a hospital or mental health facility. In some cases, when the police arrive, the subject is holding an implement that may be perceived as potentially harmful and results in a deadly force encounter, leading the family and the community to ask if other de-escalation tactics could have been used (Police Executive Research Forum (PERF), 2016).
+- Historically, law enforcement officer training **has not** focused heavily on crisis intervention or de-escalation tactics.
 
 ## 29.3 Discuss SB 1849 and the legislative mandates that resulted. Origin of Training and Community Awareness: The program was conceived in Memphis TN., after police shot a 26-year-old man with mental illness.
 - “In September 1987, White Memphis police officers answered a 911 call. A young African American man with a history of mental illness was cutting himself with a knife and threatening suicide. Police officers are trained to respond with deadly force when they perceive their lives are in danger. At the outset of the incident, it appeared that the only life in danger was the young man’s, from self-inflicted wounds. As they were trained to do at the time, officers at the scene confronted the man and demanded he drop his weapon. At this, he became more upset and ran at the officers who, in fear for their own safety, opened fire and killed him….Although the welfare of both officers and the mentally ill in situations of confrontation had been a concern for some time, this death, with its racial overtones, was the catalyst that resulted in the creation of CIT a year later” (Vickers, B., 2000).
 
 Key points of the Texas State Bill 1849 (Senator Whitmire)
+- Also known as the Sandra Bland Act
 - Law enforcement officers are required to learn de-escalation techniques to reduce the use of force.
 - “Each law enforcement agency shall make a good faith effort to divert person suffering from mental health crisis or substance abuse to proper treatment.”
 - Establishes an easier process by which people with mental illness and/or intellectual disability can receive personal bond (Whitmire, J., 2017).
-- Changes to the Occupations Code pertaining to this training and other requirements are in Subchapter F, Chapter 1701: Section 1701.253 with an amendment to subjection (j) (85R), addition of subsections (n) (85R) and (u) (89R), and the addition of Section
-## 1701.273 (89R).
+- Changes to the Occupations Code pertaining to this training and other requirements are in Subchapter F, Chapter 1701: Section 1701.253 with an amendment to subjection (j) (85R), addition of subsections (n) (85R) and (u) (89R), and the addition of Section 1701.273 (89R).
 
 ## 29.4 Reiterate the goal of CIT.
-- “The primary goal of CITs involves calming persons with mental illness who are in crisis and referring them to mental health care services, rather than incarcerating them. This goal…includes lessening injuries to officers, alleviating harm to the person in crisis, promoting decriminalization of individuals with mental illness, reducing the stigma associated with mental disorders, and using a team approach when responding to crises” (Jines, 2013).
-- Crisis Intervention Training is foremost about officer safety. It is designed to educate law enforcement officers in the basic elements of specific mental illnesses and prepare them to use practical applications of de-escalation techniques. This training is intended to
-
-assist officers in being able to recognize the signs and symptoms of mental illness and to respond effectively, appropriately, and professionally.
-- Educate officers on how to identify behaviors that may indicate the presence of mental illness and provide officers with de-escalation skills to mitigate violence and increase officer and public safety.
-- Provide information on how to safely transport someone in mental health crisis to an appropriate resource or facility.
+- “The primary goal of CITs involves calming persons with mental illness who are in crisis and referring them to mental health care services
+  - Referral to mental health care services should be done rather than incarcerating them. 
+-This goal…includes:
+  - lessening injuries to officers
+  - alleviating harm to the person in crisis
+  - promoting decriminalization of individuals with mental illness
+  - reducing the stigma associated with mental disorders
+  - using a team approach when responding to crises (Jines, 2013).
+  - Crisis Intervention Training is foremost about officer safety. 
+    - It is designed to educate law enforcement officers in the basic elements of specific mental illnesses and prepare them to use practical applications of de-escalation techniques. 
+    - This training is intended to assist officers in being able to recognize the signs and symptoms of mental illness and to respond effectively, appropriately, and professionally.
+  - Educate officers on how to identify behaviors that may indicate the presence of mental illness and provide officers with de-escalation skills to mitigate violence and increase officer and public safety.
+  - Provide information on how to safely transport someone in mental health crisis to an appropriate resource or facility.
 
 ## 29.5 Explain CIT’s impact on community relations.
-- “CIT has been shown to positively impact officer perceptions, decrease the need for higher levels of police intervention, decrease officer injuries, and re-direct those in crisis from the criminal justice to the health care system” (Dupont & Cochran, 2000).
+- CIT has been shown to 
+  - positively impact officer perceptions
+  - decrease the need for higher levels of police intervention
+  - decrease officer injuries
+  - re-direct those in crisis from the criminal justice to the health care system (Dupont & Cochran, 2000).
+
 - “CIT may have a transformative effect on officers’ attitudes by increasing exposure to and familiarity with mental illness. CIT is rated very positively by officers” (Bonfine, Ritter, & Munetz, 2014).
-- “Officers' attitudes about the impact of CIT on improving overall safety, accessibility of services, officer skills and techniques, and the preparedness of officers to handle calls involving persons with mental illness are positively associated with officers' confidence in their abilities or with officers' perceptions of overall departmental effectiveness. There is further evidence that personal contact with individuals with mental illness affects the relationship between attitudes that CIT impacts overall safety and perceived departmental effectiveness” (Bonfine, Ritter, & Munetz, 2014).
-- Individuals with mental illness are traditionally not career criminals. Law enforcement is highly scrutinized by the public and private sectors when force is used in these cases, even when provocation is evident.
-- Reduce complaints, financial liability, and lawsuits as well as increase public trust and confidence in law enforcement among people suffering from mental illness, their families, and the community at large.
-- 46 of the 50 states have CIT programs. Arkansas, Alabama, West Virginia, and Rhode Island are the only states that do not have CIT programs.
+
+- “Officers' attitudes about 
+  - the impact of CIT on improving overall safety
+  - accessibility of services
+  - officer skills and techniques
+  - and the preparedness of officers to handle calls 
+- involving persons with mental illness are positively associated with officers' confidence in their abilities or with officers' perceptions of overall departmental effectiveness. 
+- There is further evidence that personal contact with individuals with mental illness affects the relationship between attitudes that CIT impacts overall safety and perceived departmental effectiveness” (Bonfine, Ritter, & Munetz, 2014).
+- Individuals with mental illness are traditionally **not career criminals**. 
+- Law enforcement is highly scrutinized by the public and private sectors when force is used in these cases, even when provocation is evident.
+
+- Other impacts on community relations include
+  - Reduced complaints
+  - reduced financial liability
+  - reduced lawsuits 
+  - increased public trust and confidence in law enforcement among people suffering from mental illness, their families, and the community at large.
+- 46 of the 50 states have CIT programs. The only states that do not have CIT programs are
+  - Arkansas
+  - Alabama
+  - West Virginia
+  - Rhode Island
+  
 - Northwestern University conducted a study of the Houston Police Department’s officer involved shootings and found that those officers responding to calls designated as CIT- related calls were 82% less likely to use their guns then when they responded to other types of calls (Colucci, McCleary, & Ng, 2014).
 - “The Bexar County sheriff’s office, which cosponsors the San Antonio CIT program, has trained nearly 90 percent of its roughly 1,430 sworn officers… From 2003 to 2009, the unit was using force in its daily work, more than 50 times a year. Since 2009, when all its deputies were trained in crisis intervention, the unit, as of October, had used force just seven times total…and has saved San Antonio and Bexar County nearly $100 million over an eight-year period” (Helman, S. 2016).
 - Research has indicated Crisis Intervention Training improves officer comfortability, knowledge, and attitudes towards individuals with mental illness (Compton, Esterberg, McGee, Kotwicki, & Oliva, 2006).
