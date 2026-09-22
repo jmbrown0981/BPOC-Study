@@ -1,0 +1,10 @@
+A "child," as defined by Family Code chapter 51, means a person who is __ years of age or older, and under __ years of age.	10; 18
+"_________" means the adult with whom the child resides.	Custodian
+How is "guardian" defined by Family Code chapter 51?	The person who, under court order, is the guardian of the person of the child or the public or private agency with whom the child has been placed by the court.
+A "juvenile court judge" can be referred to simply as a "_____" and presides over a juvenile court.	Judge
+"________ _____" means a court designated to preside over proceedings in all cases involving the delinquent conduct or conduct indicating a need for supervision engaged in by a person who was a child at the time the person engaged in the conduct.
+"___________" means a child who is subject to jurisdiction of a court under abuse, dependency, or neglect statuses under Title 5 for reasons other than legally prohibited conduct of the child, or has been taken into custody solely for the deportation out of the United States.	Nonoffender
+Define "parent."	The mother or father of a child, but does not include a parent whose parental rights have been terminated.
+"________ __ ________ _____" means the referral of a child or a child's case to the office or official, including an intake officer or probation officer, designated by the juvenile board to process children within the juvenile justice system.
+"Referral to Juvenile Court" means the referral of a child or a child's case to the office or official, including an ______ officer or _________ officer, designated by the juvenile board to process children within the juvenile justice system.
+True or False: A "secure detention facility" is used for the placement of any juvenile who has been adjudicated as having committed an offense.	False. This would be a "secure correctional facility." "Adjudicated" is "convicted" in terms of juveniles, so adjudicated juveniles end up in "correctional" facilities, not "detention."

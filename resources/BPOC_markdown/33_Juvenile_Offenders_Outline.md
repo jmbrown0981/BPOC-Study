@@ -11,6 +11,10 @@
   - Family Code
   - Judicial Proceedings
 
+- 58
+  - Family Code
+  - Records; Juvenile Justice Information System
+
 - 49
   - Penal Code
   - Intoxication & Alcoholic Beverge Offenses
@@ -178,4 +182,13 @@
 
 ## Fanily Code Sec. 52.026
 - Responsibility for Transporting Juvenile Offenders
+  - It SHALL be the duty of the law enforcement officer to transport the child to the appropriate detention facility or to the school campus if the child is not released to a parent, guardian, or custodian.
+  - If the juvenile detention facility is located outside the county in which the child is taken into custody, it SHALL be the duty of the law enforcement officer that took the child into custody, or, if authorized by the commissioners court of the county, the duty of the sheriff of the county to transport the child to the appropriate juvenile detention facility unless the child is detained in a secure detention facility or released to the parent, guardian, or custodian of the child.
+  - On adoption of an order by the juvenile board and approval of the juvenile board's order by record vote of the commissioners court, it SHALL be the duty of the sheriff of the county in which the child is taken into custody to transport the child to and from all scheduled juvenile court proceedings and appearances and other activities ordered by the juvenile court.
+
+## Family Code Sec. 58.001
+- Law Enforcement Collection and Transmittal of Records of Children
+  - Law enforcement officers and other juvenile justice personnel SHALL collect information described by section 58.104 (Types of Information Collected) as a part of the juvenile justice information system.
+  - Law enforcement agency SHALL forward information, including fingerprints, relating to a child who has been taken into custody to the Department of Public Safety (DPS) only if the child is referred to the juvenile court on or before the 10th day after the child has been taken into custody.
+  
   - 
