@@ -44,7 +44,7 @@ Key points of the Texas State Bill 1849 (Senator Whitmire)
 ## 29.4 Reiterate the goal of CIT.
 - “The primary goal of CITs involves calming persons with mental illness who are in crisis and referring them to mental health care services
   - Referral to mental health care services should be done rather than incarcerating them. 
--This goal…includes:
+-This goal includes:
   - lessening injuries to officers
   - alleviating harm to the person in crisis
   - promoting decriminalization of individuals with mental illness
@@ -87,14 +87,28 @@ Key points of the Texas State Bill 1849 (Senator Whitmire)
   - Rhode Island
   
 - Northwestern University conducted a study of the Houston Police Department’s officer involved shootings and found that those officers responding to calls designated as CIT- related calls were 82% less likely to use their guns then when they responded to other types of calls (Colucci, McCleary, & Ng, 2014).
-- “The Bexar County sheriff’s office, which cosponsors the San Antonio CIT program, has trained nearly 90 percent of its roughly 1,430 sworn officers… From 2003 to 2009, the unit was using force in its daily work, more than 50 times a year. Since 2009, when all its deputies were trained in crisis intervention, the unit, as of October, had used force just seven times total…and has saved San Antonio and Bexar County nearly $100 million over an eight-year period” (Helman, S. 2016).
+- “The Bexar County sheriff’s office, which cosponsors the San Antonio CIT program, has trained nearly 90 percent of its roughly 1,430 sworn officers. From 2003 to 2009, the unit was using force in its daily work, more than 50 times a year. 
+
+- Since 2009, when all its deputies were trained in crisis intervention, the unit, as of October, had used force just seven times total and has saved San Antonio and Bexar County nearly $100 million over an eight-year period” (Helman, S. 2016).
 - Research has indicated Crisis Intervention Training improves officer comfortability, knowledge, and attitudes towards individuals with mental illness (Compton, Esterberg, McGee, Kotwicki, & Oliva, 2006).
 
-- The National Alliance on Mental Illness outlines several research findings which denote how CIT training resulted in the decline in officer injuries while involved in mental health related calls, decreased police shootings, and decreased need for SWAT team emergencies (NAMI.org).
+- The National Alliance on Mental Illness outlines several research findings which denote how CIT training resulted in the decline in officer injuries while involved in 
+  - mental health related calls
+  - decreased police shootings
+  - decreased need for SWAT team emergencies (NAMI.org).
 
 ## 29.6 Define the meaning of “crisis” as it pertains to CIT. Meaning and implications of a crisis:
-- “A paroxysmal attack of pain, distress, or disordered function” or an “emotionally significant event or radical change of status in a person’s life” (Merriam-Webster dictionary, 2017).
-- The crisis may have been precipitated by a loss or a challenging situation and may result in the person feeling confused, alarmed, overwhelmed, desperate, hopeless, helpless, enraged, or terrified.
+- “A paroxysmal attack of pain, distress, or disordered function”
+- “emotionally significant event or radical change of status in a person’s life” (Merriam-Webster dictionary, 2017).
+- The crisis may have been precipitated by a loss or a challenging situation and may result in the person feeling
+  - confused
+  - alarmed
+  - overwhelmed
+  - desperate
+  - hopeless
+  - helpless
+  - enraged
+  - terrified
 - A person in crisis may be more prone to acting instinctually (self-preservation) rather than with logical thought; non-compliance may be the result of a combination of these factors rather than an intentional act of defiance.
 
 ## 29.7 List several potential causes for a mental health crisis. The following types of events might result in a person feeling as though he/she is in a crisis- situation:
@@ -107,10 +121,24 @@ Key points of the Texas State Bill 1849 (Senator Whitmire)
 - legal difficulties External factors that can contribute to a situation escalating into a crisis include:
 - Expectations the person cannot meet.
 - Lacking a sufficient support system or being disconnected from sources of support.
-- Substance abuse Due to individual, environmental, cultural, and circumstantial factors, any one person might react to or perceive a crisis situation differently from another person. This might be especially true for an individual suffering from a mental illness due to the possibility of disrupted emotions or thought distortions.
+- Substance abuse due to factors including
+  - individual
+  - environmental
+  - cultural
+  - circumstantial 
+- Any one person might react to or perceive a crisis situation differently from another person. 
+- This might be especially true for an individual suffering from a mental illness due to the possibility of disrupted emotions or thought distortions.
 
 ## 29.8 Develop an increased awareness of mental illness and the adversity that surrounds a mental health diagnosis.
-- “Mental illness refers to a wide range of mental health conditions—disorders that affect your mood, thinking, and behaviors” (Mayo Clinic, 2017). Examples of mental illness include depression, anxiety, schizophrenia, bipolar disorder, borderline personality disorder, eating disorders and addictive behaviors.
+- “Mental illness refers to a wide range of mental health conditions—disorders that affect your mood, thinking, and behaviors” (Mayo Clinic, 2017). 
+- Examples of mental illness include
+  - depression
+  - anxiety
+  - schizophrenia
+  - bipolar disorder
+  - borderline personality disorder
+  - eating disorders
+  - addictive behaviors.
 
 - “Many people have mental health concerns from time to time. But a mental health concern becomes a mental illness when ongoing signs and symptoms cause frequent stress and affect your ability to function” (Mayo Clinic, 2017).
 - “A mental illness is a condition that impacts a person’s thinking, feeling or mood and may affect his or her ability to relate to others and function on a daily basis. Each person will have different experiences, even people with the same diagnosis” (National Alliance for Mental Illness (NAMI), 2017).
@@ -147,7 +175,9 @@ Key points of the Texas State Bill 1849 (Senator Whitmire)
 
 ## 29.12 Explore several reasons why many people do not seek treatment for mental illness.
 - Mental illness can - and should - be treated (NAMI, 2017).
-- Unfortunately, nearly two-thirds of all people with a diagnosable mental illness do not seek treatment (Mental Health America of Texas, 2017). 21.4% of youth aged 13-18 experience a severe mental disorder, and approximately 13% of children aged 8-15. (NAMI, 2017).
+- Unfortunately, nearly two-thirds of all people with a diagnosable mental illness do not seek treatment (Mental Health America of Texas, 2017). 
+- 21.4% of youth aged 13-18 experience a severe mental disorder
+- approximately 13% of children aged 8-15. (NAMI, 2017).
 - With recognition, proper treatment (to include medication and therapy), and a commitment to wellness, people who experience mental illness can live rewarding, satisfying, and productive lives.
 
 ## 29.13 Explore the concept of ‘stigma.’
@@ -159,7 +189,8 @@ Key points of the Texas State Bill 1849 (Senator Whitmire)
   - Discriminating against someone based on a label
 - There remains a stigma attached to mental illness and prejudices against individuals that suffer from mental illness. Mental illness continues to be widely misunderstood by the general public. Therefore, it is important to increase education and awareness especially among those that might interact with individuals experiencing mental illness.
 - Stigmas encourage inaccurate perceptions. The term ‘mental illness’ in itself, alludes to false information. ‘Mental’ suggests an illegitimate medical condition that is ‘all in your head,’ and therefore a sign of weakness. The term ‘mental’ suggests a separation from a physical illness, when in fact they are entwined. A vast body of research supports the assertion that there are physical and measurable changes in the brain associated with mental illness, suggesting that a biological component exists.
-- It is also a common stereotype that persons with a mental illness are dangerous and unpredictable, although statistics do not substantiate that belief. In fact, “The clear majority of people with mental health problems are not more likely to be violent than anyone else. Only 3% - 5% of violent acts can be attributed to individuals living with a serious mental illness.” (U.S. DHHS, 2017).
+- It is also a common stereotype that persons with a mental illness are dangerous and unpredictable, although statistics do not substantiate that belief. In fact, “The clear majority of people with mental health problems are not more likely to be violent than anyone else. 
+- Only 3% - 5% of violent acts can be attributed to individuals living with a serious mental illness.” (U.S. DHHS, 2017).
 - These stigmas perpetuate a negative stereotype of people with mental illness that fuels fear and mistrust and reinforces distorted perceptions, leading to further stigma. Stigma can lead to devastating consequences. Some people refuse treatment for fear of being ‘labeled.’ The stigma can lead to isolation due to shame and embarrassment. Discrimination in the workplace continues. Victims may still lose jobs through the stress of coworker gossip, lack of social connection, and lack of promotion. The stigma even extends into the medical community, where health insurance coverage is more limited for mental illnesses than for physical illnesses.
 - In many cases, individuals struggle to gain access to treatment, have difficulty seeing the same mental health professional or physician, or need additional financial resources to pay for costly diagnostic procedures and treatments.
 - Individuals are often discouraged and/or unable to persist in finding the best treatment options for their condition and circumstances, since there is no “one size fits all” treatment. Treatment refusal can be problematic for law enforcement:
