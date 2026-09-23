@@ -288,16 +288,10 @@
 </div>
 
 <div class="note">
-  <b>Status key:</b> chapters we've covered in class are marked <b>in progress</b> until the chapter content is built out here — send over the chapter PDFs and they'll get converted into a reference page like the Penal Code one below. Chapters we haven't reached yet are <b>locked</b> and will open up as we go.
+  Every chapter opens the full chapter text (from the BPOC Instructor Resource Guide), not a summary — click any tile below, or search across all 43 chapters at once from the Study Reference. A link to the original chapter PDF is also on every chapter page.
 </div>
 
 <div class="grid" id="chapter-grid"></div>
-
-<div class="legend">
-  <span><i style="background:#4B6A50"></i>Live reference</span>
-  <span><i style="background:#9B7E32"></i>Covered — content pending</span>
-  <span><i style="background:#8B8674"></i>Not yet covered</span>
-</div>
 
 <div class="section-block">
   <h2>Supplemental Materials</h2>
@@ -538,6 +532,7 @@
 
 <footer>Built for study purposes by and for the FWPD Academy class · Not an official TCOLE or academy publication · Always verify against current statute and academy materials</footer>
 
+<script src="assets/chapters-manifest.js"></script>
 <script>
   function toggleGroup(el){
     el.classList.toggle('open');
@@ -552,21 +547,16 @@
     document.querySelectorAll('.supp-group-body').forEach(function(b){b.classList.remove('open');});
   }
 
-  const total = 43;
-  const built = [1,2,3,4,5,6,7,8,9,10,13,14,15,18,19,20,21,22,24,25,28,30,37]; // chapters with a live reference page in study.html
-  const inProgress = 10; // chapters covered in class so far
+  // Every chapter (1-43) now has a real reference page in study.html (full chapter text,
+  // not a built-out-or-not summary), so every tile here links straight through.
   const grid = document.getElementById('chapter-grid');
-  for(let i=1;i<=total;i++){
-    let status, label;
-    if(built.includes(i)){ status='live'; label='Live'; }
-    else if(i<=inProgress){ status='progress'; label='In progress'; }
-    else{ status='locked'; label='Locked'; }
-    const el = document.createElement(status==='locked' ? 'div' : 'a');
-    el.className = `tile status-${status}`;
-    if(status!=='locked') el.href = `study.html?ch=${i}`;
-    el.innerHTML = `<div class="tile-num">CH ${String(i).padStart(2,'0')}</div><div class="tile-title">Chapter ${i}</div><span class="tile-status">${label}</span>`;
+  CHAPTER_MANIFEST.forEach(ch=>{
+    const el = document.createElement('a');
+    el.className = 'tile status-live';
+    el.href = `study.html?ch=${ch.num}`;
+    el.innerHTML = `<div class="tile-num">CH ${String(ch.num).padStart(2,'0')}</div><div class="tile-title">${ch.title}</div><span class="tile-status">View</span>`;
     grid.appendChild(el);
-  }
+  });
 </script>
 
 </body>
