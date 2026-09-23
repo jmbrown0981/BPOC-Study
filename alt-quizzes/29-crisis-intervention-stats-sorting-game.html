@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 29 Crisis Intervention Training Statistics Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:default;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+  .chip{cursor:pointer;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:280px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 29 &middot; Crisis Intervention Training &middot; Supplemental Practice</p>
+    <h1>Statistics &amp; Numbers Sorting Game</h1>
+    <p class="sub">Chapter 29 is loaded with statistics &mdash; prevalence rates, use-of-force figures, PTSD and suicide data, IQ ranges, and diversion-program outcomes. Drag (or tap) each statistic onto the topic category it belongs to. A correct drop scores a point and locks the card in; a miss gets tracked and the card goes back in the tray so you can try again. New rounds pull a fresh, random mix from all fourteen categories. Note: several categories share similar-looking numbers on purpose (e.g., PTSD rates for the general population vs. veterans, or officer suicide vs. veteran suicide) &mdash; that overlap is exactly what makes sorting them a useful way to lock in which figure goes with which population.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Categories <input type="number" id="numBuckets" min="2" max="14" value="6"></div>
+      <div class="setup-field">Cards/category <input type="number" id="numCards" min="1" max="7" value="3"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a category box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the category box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the source/extra detail). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statistic Categories <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse categories</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Statistics to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from the Ch.29 Crisis Intervention Training outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "Mental Illness Prevalence", "items": [{"text": "3% of US adults suffer from a severe form of mental illness"}, {"text": "17.9% of all U.S. adults had a mental illness within the past year", "detail": "An estimated 43.4 million adults 18+ in the U.S. in 2015 — or 1 out of every 5 people (NIMH, 2015)."}, {"text": "Approximately 1 in 25 adults in the U.S. (4%) experience a serious mental illness in a given year", "detail": "About 9.8 million adults — a serious mental illness substantially interferes with or limits one or more major life activities (NAMI, 2017)."}, {"text": "21.4% of youth aged 13-18 experience a severe mental disorder", "detail": "NAMI, 2017."}, {"text": "Approximately 13% of children aged 8-15 experience a severe mental disorder", "detail": "NAMI, 2017."}, {"text": "Individuals with mental illness comprise fewer than 4 in 100 adults in the US"}]}, {"name": "Mental Illness & Police Contact / Use of Force", "items": [{"text": "Individuals with mental illness generate no less than 1 in 10 calls for police service"}, {"text": "1 in 3 individuals in psychiatric crisis are taken to the hospital by police"}, {"text": "Severe mental illness is a factor in at least 25% of all fatalities involving law enforcement"}, {"text": "In 25% of the 990 fatal officer-involved shootings tracked in 2015, the subject displayed signs of mental illness", "detail": "Washington Post investigative reporting (Lowery, et al., 2015)."}, {"text": "The risk of being killed when approached or stopped by law enforcement is 16 times higher for individuals with untreated serious mental illness"}, {"text": "40,000 to 72,000 people currently in prison would likely have been in mental hospitals in the past"}]}, {"name": "CIT Program Impact & De-escalation", "items": [{"text": "Houston PD officers responding to CIT-related calls were 82% less likely to use their guns than on other call types", "detail": "Northwestern University study (Colucci, McCleary, & Ng, 2014)."}, {"text": "Bexar County's CIT-trained deputies used force just 7 times total since 2009 — down from over 50 times a year between 2003 and 2009"}, {"text": "The Bexar County / San Antonio CIT program saved nearly $100 million over an eight-year period", "detail": "Helman, S., 2016."}, {"text": "The Bexar County sheriff's office has trained nearly 90% of its roughly 1,430 sworn officers in CIT"}, {"text": "The 80/20 rule: listen for 80% of the time and talk for only 20%", "detail": "A guideline for gathering information and making an ongoing situational assessment during a crisis contact."}]}, {"name": "Mental Illness — Myths, Violence & Treatment Gaps", "items": [{"text": "Only 3%-5% of violent acts can be attributed to individuals living with a serious mental illness", "detail": "U.S. DHHS, 2017."}, {"text": "Only about 4% of interpersonal violence in the U.S. can be attributed to mental illness — yet nearly 40% of news stories about mental illness connect it to violence", "detail": "Sifferlin, 2016."}, {"text": "People with severe mental illness are over 10 times more likely to be victims of violent crime than the general population", "detail": "Mental Illness Policy.Org, 2017."}, {"text": "Homeless individuals with serious mental illness face a lifetime victimization rate of 74%-87%", "detail": "2014 analysis of six American studies (Mental Illness Policy.Org, 2017)."}, {"text": "Only 44% of adults with diagnosable mental health problems receive needed treatment", "detail": "U.S. DHHS, 2017."}, {"text": "Less than 20% of children and adolescents with mental health problems receive needed treatment", "detail": "U.S. DHHS, 2017."}]}, {"name": "Bipolar Disorder", "items": [{"text": "Baseline anxiety/depression increases bipolar disorder risk from a 2% baseline up to 49%", "detail": "2% is the baseline risk due to family history alone (Bernstein, 2017)."}, {"text": "20% of adults with bipolar disorder had symptoms begin in adolescence", "detail": "Bernstein, 2017."}, {"text": "Approximately 4% of the U.S. population will experience a bipolar episode in their lifetime", "detail": "Lifetime prevalence rate (MHA, 2017)."}]}, {"name": "Traumatic Brain Injury — Severity Breakdown", "items": [{"text": "Mild TBI accounts for 75% of all TBIs"}, {"text": "Moderate TBI accounts for approximately 22% of all TBIs", "detail": "Characterized by identifiable persistent deficits a person will experience for the rest of their life."}, {"text": "Severe TBI accounts for approximately 3% of all TBIs", "detail": "Usually associated with other bodily injury and requires intensive medical intervention."}]}, {"name": "Intellectual Disability — IQ Ranges", "items": [{"text": "Average IQ range: 90-109", "detail": "The baseline the degrees of intellectual disability below it are measured against."}, {"text": "Borderline Intellectual Functioning: IQ 70-79"}, {"text": "Mild Intellectual Disability: IQ 50-69"}, {"text": "Moderate Intellectual Disability: IQ 35-50", "detail": "One step above Severe Intellectual Disability (IQ 20-50) — easy to mix up."}, {"text": "Severe Intellectual Disability: IQ 20-50", "detail": "One step below Moderate Intellectual Disability (IQ 35-50) — easy to mix up."}, {"text": "Profound Intellectual Disability: IQ below 20"}]}, {"name": "Alzheimer's & Dementia", "items": [{"text": "6 out of 10 people with Alzheimer's will wander", "detail": "Alzheimer's Association, 2017."}, {"text": "If a person with Alzheimer's who wandered isn't found within 24 hours, up to half risk serious injury or death", "detail": "Alzheimer's Association, 2017."}, {"text": "Texas has 22 Aging and Disability Resource Centers (ADRCs) statewide", "detail": "Run by the Texas Health and Human Services Commission; reachable at 855-YES-ADRC."}]}, {"name": "PTSD Prevalence — General Population", "items": [{"text": "Approximately 7-8% of the general population will experience PTSD at some point in their lifetime", "detail": "VA, 2017."}, {"text": "About 8 million adults have PTSD during a one-year period", "detail": "Only a small group of those who have experienced trauma (VA, 2017)."}, {"text": "10% of women will develop PTSD in their lifetime, compared to only 4% of men", "detail": "VA, 2017."}]}, {"name": "PTSD Prevalence — Veterans", "items": [{"text": "Approximately 11-20% of OIF/OEF veterans have PTSD in a given year", "detail": "Operation Iraqi Freedom / Operation Enduring Freedom (VA, 2017)."}, {"text": "Approximately 12% of Gulf War veterans have PTSD in a given year", "detail": "VA, 2017."}, {"text": "Approximately 15% of Vietnam veterans were diagnosed with PTSD as of the most recent study in the late 1980s", "detail": "VA, 2017."}, {"text": "It is estimated 30% of Vietnam veterans have had PTSD at some point in their lifetime", "detail": "VA, 2017."}]}, {"name": "Veterans — Military Trauma & Justice Involvement", "items": [{"text": "23% of women reported sexual assault while in the military"}, {"text": "55% of women and 38% of men have experienced sexual harassment while in the military", "detail": "VA, 2017."}, {"text": "Nearly half of Vietnam veterans with PTSD had been arrested or jailed at least once; 34% were arrested or jailed more than once", "detail": "Kulka, et al., 1988."}, {"text": "10-12% of OEF/OIF veterans have been involved with the criminal justice system since returning from deployment", "detail": "Tsai, et al., 2012."}, {"text": "Violent crime committed by active-duty Army soldiers increased by 31% from 2006 to 2011", "detail": "Stateside and abroad (DOD, 2012)."}, {"text": "An estimated 8.5 million women (7%) reported experiencing physical violence, rape, or stalking from an intimate partner", "detail": "CDC, NISVS 2010-2012."}]}, {"name": "Suicide Statistics — General Population", "items": [{"text": "There were 121 suicides per day nationally", "detail": "A rate higher than the rate of homicide (CDC, 2016)."}, {"text": "Texas had a suicide rate of 10.8 per 100,000 people", "detail": "Texas lost over 12 thousand people to suicide between 2005 and 2009, the top cause of injury death for all ages in Texas (CDC, 2012)."}, {"text": "Firearms accounted for 49.8% of suicide deaths in 2015", "detail": "AFSP, 2017."}, {"text": "Suffocation accounted for 26.8% of suicide deaths in 2015", "detail": "AFSP, 2017."}, {"text": "Poisoning accounted for 15.4% of suicide deaths in 2015", "detail": "AFSP, 2017."}, {"text": "White males accounted for 7 out of 10 suicides in 2015", "detail": "AFSP, 2017."}]}, {"name": "Suicide Statistics — Veterans & Officers", "items": [{"text": "20% of national suicides are completed by veterans", "detail": "VA, 2017."}, {"text": "18-22 veterans commit suicide per day", "detail": "VA, 2017."}, {"text": "Almost 1 in 4 police officers has had thoughts of suicide at some point in their life", "detail": "NAMI, 2018."}, {"text": "The suicide rate for police officers is four times higher than the rate for firefighters", "detail": "In the smallest departments, the officer suicide rate is almost four times the national average."}, {"text": "Between 7-19% of police officers have symptoms of PTSD, compared to only 3.5% of the general population", "detail": "NAMI, 2018."}, {"text": "The number of police suicides is 2.3 times that of homicides", "detail": "More police die by suicide than by homicide (NAMI, 2018)."}, {"text": "Badge of Life data found an average of 130 law enforcement suicides every year, or about eleven per month", "detail": "Data collected between 2008 and 2017; the true number is believed to be higher (O'Hara, 2018)."}]}, {"name": "Deinstitutionalization & Jail Diversion Outcomes", "items": [{"text": "Between 1980 and 1995, the number of people incarcerated in American jails and prisons increased 216%, while the general population grew only 16%", "detail": "Torrey, 1997."}, {"text": "Florida's 2013 pre-arrest diversion program: 80% of diverted offenders completed the 90-day program, and only 6% were re-arrested", "detail": "IACP, 2015."}, {"text": "Mental health courts grew from just 4 in 1997 to over 300 in 2017"}, {"text": "Mental health court graduates have a recidivism rate of 20%, versus 72% for their peers", "detail": "Andrews, 2015."}, {"text": "Law enforcement calls about people in psychiatric crisis jumped from about 11,000 in 2003 to more than 27,000 in 2012", "detail": "Following major cuts to public mental health services in 2003 (DePrang, 2014)."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(10, Number(document.getElementById('numCards').value) || 3));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} categories. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the category boxes ---------- */
+const COMPACT_KEY = 'ch29_stats_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand categories' : 'Collapse categories';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
