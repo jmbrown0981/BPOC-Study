@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 29 Crisis Intervention Training Communication &amp; Suicide Risk Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 29 &middot; Crisis Intervention Training &middot; LOs 29.38&ndash;29.50 (skipping 29.48) &middot; Supplemental Practice</p>
+    <h1>Communication &amp; Suicide Risk Sorting Game</h1>
+    <p class="sub">Seventeen boxes covering the back half of the chapter: suicide risk factors and protective factors, the PLAN/METHOD/MEANS/INTENT suicide risk assessment, the three-phase de-escalation process (Safety &rarr; Stability &rarr; Problem Solving), the three-point mental-status assessment (Comprehension, Behavior, Emotion), the LEAPS communication model's Pro- and Anti-LEAPS phrases and behaviors, rapport-building tactics and what fractures/repairs it, the 5 Universal Truths of Human Interaction, how to read friendly vs. aggressive vs. ambiguous non-verbal cues, and reflecting statements. (The 80/20 rule from LO 29.48 is skipped here — it's already covered in the quiz bank.) With this many boxes the categories default to a collapsed view; expand them as you place cards, or use Categories/Cards-per-category to size a round down.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Categories in round <input type="number" id="numBuckets" min="2" max="17" value="6"></div>
+      <div class="setup-field">Cards/category <input type="number" id="numCards" min="1" max="17" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a category box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the extra detail/citation). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Categories <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse categories</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Items to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 29.38&ndash;29.50 of the Ch.29 Crisis Intervention Training outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "Increased Suicide Risk Factors", "items": [{"text": "Male, age 15–34"}, {"text": "Depression"}, {"text": "Substance intoxication"}, {"text": "Previous suicide attempts"}, {"text": "Feelings of hopelessness, helplessness, or powerlessness"}, {"text": "A specific plan, intent, and the means to complete the plan"}, {"text": "Lack of a support system or connection to loved ones"}, {"text": "A recent loss — divorce, child custody, retirement, death of a loved one, or loss of a job"}, {"text": "Feeling one is worth more to loved ones dead than alive — feeling like a burden to family"}]}, {"name": "Protective Factors Against Suicide", "items": [{"text": "A healthy support system", "detail": "SPRC, 2017."}, {"text": "Not using drugs or alcohol", "detail": "SPRC, 2017."}, {"text": "Connection to a spiritual faith", "detail": "SPRC, 2017."}, {"text": "Employment", "detail": "SPRC, 2017."}, {"text": "Financial stability", "detail": "SPRC, 2017."}, {"text": "Access to local health services", "detail": "SPRC, 2017."}, {"text": "Effective mental health care", "detail": "SPRC, 2017."}, {"text": "Connectedness to individuals, family, community, and social institutions", "detail": "SPRC, 2017."}, {"text": "Problem-solving skills", "detail": "SPRC, 2017."}, {"text": "Contacts with caregivers", "detail": "SPRC, 2017."}, {"text": "Cognitive flexibility", "detail": "SPRC, 2017."}, {"text": "Positive coping skills", "detail": "SPRC, 2017."}, {"text": "Physical and mental health", "detail": "SPRC, 2017."}]}, {"name": "Suicide Risk Assessment", "items": [{"text": "PLAN — has the person been thinking of hurting themself, and if so, have they made a plan? What arrangements or preparations have been made?"}, {"text": "METHOD — has the person decided upon a method or a location?"}, {"text": "MEANS — does the individual have the means to carry out the chosen method?"}, {"text": "INTENT — how determined is the person to follow through? Listen for cues of doubt or statements of certainty, and don't be shy about asking directly how certain they are"}, {"text": "Symptoms — is the person exhibiting active symptoms such as psychosis, substance intoxication, or extremely slow or rapid speech patterns?", "detail": "Norris & Clark, 2015."}, {"text": "Nature of the current stressor — a chronic stressor, such as a terminal illness, is a greater risk than an acute one", "detail": "Norris & Clark, 2015."}, {"text": "Offer practical suggestions — hotline numbers, information on seeking treatment, and existing social supports such as religious affiliation, social services, family, or neighbors", "detail": "Norris & Clark, 2015."}]}, {"name": "Three-Phase De-escalation Process", "items": [{"text": "Safety — of the public, the subject, and the police"}, {"text": "Stability — attempt to stabilize the person through verbal and non-verbal de-escalation skills"}, {"text": "Problem Solving — try to get the person into a rational frame of mind, lessening emotional reactivity and increasing the likelihood of future compliance and resolution"}]}, {"name": "Three-Point Assessment — Comprehension", "items": [{"text": "Does the person understand what you're saying?"}, {"text": "Can the person follow instructions?"}, {"text": "Is the person able to answer basic questions related to orientation — person, place, and time?"}, {"text": "When the person speaks, do their comments make sense related to the circumstances?"}, {"text": "How is the person speaking — quickly, slowly, slurred, or mumbled?"}]}, {"name": "Three-Point Assessment — Behavior", "items": [{"text": "How is the person practicing basic self-care — disheveled, or dressed appropriately for the season?"}, {"text": "Is the person caring for their hygiene, such as bathing?"}, {"text": "When was the last time the person ate or drank anything?"}, {"text": "How is the person's physical coordination?"}, {"text": "Is the person compliant or non-compliant — and if non-compliant, could it be due to a mental health issue?"}]}, {"name": "Three-Point Assessment — Emotion", "items": [{"text": "What is the prevailing emotional state — anger, sadness, euphoria, anxious?"}, {"text": "Is the emotional state appropriate to the context of the situation?"}, {"text": "Does the person exhibit quickly fluctuating emotional expressions, such as laughing to crying?"}, {"text": "Is the person exhibiting extreme or baseless suspiciousness or paranoia?"}, {"text": "Is the person's facial expression and body language consistent with their stated mood?"}]}, {"name": "Pro-LEAPS Phrases & Behaviors", "items": [{"text": "“Excuse me sir, can I speak with you?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“I am ___, what would you like me to call you?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“For your safety and mine…”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“Could I ask you…?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“Would you assist me…?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“What's wrong?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "“What can I do to help?”", "detail": "Pro-LEAPS phrase (IKON, 2017)."}, {"text": "Model the type of behavior you want the person to exhibit — calm and nonthreatening", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Be patient", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Restate your message if needed, and consider re-wording it for simplicity", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Use the person's preferred name", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Give instructions (and ask questions) one at a time", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Do not become entwined in delusional content", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Do not try to convince the person that hallucinations or delusions are not real", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Allow for ample personal space — do not crowd the individual", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Remove harmful obstacles from the immediate area, or move the person to a safer, more controlled location", "detail": "Pro-LEAPS behavior (IKON, 2017)."}, {"text": "Minimize distractions and noise — if able, eliminate sirens and emergency lights, and turn off external speakers, flashers, and strobes", "detail": "Pro-LEAPS behavior (IKON, 2017)."}]}, {"name": "Anti-LEAPS Phrases", "items": [{"text": "“Calm down.”"}, {"text": "“What's your problem?”"}, {"text": "“You people…”"}, {"text": "“Come over here.”"}, {"text": "“I'm not going to tell you again…”"}, {"text": "“Because these are the rules.”"}, {"text": "“Because I said so.”"}]}, {"name": "Tactics for Building Rapport & Trust", "items": [{"text": "Honesty and sincerity are essential for rapport and trust"}, {"text": "Use the person's name — whichever name they prefer to be called"}, {"text": "Be patient, and try to match their conversational speed"}, {"text": "Maintain a calm tone of voice"}, {"text": "Do not minimize or discount the subject's point of view"}, {"text": "Validate the positive things the person has done while you've been talking"}, {"text": "Forewarn the person before certain things happen, to build their confidence in you", "detail": "E.g., ‘You have been very straightforward with me, and I am going to be straightforward with you. You are going to have to be handcuffed when you ride in the car, for your safety and mine.’"}, {"text": "Maintain good eye contact — but not confrontational or unending"}, {"text": "Minimize distractions, and do not interrupt while the person is speaking"}, {"text": "Validate and empathize"}, {"text": "Use engaged body language — lean forward into the conversation, or nod"}, {"text": "Remember: it's not what you say, but how you say it"}]}, {"name": "What Fractures Rapport", "items": [{"text": "Making judgments"}, {"text": "Dishonesty"}, {"text": "Failure to follow through on one's end of an agreement"}, {"text": "Aggression"}, {"text": "A dismissive, condescending, or insincere tone of voice"}, {"text": "Exhibiting disinterest"}, {"text": "Labeling"}, {"text": "Patronizing or condescending behavior"}]}, {"name": "How Fractured Rapport Is Repaired", "items": [{"text": "Acknowledging what went wrong, and taking responsibility for your part in it"}, {"text": "Apologizing"}, {"text": "Expressing sincerity"}, {"text": "Taking corrective action"}]}, {"name": "5 Universal Truths of Human Interaction", "items": [{"text": "All cultures want to be treated with dignity and respect", "detail": "Dr. Thompson, 2017."}, {"text": "All people would rather be asked than told what to do", "detail": "Dr. Thompson, 2017."}, {"text": "All people want to know why they are being asked or told to do something", "detail": "Dr. Thompson, 2017."}, {"text": "All people would rather have options than threats", "detail": "Dr. Thompson, 2017."}, {"text": "All people want a second chance to make matters right", "detail": "Dr. Thompson, 2017."}]}, {"name": "Non-Verbal Cues — Friendly & Helpful", "items": [{"text": "Behaviors that convey safety, respect, and a desire to help", "detail": "PERF, 2016."}, {"text": "Neutral body language and a pleasant facial expression", "detail": "PERF, 2016."}]}, {"name": "Non-Verbal Cues — Aggressive & Hostile", "items": [{"text": "Behaviors that communicate distance from — or even danger to — another individual", "detail": "PERF, 2016."}, {"text": "Example: blading your stance, or resting a hand on the grip of your pistol", "detail": "PERF, 2016."}]}, {"name": "Non-Verbal Cues — Ambiguous", "items": [{"text": "Open to interpretation, with a wide range of meanings to someone in crisis", "detail": "PERF, 2016."}, {"text": "If the posture isn't overtly friendly, it's often interpreted as dangerous — even someone who can't follow your words can often read your non-verbal cues", "detail": "PERF, 2016."}]}, {"name": "Reflecting Statements", "items": [{"text": "“I see…”"}, {"text": "“Tell me more about that.”"}, {"text": "“That might be an option.”"}, {"text": "“What other options can we consider?”"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(17, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} categories. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the category boxes ---------- */
+const COMPACT_KEY = 'ch29_communication_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand categories' : 'Collapse categories';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
