@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 29 Crisis Intervention Training Disorder Facts Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:280px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 29 &middot; Crisis Intervention Training &middot; LOs 29.17&ndash;29.22 &middot; Supplemental Practice</p>
+    <h1>Fact &rarr; Disorder Sorting Game</h1>
+    <p class="sub">The companion to the Disorder &rarr; Type game: here each box is one specific disorder (17 total across the five types), and the cards are the defining facts, symptoms, causes, effects, and associated substances the chapter attaches to it. Drag (or tap) each fact onto the disorder it describes. This is the biggest sorting game on the site &mdash; up to 17 boxes and 99 cards &mdash; so boxes default to a collapsed, pill-style view; expand them to see cards as you place them, or use Categories/Cards-per-category to size a round down. Some disorders naturally have more distinguishing facts than others (e.g., Dysthymia has just 2, Bipolar Disorder has 9) &mdash; that reflects how much space the chapter spends on each one, not a gap in the game.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Disorders in round <input type="number" id="numBuckets" min="2" max="17" value="6"></div>
+      <div class="setup-field">Cards/disorder <input type="number" id="numCards" min="1" max="9" value="3"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a disorder box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the extra detail). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Specific Disorders <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse disorders</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Facts to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 29.17&ndash;29.22 of the Ch.29 Crisis Intervention Training outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "Paranoid Personality Disorder", "items": [{"text": "A pervasive distrust and suspiciousness of others."}, {"text": "Tendency to interpret the actions of others as deliberately threatening or demeaning."}, {"text": "Believes, without basis, that others are exploiting, harming, or deceiving him/her."}, {"text": "Reluctant to confide in others for fear of betrayal."}, {"text": "Perceives attacks on his/her character and is quick to react angrily."}, {"text": "May initially appear objective, rational, and unemotional, but may quickly devolve into combativeness, stubbornness, and sarcasm."}, {"text": "Has a high need for control and autonomy, due to a lack of trust."}, {"text": "Tends to be rigid and critical, and cannot accept criticism."}]}, {"name": "Antisocial Personality Disorder", "items": [{"text": "A pervasive pattern of disregard for and violation of the rights of others, occurring since age 15."}, {"text": "A pattern of rule-breaking and failure to conform to social norms, and/or consistently engaging in illegal behavior."}, {"text": "Deceitfulness, as indicated by repeated lying, use of aliases, or conning others for personal gain."}, {"text": "Aggressiveness, as indicated by repeated physical altercations (including use of weapons) and/or a history or propensity to harm animals."}, {"text": "Consistent irresponsibility, as indicated by failure to sustain gainful employment or honor financial obligations."}, {"text": "Lack of remorse, and lack of willingness to accept accountability or consequences for his/her actions."}, {"text": "On the severity continuum, this diagnosis could apply equally to a gang member or a Wall Street executive."}, {"text": "More frequently diagnosed in males."}]}, {"name": "Borderline Personality Disorder", "items": [{"text": "A pervasive pattern of instability of interpersonal relationships, self-image, emotional expression, and poor impulse control."}, {"text": "May exhibit frantic efforts to avoid abandonment."}, {"text": "A pattern of unstable relationships marked by idealizing and devaluing partners."}, {"text": "Self-damaging impulsivity — excessive spending, promiscuous unprotected sex, substance abuse, other recklessness."}, {"text": "Recurrent suicidal behavior."}, {"text": "Poor anger control and emotional over-reactivity."}, {"text": "More frequently diagnosed in females."}, {"text": "It's a common misunderstanding that the name means someone is almost experiencing another illness (like ‘borderline schizophrenia’) — that's simply a mistake of language."}]}, {"name": "Narcissistic Personality Disorder", "items": [{"text": "Persistent grandiosity, need for admiration, and lack of empathy."}, {"text": "Exaggerates achievements and talents."}, {"text": "Expects to be recognized as superior."}, {"text": "Believes he/she is ‘special’ and should be treated accordingly (entitlement)."}, {"text": "Exploits others."}, {"text": "Often believes he/she has special powers, or is the chosen leader of the world or universe."}, {"text": "Demonstrates arrogant, haughty, or judgmental behaviors/attitudes."}, {"text": "More frequently diagnosed in males."}]}, {"name": "Major Depressive Disorder", "items": [{"text": "Not just feeling sad or ‘blue’ — an intense level of depression that persists for at least two weeks."}, {"text": "One of the most common mental disorders in the U.S."}, {"text": "An estimated 16.1 million American adults had at least one major depressive episode in 2015."}, {"text": "Nearly twice as many women as men suffer major depressive episodes."}, {"text": "Average age of onset is the mid-twenties, though episodes can start much earlier."}, {"text": "Common symptoms include prolonged hopelessness, helplessness, or excessive guilt, and loss of interest in usual activities."}, {"text": "Common symptoms also include difficulty concentrating, low energy, appetite changes, and disrupted sleep."}, {"text": "Depression is the single most common factor in suicidal behavior or death by suicide."}]}, {"name": "Dysthymia", "items": [{"text": "A mild or moderate level of depression that persists for at least two years."}, {"text": "One of the two common forms of depression, alongside Major Depressive Disorder."}]}, {"name": "Bipolar Disorder", "items": [{"text": "Involves cycles between extreme activity/emotional highs (mania) and depression."}, {"text": "Baseline anxiety/depression raises bipolar risk from about 2% (family history alone) up to 49%."}, {"text": "Lifetime prevalence is approximately 4% of the U.S. population."}, {"text": "Suicide risk is 15 times higher than the general population."}, {"text": "Each mood phase lasts at least four days."}, {"text": "Manic-phase behavior — exhibitionism, shoplifting, substance abuse, other impulsive or illegal activity — is usually the reason for law enforcement interaction."}, {"text": "People usually only seek professional help during the depressive phase; the manic phase is reportedly pleasant, energetic, and creative."}, {"text": "Average age of onset is about 25, and it's more commonly diagnosed in women."}, {"text": "Causes more work disability and a poorer overall outcome than unipolar depression."}]}, {"name": "Psychosis / Schizophrenia Spectrum", "items": [{"text": "Involves a distortion of reality that may include delusions and/or hallucinations."}, {"text": "Can appear alongside other diagnoses (substance intoxication, bipolar disorder, major depressive disorder) or from physical causes like organic brain disorders or drug/alcohol withdrawal."}, {"text": "No single gene causes schizophrenia — genes and environmental factors (viral exposure, prenatal nutrition, birth complications) interact."}, {"text": "Delusions are fixed false beliefs maintained despite overwhelming contrary evidence — ‘bizarre’ ones couldn't happen in real life, ‘non-bizarre’ ones could (like believing your phone is tapped)."}, {"text": "Auditory hallucinations are the most common, followed by visual; tactile hallucinations are rarer but can lead to self-injury."}, {"text": "Brain scans show the same neural pathways activate whether a person hears a real voice or an auditory hallucination — to the person, it's real."}, {"text": "Other symptoms include flat emotional expression, nonsense ‘word salad’ speech, confusion, disheveled appearance, and poor impulse control."}]}, {"name": "CNS Depressants", "items": [{"text": "Slow down the operations of the brain and body."}, {"text": "Examples include alcohol, barbiturates, GHB, Rohypnol, Valium, and Xanax."}, {"text": "Indications include incoordination, disorientation, sluggishness, thick or slurred speech, and ‘drunk’ behavior."}, {"text": "Typically administered orally, occasionally by injection."}, {"text": "Overdose signs include shallow breathing, cold skin, dilated pupils, rapid weak pulse, or coma."}]}, {"name": "CNS Stimulants", "items": [{"text": "Accelerate heart rate, elevate blood pressure, and ‘speed up’ the body."}, {"text": "Examples include Adderall, amphetamines, cocaine/crack, methamphetamine, and Sudafed."}, {"text": "Indications include anxiety, body tremors, euphoria, teeth grinding, insomnia, and talkativeness."}, {"text": "Administered by insufflation (snorting), smoking, injection, or oral ingestion."}, {"text": "Overdose signs include agitation, increased body temperature, hallucinations, and seizures."}]}, {"name": "Hallucinogens", "items": [{"text": "Cause the user to perceive things differently than they appear to others."}, {"text": "Examples include LSD, psilocybin, peyote, and DMT (MDMA/Molly/Ecstasy overlaps, acting more like a stimulant)."}, {"text": "Indications include body tremors, disorientation, hallucinations, paranoia, and poor perception of time and distance."}, {"text": "Administered by ingestion, insufflation, smoking, injection, or eye drops."}, {"text": "There is no known overdose threshold, though MDMA overdose mimics stimulant overdose."}]}, {"name": "Dissociative Anesthetics", "items": [{"text": "Inhibit pain by dissociating the brain's perception of it."}, {"text": "Examples include PCP and its analogs, and ketamine."}, {"text": "Indications include a blank stare, confusion, chemical odor, early HGN onset, and increased pain threshold."}, {"text": "No known overdose threshold, but delusions can be strong enough to cause suicidal behavior, and body temperature can climb high enough to be deadly (‘excited delirium’)."}]}, {"name": "Narcotic Analgesics", "items": [{"text": "Relieve pain, induce euphoria, and create mood changes."}, {"text": "Examples include heroin, morphine, codeine, Oxycontin, and Vicodin."}, {"text": "Indications include depressed reflexes, drowsiness, droopy eyelids (ptosis), and slowed breathing."}, {"text": "Administered by injection, ingestion, smoking, or insufflation."}, {"text": "Overdose indications include slow shallow breathing, clammy skin, seizures, and coma."}]}, {"name": "Inhalants", "items": [{"text": "A wide variety of breathable substances that produce mind-altering effects."}, {"text": "Examples include paint thinner, gasoline, hair spray, and nitrous oxide (‘whip-its’)."}, {"text": "Indications include bloodshot watery eyes, confusion, flushed face, and intense headaches."}, {"text": "The method of administration is inhalation."}, {"text": "Overdose indications are seizures and coma."}]}, {"name": "Cannabis", "items": [{"text": "The scientific name for marijuana; the active ingredient is THC (delta-9-tetrahydrocannabinol)."}, {"text": "This category includes synthetic cannabinoids like K2, Spice, and JWH."}, {"text": "Indications include body tremors, impaired perception of time and distance, increased appetite, and reddened conjunctiva."}, {"text": "Administered by ingestion and smoking; there is no known overdose level."}, {"text": "CBD oil marketed as THC-free often still carries a trace amount of THC (roughly 0.5% or less)."}]}, {"name": "Other Substances (Bath Salts, Kratom)", "items": [{"text": "Bath salts are frequently analogs of other drugs, or a mix of solvents and chemicals — behavior and overdose are hard to predict, and may be linked to excited delirium."}, {"text": "Kratom affects the same opioid brain receptors as morphine and carries risks of addiction, abuse, and dependence — the DEA lists it as a ‘drug of concern.’"}]}, {"name": "Delirium", "items": [{"text": "Can be drug-induced, medication-induced, or due to a medical condition."}, {"text": "Develops over a short period — hours or days."}, {"text": "Attentional deficits — a reduced ability to direct, focus, sustain, or shift attention."}, {"text": "Memory deficit and disorientation."}, {"text": "Often creates an inability to comprehend speech or follow instructions."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(10, Number(document.getElementById('numCards').value) || 3));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} disorders. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the disorder boxes ---------- */
+const COMPACT_KEY = 'ch29_disorder_facts_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand disorders' : 'Collapse disorders';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
