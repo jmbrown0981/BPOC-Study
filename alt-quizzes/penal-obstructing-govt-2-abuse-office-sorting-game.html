@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Obstructing Governmental Operation II &amp; Abuse of Office Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.38 (part 2 of 2) &amp; Ch.39 &middot; Supplemental Practice</p>
+    <h1>Obstructing Governmental Operation II &amp; Abuse of Office Sorting Game</h1>
+    <p class="sub">The second of two Chapter 38 games, plus all of Chapter 39. Twenty-four boxes: unmanned aircraft over a correctional facility, barratry and solicitation of professional employment, falsely holding oneself out as a lawyer, unauthorized practice of law, hindering proceedings by disorderly conduct, taking a weapon from a peace officer, interference with public duties/police service animals/government radio frequency, preventing execution of civil process, failure to stop or report a sexual or assaultive offense against a child, failure to report a felony or report abuse/neglect in a group home, and misuse of collision-report information (Ch.38) &mdash; plus abuse of official capacity, official oppression, civil-rights violations against a person in custody, misuse of official information, and failure to comply with an immigration detainer request (Ch.39). Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="24" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="8" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.38 (Obstructing Governmental Operation), sections 38.115&ndash;38.19, and Ch.39 (Abuse of Office) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "38.115 — Operation of Unmanned Aircraft Over Correctional Facility or Detention Facility", "items": [{"text": "A person commits an offense if the person intentionally or knowingly: (1) operates an unmanned aircraft over a correctional facility or detention facility and the unmanned aircraft is not higher than 400 feet above ground level; (2) allows an unmanned aircraft to make contact with a correctional facility or detention facility, including any person or object on the premises of or within the facility; or (3) allows an unmanned aircraft to come within a distance of a correctional facility or detention facility that is close enough to interfere with the operations of or cause a disturbance to the facility."}, {"text": "This section does not apply to conduct described by Subsection (b) that is committed by: (1) the federal government, this state, or a governmental entity; (2) a person under contract with or otherwise acting under the direction or on behalf of the federal government, this state, or a governmental entity; (3) a person who has the prior written consent of the owner or operator of the correctional facility or detention facility; (4) a law enforcement agency; or (5) a person under contract with or otherwise acting under the direction or on behalf of a law enforcement agency."}, {"text": "An offense under this section is a Class B misdemeanor, except that the offense is: (1) a Class A misdemeanor if the actor has previously been convicted under this section; or (2) a state jail felony if, during the commission of the offense, the actor used the unmanned aircraft to: (A) provide contraband to a person in the custody of the correctional facility or detention facility; or (B) otherwise introduce contraband into the correctional facility or detention facility."}]}, {"name": "38.12 — Barratry and Solicitation of Professional Employment", "items": [{"text": "A person commits an offense if the person: (1) knowingly finances the commission of an offense under Subsection (a); (2) invests funds the person knows or believes are intended to further the commission of an offense under Subsection (a); or (3) is a professional who knowingly accepts employment within the scope of the person's license, registration, or certification that results from the solicitation of employment in violation of Subsection (a)."}, {"text": "It is an exception to prosecution under Subsection (a) or (b) that the person's conduct is authorized by the Texas Disciplinary Rules of Professional Conduct or any rule of court."}, {"text": "A person commits an offense if the person: (1) is an attorney, chiropractor, physician, surgeon, or private investigator licensed to practice in this state or any person licensed, certified, or registered by a health care regulatory agency of this state; and (2) with the intent to obtain professional employment for the person or for another, provides or knowingly permits to be provided to an individual who has not sought the person's employment, legal representation, advice, or care, a written communication or a solicitation, including a solicitation in person, by telephone, through a direct message on a social media platform, or by another electronic communication that: — (see Sec./Art. 38.12 for the complete list)"}, {"text": "For purposes of Subsection (d)(2)(D), a desire not to be contacted is presumed if an accident report reflects that such an indication has been made by an injured person or that person's relative."}, {"text": "An offense under Subsection (a) or (b) is a felony of the third degree."}, {"text": "Except as provided by Subsection (h), an offense under Subsection (d) is a Class A misdemeanor."}, {"text": "An offense under Subsection (d) is a felony of the third degree if it is shown on the trial of the offense that the defendant has previously been convicted under Subsection (d)."}, {"text": "Final conviction of felony barratry is a serious crime for all purposes and acts, specifically including the State Bar Rules and the Texas Rules of Disciplinary Procedure."}]}, {"name": "38.122 — Falsely Holding Oneself Out as a Lawyer", "items": [{"text": "An offense under Subsection (a) of this section is a felony of the third degree."}, {"text": "Final conviction of falsely holding oneself out to be a lawyer is a serious crime for all purposes and acts, specifically including the State Bar Rules."}]}, {"name": "38.123 — Unauthorized Practice of Law", "items": [{"text": "This section does not apply to a person currently licensed to practice law in this state, another state, or a foreign country and in good standing with the State Bar of Texas and the state bar or licensing authority of any and all other states and foreign countries where licensed."}, {"text": "Except as provided by Subsection (d) of this section, an offense under Subsection (a) of this section is a Class A misdemeanor."}, {"text": "An offense under Subsection (a) of this section is a felony of the third degree if it is shown on the trial of the offense that the defendant has previously been convicted under Subsection (a) of this section."}]}, {"name": "38.13 — Hindering Proceedings by Disorderly Conduct", "items": [{"text": "A person commits an offense if he recklessly hinders an official proceeding by noise or violent or tumultuous behavior or disturbance and continues after explicit official request to desist."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "38.14 — Taking or Attempting to Take Weapon from Peace Officer, Federal Special Investigator, Employee or Official of Correctional Facility, Parole Officer, Community Supervision and Corrections Department Officer, or Commissioned Security Officer", "items": [{"text": "A person commits an offense if the person intentionally or knowingly and with force takes or attempts to take from a peace officer, federal special investigator, employee or official of a correctional facility, parole officer, community supervision and corrections department officer, or commissioned security officer the officer's, investigator's, employee's, or official's firearm, nightstick, stun gun, or personal protection chemical dispensing device."}, {"text": "The actor is presumed to have known that the peace officer, federal special investigator, employee or official of a correctional facility, parole officer, community supervision and corrections department officer, or commissioned security officer was a peace officer, federal special investigator, employee or official of a correctional facility, parole officer, community supervision and corrections department officer, or commissioned security officer if: (1) the officer, investigator, employee, or official was wearing a distinctive uniform or badge indicating his employment; or (2) the officer, investigator, employee, or official identified himself as a peace officer, federal special investigator, employee or official of a correctional facility, parole officer, community supervision and — (see Sec./Art. 38.14 for the complete list)"}, {"text": "It is a defense to prosecution under this section that the defendant took or attempted to take the weapon from a peace officer, federal special investigator, employee or official of a correctional facility, parole officer, community supervision and corrections department officer, or commissioned security officer who was using force against the defendant or another in excess of the amount of force permitted by law."}, {"text": "An offense under this section is: (1) a felony of the third degree, if the defendant took a weapon described by Subsection (b) from an officer, investigator, employee, or official described by that subsection; and (2) a state jail felony, if the defendant attempted to take a weapon described by Subsection (b) from an officer, investigator, employee, or official described by that subsection."}]}, {"name": "38.15 — Interference with Public Duties", "items": [{"text": "An offense under this section is a Class B misdemeanor."}, {"text": "It is a defense to prosecution under Subsection (a)(1) that the conduct engaged in by the defendant was intended to warn a person operating a motor vehicle of the presence of a peace officer who was enforcing Subtitle C, Title 7, Transportation Code."}, {"text": "It is a defense to prosecution under this section that the interruption, disruption, impediment, or interference alleged consisted of speech only."}, {"text": "Except as provided by Subsection (d-2), in a prosecution for an offense under Subsection (a)(1), there is a rebuttable presumption that the actor interferes with a peace officer if it is shown on the trial of the offense that the actor intentionally disseminated the home address, home telephone number, emergency contact information, or social security number of the officer or a family member of the officer or any other information that is specifically described by Section 552.117(a), Government Code."}, {"text": "The presumption in Subsection (d-1) does not apply to information disseminated by: (1) a radio or television station that holds a license issued by the Federal Communications Commission; or (2) a newspaper that is: (A) a free newspaper of general circulation or qualified to publish legal notices; (B) published at least once a week; and (C) available and of interest to the general public."}, {"text": "In this section: (1) \"Emergency\" means a condition or circumstance in which an individual is or is reasonably believed by the person transmitting the communication to be in imminent danger of serious bodily injury or in which property is or is reasonably believed by the person transmitting the communication to be in imminent danger of damage or destruction. (2) \"Utility\" means: (A) an electric utility, as defined by Section 31.002, Utilities Code; (B) a telecommunications provider, as defined by Section 51.002, Utilities Code; (C) a video service provider or cable service provider, as defined by Section 66.002, Utilities Code; (D) a gas utility, as defined by Section 101.003, Utilities Code, which for the purposes of this subsection includes a municipally owned utility as defined by that — (see Sec./Art. 38.15 for the complete list)"}]}, {"name": "38.151 — Interference with Police Service Animals", "items": [{"text": "A person commits an offense if the person recklessly: (1) taunts, torments, or strikes a police service animal; (2) throws an object or substance at a police service animal; (3) interferes with or obstructs a police service animal or interferes with or obstructs the handler or rider of a police service animal in a manner that: (A) inhibits or restricts the handler's or rider's control of the animal; or (B) deprives the handler or rider of control of the animal; (4) releases a police service animal from its area of control; (5) enters the area of control of a police service animal without the effective consent of the handler or rider, including placing food or any other object or substance into that area; (6) injures or kills a police service animal; — (see Sec./Art. 38.151 for the complete list)"}, {"text": "An offense under this section is: (1) a Class C misdemeanor if the person commits an offense under Subsection (b)(1); (2) a Class B misdemeanor if the person commits an offense under Subsection (b)(2); (3) a Class A misdemeanor if the person commits an offense under Subsection (b)(3), (4), or (5); (4) except as provided by Subdivision (5), a state jail felony if the person commits an offense under Subsection (b)(6) or (7) by injuring a police service animal or by engaging in conduct likely to injure the animal; or (5) a felony of the second degree if the person commits an offense under Subsection (b)(6) or (7) by: (A) killing a police service animal or engaging in conduct likely to kill the animal; — (see Sec./Art. 38.151 for the complete list)"}]}, {"name": "38.152 — Interference with Radio Frequency Licensed to Government Entity", "items": [{"text": "An offense under this section is a Class A misdemeanor, except that the offense is a state jail felony if the actor committed the offense with the intent to: (1) facilitate the commission of another offense; or (2) interfere with the ability of a law enforcement agency, a fire department, or an emergency medical services provider to respond to an emergency."}, {"text": "In this section: (1) \"Emergency\" has the meaning assigned by Section 38.15. (2) \"Emergency medical services provider\" has the meaning assigned by Section 773.003, Health and Safety Code. (3) \"Law enforcement agency\" has the meaning assigned by Article 59.01, Code of Criminal Procedure."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or under both sections."}]}, {"name": "38.16 — Preventing Execution of Civil Process", "items": [{"text": "It is an exception to the application of this section that the actor evaded service of process by avoiding detection."}, {"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "38.17 — Failure to Stop or Report Sexual or Assaultive Offense Against Child", "items": [{"text": "An offense under this section is a felony of the third degree."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "38.171 — Failure to Report Felony", "items": [{"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "38.172 — Failure to Report Assault, Neglect, or Omission of Care in Certain Group Homes", "items": [{"text": "A person commits an offense if the person: (1) has actual knowledge that a resident of a group home has suffered bodily injury due to assault, neglect, or an omission in care; and (2) fails to report that fact to law enforcement or the Department of Family and Protective Services."}, {"text": "It is an exception to the application of this section that: (1) the actor is a person who holds a license issued under Chapter 142, 242, 246, 247, or 252, Health and Safety Code, or who is exempt from licensing under Section 142.003(a)(19), 242.003(3), or 247.004(4), Health and Safety Code; or (2) the injury occurs in: (A) an establishment or facility exempt from licensing under Section 142.003(a)(19), 242.003(3), or 247.004(4), Health and Safety Code; (B) a hotel as defined by Section 156.001, Tax Code; (C) a retirement community; (D) a monastery or convent; (E) a child-care facility as defined by Section 42.002, Human Resources Code; (F) a family violence shelter center as defined by Section 51.002, Human Resources Code; — (see Sec./Art. 38.172 for the complete list)"}, {"text": "An offense under this section is a Class A misdemeanor."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "38.18 — Use of Collision Report Information and Other Information for Pecuniary Gain", "items": [{"text": "A person commits an offense if: (1) the person obtains information described by Subsection (a) from the Department of Public Safety of the State of Texas or other governmental entity; and (2) the information is subsequently used for the direct solicitation of business or employment for pecuniary gain by: (A) the person; (B) an agent or employee of the person; or (C) the person on whose behalf the information was requested."}, {"text": "A person who employs or engages another to obtain information described by Subsection (a) from the Department of Public Safety or other governmental entity commits an offense if the person subsequently uses the information for direct solicitation of business or employment for pecuniary gain."}, {"text": "An offense under this section is a Class B misdemeanor."}]}, {"name": "38.19 — Failure to Provide Notice and Report of Death of Resident of Institution", "items": [{"text": "A superintendent or general manager of an institution commits an offense if, as required by Article 49.24 or 49.25, Code of Criminal Procedure, the person fails to: (1) provide notice of the death of an individual under the care, custody, or control of or residing in the institution; (2) submit a report on the death of the individual; or (3) include in the report material facts known or discovered by the person at the time the report was filed. Text of subsection effective on April 01, 2027"}, {"text": "A superintendent or general manager of an institution commits an offense if, as required by Article 49A.151 or 49A.152, Code of Criminal Procedure, the person fails to: (1) provide notice of the death of an individual under the care, custody, or control of or residing in the institution; (2) submit a report on the death of the individual; or (3) include in the report material facts known or discovered by the person at the time the report was filed."}, {"text": "An offense under this section is a Class B misdemeanor. Page -2 - Page - 1 -"}]}, {"name": "39.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Law relating to a public servant's office or employment\" means a law that specifically applies to a person acting in the capacity of a public servant and that directly or indirectly: (A) imposes a duty on the public servant; or (B) governs the conduct of the public servant. (2) \"Misuse\" means to deal with property contrary to: (A) an agreement under which the public servant holds the property; (B) a contract of employment or oath of office of a public servant; (C) a law, including provisions of the General Appropriations Act specifically relating to government property, that prescribes the manner of custody or disposition of the property; or (D) a limited purpose for which the property is delivered or received."}]}, {"name": "39.015 — Concurrent Jurisdiction to Prosecute Offenses Under This Chapter", "items": [{"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this chapter."}]}, {"name": "39.02 — Abuse of Official Capacity", "items": [{"text": "An offense under Subsection (a)(1) is a Class A misdemeanor."}, {"text": "An offense under Subsection (a)(2) is: (1) a Class C misdemeanor if the value of the use of the thing misused is less than $100; (2) a Class B misdemeanor if the value of the use of the thing misused is $100 or more but less than $750; (3) a Class A misdemeanor if the value of the use of the thing misused is $750 or more but less than $2,500; (4) a state jail felony if the value of the use of the thing misused is $2,500 or more but less than $30,000; (5) a felony of the third degree if the value of the use of the thing misused is $30,000 or more but less than $150,000; (6) a felony of the second degree if the value of the use of the thing misused is $150,000 or more but less than $300,000; or (7) a felony of the first degree if the value of the use of the thing misused is $300,000 or more."}, {"text": "A discount or award given for travel, such as frequent flyer miles, rental car or hotel discounts, or food coupons, are not things of value belonging to the government for purposes of this section due to the administrative difficulty and cost involved in recapturing the discount or award for a governmental entity."}, {"text": "If separate transactions that violate Subsection (a)(2) are conducted pursuant to one scheme or continuing course of conduct, the conduct may be considered as one offense and the value of the use of the things misused in the transactions may be aggregated in determining the classification of the offense."}, {"text": "The value of the use of a thing of value misused under Subsection (a)(2) may not exceed: (1) the fair market value of the thing at the time of the offense; or (2) if the fair market value of the thing cannot be ascertained, the cost of replacing the thing within a reasonable time after the offense."}]}, {"name": "39.03 — Official Oppression", "items": [{"text": "For purposes of this section, a public servant acts under color of his office or employment if he acts or purports to act in an official capacity or takes advantage of such actual or purported capacity."}, {"text": "In this section, \"sexual harassment\" means unwelcome sexual advances, requests for sexual favors, or other verbal or physical conduct of a sexual nature, submission to which is made a term or condition of a person's exercise or enjoyment of any right, privilege, power, or immunity, either explicitly or implicitly."}, {"text": "An offense under this section is a Class A misdemeanor, except that an offense is a felony of the third degree if the public servant acted with the intent to impair the accuracy of data reported to the Texas Education Agency through the Public Education Information Management System (PEIMS) described by Sections 48.008 and 48.009, Education Code, under a law requiring that reporting."}]}, {"name": "39.04 — Violations of the Civil Rights of Person in Custody; Improper Sexual Activity with Person in Custody or Under Supervision", "items": [{"text": "An offense under Subsection (a)(1) is a felony of the third degree. An offense under Subsection (a)(2) is a felony of the second degree, except that an offense under Subsection (a)(2) is a felony of the first degree if the offense is committed against: (1) an individual in the custody of the Texas Juvenile Justice Department or placed in a juvenile facility; or (2) a juvenile offender detained in or committed to a correctional facility. Text of subsection as amended by Acts 2021, 87th Leg., R.S., Ch. 939 (S.B. 312), Sec. 1"}, {"text": "An offense under Subsection (a)(1) is a Class A misdemeanor. An offense under Subsection (a)(2) is a felony of the second degree."}, {"text": "This section shall not preclude prosecution for any other offense set out in this code."}, {"text": "The Attorney General of Texas shall have concurrent jurisdiction with law enforcement agencies to investigate violations of this statute involving serious bodily injury or death."}, {"text": "In this section: Text of subdivision as amended by Acts 2015, 84th Leg., R.S., Ch. 216 (H.B. 511), Sec. 1 (1) \"Correctional facility\" means: (A) any place described by Section 1.07(a)(14); (B) any place or facility designated for the detention of a person suspected of violating a provision of the Immigration and Nationality Act (8 U.S.C. Section 1101 et seq.); or (C) a \"secure correctional facility\" or \"secure detention facility\" as defined by Section 51.02, Family Code. Text of subdivision as amended by Acts 2015, 84th Leg., R.S., Ch. 1136 (S.B. 183), Sec. 2 (1) \"Correctional facility\" means any place described by Section 1.07(a)(14). (2) \"Custody\" means the detention, arrest, or confinement of an adult offender, the detention of a juvenile offender, or the commitment of a juvenile — (see Sec./Art. 39.04 for the complete list)"}, {"text": "An employee of the Texas Department of Criminal Justice, the Texas Juvenile Justice Department, a juvenile facility, a local juvenile probation department, or a community supervision and corrections department established under Chapter 76, Government Code, a person other than an employee who works for compensation at a juvenile facility or local juvenile probation department, or a volunteer at a juvenile facility or local juvenile probation department commits an offense if the actor engages in sexual contact, sexual intercourse, or deviate sexual intercourse with an individual who the actor knows is under the supervision of the Texas Department of Criminal Justice, Texas Juvenile Justice Department, probation department, or community supervision and corrections department but not in the — (see Sec./Art. 39.04 for the complete list)"}, {"text": "An offense under Subsection (f) is a state jail felony."}, {"text": "It is an affirmative defense to prosecution under Subsection (f) that the actor was the spouse of the individual at the time of the offense."}]}, {"name": "39.041 — Improper Sexual Activity with Committed Person", "items": [{"text": "An officer or employee of the Texas Civil Commitment Office, a person who contracts with this state to perform a service in a civil commitment facility or an employee of that person, or a volunteer at a civil commitment facility commits an offense if the person intentionally engages in deviate sexual intercourse, sexual contact, or sexual intercourse with a person committed to a civil commitment facility."}, {"text": "An offense under this section is a felony of the third degree."}, {"text": "It is an affirmative defense to prosecution under this section that, at the time of the offense, the actor was the spouse of the person committed to the civil commitment facility."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "39.05 — Failure to Report Death of Prisoner", "items": [{"text": "A person commits an offense if the person is required to conduct an investigation and file a report by Article 49.18, Code of Criminal Procedure, and the person fails to investigate the death, fails to file the report as required, or fails to include in a filed report facts known or discovered in the investigation. Text of subsection effective on April 01, 2027"}, {"text": "A person commits an offense if the person is required to conduct an investigation and file a report by Article 49A.153, Code of Criminal Procedure, and the person fails to investigate the death, fails to file the report as required, or fails to include in a filed report facts known or discovered in the investigation."}, {"text": "A person commits an offense if the person is required by Section 501.055, Government Code, to: (1) give notice of the death of an inmate and the person fails to give the notice; or (2) conduct an investigation and file a report and the person: (A) fails to conduct the investigation or file the report; or (B) fails to include in the report facts known to the person or discovered by the person in the investigation."}, {"text": "An offense under this section is a Class B misdemeanor."}]}, {"name": "39.06 — Misuse of Official Information", "items": [{"text": "A public servant commits an offense if with intent to obtain a benefit or with intent to harm or defraud another, he discloses or uses information for a nongovernmental purpose that: (1) he has access to by means of his office or employment; and (2) has not been made public."}, {"text": "A person commits an offense if, with intent to obtain a benefit or with intent to harm or defraud another, he solicits or receives from a public servant information that: (1) the public servant has access to by means of his office or employment; and (2) has not been made public."}, {"text": "In this section, \"information that has not been made public\" means any information to which the public does not generally have access, and that is prohibited from disclosure under Chapter 552, Government Code."}, {"text": "Except as provided by Subsection (g), an offense under this section is a felony of the third degree."}, {"text": "Repealed by Acts 2025, 89th Leg., R.S., Ch. 397 (H.B. 2001), Sec. 2, eff. September 1, 2025."}, {"text": "If the commission of an offense under this section results in a net pecuniary gain to the person committing the offense, the offense is: (1) a felony of the third degree if the net pecuniary gain is less than $150,000; (2) a felony of the second degree if the net pecuniary gain is $150,000 or more but less than $300,000; or (3) a felony of the first degree if the net pecuniary gain is $300,000 or more."}]}, {"name": "39.07 — Failure to Comply with Immigration Detainer Request", "items": [{"text": "An offense under this section is a Class A misdemeanor."}, {"text": "It is an exception to the application of this section that the person who was subject to an immigration detainer request described by Subsection (a)(1) had provided proof that the person is a citizen of the United States or that the person has lawful immigration status in the United States, such as a Texas driver's license or similar government-issued identification. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(8, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_13_obstructing_govt_ii_abuse_office_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

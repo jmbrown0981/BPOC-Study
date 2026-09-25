@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Arson, Robbery, Burglary &amp; Criminal Trespass Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.28, 29 &amp; 30 &middot; Supplemental Practice</p>
+    <h1>Arson, Robbery, Burglary &amp; Criminal Trespass Sorting Game</h1>
+    <p class="sub">Twenty-one boxes covering Chapter 28 (Arson, Criminal Mischief, Graffiti, Damaging Critical Infrastructure Facility), Chapter 29 (Robbery, Aggravated Robbery, and Jugging), and Chapter 30 (Burglary, Burglary of Coin-Operated Machines, Burglary of Vehicles, Criminal Trespass, and trespass by a license holder carrying a handgun, concealed or open). Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="21" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="16" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.28 (Arson, Criminal Mischief &amp; Other Property Damage), Ch.29 (Robbery), Ch.30 (Burglary &amp; Criminal Trespass) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "28.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Habitation\" means a structure or vehicle that is adapted for the overnight accommodation of persons and includes: (A) each separately secured or occupied portion of the structure or vehicle; and (B) each structure appurtenant to or connected with the structure or vehicle. (2) \"Building\" means any structure or enclosure intended for use or occupation as a habitation or for some purpose of trade, manufacture, ornament, or use. (3) \"Property\" means: (A) real property; (B) tangible or intangible personal property, including anything severed from land; or (C) a document, including money, that represents or embodies anything of value. — (see Sec./Art. 28.01 for the complete list)"}]}, {"name": "28.02 — Arson", "items": [{"text": "A person commits an offense if the person recklessly starts a fire or causes an explosion while manufacturing or attempting to manufacture a controlled substance and the fire or explosion damages any building, habitation, or vehicle."}, {"text": "A person commits an offense if the person intentionally starts a fire or causes an explosion and in so doing: (1) recklessly damages or destroys a building belonging to another; or (2) recklessly causes another person to suffer bodily injury or death."}, {"text": "It is an exception to the application of Subsection (a)(1) that the fire or explosion was a part of the controlled burning of open-space land."}, {"text": "It is a defense to prosecution under Subsection (a)(2)(A) that prior to starting the fire or causing the explosion, the actor obtained a permit or other written authorization granted in accordance with a city ordinance, if any, regulating fires and explosions."}, {"text": "An offense under Subsection (a) is a felony of the second degree, except that the offense is a felony of the first degree if it is shown on the trial of the offense that: (1) bodily injury or death was suffered by any person by reason of the commission of the offense; or (2) the property intended to be damaged or destroyed by the actor was a habitation or a place of assembly or worship."}, {"text": "An offense under Subsection (a-1) is a state jail felony, except that the offense is a felony of the third degree if it is shown on the trial of the offense that bodily injury or death was suffered by any person by reason of the commission of the offense."}, {"text": "An offense under Subsection (a-2) is a state jail felony."}, {"text": "If conduct that constitutes an offense under Subsection (a-1) or that constitutes an offense under Subsection (a-2) also constitutes an offense under another subsection of this section or another section of this code, the actor may be prosecuted under Subsection (a-1) or Subsection (a-2), under the other subsection of this section, or under the other section of this code."}]}, {"name": "28.03 — Criminal Mischief", "items": [{"text": "Except as provided by Subsections (f) and (h), an offense under this section is: (1) a Class C misdemeanor if: (A) the amount of pecuniary loss is less than $100; or (B) except as provided in Subdivision (3)(A) or (3)(B), it causes substantial inconvenience to others; (2) a Class B misdemeanor if the amount of pecuniary loss is $100 or more but less than $750; (3) a Class A misdemeanor if: (A) the amount of pecuniary loss is $750 or more but less than $2,500; or (B) the actor causes in whole or in part impairment or interruption of any public water supply, or causes to be diverted in whole, in part, or in any manner, including installation or removal of any device for any such purpose, any public water supply, regardless of the amount of the pecuniary loss; — (see Sec./Art. 28.03 for the complete list)"}, {"text": "For the purposes of this section, it shall be presumed that a person who is receiving the economic benefit of public communications, public water, gas, or power supply, has knowingly tampered with the tangible property of the owner if the communication or supply has been: (1) diverted from passing through a metering device; or (2) prevented from being correctly registered by a metering device; or (3) activated by any device installed to obtain public communications, public water, gas, or power supply without a metering device."}, {"text": "The terms \"public communication, public transportation, public gas or power supply, or other public service\" and \"public water supply\" shall mean, refer to, and include any such services subject to regulation by the Public Utility Commission of Texas, the Railroad Commission of Texas, or the Texas Commission on Environmental Quality or any such services enfranchised by the State of Texas or any political subdivision thereof."}, {"text": "When more than one item of tangible property, belonging to one or more owners, is damaged, destroyed, or tampered with in violation of this section pursuant to one scheme or continuing course of conduct, the conduct may be considered as one offense, and the amounts of pecuniary loss to property resulting from the damage to, destruction of, or tampering with the property may be aggregated in determining the grade of the offense."}, {"text": "An offense under this section is a state jail felony if the damage or destruction is inflicted on a place of worship or human burial, a public monument, or a community center that provides medical, social, or educational programs and the amount of the pecuniary loss to real property or to tangible personal property is $750 or more but less than $30,000."}, {"text": "In this section: (1) \"Explosive weapon\" means any explosive or incendiary device that is designed, made, or adapted for the purpose of inflicting serious bodily injury, death, or substantial property damage, or for the principal purpose of causing such a loud report as to cause undue public alarm or terror, and includes: (A) an explosive or incendiary bomb, grenade, rocket, and mine; (B) a device designed, made, or adapted for delivering or shooting an explosive weapon; and (C) a device designed, made, or adapted to start a fire in a time-delayed manner. (2) \"Firearm\" has the meaning assigned by Section 46.01. (3) \"Institution of higher education\" has the meaning assigned by Section 61.003, Education Code. — (see Sec./Art. 28.03 for the complete list)"}, {"text": "An offense under this section is a state jail felony if the amount of the pecuniary loss to real property or to tangible personal property is $750 or more but less than $30,000 and the damage or destruction is inflicted on a public or private elementary school, secondary school, or institution of higher education."}, {"text": "Notwithstanding Subsection (b), an offense under this section is a felony of the first degree if the property is livestock and the damage is caused by introducing bovine spongiform encephalopathy, commonly known as mad cow disease, or a disease listed in rules adopted by the Texas Animal Health Commission under Section 161.041(a), Agriculture Code. In this subsection, \"livestock\" has the meaning assigned by Section 161.001, Agriculture Code."}, {"text": "Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if: (1) the tangible property damaged, destroyed, or tampered with is transportation communications equipment or a transportation communications device; and (2) the amount of the pecuniary loss to the tangible property is less than $150,000."}, {"text": "Subsection (a)(1) or (2) does not apply if the tangible personal property of the owner was a head of cattle or bison killed, or a horse killed, in the course of the actor's: (1) actual discharge of official duties as a member of the United States armed forces or the state military forces as defined by Section 437.001, Government Code; or (2) regular agricultural labor duties and practices."}, {"text": "Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if: (1) the actor committed the offense by damaging or destroying: (A) a copper or brass component of a critical infrastructure facility; or (B) equipment or communication wires appurtenant to or connected to a copper or brass component of the facility or on which the facility depends to properly function, regardless of whether the equipment or communication wires are enclosed by a fence or other barrier; and (2) the damage or destruction causes, wholly or partly, the impairment or interruption of the facility or the equipment or communication wires."}]}, {"name": "28.04 — Reckless Damage or Destruction", "items": [{"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "28.05 — Actor's Interest in Property", "items": [{"text": "It is no defense to prosecution under this chapter that the actor has an interest in the property damaged or destroyed if another person also has an interest that the actor is not entitled to infringe."}]}, {"name": "28.06 — Amount of Pecuniary Loss", "items": [{"text": "The amount of pecuniary loss under this chapter, if the property is damaged, is the cost of repairing or restoring the damaged property within a reasonable time after the damage occurred."}, {"text": "The amount of pecuniary loss under this chapter for documents, other than those having a readily ascertainable market value, is: (1) the amount due and collectible at maturity less any part that has been satisfied, if the document constitutes evidence of a debt; or (2) the greatest amount of economic loss that the owner might reasonably suffer by virtue of the destruction or damage if the document is other than evidence of a debt."}, {"text": "If the amount of pecuniary loss cannot be ascertained by the criteria set forth in Subsections (a) through (c), the amount of loss is deemed to be greater than $750 but less than $2,500."}, {"text": "If the actor proves by a preponderance of the evidence that he gave consideration for or had a legal interest in the property involved, the value of the interest so proven shall be deducted from: (1) the amount of pecuniary loss if the property is destroyed; or (2) the amount of pecuniary loss to the extent of an amount equal to the ratio the value of the interest bears to the total value of the property, if the property is damaged."}]}, {"name": "28.07 — Interference with Railroad Property", "items": [{"text": "A person commits an offense if the person: (1) throws an object or discharges a firearm or weapon at a train or rail-mounted work equipment; or (2) without the effective consent of the owner: (A) enters or remains on railroad property, knowing that it is railroad property; (B) tampers with railroad property; (C) places an obstruction on a railroad track or right-of-way; or (D) causes in any manner the derailment of a train, railroad car, or other railroad property that moves on tracks."}, {"text": "An offense under Subsection (b)(1) is a Class B misdemeanor unless the person causes bodily injury to another, in which event the offense is a felony of the third degree."}, {"text": "An offense under Subsection (b)(2)(A) is a Class C misdemeanor."}, {"text": "An offense under Subsection (b)(2)(B), (b)(2)(C), or (b)(2)(D) is a Class C misdemeanor unless the person causes pecuniary loss of $100 or more, in which event the offense is: (1) a Class B misdemeanor if the amount of pecuniary loss is $100 or more but less than $750; (2) a Class A misdemeanor if the amount of pecuniary loss is $750 or more but less than $2,500; (3) a state jail felony if the amount of pecuniary loss is $2,500 or more but less than $30,000; (4) a felony of the third degree if the amount of the pecuniary loss is $30,000 or more but less than $150,000; (5) a felony of the second degree if the amount of pecuniary loss is $150,000 or more but less than $300,000; or (6) a felony of the first degree if the amount of the pecuniary loss is $300,000 or more."}, {"text": "The conduct described in Subsection (b)(2)(A) is not an offense under this section if it is undertaken by an employee of the railroad or by a representative of a labor organization which represents or is seeking to represent the employees of the railroad as long as the employee or representative has a right to engage in such conduct under the Railway Labor Act (45 U.S.C. Section 151 et seq.)."}]}, {"name": "28.08 — Graffiti", "items": [{"text": "Except as provided by Subsection (d), an offense under this section is: (1) a Class C misdemeanor if the amount of pecuniary loss is less than $100; (2) a Class B misdemeanor if the amount of pecuniary loss is $100 or more but less than $750; (3) a Class A misdemeanor if the amount of pecuniary loss is $750 or more but less than $2,500; (4) a state jail felony if the amount of pecuniary loss is $2,500 or more but less than $30,000; (5) a felony of the third degree if the amount of pecuniary loss is $30,000 or more but less than $150,000; (6) a felony of the second degree if the amount of pecuniary loss is $150,000 or more but less than $300,000; or (7) a felony of the first degree if the amount of pecuniary loss is $300,000 or more."}, {"text": "When more than one item of tangible property, belonging to one or more owners, is marked in violation of this section pursuant to one scheme or continuing course of conduct, the conduct may be considered as one offense, and the amounts of pecuniary loss to property resulting from the marking of the property may be aggregated in determining the grade of the offense."}, {"text": "An offense under this section is a state jail felony if: (1) the marking is made on a school, an institution of higher education, a place of worship or human burial, a public monument, or a community center that provides medical, social, or educational programs; and (2) the amount of the pecuniary loss to real property or to tangible personal property is $750 or more but less than $30,000."}, {"text": "In this section: (1) \"Aerosol paint\" means an aerosolized paint product. (2) \"Etching or engraving device\" means a device that makes a delineation or impression on tangible property, regardless of the manufacturer's intended use for that device. (3) \"Indelible marker\" means a device that makes a mark with a paint or ink product that is specifically formulated to be more difficult to erase, wash out, or remove than ordinary paint or ink products. (4) \"Institution of higher education\" has the meaning assigned by Section 481.134, Health and Safety Code. (5) \"School\" means a private or public elementary or secondary school."}]}, {"name": "28.09 — Damaging Critical Infrastructure Facility", "items": [{"text": "A person commits an offense if, without the effective consent of the owner or operator of a critical infrastructure facility, the person: (1) intentionally or knowingly damages, destroys, vandalizes, or impairs the function of any critical infrastructure facility; and (2) as a result of the conduct described by Subdivision (1), causes an extended power outage."}, {"text": "An offense under this section is a felony of the second degree, except that the offense is a felony of the first degree if: (1) the amount of pecuniary damage to the critical infrastructure facility is $100,000 or more; or (2) the actor uses a firearm, drone, cyber attack, or explosive weapon in the commission of the offense."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "28.10 — Enhanced Penalty for Certain Misdemeanors or State Jail Felonies", "items": [{"text": "The punishment for an offense under this chapter that is punishable as a misdemeanor or a state jail felony is increased to the punishment for a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2). Added by Acts 2023, 88th Leg., 3rd C.S., Ch. 2 (S.B. 4), Sec. 7, eff. February 6, 2024. Page -2 - Page - 1 -"}]}, {"name": "29.01 — Definitions", "items": [{"text": "In this chapter: (1) \"In the course of committing theft\" means conduct that occurs in an attempt to commit, during the commission, or in immediate flight after the attempt or commission of theft. (2) \"Property\" means: (A) tangible or intangible personal property including anything severed from land; or (B) a document, including money, that represents or embodies anything of value."}]}, {"name": "29.02 — Robbery", "items": [{"text": "An offense under this section is a felony of the second degree."}]}, {"name": "29.03 — Aggravated Robbery", "items": [{"text": "An offense under this section is a felony of the first degree."}, {"text": "In this section, \"disabled person\" means an individual with a mental, physical, or developmental disability who is substantially unable to protect himself from harm."}]}, {"name": "29.04 — Jugging", "items": [{"text": "An offense under this section is a state jail felony, except that the offense is: (1) a felony of the third degree if, during the commission of the offense, the actor commits an offense under Section 30.04; or (2) a felony of the first degree if, during the commission of the offense, the actor commits an offense under Section 29.02."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or under both sections. Page -2 - Page - 1 -"}]}, {"name": "30.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Habitation\" means a structure or vehicle that is adapted for the overnight accommodation of persons, and includes: (A) each separately secured or occupied portion of the structure or vehicle; and (B) each structure appurtenant to or connected with the structure or vehicle. (2) \"Building\" means any enclosed structure intended for use or occupation as a habitation or for some purpose of trade, manufacture, ornament, or use. (3) \"Vehicle\" includes any device in, on, or by which any person or property is or may be propelled, moved, or drawn in the normal course of commerce or transportation, except such devices as are classified as \"habitation.\" (4) \"Controlled substance\" has the meaning assigned by Section 481.002, Health and Safety Code. — (see Sec./Art. 30.01 for the complete list)"}]}, {"name": "30.02 — Burglary", "items": [{"text": "For purposes of this section, \"enter\" means to intrude: (1) any part of the body; or (2) any physical object connected with the body."}, {"text": "Except as provided in Subsection (c-1), (c-2), or (d), an offense under this section is a: (1) state jail felony if committed in a building other than a habitation; or (2) felony of the second degree if committed in a habitation."}, {"text": "An offense under this section is a felony of the third degree if: (1) the premises are a commercial building in which a controlled substance is generally stored, including a pharmacy, clinic, hospital, nursing facility, or warehouse; and (2) the person entered or remained concealed in that building with intent to commit a theft of a controlled substance."}, {"text": "An offense under this section is a felony of the third degree if: (1) the premises are a building other than a habitation; and (2) it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2)."}, {"text": "An offense under this section is a felony of the first degree if: (1) the premises are a habitation; and (2) any party to the offense entered the habitation with intent to commit a felony other than felony theft or committed or attempted to commit a felony other than felony theft."}]}, {"name": "30.03 — Burglary of Coin-Operated or Coin Collection Machines", "items": [{"text": "For purposes of this section, \"entry\" includes every kind of entry except one made with the effective consent of the owner."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "30.04 — Burglary of Vehicles", "items": [{"text": "For purposes of this section, \"enter\" means to intrude: (1) any part of the body; or (2) any physical object connected with the body."}, {"text": "For purposes of this section, a container or trailer carried on a rail car is a part of the rail car."}, {"text": "An offense under this section is a Class A misdemeanor, except that: (1) the offense is a Class A misdemeanor with a minimum term of confinement of six months if it is shown on the trial of the offense that the defendant has been previously convicted of an offense under this section; (2) the offense is a state jail felony if: (A) it is shown on the trial of the offense that the defendant has been previously convicted two or more times of an offense under this section; or (B) the vehicle or part of the vehicle broken into or entered is a rail car; and (3) the offense is a felony of the third degree if: (A) the vehicle broken into or entered is owned or operated by a wholesale distributor of prescription drugs and the actor breaks into or enters that vehicle with the intent to commit theft — (see Sec./Art. 30.04 for the complete list)"}, {"text": "For the purposes of Subsection (d), a defendant has been previously convicted under this section if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision."}, {"text": "It is a defense to prosecution under this section that the actor entered a rail car or any part of a rail car and was at that time an employee or a representative of employees exercising a right under the Railway Labor Act (45 U.S.C. Section 151 et seq.)."}]}, {"name": "30.05 — Criminal Trespass", "items": [{"text": "For purposes of this section: (1) \"Entry\" means the intrusion of the entire body. (2) \"Notice\" means: (A) oral or written communication by the owner or someone with apparent authority to act for the owner; (B) fencing or other enclosure obviously designed to exclude intruders or to contain livestock; (C) a sign or signs posted on the property or at the entrance to the building, reasonably likely to come to the attention of intruders, indicating that entry is forbidden; (D) the placement of identifying purple paint marks on trees or posts on the property, provided that the marks are: (i) vertical lines of not less than eight inches in length and not less than one inch in width; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "A person may provide notice that firearms are prohibited on the property by posting a sign at each entrance to the property that: (1) includes language that is identical to or substantially similar to the following: \"Pursuant to Section 30.05, Penal Code (criminal trespass), a person may not enter this property with a firearm\"; (2) includes the language described by Subdivision (1) in both English and Spanish; (3) appears in contrasting colors with block letters at least one inch in height; and (4) is displayed in a conspicuous manner clearly visible to the public."}, {"text": "Subject to Subsection (d-3), an offense under this section is: (1) a Class B misdemeanor, except as provided by Subdivisions (2), (3), and (4); (2) a Class C misdemeanor, except as provided by Subdivisions (3) and (4), if the offense is committed: (A) on agricultural land and within 100 feet of the boundary of the land; or (B) on residential land and within 100 feet of a protected freshwater area; (3) a Class A misdemeanor, except as provided by Subdivision (4), if: (A) the offense is committed: (i) in a habitation or a shelter center; (ii) on a Superfund site; or (iii) on or in a critical infrastructure facility; (B) the offense is committed on or in property of an institution of higher education and it is shown on the trial of the offense that the person has previously been convicted — (see Sec./Art. 30.05 for the complete list)"}, {"text": "For the purposes of Subsection (d)(3)(B), a person has previously been convicted of an offense described by that paragraph if the person was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication community supervision, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the person was subsequently discharged from deferred adjudication community supervision."}, {"text": "At the punishment stage of a trial in which the attorney representing the state seeks the increase in punishment provided by Subsection (d)(3)(B), the defendant may raise the issue as to whether, at the time of the instant offense or the previous offense, the defendant was engaging in speech or expressive conduct protected by the First Amendment to the United States Constitution or Section 8, Article I, Texas Constitution. If the defendant proves the issue in the affirmative by a preponderance of the evidence, the increase in punishment provided by Subsection (d)(3)(B) does not apply."}, {"text": "An offense under this section is a Class C misdemeanor punishable by a fine not to exceed $200 if the person enters the property, land, or building with a firearm or other weapon and the sole basis on which entry on the property or land or in the building was forbidden is that entry with a firearm or other weapon was forbidden, except that the offense is a Class A misdemeanor if it is shown on the trial of the offense that, after entering the property, land, or building with the firearm or other weapon, the actor: (1) personally received from the owner of the property or another person with apparent authority to act for the owner notice that entry with a firearm or other weapon was forbidden, as given through: (A) notice under Subsection (b)(2)(A), including oral or written communication; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that the actor at the time of the offense was: (1) a firefighter or emergency medical services personnel, as defined by Section 773.003, Health and Safety Code, acting in the lawful discharge of an official duty under exigent circumstances; (2) a person who was: (A) an employee or agent of: (i) an electric utility, as defined by Section 31.002, Utilities Code; (ii) a telecommunications provider, as defined by Section 51.002, Utilities Code; (iii) a video service provider or cable service provider, as defined by Section 66.002, Utilities Code; (iv) a gas utility, as defined by Section 101.003, Utilities Code, which for the purposes of this subsection includes a municipally owned utility as defined by that section; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the basis on which entry on the property or land or in the building was forbidden is that entry with a handgun was forbidden; and (2) the person was carrying: (A) a license issued under Subchapter H, Chapter 411, Government Code, to carry a handgun; and (B) a handgun: (i) in a concealed manner; or (ii) in a holster."}, {"text": "It is a defense to prosecution under this section that: (1) the basis on which entry on the property was forbidden is that entry with a firearm or firearm ammunition was forbidden; (2) the actor is: (A) an owner of an apartment in a condominium regime governed by Chapter 81, Property Code; (B) an owner of a condominium unit governed by Chapter 82, Property Code; (C) a tenant or guest of an owner described by Paragraph (A) or (B); or (D) a guest of a tenant of an owner described by Paragraph (A) or (B); (3) the actor: (A) carries or stores a firearm or firearm ammunition in the condominium apartment or unit owner's apartment or unit; (B) carries a firearm or firearm ammunition directly en route to or from the condominium apartment or unit owner's apartment or unit; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the basis on which entry on a leased premises governed by Chapter 92, Property Code, was forbidden is that entry with a firearm or firearm ammunition was forbidden; (2) the actor is a tenant of the leased premises or the tenant's guest; (3) the actor: (A) carries or stores a firearm or firearm ammunition in the tenant's rental unit; (B) carries a firearm or firearm ammunition directly en route to or from the tenant's rental unit; (C) carries a firearm or firearm ammunition directly en route to or from the actor's vehicle located in a parking area provided for tenants or guests by the landlord of the leased premises; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the basis on which entry on a leased premises governed by Chapter 94, Property Code, was forbidden is that entry with a firearm or firearm ammunition was forbidden; (2) the actor is a tenant of a manufactured home lot or the tenant's guest; (3) the actor: (A) carries or stores a firearm or firearm ammunition in the tenant's manufactured home; (B) carries a firearm or firearm ammunition directly en route to or from the tenant's manufactured home; (C) carries a firearm or firearm ammunition directly en route to or from the actor's vehicle located in a parking area provided for tenants or tenants' guests by the landlord of the leased premises; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the conduct occurred on hotel property, and the basis on which entry on that property was forbidden is that entry with a firearm or firearm ammunition was forbidden; (2) the actor is a guest of a hotel, as defined by Section 2155.101, Occupations Code; and (3) the actor: (A) carries or stores a firearm or firearm ammunition in the actor's hotel room; (B) carries a firearm or firearm ammunition directly en route to or from the hotel or the actor's hotel room; (C) carries a firearm or firearm ammunition directly en route to or from the actor's vehicle located on the hotel property, including a vehicle in a parking area provided for hotel guests; — (see Sec./Art. 30.05 for the complete list)"}, {"text": "It is a defense to prosecution under this section that the actor entered a railroad switching yard or any part of a railroad switching yard and was at that time an employee or a representative of employees exercising a right under the Railway Labor Act (45 U.S.C. Section 151 et seq.)."}, {"text": "At the punishment stage of a trial in which the attorney representing the state seeks the increase in punishment provided by Subsection (d)(3)(A)(iii), the defendant may raise the issue as to whether the defendant entered or remained on or in a critical infrastructure facility as part of a peaceful or lawful assembly, including an attempt to exercise rights guaranteed by state or federal labor laws. If the defendant proves the issue in the affirmative by a preponderance of the evidence, the increase in punishment provided by Subsection (d)(3)(A)(iii) does not apply."}, {"text": "This section does not apply if: (1) the basis on which entry on the property or land or in the building was forbidden is that entry with a handgun or other weapon was forbidden; and (2) the actor at the time of the offense was a peace officer, including a commissioned peace officer of a recognized state, or a special investigator under Article 2A.002, Code of Criminal Procedure, regardless of whether the peace officer or special investigator was engaged in the actual discharge of an official duty while carrying the weapon."}, {"text": "Repealed by Acts 2009, 81st Leg., R.S., Ch. 1138, Sec. 4, eff. September 1, 2009."}]}, {"name": "30.06 — Trespass by License Holder with a Concealed Handgun", "items": [{"text": "For purposes of this section, a person receives notice if the owner of the property or someone with apparent authority to act for the owner provides notice to the person by oral or written communication."}, {"text": "In this section: (1) \"Entry\" has the meaning assigned by Section 30.05(b). (2) \"License holder\" has the meaning assigned by Section 46.03. (3) \"Written communication\" means: (A) a card or other document on which is written language identical to the following: \"Pursuant to Section 30.06, Penal Code (trespass by license holder with a concealed handgun), a person licensed under Subchapter H, Chapter 411, Government Code (handgun licensing law), may not enter this property with a concealed handgun\"; or (B) a sign posted on the property that: (i) includes the language described by Paragraph (A) in both English and Spanish; (ii) appears in contrasting colors with block letters at least one inch in height; and (iii) is displayed in a conspicuous manner clearly visible to the public."}, {"text": "An offense under this section is a Class C misdemeanor punishable by a fine not to exceed $200, except that the offense is a Class A misdemeanor if it is shown on the trial of the offense that, after entering the property, the license holder was personally given the notice by oral communication described by Subsection (b) and subsequently failed to depart."}, {"text": "It is an exception to the application of this section that the property on which the license holder carries a handgun is owned or leased by a governmental entity and is not a premises or other place on which the license holder is prohibited from carrying the handgun under Section 46.03."}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is: (A) an owner of an apartment in a condominium regime governed by Chapter 81, Property Code; (B) an owner of a condominium unit governed by Chapter 82, Property Code; (C) a tenant or guest of an owner described by Paragraph (A) or (B); or (D) a guest of a tenant of an owner described by Paragraph (A) or (B); and (2) the license holder: (A) carries or stores a handgun in the condominium apartment or unit owner's apartment or unit; (B) carries a handgun directly en route to or from the condominium apartment or unit owner's apartment or unit; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for residents or guests of the condominium property; — (see Sec./Art. 30.06 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is a tenant of a leased premises governed by Chapter 92, Property Code, or the tenant's guest; and (2) the license holder: (A) carries or stores a handgun in the tenant's rental unit; (B) carries a handgun directly en route to or from the tenant's rental unit; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for tenants or guests by the landlord of the leased premises; or (D) carries or stores a handgun in the license holder's vehicle located in a parking area provided for tenants or guests by the landlord of the leased premises."}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is a tenant of a manufactured home lot governed by Chapter 94, Property Code, or the tenant's guest; and (2) the license holder: (A) carries or stores a handgun in the tenant's manufactured home; (B) carries a handgun directly en route to or from the tenant's manufactured home; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for tenants or tenants' guests by the landlord of the leased premises; or (D) carries or stores a handgun in the license holder's vehicle located in a parking area provided for tenants or tenants' guests by the landlord of the leased premises."}, {"text": "It is a defense to prosecution under this section that the license holder is a guest of a hotel, as defined by Section 2155.101, Occupations Code, and the license holder: (1) carries or stores a handgun in the license holder's hotel room; (2) carries a handgun directly en route to or from the hotel or the license holder's hotel room; (3) carries a handgun directly en route to or from the license holder's vehicle located on the hotel property, including a vehicle in a parking area provided for hotel guests; or (4) carries or stores a handgun in the license holder's vehicle located on the hotel property, including a vehicle in a parking area provided for hotel guests."}, {"text": "It is a defense to prosecution under this section that the license holder is volunteer emergency services personnel, as defined by Section 46.01."}, {"text": "It is a defense to prosecution under this section that the license holder is a first responder, as defined by Section 46.01, who: (1) holds an unexpired certificate of completion under Section 411.1883, Government Code, at the time of engaging in the applicable conduct; (2) was engaged in the actual discharge of the first responder's duties while carrying the handgun; and (3) was employed or supervised by a municipality or county to which Chapter 179, Local Government Code, applies."}, {"text": "It is a defense to prosecution under this section that the license holder is a tactical medical professional, as defined by Section 411.1884, Government Code, who: (1) holds an unexpired certificate of completion under Section 411.1884, Government Code, at the time of engaging in the applicable conduct; and (2) was engaged in the actual discharge of the tactical medical professional's duties while carrying the handgun."}, {"text": "It is a defense to prosecution under this section that the license holder was personally given notice by oral communication described by Subsection (b) and promptly departed from the property."}]}, {"name": "30.07 — Trespass by License Holder with an Openly Carried Handgun", "items": [{"text": "For purposes of this section, a person receives notice if the owner of the property or someone with apparent authority to act for the owner provides notice to the person by oral or written communication."}, {"text": "In this section: (1) \"Entry\" has the meaning assigned by Section 30.05(b). (2) \"License holder\" has the meaning assigned by Section 46.03. (3) \"Written communication\" means: (A) a card or other document on which is written language identical to the following: \"Pursuant to Section 30.07, Penal Code (trespass by license holder with an openly carried handgun), a person licensed under Subchapter H, Chapter 411, Government Code (handgun licensing law), may not enter this property with a handgun that is carried openly\"; or (B) a sign posted on the property that: (i) includes the language described by Paragraph (A) in both English and Spanish; (ii) appears in contrasting colors with block letters at least one inch in height; — (see Sec./Art. 30.07 for the complete list)"}, {"text": "An offense under this section is a Class C misdemeanor punishable by a fine not to exceed $200, except that the offense is a Class A misdemeanor if it is shown on the trial of the offense that, after entering the property, the license holder was personally given the notice by oral communication described by Subsection (b) and subsequently failed to depart."}, {"text": "It is an exception to the application of this section that the property on which the license holder openly carries the handgun is owned or leased by a governmental entity and is not a premises or other place on which the license holder is prohibited from carrying the handgun under Section 46.03."}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is: (A) an owner of an apartment in a condominium regime governed by Chapter 81, Property Code; (B) an owner of a condominium unit governed by Chapter 82, Property Code; (C) a tenant or guest of an owner described by Paragraph (A) or (B); or (D) a guest of a tenant of an owner described by Paragraph (A) or (B); and (2) the license holder: (A) carries or stores a handgun in the condominium apartment or unit owner's apartment or unit; (B) carries a handgun directly en route to or from the condominium apartment or unit owner's apartment or unit; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for residents or guests of the condominium property; — (see Sec./Art. 30.07 for the complete list)"}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is a tenant of a leased premises governed by Chapter 92, Property Code, or the tenant's guest; and (2) the license holder: (A) carries or stores a handgun in the tenant's rental unit; (B) carries a handgun directly en route to or from the tenant's rental unit; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for tenants or guests by the landlord of the leased premises; or (D) carries or stores a handgun in the license holder's vehicle located in a parking area provided for tenants or guests by the landlord of the leased premises."}, {"text": "It is a defense to prosecution under this section that: (1) the license holder is a tenant of a manufactured home lot governed by Chapter 94, Property Code, or the tenant's guest; and (2) the license holder: (A) carries or stores a handgun in the tenant's manufactured home; (B) carries a handgun directly en route to or from the tenant's manufactured home; (C) carries a handgun directly en route to or from the license holder's vehicle located in a parking area provided for tenants or tenants' guests by the landlord of the leased premises; or (D) carries or stores a handgun in the license holder's vehicle located in a parking area provided for tenants or tenants' guests by the landlord of the leased premises."}, {"text": "It is a defense to prosecution under this section that the license holder is a guest of a hotel, as defined by Section 2155.101, Occupations Code, and the license holder: (1) carries or stores a handgun in the license holder's hotel room; (2) carries a handgun directly en route to or from the hotel or the license holder's hotel room; (3) carries a handgun directly en route to or from the license holder's vehicle located on the hotel property, including a vehicle in a parking area provided for hotel guests; or (4) carries or stores a handgun in the license holder's vehicle located on the hotel property, including a vehicle in a parking area provided for hotel guests."}, {"text": "It is not a defense to prosecution under this section that the handgun was carried in a holster."}, {"text": "It is a defense to prosecution under this section that the license holder is volunteer emergency services personnel, as defined by Section 46.01."}, {"text": "It is a defense to prosecution under this section that the license holder is a first responder, as defined by Section 46.01, who: (1) holds an unexpired certificate of completion under Section 411.1883, Government Code, at the time of engaging in the applicable conduct; (2) was engaged in the actual discharge of the first responder's duties while carrying the handgun; and (3) was employed or supervised by a municipality or county to which Chapter 179, Local Government Code, applies."}, {"text": "It is a defense to prosecution under this section that the license holder is a tactical medical professional, as defined by Section 411.1884, Government Code, who: (1) holds an unexpired certificate of completion under Section 411.1884, Government Code, at the time of engaging in the applicable conduct; and (2) was engaged in the actual discharge of the tactical medical professional's duties while carrying the handgun."}, {"text": "It is a defense to prosecution under this section that the license holder was personally given notice by oral communication described by Subsection (b) and promptly departed from the property. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(16, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_06_arson_robbery_burglary_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

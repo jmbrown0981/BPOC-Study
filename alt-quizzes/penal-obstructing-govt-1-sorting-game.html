@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Obstructing Governmental Operation I Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.38 (part 1 of 2) &middot; Supplemental Practice</p>
+    <h1>Obstructing Governmental Operation I Sorting Game</h1>
+    <p class="sub">The first of two Chapter 38 games &mdash; Chapter 38 alone runs 30 sections, so it's split in half. Fifteen boxes: definitions, failure to identify, resisting arrest/search/transportation, evading arrest or detention, hindering apprehension or prosecution, escape, permitting/facilitating escape, effect of unlawful custody, implements for escape, bail jumping and failure to appear, prohibited substances/items in a correctional or civil commitment facility, improper contact with a victim, tampering with an electronic monitoring device, unauthorized absence from a community corrections facility, and contraband in a correctional facility. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="15" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="13" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.38 (Obstructing Governmental Operation), sections 38.01&ndash;38.114 &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "38.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Custody\" means: (A) under arrest by a peace officer or under restraint by a public servant pursuant to an order of a court of this state or another state of the United States; or (B) under restraint by an agent or employee of a facility that is operated by or under contract with the United States and that confines persons arrested for, charged with, or convicted of criminal offenses. (2) \"Escape\" means unauthorized departure from custody or failure to return to custody following temporary leave for a specific purpose or limited period or leave that is part of an intermittent sentence, but does not include a violation of conditions of community supervision or parole other than conditions that impose a period of confinement in a secure correctional facility. — (see Sec./Art. 38.01 for the complete list)"}]}, {"name": "38.02 — Failure to Identify", "items": [{"text": "A person commits an offense if he intentionally gives a false or fictitious name, residence address, or date of birth to a peace officer who has: (1) lawfully arrested the person; (2) lawfully detained the person; or (3) requested the information from a person that the peace officer has good cause to believe is a witness to a criminal offense."}, {"text": "A person commits an offense if the person: (1) is an operator of a motor vehicle, as defined by Section 32.34, who is lawfully detained by a peace officer for an alleged violation of a law; (2) fails to provide or display the person's driver's license on the officer's request for the license; and (3) intentionally refuses to give the person's name, driver's license number, residence address, or date of birth to the peace officer on the officer's request for that information."}, {"text": "For purposes of Subsection (b-1)(3), giving a peace officer a residence address that is different from the address associated with the person's driver's license does not constitute a refusal to give the person's residence address in violation of that provision if the address given to the officer is the person's actual residence address."}, {"text": "Except as provided by Subsections (d) and (d-1), an offense under this section is: (1) a Class C misdemeanor if the offense is committed under Subsection (a) or (b-1); or (2) a Class B misdemeanor if the offense is committed under Subsection (b)."}, {"text": "If it is shown on the trial of an offense under this section that the defendant was a fugitive from justice at the time of the offense, the offense is: (1) a Class B misdemeanor if the offense is committed under Subsection (a); or (2) a Class A misdemeanor if the offense is committed under Subsection (b)."}, {"text": "An offense under Subsection (b-1) is a Class B misdemeanor if it is shown on the trial of the offense that the actor gave a false or fictitious name to the peace officer during the commission of the offense."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under Section 106.07, Alcoholic Beverage Code, the actor may be prosecuted only under Section 106.07."}, {"text": "Subject to Subsection (e), if conduct that constitutes an offense under Subsection (b-1) also constitutes an offense under any other law, the actor may be prosecuted under that subsection, the other law, or both."}]}, {"name": "38.03 — Resisting Arrest, Search, or Transportation", "items": [{"text": "It is no defense to prosecution under this section that the arrest or search was unlawful."}, {"text": "Except as provided in Subsection (d), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a felony of the third degree if the actor uses a deadly weapon to resist the arrest or search."}]}, {"name": "38.04 — Evading Arrest or Detention", "items": [{"text": "An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if: (A) the actor has been previously convicted under this section; or (B) the actor uses a vehicle or watercraft while the actor is in flight and the actor has not been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle or watercraft while the actor is in flight and the actor has been previously convicted under this section; or (B) another suffers serious bodily injury as a direct result of an attempt by the officer or investigator from whom the actor is fleeing to apprehend the actor while the actor is in flight; — (see Sec./Art. 38.04 for the complete list)"}, {"text": "An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if the actor has been previously convicted under this section; (2) a felony of the third degree if: (A) the actor uses a vehicle while the actor is in flight; (B) another suffers serious bodily injury as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; or (C) the actor uses a tire deflation device against the officer while the actor is in flight; or (3) a felony of the second degree if: (A) another suffers death as a direct result of an attempt by the officer from whom the actor is fleeing to apprehend the actor while the actor is in flight; — (see Sec./Art. 38.04 for the complete list)"}, {"text": "Notwithstanding Subsection (b), an offense under this section is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2)."}, {"text": "In this section: (1) \"Vehicle\" has the meaning assigned by Section 541.201, Transportation Code. (2) \"Tire deflation device\" has the meaning assigned by Section 46.01. (3) \"Watercraft\" has the meaning assigned by Section 49.01."}, {"text": "A person who is subject to prosecution under both this section and another law may be prosecuted under either or both this section and the other law."}]}, {"name": "38.05 — Hindering Apprehension or Prosecution", "items": [{"text": "It is a defense to prosecution under Subsection (a)(3) that the warning was given in connection with an effort to bring another into compliance with the law."}, {"text": "Except as provided by Subsection (d), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a felony of the third degree if the person who is harbored, concealed, provided with a means of avoiding arrest or effecting escape, or warned of discovery or apprehension is under arrest for, charged with, or convicted of a felony, including an offense under Section 62.102, Code of Criminal Procedure, or is in custody or detention for, is alleged in a petition to have engaged in, or has been adjudicated as having engaged in delinquent conduct that violates a penal law of the grade of felony, including an offense under Section 62.102, Code of Criminal Procedure, and the person charged under this section knew that the person they harbored, concealed, provided with a means of avoiding arrest or effecting escape, or warned of discovery or apprehension is — (see Sec./Art. 38.05 for the complete list)"}]}, {"name": "38.06 — Escape", "items": [{"text": "Except as provided in Subsections (c), (d), and (e), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a felony of the third degree if the actor: (1) is under arrest for, charged with, or convicted of a felony; (2) is confined or lawfully detained in a secure correctional facility or law enforcement facility; or (3) is committed to or lawfully detained in a secure correctional facility, as defined by Section 51.02, Family Code, other than a halfway house, operated by or under contract with the Texas Juvenile Justice Department."}, {"text": "An offense under this section is a felony of the second degree if the actor to effect his escape causes bodily injury."}, {"text": "An offense under this section is a felony of the first degree if to effect his escape the actor: (1) causes serious bodily injury; or (2) uses or threatens to use a deadly weapon."}]}, {"name": "38.07 — Permitting or Facilitating Escape", "items": [{"text": "A person commits an offense if he knowingly causes or facilitates the escape of one who is in custody pursuant to: (1) an allegation or adjudication of delinquency; or (2) involuntary commitment for mental illness under Subtitle C, Title 7, Health and Safety Code, or for chemical dependency under Chapter 462, Health and Safety Code."}, {"text": "Except as provided in Subsections (d) and (e), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a felony of the third degree if the person in custody: (1) was under arrest for, charged with, or convicted of a felony; or (2) was confined in a correctional facility other than a secure correctional facility after conviction of a felony."}, {"text": "An offense under this section is a felony of the second degree if: (1) the actor or the person in custody used or threatened to use a deadly weapon to effect the escape; or (2) the person in custody was confined in a secure correctional facility after conviction of a felony."}, {"text": "In this section, \"correctional facility\" means: (1) any place described by Section 1.07(a)(14); or (2) a \"secure correctional facility\" or \"secure detention facility\" as those terms are defined by Section 51.02, Family Code."}]}, {"name": "38.08 — Effect of Unlawful Custody", "items": [{"text": "It is no defense to prosecution under Section 38.06 or 38.07 that the custody was unlawful."}]}, {"name": "38.09 — Implements for Escape", "items": [{"text": "An offense under this section is a felony of the third degree unless the actor introduced or provided a deadly weapon, in which event the offense is a felony of the second degree."}, {"text": "In this section, \"correctional facility\" means: (1) any place described by Section 1.07(a)(14); or (2) a \"secure correctional facility\" or \"secure detention facility\" as those terms are defined by Section 51.02, Family Code."}]}, {"name": "38.10 — Bail Jumping and Failure to Appear", "items": [{"text": "It is a defense to prosecution under this section that the appearance was incident to community supervision, parole, or an intermittent sentence."}, {"text": "It is a defense to prosecution under this section that the actor had a reasonable excuse for his failure to appear in accordance with the terms of his release."}, {"text": "Except as provided in Subsections (e) and (f), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a Class C misdemeanor if the offense for which the actor's appearance was required is punishable by fine only."}, {"text": "An offense under this section is a felony of the third degree if the offense for which the actor's appearance was required is classified as a felony."}]}, {"name": "38.11 — Prohibited Substances and Items in Correctional or Civil Commitment Facility", "items": [{"text": "A person commits an offense if the person takes an alcoholic beverage, controlled substance, or dangerous drug into a correctional facility or civil commitment facility."}, {"text": "A person commits an offense if the person takes a controlled substance or dangerous drug on property owned, used, or controlled by a correctional facility or civil commitment facility."}, {"text": "A person commits an offense if the person: (1) possesses an alcoholic beverage, controlled substance, or dangerous drug while in a correctional facility or civil commitment facility or on property owned, used, or controlled by a correctional facility or civil commitment facility; or (2) possesses a deadly weapon while in a correctional facility or civil commitment facility."}, {"text": "It is an affirmative defense to prosecution under Subsection (b), (c), or (d)(1) that the person possessed the alcoholic beverage, controlled substance, or dangerous drug pursuant to a prescription issued by a practitioner or while delivering the beverage, substance, or drug to a warehouse, pharmacy, or practitioner on property owned, used, or controlled by the correctional facility or civil commitment facility. It is an affirmative defense to prosecution under Subsection (d)(2) that the person possessing the deadly weapon is a peace officer or is an officer or employee of the correctional facility or civil commitment facility who is authorized to possess the deadly weapon while on duty or traveling to or from the person's place of assignment."}, {"text": "In this section: (1) \"Practitioner\" has the meaning assigned by Section 481.002, Health and Safety Code. (2) \"Prescription\" has the meaning assigned by Section 481.002, Health and Safety Code. (3) \"Cigarette\" has the meaning assigned by Section 154.001, Tax Code. (4) \"Tobacco product\" has the meaning assigned by Section 155.001, Tax Code. (5) \"Component\" means any item necessary for the current, ongoing, or future operation of a cellular telephone or other wireless communications device, including a subscriber identity module card or functionally equivalent portable memory chip, a battery or battery charger, and any number of minutes that have been purchased or for which a contract has been entered into and during which a cellular telephone or other wireless communications device is — (see Sec./Art. 38.11 for the complete list)"}, {"text": "Except as otherwise provided by Subsections (g-1) and (g-2), an offense under this section is a felony of the third degree."}, {"text": "Except as otherwise provided by Subsection (g-2), an offense under Subsection (a)(1), (b), or (c) committed with respect to a correctional facility is a felony of the second degree if the actor is employed by the correctional facility."}, {"text": "An offense under Subsection (a)(1), (b), or (c) committed with respect to a correctional facility is a felony of the first degree punishable by imprisonment in the Texas Department of Criminal Justice for life or for a term of not more than 99 years or less than 15 years, and a fine not to exceed $250,000 if: (1) the actor is employed by the correctional facility; and (2) the ingestion, inhalation, injection, or other administration of the controlled substance or dangerous drug that is the subject of the offense causes the death of a person in the custody of the correctional facility."}, {"text": "Notwithstanding Section 15.01(d), if a person commits the offense of criminal attempt to commit an offense under Subsection (a), (b), or (c), the offense committed under Section 15.01 is a felony of the third degree."}, {"text": "It is an affirmative defense to prosecution under Subsection (b) that the actor: (1) is a duly authorized member of the clergy with rights and privileges granted by an ordaining authority that includes administration of a religious ritual or ceremony requiring the presence or consumption of an alcoholic beverage; and (2) takes four ounces or less of an alcoholic beverage into a correctional facility and personally consumes all of the alcoholic beverage or departs from the facility with any portion of the beverage not consumed."}, {"text": "A person commits an offense if the person, while confined in a correctional facility, possesses a cellular telephone or other wireless communications device or a component of one of those devices."}, {"text": "A person commits an offense if the person, while residing in a civil commitment facility, possesses a cellular telephone or other wireless communications device or a component of one of those devices unless the device or component is authorized by the Texas Civil Commitment Office."}, {"text": "A person commits an offense if, with the intent to provide to or make a cellular telephone or other wireless communications device or a component of one of those devices available for use by a person in the custody of a correctional facility or residing in a civil commitment facility, the person: (1) acquires a cellular telephone or other wireless communications device or a component of one of those devices to be delivered to the person in custody or residing in the facility; (2) provides a cellular telephone or other wireless communications device or a component of one of those devices to another person for delivery to the person in custody or residing in the facility; — (see Sec./Art. 38.11 for the complete list)"}]}, {"name": "38.111 — Improper Contact with Victim", "items": [{"text": "The person confined in a correctional facility may not give the written consent required under Subsection (a)(2)(A)."}, {"text": "It is an affirmative defense to prosecution under this section that the contact was: (1) indirect contact made through an attorney representing the person in custody; and (2) solely for the purpose of representing the person in a criminal proceeding."}, {"text": "An offense under this section is a Class A misdemeanor unless the actor is confined in a correctional facility after being convicted of a felony described by Subsection (a), in which event the offense is a felony of the third degree."}, {"text": "In this section, \"correctional facility\" means: (1) any place described by Section 1.07(a)(14); or (2) a \"secure correctional facility\" or \"secure detention facility\" as those terms are defined by Section 51.02, Family Code."}]}, {"name": "38.112 — Tampering with Electronic Monitoring Device", "items": [{"text": "An offense under this section is a state jail felony, except that the offense is a felony of the third degree if the person is in the super-intensive supervision program described by Section 508.317(d), Government Code."}, {"text": "This section does not apply to the removal or disabling of a tracking device by a health care provider, as defined by Section 161.201, Health and Safety Code, due to medical necessity."}]}, {"name": "38.113 — Unauthorized Absence from Community Corrections Facility, County Correctional Center, or Assignment Site", "items": [{"text": "An offense under this section is a state jail felony."}]}, {"name": "38.114 — Contraband in Correctional Facility", "items": [{"text": "In this section, \"contraband\": (1) means: (A) any item not provided by or authorized by the operator of the correctional facility; or (B) any item provided by or authorized by the operator of the correctional facility that has been altered to accommodate a use other than the originally intended use; and (2) does not include any item specifically prohibited under Section 38.11."}, {"text": "An offense under this section is a Class C misdemeanor, unless the offense is committed by an employee or a volunteer of the correctional facility, in which event the offense is a Class B misdemeanor."}, {"text": "In this section, \"correctional facility\" means: (1) any place described by Section 1.07(a)(14); or (2) a \"secure correctional facility\" or \"secure detention facility\" as those terms are defined by Section 51.02, Family Code."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(13, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_12_obstructing_govt_i_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

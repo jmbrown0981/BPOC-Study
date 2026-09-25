@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Weapons Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.46 &middot; Supplemental Practice</p>
+    <h1>Weapons Sorting Game</h1>
+    <p class="sub">Seventeen boxes, all of Chapter 46: definitions, unlawful carrying of weapons, places weapons are prohibited, unlawful carrying by a license holder, unlawful possession of a firearm (including by a felon) or of metal/body armor, prohibited weapons, unlawful transfer of certain weapons, interstate purchase, hoax bombs, components of explosives, a deadly weapon in a penal institution, weapon-free school zone penalty enhancement, maps as evidence, making a firearm accessible to a child, firearm smuggling, and the long list of nonapplicability exceptions to Sections 46.02/46.03. Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="17" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="18" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.46 (Weapons) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "46.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Club\" means an instrument that is specially designed, made, or adapted for the purpose of inflicting serious bodily injury or death by striking a person with the instrument, and includes but is not limited to the following: (A) blackjack; (B) nightstick; (C) mace; (D) tomahawk. (2) \"Explosive weapon\" means any explosive or incendiary bomb, grenade, rocket, or mine, that is designed, made, or adapted for the purpose of inflicting serious bodily injury, death, or substantial property damage, or for the principal purpose of causing such a loud report as to cause undue public alarm or terror, and includes a device designed, made, or adapted for delivery or shooting an explosive weapon. — (see Sec./Art. 46.01 for the complete list)"}]}, {"name": "46.02 — Unlawful Carrying Weapons", "items": [{"text": "A person commits an offense if the person intentionally, knowingly, or recklessly carries on or about his or her person a handgun in a motor vehicle or watercraft that is owned by the person or under the person's control at any time in which: (1) the handgun is in plain view, unless the person is 21 years of age or older or is licensed to carry a handgun under Subchapter H, Chapter 411, Government Code, and the handgun is carried in a holster; or (2) the person is: (A) engaged in criminal activity, other than a Class C misdemeanor that is a violation of a law or ordinance regulating traffic or boating; or (B) prohibited by law from possessing a firearm."}, {"text": "For purposes of this section, \"premises\" includes real property and a recreational vehicle that is being used as living quarters, regardless of whether that use is temporary or permanent. In this subsection, \"recreational vehicle\" means a motor vehicle primarily designed as temporary living quarters or a vehicle that contains temporary living quarters and is designed to be towed by a motor vehicle. The term includes a travel trailer, camping trailer, truck camper, motor home, and horse trailer with living quarters."}, {"text": "For purposes of this section, \"watercraft\" means any boat, motorboat, vessel, or personal watercraft, other than a seaplane on water, used or capable of being used for transportation on water."}, {"text": "A person commits an offense if the person: (1) intentionally, knowingly, or recklessly carries on or about his or her person a location-restricted knife; (2) is younger than 18 years of age at the time of the offense; and (3) is not: (A) on the person's own premises or premises under the person's control; (B) inside of or directly en route to a motor vehicle or watercraft that is owned by the person or under the person's control; or (C) under the direct supervision of a parent or legal guardian of the person."}, {"text": "A person commits an offense if the person carries a handgun and intentionally displays the handgun in plain view of another person in a public place. It is an exception to the application of this subsection that the handgun was partially or wholly visible but was carried in a holster."}, {"text": "A person commits an offense if the person: (1) carries a handgun while the person is intoxicated; and (2) is not: (A) on the person's own property or property under the person's control or on private property with the consent of the owner of the property; or (B) inside of or directly en route to a motor vehicle or watercraft: (i) that is owned by the person or under the person's control; or (ii) with the consent of the owner or operator of the vehicle or watercraft."}, {"text": "A person commits an offense if the person: (1) intentionally, knowingly, or recklessly carries on or about his or her person a handgun; (2) is not: (A) on the person's own premises or premises under the person's control; or (B) inside of or directly en route to a motor vehicle or watercraft that is owned by the person or under the person's control; and (3) at the time of the offense, was prohibited from possessing a firearm under Section 46.04(a), (b), or (c)."}, {"text": "If conduct constituting an offense under Subsection (a-7) constitutes an offense under another provision of law, the actor may be prosecuted under Subsection (a-7) or under both provisions."}, {"text": "Except as provided by Subsection (d) or (e), an offense under this section is a Class A misdemeanor."}, {"text": "Repealed by Acts 2021, 87th Leg., R.S., Ch. 809 (H.B. 1927), Sec. 26(8), eff. September 1, 2021."}, {"text": "An offense under Subsection (a-4) is a Class C misdemeanor."}, {"text": "An offense under Subsection (a-7) is: (1) a felony of the second degree with a minimum term of imprisonment of five years, if the actor was prohibited from possessing a firearm under Section 46.04(a); or (2) a felony of the third degree, if the actor was prohibited from possessing a firearm under Section 46.04(b) or (c)."}]}, {"name": "46.03 — Places Weapons Prohibited", "items": [{"text": "A person commits an offense if the person intentionally, knowingly, or recklessly possesses or goes with a firearm, location-restricted knife, club, or prohibited weapon listed in Section 46.05(a): (1) on the premises of a school or postsecondary educational institution, on any grounds or building owned by and under the control of a school or postsecondary educational institution and on which an activity sponsored by the school or institution is being conducted, or in a passenger transportation vehicle of a school or postsecondary educational institution, whether the school or postsecondary educational institution is public or private, unless: (A) pursuant to written regulations or written authorization of the school or institution; — (see Sec./Art. 46.03 for the complete list)"}, {"text": "Repealed by Acts 2021, 87th Leg., R.S., Ch. 809 (H.B. 1927), Sec. 26(9), eff. September 1, 2021."}, {"text": "Notwithstanding Section 46.02(a-5), a license holder commits an offense if the license holder carries a partially or wholly visible handgun, regardless of whether the handgun is holstered, on or about the license holder's person under the authority of Subchapter H, Chapter 411, Government Code, and intentionally or knowingly displays the handgun in plain view of another person: (1) on the premises of an institution of higher education or private or independent institution of higher education; or (2) on any public or private driveway, street, sidewalk or walkway, parking lot, parking garage, or other parking area of an institution of higher education or private or independent institution of higher education."}, {"text": "Notwithstanding Subsection (a) or Section 46.02(a-5), a license holder commits an offense if the license holder carries a handgun on the campus of a private or independent institution of higher education in this state that has established rules, regulations, or other provisions prohibiting license holders from carrying handguns pursuant to Section 411.2031(e), Government Code, or on the grounds or building on which an activity sponsored by such an institution is being conducted, or in a passenger transportation vehicle of such an institution, regardless of whether the handgun is concealed, provided the institution gives effective notice under Section 30.06."}, {"text": "Notwithstanding Subsection (a) or Section 46.02(a-5), a license holder commits an offense if the license holder intentionally carries a concealed handgun on a portion of a premises located on the campus of an institution of higher education in this state on which the carrying of a concealed handgun is prohibited by rules, regulations, or other provisions established under Section 411.2031(d-1), Government Code, provided the institution gives effective notice under Section 30.06 with respect to that portion."}, {"text": "It is a defense to prosecution under Subsections (a)(1)-(4) that the actor possessed a firearm while in the actual discharge of his official duties as a member of the armed forces or national guard or a guard employed by a penal institution, or an officer of the court."}, {"text": "In this section: (1) \"Amusement park\" means a permanent indoor or outdoor facility or park where amusement rides are available for use by the public that is located in a county with a population of more than one million, encompasses at least 75 acres in surface area, is enclosed with access only through controlled entries, is open for operation more than 120 days in each calendar year, and has security guards on the premises at all times. The term does not include any public or private driveway, street, sidewalk or walkway, parking lot, parking garage, or other parking area. (2) \"Institution of higher education\" and \"private or independent institution of higher education\" have the meanings assigned by Section 61.003, Education Code. — (see Sec./Art. 46.03 for the complete list)"}, {"text": "It is a defense to prosecution under Subsection (a)(5) that the actor possessed a firearm or club while traveling to or from the actor's place of assignment or in the actual discharge of duties as: (1) a member of the armed forces or national guard; (2) a guard employed by a penal institution; or (3) a security officer commissioned by the Texas Private Security Board if: (A) the actor is wearing a distinctive uniform; and (B) the firearm or club is in plain view; or (4) a security officer who holds a personal protection authorization under Chapter 1702, Occupations Code, provided that the officer is either: (A) wearing the uniform of a security officer, including any uniform or apparel described by Section 1702.323(d), Occupations Code, and carrying the officer's firearm in plain view; — (see Sec./Art. 46.03 for the complete list)"}, {"text": "It is a defense to prosecution under Subsection (a)(5) that the actor: (1) checked all firearms as baggage in accordance with federal or state law or regulations before entering a secured area; or (2) was authorized by a federal agency or the airport operator to possess a firearm in a secured area."}, {"text": "It is a defense to prosecution under Subsection (a)(5) that the actor: (1) possessed, at the screening checkpoint for the secured area, a handgun that the actor was licensed to carry under Subchapter H, Chapter 411, Government Code; and (2) exited the screening checkpoint for the secured area immediately upon completion of the required screening processes and notification that the actor possessed the handgun."}, {"text": "A peace officer investigating conduct that may constitute an offense under Subsection (a)(5) and that consists only of an actor's possession of a handgun that the actor is licensed to carry under Subchapter H, Chapter 411, Government Code, may not arrest the actor for the offense unless: (1) the officer advises the actor of the defense available under Subsection (e-1) and gives the actor an opportunity to exit the screening checkpoint for the secured area; and (2) the actor does not immediately exit the checkpoint upon completion of the required screening processes."}, {"text": "Except as provided by Subsection (e-1), it is not a defense to prosecution under this section that the actor possessed a handgun and was licensed to carry a handgun under Subchapter H, Chapter 411, Government Code."}, {"text": "Except as provided by Subsections (g-1) and (g-2), an offense under this section is a felony of the third degree."}, {"text": "If the weapon that is the subject of the offense is a location-restricted knife, an offense under this section is a Class C misdemeanor, except that the offense is a felony of the third degree if the offense is committed under Subsection (a)(1)."}, {"text": "An offense committed under Subsection (a)(8), (a)(10), (a)(11), (a)(13), (a-2), (a-3), or (a-4) is a Class A misdemeanor."}, {"text": "It is a defense to prosecution under Subsection (a)(4) that the actor possessed a firearm or club while traveling to or from the actor's place of assignment or in the actual discharge of duties as a security officer commissioned by the Texas Board of Private Investigators and Private Security Agencies, if: (1) the actor is wearing a distinctive uniform; and (2) the firearm or club is in plain view."}, {"text": "It is an exception to the application of Subsection (a)(6) that the actor possessed a firearm or club: (1) while in a vehicle being driven on a public road; or (2) at the actor's residence or place of employment. Without reference to the amendment of this section, this section was repealed by Acts 2021, 87th Leg., R.S., Ch. 809 (H.B. 1927), Sec. 26(10), eff. September 1, 2021."}]}, {"name": "46.035 — Unlawful Carrying of Handgun by License Holder", "items": [{"text": "(a) A license holder commits an offense if the license holder carries a handgun on or about the license holder's person under the authority of Subchapter H, Chapter 411, Government Code, and intentionally displays the handgun in plain view of another person in a public place. It is an exception to the application of this subsection that the handgun was partially or wholly visible but was: (1) carried in a holster by the license holder; or (2) in a holster, and the handgun and the license holder were in a motor vehicle. Added by Acts 1995, 74th Leg., ch. 229, Sec. 4, eff. Sept. 1, 1995. Amended by Acts 1997, 75th Leg., ch. 165, Sec. 10.04, eff. Sept. 1, 1997; Acts 1997, 75th Leg., ch. 1261, Sec. 26, 27, eff. Sept. 1, 1997; Acts 2001, 77th Leg., ch. 1420, Sec. 14.833, eff. Sept. 1, 2001. — (see Sec./Art. 46.035 for the complete list)"}]}, {"name": "46.04 — Unlawful Possession of Firearm", "items": [{"text": "A person who is a member of a criminal street gang, as defined by Section 71.01, commits an offense if the person intentionally, knowingly, or recklessly carries on or about his or her person a handgun in a motor vehicle or watercraft."}, {"text": "A person who has been convicted of an offense under Section 22.01, punishable as a Class A misdemeanor and involving a member of the person's family or household, commits an offense if the person possesses a firearm before the fifth anniversary of the later of: (1) the date of the person's release from confinement following conviction of the misdemeanor; or (2) the date of the person's release from community supervision following conviction of the misdemeanor."}, {"text": "A person, other than a peace officer, as defined by Section 1.07, actively engaged in employment as a sworn, full-time paid employee of a state agency or political subdivision, who is subject to an order issued under Section 6.504 or Chapter 85, Family Code, under Article 17.292 or Subchapter A, Chapter 7B, Code of Criminal Procedure, or by another jurisdiction as provided by Chapter 88, Family Code, commits an offense if the person possesses a firearm after receiving notice of the order and before expiration of the order."}, {"text": "In this section, \"family,\" \"household,\" and \"member of a household\" have the meanings assigned by Chapter 71, Family Code."}, {"text": "An offense under Subsection (a) is a felony of the third degree. An offense under Subsection (a-1), (b), or (c) is a Class A misdemeanor."}, {"text": "For the purposes of this section, an offense under the laws of this state, another state, or the United States is, except as provided by Subsection (g), a felony if, at the time it is committed, the offense: (1) is designated by a law of this state as a felony; (2) contains all the elements of an offense designated by a law of this state as a felony; or (3) is punishable by confinement for one year or more in a penitentiary."}, {"text": "An offense is not considered a felony for purposes of Subsection (f) if, at the time the person possesses a firearm, the offense: (1) is not designated by a law of this state as a felony; and (2) does not contain all the elements of any offense designated by a law of this state as a felony."}]}, {"name": "46.041 — Unlawful Possession of Metal or Body Armor by Felon", "items": [{"text": "A person who has been convicted of a felony commits an offense if after the conviction the person possesses metal or body armor."}, {"text": "An offense under this section is a felony of the third degree."}]}, {"name": "46.05 — Prohibited Weapons", "items": [{"text": "A person commits an offense if the person intentionally or knowingly possesses, manufactures, transports, repairs, or sells: (1) any of the following items, unless the item is registered in the National Firearms Registration and Transfer Record maintained by the Bureau of Alcohol, Tobacco, Firearms and Explosives or otherwise not subject to that registration requirement or unless the item is classified as a curio or relic by the United States Department of Justice: (A) an explosive weapon; or (B) a machine gun; (2) armor-piercing ammunition; (3) a chemical dispensing device; (4) a zip gun; (5) a tire deflation device; or (6) an improvised explosive device."}, {"text": "It is a defense to prosecution under this section that the actor's conduct was incidental to the performance of official duty by the armed forces or national guard, a governmental law enforcement agency, or a correctional facility."}, {"text": "Repealed by Acts 2015, 84th Leg., R.S., Ch. 69 , Sec. 2, eff. September 1, 2015."}, {"text": "It is an affirmative defense to prosecution under this section that the actor's conduct: (1) was incidental to dealing with a tire deflation device solely as an antique or curio; (2) was incidental to dealing with armor-piercing ammunition solely for the purpose of making the ammunition available to an organization, agency, or institution listed in Subsection (b); or (3) was incidental to dealing with a tire deflation device solely for the purpose of making the device available to an organization, agency, or institution listed in Subsection (b)."}, {"text": "Except as otherwise provided by this subsection, an offense under this section is a felony of the third degree. An offense under Subsection (a)(5) is a state jail felony."}, {"text": "It is a defense to prosecution under this section for the possession of a chemical dispensing device that the actor is a security officer and has received training on the use of the chemical dispensing device by a training program that is: (1) provided by the Texas Commission on Law Enforcement; or (2) approved for the purposes described by this subsection by the Texas Private Security Board of the Department of Public Safety."}, {"text": "In Subsection (f), \"security officer\" means a commissioned security officer as defined by Section 1702.002, Occupations Code, or a noncommissioned security officer registered under Section 1702.221, Occupations Code."}]}, {"name": "46.06 — Unlawful Transfer of Certain Weapons", "items": [{"text": "In this section: (1) \"Intoxicated\" means substantial impairment of mental or physical capacity resulting from introduction of any substance into the body. (2) \"Active protective order\" means a protective order issued under Title 4, Family Code, that is in effect. The term does not include a temporary protective order issued before the court holds a hearing on the matter."}, {"text": "It is an affirmative defense to prosecution under Subsection (a)(2) that the transfer was to a minor whose parent or the person having legal custody of the minor had given written permission for the sale or, if the transfer was other than a sale, the parent or person having legal custody had given effective consent."}, {"text": "An offense under this section is a Class A misdemeanor, except that: (1) an offense under Subsection (a)(2) is a state jail felony if the weapon that is the subject of the offense is a handgun; and (2) an offense under Subsection (a)(7) is a state jail felony."}]}, {"name": "46.07 — Interstate Purchase", "items": [{"text": "A resident of this state may, if not otherwise precluded by law, purchase firearms, ammunition, reloading components, or firearm accessories in another state. This authorization is enacted in conformance with 18 U.S.C. Section 922(b)(3)(A)."}]}, {"name": "46.08 — Hoax Bombs", "items": [{"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "46.09 — Components of Explosives", "items": [{"text": "An offense under this section is a felony of the third degree."}]}, {"name": "46.10 — Deadly Weapon in Penal Institution", "items": [{"text": "It is an affirmative defense to prosecution under this section that at the time of the offense the actor was engaged in conduct authorized by an employee of the penal institution."}, {"text": "A person who is subject to prosecution under both this section and another section under this chapter may be prosecuted under either section."}, {"text": "An offense under this section is a felony of the third degree."}]}, {"name": "46.11 — Penalty if Offense Committed Within Weapon-Free School Zone", "items": [{"text": "This section does not apply to an offense under Section 46.03(a)(1)."}, {"text": "In this section: (1) \"Premises\" has the meaning assigned by Section 481.134, Health and Safety Code. (2) \"School\" means a private or public elementary or secondary school."}]}, {"name": "46.12 — Maps as Evidence of Location or Area", "items": [{"text": "A municipal or county engineer may, on request of the governing body of the municipality or county, revise a map that has been approved by the governing body of the municipality or county as provided by Subsection (a)."}, {"text": "A municipal or county engineer shall file the original or a copy of every approved or revised map approved as provided by Subsection (a) with the county clerk of each county in which the area is located."}, {"text": "This section does not prevent the prosecution from: (1) introducing or relying on any other evidence or testimony to establish any element of an offense for which punishment is increased under Section 46.11; or (2) using or introducing any other map or diagram otherwise admissible under the Texas Rules of Evidence."}]}, {"name": "46.13 — Making a Firearm Accessible to a Child", "items": [{"text": "A person commits an offense if a child gains access to a readily dischargeable firearm and the person with criminal negligence: (1) failed to secure the firearm; or (2) left the firearm in a place to which the person knew or should have known the child would gain access."}, {"text": "It is an affirmative defense to prosecution under this section that the child's access to the firearm: (1) was supervised by a person older than 18 years of age and was for hunting, sporting, or other lawful purposes; (2) consisted of lawful defense by the child of people or property; (3) was gained by entering property in violation of this code; or (4) occurred during a time when the actor was engaged in an agricultural enterprise."}, {"text": "Except as provided by Subsection (e), an offense under this section is a Class C misdemeanor."}, {"text": "An offense under this section is a Class A misdemeanor if the child discharges the firearm and causes death or serious bodily injury to himself or another person."}, {"text": "A peace officer or other person may not arrest the actor before the seventh day after the date on which the offense is committed if: (1) the actor is a member of the family, as defined by Section 71.003, Family Code, of the child who discharged the firearm; and (2) the child in discharging the firearm caused the death of or serious injury to the child."}, {"text": "A dealer of firearms shall post in a conspicuous position on the premises where the dealer conducts business a sign that contains the following warning in block letters not less than one inch in height: \"IT IS UNLAWFUL TO STORE, TRANSPORT, OR ABANDON AN UNSECURED FIREARM IN A PLACE WHERE CHILDREN ARE LIKELY TO BE AND CAN OBTAIN ACCESS TO THE FIREARM.\""}]}, {"name": "46.14 — Firearm Smuggling", "items": [{"text": "An offense under this section is a felony of the third degree, unless it is shown on the trial of the offense that the offense was committed with respect to three or more firearms in a single criminal episode, in which event the offense is a felony of the second degree."}, {"text": "This section does not apply to a peace officer who is engaged in the actual discharge of an official duty."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "46.15 — Nonapplicability", "items": [{"text": "Sections 46.02, 46.03(a)(14), and 46.04(a-1) do not apply to a person who: (1) is in the actual discharge of official duties as a member of the armed forces or state military forces as defined by Section 437.001, Government Code, or as a guard employed by a penal institution; (2) is traveling; (3) is engaging in lawful hunting, fishing, or other sporting activity on the immediate premises where the activity is conducted, or is en route between the premises and the actor's residence, motor vehicle, or watercraft, if the weapon is a type commonly used in the activity; (4) holds a security officer commission issued by the Texas Private Security Board, if the person is engaged in the performance of the person's duties as an officer commissioned under Chapter 1702, Occupations Code, or is — (see Sec./Art. 46.15 for the complete list)"}, {"text": "Repealed by Acts 2019, 86th Leg., R.S., Ch. 216 (H.B. 446), Sec. 4, eff. September 1, 2019."}, {"text": "The provisions of Section 46.02 prohibiting the carrying of a firearm do not apply to a public security officer employed by the adjutant general under Section 437.053, Government Code, in performance of official duties or while traveling to or from a place of duty."}, {"text": "Section 46.02(a-4) does not apply to an individual carrying a location-restricted knife used in a historical demonstration or in a ceremony in which the knife is significant to the performance of the ceremony."}, {"text": "Section 46.03(a)(6) does not apply to a person who possesses a firearm or club while in the actual discharge of official duties as: (1) a member of the armed forces or state military forces, as defined by Section 437.001, Government Code; or (2) an employee of a penal institution."}, {"text": "The provisions of Section 46.03 prohibiting the possession or carrying of a club do not apply to an animal control officer who holds a certificate issued under Section 829.006, Health and Safety Code, and who possesses or carries an instrument used specifically for deterring the bite of an animal while the officer is in the performance of official duties under the Health and Safety Code or is traveling to or from a place of duty."}, {"text": "The provisions of Section 46.03 prohibiting the possession or carrying of a club do not apply to a code enforcement officer who: (1) holds a certificate of registration issued under Chapter 1952, Occupations Code; and (2) possesses or carries an instrument used specifically for deterring an animal bite while the officer is: (A) performing official duties; or (B) traveling to or from a place of duty."}, {"text": "Repealed by Acts 2007, 80th Leg., R.S., Ch. 693, Sec. 3(2), eff. September 1, 2007."}, {"text": "The provisions of Sections 46.02 and 46.03(a)(7), (a-2), (a-3), and (a-4) do not apply to an individual who carries a handgun as a participant in a historical reenactment performed in accordance with the rules of the Texas Alcoholic Beverage Commission."}, {"text": "Section 46.02 does not apply to a person who carries a handgun if: (1) the person carries the handgun while: (A) evacuating from an area following the declaration of a state of disaster under Section 418.014, Government Code, or a local state of disaster under Section 418.108, Government Code, with respect to that area; or (B) reentering that area following the person's evacuation; (2) not more than 168 hours have elapsed since the state of disaster or local state of disaster was declared, or more than 168 hours have elapsed since the time the declaration was made and the governor has extended the period during which a person may carry a handgun under this subsection; and (3) the person is not prohibited by state or federal law from possessing a firearm."}, {"text": "Sections 46.02 and 46.03(a)(1), (a)(2), (a)(3), and (a)(4) do not apply to a person who carries a handgun if: (1) the person carries the handgun on the premises, as defined by the statute providing the applicable offense, of a location operating as an emergency shelter during a state of disaster declared under Section 418.014, Government Code, or a local state of disaster declared under Section 418.108, Government Code; (2) the owner, controller, or operator of the premises or a person acting with the apparent authority of the owner, controller, or operator, authorized the carrying of the handgun; (3) the person carrying the handgun complies with any rules and regulations of the owner, controller, or operator of the premises that govern the carrying of a handgun on the premises; — (see Sec./Art. 46.15 for the complete list)"}, {"text": "It is a defense to prosecution under Section 46.03 that the actor: (1) carries a handgun on a premises or other property on which the carrying of a weapon is prohibited under that section; (2) personally received from the owner of the property, or from another person with apparent authority to act for the owner, notice that carrying a firearm or other weapon on the premises or other property, as applicable, was prohibited; and (3) promptly departed from the premises or other property."}, {"text": "The defense provided by Subsection (m) does not apply if: (1) a sign described by Subsection (o) was posted prominently at each entrance to the premises or other property, as applicable; or (2) at the time of the offense, the actor knew that carrying a firearm or other weapon on the premises or other property was prohibited."}, {"text": "A person may provide notice that firearms and other weapons are prohibited under Section 46.03 on the premises or other property, as applicable, by posting a sign at each entrance to the premises or other property that: (1) includes language that is identical to or substantially similar to the following: \"Pursuant to Section 46.03, Penal Code (places weapons prohibited), a person may not carry a firearm or other weapon on this property\"; (2) includes the language described by Subdivision (1) in both English and Spanish; (3) appears in contrasting colors with block letters at least one inch in height; and (4) is displayed in a conspicuous manner clearly visible to the public."}, {"text": "Sections 46.03(a)(7), (11), and (13) do not apply if the actor: (1) carries a handgun on the premises or other property, as applicable; (2) holds a license to carry a handgun issued under Subchapter H, Chapter 411, Government Code; and (3) was not given effective notice under Section 30.06 or 30.07 of this code or Section 411.204, Government Code, as applicable."}, {"text": "Section 46.03(a)(8) does not apply if the actor: (1) carries a handgun on a premises where a collegiate sporting event is taking place; (2) holds a license to carry a handgun issued under Subchapter H, Chapter 411, Government Code; and (3) was not given effective notice under Section 30.06 or 30.07 of this code, as applicable."}, {"text": "Sections 46.02 and 46.03 do not apply to a first responder who: (1) was carrying a handgun in a concealed manner or in a shoulder or belt holster; (2) holds an unexpired certificate of completion under Section 411.1883, Government Code, at the time of engaging in the applicable conduct; (3) was engaged in the actual discharge of the first responder's duties while carrying the handgun; and (4) was employed or supervised by a municipality or county to which Chapter 179, Local Government Code, applies."}, {"text": "In this subsection, \"tactical medical professional\" has the meaning assigned by Section 411.1884, Government Code. Sections 46.02 and 46.03 do not apply to a tactical medical professional who: (1) was carrying a handgun in a concealed manner or in a shoulder or belt holster; (2) holds an unexpired certificate of completion under Section 411.1884, Government Code, at the time of engaging in the applicable conduct; and (3) was engaged in the actual discharge of the tactical medical professional's duties while carrying the handgun. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(18, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_16_weapons_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

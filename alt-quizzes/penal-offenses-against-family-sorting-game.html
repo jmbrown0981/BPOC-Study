@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Offenses Against the Family Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.25 &middot; Supplemental Practice</p>
+    <h1>Offenses Against the Family Sorting Game</h1>
+    <p class="sub">Fifteen boxes covering all of Chapter 25: bigamy, prohibited sexual conduct, interference with child custody, agreement to abduct from custody, enticing a child, criminal nonsupport, harboring a runaway child, violation of family-violence court orders/bond conditions (including bias/prejudice-motivated protective orders), sale or purchase of a child, unregulated custody transfer of an adopted child, advertising for placement of a child, interference with a guardian's rights, and continuous violence against the family. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="15" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="8" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.25 (Offenses Against the Family) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "25.01 — Bigamy", "items": [{"text": "For purposes of this section, \"under the appearance of being married\" means holding out that the parties are married with cohabitation and an intent to be married by either party."}, {"text": "It is a defense to prosecution under Subsection (a)(1) that the actor reasonably believed at the time of the commission of the offense that the actor and the person whom the actor married or purported to marry or with whom the actor lived under the appearance of being married were legally eligible to be married because the actor's prior marriage was void or had been dissolved by death, divorce, or annulment. For purposes of this subsection, an actor's belief is reasonable if the belief is substantiated by a certified copy of a death certificate or other signed document issued by a court."}, {"text": "For the purposes of this section, the lawful wife or husband of the actor may testify both for or against the actor concerning proof of the original marriage."}, {"text": "An offense under this section is a felony of the third degree, except that if at the time of the commission of the offense, the person whom the actor marries or purports to marry or with whom the actor lives under the appearance of being married is: (1) 17 years of age, the offense is a felony of the second degree; or (2) 16 years of age or younger, the offense is a felony of the first degree."}]}, {"name": "25.02 — Prohibited Sexual Conduct", "items": [{"text": "For purposes of this section: (1) \"Deviate sexual intercourse\" means any contact between the genitals of one person and the mouth or anus of another person with intent to arouse or gratify the sexual desire of any person. (2) \"Sexual intercourse\" means any penetration of the female sex organ by the male sex organ."}, {"text": "An offense under this section is a felony of the third degree, unless the offense is committed under Subsection (a)(1), in which event the offense is a felony of the second degree."}]}, {"name": "25.03 — Interference with Child Custody", "items": [{"text": "A noncustodial parent commits an offense if, with the intent to interfere with the lawful custody of a child younger than 18 years, the noncustodial parent knowingly entices or persuades the child to leave the custody of the custodial parent, guardian, or person standing in the stead of the custodial parent or guardian of the child."}, {"text": "It is a defense to prosecution under Subsection (a)(2) that the actor returned the child to the geographic area of the counties composing the judicial district if the court is a district court or the county if the court is a statutory county court, within three days after the date of the commission of the offense."}, {"text": "It is an affirmative defense to prosecution under Subsection (a)(3) that: (1) the taking or retention of the child was pursuant to a valid order providing for possession of or access to the child; or (2) notwithstanding any violation of a valid order providing for possession of or access to the child, the actor's retention of the child was due only to circumstances beyond the actor's control and the actor promptly provided notice or made reasonable attempts to provide notice of those circumstances to the other person entitled to possession of or access to the child."}, {"text": "Subsection (a)(3) does not apply if, at the time of the offense, the person taking or retaining the child: (1) was entitled to possession of or access to the child; and (2) was fleeing the commission or attempted commission of family violence, as defined by Section 71.004, Family Code, against the child or the person."}, {"text": "An offense under this section is a state jail felony."}, {"text": "If conduct that constitutes an offense under Subsection (a)(3) also constitutes an offense under Section 20.03, the actor may be prosecuted only under Section 20.03."}]}, {"name": "25.031 — Agreement to Abduct from Custody", "items": [{"text": "An offense under this section is a state jail felony."}]}, {"name": "25.04 — Enticing a Child", "items": [{"text": "An offense under this section is a Class B misdemeanor, unless it is shown on the trial of the offense that the actor intended to commit a felony against the child, in which event an offense under this section is a felony of the third degree."}]}, {"name": "25.05 — Criminal Nonsupport", "items": [{"text": "For purposes of this section, \"child\" includes a child born out of wedlock whose paternity has either been acknowledged by the actor or has been established in a civil suit under the Family Code or the law of another state."}, {"text": "Under this section, a conviction may be had on the uncorroborated testimony of a party to the offense."}, {"text": "It is an affirmative defense to prosecution under this section that the actor could not provide support for the actor's child."}, {"text": "The pendency of a prosecution under this section does not affect the power of a court to enter an order for child support under the Family Code."}, {"text": "An offense under this section is a state jail felony."}]}, {"name": "25.06 — Harboring Runaway Child", "items": [{"text": "It is a defense to prosecution under this section that the actor was related to the child within the second degree by consanguinity or affinity, as determined under Chapter 573, Government Code."}, {"text": "It is a defense to prosecution under this section that the actor notified: (1) the person or agency from which the child escaped or a law enforcement agency of the presence of the child within 24 hours after discovering that the child had escaped from custody; or (2) a law enforcement agency or a person at the child's home of the presence of the child within 24 hours after discovering that the child was voluntarily absent from home without the consent of the child's parent or guardian."}, {"text": "An offense under this section is a Class A misdemeanor."}, {"text": "On the receipt of a report from a peace officer, probation officer, the Texas Youth Council, a foster home, or a detention facility for children that a child has escaped its custody or upon receipt of a report from a parent, guardian, conservator, or legal custodian that a child is missing, a law enforcement agency shall immediately enter a record of the child into the National Crime Information Center."}]}, {"name": "25.07 — Violation of Certain Court Orders or Conditions of Bond in a Family Violence, Child Abuse or Neglect, Sexual Assault or Abuse, Indecent Assault, Stalking, or Trafficking Case", "items": [{"text": "For purposes of Subsection (a)(5), possession of a pet, companion animal, or assistance animal by a person means: (1) actual care, custody, control, or management of a pet, companion animal, or assistance animal by the person; or (2) constructive possession of a pet, companion animal, or assistance animal owned by the person or for which the person has been the primary caregiver."}, {"text": "For the purposes of this section: (1) \"Family violence,\" \" family,\" \"household,\" and \"member of a household\" have the meanings assigned by Chapter 71, Family Code. (2) \"Firearm\" has the meaning assigned by Chapter 46. (2-a) \"Global positioning monitoring system\" has the meaning assigned by Article 17.49, Code of Criminal Procedure. (3) \"Assistance animal\" has the meaning assigned by Section 121.002, Human Resources Code. (4) \"Sexual abuse\" means any act as described by Section 21.02 or 21.11. (5) \"Sexual assault\" means any act as described by Section 22.011 or 22.021. (6) \"Stalking\" means any conduct that constitutes an offense under Section 42.072. (7) \"Trafficking\" means any conduct that constitutes an offense under Section 20A.02. — (see Sec./Art. 25.07 for the complete list)"}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or under both sections."}, {"text": "Reconciliatory actions or agreements made by persons affected by an order do not affect the validity of the order or the duty of a peace officer to enforce this section."}, {"text": "A peace officer investigating conduct that may constitute an offense under this section for a violation of an order may not arrest a person protected by that order for a violation of that order."}, {"text": "It is not a defense to prosecution under this section that certain information has been excluded, as provided by Section 85.007, Family Code, or Article 17.292, Code of Criminal Procedure, from an order to which this section applies."}, {"text": "An offense under this section is a Class A misdemeanor, except the offense is: (1) subject to Subdivision (2), a state jail felony if: (A) it is shown at the trial of the offense that the defendant violated an order issued under Subchapter A, Chapter 7B, Code of Criminal Procedure, following the defendant's conviction of or placement on deferred adjudication community supervision for an offense, if the order was issued with respect to a victim of that offense; or (B) the defendant violates an order or a condition of bond in the manner described by Subsection (a)(1), (2), (3), (5), (6), or (7) while possessing a deadly weapon; or (2) a felony of the third degree if it is shown on the trial of the offense that the defendant: — (see Sec./Art. 25.07 for the complete list)"}, {"text": "For purposes of Subsection (g), a conviction under the laws of another state for an offense containing elements that are substantially similar to the elements of an offense under this section or Section 25.072 is considered to be a conviction under this section or Section 25.072, as applicable."}]}, {"name": "25.071 — Violation of Protective Order Preventing Offense Caused by Bias or Prejudice", "items": [{"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or under both sections."}, {"text": "A peace officer investigating conduct that may constitute an offense under this section for a violation of an order may not arrest a person protected by that order for a violation of that order."}, {"text": "An offense under this section is a Class A misdemeanor unless it is shown on the trial of the offense that the defendant has previously been convicted under this section two or more times or has violated the protective order by committing an assault, in which event the offense is a third degree felony."}]}, {"name": "25.072 — Repeated Violation of Certain Court Orders or Conditions of Bond in Family Violence, Child Abuse or Neglect, Sexual Assault or Abuse, Indecent Assault, Stalking, or Trafficking Case", "items": [{"text": "If the jury is the trier of fact, members of the jury must agree unanimously that the defendant, during a period that is 12 months or less in duration, two or more times engaged in conduct that constituted an offense under Section 25.07."}, {"text": "A defendant may not be convicted in the same criminal action of another offense an element of which is any conduct that is alleged as an element of the offense under Subsection (a) unless the other offense: (1) is charged in the alternative; (2) occurred outside the period in which the offense alleged under Subsection (a) was committed; or (3) is considered by the trier of fact to be a lesser included offense of the offense alleged under Subsection (a)."}, {"text": "A defendant may not be charged with more than one count under Subsection (a) if all of the specific conduct that is alleged to have been engaged in is alleged to have been committed in violation of a single court order or single setting of bond."}, {"text": "An offense under this section is a felony of the third degree, except the offense is a felony of the second degree if it is shown on the trial of the offense that at least one time the person engaged in conduct that was punishable as a state jail felony under Section 25.07(g)(1)(B)."}]}, {"name": "25.08 — Sale or Purchase of Child", "items": [{"text": "It is an exception to the application of this section that the thing of value is: (1) a fee or reimbursement paid to a child-placing agency as authorized by law; (2) a fee paid to an attorney, social worker, mental health professional, or physician for services rendered in the usual course of legal or medical practice or in providing adoption counseling; (3) a reimbursement of legal or medical expenses incurred by a person for the benefit of the child; or (4) a necessary pregnancy-related expense paid by a child-placing agency for the benefit of the child's parent during the pregnancy or after the birth of the child as permitted by the minimum standards for child-placing agencies and Department of Protective and Regulatory Services rules."}, {"text": "An offense under this section is a felony of the third degree, except that the offense is a felony of the second degree if the actor commits the offense with intent to commit an offense under Section 20A.02, 43.021, 43.05, or 43.25."}]}, {"name": "25.081 — Unregulated Custody Transfer of Adopted Child", "items": [{"text": "Except as otherwise provided by this section, a person commits an offense if the person knowingly: (1) conducts an unregulated custody transfer of an adopted child; or (2) facilitates or participates in the unregulated custody transfer of an adopted child, including by transferring, recruiting, harboring, transporting, providing, soliciting, or obtaining an adopted child for that purpose."}, {"text": "An offense under this section is a felony of the third degree, except that the offense is a felony of the second degree if the actor commits the offense with intent to commit an offense under Section 20A.02, 43.021, 43.05, 43.25, 43.251, or 43.26."}, {"text": "This section does not apply to: (1) the placement of an adopted child with a licensed child-placing agency, the Department of Family and Protective Services, or an adult relative, stepparent, or other adult with a significant and long-standing relationship to the child; (2) the placement of an adopted child by a licensed child-placing agency or the Department of Family and Protective Services; (3) the temporary placement of an adopted child by the child's parent, managing conservator, or guardian for a designated short-term period with a specified intent and period for return of the child due to temporary circumstances, including: (A) a vacation; (B) a school-sponsored function or activity; — (see Sec./Art. 25.081 for the complete list)"}]}, {"name": "25.09 — Advertising for Placement of Child", "items": [{"text": "This section does not apply to a licensed child-placing agency that is identified in the advertisement as a licensed child-placing agency."}, {"text": "An offense under this section is a Class A misdemeanor unless the person has been convicted previously under this section, in which event the offense is a felony of the third degree."}, {"text": "In this section: (1) \"Child\" has the meaning assigned by Section 101.003, Family Code. (2) \"Public media\" has the meaning assigned by Section 38.01. The term also includes communications through the use of the Internet or another public computer network."}]}, {"name": "25.10 — Interference with Rights of Guardian of the Person", "items": [{"text": "A person commits an offense if the person takes, retains, or conceals a ward when the person knows that the person's taking, retention, or concealment interferes with a possessory right with respect to the ward."}, {"text": "An offense under this section is a state jail felony."}, {"text": "This section does not apply to a governmental entity where the taking, retention, or concealment of the ward was authorized by Subtitle E, Title 5, Family Code, or Chapter 48, Human Resources Code."}]}, {"name": "25.11 — Continuous Violence Against the Family", "items": [{"text": "If the jury is the trier of fact, members of the jury are not required to agree unanimously on the specific conduct in which the defendant engaged that constituted an offense under Section 22.01(a)(1) against the person or persons described by Subsection (a), the exact date when that conduct occurred, or the county in which each instance of the conduct occurred. The jury must agree unanimously that the defendant, during a period that is 12 months or less in duration, two or more times engaged in conduct that constituted an offense under Section 22.01(a)(1) against the person or persons described by Subsection (a)."}, {"text": "A defendant may not be convicted in the same criminal action of another offense the victim of which is an alleged victim of the offense under Subsection (a) and an element of which is any conduct that is alleged as an element of the offense under Subsection (a) unless the other offense: (1) is charged in the alternative; (2) occurred outside the period in which the offense alleged under Subsection (a) was committed; or (3) is considered by the trier of fact to be a lesser included offense of the offense alleged under Subsection (a)."}, {"text": "A defendant may not be charged with more than one count under Subsection (a) if all of the specific conduct that is alleged to have been engaged in is alleged to have been committed against a single victim or members of the same household, as defined by Section 71.005, Family Code."}, {"text": "An offense under this section is a felony of the third degree. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(8, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_05_offenses_against_family_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

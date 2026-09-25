@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Theft Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.31 &middot; Supplemental Practice</p>
+    <h1>Theft Sorting Game</h1>
+    <p class="sub">Twenty-three boxes, all of Chapter 31: theft, theft of service, theft of trade secrets, theft by check, unauthorized use of a vehicle, value and aggregation rules, tampering with identification numbers, multichannel video/information services offenses, organized retail theft, unauthorized acquisition of financial information, cargo theft, petroleum/oil-and-gas equipment theft, mail theft, unauthorized possession of a catalytic converter or copper/brass material, and real property theft. Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="23" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="12" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.31 (Theft) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "31.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Deception\" means: (A) creating or confirming by words or conduct a false impression of law or fact that is likely to affect the judgment of another in the transaction, and that the actor does not believe to be true; (B) failing to correct a false impression of law or fact that is likely to affect the judgment of another in the transaction, that the actor previously created or confirmed by words or conduct, and that the actor does not now believe to be true; (C) preventing another from acquiring information likely to affect his judgment in the transaction; (D) selling or otherwise transferring or encumbering property without disclosing a lien, security interest, adverse claim, or other legal impediment to the enjoyment of the property, whether the lien, security — (see Sec./Art. 31.01 for the complete list)"}]}, {"name": "31.02 — Consolidation of Theft Offenses", "items": [{"text": "Theft as defined in Section 31.03 constitutes a single offense superseding the separate offenses previously known as theft, theft by false pretext, conversion by a bailee, theft from the person, shoplifting, acquisition of property by threat, swindling, swindling by worthless check, embezzlement, extortion, receiving or concealing embezzled property, and receiving or concealing stolen property."}]}, {"name": "31.03 — Theft", "items": [{"text": "Appropriation of property is unlawful if: (1) it is without the owner's effective consent; (2) the property is stolen and the actor appropriates the property knowing it was stolen by another; or (3) property in the custody of any law enforcement agency was explicitly represented by any law enforcement agent to the actor as being stolen and the actor appropriates the property believing it was stolen by another."}, {"text": "For purposes of Subsection (b): (1) evidence that the actor has previously participated in recent transactions other than, but similar to, the transaction for which the prosecution is based is admissible for the purpose of showing knowledge or intent and the issues of knowledge or intent are raised by the actor's plea of not guilty; (2) the testimony of an accomplice shall be corroborated by proof that tends to connect the actor to the crime, but the actor's knowledge or intent may be established by the uncorroborated testimony of the accomplice; (3) an actor engaged in the business of buying and selling used or secondhand personal property, or lending money on the security of personal property deposited with the actor, is presumed to know upon receipt by the actor of stolen property — (see Sec./Art. 31.03 for the complete list)"}, {"text": "It is not a defense to prosecution under this section that: (1) the offense occurred as a result of a deception or strategy on the part of a law enforcement agency, including the use of an undercover operative or peace officer; (2) the actor was provided by a law enforcement agency with a facility in which to commit the offense or an opportunity to engage in conduct constituting the offense; or (3) the actor was solicited to commit the offense by a peace officer, and the solicitation was of a type that would encourage a person predisposed to commit the offense to actually commit the offense, but would not encourage a person not predisposed to commit the offense to actually commit the offense."}, {"text": "Except as otherwise provided by this section, an offense under this section is: (1) a Class C misdemeanor if the value of the property stolen is less than $100; (2) a Class B misdemeanor if: (A) the value of the property stolen is $100 or more but less than $750; (B) the value of the property stolen is less than $100 and the defendant has previously been convicted of any grade of theft; or (C) the property stolen is a driver's license, commercial driver's license, or personal identification certificate issued by this state or another state; (3) a Class A misdemeanor if the value of the property stolen is $750 or more but less than $2,500; (4) a state jail felony if: — (see Sec./Art. 31.03 for the complete list)"}, {"text": "An offense described for purposes of punishment by Subsections (e)(1)-(6) is increased to the next higher category of offense if it is shown on the trial of the offense that: (1) the actor was a public servant at the time of the offense and the property appropriated came into the actor's custody, possession, or control by virtue of his status as a public servant; (2) the actor was in a contractual relationship with government at the time of the offense and the property appropriated came into the actor's custody, possession, or control by virtue of the contractual relationship; (3) the owner of the property appropriated was at the time of the offense: (A) an elderly individual; or (B) a nonprofit organization; — (see Sec./Art. 31.03 for the complete list)"}, {"text": "An offense described for purposes of punishment by Subsections (e)(4)-(6) is increased to the next higher category of offense if it is shown on the trial of the offense that: (1) the property stolen is a catalytic converter; and (2) the actor possessed a firearm during the commission of the offense."}, {"text": "An offense described for purposes of punishment by Subsections (e)(4)-(6) is increased to the next higher category of offense if it is shown on the trial of the offense that: (1) the property stolen was copper or brass; and (2) the actor committed the offense by unlawfully appropriating the property from a critical infrastructure facility or from equipment or communication wires appurtenant to or connected to the facility or on which the facility depends to properly function, regardless of whether the equipment or communication wires are enclosed by a fence or other barrier."}, {"text": "The increase in the punishment provided by Section 12.50 for an offense under this section does not apply if the penalty described by Subsection (e)(4)(H) applies."}, {"text": "For the purposes of Subsection (a), a person is the owner of exotic livestock or exotic fowl as defined by Section 142.001, Agriculture Code, only if the person qualifies to claim the animal under Section 142.0021, Agriculture Code, if the animal is an estray."}, {"text": "In this section: (1) \"Restricted-use pesticide\" means a pesticide classified as a restricted-use pesticide by the administrator of the Environmental Protection Agency under 7 U.S.C. Section 136a, as that law existed on January 1, 1995, and containing an active ingredient listed in the federal regulations adopted under that law (40 C.F.R. Section 152.175) and in effect on that date. (2) \"State-limited-use pesticide\" means a pesticide classified as a state-limited-use pesticide by the Department of Agriculture under Section 76.003, Agriculture Code, as that section existed on January 1, 1995, and containing an active ingredient listed in the rules adopted under that section (4 TAC Section 7.24) as that section existed on that date. — (see Sec./Art. 31.03 for the complete list)"}, {"text": "For purposes of Subsection (c)(9), \"livestock\" and \"commission merchant\" have the meanings assigned by Section 147.001, Agriculture Code."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves the state Medicaid program."}]}, {"name": "31.04 — Theft of Service", "items": [{"text": "For purposes of this section, intent to avoid payment is presumed if any of the following occurs: (1) the actor absconded without paying for the service or expressly refused to pay for the service in circumstances where payment is ordinarily made immediately upon rendering of the service, as in hotels, campgrounds, recreational vehicle parks, restaurants, and comparable establishments; (2) the actor failed to make payment under a service agreement within 10 days after receiving notice demanding payment; (3) the actor returns property held under a rental agreement after the expiration of the rental agreement and fails to pay the applicable rental charge for the property within 10 days after the date on which the actor received notice demanding payment; — (see Sec./Art. 31.04 for the complete list)"}, {"text": "For purposes of Subsection (a)(4), notice must be: (1) in writing; (2) sent by: (A) registered or certified mail with return receipt requested; (B) commercial delivery service; (C) e-mail; or (D) text message; and (3) sent to the actor using the actor's mailing address, e-mail address, phone number, or other method of contact, as appropriate, shown on: (A) the rental agreement or service agreement; (B) records of the person whose service was secured; or (C) if the actor secured performance of service by issuing or passing a check or similar sight order for the payment of money, using the actor's address shown on: (i) the check or order; or (ii) the records of the bank or other drawee on which the check or order is drawn."}, {"text": "For purposes of Subsections (b)(2), (b)(4), and (b)(5), notice must be: (1) in writing; (2) sent by: (A) registered or certified mail with return receipt requested; or (B) commercial delivery service; and (3) sent to the actor using the actor's mailing address shown on: (A) the rental agreement or service agreement; (B) records of the person whose service was secured; or (C) if the actor secured performance of service by issuing or passing a check or similar sight order for the payment of money, using the actor's address shown on: (i) the check or order; or (ii) the records of the bank or other drawee on which the check or order is drawn."}, {"text": "Except as otherwise provided by this subsection, if written notice is given in accordance with Subsection (b-1) or (c), it is presumed that the notice was received not later than two days after the notice was sent. For purposes of Subsections (b)(4)(A) and (B) and (b)(5), if written notice is given in accordance with Subsection (c), it is presumed that the notice was received not later than five days after the notice was sent."}, {"text": "For purposes of Subsection (a)(2), the diversion of services to the benefit of a person who is not entitled to those services includes the disposition of personal property by an actor having control of the property under an agreement described by Subsections (d-2)(1)-(3), if the actor disposes of the property in violation of the terms of the agreement and to the benefit of any person who is not entitled to the property."}, {"text": "For purposes of Subsection (a)(3), the term \"written rental agreement\" does not include an agreement that: (1) permits an individual to use personal property for personal, family, or household purposes for an initial rental period; (2) is automatically renewable with each payment after the initial rental period; and (3) permits the individual to become the owner of the property."}, {"text": "For purposes of Subsection (a)(4): (1) if the compensation is or was to be paid on a periodic basis, the intent to avoid payment for a service may be formed at any time during or before a pay period; (2) the partial payment of wages alone is not sufficient evidence to negate the actor's intent to avoid payment for a service; and (3) the term \"service\" does not include leasing personal property under an agreement described by Subsections (d-2)(1)-(3)."}, {"text": "A presumption established under Subsection (b) involving a defendant's failure to return property held under an agreement described by Subsections (d-2)(1)-(3) may be refuted if the defendant shows that the defendant: (1) intended to return the property; and (2) was unable to return the property."}, {"text": "For purposes of Subsection (b)(5), \"business day\" means a day other than Sunday or a state or federal holiday."}, {"text": "An offense under this section is: (1) a Class C misdemeanor if the value of the service stolen is less than $100; (2) a Class B misdemeanor if the value of the service stolen is $100 or more but less than $750; (3) a Class A misdemeanor if the value of the service stolen is $750 or more but less than $2,500; (4) a state jail felony if the value of the service stolen is $2,500 or more but less than $30,000; (5) a felony of the third degree if the value of the service stolen is $30,000 or more but less than $150,000; (6) a felony of the second degree if the value of the service stolen is $150,000 or more but less than $300,000; or (7) a felony of the first degree if the value of the service stolen is $300,000 or more."}, {"text": "Notwithstanding any other provision of this code, any police or other report of stolen vehicles by a political subdivision of this state shall include on the report any rental vehicles whose renters have been shown to such reporting agency to be in violation of Subsection (b)(2) and shall indicate that the renting agency has complied with the notice requirements demanding return as provided in this section."}, {"text": "It is a defense to prosecution under this section that: (1) the defendant secured the performance of the service by giving a post-dated check or similar sight order to the person performing the service; and (2) the person performing the service or any other person presented the check or sight order for payment before the date on the check or sight order."}]}, {"name": "31.05 — Theft of Trade Secrets", "items": [{"text": "A person commits an offense if, without the owner's effective consent, he knowingly: (1) steals a trade secret; (2) makes a copy of an article representing a trade secret; or (3) communicates or transmits a trade secret."}, {"text": "An offense under this section is a felony of the third degree, except that the offense is a felony of the second degree if it is shown on the trial of the offense that the person who committed the offense intended to benefit a foreign agent, foreign government, or foreign instrumentality."}]}, {"name": "31.06 — Presumption for Theft by Check or Similar Sight Order", "items": [{"text": "For purposes of Subsection (a)(2) or (f)(3), notice may be actual notice or notice in writing that: (1) is sent by: (A) first class mail, evidenced by an affidavit of service; or (B) registered or certified mail with return receipt requested; (2) is addressed to the issuer at the issuer's address shown on: (A) the check or order; (B) the records of the bank or other drawee; or (C) the records of the person to whom the check or order has been issued or passed; and (3) contains the following statement: \"This is a demand for payment in full for a check or order not paid because of a lack of funds or insufficient funds. If you fail to make payment in full within 10 days after the date of receipt of this notice, the failure to pay creates a presumption for committing an offense, and this — (see Sec./Art. 31.06 for the complete list)"}, {"text": "If written notice is given in accordance with Subsection (b), it is presumed that the notice was received no later than five days after it was sent."}, {"text": "Nothing in this section prevents the prosecution from establishing the requisite intent by direct evidence."}, {"text": "Partial restitution does not preclude the presumption of the requisite intent under this section."}, {"text": "If the actor obtained property by issuing or passing a check or similar sight order for the payment of money, the actor's intent to deprive the owner of the property under Section 31.03 (Theft) is presumed, except in the case of a postdated check or order, if: (1) the actor ordered the bank or other drawee to stop payment on the check or order; (2) the bank or drawee refused payment to the holder on presentation of the check or order within 30 days after issue; (3) the owner gave the actor notice of the refusal of payment and made a demand to the actor for payment or return of the property; and (4) the actor failed to: (A) pay the holder within 10 days after receiving the demand for payment; — (see Sec./Art. 31.06 for the complete list)"}]}, {"name": "31.07 — Unauthorized Use of a Vehicle", "items": [{"text": "An offense under this section is a state jail felony."}]}, {"name": "31.08 — Value", "items": [{"text": "In the prosecution of an offense under Section 31.16 involving retail merchandise stolen from a merchant, the value of the stolen retail merchandise is: (1) the sales price of the retail merchandise as stated, posted, or advertised by the merchant, including applicable sales tax, at the time of the offense; or (2) the rental price of the retail merchandise as stated, posted, or advertised by the merchant, including applicable sales tax, at the time of the offense plus the cost of replacing the retail merchandise within a reasonable time after the offense."}, {"text": "The value of documents, other than those having a readily ascertainable market value, is: (1) the amount due and collectible at maturity less that part which has been satisfied, if the document constitutes evidence of a debt; or (2) the greatest amount of economic loss that the owner might reasonably suffer by virtue of loss of the document, if the document is other than evidence of a debt."}, {"text": "If property or service has value that cannot be reasonably ascertained by the criteria set forth in Subsections (a), (a-1), and (b), the property or service is deemed to have a value of $750 or more but less than $2,500."}, {"text": "If the actor proves by a preponderance of the evidence that the actor gave consideration for or had a legal interest in the property or service stolen, the amount of the consideration or the value of the interest so proven shall be deducted from the value of the property or service ascertained under Subsection (a), (a-1), (b), or (c) to determine value for purposes of this chapter."}]}, {"name": "31.09 — Aggregation of Amounts Involved in Theft", "items": [{"text": "When amounts are obtained in violation of this chapter pursuant to one scheme or continuing course of conduct, whether from the same or several sources, the conduct may be considered as one offense and the amounts aggregated in determining the grade of the offense."}]}, {"name": "31.10 — Actor's Interest in Property", "items": [{"text": "It is no defense to prosecution under this chapter that the actor has an interest in the property or service stolen if another person has the right of exclusive possession of the property."}]}, {"name": "31.11 — Tampering with Identification Numbers", "items": [{"text": "It is an affirmative defense to prosecution under this section that the person was: (1) the owner or acting with the effective consent of the owner of the property involved; (2) a peace officer acting in the actual discharge of official duties; or (3) acting with respect to a number assigned to a vehicle by the Texas Department of Transportation or the Texas Department of Motor Vehicles, as applicable, and the person was: (A) in the actual discharge of official duties as an employee or agent of the department; or (B) in full compliance with the rules of the department as an applicant for an assigned number approved by the department."}, {"text": "Property involved in a violation of this section may be treated as stolen for purposes of custody and disposition of the property."}, {"text": "An offense under this section is a Class A misdemeanor."}, {"text": "In this section, \"vehicle\" has the meaning given by Section 541.201, Transportation Code."}]}, {"name": "31.12 — Theft of or Tampering with Multichannel Video or Information Services", "items": [{"text": "In this section: (1) \"Access device,\" \"connection,\" and \"device\" mean an access device, connection, or device wholly or partly designed to make intelligible an encrypted, encoded, scrambled, or other nonstandard signal carried by a multichannel video or information services provider. (2) \"Encrypted, encoded, scrambled, or other nonstandard signal\" means any type of signal or transmission not intended to produce an intelligible program or service without the use of a device, signal, or information provided by a multichannel video or information services provider. (3) \"Multichannel video or information services provider\" means a licensed cable television system, video dialtone system, multichannel multipoint distribution services system, direct broadcast satellite system, or other system — (see Sec./Art. 31.12 for the complete list)"}, {"text": "This section does not prohibit the manufacture, distribution, sale, or use of satellite receiving antennas that are otherwise permitted by state or federal law."}, {"text": "An offense under this section is a Class C misdemeanor unless it is shown on the trial of the offense that the actor: (1) has been previously convicted one time of an offense under this section, in which event the offense is a Class B misdemeanor, or convicted two or more times of an offense under this section, in which event the offense is a Class A misdemeanor; or (2) committed the offense for remuneration, in which event the offense is a Class A misdemeanor, unless it is also shown on the trial of the offense that the actor has been previously convicted two or more times of an offense under this section, in which event the offense is a Class A misdemeanor with a minimum fine of $2,000 and a minimum term of confinement of 180 days."}, {"text": "For the purposes of this section, each connection, attachment, modification, or act of tampering is a separate offense."}]}, {"name": "31.13 — Manufacture, Distribution, or Advertisement of Multichannel Video or Information Services Device", "items": [{"text": "In this section, \"device,\" \"encrypted, encoded, scrambled, or other nonstandard signal,\" and \"multichannel video or information services provider\" have the meanings assigned by Section 31.12."}, {"text": "This section does not prohibit the manufacture, distribution, advertisement, offer for sale, or use of satellite receiving antennas that are otherwise permitted by state or federal law."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "31.14 — Sale or Lease of Multichannel Video or Information Services Device", "items": [{"text": "In this section, \"device,\" \"encrypted, encoded, scrambled, or other nonstandard signal,\" and \"multichannel video or information services provider\" have the meanings assigned by Section 31.12."}, {"text": "This section does not prohibit the sale or lease of satellite receiving antennas that are otherwise permitted by state or federal law without providing notice to the comptroller."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "31.15 — Possession, Manufacture, or Distribution of Certain Instruments Used to Commit Retail Theft", "items": [{"text": "Repealed by Acts 2011, 82nd Leg., R.S., Ch. 323, Sec. 4, eff. September 1, 2011."}, {"text": "A person commits an offense if, with the intent to use the instrument to commit theft, the person: (1) possesses a shielding or deactivation instrument; or (2) knowingly manufactures, sells, offers for sale, or otherwise distributes a shielding or deactivation instrument."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "31.16 — Organized Retail Theft", "items": [{"text": "In the prosecution of an offense under this section: (1) Sections 31.03(b) and (c) apply to the offense for purposes of determining whether property was unlawfully appropriated from a merchant; and (2) a person is presumed to have acted with the intent to deprive a merchant of retail merchandise if the person: (A) altered or removed a label, universal product code, price tag, or retail theft detector for retail merchandise; or (B) transferred retail merchandise from the merchandise's packaging into other packaging."}, {"text": "It is not a defense to prosecution under this section that: (1) a person who acted in concert with the actor has not been charged, convicted, apprehended, or identified; (2) the offense occurred as a result of a deception or strategy on the part of a law enforcement agency, including the use of an undercover operative or peace officer; (3) the actor was provided by a law enforcement agency with a facility in which to commit the offense or an opportunity to engage in conduct constituting the offense; or (4) the actor was solicited to commit the offense by a peace officer, and the solicitation was of a type that would encourage a person predisposed to commit the offense to actually commit the offense but would not encourage a person not predisposed to commit the offense to actually commit — (see Sec./Art. 31.16 for the complete list)"}, {"text": "An offense under this section is: (1) a Class B misdemeanor if the total value of the property involved in the offense is less than $100; (2) a Class A misdemeanor if the total value of the property involved in the offense is $100 or more but less than $750; (3) a state jail felony if the total value of the property involved in the offense is $750 or more but less than $2,500; (4) a felony of the third degree if the total value of the property involved in the offense is $2,500 or more but less than $30,000; (5) a felony of the second degree if the total value of the property involved in the offense is $30,000 or more but less than $150,000; or (6) a felony of the first degree if the total value of the property involved in the offense is $150,000 or more."}, {"text": "For purposes of enhancement of penalties under Subchapter D, Chapter 12, a person is considered to have been convicted of an offense under this section if the person was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication community supervision, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the person was subsequently discharged from community supervision."}]}, {"name": "31.17 — Unauthorized Acquisition or Transfer of Certain Financial Information", "items": [{"text": "A person commits an offense if the person, knowing that the person is not entitled to obtain or possess that financial information: (1) obtains the financial sight order or payment card information of another by use of an electronic, photographic, visual imaging, recording, or other device capable of accessing, reading, recording, capturing, copying, imaging, scanning, reproducing, or storing in any manner the financial sight order or payment card information; or (2) transfers to a third party information obtained as described by Subdivision (1)."}, {"text": "An offense under Subsection (b)(1) is a Class B misdemeanor. An offense under Subsection (b)(2) is a Class A misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}]}, {"name": "31.18 — Cargo Theft", "items": [{"text": "A person commits an offense if the person: (1) knowingly or intentionally conducts, promotes, or facilitates an activity in which the person receives, possesses, conceals, stores, barters, sells, abandons, or disposes of: (A) stolen cargo; or (B) cargo explicitly represented to the person as being stolen cargo; or (2) is employed as a driver lawfully contracted to transport a specific cargo by vehicle from a known point of origin to a known point of destination and, with the intent to conduct, promote, or facilitate an activity described by Subdivision (1), knowingly or intentionally: (A) fails to deliver the entire cargo to the known point of destination as contracted; or (B) causes the seal to be broken on the vehicle or on an intermodal container containing any part of the cargo."}, {"text": "An offense under this section is: (1) a state jail felony if the total value of the cargo involved in the activity is $1,500 or more but less than $10,000; (2) a felony of the third degree if the total value of the cargo involved in the activity is $10,000 or more but less than $100,000; (3) a felony of the second degree if the total value of the cargo involved in the activity is $100,000 or more but less than $200,000; or (4) a felony of the first degree if the total value of the cargo involved in the activity is $200,000 or more."}, {"text": "For purposes of Subsection (c), the total value of the cargo involved in the activity includes the value of any vehicle stolen or damaged in the course of the same criminal episode as the conduct that is the subject of the prosecution."}, {"text": "An offense described for purposes of punishment by Subsections (c)(1)-(3) is increased to the next higher category of offense if it is shown on the trial of the offense that the person organized, supervised, financed, or managed one or more other persons engaged in an activity described by Subsection (b)."}, {"text": "It is not a defense to prosecution under this section that: (1) the offense occurred as a result of a deception or strategy on the part of a law enforcement agency, including the use of: (A) an undercover operative or peace officer; or (B) a bait vehicle; (2) the actor was provided by a law enforcement agency with a facility in which to commit the offense or with an opportunity to engage in conduct constituting the offense; or (3) the actor was solicited to commit the offense by a peace officer, and the solicitation was of a type that would encourage a person predisposed to commit the offense to actually commit the offense but would not encourage a person not predisposed to commit the offense to actually commit the offense."}]}, {"name": "31.19 — Theft of Petroleum Product or Oil and Gas Equipment", "items": [{"text": "A person commits an offense if the person: (1) unlawfully appropriates a petroleum product with intent to deprive the owner of the petroleum product by: (A) possessing, removing, delivering, receiving, purchasing, selling, moving, concealing, or transporting the petroleum product; or (B) making or causing a connection to be made with, or drilling or tapping or causing a hole to be drilled or tapped in, a pipe, pipeline, or tank used to store or transport a petroleum product; (2) transports to a waste disposal location a petroleum product for which the person cannot identify the petroleum product's initial owner; (3) purchases a petroleum product from a person that is not authorized by the Railroad Commission of Texas to sell the petroleum product; — (see Sec./Art. 31.19 for the complete list)"}, {"text": "A person commits an offense if the person unlawfully appropriates oil and gas equipment with intent to deprive the owner of the oil and gas equipment by possessing, removing, delivering, receiving, purchasing, selling, moving, concealing, or transporting the oil and gas equipment."}, {"text": "Appropriation of a petroleum product or oil and gas equipment is unlawful if it is without the owner's effective consent."}, {"text": "An offense under Subsection (b) is: (1) a felony of the third degree if the total value of the petroleum product appropriated is less than $10,000; (2) a felony of the second degree if the total value of the petroleum product appropriated is $10,000 or more but less than $100,000; or (3) a felony of the first degree if the total value of the petroleum product appropriated is $100,000 or more."}, {"text": "An offense under Subsection (b-1) is: (1) a felony of the third degree if the total value of the oil and gas equipment appropriated is less than $10,000; (2) a felony of the second degree if the total value of the oil and gas equipment appropriated is $10,000 or more but less than $100,000; or (3) a felony of the first degree if the total value of the oil and gas equipment appropriated is $100,000 or more."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law, but not both."}]}, {"name": "31.20 — Mail Theft", "items": [{"text": "A person commits an offense if the person intentionally appropriates mail without the effective consent of the addressee and with the intent to: (1) deprive that addressee of the mail; or (2) steal a negotiable instrument."}, {"text": "If an actor possesses mail from five or more addressees, there is a rebuttable presumption that actor appropriated the mail without the effective consent of the applicable addressee and with the intent to deprive the addressee of the mail."}, {"text": "If an actor possesses mail containing a combined total of five or more negotiable instruments, there is a rebuttable presumption that the actor: (1) appropriated the mail without the effective consent of the applicable addressee and with the intent to steal the negotiable instruments; and (2) committed the offense under this section with the intent to facilitate an offense under Chapter 32."}, {"text": "The presumptions established under Subsections (b-1) and (b-2) do not apply to a business or other commercial entity or governmental agency that is engaged in a business activity or governmental function that does not violate a penal law of this state."}, {"text": "Except as provided by Subsections (d) and (e), an offense under this section is: (1) a Class A misdemeanor if the mail is appropriated from fewer than 10 addressees; (2) a state jail felony if the mail is appropriated from at least 10 but fewer than 30 addressees; or (3) a felony of the third degree if the mail is appropriated from 30 or more addressees."}, {"text": "If it is shown on the trial of an offense under Subsection (b)(1) that the appropriated mail contained an item of identifying information and the actor committed the offense with the intent to facilitate an offense under Section 32.51, the offense is: (1) a state jail felony if the mail is appropriated from fewer than 10 addressees; (2) a felony of the third degree if the mail is appropriated from at least 10 but fewer than 20 addressees; (3) a felony of the second degree if the mail is appropriated from at least 20 but fewer than 50 addressees; or (4) a felony of the first degree if the mail is appropriated from 50 or more addressees."}, {"text": "If it is shown on the trial of an offense under Subsection (b)(2) that the appropriated mail contained a negotiable instrument and the actor committed the offense with the intent to facilitate an offense under Chapter 32, the offense is: (1) a state jail felony if five or fewer negotiable instruments are appropriated; (2) a felony of the third degree if more than 5 but fewer than 10 negotiable instruments are appropriated; (3) a felony of the second degree if at least 10 but fewer than 50 negotiable instruments are appropriated; or (4) a felony of the first degree if 50 or more negotiable instruments are appropriated."}, {"text": "An offense described for purposes of punishment by Subsection (d)(1), (2), or (3) is increased to the next higher category of offense if it is shown on the trial of the offense that at the time of the offense the actor knew or had reason to believe that an addressee from whom the actor appropriated mail was a disabled individual or an elderly individual."}, {"text": "An offense described for purposes of punishment by Subsection (d-1)(1), (2), or (3) is increased to the next higher category of offense if it is shown on the trial of the offense that at the time of the offense the actor knew or had reason to believe that an addressee from whom the actor appropriated a negotiable instrument was a disabled individual or an elderly individual."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "31.21 — Unauthorized Possession of Catalytic Converter", "items": [{"text": "A person is presumed to be authorized to possess a catalytic converter that has been removed from a motor vehicle if the person: (1) is the owner, as defined by Section 601.002, Transportation Code, of the vehicle from which the catalytic converter was removed; or (2) possesses the catalytic converter in the ordinary course of the person's business, including in the ordinary course of business of an entity described by Section 1956.123(1), Occupations Code."}, {"text": "The presumption established under Subsection (b) does not apply to a person described by Subsection (b)(2) who knows that the catalytic converter was unlawfully removed from a motor vehicle or otherwise unlawfully obtained."}, {"text": "Except as provided by Subsection (e), an offense under this section is a state jail felony."}, {"text": "An offense under this section is a felony of the third degree if it is shown on the trial of the offense that the person: (1) has been previously convicted of an offense under this section; (2) in connection with the offense, engaged in conduct constituting conspiracy under Section 15.02 to commit an offense under Section 28.03 or 31.03 with respect to a catalytic converter; or (3) possessed a firearm during the commission of the offense."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "31.22 — Unauthorized Possession of Certain Copper or Brass Material", "items": [{"text": "A person commits an offense if the person: (1) intentionally or knowingly possesses copper or brass material; and (2) is not a person who is authorized under Subsection (c) to possess the copper or brass material."}, {"text": "Subject to Subsection (d), a person is authorized to possess copper or brass material if the person is: (1) the owner of the material; (2) a public utility or common carrier; (3) a telecommunications provider as defined by Section 51.002, Utilities Code; (4) a cable service provider as defined by Section 66.002, Utilities Code; (5) a video service provider as defined by Section 66.002, Utilities Code; (6) a manufacturing, industrial, commercial, retail, or other business that sells the material in the ordinary course of the seller's business; (7) a carrier-for-hire acting in the course and scope of the carrier's business with a bill of lading or a contract verifying transport information; — (see Sec./Art. 31.22 for the complete list)"}, {"text": "Subsection (c) does not apply to a person who knows that the copper or brass material was unlawfully obtained."}, {"text": "Except as provided by Subsection (f), an offense under this section is a state jail felony."}, {"text": "An offense under this section is a felony of the third degree if it is shown on the trial of the offense that: (1) the copper or brass material was unlawfully obtained from a critical infrastructure facility; or (2) the person: (A) has been previously convicted of an offense under this section; (B) has been previously convicted of any of the following offenses with respect to copper or brass material: (i) an offense under Section 28.03 or 31.03; (ii) conspiracy under Section 15.02 to commit an offense under Section 28.03 or 31.03; or (iii) an offense under Chapter 71; (C) in connection with the offense, engaged in conduct with respect to copper or brass material constituting: (i) conspiracy under Section 15.02 to commit an offense under Section 28.03, Section 31.03, or Chapter 71; — (see Sec./Art. 31.22 for the complete list)"}, {"text": "If conduct constituting an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "31.23 — Real Property Theft", "items": [{"text": "A person commits an offense if the person: (1) brings about or attempts to bring about a transfer or purported transfer of real property or title to real property or a nonpossessory interest in real property, to any transferee or intended transferee: (A) without the effective consent of the owner of the real property or the nonpossessory interest in real property; and (B) with the intent to deprive the owner of the real property or the nonpossessory interest in the real property; or (2) sells or otherwise transfers or encumbers, or attempts to sell or otherwise transfer or encumber, real property or title to real property or a nonpossessory interest in real property to or with respect to a person in exchange for a benefit from any person: — (see Sec./Art. 31.23 for the complete list)"}, {"text": "Except as provided by Subsection (e), an offense under Subsection (b)(1) is: (1) a felony of the second degree if it is shown on the trial of the offense that the market value of the real property is less than $300,000; or (2) a felony of the first degree if it is shown on the trial of the offense that the market value of the real property is $300,000 or more."}, {"text": "Except as provided by Subsection (e), an offense under Subsection (b)(2) is: (1) a felony of the third degree if it is shown on the trial of the offense that the value of the benefit received is less than $30,000; (2) a felony of the second degree if it is shown on the trial of the offense that the value of the benefit received is $30,000 or more but less than $150,000; or (3) a felony of the first degree if it is shown on the trial of the offense that the value of the benefit received is $150,000 or more."}, {"text": "An offense described for purposes of punishment by Subsections (c) and (d) is increased to the next higher category of offense if it is shown on the trial of the offense that at the time of the offense: (1) the owner of the real property or nonpossessory interest in real property or the owner of the benefit was: (A) an elderly individual; (B) a disabled individual; or (C) a nonprofit organization; or (2) the real property was subject to a property tax exemption under Subchapter B, Chapter 11, Tax Code, as an individual's residence homestead as defined by Section 11.13(j), Tax Code."}, {"text": "For purposes of Subsection (c), the market value of real property is the market value of that property for the tax year in which the offense was committed, as indicated on the appraisal roll for the appraisal district in which the property is located."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(12, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_08_theft_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

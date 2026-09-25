@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Fraud I Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.32 (part 1 of 2) &middot; Supplemental Practice</p>
+    <h1>Fraud I &mdash; Forgery, Fiscal Instruments &amp; Deceptive Practices Sorting Game</h1>
+    <p class="sub">The first of two Chapter 32 (Fraud) games &mdash; Chapter 32 alone runs 36 sections, so it's split in half. Eighteen boxes: definitions, value and aggregation, forgery, criminal simulation, trademark counterfeiting, stealing/receiving a stolen check, credit and debit card abuse, fraudulent use/possession of card information, false statement to obtain property or credit, hindering secured creditors, fraudulent transfer of a motor vehicle, credit card transaction record laundering, issuance of a bad check, deceptive business practices, commercial bribery, rigging a publicly exhibited contest, and illegal recruitment of an athlete. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="18" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="9" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.32 (Fraud), sections 32.01&ndash;32.441 &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "32.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Financial institution\" means a bank, trust company, insurance company, credit union, building and loan association, savings and loan association, investment trust, investment company, or any other organization held out to the public as a place for deposit of funds or medium of savings or collective investment. (2) \"Property\" means: (A) real property; (B) tangible or intangible personal property including anything severed from land; or (C) a document, including money, that represents or embodies anything of value. (3) \"Service\" includes: (A) labor and professional service; (B) telecommunication, public utility, and transportation service; (C) lodging, restaurant service, and entertainment; and (D) the supply of a motor vehicle or other property for use. — (see Sec./Art. 32.01 for the complete list)"}]}, {"name": "32.02 — Value", "items": [{"text": "The value of documents, other than those having a readily ascertainable market value, is: (1) the amount due and collectible at maturity less any part that has been satisfied, if the document constitutes evidence of a debt; or (2) the greatest amount of economic loss that the owner might reasonably suffer by virtue of loss of the document, if the document is other than evidence of a debt."}, {"text": "If property or service has value that cannot be reasonably ascertained by the criteria set forth in Subsections (a) and (b), the property or service is deemed to have a value of $750 or more but less than $2,500."}, {"text": "If the actor proves by a preponderance of the evidence that he gave consideration for or had a legal interest in the property or service stolen, the amount of the consideration or the value of the interest so proven shall be deducted from the value of the property or service ascertained under Subsection (a), (b), or (c) to determine value for purposes of this chapter."}]}, {"name": "32.03 — Aggregation of Amounts Involved in Fraud", "items": [{"text": "When amounts are obtained in violation of this chapter pursuant to one scheme or continuing course of conduct, whether from the same or several sources, the conduct may be considered as one offense and the amounts aggregated in determining the grade of offense. Acts 1973, 63rd Leg., p. 883, ch. 399, Sec. 1, eff. Jan. 1, 1974. Amended by Acts 1993, 73rd Leg., ch. 900, Sec. 1.01, eff. Sept. 1, 1994. SUBCHAPTER B. FORGERY"}]}, {"name": "32.21 — Forgery", "items": [{"text": "A person commits an offense if he forges a writing with intent to defraud or harm another."}, {"text": "Except as provided by Subsections (d), (e), and (e-1), an offense under this section is a state jail felony."}, {"text": "Subject to Subsection (e-1), an offense under this section is a felony of the third degree if the writing is or purports to be a will, codicil, deed, deed of trust, mortgage, security instrument, security agreement, credit card, check, authorization to debit an account at a financial institution, or similar sight order for payment of money, contract, release, or other commercial instrument."}, {"text": "Subject to Subsection (e-1), an offense under this section is a felony of the second degree if the writing is or purports to be: (1) part of an issue of money, securities, postage or revenue stamps; (2) a government record listed in Section 37.01(2)(C); or (3) other instruments issued by a state or national government or by a subdivision of either, or part of an issue of stock, bonds, or other instruments representing interests in or claims against another person."}, {"text": "If it is shown on the trial of an offense under this section that the actor engaged in the conduct to obtain or attempt to obtain a property or service, an offense under this section is: (1) a Class B misdemeanor if the value of the property or service is less than $100; (2) a Class A misdemeanor if the value of the property or service is $100 or more but less than $750; (3) a state jail felony if the value of the property or service is $750 or more but less than $2,500; (4) a felony of the third degree if the value of the property or service is $2,500 or more but less than $30,000; (5) a felony of the second degree if the value of the property or service is $30,000 or more but less than $150,000; — (see Sec./Art. 32.21 for the complete list)"}, {"text": "Notwithstanding any other provision of this section, an offense under this section, other than an offense described for purposes of punishment by Subsection (e-1)(6), is increased to the next higher category of offense if it is shown on the trial of the offense that the offense was committed against an elderly individual as defined by Section 22.04."}, {"text": "A person is presumed to intend to defraud or harm another if the person acts with respect to two or more writings of the same type and if each writing is a government record listed in Section 37.01(2)(C)."}, {"text": "For purposes of Subsection (e-1), it is presumed that a person in possession of money that is forged within the meaning of Subsection (a)(1)(A) intended to obtain a property or service of a value equal to the total purported value of the forged money."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}]}, {"name": "32.22 — Criminal Simulation", "items": [{"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "32.23 — Trademark Counterfeiting", "items": [{"text": "A person commits an offense if the person intentionally manufactures, displays, advertises, distributes, offers for sale, sells, or possesses with intent to sell or distribute a counterfeit mark or an item or service that: (1) bears or is identified by a counterfeit mark; or (2) the person knows or should have known bears or is identified by a counterfeit mark."}, {"text": "A state or federal certificate of registration of intellectual property is prima facie evidence of the facts stated in the certificate."}, {"text": "For the purposes of Subsection (e), when items or services are the subject of counterfeiting in violation of this section pursuant to one scheme or continuing course of conduct, the conduct may be considered as one offense and the retail value of the items or services aggregated in determining the grade of offense."}, {"text": "An offense under this section is a: (1) Class C misdemeanor if the retail value of the item or service is less than $100; (2) Class B misdemeanor if the retail value of the item or service is $100 or more but less than $750; (3) Class A misdemeanor if the retail value of the item or service is $750 or more but less than $2,500; (4) state jail felony if the retail value of the item or service is $2,500 or more but less than $30,000; (5) felony of the third degree if the retail value of the item or service is $30,000 or more but less than $150,000; (6) felony of the second degree if the retail value of the item or service is $150,000 or more but less than $300,000; or (7) felony of the first degree if the retail value of the item or service is $300,000 or more."}]}, {"name": "32.24 — Stealing or Receiving Stolen Check or Similar Sight Order", "items": [{"text": "An offense under this section is a state jail felony. SUBCHAPTER C. CREDIT"}]}, {"name": "32.31 — Credit Card or Debit Card Abuse", "items": [{"text": "A person commits an offense if: (1) with intent to obtain a benefit fraudulently, he presents or uses a credit card or debit card with knowledge that: (A) the card, whether or not expired, has not been issued to him and is not used with the effective consent of the cardholder; or (B) the card has expired or has been revoked or cancelled; (2) with intent to obtain a benefit, he uses a fictitious credit card or debit card or the pretended number or description of a fictitious card; (3) he receives a benefit that he knows has been obtained in violation of this section; (4) he steals a credit card or debit card or, with knowledge that it has been stolen, receives a credit card or debit card with intent to use it, to sell it, or to transfer it to a person other than the issuer or the — (see Sec./Art. 32.31 for the complete list)"}, {"text": "It is presumed that a person who used a revoked, cancelled, or expired credit card or debit card had knowledge that the card had been revoked, cancelled, or expired if he had received notice of revocation, cancellation, or expiration from the issuer. For purposes of this section, notice may be either notice given orally in person or by telephone, or in writing by mail or by telegram. If written notice was sent by registered or certified mail with return receipt requested, or by telegram with report of delivery requested, addressed to the cardholder at the last address shown by the records of the issuer, it is presumed that the notice was received by the cardholder no later than five days after sent."}, {"text": "An offense under this section is a state jail felony, except that the offense is a felony of the third degree if it is shown on the trial of the offense that the offense was committed against an elderly individual as defined by Section 22.04."}]}, {"name": "32.315 — Fraudulent Use or Possession of Credit Card or Debit Card Information", "items": [{"text": "A person commits an offense if the person, with the intent to harm or defraud another, obtains, possesses, transfers, or uses: (1) a counterfeit credit card or debit card; (2) the number and expiration date of a credit card or debit card without the consent of the account holder; or (3) the data stored on the digital imprint of a credit card or debit card without the consent of the account holder."}, {"text": "If an actor possessed five or more of an item described by Subsection (b)(2) or (3), a rebuttable presumption exists that the actor possessed each item without the consent of the account holder."}, {"text": "The presumption established under Subsection (c) does not apply to a business or other commercial entity or a government agency that is engaged in a business activity or governmental function that does not violate a penal law of this state."}, {"text": "An offense under this section is: (1) a state jail felony if the number of items obtained, possessed, transferred, or used is less than five; (2) a felony of the third degree if the number of items obtained, possessed, transferred, or used is five or more but less than 10; (3) a felony of the second degree if the number of items obtained, possessed, transferred, or used is 10 or more but less than 50; or (4) a felony of the first degree if the number of items obtained, possessed, transferred, or used is 50 or more."}, {"text": "If a court orders a defendant convicted of an offense under this section to make restitution to a victim of the offense, the court may order the defendant to reimburse the victim for lost income or other expenses, other than attorney's fees, incurred as a result of the offense."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "32.32 — False Statement to Obtain Property or Credit or in the Provision of Certain Services", "items": [{"text": "A person commits an offense if he intentionally or knowingly makes a materially false or misleading written statement to obtain property or credit, including a mortgage loan."}, {"text": "A person commits an offense if the person intentionally or knowingly makes a materially false or misleading written statement in providing an appraisal of real property for compensation."}, {"text": "An offense under this section is: (1) a Class C misdemeanor if the value of the property or the amount of credit is less than $100; (2) a Class B misdemeanor if the value of the property or the amount of credit is $100 or more but less than $750; (3) a Class A misdemeanor if the value of the property or the amount of credit is $750 or more but less than $2,500; (4) a state jail felony if the value of the property or the amount of credit is $2,500 or more but less than $30,000; (5) a felony of the third degree if the value of the property or the amount of credit is $30,000 or more but less than $150,000; (6) a felony of the second degree if the value of the property or the amount of credit is $150,000 or more but less than $300,000; — (see Sec./Art. 32.32 for the complete list)"}, {"text": "The following agencies shall assist a prosecuting attorney of the United States or of a county or judicial district of this state, a county or state law enforcement agency of this state, or a federal law enforcement agency in the investigation of an offense under this section involving a mortgage loan: (1) the office of the attorney general; (2) the Department of Public Safety; (3) the Texas Department of Insurance; (4) the Office of Consumer Credit Commissioner; (5) the Texas Department of Banking; (6) the credit union department; (7) the Department of Savings and Mortgage Lending; (8) the Texas Real Estate Commission; (9) the Texas Appraiser Licensing and Certification Board; and (10) the Texas Department of Housing and Community Affairs."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves a mortgage loan."}]}, {"name": "32.33 — Hindering Secured Creditors", "items": [{"text": "A person who has signed a security agreement creating a security interest in property or a mortgage or deed of trust creating a lien on property commits an offense if, with intent to hinder enforcement of that interest or lien, he destroys, removes, conceals, encumbers, or otherwise harms or reduces the value of the property."}, {"text": "For purposes of this section, a person is presumed to have intended to hinder enforcement of the security interest or lien if, when any part of the debt secured by the security interest or lien was due, he failed: (1) to pay the part then due; and (2) if the secured party had made demand, to deliver possession of the secured property to the secured party."}, {"text": "An offense under Subsection (b) is a: (1) Class C misdemeanor if the value of the property destroyed, removed, concealed, encumbered, or otherwise harmed or reduced in value is less than $100; (2) Class B misdemeanor if the value of the property destroyed, removed, concealed, encumbered, or otherwise harmed or reduced in value is $100 or more but less than $750; (3) Class A misdemeanor if the value of the property destroyed, removed, concealed, encumbered, or otherwise harmed or reduced in value is $750 or more but less than $2,500; (4) state jail felony if the value of the property destroyed, removed, concealed, encumbered, or otherwise harmed or reduced in value is $2,500 or more but less than $30,000; — (see Sec./Art. 32.33 for the complete list)"}, {"text": "A person who is a debtor under a security agreement, and who does not have a right to sell or dispose of the secured property or is required to account to the secured party for the proceeds of a permitted sale or disposition, commits an offense if the person sells or otherwise disposes of the secured property, or does not account to the secured party for the proceeds of a sale or other disposition as required, with intent to appropriate (as defined in Chapter 31) the proceeds or value of the secured property. A person is presumed to have intended to appropriate proceeds if the person does not deliver the proceeds to the secured party or account to the secured party for the proceeds before the 11th day after the day that the secured party makes a lawful demand for the proceeds or account. — (see Sec./Art. 32.33 for the complete list)"}]}, {"name": "32.34 — Fraudulent Transfer of a Motor Vehicle", "items": [{"text": "A person commits an offense if the person acquires, accepts possession of, or exercises control over the motor vehicle of another under a written or oral agreement to arrange for the transfer of the vehicle to a third party and: (1) knowing the vehicle is subject to a security interest, lease, or lien, the person transfers the vehicle to a third party without first obtaining written authorization from the vehicle's secured creditor, lessor, or lienholder; (2) intending to defraud or harm the vehicle's owner, the person transfers the vehicle to a third party; (3) intending to defraud or harm the vehicle's owner, the person disposes of the vehicle in a manner other than by transfer to a third party; — (see Sec./Art. 32.34 for the complete list)"}, {"text": "For the purposes of Subsection (b)(2), the actor is presumed to have intended to defraud or harm the motor vehicle's owner if the actor does not take reasonable steps to determine whether or not the third party is financially able to pay for the vehicle."}, {"text": "It is a defense to prosecution under Subsection (b)(1) that the entire indebtedness secured by or owed under the security interest, lease, or lien is paid or satisfied in full not later than the 30th day after the date that the transfer was made."}, {"text": "It is not a defense to prosecution under Subsection (b)(1) that the motor vehicle's owner has violated a contract creating a security interest, lease, or lien in the motor vehicle."}, {"text": "An offense under Subsection (b)(1), (b)(2), or (b)(3) is: (1) a state jail felony if the value of the motor vehicle is less than $30,000; (2) a felony of the third degree if the value of the motor vehicle is $30,000 or more but less than $150,000; (3) a felony of the second degree if the value of the motor vehicle is $150,000 or more but less than $300,000; or (4) a felony of the first degree if the value of the motor vehicle is $300,000 or more."}, {"text": "An offense under Subsection (b)(4) is a Class A misdemeanor."}]}, {"name": "32.35 — Credit Card Transaction Record Laundering", "items": [{"text": "A person commits an offense if the person is an authorized vendor who, with intent to defraud the creditor or cardholder, presents to a creditor, for payment, a credit card transaction record of a sale that was not made by the authorized vendor or the vendor's agent."}, {"text": "A person commits an offense if, without the creditor's authorization, the person employs, solicits, or otherwise causes an authorized vendor or the vendor's agent to present to a creditor, for payment, a credit card transaction record of a sale that was not made by the authorized vendor or the vendor's agent."}, {"text": "It is presumed that a person is not the agent of an authorized vendor if a fee is paid or offered to be paid by the person to the authorized vendor in connection with the vendor's presentment to a creditor of a credit card transaction record."}, {"text": "An offense under this section is a: (1) Class C misdemeanor if the amount of the record of a sale is less than $100; (2) Class B misdemeanor if the amount of the record of a sale is $100 or more but less than $750; (3) Class A misdemeanor if the amount of the record of a sale is $750 or more but less than $2,500; (4) state jail felony if the amount of the record of a sale is $2,500 or more but less than $30,000; (5) felony of the third degree if the amount of the record of a sale is $30,000 or more but less than $150,000; (6) felony of the second degree if the amount of the record of a sale is $150,000 or more but less than $300,000; or (7) felony of the first degree if the amount of the record of a sale is $300,000 or more. SUBCHAPTER D. OTHER DECEPTIVE PRACTICES"}]}, {"name": "32.41 — Issuance of Bad Check or Similar Sight Order", "items": [{"text": "This section does not prevent the prosecution from establishing the required knowledge by direct evidence; however, for purposes of this section, the issuer's knowledge of insufficient funds is presumed (except in the case of a postdated check or order) if: (1) he had no account with the bank or other drawee at the time he issued the check or order; or (2) payment was refused by the bank or other drawee for lack of funds or insufficient funds on presentation within 30 days after issue and the issuer failed to pay the holder in full within 10 days after receiving notice of that refusal."}, {"text": "Notice for purposes of Subsection (b)(2) may be actual notice or notice in writing that: (1) is sent by: (A) first class mail, evidenced by an affidavit of service; or (B) registered or certified mail with return receipt requested; (2) is addressed to the issuer at the issuer's address shown on: (A) the check or order; (B) the records of the bank or other drawee; or (C) the records of the person to whom the check or order has been issued or passed; and (3) contains the following statement: \"This is a demand for payment in full for a check or order not paid because of a lack of funds or insufficient funds. If you fail to make payment in full within 10 days after the date of receipt of this notice, the failure to pay creates a presumption for committing an offense, and this matter may be — (see Sec./Art. 32.41 for the complete list)"}, {"text": "If notice is given in accordance with Subsection (c), it is presumed that the notice was received no later than five days after it was sent."}, {"text": "A person charged with an offense under this section may make restitution for the bad checks or sight orders. Restitution shall be made through the prosecutor's office if collection and processing were initiated through that office. In other cases restitution may be, with the approval of the court in which the offense is filed: (1) made through the court; or (2) collected by a law enforcement agency if a peace officer of that agency executes a warrant against the person charged with the offense."}, {"text": "Except as otherwise provided by this subsection, an offense under this section is a Class C misdemeanor. If the check or similar sight order that was issued or passed was for a child support payment the obligation for which is established under a court order, the offense is a Class B misdemeanor."}, {"text": "An offense under this section is not a lesser included offense of an offense under Section 31.03 or 31.04."}]}, {"name": "32.42 — Deceptive Business Practices", "items": [{"text": "A person commits an offense if in the course of business he intentionally, knowingly, recklessly, or with criminal negligence commits one or more of the following deceptive business practices: (1) using, selling, or possessing for use or sale a false weight or measure, or any other device for falsely determining or recording any quality or quantity; (2) selling less than the represented quantity of a property or service; (3) taking more than the represented quantity of property or service when as a buyer the actor furnishes the weight or measure; (4) selling an adulterated or mislabeled commodity; (5) passing off property or service as that of another; — (see Sec./Art. 32.42 for the complete list)"}, {"text": "An offense under Subsections (b)(1), (b)(2), (b)(3), (b)(4), (b)(5), and (b)(6) is: (1) a Class C misdemeanor if the actor commits an offense with criminal negligence and if he has not previously been convicted of a deceptive business practice; or (2) a Class A misdemeanor if the actor commits an offense intentionally, knowingly, recklessly or if he has been previously convicted of a Class B or C misdemeanor under this section."}, {"text": "An offense under Subsections (b)(7), (b)(8), (b)(9), (b)(10), (b)(11), and (b)(12) is a Class A misdemeanor."}]}, {"name": "32.43 — Commercial Bribery", "items": [{"text": "A person who is a fiduciary commits an offense if, without the consent of his beneficiary, he intentionally or knowingly solicits, accepts, or agrees to accept any benefit from another person on agreement or understanding that the benefit will influence the conduct of the fiduciary in relation to the affairs of his beneficiary."}, {"text": "A person commits an offense if he offers, confers, or agrees to confer any benefit the acceptance of which is an offense under Subsection (b)."}, {"text": "An offense under this section is a state jail felony."}, {"text": "In lieu of a fine that is authorized by Subsection (d), and in addition to the imprisonment that is authorized by that subsection, if the court finds that an individual who is a fiduciary gained a benefit through the commission of an offense under Subsection (b), the court may sentence the individual to pay a fine in an amount fixed by the court, not to exceed double the value of the benefit gained. This subsection does not affect the application of Section 12.51(c) to an offense under this section committed by a corporation, an association, a limited liability company, or another business entity, as defined by Section 7.21."}]}, {"name": "32.44 — Rigging Publicly Exhibited Contest", "items": [{"text": "A person commits an offense if he intentionally or knowingly solicits, accepts, or agrees to accept any benefit the conferring of which is an offense under Subsection (a)."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "32.441 — Illegal Recruitment of an Athlete", "items": [{"text": "A person commits an offense if he offers, confers, or agrees to confer any benefit the acceptance of which is an offense under Subsection (a)."}, {"text": "It is an exception to prosecution under this section that the person offering, conferring, or agreeing to confer a benefit and the person soliciting, accepting, or agreeing to accept a benefit are related within the second degree of consanguinity or affinity, as determined under Chapter 573, Government Code."}, {"text": "It is an exception to prosecution under Subsection (a) that, not later than the 60th day after the date the person accepted or agreed to accept a benefit, the person contacted a law enforcement agency and furnished testimony or evidence about the offense."}, {"text": "An offense under this section is a: (1) Class C misdemeanor if the value of the benefit is less than $100; (2) Class B misdemeanor if the value of the benefit is $100 or more but less than $750; (3) Class A misdemeanor if the value of the benefit is $750 or more but less than $2,500; (4) state jail felony if the value of the benefit is $2,500 or more but less than $30,000; (5) felony of the third degree if the value of the benefit is $30,000 or more but less than $150,000; (6) felony of the second degree if the value of the benefit is $150,000 or more but less than $300,000; or (7) felony of the first degree if the value of the benefit is $300,000 or more."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(9, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_09_fraud_i_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Fraud II Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.32 (part 2 of 2) &middot; Supplemental Practice</p>
+    <h1>Fraud II &mdash; Fiduciary, Identity &amp; Real Property Fraud Sorting Game</h1>
+    <p class="sub">The second of two Chapter 32 (Fraud) games. Eighteen boxes: misapplication of fiduciary property, fraudulent securing of document execution, fraudulent destruction/removal/concealment of a writing, simulating legal process, refusal to execute release of a fraudulent lien, deceptive marketing of an academic product, fraudulent use of identifying information, fraudulent/fictitious degrees, exploitation of a child/elderly/disabled individual, fraudulent military records, financial abuse of an elderly individual, and &sect;32.56 &mdash; which the legislature has enacted four separate times under the same number for four unrelated offenses (gift card fraud, mail receptacle keys, fraudulent real-property conveyance documents, and AI-generated-media/phishing financial abuse), each kept here as its own box &mdash; plus fraudulent residential leasing, real property fraud, and malicious solicitation of a disaster victim. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="18" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="7" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.32 (Fraud), sections 32.45&ndash;32.61 &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "32.45 — Misapplication of Fiduciary Property or Property of Financial Institution", "items": [{"text": "A person commits an offense if he intentionally, knowingly, or recklessly misapplies property he holds as a fiduciary or property of a financial institution in a manner that involves substantial risk of loss to the owner of the property or to a person for whose benefit the property is held."}, {"text": "An offense under this section is: (1) a Class C misdemeanor if the value of the property misapplied is less than $100; (2) a Class B misdemeanor if the value of the property misapplied is $100 or more but less than $750; (3) a Class A misdemeanor if the value of the property misapplied is $750 or more but less than $2,500; (4) a state jail felony if the value of the property misapplied is $2,500 or more but less than $30,000; (5) a felony of the third degree if the value of the property misapplied is $30,000 or more but less than $150,000; (6) a felony of the second degree if the value of the property misapplied is $150,000 or more but less than $300,000; or (7) a felony of the first degree if the value of the property misapplied is $300,000 or more."}, {"text": "An offense described for purposes of punishment by Subsections (c)(1)-(6) is increased to the next higher category of offense if it is shown on the trial of the offense that the offense was committed against an elderly individual as defined by Section 22.04."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves the state Medicaid program."}]}, {"name": "32.46 — Fraudulent Securing of Document Execution", "items": [{"text": "An offense under Subsection (a)(1) is a: (1) Class C misdemeanor if the value of the property, service, or pecuniary interest is less than $100; (2) Class B misdemeanor if the value of the property, service, or pecuniary interest is $100 or more but less than $750; (3) Class A misdemeanor if the value of the property, service, or pecuniary interest is $750 or more but less than $2,500; (4) state jail felony if the value of the property, service, or pecuniary interest is $2,500 or more but less than $30,000; (5) felony of the third degree if the value of the property, service, or pecuniary interest is $30,000 or more but less than $150,000; (6) felony of the second degree if the value of the property, service, or pecuniary interest is $150,000 or more but less than $300,000; — (see Sec./Art. 32.46 for the complete list)"}, {"text": "An offense under Subsection (a)(2) is a state jail felony."}, {"text": "An offense described for purposes of punishment by Subsections (b)(1)-(6) and (c) is increased to the next higher category of offense if it is shown on the trial of the offense that the offense was committed against an elderly individual as defined by Section 22.04 or involves the state Medicaid program."}, {"text": "In this section: (1) \"Deception\" has the meaning assigned by Section 31.01. (2) \"Document\" includes electronically stored data or other information that is retrievable in a readable, perceivable form. (3) \"Effective consent\" includes consent by a person legally authorized to act for the owner. Consent is not effective if: (A) induced by deception or coercion; (B) given by a person who by reason of youth, mental disease or defect, or intoxication is known by the actor to be unable to make reasonable property dispositions; or (C) given by a person who by reason of advanced age is known by the actor to have a diminished capacity to make informed and rational decisions about the reasonable disposition of property."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves the state Medicaid program."}]}, {"name": "32.47 — Fraudulent Destruction, Removal, or Concealment of Writing", "items": [{"text": "For purposes of this section, \"writing\" includes: (1) printing or any other method of recording information; (2) money, coins, tokens, stamps, seals, credit cards, badges, trademarks; (3) symbols of value, right, privilege, or identification; and (4) universal product codes, labels, price tags, or markings on goods."}, {"text": "Except as provided by Subsection (d), an offense under this section is a Class A misdemeanor, provided that: (1) the writing is not attached to tangible property to indicate the price for the sale of that property; and (2) the actor did not engage in the conduct described by Subsection (a) with respect to that writing for the purpose of obtaining the property for a lesser price indicated by a separate writing."}, {"text": "An offense under this section is a state jail felony if the writing: (1) is a will or codicil of another, whether or not the maker is alive or dead and whether or not it has been admitted to probate; or (2) is a deed, mortgage, deed of trust, security instrument, security agreement, or other writing for which the law provides public recording or filing, whether or not the writing has been acknowledged."}, {"text": "If at the time of the offense the writing was attached to tangible property to indicate the price for the sale of that property and the actor engaged in the conduct described by Subsection (a) with respect to that writing for the purpose of obtaining the property for a lesser price indicated by a separate writing, an offense under this section is: (1) a Class C misdemeanor if the difference between the impaired writing and the lesser price indicated by the other writing is less than $100; (2) a Class B misdemeanor if the difference between the impaired writing and the lesser price indicated by the other writing is $100 or more but less than $750; — (see Sec./Art. 32.47 for the complete list)"}]}, {"name": "32.48 — Simulating Legal Process", "items": [{"text": "Proof that the document was mailed to any person with the intent that it be forwarded to the intended recipient is a sufficient showing that the document was delivered."}, {"text": "It is not a defense to prosecution under this section that the simulating document: (1) states that it is not legal process; or (2) purports to have been issued or authorized by a person or entity who did not have lawful authority to issue or authorize the document."}, {"text": "If it is shown on the trial of an offense under this section that the simulating document was filed with, presented to, or delivered to a clerk of a court or an employee of a clerk of a court created or established under the constitution or laws of this state, there is a rebuttable presumption that the document was delivered with the intent described by Subsection (a)."}, {"text": "Except as provided by Subsection (f), an offense under this section is a Class A misdemeanor."}, {"text": "If it is shown on the trial of an offense under this section that the defendant has previously been convicted of a violation of this section, the offense is a state jail felony."}]}, {"name": "32.49 — Refusal to Execute Release of Fraudulent Lien or Claim", "items": [{"text": "A person who fails to execute a release of the purported lien or claim within the period prescribed by Subsection (a)(2) is presumed to have had the intent to harm or defraud another."}, {"text": "An offense under this section is a Class A misdemeanor, except that the offense is a felony of the third degree if the owner of the real or personal property subject to the fraudulent lien or claim is a person the actor knows is a public servant."}]}, {"name": "32.50 — Deceptive Preparation and Marketing of Academic Product", "items": [{"text": "A person commits an offense if, with intent to make a profit, the person prepares, sells, offers or advertises for sale, or delivers to another person an academic product when the person knows, or should reasonably have known, that a person intends to submit or use the academic product to satisfy an academic requirement of a person other than the person who prepared the product."}, {"text": "A person commits an offense if, with intent to induce another person to enter into an agreement or obligation to obtain or have prepared an academic product, the person knowingly makes or disseminates a written or oral statement that the person will prepare or cause to be prepared an academic product to be sold for use in satisfying an academic requirement of a person other than the person who prepared the product."}, {"text": "It is a defense to prosecution under this section that the actor's conduct consisted solely of action taken as an employee of an institution of higher education in providing instruction, counseling, or tutoring in research or writing to students of the institution."}, {"text": "It is a defense to prosecution under this section that the actor's conduct consisted solely of offering or providing tutorial or editing assistance to another person in connection with the other person's preparation of an academic product to satisfy the other person's academic requirement, and the actor does not offer or provide substantial preparation, writing, or research in the production of the academic product."}, {"text": "It is a defense to prosecution under this section that the actor's conduct consisted solely of typing, transcribing, or reproducing a manuscript for a fee, or of offering to do so."}, {"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "32.51 — Fraudulent Use or Possession of Identifying Information", "items": [{"text": "A person commits an offense if the person, with the intent to harm or defraud another, obtains, possesses, transfers, or uses an item of: (1) identifying information of another person without the other person's consent or effective consent; (2) information concerning a deceased natural person, including a stillborn infant or fetus, that would be identifying information of that person were that person alive, if the item of information is obtained, possessed, transferred, or used without legal authorization; or (3) identifying information of a child younger than 18 years of age."}, {"text": "For the purposes of Subsection (b), the actor is presumed to have the intent to harm or defraud another if the actor possesses: (1) the identifying information of three or more other persons; (2) information described by Subsection (b)(2) concerning three or more deceased persons; or (3) information described by Subdivision (1) or (2) concerning three or more persons or deceased persons."}, {"text": "The presumption established under Subsection (b-1) does not apply to a business or other commercial entity or a government agency that is engaged in a business activity or governmental function that does not violate a penal law of this state."}, {"text": "An offense under this section is: (1) a state jail felony if the number of items obtained, possessed, transferred, or used is less than five; (2) a felony of the third degree if the number of items obtained, possessed, transferred, or used is five or more but less than 10; (3) a felony of the second degree if the number of items obtained, possessed, transferred, or used is 10 or more but less than 50; or (4) a felony of the first degree if the number of items obtained, possessed, transferred, or used is 50 or more."}, {"text": "An offense described for purposes of punishment by Subsections (c)(1)-(3) is increased to the next higher category of offense if it is shown on the trial of the offense that: (1) the offense was committed against an elderly individual as defined by Section 22.04; or (2) the actor fraudulently used identifying information with the intent to facilitate an offense under Article 62.102, Code of Criminal Procedure."}, {"text": "If a court orders a defendant convicted of an offense under this section to make restitution to the victim of the offense, the court may order the defendant to reimburse the victim for lost income or other expenses, other than attorney's fees, incurred as a result of the offense."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "32.52 — Fraudulent, Substandard, or Fictitious Degree", "items": [{"text": "A person commits an offense if the person: (1) uses or claims to hold a postsecondary degree that the person knows: (A) is a fraudulent or substandard degree; (B) is fictitious or has otherwise not been granted to the person; or (C) has been revoked; and (2) uses or claims to hold that degree: (A) in a written or oral advertisement or other promotion of a business; or (B) with the intent to: (i) obtain employment; (ii) obtain a license or certificate to practice a trade, profession, or occupation; (iii) obtain a promotion, a compensation or other benefit, or an increase in compensation or other benefit, in employment or in the practice of a trade, profession, or occupation; (iv) obtain admission to an educational program in this state; — (see Sec./Art. 32.52 for the complete list)"}, {"text": "An offense under this section is a Class B misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}]}, {"name": "32.53 — Exploitation of Child, Elderly Individual, or Disabled Individual", "items": [{"text": "A person commits an offense if the person intentionally, knowingly, or recklessly causes the exploitation of a child, elderly individual, or disabled individual."}, {"text": "An offense under this section is a felony of the third degree."}, {"text": "A person who is subject to prosecution under both this section and another section of this code may be prosecuted under either or both sections. Section 3.04 does not apply to criminal episodes prosecuted under both this section and another section of this code. If a criminal episode is prosecuted under both this section and another section of this code and sentences are assessed for convictions under both sections, the sentences shall run concurrently."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves the Medicaid program."}]}, {"name": "32.54 — Fraudulent or Fictitious Military Record", "items": [{"text": "A person commits an offense if the person: (1) uses or claims to hold a military record that the person knows: (A) is fraudulent; (B) is fictitious or has otherwise not been granted or assigned to the person; or (C) has been revoked; and (2) uses or claims to hold that military record: (A) in a written or oral advertisement or other promotion of a business; or (B) with the intent to: (i) obtain priority in receiving services or resources under Subchapter G, Chapter 302, Labor Code; (ii) qualify for a military employment preference under Chapter 657, Government Code; (iii) obtain a license or certificate to practice a trade, profession, or occupation; — (see Sec./Art. 32.54 for the complete list)"}, {"text": "An offense under this section is a Class B misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}]}, {"name": "32.55 — Financial Abuse of Elderly Individual", "items": [{"text": "For purposes of Subsection (a)(3), a person has a relationship of confidence or trust with another person if the person: (1) is a parent, spouse, adult child, or other relative by blood or marriage of the other person; (2) is a joint tenant or tenant in common with the other person; (3) has a legal or fiduciary relationship with the other person; (4) is a financial planner or investment professional who provides services to the other person; or (5) is a paid or unpaid caregiver of the other person."}, {"text": "A person commits an offense if the person knowingly engages in the financial abuse of an elderly individual."}, {"text": "An offense under this section is: (1) a Class B misdemeanor if the value of the property taken, appropriated, obtained, retained, or used is less than $100; (2) a Class A misdemeanor if the value of the property taken, appropriated, obtained, retained, or used is $100 or more but less than $750; (3) a state jail felony if the value of the property taken, appropriated, obtained, retained, or used is $750 or more but less than $2,500; (4) a felony of the third degree if the value of the property taken, appropriated, obtained, retained, or used is $2,500 or more but less than $30,000; (5) a felony of the second degree if the value of the property taken, appropriated, obtained, retained, or used is $30,000 or more but less than $150,000; — (see Sec./Art. 32.55 for the complete list)"}, {"text": "A person who is subject to prosecution under both this section and another section of this code may be prosecuted under either section or both sections."}, {"text": "There is a rebuttable presumption that any transfer, appropriation, or use of an elderly individual's money or other property by a person described by Subsection (b)(5) is wrongful for purposes of Subsection (a)(2) or (3) if it is shown on the trial of the offense that the actor knew or should have known that, at the time of the offense, the elderly individual had been diagnosed with dementia, Alzheimer's disease, or a related disorder. Text of section as added by Acts 2025, 89th Leg., R.S., Ch. 19 (S.B. 1809), Sec. 1 For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 814 (S.B. 1281), Sec. 3, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 817 (S.B. 1333), Sec. 2, see other Sec. 32.56. — (see Sec./Art. 32.55 for the complete list)"}]}, {"name": "32.56 — Fraudulent Use, Possession, or Tampering with Gift Card, Gift Card Packaging, or Gift Card Data or Redemption Information", "items": [{"text": "A person commits an offense if the person, with the intent to harm or defraud another: (1) acquires or retains possession of a gift card, a digital imprint, or gift card redemption information without the consent of the cardholder, card issuer, or gift card seller; (2) alters or tampers with a gift card or gift card packaging; (3) possesses, transports, uses, or attempts to use a gift card, a digital imprint, or gift card redemption information to obtain goods, services, or anything else of value with knowledge that the gift card is a counterfeit gift card or that the gift card, digital imprint, or gift card redemption information has been obtained in violation of Subdivision (1); — (see Sec./Art. 32.56 for the complete list)"}, {"text": "If an actor possesses three or more gift cards, counterfeit gift cards, or digital imprints or the gift card redemption information obtained from three or more gift cards, a rebuttable presumption exists that the actor possesses each item without the consent of the cardholder, card issuer, or gift card seller."}, {"text": "The presumption established under Subsection (c) does not apply to a business or other commercial entity or a governmental agency that is engaged in a business activity or governmental function that does not violate a penal law of this state."}, {"text": "An offense under this section is: (1) a state jail felony if the actor engaged in conduct described by Subsection (b) with respect to fewer than five unactivated gift cards, counterfeit gift cards, or digital imprints or gift card redemption information of gift cards; (2) a felony of the third degree if the actor engaged in conduct described by Subsection (b) with respect to 5 or more but fewer than 10 unactivated gift cards, counterfeit gift cards, or digital imprints or gift card redemption information of gift cards; (3) a felony of the second degree if the actor engaged in conduct described by Subsection (b) with respect to 10 or more but fewer than 50 unactivated gift cards, counterfeit gift cards, or digital imprints or gift card redemption information of gift cards; — (see Sec./Art. 32.56 for the complete list)"}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both. Text of section as added by Acts 2025, 89th Leg., R.S., Ch. 814 (S.B. 1281), Sec. 3 For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 19 (S.B. 1809), Sec. 1, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 817 (S.B. 1333), Sec. 2, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 2, see other Sec. 32.56."}]}, {"name": "32.56 — Unlawful Conduct Involving Mail Receptacle Key or Lock", "items": [{"text": "A person commits an offense if, with the intent to harm or defraud another or to deprive another of that person's property, the person obtains, possesses, duplicates, transfers, or uses a key or lock adopted by a postal service for any box or other authorized receptacle for the deposit or delivery of mail."}, {"text": "An offense under this section is a felony of the third degree, except that the offense is a felony of the second degree if it is shown on the trial of the offense that the actor has been previously convicted of an offense under this section. Text of section as added by Acts 2025, 89th Leg., R.S., Ch. 817 (S.B. 1333), Sec. 2 For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 19 (S.B. 1809), Sec. 1, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 814 (S.B. 1281), Sec. 3, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 2, see other Sec. 32.56."}]}, {"name": "32.56 — False, Fraudulent, or Fictitious Document Conveying Real Property Interest", "items": [{"text": "An offense under this section is a Class A misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both. Text of section as added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 2 For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 19 (S.B. 1809), Sec. 1, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 814 (S.B. 1281), Sec. 3, see other Sec. 32.56. For text of section as added by Acts 2025, 89th Leg., R.S., Ch. 817 (S.B. 1333), Sec. 2, see other Sec. 32.56."}]}, {"name": "32.56 — Financial Abuse Using Artificially Generated Media or Phishing", "items": [{"text": "A person commits an offense if the person knowingly engages in financial abuse: (1) through the use of artificially generated media disseminated to another person; or (2) by deceiving or manipulating another person into providing personal, financial, or identifying information through e-mail, electronic communication, or other digital means."}, {"text": "An offense under this section is: (1) a Class B misdemeanor if the value of the property taken, appropriated, obtained, retained, or used is less than $100; (2) a Class A misdemeanor if the value of the property taken, appropriated, obtained, retained, or used is $100 or more but less than $750; (3) a state jail felony if the value of the property taken, appropriated, obtained, retained, or used is $750 or more but less than $2,500; (4) a felony of the third degree if the value of the property taken, appropriated, obtained, retained, or used is $2,500 or more but less than $30,000; (5) a felony of the second degree if the value of the property taken, appropriated, obtained, retained, or used is $30,000 or more but less than $150,000; — (see Sec./Art. 32.56 for the complete list)"}, {"text": "This section does not apply, for content provided by another person, to: (1) the provider of an interactive computer service, as defined by 47 U.S.C. Section 230(f); (2) a telecommunications service, as defined by 47 U.S.C. Section 153; or (3) a radio or television station licensed by the Federal Communications Commission."}]}, {"name": "32.57 — Fraudulent Sale, Rental, or Lease of Residential Real Property", "items": [{"text": "An offense under this section is a felony of the first degree."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both."}, {"text": "It is an exception to the application of Subsection (a)(2) that the person participated in the transaction to sell, rent, or lease the property: (1) as a lender, a title company, or a broker or agent licensed under Chapter 1101, Occupations Code, or an employee or agent of a lender, a title company, or a broker or agent licensed under Chapter 1101, Occupations Code; and (2) did not know that another person involved in the transaction did not have legal title or authority to sell, rent, or lease the property."}]}, {"name": "32.60 — Real Property Fraud", "items": [{"text": "A person commits an offense if the person: (1) intentionally or knowingly makes a materially false or misleading written statement to obtain real property; or (2) with the intent to defraud or harm any person: (A) causes another person, without that person's effective consent, to sign or execute any document affecting real property or any person's interest in real property; or (B) causes a public servant, without the public servant's effective consent, to file or record any purported judgment or other document purporting to memorialize or evidence: (i) title to real property or any person's interest in real property; or (ii) a lien or claim against real property or against any person's interest in real property."}, {"text": "Except as provided by Subsection (d), an offense under this section is: (1) a felony of the second degree if it is shown on the trial of the offense that the market value of the real property or the value of the interest in the real property is less than $300,000; or (2) a felony of the first degree if it is shown on the trial of the offense that the market value of the real property or the value of the interest in the real property is $300,000 or more."}, {"text": "An offense described for purposes of punishment by Subsection (c) is increased to the next higher category of offense if it is shown on the trial of the offense that at the time of the offense: (1) the owner of the real property was: (A) an elderly individual; (B) a disabled individual; or (C) a nonprofit organization; or (2) the real property was subject to a property tax exemption under Subchapter B, Chapter 11, Tax Code, as an individual's residence homestead as defined by Section 11.13(j), Tax Code."}, {"text": "For purposes of Subsection (c), the market value of real property is the market value of that property for the tax year in which the offense was committed, as indicated on the appraisal roll for the appraisal district in which the property is located."}]}, {"name": "32.61 — Malicious Solicitation of Disaster Victim or for Disaster Response or Recovery", "items": [{"text": "A person commits an offense if the person, with the intent to defraud or harm any person: (1) solicits a donation from another person while inducing the other person to believe that the donation will be used for disaster response or recovery, regardless of the manner of solicitation; (2) solicits donations on behalf of a donee with the intent to retain the donations instead of delivering the donations to the donee on whose behalf the donations were solicited; (3) solicits payment from a victim of a disaster after: (A) providing services to the victim that are related to disaster response or recovery, including debris removal or transportation; and (B) inducing the victim to believe that: (i) the person is a disaster volunteer; — (see Sec./Art. 32.61 for the complete list)"}, {"text": "An offense under Subsection (b)(1), (2), or (3) is: (1) for a first offense, a felony of the third degree; or (2) for a second or subsequent offense, a felony of the second degree."}, {"text": "Notwithstanding Subsection (c), an offense under Subsection (b)(1), (2), or (3) is a felony of the first degree if the person fabricated a designation described by Subchapter L, Chapter 418, Government Code."}, {"text": "An offense under Subsection (b)(4) is a felony of the first degree."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law, or both. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(7, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_10_fraud_ii_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

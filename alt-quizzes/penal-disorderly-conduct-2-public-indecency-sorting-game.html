@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Disorderly Conduct II &amp; Public Indecency Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.42 (part 2 of 2) &amp; Ch.43 &middot; Supplemental Practice</p>
+    <h1>Disorderly Conduct II &amp; Public Indecency Sorting Game</h1>
+    <p class="sub">The second of two Chapter 42 games, plus all of Chapter 43. Twenty-four boxes: disclosure of confidential family-violence/victim information, abuse of a corpse, cruelty to livestock and non-livestock animals, attacks on assistance animals, dog fighting, cockfighting, possessing an animal after an animal-cruelty conviction, destruction of a flag, discharge of a firearm in certain municipalities, laser pointers, illuminating aircraft, and unmanned aircraft over an airport/military installation (Ch.42) &mdash; plus prostitution, solicitation of prostitution, promotion of prostitution, obscene display, sale/distribution of harmful material to a minor, sexual performance by a child, employment harmful to children, and possession/promotion/electronic transmission of child pornography (Ch.43). Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="24" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="16" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.42 (Disorderly Conduct and Related Offenses), sections 42.075&ndash;42.15, and Ch.43 (Public Indecency) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "42.075 — Disclosure of Confidential Information Regarding Family Violence or Victims of Trafficking Shelter Center", "items": [{"text": "A person commits an offense if the person, with the intent to threaten the safety of any inhabitant of a family violence shelter center or victims of trafficking shelter center, discloses or publicizes the location or physical layout of the center."}, {"text": "An offense under this section is a Class A misdemeanor."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under Section 552.352, Government Code, the actor may be prosecuted under either section."}]}, {"name": "42.08 — Abuse of Corpse", "items": [{"text": "An offense under this section is a state jail felony, except that an offense under Subsection (a)(5) is a Class A misdemeanor."}, {"text": "In this section, \"human corpse\" includes: (1) any portion of a human corpse; (2) the cremated remains of a human corpse; or (3) any portion of the cremated remains of a human corpse."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or both sections."}, {"text": "It is a defense to prosecution under this section that the actor: (1) as a member or agent of a cemetery organization, removed or damaged anything that had been placed in or on any portion of the organization's cemetery in violation of the rules of the organization; or (2) removed anything: (A) placed in the cemetery in violation of the rules of the cemetery organization; or (B) placed in the cemetery by or with the cemetery organization's consent but that, in the organization's judgment, had become wrecked, unsightly, or dilapidated."}, {"text": "In this section, \"cemetery\" and \"cemetery organization\" have the meanings assigned by Section 711.001, Health and Safety Code."}]}, {"name": "42.09 — Cruelty to Livestock Animals", "items": [{"text": "In this section: (1) \"Abandon\" includes abandoning a livestock animal in the person's custody without making reasonable arrangements for assumption of custody by another person. (2) \"Cruel manner\" includes a manner that causes or permits unjustified or unwarranted pain or suffering. (3) \"Custody\" includes responsibility for the health, safety, and welfare of a livestock animal subject to the person's care and control, regardless of ownership of the livestock animal. (4) \"Depredation\" has the meaning assigned by Section 71.001, Parks and Wildlife Code. (5) \"Livestock animal\" means: (A) cattle, sheep, swine, goats, ratites, or poultry commonly raised for human consumption; (B) a horse, pony, mule, donkey, or hinny; (C) native or nonnative hoofstock raised under agriculture practices; — (see Sec./Art. 42.09 for the complete list)"}, {"text": "An offense under Subsection (a)(2), (3), (4), or (9) is a Class A misdemeanor, except that the offense is a state jail felony if the person has previously been convicted two times under this section, two times under Section 42.092, or one time under this section and one time under Section 42.092. An offense under Subsection (a)(1), (5), (6), (7), or (8) is a state jail felony, except that the offense is a felony of the third degree if the person has previously been convicted two times under this section, two times under Section 42.092, or one time under this section and one time under Section 42.092."}, {"text": "It is a defense to prosecution under Subsection (a)(8) that the actor tripped the horse for the purpose of identifying the ownership of the horse or giving veterinary care to the horse."}, {"text": "It is a defense to prosecution for an offense under this section that the actor was engaged in bona fide experimentation for scientific research."}, {"text": "It is an exception to the application of this section that the conduct engaged in by the actor is a generally accepted and otherwise lawful: (1) form of conduct occurring solely for the purpose of or in support of: (A) fishing, hunting, or trapping; or (B) wildlife management, wildlife or depredation control, or shooting preserve practices as regulated by state and federal law; or (2) animal husbandry or agriculture practice involving livestock animals."}, {"text": "This section does not create a civil cause of action for damages or enforcement of this section."}]}, {"name": "42.091 — Attack on Assistance Animal", "items": [{"text": "A person commits an offense if the person intentionally, knowingly, or recklessly incites or permits an animal owned by or otherwise in the custody of the actor to attack, injure, or kill an assistance animal and, as a result of the person's conduct, the assistance animal is attacked, injured, or killed."}, {"text": "An offense under this section is a: (1) Class A misdemeanor if the actor or an animal owned by or otherwise in the custody of the actor attacks an assistance animal; (2) state jail felony if the actor or an animal owned by or otherwise in the custody of the actor injures an assistance animal; or (3) felony of the third degree if the actor or an animal owned by or otherwise in the custody of the actor kills an assistance animal."}, {"text": "A court shall order a defendant convicted of an offense under Subsection (a) to make restitution to the owner of the assistance animal for: (1) related veterinary or medical bills; (2) the cost of: (A) replacing the assistance animal; or (B) retraining an injured assistance animal by an organization generally recognized by agencies involved in the rehabilitation of persons with disabilities as reputable and competent to provide special equipment for or special training to an animal to help a person with a disability; and (3) any other expense reasonably incurred as a result of the offense."}, {"text": "In this section: (1) \"Assistance animal\" has the meaning assigned by Section 121.002, Human Resources Code. (2) \"Custody\" has the meaning assigned by Section 42.09."}]}, {"name": "42.092 — Cruelty to Nonlivestock Animals", "items": [{"text": "A person commits an offense if the person intentionally, knowingly, recklessly, or with criminal negligence: (1) tortures an animal or in a cruel manner kills or causes serious bodily injury to an animal; (2) without the owner's effective consent, kills, administers poison to, or causes serious bodily injury to an animal; (3) fails unreasonably to provide necessary food, water, care, or shelter for an animal in the person's custody; (4) abandons unreasonably an animal in the person's custody; (5) transports or confines an animal in a cruel manner; (6) without the owner's effective consent, causes bodily injury to an animal; (7) causes one animal to fight with another animal, if either animal is not a dog; — (see Sec./Art. 42.092 for the complete list)"}, {"text": "An offense under Subsection (b)(3), (4), (5), (6), or (9) is a Class A misdemeanor, except that the offense is a state jail felony if the person has previously been convicted two times under this section, two times under Section 42.09, or one time under this section and one time under Section 42.09."}, {"text": "An offense under Subsection (b)(1) or (2) is a felony of the third degree, except that the offense is a felony of the second degree if the person has previously been convicted under Subsection (b)(1), (2), (7), or (8) or under Section 42.09."}, {"text": "An offense under Subsection (b)(7) or (8) is a state jail felony, except that the offense is a felony of the third degree if the person has previously been convicted under this section or under Section 42.09."}, {"text": "It is a defense to prosecution under this section that: (1) the actor had a reasonable fear of bodily injury to the actor or to another person by a dangerous wild animal as defined by Section 822.101, Health and Safety Code; or (2) the actor was engaged in bona fide experimentation for scientific research."}, {"text": "It is a defense to prosecution for alleged criminal negligence that the conduct occurred during the actual discharge of the actor's duties while employed as a veterinarian licensed under Chapter 801, Occupations Code, or as a person assisting the veterinarian."}, {"text": "It is a defense to prosecution under Subsection (b)(2) or (6) that: (1) the animal was discovered on the person's property in the act of or after injuring or killing the person's livestock animals or damaging the person's crops and that the person killed or injured the animal at the time of this discovery; or (2) the person killed or injured the animal within the scope of the person's employment as a public servant or in furtherance of activities or operations associated with electricity transmission or distribution, electricity generation or operations associated with the generation of electricity, or natural gas delivery."}, {"text": "It is a defense to prosecution under Subsection (b)(4) that the actor released or returned a stray or feral animal which is not a wild living creature pursuant to a Trap-Neuter-Return Program."}, {"text": "It is a defense to prosecution under Subsection (b)(4) that the actor released or returned a previously trapped wild living creature in accordance with Texas wildlife laws and regulations."}, {"text": "It is an exception to the application of this section that the conduct engaged in by the actor is a generally accepted and otherwise lawful: (1) form of conduct occurring solely for the purpose of or in support of: (A) fishing, hunting, or trapping; or (B) wildlife management, wildlife or depredation control, or shooting preserve practices as regulated by state and federal law; or (2) animal husbandry or agriculture practice involving livestock animals."}, {"text": "This section does not create a civil cause of action for damages or enforcement of the section."}]}, {"name": "42.10 — Dog Fighting", "items": [{"text": "In this section: (1) \"Dog fighting\" means any situation in which one dog attacks or fights with another dog. (2) \"Dog-fighting equipment\" has the meaning assigned by Article 18.18(g), Code of Criminal Procedure."}, {"text": "A conviction under Subsection (a)(2) or (3) may be had upon the uncorroborated testimony of a party to the offense."}, {"text": "It is a defense to prosecution under Subsection (a)(1) that the actor caused a dog to fight with another dog to protect livestock, other property, or a person from the other dog, and for no other purpose."}, {"text": "An offense under Subsection (a)(4), (5), or (6) is a Class A misdemeanor. An offense under Subsection (a)(1), (2), or (3) is a state jail felony."}]}, {"name": "42.105 — Cockfighting", "items": [{"text": "A person commits an offense if the person knowingly: (1) causes a cock to fight with another cock; (2) participates in the earnings of a cockfight; (3) uses or permits another to use any real estate, building, room, tent, arena, or other property for cockfighting; (4) owns or trains a cock with the intent that the cock be used in an exhibition of cockfighting; (5) manufactures, buys, sells, barters, exchanges, possesses, advertises, or otherwise offers a gaff, slasher, or other sharp implement designed for attachment to a cock with the intent that the implement be used in cockfighting; or (6) attends as a spectator an exhibition of cockfighting."}, {"text": "It is an affirmative defense to prosecution under this section that the actor's conduct: (1) occurred solely for the purpose of or in support of breeding cocks for poultry shows in which a cock is judged by the cock's physical appearance; or (2) was incidental to collecting bridles, gaffs, or slashers."}, {"text": "An affirmative defense to prosecution is not available under Subsection (c) if evidence shows that the actor is also engaging in use of the cocks for cockfighting."}, {"text": "It is a defense to prosecution for an offense under this section that: (1) the actor was engaged in bona fide experimentation for scientific research; or (2) the conduct engaged in by the actor is a generally accepted and otherwise lawful animal husbandry or agriculture practice involving livestock animals."}, {"text": "It is an exception to the application of Subsection (b)(6) that the actor is 15 years of age or younger at the time of the offense."}, {"text": "An offense under Subsection (b)(1) or (2) is a state jail felony. An offense under Subsection (b)(3), (4), or (5) is a Class A misdemeanor. An offense under Subsection (b)(6) is a Class C misdemeanor, except that the offense is a Class A misdemeanor if it is shown on the trial of the offense that the person has been previously convicted of an offense under that subdivision."}]}, {"name": "42.107 — Possession of Animal by Person Convicted of Animal Cruelty", "items": [{"text": "An offense under this section is a Class C misdemeanor, except that the offense is a Class B misdemeanor if the defendant has been previously convicted of an offense under this section."}]}, {"name": "42.11 — Destruction of Flag", "items": [{"text": "In this section, \"flag\" means an emblem, banner, or other standard or a copy of an emblem, standard, or banner that is an official or commonly recognized depiction of the flag of the United States or of this state and is capable of being flown from a staff of any character or size. The term does not include a representation of a flag on a written or printed document, a periodical, stationery, a painting or photograph, or an article of clothing or jewelry."}, {"text": "It is an exception to the application of this section that the act that would otherwise constitute an offense is done in conformity with statutes of the United States or of this state relating to the proper disposal of damaged flags."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "42.12 — Discharge of Firearm in Certain Municipalities", "items": [{"text": "An offense under this section is a Class A misdemeanor."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the person may be prosecuted under either section."}, {"text": "Subsection (a) does not affect the authority of a municipality to enact an ordinance which prohibits the discharge of a firearm."}]}, {"name": "42.13 — Use of Laser Pointers", "items": [{"text": "In this section, \"laser pointer\" means a device that emits a visible light amplified by the stimulated emission of radiation."}, {"text": "An offense under this section is a Class C misdemeanor, except that the offense is: (1) a felony of the third degree if the conduct causes bodily injury to the officer; or (2) a felony of the first degree if the conduct causes serious bodily injury to the officer."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law, but not both."}]}, {"name": "42.14 — Illumination of Aircraft by Intense Light", "items": [{"text": "It is an affirmative defense to prosecution under this section that the actor was using the light to send an emergency distress signal."}, {"text": "An offense under this section is a Class C misdemeanor unless the intensity of the light impairs the operator's ability to control the aircraft, in which event the offense is a Class A misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}, {"text": "In this section, \"laser pointer\" has the meaning assigned by Section 42.13."}]}, {"name": "42.15 — Operation of Unmanned Aircraft Over Airport, Military Installation, or Spaceport", "items": [{"text": "A person commits an offense if the person intentionally or knowingly: (1) operates an unmanned aircraft over an airport, military installation, or spaceport; (2) allows an unmanned aircraft to make contact with an airport, military installation, or spaceport, including any person or object on the premises of or within the airport, military installation, or spaceport; or (3) operates an unmanned aircraft in a manner that interferes with the operations of or causes a disturbance to an airport, military installation, or spaceport."}, {"text": "It is a defense to prosecution under this section that the conduct described by Subsection (b) was engaged in by: (1) the federal government, this state, or a governmental entity; (2) a person under contract with or otherwise acting under the direction or on behalf of the federal government, this state, or a governmental entity; (3) a law enforcement agency; (4) a person under contract with or otherwise acting under the direction or on behalf of a law enforcement agency; (5) an owner or operator of the airport, military installation, or spaceport; (6) a person under contract with or otherwise acting under the direction or on behalf of an owner or operator of the airport, military installation, or spaceport; (7) a person who has the prior written or electronic authorization of: — (see Sec./Art. 42.15 for the complete list)"}, {"text": "An offense under this section is a Class B misdemeanor, except that the offense is a Class A misdemeanor if the actor has previously been convicted under this section. Page -2 - Page - 1 -"}]}, {"name": "43.01 — Definitions", "items": [{"text": "In this subchapter: (1) \"Access software provider\" means a provider of software, including client or server software, or enabling tools that perform one or more of the following functions: (A) filter, screen, allow, or disallow content; (B) select, analyze, or digest content; or (C) transmit, receive, display, forward, cache, search, subset, organize, reorganize, or translate content. (1-a) \"Deviate sexual intercourse\" means any contact between the genitals of one person and the mouth or anus of another person. (1-b) \"Fee\" means the payment or offer of payment in the form of money, goods, services, or other benefit. (1-c) \"Information content provider\" means any person or entity that is wholly or partly responsible for the creation or development of information provided through the — (see Sec./Art. 43.01 for the complete list)"}]}, {"name": "43.02 — Prostitution", "items": [{"text": "A person commits an offense if the person knowingly offers or agrees to receive a fee from another to engage in sexual conduct."}, {"text": "Repealed by Acts 2017, 85th Leg., R.S., Ch. 685 (H.B. 29), Sec. 44(2), eff. September 1, 2017."}, {"text": "An offense under Subsection (a) is a Class B misdemeanor, except that the offense is: (1) a Class A misdemeanor if the actor has previously been convicted one or two times of an offense under Subsection (a); or (2) a state jail felony if the actor has previously been convicted three or more times of an offense under Subsection (a)."}, {"text": "It is a defense to prosecution for an offense under Subsection (a) that the actor engaged in the conduct that constitutes the offense because the actor was the victim of conduct that constitutes an offense under Section 20A.02 or 43.05."}, {"text": "A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D, Chapter 12. For purposes of enhancement of penalties under this section or Subchapter D, Chapter 12, a defendant is previously convicted of an offense under this section if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision."}]}, {"name": "43.021 — Solicitation of Prostitution", "items": [{"text": "An offense under Subsection (a) is a state jail felony, except that the offense is: (1) a felony of the third degree if the actor has previously been convicted of an offense under Subsection (a) or under Section 43.02(b), as that law existed before September 1, 2021; or (2) a felony of the second degree if the person with respect to whom the actor offers or agrees to engage in sexual conduct is: (A) younger than 18 years of age, regardless of whether the actor knows the age of the person at the time of the offense; (B) represented to the actor as being younger than 18 years of age; or (C) believed by the actor to be younger than 18 years of age."}, {"text": "The punishment prescribed for an offense under Subsection (a) is increased to the punishment prescribed for the next highest category of offense if it is shown on the trial of the offense that the actor committed the offense in a location that was: (1) on the premises of or within 1,000 feet of the premises of a school; or (2) on premises or within 1,000 feet of premises where: (A) an official school function was taking place; or (B) an event sponsored or sanctioned by the University Interscholastic League was taking place."}, {"text": "A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and that subchapter. For purposes of enhancement of penalties under this section or Subchapter D, Chapter 12, a defendant is considered to have been previously convicted of an offense under this section or under Section 43.02(b), as that law existed before September 1, 2021, if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision."}]}, {"name": "43.03 — Promotion of Prostitution", "items": [{"text": "An offense under this section is a felony of the third degree, except that the offense is: (1) a felony of the second degree if the actor has been previously convicted of an offense under this section; or (2) a felony of the first degree if the actor engages in conduct described by Subsection (a)(1) or (2) involving a person younger than 18 years of age, regardless of whether the actor knows the age of the person at the time of the offense. SUBCHAPTER B. OBSCENITY"}]}, {"name": "43.21 — Definitions", "items": [{"text": "If any of the depictions or descriptions of sexual conduct described in this section are declared by a court of competent jurisdiction to be unlawfully included herein, this declaration shall not invalidate this section as to other patently offensive sexual conduct included herein."}]}, {"name": "43.22 — Obscene Display or Distribution", "items": [{"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "43.24 — Sale, Distribution, or Display of Harmful Material to Minor", "items": [{"text": "A person commits an offense if, knowing that the material is harmful: (1) and knowing the person is a minor, he sells, distributes, exhibits, or possesses for sale, distribution, or exhibition to a minor harmful material; (2) he displays harmful material and is reckless about whether a minor is present who will be offended or alarmed by the display; or (3) he hires, employs, or uses a minor to do or accomplish or assist in doing or accomplishing any of the acts prohibited in Subsection (b)(1) or (b)(2)."}, {"text": "Repealed by Acts 2025, 89th Leg., R.S., Ch. 39 (S.B. 412), Sec. 3, eff. September 1, 2025."}, {"text": "It is a defense to prosecution under this section that the actor was the spouse of the minor at the time of the offense."}, {"text": "It is an affirmative defense to prosecution under Subsection (b)(1) or (2) that at the time of the offense the actor was a judicial or law enforcement officer discharging the officer's official duties."}, {"text": "An offense under this section is a Class A misdemeanor unless it is committed under Subsection (b)(3) in which event it is a felony of the third degree."}]}, {"name": "43.25 — Sexual Performance by a Child", "items": [{"text": "A person commits an offense if, knowing the character and content thereof, he employs, authorizes, or induces a child younger than 18 years of age to engage in sexual conduct or a sexual performance. A parent or legal guardian or custodian of a child younger than 18 years of age commits an offense if he consents to the participation by the child in a sexual performance."}, {"text": "An offense under Subsection (b) is a felony of the second degree, except that the offense is a felony of the first degree if the victim is younger than 14 years of age at the time the offense is committed, regardless of whether the actor knows the age of the victim at the time of the offense."}, {"text": "A person commits an offense if, knowing the character and content of the material, he produces, directs, or promotes a performance that includes sexual conduct by a child younger than 18 years of age."}, {"text": "An offense under Subsection (d) is a felony of the third degree, except that the offense is a felony of the second degree if the victim is younger than 14 years of age at the time the offense is committed, regardless of whether the actor knows the age of the victim at the time of the offense."}, {"text": "It is an affirmative defense to a prosecution under this section that: (1) the defendant was the spouse of the child at the time of the offense; (2) at the time of the offense the actor was a judicial or law enforcement officer discharging the officer's official duties; or (3) the defendant is not more than two years older than the child."}, {"text": "When it becomes necessary for the purposes of this section or Section 43.26 to determine whether a child who participated in sexual conduct was younger than 18 years of age, the court or jury may make this determination by any of the following methods: (1) personal inspection of the child; (2) inspection of the photograph or motion picture that shows the child engaging in the sexual performance; (3) oral testimony by a witness to the sexual performance as to the age of the child based on the child's appearance at the time; (4) expert medical testimony based on the appearance of the child engaging in the sexual performance; or (5) any other method authorized by law or by the rules of evidence at common law."}, {"text": "Conduct under this section constitutes an offense regardless of whether the actor knows the age of the victim at the time of the offense."}]}, {"name": "43.251 — Employment Harmful to Children", "items": [{"text": "A person commits an offense if the person employs, authorizes, or induces a child to work: (1) in a sexually oriented commercial activity; or (2) in any place of business permitting, requesting, or requiring a child to work nude or topless."}, {"text": "An offense under this section is a felony of the second degree, except that the offense is a felony of the first degree if the victim is younger than 14 years of age at the time the offense is committed, regardless of whether the actor knows the age of the victim at the time of the offense."}, {"text": "Conduct under this section constitutes an offense regardless of whether the actor knows the age of the victim at the time of the offense."}]}, {"name": "43.26 — Possession or Promotion of Child Pornography", "items": [{"text": "A person commits an offense if: (1) the person intentionally or knowingly possesses, or intentionally or knowingly accesses with intent to view, visual material that contains a visual depiction of a child engaging in sexual conduct, including a depiction of a child engaging in sexual conduct as a victim of an offense under Section 20A.02(a)(5), (6), (7), or (8); and (2) the person knows or should have known that the depiction described by Subdivision (1) is of a child younger than 18 years of age at the time the image of the child was made."}, {"text": "A person commits an offense if the person: (1) intentionally or knowingly possesses, or intentionally or knowingly accesses with intent to view, visual material that contains a visual depiction of a computer-generated child engaging in sexual conduct; and (2) either: (A) knows or should have known that the depiction described by Subdivision (1) appears to be of a child younger than 18 years of age; or (B) believes that the depiction is of an actual child younger than 18 years of age at the time the image of the child was made."}, {"text": "An offense under Subsection (a-1) is a felony of the third degree, except that the offense is: (1) a felony of the second degree if it is shown on the trial of the offense that the actor: (A) has been previously convicted one time of an offense: (i) under this chapter; or (ii) described by Article 62.001(5), Code of Criminal Procedure; or (B) possesses visual material that contains 10 or more visual depictions of a child engaging in sexual conduct as described by Subsection (a-1)(1) but fewer than 50 such depictions; (2) a felony of the first degree if it is shown on the trial of the offense that the actor: (A) has been previously convicted two or more times of an offense, or any combination of offenses: (i) under this chapter; — (see Sec./Art. 43.26 for the complete list)"}, {"text": "If it is shown on the trial of an offense under Subsection (a-1) that the visual material contained a depiction of a child younger than 10 years of age at the time the image of the child was made engaging in sexual conduct as described by Section (a-1)(1): (1) an offense punishable under Subsection (c-1) as a felony of the second or third degree is increased to the next higher category of offense; or (2) the minimum term of imprisonment for an offense described for purposes of punishment by Subsection (c-1)(2) is increased to 15 years."}, {"text": "An offense under Subsection (a-2) is a state jail felony, except that the offense is: (1) a felony of the third degree if it is shown on the trial of the offense that the actor: (A) has been previously convicted one time of an offense: (i) under this chapter; or (ii) described by Article 62.001(5), Code of Criminal Procedure; or (B) possesses visual material that contains 10 or more visual depictions of a computer-generated child engaging in sexual conduct as described by Subsection (a-2)(1) but fewer than 50 such depictions; (2) a felony of the second degree if it is shown on the trial of the offense that the actor: (A) has been previously convicted two or more times of an offense, or any combination of offenses: (i) under this chapter; — (see Sec./Art. 43.26 for the complete list)"}, {"text": "If it is shown on the trial of an offense under Subsection (a-2) that the visual material contained a depiction of a computer-generated child who appears to be younger than 10 years of age and is engaging in sexual conduct as described by Subsection (a-2)(1), the punishment for the offense is increased to the punishment for the next higher category of offense, provided that the minimum term of imprisonment for an offense described for purposes of punishment by Subsection (c-3)(3) is 10 years."}, {"text": "An offense under Subsection (a) is: (1) a felony of the third degree if the person possesses visual material that contains fewer than 10 visual depictions of a child as described by Subsection (a)(1); (2) a felony of the second degree if the person possesses visual material that contains 10 or more visual depictions of a child as described by Subsection (a)(1) but fewer than 50 such depictions; (3) a felony of the first degree if the person: (A) possesses visual material that contains 50 or more visual depictions of a child as described by Subsection (a)(1); or (B) possesses visual material of conduct constituting an offense under Section 22.011(a)(2); — (see Sec./Art. 43.26 for the complete list)"}, {"text": "A person commits an offense if: (1) the person intentionally or knowingly promotes or possesses with intent to promote visual material described by Subsection (a-1)(1); and (2) the person knows or should have known that the depiction described by Subsection (a-1)(1) is of a child younger than 18 years of age at the time the image of the child was made."}, {"text": "A person commits an offense if the person: (1) intentionally or knowingly promotes or possesses with intent to promote visual material described by Subsection (a-2)(1); and (2) either: (A) knows or should have known that the depiction described by Subsection (a-2)(1) appears to be of a child younger than 18 years of age; or (B) believes that the depiction is of an actual child younger than 18 years of age at the time the image of the child was made."}, {"text": "In the prosecution of an offense under Subsection (a-1) or (e): (1) the state is not required to prove the identity of the child in the depiction described by Subsection (a-1)(1); and (2) there is a rebuttable presumption that the depiction is of an actual child, as described by Subsection (a)(1)(A) or (B), and not of a computer-generated child, as described by Subsection (a)(2)."}, {"text": "An offense under Subsection (e) is a felony of the first degree, except that the offense is a felony of the first degree with a minimum term of confinement of 15 years if: (1) the person promotes or possesses with intent to promote: (A) visual material that contains 50 or more visual depictions of a child as described by Subsection (a)(1); or (B) visual material of conduct constituting an offense under Section 22.011(a)(2); and (2) it is shown on the trial of the offense that the person has been previously convicted of an offense under this section."}, {"text": "An offense under Subsection (e) is a felony of the second degree, except that the offense is: (1) a felony of the first degree if it is shown on the trial of the offense that the actor: (A) has been previously convicted one or more times of an offense: (i) under this chapter; or (ii) described by Article 62.001(5), Code of Criminal Procedure; (B) promotes or possesses with intent to promote visual material that contains 10 or more visual depictions of a child engaging in sexual conduct as described by Subsection (a-1)(1) but fewer than 50 such depictions; or (C) promotes or possesses with intent to promote visual material that contains one or more visual depictions of a child who appears to be younger than 10 years of age and is engaging in sexual conduct as described by Subsection — (see Sec./Art. 43.26 for the complete list)"}, {"text": "An offense under Subsection (e-1) is a felony of the third degree, except that the offense is: (1) a felony of the second degree if it is shown on the trial of the offense that the person: (A) has been previously convicted one or more times of an offense: (i) under this chapter; or (ii) described by Article 62.001(5), Code of Criminal Procedure; (B) promotes or possesses with intent to promote visual material that contains 10 or more visual depictions of a computer-generated child engaging in sexual conduct as described by Subsection (a-2)(1); or (C) promotes or possesses with intent to promote visual material that contains one or more visual depictions of a computer-generated child who appears to be younger than 10 years of age and is engaging in sexual conduct as described by Subsection — (see Sec./Art. 43.26 for the complete list)"}, {"text": "It is a defense to prosecution under this section that the actor is a law enforcement officer or a school administrator who: (1) possessed or accessed the visual material in good faith solely as a result of an allegation of a violation of Section 43.261; (2) allowed other law enforcement or school administrative personnel to possess or access the material only as appropriate based on the allegation described by Subdivision (1); and (3) took reasonable steps to destroy the material within an appropriate period following the allegation described by Subdivision (1)."}, {"text": "It is an affirmative defense to prosecution under this section that at the time of the offense the actor was a judicial or law enforcement officer discharging the officer's official duties."}, {"text": "It is an affirmative defense to prosecution under Subsection (a-2) or (e-1) that the actor is not more than two years older than the depicted child."}]}, {"name": "43.261 — Electronic Transmission of Certain Visual Material Depicting Minor", "items": [{"text": "A person who is a minor commits an offense if the person intentionally or knowingly: (1) by electronic means promotes to another minor visual material depicting a minor, including the actor, engaging in sexual conduct, if the actor produced the visual material or knows that another minor produced the visual material; or (2) possesses in an electronic format visual material depicting another minor engaging in sexual conduct, if the actor produced the visual material or knows that another minor produced the visual material."}, {"text": "For purposes of conduct prohibited under Subsection (b), visual material to which that conduct applies includes: (1) a depiction of a minor: (A) who is recognizable as an actual person by the person's face, likeness, or other distinguishing characteristic, such as a unique birthmark or other recognizable feature; and (B) whose image as a minor was used in creating, adapting, or modifying the visual material, including computer-generated visual material that was created, adapted, or modified using an artificial intelligence application or other computer software; or (2) a depiction of a minor, created using an artificial intelligence application or other computer software, that to a reasonable person is virtually indistinguishable from an actual minor."}, {"text": "An offense under Subsection (b)(1) is a Class C misdemeanor, except that the offense is: (1) a Class B misdemeanor if it is shown on the trial of the offense that the actor: (A) promoted the visual material with intent to harass, annoy, alarm, abuse, torment, embarrass, or offend another; or (B) except as provided by Subdivision (2)(A), has previously been convicted one time of any offense under this section; or (2) a Class A misdemeanor if it is shown on the trial of the offense that the actor has previously been: (A) convicted one or more times of an offense punishable under Subdivision (1)(A); or (B) convicted two or more times of any offense under this section."}, {"text": "An offense under Subsection (b)(2) is a Class C misdemeanor, except that the offense is: (1) a Class B misdemeanor if it is shown on the trial of the offense that the actor has previously been convicted one time of any offense under this section; or (2) a Class A misdemeanor if it is shown on the trial of the offense that the actor has previously been convicted two or more times of any offense under this section."}, {"text": "It is an affirmative defense to prosecution under this section that the visual material: (1) depicted only the actor or another minor: (A) who is not more than two years older or younger than the actor and with whom the actor had a dating relationship at the time of the offense; or (B) who was the spouse of the actor at the time of the offense; and (2) was promoted or received only to or from the actor and the other minor."}, {"text": "It is a defense to prosecution under Subsection (b)(2) that the actor: (1) did not produce or solicit the visual material; (2) possessed the visual material only after receiving the material from another minor; and (3) destroyed the visual material within a reasonable amount of time after receiving the material from another minor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the defendant may be prosecuted under this section, the other law, or both."}, {"text": "Notwithstanding Section 51.13, Family Code, a finding that a person has engaged in conduct in violation of this section is considered a conviction for the purposes of Subsections (c) and (d)."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(16, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_15_disorderly_conduct_ii_public_indecency_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

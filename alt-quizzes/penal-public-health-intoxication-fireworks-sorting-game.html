@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Public Health, Intoxication &amp; Fireworks Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.48, 49 &amp; 50 &middot; Supplemental Practice</p>
+    <h1>Public Health, Intoxication &amp; Fireworks Sorting Game</h1>
+    <p class="sub">Twenty-three boxes covering Chapter 48 (Smoking Tobacco, Prohibited Cigarette Purchases, Sale of Human Organs/Fetal Tissue/Adult Stem Cells, Prohibited Camping), Chapter 49 (Public Intoxication, Possession of Alcohol in a Motor Vehicle, Driving/Flying/Boating While Intoxicated with and without a Child Passenger, Operating an Amusement Ride While Intoxicated, Intoxication Assault, Intoxication Manslaughter, and enhanced-offense rules), and Chapter 50 (Unlawful Use of Fireworks). The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="23" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="12" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.48 (Conduct Affecting Public Health), Ch.49 (Intoxication and Alcoholic Beverage Offenses), Ch.50 (Fireworks) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "48.01 — Smoking Tobacco", "items": [{"text": "A person commits an offense if the person is in possession of a burning tobacco product, smokes tobacco, or operates an e-cigarette in a facility of a public primary or secondary school or an elevator, enclosed theater or movie house, library, museum, hospital, transit system bus, intrastate bus, plane, or train which is a public place."}, {"text": "It is a defense to prosecution under this section that the conveyance or public place in which the offense takes place does not have prominently displayed a reasonably sized notice that smoking is prohibited by state law in such conveyance or public place and that an offense is punishable by a fine not to exceed $500."}, {"text": "All conveyances and public places set out in Subsection (a-1) shall be equipped with facilities for extinguishment of smoking materials and it shall be a defense to prosecution under this section if the conveyance or public place within which the offense takes place is not so equipped."}, {"text": "It is an exception to the application of Subsection (a-1) if the person is in possession of the burning tobacco product, smokes tobacco, or operates the e-cigarette exclusively within an area designated for smoking tobacco or operating an e-cigarette or as a participant in an authorized theatrical performance."}, {"text": "An area designated for smoking tobacco or operating an e-cigarette on a transit system bus or intrastate plane or train must also include the area occupied by the operator of the transit system bus, plane, or train."}, {"text": "An offense under this section is punishable as a Class C misdemeanor."}]}, {"name": "48.015 — Prohibitions Relating to Certain Cigarettes", "items": [{"text": "A person who commits an act prohibited by Subsection (a), knowing or having reason to know that the person is doing so, is guilty of a Class A misdemeanor."}]}, {"name": "48.02 — Prohibition of the Purchase and Sale of Human Organs", "items": [{"text": "A person commits an offense if he or she knowingly or intentionally offers to buy, offers to sell, acquires, receives, sells, or otherwise transfers any human organ for valuable consideration."}, {"text": "It is an exception to the application of this section that the valuable consideration is: (1) a fee paid to a physician or to other medical personnel for services rendered in the usual course of medical practice or a fee paid for hospital or other clinical services; (2) reimbursement of legal or medical expenses incurred for the benefit of the ultimate receiver of the organ; or (3) reimbursement of expenses of travel, housing, and lost wages incurred by the donor of a human organ in connection with the donation of the organ."}, {"text": "An offense under this section is a state jail felony."}]}, {"name": "48.03 — Prohibition on Purchase and Sale of Human Fetal Tissue", "items": [{"text": "A person commits an offense if the person knowingly offers to buy, offers to sell, acquires, receives, sells, or otherwise transfers any human fetal tissue for economic benefit."}, {"text": "An offense under this section is a state jail felony."}, {"text": "It is a defense to prosecution under this section that the actor: (1) is an employee of or under contract with an accredited public or private institution of higher education; and (2) acquires, receives, or transfers human fetal tissue solely for the purpose of fulfilling a donation authorized by Section 173.005, Health and Safety Code."}, {"text": "This section does not apply to: (1) human fetal tissue acquired, received, or transferred solely for diagnostic or pathological testing; (2) human fetal tissue acquired, received, or transferred solely for the purposes of a criminal investigation; (3) human fetal tissue acquired, received, or transferred solely for the purpose of disposing of the tissue in accordance with state law or rules applicable to the disposition of human fetal tissue remains; (4) human fetal tissue or human tissue acquired during pregnancy or at delivery of a child, provided the tissue is acquired by an accredited public or private institution of higher education for use in research approved by an institutional review board or another appropriate board, committee, or body charged with oversight applicable to the — (see Sec./Art. 48.03 for the complete list)"}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section."}]}, {"name": "48.04 — Prohibition on Purchase and Sale of Adult Stem Cells for Certain Investigational Treatments", "items": [{"text": "A person commits an offense if the person knowingly offers to buy, offers to sell, acquires, receives, sells, or otherwise transfers any adult stem cells for valuable consideration for use in an investigational stem cell treatment."}, {"text": "It is an exception to the application of this section that the valuable consideration is: (1) a fee paid to a physician or to other medical personnel for services rendered in the usual course of medical practice or a fee paid for hospital or other clinical services; (2) reimbursement of legal or medical expenses incurred for the benefit of the ultimate receiver of the investigational stem cell treatment; or (3) reimbursement of expenses of travel, housing, and lost wages incurred by the donor of adult stem cells in connection with the donation of the adult stem cells."}, {"text": "It is an exception to the application of this section that the actor engaged in conduct authorized under Chapter 162, Health and Safety Code."}, {"text": "A violation of this section is a Class A misdemeanor."}]}, {"name": "48.05 — Prohibited Camping", "items": [{"text": "A person commits an offense if the person intentionally or knowingly camps in a public place without the effective consent of the officer or agency having the legal duty or authority to manage the public place."}, {"text": "The actor's intent or knowledge may be established through evidence of activities associated with sustaining a living accommodation that are conducted in a public place, including: (1) cooking; (2) making a fire; (3) storing personal belongings for an extended period; (4) digging; or (5) sleeping."}, {"text": "Consent given by an officer or agency of a political subdivision is not effective for purposes of Subsection (b), unless given to authorize the person to camp for: (1) recreational purposes; (2) purposes of sheltering homeless individuals, if the property on which the camping occurs is subject to a plan approved under Subchapter PP, Chapter 2306, Government Code, and the camping occurs in a manner that complies with the plan; (3) purposes permitted by a beach access plan that has been approved under Section 61.015, Natural Resources Code, and the camping occurs in a manner that complies with the plan; or (4) purposes related to providing emergency shelter during a disaster declared under Section 418.014, Government Code, or a local disaster declared under Section 418.108 of that code."}, {"text": "An offense under this section is a Class C misdemeanor."}, {"text": "This section does not preempt an ordinance, order, rule, or other regulation adopted by a state agency or political subdivision relating to prohibiting camping in a public place or affect the authority of a state agency or political subdivision to adopt or enforce an ordinance, order, rule, or other regulation relating to prohibiting camping in a public place if the ordinance, order, rule, or other regulation: (1) is compatible with and equal to or more stringent than the offense prescribed by this section; or (2) relates to an issue not specifically addressed by this section."}, {"text": "Except as provided by Subsection (h), before or at the time a peace officer issues a citation to a person for an offense under this section, the peace officer must make a reasonable effort to: (1) advise the person of an alternative place at which the person may lawfully camp; and (2) contact, if reasonable and appropriate, an appropriate official of the political subdivision in which the public place is located, or an appropriate nonprofit organization operating within that political subdivision, and request the official or organization to provide the person with: (A) information regarding the prevention of human trafficking; or (B) any other services that would reduce the likelihood of the person suspected of committing the offense continuing to camp in the public place."}, {"text": "Subsection (g) does not apply if the peace officer determines there is an imminent threat to the health or safety of any person to the extent that compliance with that subsection is impracticable."}, {"text": "If the person is arrested or detained solely for an offense under this section, a peace officer enforcing this section shall ensure that all of the person's personal property not designated as contraband under other law is preserved by: (1) permitting the person to remove all the property from the public place at the time of the person's departure; or (2) taking custody of the property and allowing the person to retrieve the property after the person is released from custody."}, {"text": "A fee may not be charged for the storage or release of property under Subsection (i)(2). Page -2 - Page - 1 -"}]}, {"name": "49.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Alcohol concentration\" means the number of grams of alcohol per: (A) 210 liters of breath; (B) 100 milliliters of blood; or (C) 67 milliliters of urine. (2) \"Intoxicated\" means: (A) not having the normal use of mental or physical faculties by reason of the introduction of alcohol, a controlled substance, a drug, a dangerous drug, a combination of two or more of those substances, or any other substance into the body; or (B) having an alcohol concentration of 0.08 or more. (3) \"Motor vehicle\" has the meaning assigned by Section 32.34(a). (4) \"Watercraft\" means a vessel, one or more water skis, an aquaplane, or another device used for transporting or carrying a person on water, other than a device propelled only by the current of water. — (see Sec./Art. 49.01 for the complete list)"}]}, {"name": "49.02 — Public Intoxication", "items": [{"text": "For the purposes of this section, a premises licensed or permitted under the Alcoholic Beverage Code is a public place."}, {"text": "It is a defense to prosecution under this section that the alcohol or other substance was administered for therapeutic purposes and as a part of the person's professional medical treatment by a licensed physician."}, {"text": "Except as provided by Subsection (e), an offense under this section is a Class C misdemeanor."}, {"text": "An offense under this section is not a lesser included offense under Section 49.04."}, {"text": "An offense under this section committed by a person younger than 21 years of age is punishable in the same manner as if the minor committed an offense to which Section 106.071, Alcoholic Beverage Code, applies."}]}, {"name": "49.031 — Possession of Alcoholic Beverage in Motor Vehicle", "items": [{"text": "A person commits an offense if the person knowingly possesses an open container in a passenger area of a motor vehicle that is located on a public highway, regardless of whether the vehicle is being operated or is stopped or parked. Possession by a person of one or more open containers in a single criminal episode is a single offense."}, {"text": "It is an exception to the application of Subsection (b) that at the time of the offense the defendant was a passenger in: (1) the passenger area of a motor vehicle designed, maintained, or used primarily for the transportation of persons for compensation, including a bus, taxicab, or limousine; or (2) the living quarters of a motorized house coach or motorized house trailer, including a self-contained camper, a motor home, or a recreational vehicle."}, {"text": "An offense under this section is a Class C misdemeanor."}, {"text": "A peace officer charging a person with an offense under this section, instead of taking the person before a magistrate, shall issue to the person a written citation and notice to appear that contains the time and place the person must appear before a magistrate, the name and address of the person charged, and the offense charged. If the person makes a written promise to appear before the magistrate by signing in duplicate the citation and notice to appear issued by the officer, the officer shall release the person."}]}, {"name": "49.04 — Driving While Intoxicated", "items": [{"text": "Except as provided by Subsections (c), (d), and (e) and Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours."}, {"text": "If it is shown on the trial of an offense under this section that at the time of the offense the person operating the motor vehicle had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor, with a minimum term of confinement of six days."}, {"text": "If it is shown on the trial of an offense under this section that an analysis of a specimen of the person's blood, breath, or urine showed an alcohol concentration level of 0.15 or more at the time the analysis was performed, the offense is a Class A misdemeanor."}, {"text": "If it is shown on the trial of an offense under this section that at the time of the offense the person was operating the motor vehicle in a school crossing zone during the time the reduced speed limit applies to the zone, the offense is a state jail felony. In this subsection, \"school crossing zone\" has the meaning assigned by Section 541.302, Transportation Code."}]}, {"name": "49.045 — Driving While Intoxicated with Child Passenger", "items": [{"text": "An offense under this section is a state jail felony."}]}, {"name": "49.05 — Flying While Intoxicated", "items": [{"text": "Except as provided by Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours."}]}, {"name": "49.06 — Boating While Intoxicated", "items": [{"text": "Except as provided by Section 49.09, an offense under this section is a Class B misdemeanor, with a minimum term of confinement of 72 hours."}]}, {"name": "49.061 — Boating While Intoxicated with Child Passenger", "items": [{"text": "An offense under this section is a state jail felony."}]}, {"name": "49.065 — Assembling or Operating an Amusement Ride While Intoxicated", "items": [{"text": "Except as provided by Subsection (c) and Section 49.09, an offense under this section is a Class B misdemeanor with a minimum term of confinement of 72 hours."}, {"text": "If it is shown on the trial of an offense under this section that at the time of the offense the person operating the amusement ride or assembling the mobile amusement ride had an open container of alcohol in the person's immediate possession, the offense is a Class B misdemeanor with a minimum term of confinement of six days."}]}, {"name": "49.07 — Intoxication Assault", "items": [{"text": "In this section, \"serious bodily injury\" means injury that creates a substantial risk of death or that causes serious permanent disfigurement or protracted loss or impairment of the function of any bodily member or organ."}, {"text": "Except as provided by Section 49.09, an offense under this section is a felony of the third degree."}]}, {"name": "49.08 — Intoxication Manslaughter", "items": [{"text": "Except as provided by Section 49.09, an offense under this section is a felony of the second degree."}]}, {"name": "49.09 — Enhanced Offenses and Penalties", "items": [{"text": "An offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, or 49.065 is a felony of the third degree if it is shown on the trial of the offense that the person has previously been convicted: (1) one time of an offense under Section 49.08 or an offense under the laws of another state if the offense contains elements that are substantially similar to the elements of an offense under Section 49.08; or (2) two times of any other offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated."}, {"text": "An offense under Section 49.07 is: (1) a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to a firefighter or emergency medical services personnel while in the actual discharge of an official duty; or (2) a felony of the first degree if it is shown on the trial of the offense that the person caused serious bodily injury to a peace officer or judge while the officer or judge was in the actual discharge of an official duty. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 307 (S.B. 745), Sec. 1"}, {"text": "An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person caused the death of: (1) a person described by Subsection (b-1); or (2) more than one person during the same criminal transaction. Text of subsection as amended by Acts 2025, 89th Leg., R.S., Ch. 939 (H.B. 2017), Sec. 2"}, {"text": "An offense under Section 49.08 is a felony of the first degree if it is shown on the trial of the offense that the person: (1) caused the death of a person described by Subsection (b-1); or (2) has previously been convicted of an offense relating to the operating of a motor vehicle while intoxicated, operating an aircraft while intoxicated, operating a watercraft while intoxicated, or operating or assembling an amusement ride while intoxicated, and at the time of the commission of the instant offense was in violation of Chapter 51."}, {"text": "For the purposes of Subsection (b-1): (1) \"Emergency medical services personnel\" has the meaning assigned by Section 773.003, Health and Safety Code. (2) \"Firefighter\" means: (A) an individual employed by this state or by a political or legal subdivision of this state who is subject to certification by the Texas Commission on Fire Protection; or (B) a member of an organized volunteer fire-fighting unit that: (i) renders fire-fighting services without remuneration; and (ii) conducts a minimum of two drills each month, each at least two hours long."}, {"text": "An offense under Section 49.07 is a felony of the second degree if it is shown on the trial of the offense that the person caused serious bodily injury to another in the nature of a traumatic brain injury that results in a persistent vegetative state."}, {"text": "For the purposes of this section: (1) \"Offense relating to the operating of a motor vehicle while intoxicated\" means: (A) an offense under Section 49.04 or 49.045; (B) an offense under Section 49.07 or 49.08, if the vehicle operated was a motor vehicle; (C) an offense under Article 6701l-1, Revised Statutes, as that law existed before September 1, 1994; (D) an offense under Article 6701l-2, Revised Statutes, as that law existed before January 1, 1984; (E) an offense under Section 19.05(a)(2), as that law existed before September 1, 1994, if the vehicle operated was a motor vehicle; or (F) an offense under the laws of another state that prohibit the operation of a motor vehicle while intoxicated. (2) \"Offense of operating an aircraft while intoxicated\" means: — (see Sec./Art. 49.09 for the complete list)"}, {"text": "For the purposes of this section, a conviction for an offense under Section 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08 that occurs on or after September 1, 1994, is a final conviction, whether the sentence for the conviction is imposed or probated."}, {"text": "Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005."}, {"text": "Repealed by Acts 2005, 79th Leg., Ch. 996, Sec. 3, eff. September 1, 2005."}, {"text": "A conviction may be used for purposes of enhancement under this section or enhancement under Subchapter D, Chapter 12, but not under both this section and Subchapter D. For purposes of this section, a person is considered to have been convicted of an offense under Section 49.04 or 49.06 if the person was placed on deferred adjudication community supervision for the offense under Article 42A.102, Code of Criminal Procedure."}, {"text": "This subsection applies only to a person convicted of a second or subsequent offense relating to the operating of a motor vehicle while intoxicated committed within five years of the date on which the most recent preceding offense was committed. The court shall enter an order that requires the defendant to have a device installed, on each motor vehicle owned or operated by the defendant, that uses a deep-lung breath analysis mechanism to make impractical the operation of the motor vehicle if ethyl alcohol is detected in the breath of the operator, and that requires that before the first anniversary of the ending date of the period of license suspension under Section 521.344, Transportation Code, the defendant not operate any motor vehicle that is not equipped with that device. — (see Sec./Art. 49.09 for the complete list)"}]}, {"name": "49.10 — No Defense", "items": [{"text": "In a prosecution under Section 49.031, 49.04, 49.045, 49.05, 49.06, 49.061, 49.065, 49.07, or 49.08, the fact that the defendant is or has been entitled to use the alcohol, controlled substance, drug, dangerous drug, or other substance is not a defense."}]}, {"name": "49.11 — Proof of Mental State Unnecessary", "items": [{"text": "Subsection (a) does not apply to an offense under Section 49.031."}]}, {"name": "49.12 — Applicability to Certain Conduct", "items": [{"text": "Sections 49.07 and 49.08 do not apply to injury to or the death of an unborn child if the conduct charged is conduct committed by the mother of the unborn child. Added by Acts 2003, 78th Leg., ch. 822, Sec. 2.05, eff. Sept. 1, 2003. Page -2 - Page - 1 -"}]}, {"name": "50.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Consumer firework\" and \"fireworks\" have the meanings assigned by 49 C.F.R. Section 173.59. (2) \"Law enforcement officer\" means a person who is a peace officer under Article 2A.001, Code of Criminal Procedure, or a person who is a federal law enforcement officer, as defined by 5 U.S.C. Section 8331(20)."}]}, {"name": "50.02 — Unlawful Use of Fireworks", "items": [{"text": "Except as provided by Subsections (c) and (d), an offense under this section is a state jail felony."}, {"text": "An offense under this section that involves any firework that is not a consumer firework is a second degree felony."}, {"text": "Notwithstanding Subsection (c), an offense under this section is a felony of the first degree if the offense causes serious bodily injury to a person the actor knows is a law enforcement officer while the law enforcement officer is lawfully discharging an official duty or in retaliation or on account of an exercise of official power or performance of an official duty as a law enforcement officer."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(12, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_18_public_health_intoxication_fireworks_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

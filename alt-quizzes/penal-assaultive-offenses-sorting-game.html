@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Assaultive Offenses Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.22 &middot; Supplemental Practice</p>
+    <h1>Assaultive Offenses Sorting Game</h1>
+    <p class="sub">Fifteen boxes covering all of Chapter 22: assault, sexual assault, indecent assault, aggravated assault, aggravated sexual assault, injury to a child/elderly/disabled individual, abandoning or endangering a child, deadly conduct, consent as a defense, terroristic threat, aiding suicide, tampering with a consumer product, leaving a child in a vehicle, and harassment of public servants. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="15" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="13" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.22 (Assaultive Offenses) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "22.01 — Assault", "items": [{"text": "An offense under Subsection (a)(1) is a Class A misdemeanor, except that the offense is a felony of the third degree if the offense is committed against: (1) a person the actor knows is a public servant while the public servant is lawfully discharging an official duty, or in retaliation or on account of an exercise of official power or performance of an official duty as a public servant; (2) a person whose relationship to or association with the defendant is described by Section 71.0021(b), 71.003, or 71.005, Family Code, if: (A) it is shown on the trial of the offense that the defendant has been previously convicted of an offense that was committed: — (see Sec./Art. 22.01 for the complete list)"}, {"text": "Notwithstanding Subsections (b) and (c), an offense under Subsection (a) is a felony of the third degree if the offense is committed: (1) by an actor who is committed to a civil commitment facility; and (2) against: (A) a person the actor knows is an officer or employee of the Texas Civil Commitment Office: (i) while the officer or employee is lawfully discharging an official duty; or (ii) in retaliation for or on account of an exercise of official power or performance of an official duty by the officer or employee; or (B) a person the actor knows is contracting with the state to perform a service in a civil commitment facility or an employee of that person: (i) while the person or employee is engaged in performing a service within the scope of the contract; — (see Sec./Art. 22.01 for the complete list)"}, {"text": "Notwithstanding Subsection (b)(1), an offense under Subsection (a)(1) is a felony of the second degree if the offense is committed against a person the actor knows is a peace officer or judge while the officer or judge is lawfully discharging an official duty or in retaliation or on account of an exercise of official power or performance of an official duty as a peace officer or judge."}, {"text": "Notwithstanding Subsection (b)(2), an offense under Subsection (a)(1) is a felony of the second degree if: (1) the offense is committed against a person whose relationship to or association with the defendant is described by Section 71.0021(b), 71.003, or 71.005, Family Code; (2) it is shown on the trial of the offense that the defendant has been previously convicted of an offense that was committed: (A) against a person whose relationship to or association with the defendant is described by Section 71.0021(b), 71.003, or 71.005, Family Code; and (B) under: (i) this chapter, Chapter 19, or Section 20.03, 20.04, 21.11, or 25.11; (ii) Section 25.07, if the applicable violation was based on the commission of family violence as described by Subsection (a)(1) of that section; — (see Sec./Art. 22.01 for the complete list)"}, {"text": "Notwithstanding Subsection (b), an offense under Subsection (a)(1) is a felony of the third degree if it is shown on the trial of the offense that the actor committed the offense in the course of committing an offense under Section 20.05(a)(2)."}, {"text": "An offense under Subsection (a)(2) or (3) is a Class C misdemeanor, except that the offense is: (1) a Class A misdemeanor if the offense is committed under Subsection (a)(3) against an elderly individual or disabled individual, as those terms are defined by Section 22.04; (2) a Class B misdemeanor if the offense is committed by a person who is not a sports participant against a person the actor knows is a sports participant either: (A) while the participant is performing duties or responsibilities in the participant's capacity as a sports participant; or (B) in retaliation for or on account of the participant's performance of a duty or responsibility within the participant's capacity as a sports participant; — (see Sec./Art. 22.01 for the complete list)"}, {"text": "For purposes of Subsection (b), the actor is presumed to have known the person assaulted was a public servant, a security officer, an employee or agent of a utility, or emergency services personnel if the person was wearing a distinctive uniform or badge indicating the person's employment, agency, or status, as applicable."}, {"text": "The actor is presumed to have known the person assaulted was a person described by Subsection (b-1)(2)(A) or (B), as applicable, if the person was wearing a distinctive uniform or badge indicating the person's status as an officer or employee of the Texas Civil Commitment Office or a contractor or employee of a contractor performing a service in a civil commitment facility."}, {"text": "In this section: (1) \"Emergency services personnel\" includes firefighters, emergency medical services personnel as defined by Section 773.003, Health and Safety Code, emergency room personnel, and other individuals who, in the course and scope of employment or as a volunteer, provide services for the benefit of the general public during emergency situations. (1-a) \"Hospital personnel\" includes nurses, physicians, physician assistants, maintenance or janitorial staff, receptionists, and other individuals who are employed by or work in a facility that is licensed as a general hospital or special hospital, as those terms are defined by Section 241.003, Health and Safety Code, including a hospital maintained or operated by the state. — (see Sec./Art. 22.01 for the complete list)"}, {"text": "For the purposes of Subsections (b)(2)(A) and (b-3)(2): (1) a defendant has been previously convicted of an offense listed in those subsections committed against a person whose relationship to or association with the defendant is described by Section 71.0021(b), 71.003, or 71.005, Family Code, if the defendant was adjudged guilty of the offense or entered a plea of guilty or nolo contendere in return for a grant of deferred adjudication, regardless of whether the sentence for the offense was ever imposed or whether the sentence was probated and the defendant was subsequently discharged from community supervision; and (2) a conviction under the laws of another state for an offense containing elements that are substantially similar to the elements of an offense listed in those subsections — (see Sec./Art. 22.01 for the complete list)"}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or both sections."}]}, {"name": "22.011 — Sexual Assault", "items": [{"text": "A sexual assault under Subsection (a)(1) is without the consent of the other person if: (1) the actor compels the other person to submit or participate by the use of physical force, violence, or coercion; (2) the actor compels the other person to submit or participate by threatening to use force or violence against the other person or to cause harm to the other person, and the other person believes that the actor has the present ability to execute the threat; (3) the other person has not consented and the actor knows the other person is unconscious or physically unable to resist; (4) the actor knows that as a result of mental disease or defect the other person is at the time of the sexual assault incapable either of appraising the nature of the act or of resisting it; — (see Sec./Art. 22.011 for the complete list)"}, {"text": "In this section: (1) \"Child\" means a person younger than 17 years of age. (1-a) \"Consent\" has the meaning assigned by Section 1.07. (2) \"Spouse\" means a person who is legally married to another. (3) \"Health care services provider\" means: (A) a physician licensed under Subtitle B, Title 3, Occupations Code; (B) a chiropractor licensed under Chapter 201, Occupations Code; (C) a physical therapist licensed under Chapter 453, Occupations Code; (D) a physician assistant licensed under Chapter 204, Occupations Code; (E) a registered nurse, a vocational nurse, or an advanced practice nurse licensed under Chapter 301, Occupations Code; or (F) a massage therapist licensed under Chapter 455, Occupations Code. — (see Sec./Art. 22.011 for the complete list)"}, {"text": "It is a defense to prosecution under Subsection (a)(2) that the conduct consisted of medical care for the child and did not include any contact between the anus or sexual organ of the child and the mouth, anus, or sexual organ of the actor or a third party."}, {"text": "It is an affirmative defense to prosecution under Subsection (a)(2): (1) that the actor was the spouse of the child at the time of the offense; or (2) that: (A) the actor was not more than three years older than the victim and at the time of the offense: (i) was not required under Chapter 62, Code of Criminal Procedure, to register for life as a sex offender; or (ii) was not a person who under Chapter 62, Code of Criminal Procedure, had a reportable conviction or adjudication for an offense under this section; and (B) the victim: (i) was a child of 14 years of age or older; and (ii) was not: (a) a person whom the actor was prohibited from marrying or purporting to marry or with whom the actor was prohibited from living under the appearance of being married under Section 25.01; — (see Sec./Art. 22.011 for the complete list)"}, {"text": "An offense under this section is a felony of the second degree, except that an offense under this section is: (1) a felony of the first degree if the victim was: (A) a person whom the actor was prohibited from marrying or purporting to marry or with whom the actor was prohibited from living under the appearance of being married under Section 25.01; or (B) a person with whom the actor was prohibited from engaging in sexual intercourse or deviate sexual intercourse under Section 25.02; or (2) a state jail felony if the offense is committed under Subsection (a)(1) and the actor has not received express consent as described by Subsection (b)(12)."}]}, {"name": "22.012 — Indecent Assault", "items": [{"text": "An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if it is shown on the trial of the offense that: (A) the defendant has been previously convicted of an offense under this section, other than an offense punishable under Paragraph (B); or (B) the defendant is a health care services provider or a mental health services provider and the act is: (i) committed during the course of providing a treatment or service to the victim; and (ii) beyond the scope of generally accepted practices for the treatment or service; (2) a felony of the third degree if it is shown on the trial of the offense that the defendant has been previously convicted of an offense under this section that is punishable under Subdivision (1)(B); — (see Sec./Art. 22.012 for the complete list)"}, {"text": "An offense under this section is a Class A misdemeanor, except that the offense is: (1) a state jail felony if it is shown on the trial of the offense that: (A) the defendant has been previously convicted of an offense under this section, other than an offense punishable under Paragraph (B); or (B) the defendant is a health care services provider or a mental health services provider and the act is: (i) committed during the course of providing a treatment or service to the victim; and (ii) beyond the scope of generally accepted practices for the treatment or service; (2) a felony of the third degree if it is shown on the trial of the offense that the defendant has been previously convicted of an offense under this section that is punishable under Subdivision (1)(B); — (see Sec./Art. 22.012 for the complete list)"}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both."}, {"text": "In this section: (1) \"Disabled individual\" and \"elderly individual\" have the meanings assigned by Section 22.04. (2) \"Health care services provider\" and \"mental health services provider\" have the meanings assigned by Section 22.011."}]}, {"name": "22.02 — Aggravated Assault", "items": [{"text": "An offense under this section is a felony of the second degree, except that the offense is a felony of the first degree if: (1) the actor uses a deadly weapon during the commission of the assault and causes: (A) serious bodily injury to a person whose relationship to or association with the defendant is described by Section 71.0021(b), 71.003, or 71.005, Family Code; or (B) a traumatic brain or spine injury to another that results in a persistent vegetative state or irreversible paralysis; (2) regardless of whether the offense is committed under Subsection (a)(1) or (a)(2), the offense is committed: (A) by a public servant acting under color of the servant's office or employment; — (see Sec./Art. 22.02 for the complete list)"}, {"text": "The actor is presumed to have known the person assaulted was a public servant or a security officer if the person was wearing a distinctive uniform or badge indicating the person's employment as a public servant or status as a security officer."}, {"text": "The actor is presumed to have known the person assaulted was a person described by Subsection (b)(2)(F)(i) or (ii), as applicable, if the person was wearing a distinctive uniform or badge indicating the person's status as an officer or employee of the Texas Civil Commitment Office or a contractor or employee of a contractor performing a service in a civil commitment facility."}, {"text": "In this section: (1) \"Process server\" has the meaning assigned by Section 156.001, Government Code. (2) \"Security officer\" means a commissioned security officer as defined by Section 1702.002, Occupations Code, or a noncommissioned security officer registered under Section 1702.221, Occupations Code."}]}, {"name": "22.021 — Aggravated Sexual Assault", "items": [{"text": "In this section: (1) \"Child\" has the meaning assigned by Section 22.011(c). (2) \"Elderly individual\" has the meaning assigned by Section 22.04(c). (3) \"Disabled individual\" means a person older than 13 years of age who by reason of age or physical or mental disease, defect, or injury is substantially unable to protect the person's self from harm or to provide food, shelter, or medical care for the person's self."}, {"text": "An aggravated sexual assault under this section is without the consent of the other person if the aggravated sexual assault occurs under the same circumstances listed in Section 22.011(b)."}, {"text": "The defense provided by Section 22.011(d) applies to this section."}, {"text": "An offense under this section is a felony of the first degree."}, {"text": "The minimum term of imprisonment for an offense under this section is increased to 25 years if: (1) the victim of the offense is younger than 10 years of age at the time the offense is committed; or (2) the victim of the offense is younger than 14 years of age at the time the offense is committed and the actor commits the offense in a manner described by Subsection (a)(2)(A)."}]}, {"name": "22.04 — Injury to a Child, Elderly Individual, or Disabled Individual", "items": [{"text": "A person commits an offense if the person is an owner, operator, or employee of a group home, nursing facility, assisted living facility, boarding home facility, intermediate care facility for persons with an intellectual or developmental disability, or other institutional care facility and the person intentionally, knowingly, recklessly, or with criminal negligence by omission causes to a child, elderly individual, or disabled individual who is a resident of that group home or facility: (1) serious bodily injury; (2) serious mental deficiency, impairment, or injury; or (3) bodily injury."}, {"text": "An omission that causes a condition described by Subsection (a)(1), (2), or (3) or (a-1)(1), (2), or (3) is conduct constituting an offense under this section if: (1) the actor has a legal or statutory duty to act; or (2) the actor has assumed care, custody, or control of a child, elderly individual, or disabled individual."}, {"text": "In this section: (1) \"Child\" means a person 14 years of age or younger. (2) \"Elderly individual\" means a person 65 years of age or older. (3) \"Disabled individual\" means a person: (A) with one or more of the following: (i) autism spectrum disorder, as defined by Section 1355.001, Insurance Code; (ii) developmental disability, as defined by Section 112.042, Human Resources Code; (iii) intellectual disability, as defined by Section 591.003, Health and Safety Code; (iv) severe emotional disturbance, as defined by Section 261.001, Family Code; (v) traumatic brain injury, as defined by Section 92.001, Health and Safety Code; or (vi) mental illness, as defined by Section 571.003, Health and Safety Code; — (see Sec./Art. 22.04 for the complete list)"}, {"text": "For purposes of an omission that causes a condition described by Subsection (a)(1), (2), or (3), the actor has assumed care, custody, or control if the actor has by act, words, or course of conduct acted so as to cause a reasonable person to conclude that the actor has accepted responsibility for protection, food, shelter, or medical care for a child, elderly individual, or disabled individual. For purposes of an omission that causes a condition described by Subsection (a-1)(1), (2), or (3), the actor acting during the actor's capacity as owner, operator, or employee of a group home or facility described by Subsection (a-1) is considered to have accepted responsibility for protection, food, shelter, or medical care for the child, elderly individual, or disabled individual who is a — (see Sec./Art. 22.04 for the complete list)"}, {"text": "An offense under Subsection (a)(1) or (2) or (a-1)(1) or (2) is a felony of the first degree when the conduct is committed intentionally or knowingly. When the conduct is engaged in recklessly, the offense is a felony of the second degree."}, {"text": "An offense under Subsection (a)(3) or (a-1)(3) is a felony of the third degree when the conduct is committed intentionally or knowingly, except that an offense under Subsection (a)(3) is a felony of the second degree when the conduct is committed intentionally or knowingly and the victim is a disabled individual residing in a center, as defined by Section 555.001, Health and Safety Code, or in a facility licensed under Chapter 252, Health and Safety Code, and the actor is an employee of the center or facility whose employment involved providing direct care for the victim. When the conduct is engaged in recklessly, the offense is a state jail felony."}, {"text": "An offense under Subsection (a) is a state jail felony when the person acts with criminal negligence. An offense under Subsection (a-1) is a state jail felony when the person, with criminal negligence and by omission, causes a condition described by Subsection (a-1)(1), (2), or (3)."}, {"text": "A person who is subject to prosecution under both this section and another section of this code may be prosecuted under either or both sections. Section 3.04 does not apply to criminal episodes prosecuted under both this section and another section of this code. If a criminal episode is prosecuted under both this section and another section of this code and sentences are assessed for convictions under both sections, the sentences shall run concurrently."}, {"text": "It is an affirmative defense to prosecution under Subsection (b)(2) that before the offense the actor: (1) notified in person the child, elderly individual, or disabled individual that the actor would no longer provide the applicable care described by Subsection (d), and notified in writing the parents or a person, other than the actor, acting in loco parentis to the child, elderly individual, or disabled individual that the actor would no longer provide the applicable care described by Subsection (d); or (2) notified in writing the Department of Family and Protective Services that the actor would no longer provide the applicable care described by Subsection (d)."}, {"text": "Written notification under Subsection (i)(2) or (i)(3) is not effective unless it contains the name and address of the actor, the name and address of the child, elderly individual, or disabled individual, the type of care provided by the actor, and the date the care was discontinued."}, {"text": "It is a defense to prosecution under this section that the act or omission consisted of: (1) reasonable medical care occurring under the direction of or by a licensed physician; or (2) emergency medical care administered in good faith and with reasonable care by a person not licensed in the healing arts."}, {"text": "It is an affirmative defense to prosecution under this section: (1) that the act or omission was based on treatment in accordance with the tenets and practices of a recognized religious method of healing with a generally accepted record of efficacy; (2) for a person charged with an act of omission causing to a child, elderly individual, or disabled individual a condition described by Subsection (a)(1), (2), or (3) that: (A) there is no evidence that, on the date prior to the offense charged, the defendant was aware of an incident of injury to the child, elderly individual, or disabled individual and failed to report the incident; and (B) the person: — (see Sec./Art. 22.04 for the complete list)"}, {"text": "It is an affirmative defense to prosecution under Subsections (a)(1), (2), and (3) for injury to a disabled individual that the person did not know and could not reasonably have known that the individual was a disabled individual, as defined by Subsection (c), at the time of the offense."}]}, {"name": "22.041 — Abandoning or Endangering a Child, Elderly Individual, or Disabled Individual", "items": [{"text": "A person commits an offense if the person, having custody, care, or control of a child, elderly individual, or disabled individual, intentionally abandons the child or individual in any place under circumstances that expose the child or individual to an unreasonable risk of harm."}, {"text": "A person commits an offense if the person intentionally, knowingly, recklessly, or with criminal negligence, by act or omission, engages in conduct that places a child, elderly individual, or disabled individual in imminent danger of death, bodily injury, or physical or mental impairment."}, {"text": "For purposes of Subsection (c), it is presumed that a person engaged in conduct that places a child, elderly individual, or disabled individual in imminent danger of death, bodily injury, or physical or mental impairment if: (1) the person manufactured, possessed, or in any way introduced into the body of any person the controlled substance methamphetamine or a controlled substance listed in Penalty Group 1-B, Section 481.1022, Health and Safety Code, in the presence of the child, elderly individual, or disabled individual; (2) the person's conduct related to the proximity or accessibility of the controlled substance methamphetamine or a controlled substance listed in Penalty Group 1-B, Section 481.1022, Health and Safety Code, to the child, elderly individual, or disabled individual and — (see Sec./Art. 22.041 for the complete list)"}, {"text": "Except as provided by Subsection (e), an offense under Subsection (b) is: (1) a state jail felony if the actor abandoned the child, elderly individual, or disabled individual with intent to return for the child or individual; or (2) a felony of the third degree if the actor abandoned the child, elderly individual, or disabled individual without intent to return for the child or individual."}, {"text": "An offense under Subsection (b) is a felony of the second degree if the actor abandons the child, elderly individual, or disabled individual under circumstances that a reasonable person would believe would place the child or individual in imminent danger of death, bodily injury, or physical or mental impairment."}, {"text": "An offense under Subsection (c) is a state jail felony."}, {"text": "It is a defense to prosecution under Subsection (c) that the act or omission enables the child, elderly individual, or disabled individual to practice for or participate in an organized athletic event and that appropriate safety equipment and procedures are employed in the event."}, {"text": "It is an exception to the application of this section for abandoning or endangering a child that the actor voluntarily delivered the child to a designated emergency infant care provider under Section 262.302, Family Code."}]}, {"name": "22.05 — Deadly Conduct", "items": [{"text": "A person commits an offense if he knowingly discharges a firearm at or in the direction of: (1) one or more individuals; or (2) a habitation, building, or vehicle and is reckless as to whether the habitation, building, or vehicle is occupied."}, {"text": "Except as otherwise provided by this subsection, recklessness and danger are presumed if the actor knowingly pointed a firearm at or in the direction of another whether or not the actor believed the firearm to be loaded. The presumption under this subsection does not apply to a peace officer engaged in the lawful discharge of the officer's official duties."}, {"text": "For purposes of this section, \"building,\" \"habitation,\" and \"vehicle\" have the meanings assigned those terms by Section 30.01."}, {"text": "An offense under Subsection (a) is a Class A misdemeanor. An offense under Subsection (b) is a felony of the third degree."}, {"text": "Subsection (b)(1) does not apply to a peace officer if, at the time of the offense, the officer: (1) was engaged in the actual discharge of the officer's official duties; and (2) reasonably believed the discharge of the officer's firearm was justified under Chapter 9."}]}, {"name": "22.06 — Consent as Defense to Assaultive Conduct", "items": [{"text": "The defense to prosecution provided by Subsection (a) is not available to a defendant who commits an offense described by Subsection (a) as a condition of the defendant's or the victim's initiation or continued membership in a criminal street gang, as defined by Section 71.01."}]}, {"name": "22.07 — Terroristic Threat", "items": [{"text": "An offense under Subsection (a)(1) is a Class B misdemeanor."}, {"text": "An offense under Subsection (a)(2) is a Class B misdemeanor, except that the offense is a Class A misdemeanor if the offense: (1) is committed against a member of the person's family or household or otherwise constitutes family violence; or (2) is committed against a public servant."}, {"text": "Notwithstanding Subsection (c)(2), an offense under Subsection (a)(2) is a state jail felony if the offense is committed against a person the actor knows is a peace officer or judge."}, {"text": "An offense under Subsection (a)(3) is a Class A misdemeanor, unless the actor causes pecuniary loss of $1,500 or more to the owner of the building, room, place, or conveyance, in which event the offense is a state jail felony."}, {"text": "An offense under Subsection (a)(4), (a)(5), or (a)(6) is a felony of the third degree."}, {"text": "In this section: (1) \"Family\" has the meaning assigned by Section 71.003, Family Code. (2) \"Family violence\" has the meaning assigned by Section 71.004, Family Code. (3) \"Household\" has the meaning assigned by Section 71.005, Family Code."}, {"text": "For purposes of Subsection (d), the amount of pecuniary loss is the amount of economic loss suffered by the owner of the building, room, place, or conveyance as a result of the prevention or interruption of the occupation or use of the building, room, place, or conveyance."}]}, {"name": "22.08 — Aiding Suicide", "items": [{"text": "An offense under this section is a Class C misdemeanor unless the actor's conduct causes suicide or attempted suicide that results in serious bodily injury, in which event the offense is a state jail felony."}]}, {"name": "22.09 — Tampering with Consumer Product", "items": [{"text": "A person commits an offense if he knowingly or intentionally tampers with a consumer product knowing that the consumer product will be offered for sale to the public or as a gift to another."}, {"text": "A person commits an offense if he knowingly or intentionally threatens to tamper with a consumer product with the intent to cause fear, to affect the sale of the consumer product, or to cause bodily injury to any person."}, {"text": "An offense under Subsection (b) is a felony of the second degree unless a person suffers serious bodily injury, in which event it is a felony of the first degree. An offense under Subsection (c) is a felony of the third degree."}]}, {"name": "22.10 — Leaving a Child in a Vehicle", "items": [{"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "22.11 — Harassment by Persons in Certain Facilities; Harassment of Public Servant", "items": [{"text": "An offense under this section is a felony of the third degree."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section."}, {"text": "In this section, \"correctional or detention facility\" means: (1) a secure correctional facility; or (2) a \"secure correctional facility\" or a \"secure detention facility\" as defined by Section 51.02, Family Code, operated by or under contract with a juvenile board or the Texas Juvenile Justice Department or any other facility operated by or under contract with that department."}, {"text": "For purposes of Subsection (a)(3), the actor is presumed to have known the person was a public servant if the person was wearing a distinctive uniform or badge indicating the person's employment as a public servant."}, {"text": "For purposes of Subsection (a)(2), the actor is presumed to have known the person was an officer or employee of the Texas Civil Commitment Office or a person who contracts with the state to perform a service in a civil commitment facility or an employee of that person, as applicable, if the person was wearing a distinctive uniform or badge indicating the person's status as an officer or employee of the Texas Civil Commitment Office or a contractor or employee of a contractor performing a service in a civil commitment facility."}, {"text": "It is not a defense to prosecution under Subsection (a) that the actor warned any person that the actor intended to violate Subsection (a)."}]}, {"name": "22.12 — Applicability to Certain Conduct", "items": [{"text": "This chapter does not apply to conduct charged as having been committed against an individual who is an unborn child if the conduct is: (1) committed by the mother of the unborn child; (2) a lawful medical procedure performed by a physician or other health care provider with the requisite consent; (3) a lawful medical procedure performed by a physician or other licensed health care provider with the requisite consent as part of an assisted reproduction as defined by Section 160.102, Family Code; or (4) the dispensation of a drug in accordance with law or administration of a drug prescribed in accordance with law. Added by Acts 2003, 78th Leg., ch. 822, Sec. 2.04, eff. Sept. 1, 2003. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(13, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_04_assaultive_offenses_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

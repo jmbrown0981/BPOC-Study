@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Sexual Offenses Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.21 &middot; Supplemental Practice</p>
+    <h1>Sexual Offenses Sorting Game</h1>
+    <p class="sub">Fifteen boxes covering all of Chapter 21: definitions, continuous sexual abuse of a young child or disabled individual, public lewdness, indecent exposure, bestiality, indecency with a child, improper educator&ndash;student relationships, invasive visual recording, unlawful disclosure/production/transmission of intimate or sexually explicit visual material, voyeurism, and sexual coercion. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="15" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="11" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.21 (Sexual Offenses) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "21.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Deviate sexual intercourse\" means: (A) any contact between any part of the genitals of one person and the mouth or anus of another person; or (B) the penetration of the genitals or the anus of another person with an object. (2) \"Sexual contact\" means, except as provided by Section 21.11 or 21.12, any touching of the anus, breast, or any part of the genitals of another person with intent to arouse or gratify the sexual desire of any person. (3) \"Sexual intercourse\" means any penetration of the female sex organ by the male sex organ. (4) \"Spouse\" means a person to whom a person is legally married under Subtitle A, Title 1, Family Code, or a comparable law of another jurisdiction."}]}, {"name": "21.02 — Continuous Sexual Abuse of Young Child or Disabled Individual", "items": [{"text": "A person commits an offense if: (1) during a period that is 30 or more days in duration, the person commits two or more acts of sexual abuse, regardless of whether the acts of sexual abuse are committed against one or more victims; and (2) at the time of the commission of each of the acts of sexual abuse, the actor is 17 years of age or older and the victim is: (A) a child younger than 14 years of age, regardless of whether the actor knows the age of the victim at the time of the offense; or (B) a disabled individual."}, {"text": "For purposes of this section, \"act of sexual abuse\" means any act that is a violation of one or more of the following penal laws: (1) aggravated kidnapping under Section 20.04(a)(4), if the actor committed the offense with the intent to violate or abuse the victim sexually; (2) indecency with a child under Section 21.11(a)(1), if the actor committed the offense in a manner other than by touching, including touching through clothing, the breast of a child; (3) sexual assault under Section 22.011; (4) aggravated sexual assault under Section 22.021; (5) burglary under Section 30.02, if the offense is punishable under Subsection (d) of that section and the actor committed the offense with the intent to commit an offense listed in Subdivisions (1)-(4); — (see Sec./Art. 21.02 for the complete list)"}, {"text": "If a jury is the trier of fact, members of the jury are not required to agree unanimously on which specific acts of sexual abuse were committed by the defendant or the exact date when those acts were committed. The jury must agree unanimously that the defendant, during a period that is 30 or more days in duration, committed two or more acts of sexual abuse."}, {"text": "A defendant may not be convicted in the same criminal action of an offense listed under Subsection (c) the victim of which is the same victim as a victim of the offense alleged under Subsection (b) unless the offense listed in Subsection (c): (1) is charged in the alternative; (2) occurred outside the period in which the offense alleged under Subsection (b) was committed; or (3) is considered by the trier of fact to be a lesser included offense of the offense alleged under Subsection (b)."}, {"text": "A defendant may not be charged with more than one count under Subsection (b) if all of the specific acts of sexual abuse that are alleged to have been committed are alleged to have been committed against a single victim."}, {"text": "With respect to a prosecution under this section involving only one or more victims described by Subsection (b)(2)(A), it is an affirmative defense to prosecution under this section that the actor: (1) was not more than five years older than: (A) the victim of the offense, if the offense is alleged to have been committed against only one victim; or (B) the youngest victim of the offense, if the offense is alleged to have been committed against more than one victim; (2) did not use duress, force, or a threat against a victim at the time of the commission of any of the acts of sexual abuse alleged as an element of the offense; and (3) at the time of the commission of any of the acts of sexual abuse alleged as an element of the offense: — (see Sec./Art. 21.02 for the complete list)"}, {"text": "An offense under this section is a felony of the first degree, punishable by imprisonment in the Texas Department of Criminal Justice for life, or for any term of not more than 99 years or less than 25 years."}]}, {"name": "21.03 — Continuous Sexual Abuse", "items": [{"text": "For purposes of this section, \"act of sexual abuse\" means any act that is a violation of one or more of the following penal laws: (1) aggravated kidnapping under Section 20.04(a)(4), if the actor committed the offense with the intent to violate or abuse the victim sexually; (2) indecency with a child under Section 21.11(a)(1), if the actor committed the offense in a manner other than by touching, including touching through clothing, the breast of a child; (3) sexual assault under Section 22.011; (4) aggravated sexual assault under Section 22.021; (5) burglary under Section 30.02, if the offense is punishable under Subsection (d) of that section and the actor committed the offense with the intent to commit an offense listed in Subdivisions (1)-(4); — (see Sec./Art. 21.03 for the complete list)"}, {"text": "If a jury is the trier of fact, members of the jury are not required to agree unanimously on which specific acts of sexual abuse were committed by the defendant or the exact date when those acts were committed. The jury must agree unanimously that the defendant, during a period that is 30 or more days in duration, committed two or more acts of sexual abuse against two or more victims."}, {"text": "A defendant may not be convicted in the same criminal action of an offense listed under Subsection (b) the victim of which is the same victim as a victim of the offense under Subsection (a) unless the offense listed in Subsection (b): (1) is charged in the alternative; (2) occurred outside the period in which the offense alleged under Subsection (a) was committed; or (3) is considered by the trier of fact to be a lesser included offense of the offense alleged under Subsection (a)."}, {"text": "A defendant may not be charged with more than one count under Subsection (a) if all of the specific acts of sexual abuse that are alleged to have been committed are alleged to have been committed against only two victims."}, {"text": "With respect to a prosecution under this section involving only two or more victims younger than 17 years of age, it is an affirmative defense to prosecution under this section that the actor: (1) was not more than five years older than the youngest victim of the offense; (2) did not use duress, force, or a threat against a victim at the time of the commission of any of the acts of sexual abuse alleged as an element of the offense; and (3) at the time of the commission of any of the acts of sexual abuse alleged as an element of the offense: (A) was not required under Chapter 62, Code of Criminal Procedure, to register for life as a sex offender; — (see Sec./Art. 21.03 for the complete list)"}, {"text": "An offense under this section is a felony of the first degree. Section 21.06 was declared unconstitutional by Lawrence v. Texas, 123 S.Ct. 2472."}]}, {"name": "21.06 — Homosexual Conduct", "items": [{"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "21.07 — Public Lewdness", "items": [{"text": "A person commits an offense if the person knowingly engages in any of the following acts in a public place or, if not in a public place, the person is reckless about whether another is present who will be offended or alarmed by the person's: (1) act of sexual intercourse; (2) act of deviate sexual intercourse; or (3) act of sexual contact."}, {"text": "An offense under this section is a Class A misdemeanor, except that the offense is a felony of the third degree if the actor is civilly committed as a sexually violent predator under Chapter 841, Health and Safety Code."}]}, {"name": "21.08 — Indecent Exposure", "items": [{"text": "An offense under this section is a Class B misdemeanor, except that the offense is: (1) a Class A misdemeanor if it is shown on the trial of the offense that the defendant has been previously convicted one time of an offense under this section; (2) a state jail felony if it is shown on the trial of the offense that the defendant has been previously convicted two or more times of an offense under this section; or (3) a felony of the third degree if the actor is civilly committed as a sexually violent predator under Chapter 841, Health and Safety Code."}]}, {"name": "21.09 — Bestiality", "items": [{"text": "An offense under this section is a state jail felony, unless the offense is committed under Subsection (a)(9) or results in serious bodily injury or death of the animal, in which event the offense is a felony of the second degree."}, {"text": "It is an exception to the application of this section that the conduct engaged in by the actor is a generally accepted and otherwise lawful animal husbandry or veterinary practice."}]}, {"name": "21.11 — Indecency with a Child", "items": [{"text": "It is an affirmative defense to prosecution under this section that the actor: (1) was not more than three years older than the victim and of the opposite sex; (2) did not use duress, force, or a threat against the victim at the time of the offense; and (3) at the time of the offense: (A) was not required under Chapter 62, Code of Criminal Procedure, to register for life as a sex offender; or (B) was not a person who under Chapter 62 had a reportable conviction or adjudication for an offense under this section."}, {"text": "It is an affirmative defense to prosecution under this section that the actor was the spouse of the child at the time of the offense."}, {"text": "In this section, \"sexual contact\" means the following acts, if committed with the intent to arouse or gratify the sexual desire of any person: (1) any touching by a person, including touching through clothing, of the anus, breast, or any part of the genitals of a child; or (2) any touching of any part of the body of a child, including touching through clothing, with the anus, breast, or any part of the genitals of a person."}, {"text": "An offense under Subsection (a)(1) is a felony of the second degree and an offense under Subsection (a)(2) is a felony of the third degree."}]}, {"name": "21.12 — Improper Relationship Between Educator and Student", "items": [{"text": "An offense under this section is a felony of the second degree."}, {"text": "It is an affirmative defense to prosecution under this section that: (1) the actor was the spouse of the enrolled person at the time of the offense; or (2) the actor was not more than three years older than the enrolled person and, at the time of the offense, the actor and the enrolled person were in a relationship that began before the actor's employment at a public or private primary or secondary school."}, {"text": "If conduct constituting an offense under this section also constitutes an offense under another section of this code, the actor may be prosecuted under either section or both sections."}, {"text": "The name of a person who is enrolled in a public or private primary or secondary school and involved in an improper relationship with an educator as provided by Subsection (a) may not be released to the public and is not public information under Chapter 552, Government Code."}, {"text": "Except as otherwise provided by this subsection, a public or private primary or secondary school, or a person or entity that operates a public or private primary or secondary school, may not release externally to the general public the name of an employee of the school who is accused of committing an offense under this section until the employee is indicted for the offense. The school, or the person or entity that operates the school, may release the name of the accused employee regardless of whether the employee has been indicted for the offense as necessary for the school to: (1) report the accusation: (A) to the Texas Education Agency, another state agency, or local law enforcement or as otherwise required by law; — (see Sec./Art. 21.12 for the complete list)"}, {"text": "In this section, \"sexual contact\" means the following acts, if committed with the intent to arouse or gratify the sexual desire of any person: (1) any touching by an employee of a public or private primary or secondary school of the anus, breast, or any part of the genitals of: (A) an enrolled person described by Subsection (a)(1) or (a)(2)(A); or (B) a student participant described by Subsection (a)(2)(B); or (2) any touching of any part of the body of the enrolled person or student participant with the anus, breast, or any part of the genitals of the employee."}]}, {"name": "21.15 — Invasive Visual Recording", "items": [{"text": "A person commits an offense if, without the other person's consent and with intent to invade the privacy of the other person, the person: (1) photographs or by videotape or other electronic means records, broadcasts, or transmits a visual image of an intimate area of another person if the other person has a reasonable expectation that the intimate area is not subject to public view; (2) photographs or by videotape or other electronic means records, broadcasts, or transmits a visual image of another person in a place in which a person has a reasonable expectation of privacy; or (3) knowing the character and content of the photograph, recording, broadcast, or transmission, promotes a photograph, recording, broadcast, or transmission described by Subdivision (1) or (2)."}, {"text": "An offense under this section is a state jail felony."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}, {"text": "For purposes of Subsection (b)(2), a sign or signs posted indicating that the person is being photographed or that a visual image of the person is being recorded, broadcast, or transmitted is not sufficient to establish the person's consent under that subdivision."}]}, {"name": "21.16 — Unlawful Disclosure or Promotion of Intimate Visual Material", "items": [{"text": "A person commits an offense if: (1) without the effective consent of the depicted person and with the intent to harm that person, the person discloses visual material depicting another person with the person's intimate parts exposed or engaged in sexual conduct; (2) at the time of the disclosure, the person knows or has reason to believe that the visual material was obtained by the person or created under circumstances in which the depicted person had a reasonable expectation that the visual material would remain private; (3) the disclosure of the visual material causes harm to the depicted person; and (4) the disclosure of the visual material reveals the identity of the depicted person in any manner, including through: — (see Sec./Art. 21.16 for the complete list)"}, {"text": "A person commits an offense if the person intentionally threatens to disclose, without the consent of the depicted person, visual material depicting another person with the person's intimate parts exposed or engaged in sexual conduct and the actor makes the threat to obtain a benefit: (1) in return for not making the disclosure; or (2) in connection with the threatened disclosure."}, {"text": "A person commits an offense if, knowing the character and content of the visual material, the person promotes visual material described by Subsection (b) on an Internet website or other forum for publication that is owned or operated by the person."}, {"text": "It is not a defense to prosecution under this section that the depicted person: (1) created or consented to the creation of the visual material; or (2) voluntarily transmitted the visual material to the actor."}, {"text": "It is an affirmative defense to prosecution under Subsection (b) or (d) that: (1) the disclosure or promotion is made in the course of: (A) lawful and common practices of law enforcement or medical treatment; (B) reporting unlawful activity; or (C) a legal proceeding, if the disclosure or promotion is permitted or required by law; (2) the disclosure or promotion consists of visual material depicting in a public or commercial setting only a person's voluntary exposure of: (A) the person's intimate parts; or (B) the person engaging in sexual conduct; or (3) the actor is an interactive computer service, as defined by 47 U.S.C. Section 230, and the disclosure or promotion consists of visual material provided by another person."}, {"text": "An offense under this section is a state jail felony."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "21.165 — Unlawful Production or Distribution of Certain Sexually Explicit Media", "items": [{"text": "A person commits an offense if, without the effective consent of the person appearing to be depicted, the person knowingly produces or distributes by electronic means deep fake media that appears to depict the person: (1) with visible computer-generated intimate parts or with the visible intimate parts of another human being as the intimate parts of the person; or (2) engaging in sexual conduct in which the person did not engage."}, {"text": "A person commits an offense if the person intentionally threatens to produce or distribute deep fake media with the intent to coerce, extort, harass, or intimidate another person."}, {"text": "Consent required by Subsection (b) is valid only if the person appearing to be depicted knowingly and voluntarily signed a written agreement that was drafted in plain language. The agreement must include: (1) a general description of the deep fake media; and (2) if applicable, the audiovisual work into which the deep fake media will be incorporated."}, {"text": "An offense under Subsection (b) is a Class A misdemeanor, except that the offense is a felony of the third degree if it is shown on the trial of the offense that: (1) the actor has been previously convicted of an offense under this section; or (2) the person appearing to be depicted is younger than 18 years of age."}, {"text": "An offense under Subsection (b-1) is a Class B misdemeanor, except that the offense is a Class A misdemeanor if it is shown on the trial of the offense that: (1) the actor has been previously convicted of an offense under this section; or (2) the actor threatened to produce or distribute deep fake media appearing to depict a person younger than 18 years of age."}, {"text": "It is not a defense to prosecution under this section that the deep fake media: (1) contains a disclaimer stating that the media was unauthorized or that the person appearing to be depicted did not participate in the creation or development of the deep fake media; or (2) indicates, through a label or otherwise, that the depiction is not authentic."}, {"text": "It is an affirmative defense to prosecution under this section that the production or distribution of the deep fake media occurs in the course of: (1) lawful and common practices of law enforcement; (2) reporting unlawful activity; or (3) a legal proceeding, if the production or distribution is permitted or required by law."}, {"text": "It is an affirmative defense to prosecution under Subsection (b) that the actor: (1) is an Internet service provider, cloud service provider, cybersecurity service provider, communication service provider, or telecommunications network that transmits data; and (2) acted solely in a technical, automatic, or intermediate nature."}, {"text": "It is an affirmative defense to prosecution under Subsection (b) that the actor: (1) is a provider or developer of a publicly accessible artificial intelligence application or software that was used in the creation of the deep fake media; (2) included a prohibition against the creation of deep fake media prohibited by this section in the actor's terms and conditions or user policies that are required to be acknowledged by a user before the user is granted access to the artificial intelligence application or software; and (3) took affirmative steps to prevent the creation of deep fake media prohibited by this section through technological tools, such as: (A) training the artificial intelligence application or software to identify deep fake media prohibited by this section; — (see Sec./Art. 21.165 for the complete list)"}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section or the other law."}, {"text": "The court shall order a defendant convicted of an offense under this section to make restitution to the victim of the offense for any psychological, financial, or reputational harm incurred by the victim as a result of the offense."}]}, {"name": "21.17 — Voyeurism", "items": [{"text": "Except as provided by Subsection (c) or (d), an offense under this section is a Class A misdemeanor."}, {"text": "An offense under this section is a state jail felony if it is shown on the trial of the offense that: (1) the actor has previously been convicted of an offense under this section; (2) the victim was a child younger than 18 years of age at the time of the offense; or (3) the offense was committed in a location that was on the premises of a postsecondary educational institution."}, {"text": "An offense under this section is a felony of the third degree if it is shown on the trial of the offense that: (1) the victim was a child younger than 18 years of age at the time of the offense; and (2) the actor has previously been convicted of an offense punishable under Subsection (c)(2)."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}, {"text": "In this section, \"postsecondary educational institution\" and \"premises\" have the meanings assigned by Section 12.502."}]}, {"name": "21.18 — Sexual Coercion", "items": [{"text": "A person commits an offense if the person intentionally threatens, including by coercion or extortion, to commit an offense under Chapter 43 or Section 20A.02(a)(3), (4), (7), or (8), 21.02, 21.03, 21.08, 21.11, 21.12, 21.15, 21.16, 21.17, 22.011, or 22.021 to obtain, in return for not committing the threatened offense or in connection with the threatened offense, any of the following benefits: (1) intimate visual material; (2) an act involving sexual conduct causing arousal or gratification; or (3) a monetary benefit or other benefit of value."}, {"text": "A person commits an offense if the person intentionally threatens, including by coercion or extortion, to commit an offense under Chapter 19 or 20 or Section 20A.02(a)(1), (2), (5), or (6) to obtain, in return for not committing the threatened offense or in connection with the threatened offense, either of the following benefits: (1) intimate visual material; or (2) an act involving sexual conduct causing arousal or gratification."}, {"text": "This section applies to a threat regardless of how that threat is communicated, including a threat transmitted through e-mail or an Internet website, social media account, or chat room and a threat made by other electronic or technological means."}, {"text": "An offense under this section is a state jail felony, except that the offense is a felony of the third degree if it is shown on the trial of the offense that the defendant has previously been convicted of an offense under this section."}]}, {"name": "21.19 — Unlawful Electronic Transmission of Sexually Explicit Visual Material", "items": [{"text": "A person commits an offense if the person knowingly transmits by electronic means visual material that: (1) depicts: (A) any person engaging in sexual conduct or with the person's intimate parts exposed; or (B) covered genitals of a male person that are in a discernibly turgid state; and (2) is not sent at the request of or with the express consent of the recipient."}, {"text": "An offense under this section is a Class C misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(11, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_03_sexual_offenses_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

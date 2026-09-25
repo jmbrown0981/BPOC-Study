@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Penal Code Bribery, Perjury &amp; Official Falsification Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Texas Penal Code &middot; Ch.36 &amp; 37 &middot; Supplemental Practice</p>
+    <h1>Bribery, Perjury &amp; Official Falsification Sorting Game</h1>
+    <p class="sub">Twenty-seven boxes covering Chapter 36 (Bribery, Coercion of a Public Servant or Voter, Improper Influence, Tampering With a Witness, Obstruction or Retaliation, Acceptance/Offering of Gifts and Honoraria) and Chapter 37 (Perjury, Aggravated Perjury, Materiality, False Report to a Peace Officer or Regarding a Missing Child, Tampering With/Fabricating Physical Evidence, Tampering With a Governmental Record, Impersonating a Public Servant, and Fraudulent Filing of a Financing Statement). Boxes default to a collapsed view given the size. The cards are each section's first-level subsections.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="27" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="9" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from Penal Code Ch.36 (Bribery &amp; Corrupt Influence), Ch.37 (Perjury &amp; Other Falsification) &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "36.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Custody\" means: (A) detained or under arrest by a peace officer; or (B) under restraint by a public servant pursuant to an order of a court. (2) \"Party official\" means a person who holds any position or office in a political party, whether by election, appointment, or employment. (3) \"Benefit\" means anything reasonably regarded as pecuniary gain or pecuniary advantage, including benefit to any other person in whose welfare the beneficiary has a direct and substantial interest. (4) \"Vote\" means to cast a ballot in an election regulated by law."}]}, {"name": "36.02 — Bribery", "items": [{"text": "It is no defense to prosecution under this section that a person whom the actor sought to influence was not qualified to act in the desired way whether because he had not yet assumed office or he lacked jurisdiction or for any other reason."}, {"text": "It is no defense to prosecution under this section that the benefit is not offered or conferred or that the benefit is not solicited or accepted until after: (1) the decision, opinion, recommendation, vote, or other exercise of discretion has occurred; or (2) the public servant ceases to be a public servant."}, {"text": "It is an exception to the application of Subdivisions (1), (2), and (3) of Subsection (a) that the benefit is a political contribution as defined by Title 15, Election Code, or an expenditure made and reported in accordance with Chapter 305, Government Code."}, {"text": "An offense under this section is a felony of the second degree."}]}, {"name": "36.03 — Coercion of Public Servant or Voter", "items": [{"text": "An offense under this section is a Class A misdemeanor unless the coercion is a threat to commit a felony, in which event it is a felony of the third degree."}, {"text": "It is an exception to the application of Subsection (a)(1) of this section that the person who influences or attempts to influence the public servant is a member of the governing body of a governmental entity, and that the action that influences or attempts to influence the public servant is an official action taken by the member of the governing body. For the purposes of this subsection, the term \"official action\" includes deliberations by the governing body of a governmental entity."}]}, {"name": "36.04 — Improper Influence", "items": [{"text": "For purposes of this section, \"adjudicatory proceeding\" means any proceeding before a court or any other agency of government in which the legal rights, powers, duties, or privileges of specified parties are determined."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "36.05 — Tampering with Witness", "items": [{"text": "A witness or prospective witness in an official proceeding commits an offense if he knowingly solicits, accepts, or agrees to accept any benefit on the representation or understanding that he will do any of the things specified in Subsection (a)."}, {"text": "It is a defense to prosecution under Subsection (a)(5) that the benefit received was: (1) reasonable restitution for damages suffered by the complaining witness as a result of the offense; and (2) a result of an agreement negotiated with the assistance or acquiescence of an attorney for the state who represented the state in the case."}, {"text": "An offense under this section is a felony of the third degree, except that if the official proceeding is part of the prosecution of a criminal case, an offense under this section is the same category of offense as the most serious offense charged in that criminal case."}, {"text": "Notwithstanding Subsection (d), if the most serious offense charged is a capital felony, an offense under this section is a felony of the first degree."}, {"text": "Notwithstanding Subsection (d), if the underlying official proceeding involves family violence, as defined by Section 71.004, Family Code, an offense under this section is the greater of: (1) a felony of the third degree; or (2) the most serious offense charged in the criminal case."}, {"text": "Notwithstanding Subsections (d) and (e-1), if the underlying official proceeding involves family violence, as defined by Section 71.004, Family Code, and it is shown at the trial of the offense that the defendant has previously been convicted of an offense involving family violence under the laws of this state or another state, an offense under this section is the greater of: (1) a felony of the second degree; or (2) the most serious offense charged in the criminal case."}, {"text": "For purposes of Subsection (a), a person is considered to coerce a witness or prospective witness if the person commits an act of family violence as defined by Section 71.004, Family Code, that is perpetrated, in part, with the intent to cause the witness's or prospective witness's unavailability or failure to comply and the offense is punishable under Subsection (e-1) or (e-2), as applicable."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "36.06 — Obstruction or Retaliation", "items": [{"text": "A person commits an offense if the person posts on a publicly accessible website or discloses through an electronic communication the residence address or telephone number of an individual the actor knows is a public servant or a member of a public servant's family or household with the intent to cause harm or a threat of harm to the individual or a member of the individual's family or household in retaliation for or on account of the service or status of the individual as a public servant."}, {"text": "In this section: (1) \"Electronic communication\" has the meaning assigned by Section 42.07. (1-a) \"Honorably retired peace officer\" means a peace officer who: (A) did not retire in lieu of any disciplinary action; (B) was eligible to retire from a law enforcement agency or was ineligible to retire only as a result of an injury received in the course of the officer's employment with the agency; and (C) is entitled to receive a pension or annuity for service as a law enforcement officer or is not entitled to receive a pension or annuity only because the law enforcement agency that employed the officer does not offer a pension or annuity to its employees. (2) \"Informant\" means a person who has communicated information to the government in connection with any governmental function. — (see Sec./Art. 36.06 for the complete list)"}, {"text": "An offense under this section is a felony of the third degree, except that the offense is a felony of the second degree if: (1) the victim of the offense was harmed or threatened because of the victim's service or status as a juror; or (2) the actor's conduct is described by Subsection (a-1) and results in the bodily injury of a public servant or a member of a public servant's family or household."}, {"text": "For purposes of an offense under Subsection (a-1) involving the posting of a residence address or telephone number on a publicly accessible website, it is prima facie evidence of the intent to cause harm or a threat of harm to an individual the person knows is a public servant or a member of a public servant's family or household if the actor: (1) receives a written demand from the individual to not disclose the address or telephone number for reasons of safety; and (2) either: (A) fails to remove the address or telephone number from the publicly accessible website within a period of 48 hours after receiving the demand; or (B) reposts the address or telephone number on the same or a different publicly accessible website, or makes the information publicly available through another medium, — (see Sec./Art. 36.06 for the complete list)"}]}, {"name": "36.07 — Acceptance of Honorarium", "items": [{"text": "This section does not prohibit a public servant from accepting transportation and lodging expenses in connection with a conference or similar event in which the public servant renders services, such as addressing an audience or engaging in a seminar, to the extent that those services are more than merely perfunctory, or from accepting meals in connection with such an event."}, {"text": "Transportation, lodging, and meals described by Subsection (b) are not political contributions as defined by Title 15, Election Code."}, {"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "36.08 — Gift to Public Servant by Person Subject to His Jurisdiction", "items": [{"text": "A public servant in an agency having custody of prisoners commits an offense if he solicits, accepts, or agrees to accept any benefit from a person the public servant knows to be in his custody or the custody of his agency."}, {"text": "A public servant in an agency carrying on civil or criminal litigation on behalf of government commits an offense if he solicits, accepts, or agrees to accept any benefit from a person against whom the public servant knows litigation is pending or contemplated by the public servant or his agency."}, {"text": "A public servant who exercises discretion in connection with contracts, purchases, payments, claims, or other pecuniary transactions of government commits an offense if he solicits, accepts, or agrees to accept any benefit from a person the public servant knows is interested in or likely to become interested in any contract, purchase, payment, claim, or transaction involving the exercise of his discretion."}, {"text": "A public servant who has judicial or administrative authority, who is employed by or in a tribunal having judicial or administrative authority, or who participates in the enforcement of the tribunal's decision, commits an offense if he solicits, accepts, or agrees to accept any benefit from a person the public servant knows is interested in or likely to become interested in any matter before the public servant or tribunal."}, {"text": "A member of the legislature, the governor, the lieutenant governor, or a person employed by a member of the legislature, the governor, the lieutenant governor, or an agency of the legislature commits an offense if he solicits, accepts, or agrees to accept any benefit from any person."}, {"text": "A public servant who is a hearing examiner employed by an agency performing regulatory functions and who conducts hearings in contested cases commits an offense if the public servant solicits, accepts, or agrees to accept any benefit from any person who is appearing before the agency in a contested case, who is doing business with the agency, or who the public servant knows is interested in any matter before the public servant. The exception provided by Sec. 36.10(b) does not apply to a benefit under this subsection."}, {"text": "An offense under this section is a Class A misdemeanor."}, {"text": "A public servant who receives an unsolicited benefit that the public servant is prohibited from accepting under this section may donate the benefit to a governmental entity that has the authority to accept the gift or may donate the benefit to a recognized tax-exempt charitable organization formed for educational, religious, or scientific purposes."}]}, {"name": "36.09 — Offering Gift to Public Servant", "items": [{"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "36.10 — Non-Applicable", "items": [{"text": "Section 36.08 (Gift to Public Servant) does not apply to food, lodging, transportation, or entertainment accepted as a guest and, if the donee is required by law to report those items, reported by the donee in accordance with that law."}, {"text": "Section 36.09 (Offering Gift to Public Servant) does not apply to food, lodging, transportation, or entertainment accepted as a guest and, if the donor is required by law to report those items, reported by the donor in accordance with that law."}, {"text": "Section 36.08 (Gift to Public Servant) does not apply to a gratuity accepted and reported in accordance with Section 11.0262, Parks and Wildlife Code. Section 36.09 (Offering Gift to Public Servant) does not apply to a gratuity that is offered in accordance with Section 11.0262, Parks and Wildlife Code."}, {"text": "In this section, \"first responder\" means: (1) a peace officer whose duties include responding rapidly to an emergency; (2) fire protection personnel, as that term is defined by Section 419.021, Government Code; (3) a volunteer firefighter who performs firefighting duties on behalf of a political subdivision and who is not serving as a member of the Texas Legislature or holding a statewide elected office; (4) an ambulance driver; or (5) an individual certified as emergency medical services personnel by the Department of State Health Services. Page -2 - Page - 1 -"}]}, {"name": "37.01 — Definitions", "items": [{"text": "In this chapter: (1) \"Court record\" means a decree, judgment, order, subpoena, warrant, minutes, or other document issued by a court of: (A) this state; (B) another state; (C) the United States; (D) a foreign country recognized by an act of congress or a treaty or other international convention to which the United States is a party; (E) an Indian tribe recognized by the United States; or (F) any other jurisdiction, territory, or protectorate entitled to full faith and credit in this state under the United States Constitution. (2) \"Governmental record\" means: (A) anything belonging to, received by, or kept by government for information, including a court record; (B) anything required by law to be kept by others for information of government; — (see Sec./Art. 37.01 for the complete list)"}]}, {"name": "37.02 — Perjury", "items": [{"text": "An offense under this section is a Class A misdemeanor."}]}, {"name": "37.03 — Aggravated Perjury", "items": [{"text": "An offense under this section is a felony of the third degree."}]}, {"name": "37.04 — Materiality", "items": [{"text": "It is no defense to prosecution under Section 37.03 (Aggravated Perjury) that the declarant mistakenly believed the statement to be immaterial."}, {"text": "Whether a statement is material in a given factual situation is a question of law."}]}, {"name": "37.05 — Retraction", "items": [{"text": "It is a defense to prosecution under Section 37.03 (Aggravated Perjury) that the actor retracted his false statement: (1) before completion of the testimony at the official proceeding; and (2) before it became manifest that the falsity of the statement would be exposed."}]}, {"name": "37.06 — Inconsistent Statements", "items": [{"text": "An information or indictment for perjury under Section 37.02 or aggravated perjury under Section 37.03 that alleges that the declarant has made statements under oath, both of which cannot be true, need not allege which statement is false. At the trial the prosecution need not prove which statement is false."}]}, {"name": "37.07 — Irregularities No Defense", "items": [{"text": "It is no defense to prosecution under Section 37.02 (Perjury) or 37.03 (Aggravated Perjury) that a document was not sworn to if the document contains a recital that it was made under oath, the declarant was aware of the recital when he signed the document, and the document contains the signed jurat of a public servant authorized to administer oaths."}]}, {"name": "37.08 — False Report to Peace Officer, Federal Special Investigator, Law Enforcement Employee, Corrections Officer, or Jailer", "items": [{"text": "In this section, \"law enforcement agency\" has the meaning assigned by Article 59.01, Code of Criminal Procedure."}, {"text": "An offense under this section is a Class B misdemeanor."}]}, {"name": "37.081 — False Report Regarding Missing Child or Missing Person", "items": [{"text": "An offense under this section is a Class C misdemeanor."}]}, {"name": "37.082 — Misrepresenting Child as Family Member at Port of Entry", "items": [{"text": "A person commits an offense if the person, with intent to commit an offense under Section 20A.02, knowingly misrepresents a child as a family member of the person to a peace officer or federal special investigator at a port of entry."}, {"text": "An offense under this section is a Class B misdemeanor."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under another law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "37.09 — Tampering with or Fabricating Physical Evidence", "items": [{"text": "This section shall not apply if the record, document, or thing concealed is privileged or is the work product of the parties to the investigation or official proceeding."}, {"text": "An offense under Subsection (a) or Subsection (d)(1) is a felony of the third degree, unless the thing altered, destroyed, or concealed is a human corpse, in which case the offense is a felony of the second degree. An offense under Subsection (d)(2) is a Class A misdemeanor."}, {"text": "It is a defense to prosecution under Subsection (a) or (d)(1) that the record, document, or thing was visual material prohibited under Section 43.261 that was destroyed as described by Subsection (f)(3) of that section."}, {"text": "A person commits an offense if the person: (1) knowing that an offense has been committed, alters, destroys, or conceals any record, document, or thing with intent to impair its verity, legibility, or availability as evidence in any subsequent investigation of or official proceeding related to the offense; or (2) observes a human corpse under circumstances in which a reasonable person would believe that an offense had been committed, knows or reasonably should know that a law enforcement agency is not aware of the existence of or location of the corpse, and fails to report the existence of and location of the corpse to a law enforcement agency."}, {"text": "In this section, \"human corpse\" has the meaning assigned by Section 42.08."}]}, {"name": "37.10 — Tampering with Governmental Record", "items": [{"text": "It is an exception to the application of Subsection (a)(3) that the governmental record is destroyed pursuant to legal authorization or transferred under Section 441.204, Government Code. With regard to the destruction of a local government record, legal authorization includes compliance with the provisions of Subtitle C, Title 6, Local Government Code."}, {"text": "(1) Except as provided by Subdivisions (2), (3), (4), (5), and (6), and by Subsection (d), an offense under this section is a Class A misdemeanor unless the actor's intent is to defraud or harm another, in which event the offense is a state jail felony. (2) An offense under this section is a felony of the third degree if it is shown on the trial of the offense that the governmental record was: (A) a public school record, report, or assessment instrument required under Chapter 39, Education Code, data reported for a school district or open-enrollment charter school to the Texas Education Agency through the Public Education Information Management System (PEIMS) described by Sections 48.008 and 48.009, Education Code, under a law or rule requiring that reporting, or a license, certificate, — (see Sec./Art. 37.10 for the complete list)"}, {"text": "An offense under this section, if it is shown on the trial of the offense that the governmental record is described by Section 37.01(2)(D), is: (1) a Class B misdemeanor if the offense is committed under Subsection (a)(2) or Subsection (a)(5) and the defendant is convicted of presenting or using the record; (2) a felony of the third degree if the offense is committed under: (A) Subsection (a)(1), (3), (4), or (6); or (B) Subsection (a)(2) or (5) and the defendant is convicted of making the record; and (3) a felony of the second degree, notwithstanding Subdivisions (1) and (2), if the actor's intent in committing the offense was to defraud or harm another."}, {"text": "It is an affirmative defense to prosecution for possession under Subsection (a)(6) that the possession occurred in the actual discharge of official duties as a public servant."}, {"text": "It is a defense to prosecution under Subsection (a)(1), (a)(2), or (a)(5) that the false entry or false information could have no effect on the government's purpose for requiring the governmental record."}, {"text": "A person is presumed to intend to defraud or harm another if the person acts with respect to two or more of the same type of governmental records or blank governmental record forms and if each governmental record or blank governmental record form is a license, certificate, permit, seal, title, or similar document issued by government."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under Section 32.48 or 37.13, the actor may be prosecuted under any of those sections."}, {"text": "With the consent of the appropriate local county or district attorney, the attorney general has concurrent jurisdiction with that consenting local prosecutor to prosecute an offense under this section that involves the state Medicaid program."}, {"text": "It is not a defense to prosecution under Subsection (a)(2) that the record, document, or thing made, presented, or used displays or contains the statement \"NOT A GOVERNMENT DOCUMENT\" or another substantially similar statement intended to alert a person to the falsity of the record, document, or thing, unless the record, document, or thing displays the statement diagonally printed clearly and indelibly on both the front and back of the record, document, or thing in solid red capital letters at least one-fourth inch in height."}]}, {"name": "37.101 — Fraudulent Filing of Financing Statement", "items": [{"text": "An offense under Subsection (a)(1) is a felony of the third degree, unless it is shown on the trial of the offense that the person had previously been convicted under this section on two or more occasions, in which event the offense is a felony of the second degree. An offense under Subsection (a)(2) or (a)(3) is a Class A misdemeanor, unless the person commits the offense with the intent to defraud or harm another, in which event the offense is a state jail felony."}]}, {"name": "37.11 — Impersonating Public Servant", "items": [{"text": "An offense under this section is a felony of the third degree."}]}, {"name": "37.12 — False Identification as Peace Officer;  Misrepresentation of Property", "items": [{"text": "It is a defense to prosecution under this section that: (1) the card, document, badge, insignia, shoulder emblem, or other item bearing an insignia of a law enforcement agency clearly identifies the person as an honorary or junior peace officer or reserve law enforcement officer, or as a member of a junior posse; or (2) the person identified as a peace officer or reserve law enforcement officer by the item bearing the insignia was commissioned in that capacity when the item was made."}, {"text": "It is an exception to the application of this section that the item was used or intended for use exclusively for decorative purposes or in an artistic or dramatic presentation."}, {"text": "In this section, \"reserve law enforcement officer\" has the same meaning as is given that term in Section 1701.001, Occupations Code."}, {"text": "For purposes of this section, an item bearing an insignia of a law enforcement agency includes an item that contains the word \"police,\" \"sheriff,\" \"constable,\" or \"trooper.\""}, {"text": "A person commits an offense if the person intentionally or knowingly misrepresents an object, including a vehicle, as property belonging to a law enforcement agency. For purposes of this subsection, intentionally or knowingly misrepresenting an object as property belonging to a law enforcement agency includes intentionally or knowingly displaying an item bearing an insignia of a law enforcement agency in a manner that would lead a reasonable person to interpret the item as property belonging to a law enforcement agency."}, {"text": "An offense under this section is a Class B misdemeanor."}]}, {"name": "37.13 — Record of a Fraudulent Court", "items": [{"text": "An offense under this section is a Class A misdemeanor, except that the offense is a felony of the third degree if it is shown on the trial of the offense that the defendant has previously been convicted under this section on two or more occasions."}, {"text": "If conduct that constitutes an offense under this section also constitutes an offense under Section 32.48 or 37.10, the actor may be prosecuted under any of those sections."}]}, {"name": "37.14 — False Statement Regarding Child Custody Determination Made in Foreign Country", "items": [{"text": "A person commits an offense if the person knowingly makes or causes to be made a false statement relating to a child custody determination made in a foreign country during a hearing held under Chapter 152 or Subchapter I, Chapter 153, Family Code."}, {"text": "An offense under this section is a felony of the third degree. Page -2 - Page - 1 -"}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(9, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'penal_game_11_bribery_perjury_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
