@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Offenders Court Process Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &middot; LOs 33.8&ndash;33.12 &middot; Supplemental Practice</p>
+    <h1>Court Process &mdash; Release, Detention, Disposition &amp; Parental Rights Sorting Game</h1>
+    <p class="sub">Thirteen boxes on what happens after a child is taken into custody: release or delivery to court, disposition without court referral, first offender programs and informal disposition guidelines (Family Code &sect;&sect;52.02&ndash;52.032), referral to juvenile court and notice to parents, waiver of jurisdiction to criminal court (&sect;&sect;52.04, 54.02), release from detention and detention hearings including status offenders/nonoffenders (&sect;&sect;53.02, 54.01, 54.011), the youth diversion coordinator (CCP art. 45A.507), and parental rights and duties &mdash; including during periods of possession (&sect;&sect;151.001, 151.003, 153.074). With 13 boxes the categories default to a collapsed view &mdash; expand them as you place cards, or size a round down with Categories/Cards-per-category.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="13" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="19" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 33.8&ndash;33.12 of the Ch.33 Juvenile Offenders outline and its cited statutes &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "52.02 — Release or Delivery to Court", "items": [{"text": "(a) Except as provided by Subsection (c), a person taking a child into custody, without unnecessary delay and without first taking the child to any place other than a juvenile processing office designated under Section 52.025, shall do one of the following: (1) release the child to a parent, guardian, custodian of the child, or other responsible adult upon that person's promise to bring the child before the juvenile court as requested by the court; (2) bring the child before the office or official designated by the juvenile board if there is probable cause to believe that the child engaged in delinquent conduct, conduct indicating a need for supervision, or conduct that violates a condition of probation imposed by the juvenile court; — (see Sec./Art. 52.02 for the complete list)"}, {"text": "(b) A person taking a child into custody shall promptly give notice of the person's action and a statement of the reason for taking the child into custody, to: (1) the child's parent, guardian, or custodian; and (2) the office or official designated by the juvenile board."}, {"text": "(c) A person who takes a child into custody and who has reasonable grounds to believe that the child has been operating a motor vehicle in a public place while having any detectable amount of alcohol in the child's system may, before complying with Subsection (a): (1) take the child to a place to obtain a specimen of the child's breath or blood as provided by Chapter 724, Transportation Code; and (2) perform intoxilyzer processing and videotaping of the child in an adult processing office of a law enforcement agency."}, {"text": "(d) Notwithstanding Section 51.09(a), a child taken into custody as provided by Subsection (c) may submit to the taking of a breath specimen or refuse to submit to the taking of a breath specimen without the concurrence of an attorney, but only if the request made of the child to give the specimen and the child's response to that request is videotaped. A videotape made under this subsection must be maintained until the disposition of any proceeding against the child relating to the arrest is final and be made available to an attorney representing the child during that period."}]}, {"name": "52.03 — Disposition Without Referral to Court", "items": [{"text": "(a) A law-enforcement officer authorized by this title to take a child into custody may dispose of the case of a child taken into custody or accused of a Class C misdemeanor, other than a traffic offense, without referral to juvenile court or charging a child in a court of competent criminal jurisdiction, if: (1) guidelines for such disposition have been adopted by the juvenile board of the county in which the disposition is made as required by Section 52.032; (2) the disposition is authorized by the guidelines; and (3) the officer makes a written report of the officer's disposition to the law-enforcement agency, identifying the child and specifying the grounds for believing that the taking into custody or accusation of criminal conduct was authorized."}, {"text": "(b) No disposition authorized by this section may involve: (1) keeping the child in law-enforcement custody; or (2) requiring periodic reporting of the child to a law-enforcement officer, law-enforcement agency, or other agency."}, {"text": "(c) A disposition authorized by this section may involve: (1) referral of the child to an agency other than the juvenile court; (2) a brief conference with the child and his parent, guardian, or custodian; or (3) referral of the child and the child's parent, guardian, or custodian for services under Section 137.152, Human Resources Code."}, {"text": "(d) Statistics indicating the number and kind of dispositions made by a law-enforcement agency under the authority of this section shall be reported at least annually to the office or official designated by the juvenile board, as ordered by the board."}]}, {"name": "52.031 — First Offender Program", "items": [{"text": "(a) A juvenile board may establish a first offender program under this section for the referral and disposition of children taken into custody, or accused prior to the filing of a criminal charge, of: (1) conduct indicating a need for supervision; (2) a Class C misdemeanor, other than a traffic offense; or (3) delinquent conduct other than conduct that constitutes: (A) a felony of the first, second, or third degree, an aggravated controlled substance felony, or a capital felony; or (B) a state jail felony or misdemeanor involving violence to a person or the use or possession of a firearm, location-restricted knife, or club, as those terms are defined by Section 46.01, Penal Code, or a prohibited weapon, as described by Section 46.05, Penal Code. — (see Sec./Art. 52.031 for the complete list)"}, {"text": "(b) Each juvenile board in the county in which a first offender program is established shall designate one or more law enforcement officers and agencies, which may be law enforcement agencies, to process a child under the first offender program."}, {"text": "(c) The disposition of a child under the first offender program may not take place until guidelines for the disposition have been adopted by the juvenile board of the county in which the disposition is made as required by Section 52.032. Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1407 (S.B. 393), Sec. 16"}, {"text": "(d) A law enforcement officer taking a child into custody or accusing a child of an offense described in Subsection (a)(2) may refer the child to the law enforcement officer or agency designated under Subsection (b) for disposition under the first offender program and not refer the child to juvenile court or a court of competent criminal jurisdiction only if: (1) the child has not previously been adjudicated as having engaged in delinquent conduct; (2) the referral complies with guidelines for disposition under Subsection (c); and (3) the officer reports in writing the referral to the agency, identifying the child and specifying the grounds for taking the child into custody or accusing a child of an offense described in Subsection (a)(2). — (see Sec./Art. 52.031 for the complete list)"}, {"text": "(d) A law enforcement officer taking a child into custody for conduct described by Subsection (a) or before issuing a citation to a child for an offense described by Subsection (a-1) may refer the child to the law enforcement officer or agency designated under Subsection (b) for disposition under the first offender program and not refer the child to juvenile court for the conduct or file a complaint with a criminal court for the offense only if: (1) the child has not previously been adjudicated as having engaged in delinquent conduct; (2) the referral complies with guidelines for disposition under Subsection (c); and (3) the officer reports in writing the referral to the agency, identifying the child and specifying the grounds for taking the child into custody or for accusing the child of — (see Sec./Art. 52.031 for the complete list)"}, {"text": "(e) A child referred for disposition under the first offender program may not be detained in law enforcement custody. Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1407 (S.B. 393), Sec. 16"}, {"text": "(f) The parent, guardian, or other custodian of the child must receive notice that the child has been referred for disposition under the first offender program. The notice must: (1) state the grounds for taking the child into custody or accusing a child of an offense described in Subsection (a)(2); (2) identify the law enforcement officer or agency to which the child was referred; (3) briefly describe the nature of the program; and (4) state that the child's failure to complete the program will result in the child being referred to the juvenile court or a court of competent criminal jurisdiction. Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1409 (S.B. 1114), Sec. 8"}, {"text": "(f) The parent, guardian, or other custodian of the child must receive notice that the child has been referred for disposition under the first offender program. The notice must: (1) state the grounds for taking the child into custody for conduct described by Subsection (a), or for accusing the child of an offense described by Subsection (a-1); (2) identify the law enforcement officer or agency to which the child was referred; (3) briefly describe the nature of the program; and (4) state that the child's failure to complete the program will result in the child being referred to the juvenile court for the conduct or a complaint being filed with a criminal court for the offense."}, {"text": "(g) The child and the parent, guardian, or other custodian of the child must consent to participation by the child in the first offender program."}, {"text": "(h) Disposition under a first offender program may include: (1) voluntary restitution by the child or the parent, guardian, or other custodian of the child to the victim of the conduct of the child; (2) voluntary community service restitution by the child; (3) educational, vocational training, counseling, or other rehabilitative services; and (4) periodic reporting by the child to the law enforcement officer or agency to which the child has been referred. Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1407 (S.B. 393), Sec. 16"}, {"text": "(i) The case of a child who successfully completes the first offender program is closed and may not be referred to juvenile court or a court of competent criminal jurisdiction, unless the child is taken into custody under circumstances described by Subsection (j)(3). Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1409 (S.B. 1114), Sec. 8"}, {"text": "(i) The case of a child who successfully completes the first offender program is closed and may not be referred to juvenile court or filed with a criminal court, unless the child is taken into custody under circumstances described by Subsection (j)(3). Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1407 (S.B. 393), Sec. 16"}, {"text": "(j) The case of a child referred for disposition under the first offender program shall be referred to juvenile court or a court of competent criminal jurisdiction if: (1) the child fails to complete the program; (2) the child or the parent, guardian, or other custodian of the child terminates the child's participation in the program before the child completes it; or (3) the child completes the program but is taken into custody under Section 52.01 before the 90th day after the date the child completes the program for conduct other than the conduct for which the child was referred to the first offender program. Text of subsection as amended by Acts 2013, 83rd Leg., R.S., Ch. 1409 (S.B. 1114), Sec. 8"}, {"text": "(j) The case of a child referred for disposition under the first offender program shall be referred to juvenile court or, if the child is accused of an offense described by Subsection (a-1), filed with a criminal court if: (1) the child fails to complete the program; (2) the child or the parent, guardian, or other custodian of the child terminates the child's participation in the program before the child completes it; or (3) the child completes the program but is taken into custody under Section 52.01 before the 90th day after the date the child completes the program for conduct other than the conduct for which the child was referred to the first offender program."}, {"text": "(k) A statement made by a child to a person giving advice or supervision or participating in the first offender program may not be used against the child in any proceeding under this title or any criminal proceeding."}, {"text": "(l) The law enforcement agency must report to the juvenile board in December of each year the following: (1) the last known address of the child, including the census tract; (2) the gender and ethnicity of the child referred to the program; and (3) the offense committed by the child."}]}, {"name": "52.032 — Informal Disposition Guidelines", "items": [{"text": "(a) The juvenile board of each county, in cooperation with each law enforcement agency in the county, shall adopt guidelines for the disposition of a child under Section 52.03 or 52.031. The guidelines adopted under this section shall not be considered mandatory."}, {"text": "(b) The guidelines adopted under Subsection (a) may not allow for the case of a child to be disposed of under Section 52.03 or 52.031 if there is probable cause to believe that the child engaged in delinquent conduct or conduct indicating a need for supervision and cause to believe that the child may be the victim of conduct that constitutes an offense under Section 20A.02, Penal Code."}]}, {"name": "52.04 — Referral to Juvenile Court; Notice to Parents", "items": [{"text": "(a) The following shall accompany referral of a child or a child's case to the office or official designated by the juvenile board or be provided as quickly as possible after referral: (1) all information in the possession of the person or agency making the referral pertaining to the identity of the child and the child's address, the name and address of the child's parent, guardian, or custodian, the names and addresses of any witnesses, and the child's present whereabouts; (2) a complete statement of the circumstances of the alleged delinquent conduct or conduct indicating a need for supervision; (3) when applicable, a complete statement of the circumstances of taking the child into custody; — (see Sec./Art. 52.04 for the complete list)"}, {"text": "(b) The office or official designated by the juvenile board may refer the case to a law-enforcement agency for the purpose of conducting an investigation to obtain necessary information."}, {"text": "(c) If the office of the prosecuting attorney is designated by the juvenile court to conduct the preliminary investigation under Section 53.01, the referring entity shall first transfer the child's case to the juvenile probation department for statistical reporting purposes only. On the creation of a statistical record or file for the case, the probation department shall within three business days forward the case to the prosecuting attorney for review under Section 53.01."}, {"text": "(d) On referral of the case of a child who has not been taken into custody to the office or official designated by the juvenile board, the office or official designated by the juvenile board shall promptly give notice of the referral and a statement of the reason for the referral to the child's parent, guardian, or custodian."}]}, {"name": "54.02 — Waiver of Jurisdiction and Discretionary Transfer to Criminal Court", "items": [{"text": "(a) The juvenile court may waive its exclusive original jurisdiction and transfer a child to the appropriate district court or criminal district court for criminal proceedings if: (1) the child is alleged to have violated a penal law of the grade of felony; (2) the child was: (A) 14 years of age or older at the time he is alleged to have committed the offense, if the offense is a capital felony, an aggravated controlled substance felony, or a felony of the first degree, and no adjudication hearing has been conducted concerning that offense; or (B) 15 years of age or older at the time the child is alleged to have committed the offense, if the offense is a felony of the second or third degree or a state jail felony, and no adjudication hearing has been conducted concerning that offense; — (see Sec./Art. 54.02 for the complete list)"}, {"text": "(b) The petition and notice requirements of Sections 53.04, 53.05, 53.06, and 53.07 of this code must be satisfied, and the summons must state that the hearing is for the purpose of considering discretionary transfer to criminal court."}, {"text": "(c) The juvenile court shall conduct a hearing without a jury to consider transfer of the child for criminal proceedings."}, {"text": "(d) Prior to the hearing, the juvenile court shall order and obtain a complete diagnostic study, social evaluation, and full investigation of the child, his circumstances, and the circumstances of the alleged offense."}, {"text": "(e) At the transfer hearing the court may consider written reports from probation officers, professional court employees, guardians ad litem appointed under Section 51.11(d), or professional consultants in addition to the testimony of witnesses. At least five days prior to the transfer hearing, the court shall provide the attorney for the child and the prosecuting attorney with access to all written matter to be considered by the court in making the transfer decision. The court may order counsel not to reveal items to the child or the child's parent, guardian, or guardian ad litem if such disclosure would materially harm the treatment and rehabilitation of the child or would substantially decrease the likelihood of receiving information from the same or similar sources in the future."}, {"text": "(f) In making the determination required by Subsection (a) of this section, the court shall consider, among other matters: (1) whether the alleged offense was against person or property, with greater weight in favor of transfer given to offenses against the person; (2) the sophistication and maturity of the child; (3) the record and previous history of the child; and (4) the prospects of adequate protection of the public and the likelihood of the rehabilitation of the child by use of procedures, services, and facilities currently available to the juvenile court."}, {"text": "(g) If the petition alleges multiple offenses that constitute more than one criminal transaction, the juvenile court shall either retain or transfer all offenses relating to a single transaction. Except as provided by Subsection (g-1), a child is not subject to criminal prosecution at any time for any offense arising out of a criminal transaction for which the juvenile court retains jurisdiction. (g-1) A child may be subject to criminal prosecution for an offense committed under Chapter 19 or Section 49.08, Penal Code, if: (1) the offense arises out of a criminal transaction for which the juvenile court retained jurisdiction over other offenses relating to the criminal transaction; — (see Sec./Art. 54.02 for the complete list)"}, {"text": "(h) If the juvenile court waives jurisdiction, it shall state specifically in the order its reasons for waiver and certify its action, including the written order and findings of the court, and shall transfer the person to the appropriate court for criminal proceedings and cause the results of the diagnostic study of the person ordered under Subsection (d), including psychological information, to be transferred to the appropriate criminal prosecutor. On transfer of the person for criminal proceedings, the person shall be dealt with as an adult and in accordance with the Code of Criminal Procedure, except that if detention in a certified juvenile detention facility is authorized under Section 152.0015, Human Resources Code, the juvenile court may order the person to be detained in the — (see Sec./Art. 54.02 for the complete list)"}, {"text": "(i) A waiver under this section is a waiver of jurisdiction over the child and the criminal court may not remand the child to the jurisdiction of the juvenile court."}, {"text": "(j) The juvenile court may waive its exclusive original jurisdiction and transfer a person to the appropriate district court or criminal district court for criminal proceedings if: (1) the person is 18 years of age or older; (2) the person was: (A) 10 years of age or older and under 17 years of age at the time the person is alleged to have committed a capital felony or an offense under Section 19.02, Penal Code; (B) 14 years of age or older and under 17 years of age at the time the person is alleged to have committed an aggravated controlled substance felony or a felony of the first degree other than an offense under Section 19.02, Penal Code; — (see Sec./Art. 54.02 for the complete list)"}, {"text": "(k) The petition and notice requirements of Sections 53.04, 53.05, 53.06, and 53.07 of this code must be satisfied, and the summons must state that the hearing is for the purpose of considering waiver of jurisdiction under Subsection (j). The person's parent, custodian, guardian, or guardian ad litem is not considered a party to a proceeding under Subsection (j) and it is not necessary to provide the parent, custodian, guardian, or guardian ad litem with notice."}, {"text": "(l) The juvenile court shall conduct a hearing without a jury to consider waiver of jurisdiction under Subsection (j). Except as otherwise provided by this subsection, a waiver of jurisdiction under Subsection (j) may be made without the necessity of conducting the diagnostic study or complying with the requirements of discretionary transfer proceedings under Subsection (d). If requested by the attorney for the person at least 10 days before the transfer hearing, the court shall order that the person be examined pursuant to Section 51.20(a) and that the results of the examination be provided to the attorney for the person and the attorney for the state at least five days before the transfer hearing."}, {"text": "(m) Notwithstanding any other provision of this section, the juvenile court shall waive its exclusive original jurisdiction and transfer a child to the appropriate district court or criminal court for criminal proceedings if: (1) the child has previously been transferred to a district court or criminal district court for criminal proceedings under this section, unless: (A) the child was not indicted in the matter transferred by the grand jury; (B) the child was found not guilty in the matter transferred; (C) the matter transferred was dismissed with prejudice; or (D) the child was convicted in the matter transferred, the conviction was reversed on appeal, and the appeal is final; and (2) the child is alleged to have violated a penal law of the grade of felony."}, {"text": "(n) A mandatory transfer under Subsection (m) may be made without conducting the study required in discretionary transfer proceedings by Subsection (d). The requirements of Subsection (b) that the summons state that the purpose of the hearing is to consider discretionary transfer to criminal court does not apply to a transfer proceeding under Subsection (m). In a proceeding under Subsection (m), it is sufficient that the summons provide fair notice that the purpose of the hearing is to consider mandatory transfer to criminal court."}, {"text": "(o) If a respondent is taken into custody for possible discretionary transfer proceedings under Subsection (j), the juvenile court shall hold a detention hearing in the same manner as provided by Section 54.01, except that the court shall order the respondent released unless it finds that the respondent: (1) is likely to abscond or be removed from the jurisdiction of the court; (2) may be dangerous to himself or herself or may threaten the safety of the public if released; or (3) has previously been found to be a delinquent child or has previously been convicted of a penal offense punishable by a term of jail or prison and is likely to commit an offense if released."}, {"text": "(p) If the juvenile court does not order a respondent released under Subsection (o), the court shall, pending the conclusion of the discretionary transfer hearing, order that the respondent be detained in: (1) a certified juvenile detention facility as provided by Subsection (q); or (2) an appropriate county facility for the detention of adults accused of criminal offenses."}, {"text": "(q) The detention of a respondent in a certified juvenile detention facility must comply with the detention requirements under this title, except that, to the extent practicable, the person shall be kept separate from children detained in the same facility."}, {"text": "(r) If the juvenile court orders a respondent detained in a county facility under Subsection (p), the county sheriff shall take custody of the respondent under the juvenile court's order. The juvenile court shall set or deny bond for the respondent as required by the Code of Criminal Procedure and other law applicable to the pretrial detention of adults accused of criminal offenses."}, {"text": "(s) If a child is transferred to criminal court under this section, only the petition for discretionary transfer, the order of transfer, and the order of commitment, if any, are a part of the district clerk's public record."}]}, {"name": "53.02 — Release From Detention", "items": [{"text": "(a) If a child is brought before the court or delivered to a detention facility as authorized by Sections 51.12(a)(3) and (4), the intake or other authorized officer of the court shall immediately make an investigation and shall release the child unless it appears that his detention is warranted under Subsection (b). The release may be conditioned upon requirements reasonably necessary to insure the child's appearance at later proceedings, but the conditions of the release must be in writing and filed with the office or official designated by the court and a copy furnished to the child."}, {"text": "(b) A child taken into custody may be detained prior to hearing on the petition only if: (1) the child is likely to abscond or be removed from the jurisdiction of the court; (2) suitable supervision, care, or protection for the child is not being provided by a parent, guardian, custodian, or other person; (3) the child has no parent, guardian, custodian, or other person able to return the child to the court when required; (4) the child may be dangerous to himself or herself or the child may threaten the safety of the public if released; (5) the child has previously been found to be a delinquent child or has previously been convicted of a penal offense punishable by a term in jail or prison and is likely to commit an offense if released; — (see Sec./Art. 53.02 for the complete list)"}, {"text": "(c) If the child is not released, a request for detention hearing shall be made and promptly presented to the court, and an informal detention hearing as provided in Section 54.01 of this code shall be held promptly, but not later than the time required by Section 54.01 of this code."}, {"text": "(d) A release of a child to an adult under Subsection (a) must be conditioned on the agreement of the adult to be subject to the jurisdiction of the juvenile court and to an order of contempt by the court if the adult, after notification, is unable to produce the child at later proceedings."}, {"text": "(e) Unless otherwise agreed in the memorandum of understanding under Section 37.011, Education Code, in a county with a population greater than 125,000, if a child being released under this section is expelled under Section 37.007, Education Code, the release shall be conditioned on the child's attending a juvenile justice alternative education program pending a deferred prosecution or formal court disposition of the child's case."}, {"text": "(f) A child who is alleged to have engaged in delinquent conduct and to have used, possessed, or exhibited a firearm, as defined by Section 46.01, Penal Code, in the commission of the offense shall be detained until the child is released at the direction of the judge of the juvenile court, a substitute judge authorized by Section 51.04(f), or a referee appointed under Section 51.04(g), including an oral direction by telephone, or until a detention hearing is held as required by Section 54.01."}]}, {"name": "54.01 — Detention Hearing", "items": [{"text": "(a) Except as provided by Subsection (p), if the child is not released under Section 53.02, a detention hearing without a jury shall be held promptly, but not later than the second working day after the child is taken into custody; provided, however, that when a child is detained on a Friday or Saturday, then such detention hearing shall be held on the first working day after the child is taken into custody."}, {"text": "(b) Reasonable notice of the detention hearing, either oral or written, shall be given, stating the time, place, and purpose of the hearing. Notice shall be given to the child and, if they can be found, to his parents, guardian, or custodian. Prior to the commencement of the hearing, the court shall inform the parties of the child's right to counsel and to appointed counsel if they are indigent and of the child's right to remain silent with respect to any allegations of delinquent conduct, conduct indicating a need for supervision, or conduct that violates an order of probation imposed by a juvenile court. (b-1) Unless the court finds that the appointment of counsel is not feasible due to exigent circumstances, the court shall appoint counsel within a reasonable time before the first — (see Sec./Art. 54.01 for the complete list)"}, {"text": "(c) At the detention hearing, the court may consider written reports from probation officers, professional court employees, guardians ad litem appointed under Section 51.11(d), or professional consultants in addition to the testimony of witnesses. Prior to the detention hearing, the court shall provide the attorney for the child with access to all written matter to be considered by the court in making the detention decision. The court may order counsel not to reveal items to the child or the child's parent, guardian, or guardian ad litem if such disclosure would materially harm the treatment and rehabilitation of the child or would substantially decrease the likelihood of receiving information from the same or similar sources in the future."}, {"text": "(d) A detention hearing may be held without the presence of the child's parents if the court has been unable to locate them. If no parent or guardian is present, the court shall appoint counsel or a guardian ad litem for the child, subject to the requirements of Subsection (b-1)."}, {"text": "(e) At the conclusion of the hearing, the court shall order the child released from detention unless it finds that: (1) he is likely to abscond or be removed from the jurisdiction of the court; (2) suitable supervision, care, or protection for him is not being provided by a parent, guardian, custodian, or other person; (3) he has no parent, guardian, custodian, or other person able to return him to the court when required; (4) he may be dangerous to himself or may threaten the safety of the public if released; or (5) he has previously been found to be a delinquent child or has previously been convicted of a penal offense punishable by a term in jail or prison and is likely to commit an offense if released."}, {"text": "(f) Unless otherwise agreed in the memorandum of understanding under Section 37.011, Education Code, a release may be conditioned on requirements reasonably necessary to insure the child's appearance at later proceedings, but the conditions of the release must be in writing and a copy furnished to the child. In a county with a population greater than 125,000, if a child being released under this section is expelled under Section 37.007, Education Code, the release shall be conditioned on the child's attending a juvenile justice alternative education program pending a deferred prosecution or formal court disposition of the child's case."}, {"text": "(g) No statement made by the child at the detention hearing shall be admissible against the child at any other hearing."}, {"text": "(h) A detention order extends to the conclusion of the disposition hearing, if there is one, but in no event for more than 10 working days. Further detention orders may be made following subsequent detention hearings. The initial detention hearing may not be waived but subsequent detention hearings may be waived in accordance with the requirements of Section 51.09. Each subsequent detention order shall extend for no more than 10 working days, except that in a county that does not have a certified juvenile detention facility, as described by Section 51.12(a)(3), each subsequent detention order shall extend for no more than 15 working days."}, {"text": "(i) A child in custody may be detained for as long as 10 days without the hearing described in Subsection (a) of this section if: (1) a written request for shelter in detention facilities pending arrangement of transportation to his place of residence in another state or country or another county of this state is voluntarily executed by the child not later than the next working day after he was taken into custody; (2) the request for shelter contains: (A) a statement by the child that he voluntarily agrees to submit himself to custody and detention for a period of not longer than 10 days without a detention hearing; (B) an allegation by the person detaining the child that the child has left his place of residence in another state or country or another county of this state, that he is in — (see Sec./Art. 54.01 for the complete list)"}, {"text": "(j) The request for shelter may be revoked by the child at any time, and on such revocation, if further detention is necessary, a detention hearing shall be held not later than the next working day in accordance with Subsections (a) through (g) of this section."}, {"text": "(k) Notwithstanding anything in this title to the contrary, the child may sign a request for shelter without the concurrence of an adult specified in Section 51.09 of this code."}, {"text": "(l) The juvenile board may appoint a referee to conduct the detention hearing. The referee shall be an attorney licensed to practice law in this state. Such payment or additional payment as may be warranted for referee services shall be provided from county funds. Before commencing the detention hearing, the referee shall inform the parties who have appeared that they are entitled to have the hearing before the juvenile court judge or a substitute judge authorized by Section 51.04(f). If a party objects to the referee conducting the detention hearing, an authorized judge shall conduct the hearing within 24 hours. At the conclusion of the hearing, the referee shall transmit written findings and recommendations to the juvenile court judge or substitute judge. — (see Sec./Art. 54.01 for the complete list)"}, {"text": "(m) The detention hearing required in this section may be held in the county of the designated place of detention where the child is being held even though the designated place of detention is outside the county of residence of the child or the county in which the alleged delinquent conduct, conduct indicating a need for supervision, or probation violation occurred."}, {"text": "(n) An attorney appointed by the court under Section 51.10(c) because a determination was made under this section to detain a child who was not represented by an attorney may request on behalf of the child and is entitled to a de novo detention hearing under this section. The attorney must make the request not later than the 10th working day after the date the attorney is appointed. The hearing must take place not later than the second working day after the date the attorney filed a formal request with the court for a hearing."}, {"text": "(o) The court or referee shall find whether there is probable cause to believe that a child taken into custody without an arrest warrant or a directive to apprehend has engaged in delinquent conduct, conduct indicating a need for supervision, or conduct that violates an order of probation imposed by a juvenile court. The court or referee must make the finding within 48 hours, including weekends and holidays, of the time the child was taken into custody. The court or referee may make the finding on any reasonably reliable information without regard to admissibility of that information under the Texas Rules of Evidence. A finding of probable cause is required to detain a child after the 48th hour after the time the child was taken into custody. — (see Sec./Art. 54.01 for the complete list)"}, {"text": "(p) If a child is detained in a county jail or other facility as provided by Section 51.12(l) and the child is not released under Section 53.02(f), a detention hearing without a jury shall be held promptly, but not later than the 24th hour, excluding weekends and holidays, after the time the child is taken into custody."}, {"text": "(q) If a child has not been released under Section 53.02 or this section and a petition has not been filed under Section 53.04 or 54.05 concerning the child, the court shall order the child released from detention not later than: (1) the 30th working day after the date the initial detention hearing is held, if the child is alleged to have engaged in conduct constituting a capital felony, an aggravated controlled substance felony, or a felony of the first degree; or (2) the 15th working day after the date the initial detention hearing is held, if the child is alleged to have engaged in conduct constituting an offense other than an offense listed in Subdivision (1) or conduct that violates an order of probation imposed by a juvenile court. — (see Sec./Art. 54.01 for the complete list)"}, {"text": "(r) On the conditional release of a child from detention by judicial order under Subsection (f), the court, referee, or detention magistrate may order that the child's parent, guardian, or custodian present in court at the detention hearing engage in acts or omissions specified by the court, referee, or detention magistrate that will assist the child in complying with the conditions of release. The order must be in writing and a copy furnished to the parent, guardian, or custodian. An order entered under this subsection may be enforced as provided by Chapter 61."}]}, {"name": "54.011 — Detention Hearings for Status Offenders and Nonoffenders; Penalty", "items": [{"text": "(a) The detention hearing for a status offender or nonoffender who has not been released administratively under Section 53.02 shall be held before the 24th hour after the time the child arrived at a detention facility, excluding hours of a weekend or a holiday. Except as otherwise provided by this section, the judge or referee conducting the detention hearing shall release the status offender or nonoffender from secure detention."}, {"text": "(b) The judge or referee may order a child in detention accused of the violation of a valid court order as defined by Section 51.02 detained not longer than 72 hours after the time the detention order was entered, excluding weekends and holidays, if: (1) the judge or referee finds at the detention hearing that there is probable cause to believe the child violated the valid court order; and (2) the detention of the child is justified under Section 54.01(e)(1), (2), or (3)."}, {"text": "(c) Except as provided by Subsection (d), a detention order entered under Subsection (b) may be extended for one additional 72-hour period, excluding weekends and holidays, only on a finding of good cause by the juvenile court."}, {"text": "(d) A detention order for a child under this section may be extended on the demand of the child's attorney only to allow the time that is necessary to comply with the requirements of Section 51.10(h), entitling the attorney to 10 days to prepare for an adjudication hearing."}, {"text": "(e) A status offender may be detained for a necessary period, not to exceed the period allowed under the Interstate Compact for Juveniles, to enable the child's return to the child's home in another state under Chapter 60."}, {"text": "(f) Except as provided by Subsection (a), a nonoffender, including a person who has been taken into custody and is being held solely for deportation out of the United States, may not be detained for any period of time in a secure detention facility or secure correctional facility, regardless of whether the facility is publicly or privately operated. A nonoffender who is detained in violation of this subsection is entitled to immediate release from the facility and may bring a civil action for compensation for the illegal detention against any person responsible for the detention. A person commits an offense if the person knowingly detains or assists in detaining a nonoffender in a secure detention facility or secure correctional facility in violation of this subsection. — (see Sec./Art. 54.011 for the complete list)"}]}, {"name": "45A.507 — Youth Diversion Coordinator", "items": [{"text": "(a) A court may designate a youth diversion coordinator to assist the court in: (1) determining whether a child is eligible for diversion; (2) employing a diversion strategy authorized by this subchapter; (3) presenting and maintaining diversion agreements; (4) monitoring diversions; (5) maintaining records regarding whether one or more diversions were successful or unsuccessful; and (6) coordinating referrals to court."}, {"text": "(b) The responsibilities of the youth diversion coordinator may be performed by: (1) a court administrator or court clerk, or a person who regularly performs the duties of court administrator or court clerk; (2) an individual or entity that provides juvenile case manager services under Article 45A.451; (3) a court-related services office; (4) a community supervision and corrections department, including a juvenile probation department; (5) a county or municipal employee, including a peace officer; (6) a community volunteer; (7) an institution of higher education, including a public, private, or independent institution of higher education; or (8) a qualified nonprofit organization as determined by the court."}]}, {"name": "151.001 — Rights and Duties of Parent", "items": [{"text": "(a) A parent of a child has the following rights and duties: (1) the right to have physical possession, to direct the moral and religious training, and to designate the residence of the child; (2) the duty of care, control, protection, and reasonable discipline of the child; (3) the duty to support the child, including providing the child with clothing, food, shelter, medical and dental care, and education; (4) the duty, except when a guardian of the child's estate has been appointed, to manage the estate of the child, including the right as an agent of the child to act in relation to the child's estate if the child's action is required by a state, the United States, or a foreign government; (5) except as provided by Section 264.0111, the right to the services and earnings of the child; — (see Sec./Art. 151.001 for the complete list)"}, {"text": "(b) The duty of a parent to support his or her child exists while the child is an unemancipated minor and continues as long as the child is fully enrolled in a secondary school in a program leading toward a high school diploma and complies with attendance requirements described by Section 154.002(a)(2)."}, {"text": "(c) A parent who fails to discharge the duty of support is liable to a person who provides necessaries to those to whom support is owed."}, {"text": "(d) The rights and duties of a parent are subject to: (1) a court order affecting the rights and duties; (2) an affidavit of relinquishment of parental rights; and (3) an affidavit by the parent designating another person or agency to act as managing conservator."}, {"text": "(e) Only the following persons may use corporal punishment for the reasonable discipline of a child: (1) a parent or grandparent of the child; (2) a stepparent of the child who has the duty of control and reasonable discipline of the child; and (3) an individual who is a guardian of the child and who has the duty of control and reasonable discipline of the child."}]}, {"name": "151.003 — Limitation on State Agency Action", "items": [{"text": "A state agency may not adopt rules or policies or take any other action that violates the fundamental right and duty of a parent to direct the upbringing of the parent's child. Page -2 - Page - 1 -"}]}, {"name": "153.074 — Rights and Duties During Period of Possession", "items": [{"text": "(1) the duty of care, control, protection, and reasonable discipline of the child;"}, {"text": "(2) the duty to support the child, including providing the child with clothing, food, shelter, and medical and dental care not involving an invasive procedure;"}, {"text": "(3) the right to consent for the child to medical and dental care not involving an invasive procedure; and"}, {"text": "(4) the right to direct the moral and religious training of the child."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(19, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'ch33_game_c_court_process_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

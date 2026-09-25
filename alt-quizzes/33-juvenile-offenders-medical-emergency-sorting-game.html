@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Offenders Medical Treatment &amp; Emergency Possession Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &middot; LOs 33.14&ndash;33.16 &middot; Supplemental Practice</p>
+    <h1>Medical Treatment, Emergency Possession &amp; Child Advocacy Centers Sorting Game</h1>
+    <p class="sub">Twelve boxes, the smallest of the six Ch. 33 games: consent to medical treatment by a non-parent or by the child, and examination without consent where abuse or neglect is suspected (Family Code &sect;&sect;32.001, 32.003, 32.005), a peace officer's general powers and duties (CCP art. 2A.051), taking emergency possession of a child without a court order &mdash; with and without intent to return the child home &mdash; civil liability, accepting voluntary delivery of a child, unacceptable housing facilities (Family Code &sect;&sect;262.003&ndash;262.110), and Child Advocacy Center interagency agreements and confidentiality of records (&sect;&sect;264.403, 264.408). Twelve boxes still default to a collapsed view; expand them as you place cards, or size a round down with Categories/Cards-per-category.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="12" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="7" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 33.14&ndash;33.16 of the Ch.33 Juvenile Offenders outline and its cited statutes &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "32.001 — Consent by Non-Parent", "items": [{"text": "(a) The following persons may consent to medical, dental, psychological, and surgical treatment of a child when the person having the right to consent as otherwise provided by law cannot be contacted and that person has not given actual notice to the contrary: (1) a grandparent of the child; (2) an adult brother or sister of the child; (3) an adult aunt or uncle of the child; (4) an educational institution in which the child is enrolled that has received written authorization to consent from a person having the right to consent; (5) an adult who has actual care, control, and possession of the child and has written authorization to consent from a person having the right to consent; — (see Sec./Art. 32.001 for the complete list)"}, {"text": "(b) Except as otherwise provided by this subsection, the Texas Juvenile Justice Department may consent to the medical, dental, psychological, and surgical treatment of a child committed to the department under Title 3 when the person having the right to consent has been contacted and that person has not given actual notice to the contrary. Consent for medical, dental, psychological, and surgical treatment of a child for whom the Department of Family and Protective Services has been appointed managing conservator and who is committed to the Texas Juvenile Justice Department is governed by Sections 266.004, 266.009, and 266.010."}, {"text": "(c) This section does not apply to consent for the immunization of a child."}, {"text": "(d) A person who consents to the medical treatment of a minor under Subsection (a)(7) or (8) is immune from liability for damages resulting from the examination or treatment of the minor, except to the extent of the person's own acts of negligence. A physician or dentist licensed to practice in this state, or a hospital or medical facility at which a minor is treated is immune from liability for damages resulting from the examination or treatment of a minor under this section, except to the extent of the person's own acts of negligence."}]}, {"name": "32.003 — Consent to Treatment by Child", "items": [{"text": "(a) A child may consent to medical, dental, psychological, and surgical treatment for the child by a licensed physician or dentist if the child: (1) is on active duty with the armed services of the United States of America; (2) is: (A) 16 years of age or older and resides separate and apart from the child's parents, managing conservator, or guardian, with or without the consent of the parents, managing conservator, or guardian and regardless of the duration of the residence; and (B) managing the child's own financial affairs, regardless of the source of the income; (3) consents to the diagnosis and treatment of an infectious, contagious, or communicable disease that is required by law or a rule to be reported by the licensed physician or dentist to a local health officer or the Texas — (see Sec./Art. 32.003 for the complete list)"}, {"text": "(b) Consent by a child to medical, dental, psychological, and surgical treatment under this section is not subject to disaffirmance because of minority."}, {"text": "(c) Consent of the parents, managing conservator, or guardian of a child is not necessary in order to authorize hospital, medical, surgical, or dental care under this section."}, {"text": "(d) A licensed physician, dentist, or psychologist may, with or without the consent of a child who is a patient, advise the parents, managing conservator, or guardian of the child of the treatment given to or needed by the child."}, {"text": "(e) A physician, dentist, psychologist, hospital, or medical facility is not liable for the examination and treatment of a child under this section except for the provider's or the facility's own acts of negligence."}, {"text": "(f) A physician, dentist, psychologist, hospital, or medical facility may rely on the written statement of the child containing the grounds on which the child has capacity to consent to the child's medical treatment."}]}, {"name": "32.005 — Examination Without Consent of Abuse or Neglect of Child", "items": [{"text": "(a) Except as provided by Subsection (c), a physician, dentist, or psychologist having reasonable grounds to believe that a child's physical or mental condition has been adversely affected by abuse or neglect may examine the child without the consent of the child, the child's parents, or other person authorized to consent to treatment under this subchapter."}, {"text": "(b) An examination under this section may include X-rays, blood tests, photographs, and penetration of tissue necessary to accomplish those tests."}, {"text": "(c) Unless consent is obtained as otherwise allowed by law, a physician, dentist, or psychologist may not examine a child: (1) 16 years of age or older who refuses to consent; or (2) for whom consent is prohibited by a court order."}, {"text": "(d) A physician, dentist, or psychologist examining a child under this section is not liable for damages except for damages resulting from the physician's or dentist's negligence. SUBCHAPTER B. IMMUNIZATION"}]}, {"name": "262.003 — Civil Liability", "items": [{"text": "A person who takes possession of a child without a court order is immune from civil liability if, at the time possession is taken, there is reasonable cause to believe there is an immediate danger to the physical health or safety of the child."}]}, {"name": "262.004 — Accepting Voluntary Delivery of Possession of Child", "items": [{"text": "A law enforcement officer or a juvenile probation officer may take possession of a child without a court order on the voluntary delivery of the child by the parent, managing conservator, possessory conservator, guardian, caretaker, or custodian who is presently entitled to possession of the child."}]}, {"name": "262.007 — Possession and Delivery of Missing Child", "items": [{"text": "(a) A law enforcement officer who, during a criminal investigation relating to a child's custody, discovers that a child is a missing child and believes that a person may flee with or conceal the child shall take possession of the child and provide for the delivery of the child as provided by Subsection (b)."}, {"text": "(b) An officer who takes possession of a child under Subsection (a) shall deliver or arrange for the delivery of the child to a person entitled to possession of the child."}, {"text": "(c) If a person entitled to possession of the child is not immediately available to take possession of the child, the law enforcement officer shall deliver the child to the Department of Family and Protective Services. Until a person entitled to possession of the child takes possession of the child, the department may, without a court order, retain possession of the child not longer than five days after the date the child is delivered to the department. While the department retains possession of a child under this subsection, the department may place the child in foster care. If a parent or other person entitled to possession of the child does not take possession of the child before the sixth day after the date the child is delivered to the department, the department shall proceed under — (see Sec./Art. 262.007 for the complete list)"}]}, {"name": "262.104 — Taking Possession of a Child in Emergency Without a Court Order", "items": [{"text": "(a) If there is no time to obtain a temporary order, temporary restraining order, or attachment under Section 262.102(a) before taking possession of a child consistent with the health and safety of that child, an authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may take possession of a child without a court order under the following conditions, only: (1) on personal knowledge of facts that would lead a person of ordinary prudence and caution to believe that there is an immediate danger to the physical health or safety of the child; (2) on information furnished by another that has been corroborated by personal knowledge of facts and all of which taken together would lead a person of ordinary prudence — (see Sec./Art. 262.104 for the complete list)"}, {"text": "(b) An authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may take possession of a child under Subsection (a) on personal knowledge or information furnished by another, that has been corroborated by personal knowledge, that would lead a person of ordinary prudence and caution to believe that the parent or person who has possession of the child has permitted the child to remain on premises used for the manufacture of methamphetamine."}, {"text": "(c) An authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may not take possession of a child under Subsection (a) based solely on the opinion of a medical professional under contract with the Department of Family and Protective Services who did not conduct a physical examination of the child."}]}, {"name": "2A.051 — General Powers and Duties of Peace Officers", "items": [{"text": "(1) Preserve the peace within the officer's jurisdiction using all lawful means"}, {"text": "(2) In every case authorized by this code, interfere without a warrant to prevent or suppress crime"}, {"text": "(3) Execute all lawful process issued to the officer by a magistrate or court"}, {"text": "(4) Give notice to an appropriate magistrate of all offenses committed in the officer's jurisdiction, where the officer has good reason to believe there has been a violation of the penal law"}, {"text": "(5) When authorized by law, arrest an offender without a warrant so the offender may be taken before the proper magistrate or court and be tried"}, {"text": "(6) Take possession of a child under Article 63.00905(g)"}, {"text": "(7) On a request made by the Texas Civil Commitment Office, execute an emergency detention order issued by that office"}]}, {"name": "262.108 — Unacceptable Facilities for Housing Child", "items": [{"text": "When a child is taken into possession under this chapter, that child may not be held in isolation or in a jail, juvenile detention facility, or other secure detention facility."}]}, {"name": "262.110 — Taking Possession of Child in Emergency With Intent to Return Home", "items": [{"text": "(a) An authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may take temporary possession of a child without a court order on discovery of a child in a situation of danger to the child's physical health or safety when the sole purpose is to deliver the child without unnecessary delay to the parent, managing conservator, possessory conservator, guardian, caretaker, or custodian who is presently entitled to possession of the child."}, {"text": "(b) Until a parent or other person entitled to possession of the child takes possession of the child, the department may retain possession of the child without a court order for not more than five days. On the expiration of the fifth day, if a parent or other person entitled to possession does not take possession of the child, the department shall take action under this chapter as if the department took possession of the child under Section 262.104."}]}, {"name": "264.403 — Interagency Memorandum of Understanding", "items": [{"text": "(a) A center shall enter into a memorandum of understanding regarding participation in the multidisciplinary team response under Section 264.406. The center and each of the following agencies must execute the memorandum of understanding: (1) the department responsible for child abuse and neglect investigations; (2) each county and municipal law enforcement agency with jurisdiction to investigate child abuse and neglect in the area to be served by the center; and (3) each county or district attorney with jurisdiction to prosecute child abuse and neglect cases in the area to be served by the center."}, {"text": "(b) A memorandum of understanding executed under this section shall include the agreement of each participating agency to cooperate in: (1) minimizing the revictimization of alleged abuse and neglect victims and nonoffending family members through the investigation, assessment, intervention, and prosecution processes; and (2) maintaining a cooperative team approach to facilitate successful outcomes in the criminal justice and child protection systems through shared fact-finding and strong, collaborative case development."}, {"text": "(c) The memorandum of understanding must be reexecuted: (1) at least every three years; (2) on a significant change to the memorandum of understanding; or (3) on a change of a signatory of a participating agency."}]}, {"name": "264.408 — Use of Information and Records; Confidentiality and Ownership", "items": [{"text": "(a) The files, reports, records, communications, and working papers used or developed in providing services under this chapter are confidential and not subject to public release under Chapter 552, Government Code, and may only be disclosed for purposes consistent with this chapter. Disclosure may be made to: (1) the department, department employees, law enforcement agencies, prosecuting attorneys, medical professionals, and other state or local agencies that provide services to children and families; and (2) the attorney for the alleged victim who is the subject of the records and a court-appointed volunteer advocate appointed for the alleged victim under Section 107.031."}, {"text": "(b) Information related to the investigation of a report of abuse or neglect under Chapter 261 and to the services provided as a result of the investigation is confidential as provided by Section 261.201."}, {"text": "(c) The department, a law enforcement agency, and a prosecuting attorney may share with a center information that is confidential under Section 261.201 as needed to provide services under this chapter. Confidential information shared with or provided to a center remains the property of the agency that shared or provided the information to the center. A request for confidential information provided to the center under this section must be made to the agency that shared or provided the information."}, {"text": "(d) An electronic recording of an interview with a child or person with a disability that is made by a center is the property of the prosecuting attorney involved in the criminal prosecution of the case involving the child or person. If no criminal prosecution occurs, the electronic recording is the property of the attorney involved in representing the department in a civil action alleging abuse, neglect, or exploitation. If the matter involving the child or person is not prosecuted, the electronic recording is the property of the department if the matter is an investigation by the department of abuse, neglect, or exploitation. If the department is not investigating or has not investigated the matter, the electronic recording is the property of the agency that referred the matter to the — (see Sec./Art. 264.408 for the complete list)"}, {"text": "(e) The department shall be allowed access to electronic recordings of interviews of children or persons with a disability."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(7, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'ch33_game_e_medical_emergency_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

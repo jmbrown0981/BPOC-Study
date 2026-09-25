@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Offenders Missing Children &amp; AMBER Alert Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &middot; LOs 33.17&ndash;33.23 &middot; Supplemental Practice</p>
+    <h1>Missing Children, Missing Persons &amp; AMBER Alert Sorting Game</h1>
+    <p class="sub">Eighteen boxes, the largest of the six Ch. 33 games: required notification to schools (CCP art. 15.27), the whole run of CCP Chapter 63 &mdash; Missing Children and Missing Persons, from definitions and the state clearinghouse through law enforcement reporting requirements, missing-children investigations, the record-flagging system, schools' duty to flag and remove flags, school records systems, and confidentiality of records (&sect;&sect;63.001&ndash;63.022) &mdash; and Government Code Chapter 411's Statewide AMBER Alert System: definitions, activation, and termination (&sect;&sect;411.351&ndash;411.358). With 18 boxes the categories default to a collapsed view &mdash; expand them as you place cards, or size a round down with Categories/Cards-per-category.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="18" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="17" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 33.17&ndash;33.23 of the Ch.33 Juvenile Offenders outline and its cited statutes &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "15.27 — Notification to Schools Required", "items": [{"text": "(a) A law enforcement agency that arrests any person or refers a child to the office or official designated by the juvenile board who the agency believes is enrolled as a student in a public primary or secondary school, for an offense listed in Subsection (h), shall attempt to ascertain whether the person is so enrolled. If the law enforcement agency ascertains that the individual is enrolled as a student in a public primary or secondary school, the head of the agency or a person designated by the head of the agency shall orally notify the superintendent or a person designated by the superintendent in the school district in which the student is enrolled of that arrest or referral within 24 hours after the arrest or referral is made, or before the next school day, whichever is earlier. — (see Sec./Art. 15.27 for the complete list)"}, {"text": "(b) On conviction, deferred prosecution, or deferred adjudication or an adjudication of delinquent conduct of an individual enrolled as a student in a public primary or secondary school, for an offense or for any conduct listed in Subsection (h) of this article, the office of the prosecuting attorney acting in the case shall orally notify the superintendent or a person designated by the superintendent in the school district in which the student is enrolled of the conviction or adjudication and whether the student is required to register as a sex offender under Chapter 62. Oral notification must be given within 24 hours of the time of the order or before the next school day, whichever is earlier. — (see Sec./Art. 15.27 for the complete list)"}, {"text": "(c) A parole, probation, or community supervision office, including a community supervision and corrections department, a juvenile probation department, the paroles division of the Texas Department of Criminal Justice, and the Texas Juvenile Justice Department, having jurisdiction over a student described by Subsection (a), (b), or (e) who transfers from a school or is subsequently removed from a school and later returned to a school or school district other than the one the student was enrolled in when the arrest, referral to a juvenile court, conviction, or adjudication occurred shall within 24 hours of learning of the student's transfer or reenrollment, or before the next school day, whichever is earlier, notify the superintendent or a person designated by the superintendent of the — (see Sec./Art. 15.27 for the complete list)"}, {"text": "(d) Repealed by Acts 2007, 80th Leg., R.S., Ch. 1240, Sec. 5, eff. June 15, 2007."}, {"text": "(e) (1) A law enforcement agency that arrests, or refers to a juvenile court under Chapter 52, Family Code, an individual who the law enforcement agency knows or believes is enrolled as a student in a private primary or secondary school shall make the oral and written notifications described by Subsection (a) to the principal or a school employee designated by the principal of the school in which the student is enrolled. (2) On conviction, deferred prosecution, or deferred adjudication or an adjudication of delinquent conduct of an individual enrolled as a student in a private primary or secondary school, the office of prosecuting attorney shall make the oral and written notifications described by Subsection (b) of this article to the principal or a school employee designated by the — (see Sec./Art. 15.27 for the complete list)"}, {"text": "(f) A person who receives information under this article may not disclose the information except as specifically authorized by this article. A person who intentionally violates this article commits an offense. An offense under this subsection is a Class C misdemeanor."}, {"text": "(g) The office of the prosecuting attorney or the office or official designated by the juvenile board shall, within two working days, notify the school district that removed a student to a disciplinary alternative education program under Section 37.006, Education Code, if: (1) prosecution of the student's case was refused for lack of prosecutorial merit or insufficient evidence and no formal proceedings, deferred adjudication, or deferred prosecution will be initiated; or (2) the court or jury found the student not guilty or made a finding the child did not engage in delinquent conduct or conduct indicating a need for supervision and the case was dismissed with prejudice."}, {"text": "(h) This article applies to any felony offense and the following misdemeanors: (1) an offense under Section 20.02, 21.08, 22.01, 22.05, 22.07, or 71.02, Penal Code; (2) the unlawful use, sale, or possession of a controlled substance, drug paraphernalia, or marihuana, as defined by Chapter 481, Health and Safety Code; or (3) the unlawful possession of any of the weapons or devices listed in Sections 46.01(1)-(14) or (16), Penal Code, or a weapon listed as a prohibited weapon under Section 46.05, Penal Code."}, {"text": "(i) A person may substitute electronic notification for oral notification where oral notification is required by this article. If electronic notification is substituted for oral notification, any written notification required by this article is not required."}, {"text": "(j) The notification provisions of this section concerning a person who is required to register as a sex offender under Chapter 62 do not lessen the requirement of a person to provide any additional notification prescribed by that chapter."}, {"text": "(k) Oral or written notice required under this article must include all pertinent details of the offense or conduct, including details of any: (1) assaultive behavior or other violence; (2) weapons used in the commission of the offense or conduct; or (3) weapons possessed during the commission of the offense or conduct. (k-1) In addition to the information provided under Subsection (k), the law enforcement agency shall provide to the superintendent or superintendent's designee information relating to the student that is requested for the purpose of conducting a threat assessment or preparing a safety plan relating to that student. A school board may enter into a memorandum of understanding with a law enforcement agency regarding the exchange of information relevant to conducting a threat — (see Sec./Art. 15.27 for the complete list)"}, {"text": "(l) If a school district board of trustees learns of a failure by the superintendent of the district or a district principal to provide a notice required under Subsection (a), (a-1), or (b), the board of trustees shall report the failure to the State Board for Educator Certification. If the governing body of a private primary or secondary school learns of a failure by the principal of the school to provide a notice required under Subsection (e), and the principal holds a certificate issued under Subchapter B, Chapter 21, Education Code, the governing body shall report the failure to the State Board for Educator Certification."}, {"text": "(m) If the superintendent of a school district in which the student is enrolled learns of a failure of the head of a law enforcement agency or a person designated by the head of the agency to provide a notification under Subsection (a), the superintendent or principal shall report the failure to notify to the Texas Commission on Law Enforcement."}, {"text": "(n) If a juvenile court judge or official designated by the juvenile board learns of a failure by the office of the prosecuting attorney to provide a notification required under Subsection (b) or (g), the official shall report the failure to notify to the elected prosecuting attorney responsible for the operation of the office."}, {"text": "(o) If the supervisor of a parole, probation, or community supervision department officer learns of a failure by the officer to provide a notification under Subsection (c), the supervisor shall report the failure to notify to the director of the entity that employs the officer. Page -2 - Page - 1 -"}]}, {"name": "63.001 — Definitions", "items": [{"text": "(1) \"Abduct\" has the meaning assigned by Section 20.01, Penal Code."}, {"text": "(1-a) \"Child\" means a person under 18 years of age."}, {"text": "(2) \"Missing person\" means a person 18 years old or older whose disappearance is possibly not voluntary."}, {"text": "(3) \"Missing child\" means a child whose whereabouts are unknown to the child's legal custodian, the circumstances of whose absence indicate that: (A) the child did not voluntarily leave the care and control of the custodian, and the taking of the child was not authorized by law; (B) the child voluntarily left the care and control of the custodian without the custodian's consent and without intent to return; (C) the child was taken or retained in violation of the terms of a court order for possession of or access to the child; or (D) the child was taken or retained without the permission of the custodian and with the effect of depriving the custodian of possession of or access to the child unless the taking or retention of the child was prompted by the commission or attempted commission of — (see Sec./Art. 63.001 for the complete list)"}, {"text": "(4) \"Missing child\" or \"missing person\" also includes a person of any age who is missing and:"}, {"text": "(A) is under proven physical or mental disability or is senile, and because of one or more of these conditions is subject to immediate danger or is a danger to others;"}, {"text": "(B) is in the company of another person or is in a situation the circumstances of which indicate that the missing child's or missing person's safety is in doubt; or"}, {"text": "(C) is unemancipated as defined by the law of this state."}, {"text": "(5) \"Missing child or missing person report\" means information that is: (A) given to a law enforcement agency on a form used for sending information to the national crime information center; and (B) about a child or missing person whose whereabouts are unknown to the reporter and who is alleged in the form by the reporter to be missing."}, {"text": "(6) \"Legal custodian of a child\" means a parent of a child if no managing conservator or guardian of the person of the child has been appointed, the managing conservator of a child or a guardian of a child if a managing conservator or guardian has been appointed for the child, a possessory conservator of a child if the child is absent from the possessory conservator of the child at a time when the possessory conservator is entitled to possession of the child and the child is not believed to be with the managing conservator, or any other person who has assumed temporary care and control of a child if at the time of disappearance the child was not living with his parent, guardian, managing conservator, or possessory conservator."}, {"text": "(7) \"Clearinghouse\" means the missing children and missing persons information clearinghouse."}, {"text": "(8) \"Law enforcement agency\" means a police department of a city in this state, a sheriff of a county in this state, or the Department of Public Safety."}, {"text": "(9) \"Possible match\" occurs if the similarities between an unidentified body and a missing child or person would lead one to believe they are the same person."}, {"text": "(10) \"City or state agency\" means an employment commission, the Texas Department of Human Services, the Texas Department of Transportation, and any other agency that is funded or supported by the state or a city government."}, {"text": "(11) \"Birth certificate agency\" means a municipal or county official that records and maintains birth certificates and the bureau of vital statistics."}, {"text": "(12) \"Bureau of vital statistics\" means the bureau of vital statistics of the Texas Department of Health."}, {"text": "(13) \"School\" means a public primary school or private primary school that charges a fee for tuition and has more than 25 students enrolled and attending courses at a single location."}]}, {"name": "63.0015 — Presumption Regarding Parentage", "items": [{"text": "For purposes of this chapter, a person named as a child's mother or father in the child's birth certificate is presumed to be the child's parent."}]}, {"name": "63.002 — Missing Children and Missing Persons Information Clearinghouse", "items": [{"text": "(a) The missing children and missing persons information clearinghouse is established within the Department of Public Safety."}, {"text": "(b) The clearinghouse is under the administrative direction of the director of the department."}, {"text": "(c) The clearinghouse shall be used by all law enforcement agencies of the state."}]}, {"name": "63.003 — Function of Clearinghouse", "items": [{"text": "(a) The clearinghouse is a central repository of information on missing children, missing persons, and attempted child abductions."}, {"text": "(b) The clearinghouse shall: (1) establish a system of intrastate communication of information relating to missing children and missing persons; (2) provide a centralized file for the exchange of information on missing children, missing persons, and unidentified dead bodies within the state; (3) communicate with the national crime information center for the exchange of information on missing children and missing persons suspected of interstate travel; (4) collect, process, maintain, and disseminate accurate and complete information on missing children and missing persons; (5) provide a statewide toll-free telephone line for the reporting of missing children and missing persons and for receiving information on missing children and missing persons; — (see Sec./Art. 63.003 for the complete list)"}]}, {"name": "63.009 — Law Enforcement Requirements Generally", "items": [{"text": "(a) A law enforcement agency, on receiving a report of a missing person, shall: (1) if the subject of the report is a person who is known by the agency to have or is reported to have chronic dementia, including Alzheimer's dementia, whether caused by illness, brain defect, or brain injury, immediately start an investigation in order to determine the present location of the person; (2) if the subject of the report is a person other than a person described by Subdivision (1), start an investigation with due diligence in order to determine the present location of the person; (3) immediately, but not later than two hours after receiving the report, enter the name of the person into the clearinghouse and the national crime information center missing person file if the person meets the center's — (see Sec./Art. 63.009 for the complete list)"}, {"text": "(b) Information not immediately available when the original entry is made shall be entered into the clearinghouse, the national crime information center file, and the National Missing and Unidentified Persons System as a supplement to the original entry as soon as possible."}, {"text": "(c) All Texas law enforcement agencies are required to enter information about all unidentified bodies into the clearinghouse and the national crime information center unidentified person file. A law enforcement agency shall, not later than the 10th working day after the date the death is reported to the agency, enter all available identifying features of the unidentified body (fingerprints, dental records, any unusual physical characteristics, and a description of the clothing found on the body) into the clearinghouse and the national crime information center file. If an information entry into the national crime information center file results in an automatic entry of the information into the clearinghouse, the law enforcement agency is not required to make a direct entry of that — (see Sec./Art. 63.009 for the complete list)"}, {"text": "(d) If a local law enforcement agency investigating a report of a missing person obtains a warrant for the arrest of a person for taking or retaining the missing person, the local law enforcement agency shall immediately enter the name and other descriptive information of the person into the national crime information center wanted person file if the person meets the center's criteria. The local law enforcement agency shall also enter all available identifying features, including dental records, fingerprints, and other physical characteristics of the missing person. The information shall be cross-referenced with the information in the national crime information center missing person file."}, {"text": "(e) A local law enforcement agency that has access to the national crime information center database shall cooperate with other law enforcement agencies in entering or retrieving information from the national crime information center database."}, {"text": "(f) Immediately after the return of a missing person or the identification of an unidentified body, the local law enforcement agency having jurisdiction of the investigation shall: (1) clear the entry in the national crime information center database; and (2) notify the National Missing and Unidentified Persons System."}, {"text": "(g) Repealed by Acts 2023, 88th Leg., R.S., Ch. 729 (H.B. 2660), Sec. 9(1), and Ch. 979 (S.B. 2429), Sec. 8(1), eff. September 1, 2023."}]}, {"name": "63.00905 — Law Enforcement Requirements for Report of Missing Child", "items": [{"text": "(a) Regardless of the jurisdiction in which the child went missing, a law enforcement agency, on receiving a report of a missing child, shall: (1) immediately start an investigation in order to determine the present location of the child; (2) immediately, but not later than two hours after receiving the report, enter the name of the child into the clearinghouse and the national crime information center missing person file if the child meets the center's criteria, with all available identifying features such as dental records, fingerprints, other physical characteristics, and a description of the clothing worn when last seen, and all available information describing any person reasonably believed to have taken or retained the missing child; — (see Sec./Art. 63.00905 for the complete list)"}, {"text": "(b) A local law enforcement agency, on receiving a report of a child missing under the circumstances described by Article 63.001(3)(D) for a period of not less than 48 hours, shall immediately make a reasonable effort to locate the child and determine the well-being of the child. On determining the location of the child, if the agency has reason to believe that the child is a victim of abuse or neglect as defined by Section 261.001, Family Code, the agency: (1) shall notify the Department of Family and Protective Services; and (2) may take possession of the child under Subchapter B, Chapter 262, Family Code."}, {"text": "(c) The Department of Family and Protective Services, on receiving notice under Subsection (b), may initiate an investigation into the allegation of abuse or neglect under Section 261.301, Family Code, and take possession of the child under Chapter 262, Family Code."}, {"text": "(d) Information not immediately available when the original entry is made shall be entered into the clearinghouse, the national crime information center file, and the National Missing and Unidentified Persons System as a supplement to the original entry as soon as possible."}, {"text": "(e) If a local law enforcement agency investigating a report of a missing child obtains a warrant for the arrest of a person for taking or retaining the missing child, the local law enforcement agency shall immediately enter the name and other descriptive information of the person into the national crime information center wanted person file if the person meets the center's criteria. The local law enforcement agency shall also enter all available identifying features, including dental records, fingerprints, and other physical characteristics of the missing child. The information shall be cross-referenced with the information in the national crime information center missing person file."}, {"text": "(f) Immediately after the return of a missing child, the local law enforcement agency having jurisdiction of the investigation shall: (1) clear the entry in the national crime information center database; and (2) notify the National Missing and Unidentified Persons System."}, {"text": "(g) On determining the location of a child, other than a child who is subject to the continuing jurisdiction of a district court, an officer shall take possession of the child and shall deliver or arrange for the delivery of the child to a person entitled to possession of the child. If the person entitled to possession of the child is not immediately available, the law enforcement officer shall deliver the child to the Department of Family and Protective Services."}]}, {"name": "63.0091 — Law Enforcement Requirements Regarding Reports of Certain Missing Children", "items": [{"text": "(a) The public safety director of the Department of Public Safety shall adopt rules regarding the procedures for a local law enforcement agency on receiving a report of a missing child who: (1) had been reported missing on four or more occasions in the 24-month period preceding the date of the current report; (2) is in foster care or in the conservatorship of the Department of Family and Protective Services and had been reported missing on two or more occasions in the 24-month period preceding the date of the current report; or (3) is at a high risk of human trafficking, sexual assault, exploitation, abuse, or neglectful supervision for any reason the agency considers to be high risk, including because the missing child: (A) disappeared while in a dangerous environment; — (see Sec./Art. 63.0091 for the complete list)"}, {"text": "(b) The rules adopted under this article must require that: (1) in entering information regarding the report into the national crime information center missing person file as required by Article 63.00905(a)(2) for a missing child described by Subsection (a), the local law enforcement agency shall indicate, in the manner specified in the rules, that the child is at a high risk of harm and include relevant information regarding: (A) any prior occasions on which the child was reported missing; and (B) the circumstances considered when designating the child as high risk; and (2) the local law enforcement agency that receives a report of a missing child described by Subsection (a)(3) shall: (A) reasonably escalate the response; — (see Sec./Art. 63.0091 for the complete list)"}, {"text": "(c) If, at the time the initial entry into the national crime information center missing person file is made, the local law enforcement agency has not determined that the requirements of this article apply to the report of the missing child, the information required by Subsection (b)(1) must be added to the entry promptly after the agency investigating the report or the Department of Public Safety determines that the missing child is described by Subsection (a)."}]}, {"name": "63.011 — Missing Children Investigations", "items": [{"text": "On the written request made to a law enforcement agency by a parent, foster parent, managing or possessory conservator, guardian of the person or the estate, or other court-appointed custodian of a child whose whereabouts are unknown, the law enforcement agency shall request from the missing children and missing persons information clearinghouse information concerning the child that may aid the person making the request in the identification or location of the child."}]}, {"name": "63.021 — System for Flagging Records", "items": [{"text": "(a) On receipt of notification by a law enforcement agency or the clearinghouse regarding a missing child under 11 years of age, the school, day care facility, or birth certificate agency shall maintain the child's records in its possession so that on receipt of a request regarding the child, the school, day care facility, or agency will be able to notify law enforcement or the clearinghouse that a request for a flagged record has been made."}, {"text": "(b) When a request concerning a flagged record is made in person, the school, day care facility, or agency may not advise the requesting party that the request concerns a missing child and shall:"}, {"text": "(1) require the person requesting the flagged record to complete a form stating the person's name, address, telephone number, and relationship to the child for whom a request is made and the name, address, and birth date of the child;"}, {"text": "(2) obtain a copy of the requesting party's driver's license or other photographic identification, if possible;"}, {"text": "(3) if the request is for a birth certificate, inform the requesting party that a copy of a certificate will be sent by mail; and"}, {"text": "(4) immediately notify the appropriate law enforcement agency that a request has been made concerning a flagged record and include a physical description of the requesting party, the identity and address of the requesting party, and a copy of the requesting party's driver's license or other photographic identification."}, {"text": "(c) After providing the notification required under Subsection (a)(4), the school, day care facility, or agency shall mail a copy of the requested record to the requesting party on or after the 21st day after the date of the request."}, {"text": "(d) When a request concerning a flagged record is made in writing, the school, day care facility, or agency may not advise the party that the request concerns a missing child and shall immediately notify the appropriate law enforcement agency that a request has been made concerning a flagged record and provide to the law enforcement agency a copy of the written request. After providing the notification under this subsection, the school, day care facility, or agency shall mail a copy of the requested record to the requesting party on or after the 21st day after the date of the request."}]}, {"name": "63.020 — Duty of Schools and Other Entities to Flag Missing Children's Records", "items": [{"text": "(a) When a report that a child under 11 years of age is missing is received by a law enforcement agency, the agency shall immediately notify each school and day care facility that the child attended or in which the child was enrolled as well as the bureau of vital statistics, if the child was born in the state, that the child is missing."}, {"text": "(b) On receipt of notice that a child under 11 years of age is missing, the bureau of vital statistics shall notify the appropriate municipal or county birth certificate agency that the child is missing."}, {"text": "(c) A school, day care facility, or birth certificate agency that receives notice concerning a child under this section shall flag the child's records that are maintained by the school, facility, or agency."}, {"text": "(d) The law enforcement agency shall notify the clearinghouse that the notification required under this section has been made. The clearinghouse shall provide the notice required under this section if the clearinghouse determines that the notification has not been made by the law enforcement agency."}, {"text": "(e) If a missing child under 11 years of age, who was the subject of a missing child report made in this state, was born in or attended a school or licensed day care facility in another state, the law enforcement agency shall notify law enforcement or the missing and exploited children clearinghouse in each appropriate state regarding the missing child and request the law enforcement agency or clearinghouse to contact the state birth certificate agency and each school or licensed day care facility the missing child attended to flag the missing child's records."}]}, {"name": "63.022 — Removal of Flag From Records", "items": [{"text": "(a) On the return of a missing child under 11 years of age, the law enforcement agency shall notify each school or day care facility that has maintained flagged records for the child and the bureau of vital statistics that the child is no longer missing. The law enforcement agency shall notify the clearinghouse that notification under this section has been made. The bureau of vital statistics shall notify the appropriate municipal or county birth certificate agency. The clearinghouse shall notify the school, day care facility, or bureau of vital statistics that the missing child is no longer missing if the clearinghouse determines that the notification was not provided by the law enforcement agency."}, {"text": "(b) On notification by the law enforcement agency or the clearinghouse that a missing child has been recovered, the school, day care facility, or birth certificate agency that maintained flagged records shall remove the flag from the records."}, {"text": "(c) A school, day care facility, or birth certificate agency that has reason to believe a missing child has been recovered may request confirmation that the missing child has been recovered from the appropriate law enforcement agency or the clearinghouse. If a response is not received after the 45th day after the date of the request for confirmation, the school, day care facility, or birth certificate agency may remove the flag from the record and shall inform the law enforcement agency or the clearinghouse that the flag has been removed. SUBCHAPTER B. UNIVERSITY OF NORTH TEXAS HEALTH SCIENCE CENTER AT FORT WORTH MISSING PERSONS DNA DATABASE"}]}, {"name": "63.019 — School Records System", "items": [{"text": "(a) On enrollment of a child under 11 years of age in a school for the first time at the school, the school shall:"}, {"text": "(1) request from the person enrolling the child the name of each previous school attended by the child;"}, {"text": "(2) request from each school identified in Subdivision (1), the school records for the child and, if the person enrolling the child provides copies of previous school records, request verification from the school of the child's name, address, birth date, and grades and dates attended; and"}, {"text": "(3) notify the person enrolling the student that not later than the 30th day after enrollment, or the 90th day if the child was not born in the United States, the person must provide:"}, {"text": "(A) a certified copy of the child's birth certificate; or"}, {"text": "(B) other reliable proof of the child's identity and age and a signed statement explaining the person's inability to produce a copy of the child's birth certificate."}, {"text": "(b) If a person enrolls a child under 11 years of age in school and does not provide the valid prior school information or documentation required by this section, the school shall notify the appropriate law enforcement agency before the 31st day after the person fails to comply with this section. On receipt of notification, the law enforcement agency shall immediately check the clearinghouse to determine if the child has been reported missing. If the child has been reported missing, the law enforcement agency shall immediately notify other appropriate law enforcement agencies that the missing child has been located."}]}, {"name": "63.017 — Confidentiality of Certain Records", "items": [{"text": "Clearinghouse records that relate to the investigation by a law enforcement agency of a missing child, a missing person, or an unidentified body and records or notations that the clearinghouse maintains for internal use in matters relating to missing children, missing persons, or unidentified bodies are confidential."}]}, {"name": "411.351 — Definitions", "items": [{"text": "(1) \"Abducted child\" means a child 17 years of age or younger whose whereabouts are unknown and whose disappearance poses a credible threat to the safety and health of the child, as determined by a local law enforcement agency."}, {"text": "(2) \"Alert system\" means the statewide America's Missing: Broadcast Emergency Response (AMBER) alert system for abducted children and missing persons with intellectual disabilities."}, {"text": "(2-a) \"Intellectual disability\" means significantly subaverage general intellectual functioning that is concurrent with deficits in adaptive behavior and originates during the developmental period. The term includes a pervasive developmental disorder."}, {"text": "(3) \"Local law enforcement agency\" means a local law enforcement agency with jurisdiction over the investigation of: (A) the abduction of a child; or (B) a missing person with an intellectual disability."}, {"text": "(3-a) \"Pervasive developmental disorder\" means a disorder that meets the criteria for a pervasive developmental disorder established in the most recent Diagnostic and Statistical Manual of Mental Disorders published by the American Psychiatric Association."}, {"text": "(4) \"Serious bodily injury\" has the meaning assigned by Section 1.07, Penal Code."}]}, {"name": "411.352 — Statewide AMBER Alert System for Abducted Children", "items": [{"text": "(No subsections on file for 411.352 — see gv.411.txt)"}]}, {"name": "411.355 — Activation", "items": [{"text": "(a) On the request of a local law enforcement agency regarding an abducted child, the department shall activate the alert system and notify appropriate participants in the alert system, as established by rule, if: (1) the local law enforcement agency believes that a child has been abducted, including a child who: (A) is younger than 14 years of age; and (B) regardless of whether the child departed willingly with the other person, has been taken from the care and custody of the child's parent or legal guardian without the permission of the parent or legal guardian by another person who is: (i) more than three years older than the child; and (ii) not related to the child by any degree of consanguinity or affinity as defined under Subchapter B, Chapter 573, Government Code; — (see Sec./Art. 411.355 for the complete list)"}, {"text": "(b) On the request of a local law enforcement agency regarding a missing person with an intellectual disability, the department shall activate the alert system and notify appropriate participants in the alert system, as established by rule, if: (1) the local law enforcement agency receives notice of a missing person with an intellectual disability; (2) the local law enforcement agency verifies that at the time the person is reported missing: (A) the person has an intellectual disability, as determined according to the procedure provided by Section 593.005, Health and Safety Code; and (B) the person's location is unknown; (3) the local law enforcement agency determines that the person's disappearance poses a credible threat to the person's health and safety; — (see Sec./Art. 411.355 for the complete list)"}, {"text": "(c) The department may modify the criteria described by Subsection (a) or (b) as necessary for the proper implementation of the alert system."}]}, {"name": "411.358 — Termination", "items": [{"text": "(1) the abducted child or missing person is recovered or the situation is otherwise resolved; or"}, {"text": "(2) the director determines that the alert system is no longer an effective tool for locating and recovering the abducted child or missing person."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(17, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'ch33_game_f_missing_children_amber_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>

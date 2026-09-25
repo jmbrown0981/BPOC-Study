@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Offenders Child Abuse &amp; Neglect Investigation Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+  .collapse-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
+    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
+  }
+  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:120px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+
+  /* ---------- compact (collapsed) bucket mode ---------- */
+  .bucket-grid.compact{
+    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
+  }
+  .bucket-grid.compact .bucket{
+    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
+    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
+  }
+  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
+  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
+  .bucket-grid.compact .bucket-solved{display:none;}
+  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
+  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &middot; LO 33.13 &middot; Supplemental Practice</p>
+    <h1>Child Abuse &amp; Neglect Investigation Sorting Game</h1>
+    <p class="sub">Eighteen boxes built entirely from Family Code Chapter 261 (Investigation of Report of Child Abuse or Neglect) plus the two related offenses/duties that sit alongside it: definitions, who must report and what must be reported (&sect;&sect;261.001, 261.101&ndash;261.104), how a report gets referred, immunities, and the penalties for a false report or a failure to report (&sect;&sect;261.105&ndash;261.109), Penal Code &sect;38.17 (failure to stop or report a sexual or assaultive offense against a child), privileged communication, how an investigation is conducted and by whom &mdash; including CCP art. 2A.057 &mdash; colocation of investigators, interference with an investigation, and investigations inside juvenile justice programs and facilities (&sect;&sect;261.202&ndash;261.405). With 18 boxes the categories default to a collapsed view &mdash; expand them as you place cards, or size a round down with Categories/Cards-per-category.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="18" value="6"></div>
+      <div class="setup-field">Cards/section <input type="number" id="numCards" min="1" max="12" value="4"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a card straight onto a section box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Statute Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Subsections to Sort</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LO 33.13 of the Ch.33 Juvenile Offenders outline and its cited statutes &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "261.001 — Definitions", "items": [{"text": "(1) \"Abuse\" includes the following acts or omissions by a person: (A) mental or emotional injury to a child that results in an observable and material impairment in the child's growth, development, or psychological functioning; (B) causing or permitting the child to be in a situation in which the child sustains a mental or emotional injury that results in an observable and material impairment in the child's growth, development, or psychological functioning; (C) physical injury that results in substantial harm to the child, or the genuine threat of substantial harm from physical injury to the child, including an injury that is at variance with the history or explanation given and excluding an accident or reasonable discipline by a parent, guardian, or managing or possessory conservator — (see Sec./Art. 261.001 for the complete list)"}, {"text": "(1-a) \"Abuse\" does not include the refusal by a person responsible for a child's care, custody, or welfare to affirm: (A) a child's perception of the child's gender, including a refusal to use a child's preferred name or pronouns, regardless of whether the child's name has been legally changed; or (B) a child's expressed sexual orientation."}, {"text": "(2) \"Department\" means the Department of Family and Protective Services."}, {"text": "(3) \"Exploitation\" means the illegal or improper use of a child or of the resources of a child for monetary or personal benefit, profit, or gain by an employee, volunteer, or other individual working under the auspices of a facility or program as further described by rule or policy."}, {"text": "(3-a) \"Law enforcement agency\" means: (A) the Department of Public Safety; (B) the police department of a municipality; (C) the sheriff's office of a county; or (D) a constable's office of a county."}, {"text": "(4) \"Neglect\" means an act or failure to act by a person responsible for a child's care, custody, or welfare evidencing the person's blatant disregard for the consequences of the act or failure to act that results in harm to the child or that creates an immediate danger to the child's physical health or safety and: (A) includes: (i) the leaving of a child in a situation where the child would be exposed to an immediate danger of physical or mental harm, without arranging for necessary care for the child, and the demonstration of an intent not to return by a parent, guardian, or managing or possessory conservator of the child; (ii) the following acts or omissions by a person: — (see Sec./Art. 261.001 for the complete list)"}, {"text": "(5) \"Person responsible for a child's care, custody, or welfare\" means a person who traditionally is responsible for a child's care, custody, or welfare, including: (A) a parent, guardian, managing or possessory conservator, or foster parent of the child; (B) a member of the child's family or household as defined by Chapter 71; (C) a person with whom the child's parent cohabits; (D) school personnel or a volunteer at the child's school; (E) personnel or a volunteer at a public or private child-care facility that provides services for the child or at a public or private residential institution or facility where the child resides; or (F) an employee, volunteer, or other person working under the supervision of a licensed or unlicensed child-care facility, including a family home, residential — (see Sec./Art. 261.001 for the complete list)"}, {"text": "(6) \"Report\" means a report that alleged or suspected abuse or neglect of a child has occurred or may occur."}, {"text": "(7) Repealed by Acts 2017, 85th Leg., R.S., Ch. 316 (H.B. 5), Sec. 36(1), eff. September 1, 2017."}, {"text": "(8) Repealed by Acts 2015, 84th Leg., R.S., Ch. 1, Sec. 1.203(4), eff. April 2, 2015."}, {"text": "(9) \"Severe emotional disturbance\" means a mental, behavioral, or emotional disorder of sufficient duration to result in functional impairment that substantially interferes with or limits a person's role or ability to function in family, school, or community activities."}]}, {"name": "261.101 — Persons Required to Report; Time to Report", "items": [{"text": "(a) A person having reasonable cause to believe that a child's physical or mental health or welfare has been adversely affected by abuse or neglect by any person shall immediately make a report as provided by this subchapter."}, {"text": "(b) If a professional has reasonable cause to believe that a child has been abused or neglected or may be abused or neglected, or that a child is a victim of an offense under Section 21.11, Penal Code, and the professional has reasonable cause to believe that the child has been abused as defined by Section 261.001, the professional shall make a report not later than the 24th hour after the hour the professional first has reasonable cause to believe that the child has been or may be abused or neglected or is a victim of an offense under Section 21.11, Penal Code. A professional may not delegate to or rely on another person to make the report. In this subsection, \"professional\" means an individual who is licensed or certified by the state or who is an employee of a facility licensed, — (see Sec./Art. 261.101 for the complete list)"}, {"text": "(c) The requirement to report under this section applies without exception to an individual whose personal communications may otherwise be privileged, including an attorney, a member of the clergy, a medical practitioner, a social worker, a mental health professional, an employee or member of a board that licenses or certifies a professional, and an employee of a clinic or health care facility that provides reproductive services."}, {"text": "(d) Unless waived in writing by the person making the report, the identity of an individual making a report under this chapter is confidential and may be disclosed only: (1) as provided by Section 261.201; (2) to a law enforcement officer for the purposes of conducting a criminal investigation of the report; or (3) to the Texas Education Agency or the State Board for Educator Certification, on request by the agency or board, for the purposes of: (A) conducting an investigation of the report; (B) conducting an investigation of an allegation that a person failed to submit a report as required under this chapter; or (C) compliance monitoring or conducting an investigation or review of an investigation under Section 22A.156, Education Code."}]}, {"name": "261.102 — Matters to Be Reported", "items": [{"text": "A report should reflect the reporter's belief that a child has been or may be abused or neglected or has died of abuse or neglect."}]}, {"name": "261.103 — Report Made to Appropriate Agency", "items": [{"text": "(a) Except as provided by Subsections (b) and (c) and Section 261.405, a report shall be made to: (1) a law enforcement agency; (2) the department; or (3) the state agency that operates, licenses, certifies, or registers the facility in which the alleged abuse or neglect occurred."}, {"text": "(b) A report may be made to the Texas Juvenile Justice Department instead of the entities listed under Subsection (a) if the report is based on information provided by a child while under the supervision of the Texas Juvenile Justice Department concerning the child's alleged abuse of another child."}, {"text": "(c) Notwithstanding Subsection (a), a report, other than a report under Subsection (a)(3) or Section 261.405, must be made to the department if the alleged or suspected abuse or neglect involves a person responsible for the care, custody, or welfare of the child."}]}, {"name": "261.104 — Contents of Report; Notice", "items": [{"text": "(a) The individual making a report shall identify, if known: (1) the name and address of the child; (2) the name and address of the person responsible for the care, custody, or welfare of the child; (3) the facts that caused the individual to believe the child has been abused or neglected and the source of the information; (4) the individual's name and telephone number; (5) the individual's: (A) home address; or (B) if the individual is a professional as defined by Section 261.101(b), the individual's business address and profession; and (6) any other pertinent information concerning the alleged or suspected abuse or neglect."}, {"text": "(b) If the individual making a report of child abuse or neglect uses the toll-free telephone number the department operates for reporting child abuse or neglect and the individual is unwilling to provide the information described by Subsection (a)(4), the department representative receiving the report shall notify the individual that: (1) the department is not authorized to accept an anonymous report of abuse or neglect; (2) the individual may report the abuse or neglect by making a report to a law enforcement agency; and (3) the identity of an individual making a report under this subchapter is confidential and may be disclosed only: (A) as provided by Section 261.201; (B) to a law enforcement officer for the purposes of conducting a criminal investigation of the report; — (see Sec./Art. 261.104 for the complete list)"}, {"text": "(c) The department representative or other person receiving a report of child abuse or neglect shall use the person's best efforts to obtain the information described by Subsection (a)."}, {"text": "(d) If a report of abuse or neglect is made orally, the department or law enforcement agency receiving the report shall: (1) notify the individual making the report that: (A) the report is being recorded; and (B) making a false report is a criminal offense under Section 261.107 punishable as a state jail felony or a third degree felony; and (2) make an audio recording of the report."}]}, {"name": "261.105 — Referral of Report by Department or Law Enforcement", "items": [{"text": "(a) All reports received by a law enforcement agency that allege abuse or neglect by a person responsible for a child's care, custody, or welfare shall be referred immediately to the department."}, {"text": "(b) The department shall immediately notify the appropriate law enforcement agency of any report it receives, other than a report from a law enforcement agency, that concerns the suspected abuse or neglect of a child or death of a child from abuse or neglect."}, {"text": "(c) In addition to notifying a law enforcement agency, if the report relates to a child in a facility operated, licensed, certified, or registered by a state agency, the department shall refer the report to the agency for investigation. (c-1) Notwithstanding Subsections (b) and (c), if a report under this section relates to a child with an intellectual disability receiving services in a state supported living center as defined by Section 531.002, Health and Safety Code, or the ICF-IID component of the Rio Grande State Center, the department shall immediately notify the commission and the commission shall proceed with the investigation of the report as provided by Section 261.404. — (see Sec./Art. 261.105 for the complete list)"}, {"text": "(d) If the department initiates an investigation and determines that the abuse or neglect does not involve a person responsible for the child's care, custody, or welfare, the department shall refer the report to the appropriate law enforcement agency for further investigation. If the department determines that the abuse or neglect involves an employee of a public or private elementary or secondary school, the department shall notify, in writing, the superintendent of the school district, the director of the open-enrollment charter school, or the chief executive officer of the private school in which the employee is employed about the investigation. — (see Sec./Art. 261.105 for the complete list)"}, {"text": "(e) In cooperation with the department, the Texas Juvenile Justice Department by rule shall adopt guidelines for identifying a report made to the Texas Juvenile Justice Department under Section 261.103(b) that is appropriate to refer to the department or a law enforcement agency for investigation. Guidelines adopted under this subsection must require the Texas Juvenile Justice Department to consider the severity and immediacy of the alleged abuse or neglect of the child victim."}]}, {"name": "261.106 — Immunities", "items": [{"text": "(a) A person acting in good faith who reports or assists in the investigation of a report of alleged child abuse or neglect or who testifies or otherwise participates in a judicial proceeding arising from a report, petition, or investigation of alleged child abuse or neglect is immune from civil or criminal liability that might otherwise be incurred or imposed."}, {"text": "(b) Immunity from civil and criminal liability extends to an authorized volunteer of the department or a law enforcement officer who participates at the request of the department in an investigation of alleged or suspected abuse or neglect or in an action arising from an investigation if the person was acting in good faith and in the scope of the person's responsibilities."}, {"text": "(c) A person who reports the person's own abuse or neglect of a child or who acts in bad faith or with malicious purpose in reporting alleged child abuse or neglect is not immune from civil or criminal liability."}]}, {"name": "261.107 — False Report; Criminal Penalty; Civil Penalty", "items": [{"text": "(a) A person commits an offense if, with the intent to deceive, the person knowingly makes a report as provided in this chapter that is false. An offense under this subsection is a state jail felony unless it is shown on the trial of the offense that the person has previously been convicted under this section, in which case the offense is a felony of the third degree."}, {"text": "(b) A finding by a court in a suit affecting the parent-child relationship that a report made under this chapter before or during the suit was false or lacking factual foundation may be grounds for the court to modify an order providing for possession of or access to the child who was the subject of the report by restricting further access to the child by the person who made the report."}, {"text": "(c) The appropriate county prosecuting attorney shall be responsible for the prosecution of an offense under this section."}, {"text": "(d) The court shall order a person who is convicted of an offense under Subsection (a) to pay any reasonable and necessary attorney's fees, court costs, and expenses incurred by the person who was falsely accused of abuse or neglect in any proceeding relating to the false report."}, {"text": "(e) A person who engages in conduct described by Subsection (a) is liable to the state for a civil penalty of $1,000. The attorney general shall bring an action to recover a civil penalty authorized by this subsection."}]}, {"name": "261.109 — Failure to Report; Penalty", "items": [{"text": "(a) A person commits an offense if the person is required to make a report under Section 261.101(a) and knowingly fails to make a report as provided in this chapter. (a-1) A person who is a professional as defined by Section 261.101(b) commits an offense if the person is required to make a report under Section 261.101(b) and knowingly fails to make a report as provided in this chapter."}, {"text": "(b) An offense under Subsection (a) is a Class A misdemeanor, except that the offense is a state jail felony if it is shown on the trial of the offense that the child was a person with an intellectual disability who resided in a state supported living center, the ICF-IID component of the Rio Grande State Center, or a facility licensed under Chapter 252, Health and Safety Code, and the actor knew that the child had suffered serious bodily injury as a result of the abuse or neglect."}, {"text": "(c) An offense under Subsection (a-1) is a Class A misdemeanor, except that the offense is a state jail felony if it is shown on the trial of the offense that the actor intended to conceal the abuse or neglect."}]}, {"name": "38.17 — Failure to Stop or Report Sexual or Assaultive Offense Against Child", "items": [{"text": "(a) A person commits an offense if: (1) the actor observes the commission or attempted commission of an offense under circumstances in which a reasonable person would believe that an offense of a sexual or assaultive nature was being committed or was about to be committed against a child; (2) the actor fails to assist the child or immediately report the commission of the offense to a peace officer or law enforcement agency; and (3) the actor could assist the child or immediately report the commission of the offense without placing the actor in danger of suffering serious bodily injury or death."}, {"text": "(b) An offense under this section is a felony of the third degree."}, {"text": "(c) If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section, the other law, or both."}]}, {"name": "261.202 — Privileged Communication", "items": [{"text": "In a proceeding regarding the abuse or neglect of a child, evidence may not be excluded on the ground of privileged communication except in the case of communications between an attorney and client."}]}, {"name": "261.301 — Investigation of Report", "items": [{"text": "(a) With assistance from the appropriate law enforcement agency as provided by this section, the department shall make a prompt and thorough investigation of a report of child abuse or neglect allegedly committed by a person responsible for a child's care, custody, or welfare. The investigation shall be conducted without regard to any pending suit affecting the parent-child relationship."}, {"text": "(b) A state agency shall investigate a report that alleges abuse, neglect, or exploitation occurred in a facility operated, licensed, certified, or registered by that agency as provided by Subchapter E. In conducting an investigation for a facility operated, licensed, certified, registered, or listed by the department, the department shall perform the investigation as provided by: (1) Subchapter E; and (2) the Human Resources Code."}, {"text": "(c) The department is not required to investigate a report that alleges child abuse, neglect, or exploitation by a person other than a person responsible for a child's care, custody, or welfare. The appropriate law enforcement agency shall investigate that report if the agency determines an investigation should be conducted."}, {"text": "(d) The executive commissioner shall by rule assign priorities and prescribe investigative procedures for investigations based on the severity and immediacy of the alleged harm to the child. The primary purpose of the investigation shall be the protection of the child. The rules must require the department, subject to the availability of funds, to: (1) immediately respond to a report of abuse and neglect that involves circumstances in which the death of the child or substantial bodily harm to the child would result unless the department immediately intervenes; (2) respond within 24 hours to a report of abuse and neglect that is assigned the highest priority, other than a report described by Subdivision (1); — (see Sec./Art. 261.301 for the complete list)"}, {"text": "(e) As necessary to provide for the protection of the child, the department shall determine: (1) the nature, extent, and cause of the abuse or neglect; (2) the identity of the person responsible for the abuse or neglect; (3) the names and conditions of the other children in the home; (4) an evaluation of the parents or persons responsible for the care of the child; (5) the adequacy of the home environment; (6) the relationship of the child to the persons responsible for the care, custody, or welfare of the child; and (7) all other pertinent data."}, {"text": "(f) An investigation of a report to the department that alleges that a child has been or may be the victim of conduct that constitutes a criminal offense that poses an immediate risk of physical or sexual abuse of a child that could result in the death of or serious harm to the child shall be conducted jointly by a peace officer, as defined by Article 2A.001, Code of Criminal Procedure, from the appropriate local law enforcement agency and the department or the agency responsible for conducting an investigation under Subchapter E."}, {"text": "(g) The inability or unwillingness of a local law enforcement agency to conduct a joint investigation under this section does not constitute grounds to prevent or prohibit the department from performing its duties under this subtitle. The department shall document any instance in which a law enforcement agency is unable or unwilling to conduct a joint investigation under this section."}, {"text": "(h) The department and the appropriate local law enforcement agency shall conduct an investigation, other than an investigation under Subchapter E, as provided by this section and Article 2A.057, Code of Criminal Procedure, if the investigation is of a report that alleges that a child has been or may be the victim of conduct that constitutes a criminal offense that poses an immediate risk of physical or sexual abuse of a child that could result in the death of or serious harm to the child. Immediately on receipt of a report described by this subsection, the department shall notify the appropriate local law enforcement agency of the report."}, {"text": "(i) If at any time during an investigation of a report of child abuse or neglect to which the department has assigned the highest priority the department is unable to locate the child who is the subject of the report of abuse or neglect or the child's family, the department shall notify the Department of Public Safety that the location of the child and the child's family is unknown. If the Department of Public Safety locates the child and the child's family, the Department of Public Safety shall notify the department of the location of the child and the child's family."}, {"text": "(j) In geographic areas with demonstrated need, the department shall designate employees to serve specifically as investigators and responders for after-hours reports of child abuse or neglect."}, {"text": "(k) In an investigation of a report of abuse or neglect allegedly committed by a person responsible for a child's care, custody, or welfare, the department shall determine whether the person is an active duty member of the United States armed forces or the spouse of a member on active duty. If the department determines the person is an active duty member of the United States armed forces or the spouse of a member on active duty, the department shall notify the United States Department of Defense Family Advocacy Program at the closest active duty military installation of the investigation."}, {"text": "(l) After the 60th day after the date an investigation is closed, the department may not reopen the investigation or change the department's finding in the investigation to find abuse or neglect occurred. Before the 60th day after the date an investigation is closed, the department may reopen a closed investigation and change the department's finding in the investigation only for good cause shown. The commissioner by rule shall establish procedures for reopening a closed investigation as authorized by this section."}]}, {"name": "2A.057 — Investigation of Certain Reports Alleging Abuse, Neglect, or Exploitation", "items": [{"text": "(a) In this article, ‘department’ means the Department of Family and Protective Services"}, {"text": "(b) A peace officer shall investigate jointly with the department if the report is assigned the highest priority and alleges an immediate risk of physical or sexual abuse of a child that could result in death or serious harm by a person responsible for the child's care, custody, or welfare"}, {"text": "(c) As soon as possible, but not later than 24 hours, after being notified by the department of a highest-priority report, the peace officer shall accompany the department investigator in initially responding to the report"}, {"text": "(d) On receipt of a report of abuse, neglect, exploitation, or other complaint regarding a resident of a nursing home, convalescent home, or similar institution or assisted living facility, the local law enforcement agency shall investigate as required by Section 260A.017, Health and Safety Code"}]}, {"name": "261.302 — Conduct of Investigation", "items": [{"text": "(a) The investigation may include: (1) a visit to the child's home, unless the alleged abuse or neglect can be confirmed or clearly ruled out without a home visit; and (2) an interview with and examination of the subject child, which may include a medical, psychological, or psychiatric examination."}, {"text": "(b) The interview with and examination of the child may: (1) be conducted at any reasonable time and place, including the child's home or the child's school; (2) include the presence of persons the department determines are necessary; and (3) include transporting the child for purposes relating to the interview or investigation. (b-1) Before the department may transport a child as provided by Subsection (b)(3), the department shall attempt to notify the parent or other person having custody of the child of the transport."}, {"text": "(c) The investigation may include an interview with the child's parents and an interview with and medical, psychological, or psychiatric examination of any child in the home."}, {"text": "(d) If, before an investigation is completed, the investigating agency believes that the immediate removal of a child from the child's home is necessary to protect the child from further abuse or neglect, the investigating agency shall file a petition or take other action under Chapter 262 to provide for the temporary care and protection of the child."}, {"text": "(e) An interview with a child in which the allegations of the current investigation are discussed and that is conducted by the department during the investigation stage shall be audiotaped or videotaped unless: (1) the recording equipment malfunctions and the malfunction is not the result of a failure to maintain the equipment or bring adequate supplies for the equipment; (2) the child is unwilling to allow the interview to be recorded after the department makes a reasonable effort consistent with the child's age and development and the circumstances of the case to convince the child to allow the recording; or (3) due to circumstances that could not have been reasonably foreseen or prevented by the department, the department does not have the necessary recording equipment because the — (see Sec./Art. 261.302 for the complete list)"}, {"text": "(f) A person commits an offense if the person is notified of the time of the transport of a child by the department and the location from which the transport is initiated and the person is present at the location when the transport is initiated and attempts to interfere with the department's investigation. An offense under this subsection is a Class B misdemeanor. It is an exception to the application of this subsection that the department requested the person to be present at the site of the transport."}]}, {"name": "261.3126 — Colocation of Investigators", "items": [{"text": "(a) In each county, to the extent possible, the department and the local law enforcement agencies that investigate child abuse in the county shall colocate in the same offices investigators from the department and the law enforcement agencies to improve the efficiency of child abuse investigations. With approval of the local children's advocacy center and its partner agencies, in each county in which a children's advocacy center established under Section 264.402 is located, the department shall attempt to locate investigators from the department and county and municipal law enforcement agencies at the center."}, {"text": "(b) A law enforcement agency is not required to comply with the colocation requirements of this section if the law enforcement agency does not have a full-time peace officer solely assigned to investigate reports of child abuse and neglect."}, {"text": "(c) If a county does not have a children's advocacy center, the department shall work with the local community to encourage one as provided by Section 264.402."}]}, {"name": "261.3032 — Interference With Investigation; Criminal Penalty", "items": [{"text": "(a) A person commits an offense if, with the intent to interfere with the department's investigation of a report of abuse or neglect of a child, the person relocates the person's residence, either temporarily or permanently, without notifying the department of the address of the person's new residence or conceals the child and the person's relocation or concealment interferes with the department's investigation."}, {"text": "(b) An offense under this section is a Class B misdemeanor."}, {"text": "(c) If conduct that constitutes an offense under this section also constitutes an offense under any other law, the actor may be prosecuted under this section or the other law."}]}, {"name": "261.401 — Agency Investigation", "items": [{"text": "(a) Repealed by Acts 2017, 85th Leg., R.S., Ch. 1136 (H.B. 249), Sec. 14, and Acts 2017, 85th Leg., R.S., Ch. 319 (S.B. 11), Sec. 32, eff. September 1, 2017."}, {"text": "(b) Except as provided by Section 261.404 of this code and former Section 531.02013(1)(D), Government Code, a state agency that operates, licenses, certifies, registers, or lists a facility in which children are located or provides oversight of a program that serves children shall make a prompt, thorough investigation of a report that a child has been or may be abused, neglected, or exploited in the facility or program. The primary purpose of the investigation shall be the protection of the child."}, {"text": "(c) A state agency shall adopt rules relating to the investigation and resolution of reports received as provided by this subchapter. The executive commissioner shall review and approve the rules of agencies other than the Texas Department of Criminal Justice or the Texas Juvenile Justice Department to ensure that those agencies implement appropriate standards for the conduct of investigations and that uniformity exists among agencies in the investigation and resolution of reports."}, {"text": "(d) The Texas School for the Blind and Visually Impaired and the Texas School for the Deaf shall adopt policies relating to the investigation and resolution of reports received as provided by this subchapter. The executive commissioner shall review and approve the policies to ensure that the Texas School for the Blind and Visually Impaired and the Texas School for the Deaf adopt those policies in a manner consistent with the minimum standards adopted by the executive commissioner under Section 261.407."}]}, {"name": "261.405 — Investigations in Juvenile Justice Programs and Facilities", "items": [{"text": "(a) Notwithstanding Section 261.001, in this section: (1) \"Abuse\" means an intentional, knowing, or reckless act or omission by an employee, volunteer, or other individual working under the auspices of a facility or program that causes or may cause emotional harm or physical injury to, or the death of, a child served by the facility or program as further described by rule or policy. (2) \"Exploitation\" means the illegal or improper use of a child or of the resources of a child for monetary or personal benefit, profit, or gain by an employee, volunteer, or other individual working under the auspices of a facility or program as further described by rule or policy. — (see Sec./Art. 261.405 for the complete list)"}, {"text": "(b) A report of alleged abuse, neglect, or exploitation in any juvenile justice program or facility shall be made to the Texas Juvenile Justice Department and a local law enforcement agency for investigation."}, {"text": "(c) The Texas Juvenile Justice Department shall make a prompt, thorough investigation as provided by this chapter if that department receives a report of alleged abuse, neglect, or exploitation in any juvenile justice program or facility. The primary purpose of the investigation shall be the protection of the child."}, {"text": "(d) In an investigation required under this section, the investigating agency shall have access to medical and mental health records as provided by Subchapter D."}, {"text": "(e) As soon as practicable after a child is taken into custody or placed in a juvenile justice facility or juvenile justice program, the facility or program shall provide the child's parents with: (1) information regarding the reporting of suspected abuse, neglect, or exploitation of a child in a juvenile justice facility or juvenile justice program to the Texas Juvenile Justice Department; and (2) the Texas Juvenile Justice Department's toll-free number for this reporting."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
+  const numCards = Math.max(1, Math.min(12, Number(document.getElementById('numCards').value) || 4));
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-progress">${solvedHere.length} / ${totalHere} placed</div>
+        <div class="bucket-solved">${chips}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} sections. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- collapse/expand the section boxes ---------- */
+const COMPACT_KEY = 'ch33_game_d_abuse_investigation_sortgame_bucket_compact_v1';
+function loadCompactPref(){
+  try {
+    const v = localStorage.getItem(COMPACT_KEY);
+    if(v === '1') return true;
+    if(v === '0') return false;
+  } catch(e){ /* ignore -- private window / blocked storage */ }
+  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
+}
+function saveCompactPref(val){
+  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
+}
+let bucketsCompact = loadCompactPref();
+function applyCompactState(){
+  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+document.getElementById('toggleBucketsBtn').onclick = () => {
+  bucketsCompact = !bucketsCompact;
+  saveCompactPref(bucketsCompact);
+  applyCompactState();
+};
+
+applyCompactState();
+newRound();
+</script>
+
+</body>
+</html>
