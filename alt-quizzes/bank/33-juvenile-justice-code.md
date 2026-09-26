@@ -1683,7 +1683,7 @@ Under ED 37.007(a), a student MUST be expelled (subject to certain exceptions) f
 ### Q119 — Term ID
 **LO:** 33.2 · **Source:** FC 51.02(5)
 
-**Answer:** Judge (or Juvenile Court Judge)
+**Answer:** Judge | Juvenile Court Judge
 
 "_________" or "_________" means the judge of a juvenile court.
 
@@ -1804,7 +1804,7 @@ Under ED 37.007(a), a student MUST be expelled (subject to certain exceptions) f
 ### Q130 — Term ID
 **LO:** 33.3 · **Source:** FC 51.03(b)
 
-**Answer:** Conduct Indicating a Need for Supervision (CINS)
+**Answer:** Conduct Indicating a Need for Supervision | CINS
 
 "_________" means conduct, other than a traffic offense, that violates the penal laws of this state of the grade of misdemeanor that are punishable by fine only or the penal ordinances of any political subdivision of this state, but only if the child has been referred to the juvenile court under Section 51.08(b); the voluntary absence of a child from the child's home without the consent of the child's parent or guardian for a substantial length of time or without intent to return (runaway); conduct prohibited by city ordinance or by state law involving the inhalation of the fumes or vapors of paint and other protective coatings or glue and other adhesives and the volatile chemicals (huffing); an act that violates a school district's previously communicated written standards of student conduct for which the child has been expelled; conduct described by Section 43.02 (Prostitution) or 43.021 (Solicitation of Prostitution) Penal Code, or conduct that violates section 43.261 (Electronic Transmission of Certain Visual Material Depicting Minor) Penal Code, or conduct that violates section 42.0601 (False Report to Induce Emergency Response) Penal Code if the child has not previously been adjudicated as having engaged in conduct violating that section.
 
