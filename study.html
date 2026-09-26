@@ -33,8 +33,10 @@
   .search-wrap input:focus{outline:2px solid var(--brass-light); background:rgba(255,255,255,0.12);}
   .search-icon{position:absolute; left:12px; top:50%; transform:translateY(-50%); opacity:0.7; font-size:14px;}
 
-  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  nav.chips::-webkit-scrollbar{display:none;}
+  nav.chips{background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; flex-wrap:wrap; gap:6px;}
+  /* Chips wrap to the window width. The bar only stays pinned on wider screens, where it
+     fits in a couple of rows; on phones it would cover too much of the page. */
+  @media (min-width:900px){ nav.chips{position:sticky; top:0; z-index:20;} }
 
   .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; transition:all 0.15s ease;}
   .chip.active{background:var(--navy); border-color:var(--navy); color:#F3EFE4;}
@@ -59,7 +61,7 @@
   .chapter-content h1{display:none;} /* the H1 chapter title is already shown in .chapter-head */
   .chapter-content h2{
     font-family:'IBM Plex Serif',serif; font-weight:600; font-size:16px; color:var(--navy);
-    margin:26px 0 8px; padding-top:14px; border-top:1px solid var(--paper-dim); scroll-margin-top:90px;
+    margin:26px 0 8px; padding-top:14px; border-top:1px solid var(--paper-dim); scroll-margin-top:calc(var(--chips-h, 0px) + 45px);
   }
   .chapter-content h2:first-child{margin-top:0; padding-top:0; border-top:none;}
   .chapter-content h3{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:14px; color:var(--ink-soft); margin:16px 0 6px;}
@@ -171,7 +173,16 @@ function renderChapterChips(){
     b.onclick = ()=>{ document.getElementById('searchInput').value=''; activeChapter = ch.num; renderChapter(); };
     wrap.appendChild(b);
   });
+  updateChipsHeight();
 }
+
+// Jump links land below the pinned chip bar, whatever height it wraps to.
+function updateChipsHeight(){
+  const nav = document.getElementById('chapterChips');
+  const pinned = getComputedStyle(nav).position === 'sticky';
+  document.documentElement.style.setProperty('--chips-h', (pinned ? nav.offsetHeight : 0) + 'px');
+}
+window.addEventListener('resize', updateChipsHeight);
 
 function assignHeadingIds(container){
   container.querySelectorAll('h2').forEach(h=>{
