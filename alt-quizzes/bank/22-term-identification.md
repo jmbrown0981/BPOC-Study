@@ -583,7 +583,7 @@ In this subtitle "______" means pedestrians, ridden or herded animals, and conve
 ### Q53 — Term ID
 **LO:** 22.3 · **Source:** TC 541.302(8)
 
-**Answer:** Limited-Access Or Controlled-Access Highway
+**Answer:** Limited-Access Highway | Controlled-Access Highway
 
 "______" means a highway or roadway to which: (A) persons, including owners or occupants of abutting real property, have no right of access; and (B) access by persons to enter or exit the highway or roadway is restricted under law except at a place and in the manner determined by the authority that has jurisdiction over the highway or roadway.
 

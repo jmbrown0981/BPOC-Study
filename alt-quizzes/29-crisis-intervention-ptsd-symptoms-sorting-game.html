@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-<title>Ch. 29 Crisis Intervention Training Symptom Matching Sorting Game | BPOC Study</title>
+<title>Ch. 29 Crisis Intervention Training PTSD Symptoms Sorting Game | BPOC Study</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -78,11 +78,6 @@
 
   h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
   h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
-  .collapse-toggle{
-    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:11px; cursor:pointer;
-    border-radius:6px; padding:5px 11px; border:1px solid var(--rule); background:#fff; color:var(--navy);
-  }
-  .collapse-toggle:hover{border-color:var(--brass); color:var(--brass);}
 
   .bucket-grid{
     display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
@@ -93,23 +88,11 @@
   }
   .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
   .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
-  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-grid{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:14.5px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
   .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
   .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
 
-  /* ---------- compact (collapsed) bucket mode ---------- */
-  .bucket-grid.compact{
-    display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px;
-  }
-  .bucket-grid.compact .bucket{
-    flex:0 0 auto; min-height:0; width:auto; max-width:none; padding:6px 12px; border-radius:20px;
-    flex-direction:row; align-items:baseline; gap:7px; white-space:nowrap;
-  }
-  .bucket-grid.compact .bucket-name{margin-bottom:0; font-size:12px;}
-  .bucket-grid.compact .bucket-progress{margin-bottom:0;}
-  .bucket-grid.compact .bucket-solved{display:none;}
-  .bucket-grid.compact .bucket.bucket-complete{background:#EAF1EA; border-color:var(--green);}
-  .bucket-grid.compact .bucket.bucket-complete .bucket-progress{color:var(--green);}
   .chip{
     background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
     font-size:11px; line-height:1.35; cursor:pointer;
@@ -157,9 +140,9 @@
 <header class="hero">
   <div class="hero-inner">
     <a class="back-link" href="../index.html">&larr; Study Hub</a>
-    <p class="hero-eyebrow">Ch. 29 &middot; Crisis Intervention Training &middot; LOs 29.23&ndash;29.32 &middot; Supplemental Practice</p>
-    <h1>Symptom &rarr; Condition Sorting Game</h1>
-    <p class="sub">Five conditions officers commonly encounter in the field &mdash; Traumatic Brain Injury, Dementia/Alzheimer's Disease, Autism Spectrum Disorder, Intellectual Disability, and PTSD &mdash; each get their own box. Drag (or tap) each card onto the condition it describes. Cards mix observable symptoms and behaviors with causes, risk factors, and the communication techniques the chapter recommends for that condition, since telling those apart in the field matters as much as spotting the symptom itself. Some cards look similar across conditions on purpose (e.g., confusion or agitation can show up in several boxes) &mdash; read for the specific behavior described, not just the general theme.</p>
+    <p class="hero-eyebrow">Ch. 29 &middot; Crisis Intervention Training &middot; LO 29.31 &middot; Supplemental Practice</p>
+    <h1>PTSD Symptoms Sorting Game</h1>
+    <p class="sub">Two boxes, ten cards: sort each PTSD symptom from LO 29.31 into the group it belongs to &mdash; <b>Intrusion Symptoms</b> (including the avoidance behaviors the outline lists under intrusion) or <b>Negative Changes in Mood and Thought Patterns</b>.</p>
   </div>
 </header>
 
@@ -171,8 +154,7 @@
       <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
     </div>
     <div class="setup-row">
-      <div class="setup-field">Conditions in round <input type="number" id="numBuckets" min="2" max="5" value="5"></div>
-      <div class="setup-field">Cards/condition <input type="number" id="numCards" min="1" max="10" value="5"></div>
+      <div class="setup-field">Cards/group <input type="number" id="numCards" min="1" max="5" value="5"></div>
       <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
       <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
     </div>
@@ -181,9 +163,9 @@
 
 <main>
   <div class="note" id="instructionsNote">
-    <b>How to play:</b> either <b>drag</b> a card straight onto a condition box, or <b>tap/click</b> a card to pick it up
+    <b>How to play:</b> either <b>drag</b> a card straight onto a symptom-group box, or <b>tap/click</b> a card to pick it up
     and then tap/click the box you think it belongs to. Right answer &rarr; the card locks into that box
-    (green, with a checkmark &mdash; click it to see the extra detail/citation). Wrong answer &rarr; the card shakes, the miss is
+    (green, with a checkmark &mdash; click it to see the full text). Wrong answer &rarr; the card shakes, the miss is
     counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
     round-complete banner, then hit <b>New Round</b> for a fresh random deal.
     <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
@@ -197,17 +179,17 @@
     <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
   </div>
 
-  <h2 class="section-title">Conditions <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse conditions</button></h2>
+  <h2 class="section-title">Symptom Groups <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span></h2>
   <div class="bucket-grid" id="bucketGrid"></div>
 
-  <h2 class="section-title tray-title">Symptoms, Causes &amp; Techniques to Sort</h2>
+  <h2 class="section-title tray-title">Symptoms to Sort</h2>
   <div class="tray" id="tray"></div>
 </main>
 
-<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 29.23&ndash;29.32 of the Ch.29 Crisis Intervention Training outline &middot; Not an official TCOLE or academy publication</footer>
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LO 29.31 of the Ch.29 Crisis Intervention Training outline &middot; Not an official TCOLE or academy publication</footer>
 
 <script>
-const CATEGORIES = [{"name": "Traumatic Brain Injury (TBI)", "items": [{"text": "Caused by impact to the head, or other mechanisms of rapid movement or displacement of the brain within the skull, such as with blast injuries", "detail": "Meaney, Morrison, & Bass, 2014."}, {"text": "Can occur from proximity to a blast, blunt force trauma, or penetrating injuries"}, {"text": "Leading cause of death in adults under age 45 (commonly motor vehicle accidents) and the second leading cause of death in adults over 65", "detail": "Meaney, Morrison, & Bass, 2014."}, {"text": "Symptoms vary by person and severity, and can affect attention, executive function, learning and memory, language, eye-hand coordination, and social awareness"}, {"text": "A decline in life satisfaction commonly follows moderate to severe cases, tied to the ability to maintain employment, quality of social relationships, ability to engage in leisure activities, and level of acquired disability"}, {"text": "Mild cases are most common among the civilian population, while moderate cases are more prevalent among the military population"}, {"text": "Rates among military service members increased significantly during OIF/OEF due to the frequency of explosion-related exposures", "detail": "The overall rate of cases among military personnel is believed to be higher than reported, but is underreported and under-identified."}, {"text": "An estimated 1.7 million ER visits occur among civilians in the U.S. each year due to head injuries — of those treated, about 275,000 are hospitalized and 52,000 die", "detail": "CDC, NIH, DoD, & VA Leadership Panel, June 2013."}]}, {"name": "Dementia / Alzheimer's Disease", "items": [{"text": "A name for a group of symptoms caused by disorders that affect the brain — not a specific disease in itself", "detail": "National Institutes of Health (NIH), 2017."}, {"text": "A degeneration of mental functioning involving thinking, memory, and reasoning, ranging from mild (some impairment in daily living) to severe (completely reliant on others for basic needs)"}, {"text": "Memory loss is a common sign, but memory loss alone does not mean someone has this condition", "detail": "NIH, 2017."}, {"text": "Not a normal part of the aging process, but up to half of all people over the age of 85 are affected by some form of it", "detail": "National Institute on Aging (NIA), 2017."}, {"text": "Speak clearly and concisely rather than loudly, and consider using ‘yes’ or ‘no’ questions given potential difficulty with language comprehension"}, {"text": "If verbal comprehension is difficult, try nonverbal or written prompts, provide reassurance of the person's safety, and check for an ID bracelet, pendant, or wallet card with a Safe Return ID and emergency contact"}, {"text": "Resistance to commands is usually driven by fear or confusion rather than intentional defiance"}, {"text": "May fail to obey traffic laws or flee the scene of a car accident due to confusion or memory impairment, and may drive in a way that looks impaired even with no alcohol or drugs present"}, {"text": "May call 911 to report a theft after losing or misplacing an item, or report a burglary/intruder that turns out to be a family member, caregiver, or delivery person"}, {"text": "May forget social norms or lose impulse control — leaving the house improperly dressed, undressing in public, or forgetting to pay for items while shopping"}]}, {"name": "Autism Spectrum Disorder", "items": [{"text": "A condition present since birth or childhood that prevents full social or vocational independence in adulthood and continues throughout the lifespan", "detail": "DSM-V definition."}, {"text": "Officers may notice fear of touch, repetitive behavior (rocking, striking themselves, or making noises), insistence on routine, extreme anxiousness in new situations, and a tendency to become confused easily"}, {"text": "May avoid eye contact, not answer questions, or respond with something unrelated to what was asked"}, {"text": "May repeat (echo) words said to them without providing an actual response to the question or statement", "detail": "Known clinically as echolalia."}, {"text": "Volume of speech may not match the circumstance — may speak very loudly or very softly"}, {"text": "May display restricted, repetitive interests — becoming fixated on a word, topic, object, or sound, difficult to redirect away from it, and sometimes distraught if it's removed"}, {"text": "May exhibit repetitive motor movements such as rocking, hand motions, head banging, or biting, or atypical movement like walking on tiptoes", "detail": "Australian Autism Alliance, 2017."}, {"text": "Can be impulsive and potentially aggressive without provocation; differences typically become noticeable by around age 3"}, {"text": "Be patient, calm, and detached during questioning — this tends to prevent agitation — and avoid physical contact or limiting personal space, which risks an unintended use-of-force situation"}, {"text": "Some individuals cannot communicate verbally or use only a cluster of words — interact with a trusted care-provider to determine the best way to conduct an interview"}]}, {"name": "Intellectual Disability", "items": [{"text": "Includes deficits in intellectual and adaptive functioning — a failure to meet developmental and socio-cultural standards for intellectual and personal independence", "detail": "DSM-V."}, {"text": "Detectable in infancy or early childhood, and by definition must be diagnosed by age 18"}, {"text": "A fixed mental condition that, unlike many mental illnesses, cannot be “cured”"}, {"text": "May include deficits in communication, self-care, home living, personal safety, academic functioning, or occupational abilities"}, {"text": "During a criminal offense, the subject may be noticeably older than others involved, appear to be a follower rather than a leader, readily confess due to a lack of full understanding, remain at the scene while others ran, or have been used as a pawn by more sophisticated offenders"}, {"text": "May show obvious speech defects, limited ability to speak or comprehend at an age-normative level, marked difficulty maintaining attention or conversation, or difficulty describing facts in detail"}, {"text": "Social behavior indicators can include an adult associating with children or early adolescents, ignorance of personal space, or non-age-appropriate behavior"}, {"text": "During questioning: be patient for a reply, repeat questions as needed, ask short simple questions, speak slowly, and use open-ended (but uncomplicated) questions rather than yes/no questions"}, {"text": "An inability to read or write (illiteracy) does not, by itself, indicate this disability", "detail": "Instructor note from the chapter outline."}]}, {"name": "Post-Traumatic Stress Disorder (PTSD)", "items": [{"text": "Can develop after exposure to a traumatic event — actual or threatened death, injury, or sexual violence — whether experienced directly or witnessed happening to someone else"}, {"text": "Common trauma sources include physical violence (abuse, assault, robbery, domestic violence), sexual violence (rape, sexual abuse, trafficking), and combat, whether civilian or military"}, {"text": "Whether trauma develops into the disorder depends on variables like the intensity and duration of the trauma, frequency of exposure, how much control the person felt during the event, and the quality of support received afterward", "detail": "SAMHSA, 2014."}, {"text": "Intrusion symptoms include recurrent unwanted dreams, images, or memories, and feeling or acting as if the traumatic event is happening again in the present"}, {"text": "Avoidance symptoms include efforts to avoid distressing memories or feelings tied to the trauma, and avoiding people, places, or things that serve as reminders of it", "detail": "E.g., someone assaulted by a person in uniform may avoid or refuse to make eye contact with someone in uniform."}, {"text": "Negative changes in mood and thought include persistent exaggerated negative beliefs, self-blame (survivor's guilt), persistent fear/horror/shame/guilt/anger, and loss of interest in social activities"}, {"text": "Increased arousal and reactivity can include irritability, a heightened startle response, recklessness, hypervigilance, difficulty concentrating, sleep disturbance, and fatigue"}, {"text": "In a crisis, a person with the disorder is experiencing a recurring, primal ‘fight or flight’ activation with survival as the primary goal"}, {"text": "Hypervigilance means the person is more likely to attribute dangerousness to ambiguous information and react as if threatened"}, {"text": "Triggers are sensory stimuli — people, places, sights, sounds, smells, or textures — that cause a person to recall a traumatic memory and react physiologically to a real or imagined threat", "detail": "VA, 2017."}]}];
+const CATEGORIES = [{"name": "Intrusion Symptoms", "items": [{"text": "Recurrent unwanted dreams, images, or memories."}, {"text": "Feeling or acting as if the event is occurring in the present."}, {"text": "Intense distress at reminders of the trauma."}, {"text": "Efforts to avoid distressing memories, thoughts, or feelings reminiscent of the trauma."}, {"text": "Avoidance of people, places, things, or other reminders of the trauma. For example, a person who was assaulted by someone in uniform may avoid or refuse to talk to or make eye contact with someone in uniform."}]}, {"name": "Negative Changes in Mood and Thought Patterns", "items": [{"text": "Persistent and exaggerated negative beliefs and expectations."}, {"text": "Self-blame, also known as survivor’s guilt."}, {"text": "Persistent feelings of fear, horror, shame, guilt, anger."}, {"text": "Loss of interest or participation in events, gatherings, or social activities."}, {"text": "Persistent inability to experience positive emotions."}]}];
 
 let session = { correct: 0, incorrect: 0 };
 let round = { cards: [], buckets: [] };
@@ -227,8 +209,8 @@ function escapeHtml(s){
 }
 
 function newRound(){
-  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || CATEGORIES.length));
-  const numCards = Math.max(1, Math.min(10, Number(document.getElementById('numCards').value) || 5));
+  const numBuckets = CATEGORIES.length; // always both symptom groups
+  const numCards = Math.max(1, Math.min(5, Number(document.getElementById('numCards').value) || 5));
 
   const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
   const cards = [];
@@ -306,7 +288,7 @@ function checkRoundComplete(){
   if(totalRound() > 0 && solvedRound() === totalRound()){
     const banner = document.getElementById('roundBanner');
     document.getElementById('roundBannerText').textContent =
-      `All ${totalRound()} cards placed correctly across ${round.buckets.length} conditions. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+      `All ${totalRound()} cards placed correctly across both symptom groups. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
     banner.classList.add('show');
   }
 }
@@ -426,25 +408,6 @@ function updateBucketHover(x, y){
   if(bucketEl) bucketEl.classList.add('drag-over');
 }
 
-/* ---------- collapse/expand the condition boxes ---------- */
-const COMPACT_KEY = 'ch29_symptoms_sortgame_bucket_compact_v1';
-function loadCompactPref(){
-  try {
-    const v = localStorage.getItem(COMPACT_KEY);
-    if(v === '1') return true;
-    if(v === '0') return false;
-  } catch(e){ /* ignore -- private window / blocked storage */ }
-  return CATEGORIES.length > 10; // many boxes: default to compact so the tray stays visible
-}
-function saveCompactPref(val){
-  try { localStorage.setItem(COMPACT_KEY, val ? '1' : '0'); } catch(e){ /* ignore */ }
-}
-let bucketsCompact = loadCompactPref();
-function applyCompactState(){
-  document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
-  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand conditions' : 'Collapse conditions';
-}
-
 /* ---------- wiring ---------- */
 document.getElementById('newRoundBtn').onclick = newRound;
 document.getElementById('roundBannerNewRound').onclick = newRound;
@@ -455,13 +418,6 @@ document.getElementById('resetScoreBtn').onclick = () => {
 document.getElementById('hideInstructions').onclick = () => {
   document.getElementById('instructionsNote').style.display = 'none';
 };
-document.getElementById('toggleBucketsBtn').onclick = () => {
-  bucketsCompact = !bucketsCompact;
-  saveCompactPref(bucketsCompact);
-  applyCompactState();
-};
-
-applyCompactState();
 newRound();
 </script>
 
