@@ -1647,3 +1647,209 @@ Under ED 37.007(a), a student MUST be expelled (subject to certain exceptions) f
 
 ---
 
+### Q116 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(2)
+
+**Answer:** Child
+
+"_________" means a person who is: (A)  ten years of age or older and under 17 years of age;  or (B)  seventeen years of age or older and under 18 years of age who is alleged or found to have engaged in delinquent conduct or conduct indicating a need for supervision as a result of acts committed before becoming 17 years of age.
+
+**Explanation:** The term this defines is "Child", straight from FC 51.02(2).
+
+---
+
+### Q117 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(3)
+
+**Answer:** Custodian
+
+"_________" means the adult with whom the child resides.
+
+**Explanation:** The term this defines is "Custodian", straight from FC 51.02(3).
+
+---
+
+### Q118 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(4)
+
+**Answer:** Guardian
+
+"_________" means the person who, under court order, is the guardian of the person of the child or the public or private agency with whom the child has been placed by a court.
+
+**Explanation:** The term this defines is "Guardian", straight from FC 51.02(4).
+
+---
+
+### Q119 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(5)
+
+**Answer:** Judge (or Juvenile Court Judge)
+
+"_________" or "_________" means the judge of a juvenile court.
+
+**Explanation:** The term this defines is "Judge (or Juvenile Court Judge)", straight from FC 51.02(5).
+
+---
+
+### Q120 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(6)
+
+**Answer:** Juvenile Court
+
+"_________" means a court designated under Section 51.04 of this code to exercise jurisdiction over proceedings under this title.
+
+**Explanation:** The term this defines is "Juvenile Court", straight from FC 51.02(6).
+
+---
+
+### Q121 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(8)
+
+**Answer:** Nonoffender
+
+"_________" means a child who: (A)  is subject to jurisdiction of a court under abuse, dependency, or neglect statutes under Title 5  for reasons other than legally prohibited conduct of the child;  or (B)  has been taken into custody and is being held solely for deportation out of the United States.
+
+**Explanation:** The term this defines is "Nonoffender", straight from FC 51.02(8).
+
+---
+
+### Q122 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(9)
+
+**Answer:** Parent
+
+"_________" means the mother or the father of a child, but does not include a parent whose parental rights have been terminated.
+
+**Explanation:** The term this defines is "Parent", straight from FC 51.02(9).
+
+---
+
+### Q123 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(12)
+
+**Answer:** Referral to Juvenile Court
+
+"_________" means the referral of a child or a child's case to the office or official, including an intake officer or probation officer, designated by the juvenile board to process children within the juvenile justice system.
+
+**Explanation:** The term this defines is "Referral to Juvenile Court", straight from FC 51.02(12).
+
+---
+
+### Q124 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(13)
+
+**Answer:** Secure Correctional Facility
+
+"_________" means any public or private residential facility, including an alcohol or other drug treatment facility, that: (A)  includes construction fixtures designed to physically restrict the movements and activities of juveniles or other individuals held in lawful custody in the facility;  and (B)  is used for the placement of any juvenile who has been adjudicated as having committed an offense, any nonoffender, or any other individual convicted of a criminal offense.
+
+**Explanation:** The term this defines is "Secure Correctional Facility", straight from FC 51.02(13).
+
+---
+
+### Q125 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(14)
+
+**Answer:** Secure Detention Facility
+
+"_________" means any public or private residential facility that: (A)  includes construction fixtures designed to physically restrict the movements and activities of juveniles or other individuals held in lawful custody in the facility;  and (B)  is used for the temporary placement of any juvenile who is accused of having committed an offense, any nonoffender, or any other individual accused of having committed a criminal offense.
+
+**Explanation:** The term this defines is "Secure Detention Facility", straight from FC 51.02(14).
+
+---
+
+### Q126 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(15)
+
+**Answer:** Status Offender
+
+"_________" means a child who is accused, adjudicated, or convicted for conduct that would not, under state law, be a crime if committed by an adult, including: (A)  running away from home under Section 51.03(b)(2); (B)  a fineable only offense under Section 51.03(b)(1) transferred to the juvenile court under Section 51.08(b), but only if the conduct constituting the offense would not have been criminal if engaged in by an adult; (C)  a violation of standards of student conduct as described by Section 51.03(b)(4); (D)   a violation of a provision of the Alcoholic Beverage Code applicable to minors only; or (E)  a violation of any other fineable only offense under Section 8.07(a)(4) or (5), Penal Code, but only if the conduct constituting the offense would not have been criminal if engaged in by an adult.
+
+**Explanation:** The term this defines is "Status Offender", straight from FC 51.02(15).
+
+---
+
+### Q127 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(16)
+
+**Answer:** Traffic Offense
+
+"_________" means: (A)  a violation of a penal statute cognizable under Chapter 729, Transportation Code, except for conduct for which the person convicted may be sentenced to imprisonment or confinement in jail; or (B)  a violation of a motor vehicle traffic ordinance of an incorporated city or town in this state.
+
+**Explanation:** The term this defines is "Traffic Offense", straight from FC 51.02(16).
+
+---
+
+### Q128 — Term ID
+**LO:** 33.2 · **Source:** FC 51.02(17)
+
+**Answer:** Valid Court Order
+
+"_________" means a court order entered under Section 54.04 concerning a child adjudicated to have engaged in conduct indicating a need for supervision as a status offender.
+
+**Explanation:** The term this defines is "Valid Court Order", straight from FC 51.02(17).
+
+---
+
+### Q129 — Term ID
+**LO:** 33.3 · **Source:** FC 51.03(a)
+
+**Answer:** Delinquent Conduct
+
+"_________" means conduct, other than a traffic offense, that violates a penal law of this state or of the United States punishable by imprisonment or by confinement in jail; conduct that violates a lawful order of a court under circumstances that would constitute contempt of that court in a justice or municipal court, a county court for conduct punishable only by a fine, or a truancy court; conduct that violates Section 49.04 (DWI), 49.05 (FWI), 49.06 (BWI), 49.07 (Intoxication Assault), or 49.08 (Intoxication Manslaughter), Penal Code; or conduct that violates Section 106.041, Alcoholic Beverage Code, relating to driving under the influence of alcohol by a minor (third or subsequent offense).
+
+**Explanation:** The term this defines is "Delinquent Conduct", straight from FC 51.03(a).
+
+---
+
+### Q130 — Term ID
+**LO:** 33.3 · **Source:** FC 51.03(b)
+
+**Answer:** Conduct Indicating a Need for Supervision (CINS)
+
+"_________" means conduct, other than a traffic offense, that violates the penal laws of this state of the grade of misdemeanor that are punishable by fine only or the penal ordinances of any political subdivision of this state, but only if the child has been referred to the juvenile court under Section 51.08(b); the voluntary absence of a child from the child's home without the consent of the child's parent or guardian for a substantial length of time or without intent to return (runaway); conduct prohibited by city ordinance or by state law involving the inhalation of the fumes or vapors of paint and other protective coatings or glue and other adhesives and the volatile chemicals (huffing); an act that violates a school district's previously communicated written standards of student conduct for which the child has been expelled; conduct described by Section 43.02 (Prostitution) or 43.021 (Solicitation of Prostitution) Penal Code, or conduct that violates section 43.261 (Electronic Transmission of Certain Visual Material Depicting Minor) Penal Code, or conduct that violates section 42.0601 (False Report to Induce Emergency Response) Penal Code if the child has not previously been adjudicated as having engaged in conduct violating that section.
+
+**Explanation:** The term this defines is "Conduct Indicating a Need for Supervision (CINS)", straight from FC 51.03(b).
+
+---
+
+### Q131 — Term ID
+**LO:** 33.4 · **Source:** FC 51.11(a)(1)
+
+**Answer:** Dual-System Child
+
+"_________" means a child, who at any time before the child's 18th birthday, was referred to the juvenile justice system and was involved in the child welfare system by being placed in the temporary or permanent managing conservatorship of the Department of Family and Protective Services (DFPS), the subject of a family-based safety services case with the Department of Family and Protective Services (DFPS), an alleged victim of abuse or neglect in an active case being investigated by the Department of Family and Protective Services (DFPS), or a victim in a case in which the Department of Family and Protective Services (DFPS) investigation concluded that there was a reason to believe that abuse or neglect occurred.
+
+**Explanation:** The term this defines is "Dual-System Child", straight from FC 51.11(a)(1).
+
+---
+
+### Q132 — Term ID
+**LO:** 33.4 · **Source:** FC 51.11(a)(2)
+
+**Answer:** Dual-Status Child
+
+"_________" means a dual-system child who is involved with both the child welfare and juvenile justice systems at the same time.
+
+**Explanation:** The term this defines is "Dual-Status Child", straight from FC 51.11(a)(2).
+
+---
+
+### Q133 — Term ID
+**LO:** 33.4 · **Source:** Legal term; see FC 51.11 (guardian ad litem)
+
+**Answer:** Ad Litem
+
+"_________" is a Latin phrase meaning "for the suit."
+
+**Explanation:** The term this defines is "Ad Litem", a Latin legal term — it appears in FC 51.11 as "guardian ad litem," a guardian appointed for the purposes of the case.
+
+---
+
+### Q134 — Term ID
+**LO:** 33.4 · **Source:** Legal term; see FC 51.13(b)
+
+**Answer:** Adduce
+
+"_________" means to bring forward proof, evidence, or reasons to support an argument or claim.
+
+**Explanation:** The term this defines is "Adduce", a general legal term — it appears in FC 51.13(b) ("evidence adduced in a hearing").

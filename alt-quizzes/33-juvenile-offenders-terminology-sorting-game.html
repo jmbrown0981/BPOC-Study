@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 33 Juvenile Offenders Adult vs. Juvenile Terminology Sorting Game | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:1080px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px; letter-spacing:0.02em;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy);
+    padding:10px 20px;
+  }
+  .controls-inner{max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule);
+    border-radius:20px; padding:5px 12px; white-space:nowrap;
+  }
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);}
+  .stat-pill.incorrect b{color:var(--rust);}
+  .stat-pill.progress b{color:var(--navy);}
+
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-left:auto;}
+  .setup-field{display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .setup-field input{
+    width:48px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:4px 6px;
+    border:1px solid var(--rule); border-radius:5px; background:#fff; color:var(--ink);
+  }
+  .btn{
+    font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer;
+    border-radius:7px; padding:7px 14px; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);}
+  .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:1080px; margin:0 auto; padding:20px 20px 60px;}
+
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+
+  .round-banner{
+    display:none; align-items:center; justify-content:space-between; gap:12px;
+    background:#fff; border:1px solid var(--green); border-left-width:5px; border-radius:8px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .round-banner.show{display:flex;}
+  .round-banner h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--green);}
+  .round-banner p{margin:0; font-size:12.5px; color:var(--ink-soft);}
+
+  h2.section-title{font-family:'IBM Plex Serif',serif; font-size:15px; font-weight:600; margin:0 0 10px; color:var(--navy); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  h2.section-title .hint{font-family:'IBM Plex Sans',sans-serif; font-weight:400; font-size:11.5px; color:var(--ink-soft);}
+
+  .bucket-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:26px;
+  }
+  .bucket{
+    background:#fff; border:2px dashed var(--rule); border-radius:10px; padding:12px; min-height:96px;
+    display:flex; flex-direction:column; transition:border-color .15s ease, background .15s ease, transform .1s ease;
+  }
+  .bucket.drag-over{border-color:var(--brass); background:#FBF6E9; transform:scale(1.015);}
+  .bucket.select-armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light) inset; cursor:pointer;}
+  .bucket-name{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:13px; color:var(--navy); line-height:1.3; margin-bottom:8px;}
+  .bucket-progress{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); margin-bottom:6px;}
+  .bucket-solved{display:flex; flex-direction:column; gap:5px; flex:1;}
+  .bucket-label{font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px;}
+  .bucket-name{font-size:14.5px;}
+  .slot{border:1px dashed var(--rule); border-radius:6px; padding:8px; font-size:11px; font-style:italic; color:var(--gray); text-align:center;}
+  .chip{font-size:12.5px; font-weight:600;}
+  .chip-detail{font-weight:400;}
+  .card{font-weight:600; font-size:13px;}
+
+  .chip{
+    background:#EAF1EA; border:1px solid var(--green); color:#2E4A32; border-radius:6px; padding:5px 8px;
+    font-size:11px; line-height:1.35; cursor:pointer;
+  }
+  .chip .chip-check{color:var(--green); font-weight:700; margin-right:4px;}
+  .chip-detail{margin-top:4px; font-size:10.5px; color:#3C5A40; display:none; line-height:1.4;}
+  .chip.expanded .chip-detail{display:block;}
+
+  h2.tray-title{margin-top:4px;}
+  .tray{display:flex; flex-wrap:wrap; gap:10px; min-height:80px; padding:14px; background:var(--paper-dim); border:1px solid var(--rule); border-radius:10px;}
+  .tray:empty::after{content:"Nothing left to sort \2014 nice work! Start a new round above."; font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+
+  .card{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--brass); border-radius:8px;
+    padding:9px 12px; font-size:12.5px; line-height:1.4; max-width:320px; cursor:grab; user-select:none;
+    touch-action:none; box-shadow:0 1px 2px rgba(19,35,57,0.06); transition:box-shadow .12s ease, transform .12s ease, border-color .12s ease;
+  }
+  .card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12);}
+  .card.armed{border-color:var(--brass); box-shadow:0 0 0 2px var(--brass-light); transform:translateY(-1px);}
+  .card.dragging{opacity:0.35;}
+  .card.shake{animation:shakeCard .4s ease;}
+  .card.ghost{
+    position:fixed; z-index:200; pointer-events:none; cursor:grabbing; box-shadow:0 8px 22px rgba(19,35,57,0.28);
+    transform:rotate(-1.5deg) scale(1.03);
+  }
+  @keyframes shakeCard{
+    0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(5px);}
+    60%{transform:translateX(-4px);} 80%{transform:translateX(3px);}
+  }
+  .card.flash-wrong{border-color:var(--rust); background:#FBEDE6;}
+
+  .instructions-toggle{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11.5px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:30px;} }
+  @media (max-width:640px){
+    .controls-inner{flex-direction:column; align-items:stretch;}
+    .setup-row{margin-left:0; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Study Hub</a>
+    <p class="hero-eyebrow">Ch. 33 &middot; Juvenile Offenders &middot; LO 33.2 &middot; Supplemental Practice</p>
+    <h1>Adult vs. Juvenile Terminology Sorting Game</h1>
+    <p class="sub">Each box is an adult criminal-court term with a single empty slot. Match the juvenile-system counterpart to it &mdash; the eight terminology pairs (criminal offense &rarr; delinquent conduct, conviction &rarr; adjudication, and so on) and the court-process analogs (county jail &rarr; juvenile processing center, arraignment &rarr; detention hearing, and so on) from LO 33.2. Twelve pairs in all. The outline lists Petition = Indictment/Information and Disposition Hearing = Sentencing in both lists, so each of those appears once here.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill correct">Correct: <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Incorrect: <b id="statIncorrect">0</b></span>
+      <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
+    </div>
+    <div class="setup-row">
+      <div class="setup-field">Pairs in round <input type="number" id="numBuckets" min="2" max="12" value="12"></div>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
+      <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <b>How to play:</b> either <b>drag</b> a juvenile-term card straight onto an adult-term box, or <b>tap/click</b> a card to pick it up
+    and then tap/click the adult-term box it maps to. Each box has exactly one slot. Right answer &rarr; the card locks into that slot
+    (green, with a checkmark &mdash; click it to see what the juvenile term means). Wrong answer &rarr; the card shakes, the miss is
+    counted, and it goes back to the tray so you can try a different box. Finish every card in the round to trigger the
+    round-complete banner, then hit <b>New Round</b> for a fresh random deal.
+    <button class="instructions-toggle" id="hideInstructions" type="button">hide this</button>
+  </div>
+
+  <div class="round-banner" id="roundBanner">
+    <div>
+      <h3>Round complete!</h3>
+      <p id="roundBannerText"></p>
+    </div>
+    <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
+  </div>
+
+  <h2 class="section-title">Adult Terms <span class="hint">one slot each &mdash; drag or tap-select a card, then choose a box</span></h2>
+  <div class="bucket-grid" id="bucketGrid"></div>
+
+  <h2 class="section-title tray-title">Juvenile Terms to Match</h2>
+  <div class="tray" id="tray"></div>
+</main>
+
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LO 33.2 of the Ch.33 Juvenile Offenders outline &middot; Not an official TCOLE or academy publication</footer>
+
+<script>
+const CATEGORIES = [{"name": "Criminal Offense", "items": [{"text": "Delinquent Conduct", "detail": "Conduct (other than a traffic offense) that violates a penal law punishable by imprisonment/jail, certain contempt-of-court conduct, PC 49.04-49.08 (DWI-family offenses), or a 3rd+ DUI-minor offense under AB Code 106.041. (FC 51.03(a))"}]}, {"name": "Code of Criminal Procedure", "items": [{"text": "Family Code", "detail": "Juvenile cases are governed by the Family Code (Title 3, the Juvenile Justice Code) rather than the Code of Criminal Procedure."}]}, {"name": "Arrest Warrant", "items": [{"text": "Directive to Apprehend", "detail": "A juvenile court order, requested by a law enforcement or probation officer, directing that a child be taken into custody upon a probable cause finding. Not subject to appeal. (FC 52.015)"}]}, {"name": "Indictment / Information", "items": [{"text": "Juvenile Petition", "detail": "The formal pleading that opens a delinquency/CINS proceeding in juvenile court — functionally the juvenile system's charging instrument."}]}, {"name": "Defendant", "items": [{"text": "Respondent", "detail": "The child (or, in a discretionary-transfer proceeding against an adult for conduct committed as a juvenile, the person) against whom the juvenile petition is brought."}]}, {"name": "Conviction", "items": [{"text": "Adjudication", "detail": "The juvenile court's finding, at the adjudication hearing, that the child engaged in delinquent conduct or CINS — generally not legally a \"conviction.\" (FC 51.13)"}]}, {"name": "Sentencing Hearing", "items": [{"text": "Disposition Hearing", "detail": "The hearing (following adjudication) where the juvenile court decides the outcome/consequence — probation, commitment to TJJD, etc. (FC 54.04)"}]}, {"name": "Guilty / Not Guilty Plea", "items": [{"text": "Plea of True / Not True", "detail": "The juvenile-system equivalent of an adult guilty/not guilty plea, entered at the adjudication hearing in response to the petition's allegations."}]}, {"name": "County Jail", "items": [{"text": "Juvenile Processing Center", "detail": "A designated office or room (not a cell) where a child may be temporarily held — capped at 6 hours, limited to specific purposes (return to parent, paperwork, authorized photographing/fingerprinting, required warnings, certain statements). The statute calls it a juvenile processing office. (FC 52.025)"}]}, {"name": "Arraignment", "items": [{"text": "Detention Hearing", "detail": "A hearing (without a jury) held within strict statutory deadlines to decide whether a detained child should be released or remain in detention pending further proceedings. (FC 54.01)"}]}, {"name": "Plea or Trial", "items": [{"text": "Adjudication Hearing", "detail": "The hearing where the juvenile court determines whether the child engaged in the alleged delinquent conduct/CINS — the juvenile analog to trial or a guilty plea proceeding. (FC 54.03)"}]}, {"name": "Motion to Revoke Probation", "items": [{"text": "Petition to Modify Disposition", "detail": "A filing seeking to change a prior disposition order (e.g., because the child violated probation conditions) — the juvenile analog to a motion to revoke community supervision."}]}];
+
+let session = { correct: 0, incorrect: 0 };
+let round = { cards: [], buckets: [] };
+let armedCardId = null; // for tap-to-select mode
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function newRound(){
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || CATEGORIES.length));
+  const numCards = 1; // one slot per adult term
+
+  const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
+  const cards = [];
+  chosenCats.forEach((cat, ci) => {
+    const picked = shuffle(cat.items).slice(0, Math.min(numCards, cat.items.length));
+    picked.forEach((item, ii) => {
+      cards.push({
+        id: 'c' + ci + '_' + ii + '_' + Math.random().toString(36).slice(2, 7),
+        text: item.text,
+        detail: item.detail || null,
+        catName: cat.name,
+        solved: false
+      });
+    });
+  });
+
+  round.buckets = chosenCats.map(c => c.name);
+  round.cards = shuffle(cards);
+  armedCardId = null;
+  document.getElementById('roundBanner').classList.remove('show');
+  renderAll();
+}
+
+function totalRound(){ return round.cards.length; }
+function solvedRound(){ return round.cards.filter(c => c.solved).length; }
+
+function updateStats(){
+  document.getElementById('statCorrect').textContent = session.correct;
+  document.getElementById('statIncorrect').textContent = session.incorrect;
+  document.getElementById('statProgress').textContent = solvedRound() + ' / ' + totalRound();
+}
+
+function renderAll(){
+  renderBuckets();
+  renderTray();
+  updateStats();
+  checkRoundComplete();
+}
+
+function renderBuckets(){
+  const grid = document.getElementById('bucketGrid');
+  grid.innerHTML = round.buckets.map(name => {
+    const solvedHere = round.cards.filter(c => c.catName === name && c.solved);
+    const totalHere = round.cards.filter(c => c.catName === name).length;
+    const chips = solvedHere.map(c => `
+      <div class="chip" data-chip-id="${c.id}">
+        <span class="chip-check">&#10003;</span>${escapeHtml(c.text)}
+        ${c.detail ? `<div class="chip-detail">${escapeHtml(c.detail)}</div>` : ''}
+      </div>`).join('');
+    const complete = totalHere > 0 && solvedHere.length === totalHere;
+    return `
+      <div class="bucket${complete ? ' bucket-complete' : ''}" data-bucket="${escapeHtml(name)}">
+        <div class="bucket-label">Adult</div>
+        <div class="bucket-name">${escapeHtml(name)}</div>
+        <div class="bucket-solved">${chips || '<div class="slot">empty slot</div>'}</div>
+      </div>`;
+  }).join('');
+
+  grid.querySelectorAll('.chip').forEach(chip => {
+    chip.onclick = () => chip.classList.toggle('expanded');
+  });
+  grid.querySelectorAll('.bucket').forEach(wireBucketTarget);
+}
+
+function renderTray(){
+  const tray = document.getElementById('tray');
+  const unsolved = round.cards.filter(c => !c.solved);
+  tray.innerHTML = unsolved.map(c => `
+    <div class="card${c.id === armedCardId ? ' armed' : ''}" data-card-id="${c.id}">${escapeHtml(c.text)}</div>
+  `).join('');
+  tray.querySelectorAll('.card').forEach(wireCard);
+}
+
+function checkRoundComplete(){
+  if(totalRound() > 0 && solvedRound() === totalRound()){
+    const banner = document.getElementById('roundBanner');
+    document.getElementById('roundBannerText').textContent =
+      `All ${totalRound()} cards placed correctly across ${round.buckets.length} adult terms. Session totals: ${session.correct} correct, ${session.incorrect} incorrect.`;
+    banner.classList.add('show');
+  }
+}
+
+function resolveDrop(cardId, bucketName){
+  const card = round.cards.find(c => c.id === cardId);
+  if(!card || card.solved) return;
+  if(card.catName === bucketName){
+    card.solved = true;
+    session.correct++;
+    armedCardId = null;
+    renderAll();
+  }else{
+    session.incorrect++;
+    armedCardId = null;
+    updateStats();
+    const el = document.querySelector(`.card[data-card-id="${cardId}"]`);
+    if(el){
+      el.classList.add('shake', 'flash-wrong');
+      setTimeout(() => { el.classList.remove('shake', 'flash-wrong'); }, 420);
+    }
+    renderBuckets(); // clear any armed styling on buckets
+    renderTrayArmedState();
+  }
+}
+
+function renderTrayArmedState(){
+  document.querySelectorAll('.card').forEach(el => {
+    el.classList.toggle('armed', el.getAttribute('data-card-id') === armedCardId);
+  });
+}
+
+/* ---------- tap-to-select interaction ---------- */
+function wireCard(el){
+  const cardId = el.getAttribute('data-card-id');
+
+  el.onclick = (e) => {
+    if(el.classList.contains('dragging') || draggedThisGesture) return;
+    armedCardId = (armedCardId === cardId) ? null : cardId;
+    renderTrayArmedState();
+  };
+
+  el.addEventListener('pointerdown', (e) => startDrag(e, el, cardId));
+}
+
+function wireBucketTarget(el){
+  const bucketName = el.getAttribute('data-bucket');
+  el.onclick = () => {
+    if(armedCardId){
+      resolveDrop(armedCardId, bucketName);
+    }
+  };
+}
+
+/* ---------- pointer-based drag-and-drop (mouse + touch) ---------- */
+let draggedThisGesture = false;
+let dragGhost = null;
+let dragCardId = null;
+let dragStartX = 0, dragStartY = 0;
+const DRAG_THRESHOLD = 6;
+
+function startDrag(e, el, cardId){
+  if(e.button !== undefined && e.button !== 0) return;
+  dragCardId = cardId;
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  draggedThisGesture = false;
+
+  const baseRect = el.getBoundingClientRect();
+  function rect_or(){ return baseRect; }
+
+  const onMove = (mv) => {
+    const dx = mv.clientX - dragStartX, dy = mv.clientY - dragStartY;
+    if(!draggedThisGesture){
+      if(Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      draggedThisGesture = true;
+      const rect = el.getBoundingClientRect();
+      dragGhost = el.cloneNode(true);
+      dragGhost.classList.add('ghost');
+      dragGhost.style.width = rect.width + 'px';
+      dragGhost.style.left = rect.left + 'px';
+      dragGhost.style.top = rect.top + 'px';
+      document.body.appendChild(dragGhost);
+      el.classList.add('dragging');
+    }
+    if(dragGhost){
+      dragGhost.style.left = (rect_or().left + (mv.clientX - dragStartX)) + 'px';
+      dragGhost.style.top = (rect_or().top + (mv.clientY - dragStartY)) + 'px';
+      updateBucketHover(mv.clientX, mv.clientY);
+    }
+  };
+
+  const onUp = (up) => {
+    document.removeEventListener('pointermove', onMove);
+    document.removeEventListener('pointerup', onUp);
+    el.classList.remove('dragging');
+    document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+    if(dragGhost){ dragGhost.remove(); dragGhost = null; }
+
+    if(draggedThisGesture){
+      const target = document.elementFromPoint(up.clientX, up.clientY);
+      const bucketEl = target ? target.closest('.bucket') : null;
+      if(bucketEl){
+        resolveDrop(dragCardId, bucketEl.getAttribute('data-bucket'));
+      }
+    }
+    setTimeout(() => { draggedThisGesture = false; }, 0);
+  };
+
+  document.addEventListener('pointermove', onMove);
+  document.addEventListener('pointerup', onUp);
+}
+
+function updateBucketHover(x, y){
+  document.querySelectorAll('.bucket.drag-over').forEach(b => b.classList.remove('drag-over'));
+  const target = document.elementFromPoint(x, y);
+  const bucketEl = target ? target.closest('.bucket') : null;
+  if(bucketEl) bucketEl.classList.add('drag-over');
+}
+
+/* ---------- wiring ---------- */
+document.getElementById('newRoundBtn').onclick = newRound;
+document.getElementById('roundBannerNewRound').onclick = newRound;
+document.getElementById('resetScoreBtn').onclick = () => {
+  session = { correct: 0, incorrect: 0 };
+  updateStats();
+};
+document.getElementById('hideInstructions').onclick = () => {
+  document.getElementById('instructionsNote').style.display = 'none';
+};
+newRound();
+</script>
+
+</body>
+</html>
