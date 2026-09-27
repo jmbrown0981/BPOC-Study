@@ -162,6 +162,7 @@
 
 <footer>Questions hand-authored from the Chapter &amp; Topic reference source materials &middot; format spec at <code>alt-quizzes/FORMAT.md</code> &middot; Built for study purposes by and for the FWPD Academy class</footer>
 
+<script src="assets/code-links.js"></script>
 <script>
 /* ===================== ALT QUIZ ENGINE ===================== */
 
@@ -197,11 +198,11 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"24", num:24, title:"Written Communication", file:"alt-quizzes/bank/24-written-communication.md"},
   {key:"25", num:25, title:"Verbal Communication", file:"alt-quizzes/bank/25-verbal-communication.md"},
   {key:"28", num:28, title:"Use of Force Theory", file:"alt-quizzes/bank/28-use-of-force-theory.md"},
-  {key:"29", num:29, title:"Crisis Intervention Training", file:"alt-quizzes/bank/29-crisis-intervention-training.md"},
+  {key:"29", num:29, title:"Crisis Intervention Training", file:"alt-quizzes/bank/29-crisis-intervention-training.md", linkCodes:true},
   {key:"30", num:30, title:"Traumatic Brain Injury", file:"alt-quizzes/bank/30-traumatic-brain-injury.md"},
-  {key:"33-jjc", num:33, short:"Ch 33 (Juvenile Justice Code)", title:"Juvenile Offenders — Juvenile Justice Code & Procedure", file:"alt-quizzes/bank/33-juvenile-justice-code.md"},
-  {key:"33-mcg", num:33, short:"Ch 33 (Missing Children/Gangs)", title:"Juvenile Offenders — Missing Children, AMBER Alert & Gang Involvement", file:"alt-quizzes/bank/33-missing-children-and-gangs.md"},
-  {key:"33-ikc", num:33, short:"Ch 33 (Instructor Knowledge Checks)", title:"Juvenile Offenders — Instructor Knowledge Check Bank", file:"alt-quizzes/bank/33-instructor-knowledge-checks.md"},
+  {key:"33-jjc", num:33, short:"Ch 33 (Juvenile Justice Code)", title:"Juvenile Offenders — Juvenile Justice Code & Procedure", file:"alt-quizzes/bank/33-juvenile-justice-code.md", linkCodes:true},
+  {key:"33-mcg", num:33, short:"Ch 33 (Missing Children/Gangs)", title:"Juvenile Offenders — Missing Children, AMBER Alert & Gang Involvement", file:"alt-quizzes/bank/33-missing-children-and-gangs.md", linkCodes:true},
+  {key:"33-ikc", num:33, short:"Ch 33 (Instructor Knowledge Checks)", title:"Juvenile Offenders — Instructor Knowledge Check Bank", file:"alt-quizzes/bank/33-instructor-knowledge-checks.md", linkCodes:true},
   {key:"37", num:37, title:"Civilian Interaction Training", file:"alt-quizzes/bank/37-civilian-interaction-training.md"},
   {key:"case-law", num:0, short:"Case Law", title:"Case Law (Course List)", file:"alt-quizzes/bank/case-law.md"}
 ];
@@ -237,6 +238,21 @@ const TOTAL_OVERRIDE_KEY = 'altquiz_total_override_v1';
 
 function escapeHtml(s){
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+// Statute citations in explanations/sources link to codes.html for banks flagged linkCodes:true
+// (pilot). See assets/code-links.js.
+function codeLinksOn(q){
+  const key = q.bankKey || (activeChapter && activeChapter.key);
+  const ch = ALT_QUIZ_CHAPTERS.find(c => c.key === key);
+  return !!(ch && ch.linkCodes && window.CodeLinks);
+}
+function explHtml(q){
+  const h = inlineMd(q.explanation || '');
+  return codeLinksOn(q) ? CodeLinks.linkify(h) : h;
+}
+function srcHtml(q){
+  const h = escapeHtml(q.source || '');
+  return codeLinksOn(q) ? CodeLinks.linkify(h) : h;
 }
 function inlineMd(s){
   let out = escapeHtml(s);
@@ -1021,7 +1037,7 @@ function submitDual(q){
       you: `Offense: ${chosenOff.text} ${offRight ? '(correct)' : '(incorrect)'} · Classification: ${chosenClass.text} ${classRight ? '(correct)' : '(incorrect)'}`,
       correct: `Offense: ${offCorrectOpt.text} · Classification: ${classCorrectOpt.text}`,
       explanation: q.explanation,
-      source: q.source
+      source: q.source, bankKey: q.bankKey || (activeChapter && activeChapter.key)
     });
   }
 
@@ -1043,7 +1059,7 @@ function submitDual(q){
     const bothRight = offRight && classRight;
     const verdict = bothRight ? 'Correct on both.' : ((offRight || classRight) ? 'Half credit — one of the two was right.' : 'Not quite on either — correct answers highlighted above.');
     document.getElementById('feedbackArea').innerHTML =
-      `<div class="feedback-note">${verdict} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
+      `<div class="feedback-note">${verdict} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
   } else {
     document.querySelectorAll('#offenseWrap .option, #classWrap .option').forEach(b => b.classList.add('locked'));
   }
@@ -1071,7 +1087,7 @@ function submitMultiBlank(q){
       you: results.map((r, i) => `Blank ${i + 1}: ${r.userRaw.trim() || '(left blank)'} ${r.correct ? '(correct)' : '(incorrect)'}`).join(' · '),
       correct: q.blanks.map((b, i) => `Blank ${i + 1}: ${b}`).join(' · '),
       explanation: q.explanation,
-      source: q.source
+      source: q.source, bankKey: q.bankKey || (activeChapter && activeChapter.key)
     });
   }
 
@@ -1084,7 +1100,7 @@ function submitMultiBlank(q){
       ? 'Correct on all blanks.'
       : (numCorrect > 0 ? `Partial credit — ${numCorrect} of ${n} blanks correct.` : `Not quite on any blank — correct answer${n > 1 ? 's' : ''} below.`);
     document.getElementById('feedbackArea').innerHTML =
-      `<div class="feedback-note">${verdict} ${!allRight ? `Correct: <span class="fill-blank-correct-answer">${escapeHtml(q.blanks.map((b, i) => `Blank ${i + 1}: ${b}`).join(' · '))}</span>.` : ''} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
+      `<div class="feedback-note">${verdict} ${!allRight ? `Correct: <span class="fill-blank-correct-answer">${escapeHtml(q.blanks.map((b, i) => `Blank ${i + 1}: ${b}`).join(' · '))}</span>.` : ''} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
   }
   document.getElementById('nextBtn').style.display = 'block';
 }
@@ -1098,7 +1114,7 @@ function submitFillBlank(q){
   const correct = norm.length > 0 && q.acceptable.some(a => normalizeAnswer(a) === norm);
   const correctAnswerText = q.answerDisplay.join(' or ');
 
-  if(correct){ score++; } else { missedList.push({prompt: q.prompt, you: userRaw.trim() || '(left blank)', correct: correctAnswerText, explanation: q.explanation, source: q.source}); }
+  if(correct){ score++; } else { missedList.push({prompt: q.prompt, you: userRaw.trim() || '(left blank)', correct: correctAnswerText, explanation: q.explanation, source: q.source, bankKey: q.bankKey || (activeChapter && activeChapter.key)}); }
 
   input.disabled = true;
   document.getElementById('submitBtn').style.display = 'none';
@@ -1106,7 +1122,7 @@ function submitFillBlank(q){
   if(quizMode === 'practice'){
     input.classList.add(correct ? 'correct' : 'incorrect');
     document.getElementById('feedbackArea').innerHTML =
-      `<div class="feedback-note">${correct ? 'Correct.' : `Not quite — correct answer: <span class="fill-blank-correct-answer">${escapeHtml(correctAnswerText)}</span>.`} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
+      `<div class="feedback-note">${correct ? 'Correct.' : `Not quite — correct answer: <span class="fill-blank-correct-answer">${escapeHtml(correctAnswerText)}</span>.`} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
   }
   document.getElementById('nextBtn').style.display = 'block';
 }
@@ -1119,7 +1135,7 @@ function selectOption(btn, q){
   const correctOpt = q.options.find(o => o.correct);
   const correct = !!chosen.correct;
 
-  if(correct){ score++; } else { missedList.push({prompt: q.prompt, you: chosen.text, correct: correctOpt.text, explanation: q.explanation, source: q.source}); }
+  if(correct){ score++; } else { missedList.push({prompt: q.prompt, you: chosen.text, correct: correctOpt.text, explanation: q.explanation, source: q.source, bankKey: q.bankKey || (activeChapter && activeChapter.key)}); }
 
   if(quizMode === 'practice'){
     document.querySelectorAll('#optionsWrap .option').forEach(b => {
@@ -1129,7 +1145,7 @@ function selectOption(btn, q){
       else if(b === btn) b.classList.add('incorrect');
     });
     document.getElementById('feedbackArea').innerHTML =
-      `<div class="feedback-note">${correct ? 'Correct.' : 'Not quite — correct answer highlighted above.'} ${inlineMd(q.explanation || '')}${q.source ? `<span class="fn-source">${escapeHtml(q.source)}</span>` : ''}</div>`;
+      `<div class="feedback-note">${correct ? 'Correct.' : 'Not quite — correct answer highlighted above.'} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
   } else {
     document.querySelectorAll('#optionsWrap .option').forEach(b => b.classList.add('locked'));
     btn.classList.add('selected');
@@ -1167,7 +1183,7 @@ function finishQuiz(){
             <div class="missed-q">${renderPrompt(m.prompt)}</div>
             <div class="missed-you">Your answer: ${inlineMd(m.you)}</div>
             <div class="missed-correct">Correct answer: ${inlineMd(m.correct)}</div>
-            ${m.explanation ? `<div class="missed-expl">${inlineMd(m.explanation)}${m.source ? ` <span class="fn-source">${escapeHtml(m.source)}</span>` : ''}</div>` : ''}
+            ${m.explanation ? `<div class="missed-expl">${explHtml(m)}${m.source ? ` <span class="fn-source">${srcHtml(m)}</span>` : ''}</div>` : ''}
           </div>
         `).join('')}
       </div>
