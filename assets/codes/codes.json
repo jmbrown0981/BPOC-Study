@@ -1,9 +1,23 @@
 [
  {
+  "code": "CR",
+  "name": "Code of Criminal Procedure",
+  "asOf": "2026-07-22",
+  "chapters": 85,
+  "sections": 2255
+ },
+ {
   "code": "FA",
   "name": "Family Code",
   "asOf": "2026-09-09",
   "chapters": 81,
   "sections": 2352
+ },
+ {
+  "code": "PE",
+  "name": "Penal Code",
+  "asOf": "2026-07-05",
+  "chapters": 27,
+  "sections": 340
  }
 ]
