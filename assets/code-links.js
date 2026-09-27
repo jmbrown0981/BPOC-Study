@@ -51,9 +51,9 @@
   var RE_SEC_G = new RegExp(SEC, 'g');
 
   var codes = {};   // id -> {name, secs:Set, chs:Set}
-  var ready = fetch(DATA + 'codes.json').then(function(r){ return r.ok ? r.json() : []; }).then(function(list){
+  var ready = fetch(DATA + 'codes.json', {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : []; }).then(function(list){
     return Promise.all(list.map(function(c){
-      return fetch(DATA + c.code + '/toc.json').then(function(r){ return r.json(); }).then(function(toc){
+      return fetch(DATA + c.code + '/toc.json', {cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(toc){
         codes[c.code] = {
           name: c.name,
           secs: new Set(toc.sections.map(function(s){ return s[0].toLowerCase(); })),

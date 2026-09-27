@@ -148,7 +148,8 @@ function escapeHtml(s){
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 async function getJson(url){
-  const res = await fetch(url);
+  // codes.json and toc.json change on every rebuild: always revalidate them (cheap 304 when unchanged)
+  const res = await fetch(url, /(codes|toc)\.json$/.test(url) ? {cache:'no-cache'} : undefined);
   if(!res.ok) throw new Error('HTTP ' + res.status + ' for ' + url);
   return res.json();
 }

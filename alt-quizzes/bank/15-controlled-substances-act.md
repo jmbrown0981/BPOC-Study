@@ -1609,3 +1609,199 @@ Comparing the three uncorroborated/corroborated-testimony provisions in BPOC 15.
 **Explanation:** BPOC 15.17 contrasts HSC 483.072's uncorroborated-testimony allowance (Chapter 483 dangerous drugs) with the corroboration requirements of CCP 38.14 (accomplice testimony generally) and CCP 38.141 (undercover officer/special investigator testimony in HSC Chapter 481 cases).
 
 ---
+
+### Q148 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(1)
+
+**Answer:** Administer
+
+"_________" means to directly apply a controlled substance by injection, inhalation, ingestion, or other means to the body of a patient or research subject by: (A) a practitioner or an agent of the practitioner in the presence of the practitioner; or (B) the patient or research subject at the direction and in the presence of a practitioner.
+
+**Explanation:** The term this defines is "Administer", straight from HSC 481.002(1).
+
+---
+
+### Q149 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(5)
+
+**Answer:** Controlled Substance
+
+"_________" means a substance, including a drug, an adulterant, and a dilutant, listed in Schedules I through V or Penalty Group 1, 1-A, 1-B, 2, 2-A, 3, or 4. The term includes the aggregate weight of any mixture, solution, or other substance containing a [term]. The term does not include hemp, as defined by Section 121.001, Agriculture Code, or the tetrahydrocannabinols in hemp.
+
+**Explanation:** The term this defines is "Controlled Substance", straight from HSC 481.002(5).
+
+---
+
+### Q150 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(6)
+
+**Answer:** Controlled Substance Analogue
+
+"_________" means: (A) a substance with a chemical structure substantially similar to the chemical structure of a controlled substance in Schedule I or II or Penalty Group 1, 1-A, 1-B, 2, or 2-A; or (B) a substance specifically designed to produce an effect substantially similar to, or greater than, the effect of a controlled substance in Schedule I or II or Penalty Group 1, 1-A, 1-B, 2, or 2-A.
+
+**Explanation:** The term this defines is "Controlled Substance Analogue", straight from HSC 481.002(6).
+
+---
+
+### Q151 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(7)
+
+**Answer:** Counterfeit Substance
+
+"_________" means a controlled substance that, without authorization, bears or is in a container or has a label that bears an actual or simulated trademark, trade name, or other identifying mark, imprint, number, or device of a manufacturer, distributor, or dispenser other than the person who in fact manufactured, distributed, or dispensed the substance.
+
+**Explanation:** The term this defines is "Counterfeit Substance", straight from HSC 481.002(7).
+
+---
+
+### Q152 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(8)
+
+**Answer:** Deliver | Offer to Deliver
+
+"_________" means to transfer, actually or constructively, to another a controlled substance, counterfeit substance, or drug paraphernalia, regardless of whether there is an agency relationship. The term includes offering to sell a controlled substance, counterfeit substance, or drug paraphernalia.
+
+**Explanation:** The term this defines is "Deliver", straight from HSC 481.002(8).
+
+---
+
+### Q153 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(12)
+
+**Answer:** Dispense
+
+"_________" means the delivery of a controlled substance in the course of professional practice or research, by a practitioner or person acting under the lawful order of a practitioner, to an ultimate user or research subject. The term includes the prescribing, administering, packaging, labeling, or compounding necessary to prepare the substance for delivery.
+
+**Explanation:** The term this defines is "Dispense", straight from HSC 481.002(12).
+
+---
+
+### Q154 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(14)
+
+**Answer:** Distribute
+
+"_________" means to deliver a controlled substance other than by administering or dispensing the substance.
+
+**Explanation:** The term this defines is "Distribute", straight from HSC 481.002(14).
+
+---
+
+### Q155 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(16)
+
+**Answer:** Drug
+
+"_________" means a substance, other than a device or a component, part, or accessory of a device, that is: (A) recognized as a [term] in the official United States Pharmacopoeia, official Homeopathic Pharmacopoeia of the United States, official National Formulary, or a supplement to either pharmacopoeia or the formulary; (B) intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in man or animals; (C) intended to affect the structure or function of the body of man or animals but is not food; or (D) intended for use as a component of a substance described by Paragraph (A), (B), or (C).
+
+**Explanation:** The term this defines is "Drug", straight from HSC 481.002(16).
+
+---
+
+### Q156 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(17)
+
+**Answer:** Drug Paraphernalia
+
+"_________" means equipment, a product, or material that is used or intended for use in planting, propagating, cultivating, growing, harvesting, manufacturing, compounding, converting, producing, processing, preparing, testing, analyzing, packaging, repackaging, storing, containing, or concealing a controlled substance in violation of this chapter or in injecting, ingesting, inhaling, or otherwise introducing into the human body a controlled substance in violation of this chapter.
+
+**Explanation:** The term this defines is "Drug Paraphernalia", straight from HSC 481.002(17). This is the general definition; the statute goes on to list examples (A)-(L), such as scales, baggies, syringes, pipes, and bongs.
+
+---
+
+### Q157 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(21)
+
+**Answer:** Human Consumption
+
+"_________" means the injection, inhalation, ingestion, or application of a substance to or into a human body.
+
+**Explanation:** The term this defines is "Human Consumption", straight from HSC 481.002(21).
+
+---
+
+### Q158 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(22)
+
+**Answer:** Immediate Precursor
+
+"_________" means a substance the director finds to be and by rule designates as being: (A) a principal compound commonly used or produced primarily for use in the manufacture of a controlled substance; (B) a substance that is an immediate chemical intermediary used or likely to be used in the manufacture of a controlled substance; and (C) a substance the control of which is necessary to prevent, curtail, or limit the manufacture of a controlled substance.
+
+**Explanation:** The term this defines is "Immediate Precursor", straight from HSC 481.002(22).
+
+---
+
+### Q159 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(25)
+
+**Answer:** Manufacture
+
+"_________" means the production, preparation, propagation, compounding, conversion, or processing of a controlled substance other than marihuana, directly or indirectly by extraction from substances of natural origin, independently by means of chemical synthesis, or by a combination of extraction and chemical synthesis, and includes the packaging or repackaging of the substance or labeling or relabeling of its container. However, the term does not include the preparation, compounding, packaging, or labeling of a controlled substance: (A) by a practitioner as an incident to the practitioner's administering or dispensing a controlled substance in the course of professional practice; or (B) by a practitioner, or by an authorized agent under the supervision of the practitioner, for or as an incident to research, teaching, or chemical analysis and not for delivery.
+
+**Explanation:** The term this defines is "Manufacture", straight from HSC 481.002(25).
+
+---
+
+### Q160 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(26)
+
+**Answer:** Marihuana | Marijuana
+
+"_________" means the plant Cannabis sativa L., whether growing or not, the seeds of that plant, and every compound, manufacture, salt, derivative, mixture, or preparation of that plant or its seeds. The term does not include: (A) the resin extracted from a part of the plant or a compound, manufacture, salt, derivative, mixture, or preparation of the resin; (B) the mature stalks of the plant or fiber produced from the stalks; (C) oil or cake made from the seeds of the plant; (D) a compound, manufacture, salt, derivative, mixture, or preparation of the mature stalks, fiber, oil, or cake; (E) the sterilized seeds of the plant that are incapable of beginning germination; or (F) hemp, as that term is defined by Section 121.001, Agriculture Code.
+
+**Explanation:** The term this defines is "Marihuana", straight from HSC 481.002(26).
+
+---
+
+### Q161 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(29)
+
+**Answer:** Narcotic Drug
+
+"_________" means any of the following, produced directly or indirectly by extraction from substances of vegetable origin, independently by means of chemical synthesis, or by a combination of extraction and chemical synthesis: (A) opium and opiates, and a salt, compound, derivative, or preparation of opium or opiates; (B) a salt, compound, isomer, derivative, or preparation of a salt, compound, isomer, or derivative that is chemically equivalent or identical to a substance listed in Paragraph (A) other than the isoquinoline alkaloids of opium; (C) opium poppy and poppy straw; or (D) cocaine, including: (i) its salts, its optical, position, or geometric isomers, and the salts of those isomers; (ii) coca leaves and a salt, compound, derivative, or preparation of coca leaves; and (iii) a salt, compound, derivative, or preparation of a salt, compound, or derivative that is chemically equivalent or identical to a substance described by Subparagraph (i) or (ii), other than decocainized coca leaves or extractions of coca leaves that do not contain cocaine or ecgonine.
+
+**Explanation:** The term this defines is "Narcotic Drug", straight from HSC 481.002(29).
+
+---
+
+### Q162 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(30)
+
+**Answer:** Opiate
+
+"_________" means a substance that has an addiction-forming or addiction-sustaining liability similar to morphine or is capable of conversion into a drug having addiction-forming or addiction-sustaining liability. The term includes its racemic and levorotatory forms. The term does not include, unless specifically designated as controlled under Subchapter B, the dextrorotatory isomer of 3-methoxy-n-methylmorphinan and its salts (dextromethorphan).
+
+**Explanation:** The term this defines is "Opiate", straight from HSC 481.002(30).
+
+---
+
+### Q163 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(33)
+
+**Answer:** Person
+
+"_________" means an individual, corporation, government, business trust, estate, trust, partnership, association, or any other legal entity.
+
+**Explanation:** The term this defines is "Person", straight from HSC 481.002(33).
+
+---
+
+### Q164 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(38)
+
+**Answer:** Possession
+
+"_________" means actual care, custody, control, or management.
+
+**Explanation:** The term this defines is "Possession", straight from HSC 481.002(38).
+
+---
+
+### Q165 — Term ID
+**LO:** 15.1 · **Source:** HSC 481.002(43)
+
+**Answer:** Production
+
+"_________" includes the manufacturing, planting, cultivating, growing, or harvesting of a controlled substance.
+
+**Explanation:** The term this defines is "Production", straight from HSC 481.002(43).
