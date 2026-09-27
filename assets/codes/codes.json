@@ -21,6 +21,13 @@
   "sections": 14749
  },
  {
+  "code": "HS",
+  "name": "Health and Safety Code",
+  "asOf": "2026-08-20",
+  "chapters": 389,
+  "sections": 8569
+ },
+ {
   "code": "PE",
   "name": "Penal Code",
   "asOf": "2026-07-05",
