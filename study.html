@@ -122,6 +122,7 @@
 
 <script src="assets/chapters-manifest.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/code-links.js"></script>
 <script>
 /* ===================== ENGINE ===================== */
 const MD_DIR = 'resources/BPOC_markdown/';
@@ -214,12 +215,15 @@ async function renderChapter(){
     const contentEl = document.getElementById('chapterContent');
     contentEl.style.display = '';
 
+    // Statute citations ("Family Code Sec. 261.3022", "PC 22.01") link to codes.html in a separate tab.
+    if(window.CodeLinks) await CodeLinks.ready;
     if(markedAvailable()){
-      contentEl.innerHTML = renderMarkdown(text);
+      const html = renderMarkdown(text);
+      contentEl.innerHTML = window.CodeLinks ? CodeLinks.linkify(html) : html;
       assignHeadingIds(contentEl);
     } else {
       contentEl.innerHTML = `<div class="warn-box"><b>Markdown renderer didn't load.</b> This page loads a small formatting library from a CDN (cdn.jsdelivr.net) &mdash; if that domain is blocked on this network, or you're offline, chapter text below shows as plain text instead of formatted. Try reloading, or use the <a href="${PDF_DIR}${encodeURIComponent(meta.pdfFile)}" target="_blank" rel="noopener">original PDF</a> instead.</div>` +
-        `<pre style="white-space:pre-wrap; font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.6;">${escapeHtml(text)}</pre>`;
+        `<pre style="white-space:pre-wrap; font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.6;">${window.CodeLinks ? CodeLinks.linkify(escapeHtml(text)) : escapeHtml(text)}</pre>`;
     }
 
     if(pendingScrollTerm){

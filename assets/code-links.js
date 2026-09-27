@@ -25,10 +25,15 @@
     ['ED', 'ED'], ['AL', 'AL'], ['TN', 'TN'], ['TC', 'TN']
   ];
   var ALIAS = {};
-  LONG.concat(SHORT).forEach(function(p){ ALIAS[p[0].toLowerCase()] = p[1]; });
+  LONG.concat(SHORT).forEach(function(p){ ALIAS[p[0].toLowerCase()] = p[1]; });  // keys are lower-case, single-spaced
   function esc(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-  var LONG_RE = LONG.map(function(p){ return esc(p[0]); }).join('|');
+  // long names tolerate extra spaces and "Code Of Criminal Procedure"-style capitals
+  function longPat(name){
+    return esc(name).split(' ').map(function(w){ return /^(of|and)$/.test(w) ? '[' + w[0] + w[0].toUpperCase() + ']' + w.slice(1) : w; }).join('\\s+');
+  }
+  var LONG_RE = LONG.map(function(p){ return longPat(p[0]); }).join('|');
   var ANY_RE = LONG_RE + '|' + SHORT.map(function(p){ return esc(p[0]); }).join('|');
+  function normName(n){ return n.replace(/\s+/g, ' ').toLowerCase(); }
 
   var SEC = '\\d+[A-Za-z]?\\.\\d+[A-Za-z0-9]*';
   var SUB = '(?:\\([A-Za-z0-9-]+\\))*';
@@ -36,11 +41,11 @@
   var TAIL = '((?:\\s*(?:,|and|or|through|to|-|–|&amp;)\\s*' + SEC + SUB + ')*)';
 
   // A: "FC 51.02(a)", "CCP Art. 2A.001, 2A.002", "Penal Code Section 22.01"
-  var RE_A = new RegExp('\\b(' + ANY_RE + ')\\s+' + PRE + '(' + SEC + ')(' + SUB + ')' + TAIL, 'g');
+  var RE_A = new RegExp('\\b(' + ANY_RE + ')[,.]?\\s+' + PRE + '(' + SEC + ')(' + SUB + ')' + TAIL, 'g');
   // B: "Section 22.01, Penal Code", "Article 2A.001 of the Code of Criminal Procedure"
   var RE_B = new RegExp('\\b(?:Arts?\\.?|Articles?|Secs?\\.?|Sections?)\\s*(' + SEC + ')(' + SUB + '),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b', 'g');
   // C: "Family Code Chapter 51", "FC Ch. 52"
-  var RE_C = new RegExp('\\b(' + ANY_RE + ')\\s+(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?)\\b', 'g');
+  var RE_C = new RegExp('\\b(' + ANY_RE + ')[,.]?\\s+(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?)\\b', 'g');
   // D: "Chapter 573, Health and Safety Code"
   var RE_D = new RegExp('\\b(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b', 'g');
   var RE_SEC_G = new RegExp(SEC, 'g');
@@ -58,7 +63,7 @@
     }));
   }).catch(function(){});
 
-  function codeFor(alias){ return ALIAS[alias.toLowerCase()]; }
+  function codeFor(alias){ return ALIAS[normName(alias)]; }
   function link(text, code, key, isChapter){
     var c = codes[code];
     if(!c) return null;
