@@ -1,0 +1,78 @@
+BUSINESS AND COMMERCE CODE
+TITLE 11.  PERSONAL IDENTITY INFORMATION
+SUBTITLE D.  ARTIFICIAL INTELLIGENCE PROTECTION
+CHAPTER 554.  TEXAS ARTIFICIAL INTELLIGENCE COUNCIL
+
+SUBCHAPTER A.  CREATION AND ORGANIZATION OF COUNCIL
+
+      Sec. 554.001.  CREATION OF COUNCIL.  (a)  The Texas Artificial Intelligence Council is created to:
+            (1)  ensure artificial intelligence systems in this state are ethical and developed in the public's best interest;
+            (2)  ensure artificial intelligence systems in this state do not harm public safety or undermine individual freedoms by finding issues and making recommendations to the legislature regarding the Penal Code and Chapter 82, Civil Practice and Remedies Code;
+            (3)  identify existing laws and regulations that impede innovation in the development of artificial intelligence systems and recommend appropriate reforms;
+            (4)  analyze opportunities to improve the efficiency and effectiveness of state government operations through the use of artificial intelligence systems;
+            (5)  make recommendations to applicable state agencies regarding the use of artificial intelligence systems to improve the agencies' efficiency and effectiveness;
+            (6)  evaluate potential instances of regulatory capture, including undue influence by technology companies or disproportionate burdens on smaller innovators caused by the use of artificial intelligence systems;
+            (7)  evaluate the influence of technology companies on other companies and determine the existence or use of tools or processes designed to censor competitors or users through the use of artificial intelligence systems;
+            (8)  offer guidance and recommendations to the legislature on the ethical and legal use of artificial intelligence systems;
+            (9)  conduct and publish the results of a study on the current regulatory environment for artificial intelligence systems;
+            (10)  receive reports from the Department of Information Resources regarding the regulatory sandbox program under Chapter 553; and
+            (11)  make recommendations for improvements to the regulatory sandbox program under Chapter 553.
+      (b)  The council is administratively attached to the Department of Information Resources, and the department shall provide administrative support to the council as provided by this section.
+      (c)  The Department of Information Resources and the council shall enter into a memorandum of understanding detailing:
+            (1)  the administrative support the council requires from the department to fulfill the council's purposes;
+            (2)  the reimbursement of administrative expenses to the department; and
+            (3)  any other provisions necessary to ensure the efficient operation of the council.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 554.002.  COUNCIL MEMBERSHIP.  (a)  The council is composed of seven members as follows:
+            (1)  three members of the public appointed by the governor;
+            (2)  two members of the public appointed by the lieutenant governor; and
+            (3)  two members of the public appointed by the speaker of the house of representatives.
+      (b)  Members of the council serve staggered four-year terms, with the terms of three or four members expiring every two years.
+      (c)  The governor shall appoint a chair from among the members, and the council shall elect a vice chair from its membership.
+      (d)  The council may establish an advisory board composed of individuals from the public who possess expertise directly related to the council's functions, including technical, ethical, regulatory, and other relevant areas.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 554.003.  QUALIFICATIONS.  Members of the council must be Texas residents and have knowledge or expertise in one or more of the following areas:
+            (1)  artificial intelligence systems;
+            (2)  data privacy and security;
+            (3)  ethics in technology or law;
+            (4)  public policy and regulation;
+            (5)  risk management related to artificial intelligence systems;
+            (6)  improving the efficiency and effectiveness of governmental operations; or
+            (7)  anticompetitive practices and market fairness.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 554.004.  STAFF AND ADMINISTRATION.  The council may hire an executive director and other personnel as necessary to perform its duties.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+SUBCHAPTER B.  POWERS AND DUTIES OF COUNCIL
+
+      Sec. 554.101.  ISSUANCE OF REPORTS.  (a)  The council may issue reports to the legislature regarding the use of artificial intelligence systems in this state.
+      (b)  The council may issue reports on:
+            (1)  the compliance of artificial intelligence systems in this state with the laws of this state;
+            (2)  the ethical implications of deploying artificial intelligence systems in this state;
+            (3)  data privacy and security concerns related to artificial intelligence systems in this state; or
+            (4)  potential liability or legal risks associated with the use of artificial intelligence systems in this state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 554.102.  TRAINING AND EDUCATIONAL OUTREACH.  The council shall conduct training programs for state agencies and local governments on the use of artificial intelligence systems.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 554.103.  LIMITATION OF AUTHORITY.  The council may not:
+            (1)  adopt rules or promulgate guidance that is binding for any entity;
+            (2)  interfere with or override the operation of a state agency; or
+            (3)  perform a duty or exercise a power not granted by this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

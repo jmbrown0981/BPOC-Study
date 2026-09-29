@@ -1,0 +1,95 @@
+BUSINESS AND COMMERCE CODE
+TITLE 12.  RIGHTS AND DUTIES OF CONSUMERS AND MERCHANTS
+CHAPTER 607A.  PAYMENT CARD SKIMMERS ON ELECTRONIC TERMINALS
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 607A.001.  DEFINITIONS.  In this chapter:
+            (1)  "Automated teller machine" has the meaning assigned by Section 31.03, Penal Code.
+            (2)  "Center" means the financial crimes intelligence center established under Chapter 2312, Occupations Code.
+            (3)  "Electronic terminal" means an electronic device, other than a telephone operated by a consumer, through which a consumer may initiate an electronic funds transfer.  The term includes a point-of-sale terminal, virtual currency terminal, automated teller machine, and cash dispensing machine.
+            (4)  "Financial institution" has the meaning assigned by Section 277.001, Finance Code.
+            (5)  "Institution of higher education" has the meaning assigned by Section 61.003, Education Code.
+            (6)  "Merchant" has the meaning assigned by Section 2.104.
+            (7)  "Payment card" has the meaning assigned by Section 522.001.
+            (8)  "Payment card issuer" means a lender, including a financial institution, or a merchant that receives applications and issues payment cards to individuals.
+            (9)  "Payment card network" means an entity that directly, or through a licensed member, processor, or agent, provides the proprietary services, infrastructure, and software that:
+                  (A)  route information to conduct debit card or credit card transaction authorization, clearance, and settlement; and
+                  (B)  the entity uses to accept as a form of payment a brand of debit card, credit card, or other device to be used to carry out debit or credit transactions.
+            (10)  "Service company" and "service technician" have the meanings assigned by Section 2310.151, Occupations Code.
+            (11)  "Skimmer" means a wire or electronic device capable of unlawfully intercepting electronic communications or data to perpetrate fraud.
+            (12)  "Virtual currency" means an intangible electronic medium of exchange, unit of account, or store of value.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.002.  ADMINISTRATION AND ENFORCEMENT OF CHAPTER.  The Texas Commission of Licensing and Regulation shall administer and enforce this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.003.  RULES.  The Texas Commission of Licensing and Regulation shall adopt rules for administering this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+SUBCHAPTER B.  DUTIES FOR USE OF CERTAIN ELECTRONIC TERMINALS
+
+      Sec. 607A.051.  REQUIRED NOTICE OF SKIMMER DISCOVERY.  (a)  If a service technician discovers a skimmer in or on an electronic terminal, the service technician or service company that employs the technician shall notify the center and the merchant of the skimmer in the manner prescribed by center rule.
+      (b)  If a merchant discovers a skimmer in or on an electronic terminal or is notified of the presence of a skimmer, the merchant shall, in the manner prescribed by center rule:
+            (1)  disable, or cause to be disabled, the electronic terminal on which the skimmer was discovered;
+            (2)  notify a law enforcement agency and the center that a skimmer has been detected; and
+            (3)  take appropriate measures to protect the electronic terminal from tampering until the center or law enforcement agency arrives and the skimmer is removed.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.052.  REPORT TO CENTER.  The center may accept a report of a suspected skimmer from any interested person, including:
+            (1)  a law enforcement agency;
+            (2)  a financial institution;
+            (3)  a payment card issuer;
+            (4)  a service technician or service company;
+            (5)  a member of the public; and
+            (6)  a payment card network.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.053.  INVESTIGATION OF SKIMMER REPORT.  (a)  On receipt of a report under Section 607A.051 or 607A.052, the center may conduct an inspection for the presence of suspected skimmers.
+      (b)  The center shall coordinate with law enforcement agencies in conducting an investigation of the report.
+      (c)  If the skimmer is reported to be located on an electronic terminal, the center may inspect, in coordination with a law enforcement agency, the electronic terminal that is the subject of the report and any other electronic terminal located at the same place of business.
+      (d)  A merchant shall cooperate with the center or law enforcement agency during an investigation of a skimmer discovered or reported at the merchant's place of business and allow the inspection and alteration of an electronic terminal at the place of business as necessary.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.054.  CONFIDENTIALITY.  (a)  Except as otherwise provided by this section, information is confidential and not subject to disclosure under Chapter 552, Government Code, if the information is:
+            (1)  from a report received by the center under Section 607A.051 or 607A.052; or
+            (2)  prepared or compiled by the center in connection with the report or an investigation conducted under this subchapter.
+      (b)  Information described by Subsection (a) may be disclosed to:
+            (1)  an institution of higher education;
+            (2)  a law enforcement agency;
+            (3)  a payment card issuer, a financial institution that is not a payment card issuer, or a payment card network that may be impacted by the use of a skimmer on an electronic terminal;
+            (4)  another person if the disclosure of the information is authorized or required by other law or court order;
+            (5)  a trade association representing a financial institution;
+            (6)  a center contractor or other agent; or
+            (7)  the Texas Department of Banking.
+      (c)  The disclosure of information under Subsection (b) is not a voluntary disclosure for purposes of Section 552.007, Government Code.
+      (d)  On the dismissal or final resolution of a report by the center, information described by Subsection (a) is subject to disclosure under Chapter 552, Government Code, unless the information is subject to Section 31.301, Finance Code, or can be classified as confidential information under applicable rules.
+      (e)  Notwithstanding Subsection (a), a law enforcement agency or the center:
+            (1)  subject to Subdivision (2), may disclose to the public information made confidential by that subdivision if the law enforcement agency or the chief intelligence coordinator for the center determines the disclosure of the information furthers a law enforcement purpose; and
+            (2)  may not disclose to the public the identity of a person who submits a report of a suspected skimmer to the center under Section 607A.051 or 607A.052.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+SUBCHAPTER C.  ENFORCEMENT
+
+      Sec. 607A.101.  CIVIL PENALTY.  (a)  A person who violates this chapter or a rule adopted under this chapter is liable to this state for a civil penalty.  A civil penalty assessed under this subsection may not exceed $5,000 per day for each violation.
+      (b)  The attorney general may bring an action to collect a civil penalty under this section.
+      (c)  An action filed under this section must be filed in a district court in Travis County.
+      (d)  The attorney general and the department may recover reasonable expenses incurred in obtaining injunctive relief under this section, including court costs, reasonable attorney's fees, investigative costs, witness fees, and deposition expenses.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+      Sec. 607A.102.  CRIMINAL OFFENSES.  (a)  A person commits an offense if the person refuses to allow an inspection of an electronic terminal at the merchant's place of business in violation of Section 607A.053.  An offense under this subsection is a Class C misdemeanor.
+      (b)  A person commits an offense if the person negligently or recklessly disposes of a skimmer that was installed on an electronic terminal by another person.  An offense under this subsection is a Class B misdemeanor.
+      (c)  A person commits an offense if, knowing that an investigation is ongoing or that a criminal proceeding has been commenced and is pending, the person disposes of a skimmer installed on an electronic terminal by another person.  An offense under this subsection is a felony of the third degree.
+Added by Acts 2025, 89th Leg., R.S., Ch. 198 (S.B. 2371), Sec. 1, eff. May 27, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

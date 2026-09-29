@@ -1,0 +1,77 @@
+BUSINESS AND COMMERCE CODE
+TITLE 11.  PERSONAL IDENTITY INFORMATION
+SUBTITLE D.  ARTIFICIAL INTELLIGENCE PROTECTION
+CHAPTER 553.  ARTIFICIAL INTELLIGENCE REGULATORY SANDBOX PROGRAM
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 553.001.  DEFINITIONS.  In this chapter:
+            (1)  "Applicable agency" means a department of this state established by law to regulate certain types of business activity in this state and the people engaging in that business, including the issuance of licenses and registrations, that the department determines would regulate a program participant if the person were not operating under this chapter.
+            (2)  "Department" means the Texas Department of Information Resources.
+            (3)  "Program" means the regulatory sandbox program established under this chapter that allows a person, without being licensed or registered under the laws of this state, to test an artificial intelligence system for a limited time and on a limited basis.
+            (4)  "Program participant" means a person whose application to participate in the program is approved and who may test an artificial intelligence system under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+SUBCHAPTER B.  SANDBOX PROGRAM FRAMEWORK
+
+      Sec. 553.051.  ESTABLISHMENT OF SANDBOX PROGRAM.  (a)  The department, in consultation with the council, shall create a regulatory sandbox program that enables a person to obtain legal protection and limited access to the market in this state to test innovative artificial intelligence systems without obtaining a license, registration, or other regulatory authorization.
+      (b)  The program is designed to:
+            (1)  promote the safe and innovative use of artificial intelligence systems across various sectors including healthcare, finance, education, and public services;
+            (2)  encourage responsible deployment of artificial intelligence systems while balancing the need for consumer protection, privacy, and public safety;
+            (3)  provide clear guidelines for a person who develops an artificial intelligence system to test systems while certain laws and regulations related to the testing are waived or suspended; and
+            (4)  allow a person to engage in research, training, testing, or other pre-deployment activities to develop an artificial intelligence system.
+      (c)  The attorney general may not file or pursue charges against a program participant for violation of a law or regulation waived under this chapter that occurs during the testing period.
+      (d)  A state agency may not file or pursue punitive action against a program participant, including the imposition of a fine or the suspension or revocation of a license, registration, or other authorization, for violation of a law or regulation waived under this chapter that occurs during the testing period.
+      (e)  Notwithstanding Subsections (c) and (d), the requirements of Subchapter B, Chapter 552, may not be waived, and the attorney general or a state agency may file or pursue charges or action against a program participant who violates that subchapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 553.052.  APPLICATION FOR PROGRAM PARTICIPATION.  (a)  A person must obtain approval from the department and any applicable agency before testing an artificial intelligence system under the program.
+      (b)  The department by rule shall prescribe the application form.  The form must require the applicant to:
+            (1)  provide a detailed description of the artificial intelligence system the applicant desires to test in the program, and its intended use;
+            (2)  include a benefit assessment that addresses potential impacts on consumers, privacy, and public safety;
+            (3)  describe the applicant's plan for mitigating any adverse consequences that may occur during the test; and
+            (4)  provide proof of compliance with any applicable federal artificial intelligence laws and regulations.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 553.053.  DURATION AND SCOPE OF PARTICIPATION.  (a)  A program participant approved by the department and each applicable agency may test and deploy an artificial intelligence system under the program for a period of not more than 36 months.
+      (b)  The department may extend a test under this chapter if the department finds good cause for the test to continue.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 553.054.  EFFICIENT USE OF RESOURCES.  The department shall coordinate the activities under this subchapter and any other law relating to artificial intelligence systems to ensure efficient system implementation and to streamline the use of department resources, including information sharing and personnel.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+SUBCHAPTER C.  OVERSIGHT AND COMPLIANCE
+
+      Sec. 553.101.  COORDINATION WITH APPLICABLE AGENCY.  (a)  The department shall coordinate with all applicable agencies to oversee the operation of a program participant.
+      (b)  The council or an applicable agency may recommend to the department that a program participant be removed from the program if the council or applicable agency finds that the program participant's artificial intelligence system:
+            (1)  poses an undue risk to public safety or welfare;
+            (2)  violates any federal law or regulation; or
+            (3)  violates any state law or regulation not waived under the program.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 553.102.  PERIODIC REPORT BY PROGRAM PARTICIPANT.  (a)  A program participant shall provide a quarterly report to the department.
+      (b)  The report shall include:
+            (1)  metrics for the artificial intelligence system's performance;
+            (2)  updates on how the artificial intelligence system mitigates any risks associated with its operation; and
+            (3)  feedback from consumers and affected stakeholders that are using an artificial intelligence system tested under this chapter.
+      (c)  The department shall maintain confidentiality regarding the intellectual property, trade secrets, and other sensitive information it obtains through the program.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+      Sec. 553.103.  ANNUAL REPORT BY DEPARTMENT.  (a)  The department shall submit an annual report to the legislature.
+      (b)  The report shall include:
+            (1)  the number of program participants testing an artificial intelligence system in the program;
+            (2)  the overall performance and impact of artificial intelligence systems tested in the program; and
+            (3)  recommendations on changes to laws or regulations for future legislative consideration.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1174 (H.B. 149), Sec. 4, eff. January 1, 2026.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

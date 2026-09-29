@@ -1,0 +1,188 @@
+BUSINESS AND COMMERCE CODE
+TITLE 5.  REGULATION OF BUSINESSES AND SERVICES
+SUBTITLE C.  BUSINESS OPERATIONS
+Chapter 121, consisting of Secs. 121.001 to 121.102, was added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1.
+For another Chapter 121, consisting of Secs. 121.001 to 121.006, added by Acts 2025, 89th Leg., R.S., Ch. 497 (S.B. 1383), Sec. 1, see Sec. 121.001 et seq., post.
+For another Chapter 121, consisting of Secs. 121.001 to 121.104, added by Acts 2025, 89th Leg., R.S., Ch. 943 (H.B. 2963), Sec. 1, see Sec. 121.001 et seq., post.
+For another Chapter 121, consisting of Secs. 121.001 to 121.002, added by Acts 2025, 89th Leg., R.S., Ch. 1089 (H.B. 3966), Sec. 1, see Sec. 121.001 et seq., post.
+CHAPTER 121.  SOFTWARE APPLICATIONS
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 121.001.  SHORT TITLE.  This chapter may be cited as the App Store Accountability Act.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.002.  DEFINITIONS.  In this chapter:
+            (1)  "Age category" means information collected by the owner of an app store to designate a user based on the age categories described by Section 121.021(b).
+            (2)  "App store" means a publicly available Internet website, software application, or other electronic service that distributes software applications from the owner or developer of a software application to the user of a mobile device.
+            (3)  "Minor" means a child who is younger than 18 years of age who has not had the disabilities of minority removed for general purposes.
+            (4)  "Mobile device" means a portable, wireless electronic device, including a tablet or smartphone, capable of transmitting, receiving, processing, and storing information wirelessly that runs an operating system designed to manage hardware resources and perform common services for software applications on handheld electronic devices.
+            (5)  "Personal data" means any information, including sensitive data, that is linked or reasonably linkable to an identified or identifiable individual.  The term includes pseudonymous data when the data is used by a person who processes or determines the purpose and means of processing the data in conjunction with additional information that reasonably links the data to an identified or identifiable individual.  The term does not include deidentified data or publicly available information.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+SUBCHAPTER B.  DUTIES OF APP STORES
+
+      Sec. 121.021.  DUTY TO VERIFY AGE OF USER; AGE CATEGORIES.  (a)  When an individual in this state creates an account with an app store, the owner of the app store shall use a commercially reasonable method of verification to verify the individual's age category under Subsection (b).
+      (b)  The owner of an app store shall use the following age categories for assigning a designation:
+            (1)  an individual who is younger than 13 years of age is considered a "child";
+            (2)  an individual who is at least 13 years of age but younger than 16 years of age is considered a "younger teenager";
+            (3)  an individual who is at least 16 years of age but younger than 18 years of age is considered an "older teenager"; and
+            (4)  an individual who is at least 18 years of age is considered an "adult."
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.022.  PARENTAL CONSENT REQUIRED.  (a)  If the owner of the app store determines under Section 121.021 that an individual is a minor who belongs to an age category that is not "adult," the owner shall require that the minor's account be affiliated with a parent account belonging to the minor's parent or guardian.
+      (b)  For an account to be affiliated with a minor's account as a parent account, the owner of an app store must use a commercially reasonable method to verify that the account belongs to an individual who:
+            (1)  the owner of the app store has verified belongs to the age category of "adult" under Section 121.021; and
+            (2)  has legal authority to make a decision on behalf of the minor with whose account the individual is seeking affiliation.
+      (c)  A parent account may be affiliated with multiple minors' accounts.
+      (d)  Except as provided by this section, the owner of an app store must obtain consent from the minor's parent or guardian through the parent account affiliated with the minor's account before allowing the minor to:
+            (1)  download a software application;
+            (2)  purchase a software application; or
+            (3)  make a purchase in or using a software application.
+      (e)  The owner of an app store must:
+            (1)  obtain consent for each individual download or purchase sought by the minor; and
+            (2)  notify the developer of each applicable software application if a minor's parent or guardian revokes consent through a parent account.
+      (f)  To obtain consent from a minor's parent or guardian under Subsection (d), the owner of an app store may use any reasonable means to:
+            (1)  disclose to the parent or guardian:
+                  (A)  the specific software application or purchase for which consent is sought;
+                  (B)  the rating under Section 121.052 assigned to the software application or purchase;
+                  (C)  the specific content or other elements that led to the rating assigned under Section 121.052;
+                  (D)  the nature of any collection, use, or distribution of personal data that would occur because of the software application or purchase; and
+                  (E)  any measures taken by the developer of the software application or purchase to protect the personal data of users;
+            (2)  give the parent or guardian a clear choice to give or withhold consent for the download or purchase; and
+            (3)  ensure that the consent is given:
+                  (A)  by the parent or guardian; and
+                  (B)  through the account affiliated with a minor's account under Subsection (a).
+      (g)  If a software developer provides the owner of an app store with notice of a change under Section 121.053, the owner of the app store shall:
+            (1)  notify any individual who has given consent under this section for a minor's use or purchase relating to a previous version of the changed software application; and
+            (2)  obtain consent from the individual for the minor's continued use or purchase of the software application.
+      (h)  The owner of an app store is not required to obtain consent from a minor's parent or guardian for:
+            (1)  the download of a software application that:
+                  (A)  provides a user with direct access to emergency services, including:
+                        (i)  9-1-1 emergency services;
+                        (ii)  a crisis hotline; or
+                        (iii)  an emergency assistance service that is legally available to a minor;
+                  (B)  limits data collection to information:
+                        (i)  collected in compliance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.); and
+                        (ii)  necessary for the provision of emergency services;
+                  (C)  allows a user to access and use the software application without requiring the user to create an account with the software application; and
+                  (D)  is operated by or in partnership with:
+                        (i)  a governmental entity;
+                        (ii)  a nonprofit organization; or
+                        (iii)  an authorized emergency service provider; or
+            (2)  the purchase or download of a software application that is operated by or in partnership with a nonprofit organization that:
+                  (A)  develops, sponsors, or administers a standardized test used for purposes of admission to or class placement in a postsecondary educational institution or a program within a postsecondary educational institution; and
+                  (B)  is subject to Subchapter D, Chapter 32, Education Code.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.023.  DISPLAY OF AGE RATING FOR SOFTWARE APPLICATION.  (a)  If the owner of an app store that operates in this state has a mechanism for displaying an age rating or other content notice, the owner shall:
+            (1)  make available to users an explanation of the mechanism; and
+            (2)  display for each software application available for download and purchase on the app store the age rating and other content notice.
+      (b)  If the owner of an app store that operates in this state does not have a mechanism for displaying an age rating or other content notice, the owner shall display for each software application available for download and purchase on the app store:
+            (1)  the rating under Section 121.052 assigned to the software application; and
+            (2)  the specific content or other elements that led to the rating assigned under Section 121.052.
+      (c)  The information displayed under this section must be clear, accurate, and conspicuous.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.024.  INFORMATION FOR SOFTWARE APPLICATION DEVELOPERS.  The owner of an app store that operates in this state shall, using a commercially available method, allow the developer of a software application to access current information related to:
+            (1)  the age category assigned to each user under Section 121.021(b); and
+            (2)  whether consent has been obtained for each minor user under Section 121.022.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.025.  PROTECTION OF PERSONAL DATA.  The owner of an app store that operates in this state shall protect the personal data of users by:
+            (1)  limiting the collection and processing of personal data to the minimum amount necessary for:
+                  (A)  verifying the age of an individual;
+                  (B)  obtaining consent under Section 121.022; and
+                  (C)  maintaining compliance records; and
+            (2)  transmitting personal data using industry-standard encryption protocols that ensure data integrity and confidentiality.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.026.  VIOLATION.  (a)  The owner of an app store that operates in this state violates this subchapter if the owner:
+            (1)  enforces a contract or a provision of a terms of service agreement against a minor that the minor entered into or agreed to without consent under Section 121.022;
+            (2)  knowingly misrepresents information disclosed under Section 121.022(f)(1);
+            (3)  obtains a blanket consent to authorize multiple downloads or purchases; or
+            (4)  shares or discloses personal data obtained for purposes of Section 121.021, except as required by Section 121.024 or other law.
+      (b)  The owner of an app store is not liable for a violation of Section 121.021 or 121.022 if the owner of the app store:
+            (1)  uses widely adopted industry standards to:
+                  (A)  verify the age of each user as required by Section 121.021; and
+                  (B)  obtain parental consent as required by Section 121.022; and
+            (2)  applies those standards consistently and in good faith.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.027.  CONSTRUCTION OF SUBCHAPTER.  Nothing in this subchapter may be construed to:
+            (1)  prevent the owner of an app store that operates in this state from taking reasonable measures to block, detect, or prevent the distribution of:
+                  (A)  obscene material, as that term is defined by Section 43.21, Penal Code; or
+                  (B)  other material that may be harmful to minors;
+            (2)  require the owner of an app store that operates in this state to disclose a user's personal data to the developer of a software application except as provided by this subchapter;
+            (3)  allow the owner of an app store that operates in this state to use a measure required by this chapter in a manner that is arbitrary, capricious, anticompetitive, or unlawful;
+            (4)  block or filter spam;
+            (5)  prevent criminal activity; or
+            (6)  protect the security of an app store or software application.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+SUBCHAPTER C.  DUTIES OF SOFTWARE APPLICATION DEVELOPERS
+
+      Sec. 121.051.  APPLICABILITY OF SUBCHAPTER.  This subchapter applies only to the developer of a software application that the developer makes available to users in this state through an app store.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.052.  DESIGNATION OF AGE RATING.  (a)  The developer of a software application shall assign to each software application and to each purchase that can be made through the software application an age rating based on the age categories described by Section 121.021(b).
+      (b)  The developer of a software application shall provide to each app store through which the developer makes the software application available:
+            (1)  each rating assigned under Subsection (a); and
+            (2)  the specific content or other elements that led to each rating provided under Subdivision (1).
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.053.  CHANGES TO SOFTWARE APPLICATIONS.  (a)  The developer of a software application shall provide notice to each app store through which the developer makes the software application available before making any significant change to the terms of service or privacy policy of the software application.
+      (b)  For purposes of this section, a change is significant if it:
+            (1)  changes the type or category of personal data collected, stored, or shared by the developer;
+            (2)  affects or changes the rating assigned to the software application under Section 121.052 or the content or elements that led to that rating;
+            (3)  adds new monetization features to the software application, including:
+                  (A)  new opportunities to make a purchase in or using the software application; or
+                  (B)  new advertisements in the software application; or
+            (4)  materially changes the functionality or user experience of the software application.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.054.  AGE VERIFICATION.  (a)  The developer of a software application shall create and implement a system to use information received under Section 121.024 to verify:
+            (1)  for each user of the software application, the age category assigned to that user under Section 121.021(b); and
+            (2)  for each minor user of the software application, whether consent has been obtained under Section 121.022.
+      (b)  The developer of a software application shall use information received from the owner of an app store under Section 121.024 to perform the verification required by this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.055.  USE OF PERSONAL DATA.  (a)  The developer of a software application may use personal data provided to the developer under Section 121.024 only to:
+            (1)  enforce restrictions and protections on the software application related to age;
+            (2)  ensure compliance with applicable laws and regulations; and
+            (3)  implement safety-related features and default settings.
+      (b)  The developer of a software application shall delete personal data provided by the owner of an app store under Section 121.024 on completion of the verification required by Section 121.054.
+      (c)  Notwithstanding Subsection (a), nothing in this chapter relieves a social media platform from doing age verification as required by law.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.056.  VIOLATION.  (a)  Except as provided by this section, the developer of a software application violates this subchapter if the developer:
+            (1)  enforces a contract or a provision of a terms of service agreement against a minor that the minor entered into or agreed to without consent under Section 121.054;
+            (2)  knowingly misrepresents an age rating or reason for that rating under Section 121.052; or
+            (3)  shares or discloses the personal data of a user that was acquired under this subchapter.
+      (b)  The developer of a software application is not liable for a violation of Section 121.052 if the software developer:
+            (1)  uses widely adopted industry standards to determine the rating and specific content required by this section; and
+            (2)  applies those standards consistently and in good faith.
+      (c)  The developer of a software application is not liable for a violation of Section 121.054 if the software developer:
+            (1)  relied in good faith on age category and consent information received from the owner of an app store; and
+            (2)  otherwise complied with the requirements of this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+SUBCHAPTER D.  ENFORCEMENT
+
+      Sec. 121.101.  DECEPTIVE TRADE PRACTICE.  A violation of this chapter constitutes a deceptive trade practice in addition to the practices described by Subchapter E, Chapter 17, and is actionable under that subchapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+      Sec. 121.102.  CUMULATIVE REMEDIES.  The remedies provided by this chapter are not exclusive and are in addition to any other action or remedy provided by law.
+Added by Acts 2025, 89th Leg., R.S., Ch. 200 (S.B. 2420), Sec. 1, eff. January 1, 2026.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
