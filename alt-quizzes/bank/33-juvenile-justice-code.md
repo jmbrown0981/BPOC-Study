@@ -1853,3 +1853,605 @@ Under ED 37.007(a), a student MUST be expelled (subject to certain exceptions) f
 "_________" means to bring forward proof, evidence, or reasons to support an argument or claim.
 
 **Explanation:** The term this defines is "Adduce", a general legal term — it appears in FC 51.13(b) ("evidence adduced in a hearing").
+
+---
+
+### Q135 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(A)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing mental or emotional injury to a child that results in an observable and material impairment in the child's growth, development, or psychological functioning.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(A).
+
+---
+
+### Q136 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(B)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing or permitting the child to be in a situation in which the child sustains a mental or emotional injury that results in an observable and material impairment in the child's growth, development, or psychological functioning.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(B).
+
+---
+
+### Q137 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(C)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing physical injury that results in substantial harm to the child, or the genuine threat of substantial harm from physical injury to the child, including an injury that is at variance with the history or explanation given and excluding an accident or reasonable discipline by a parent, guardian, or managing or possessory conservator that does not expose the child to a substantial risk of harm.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(C).
+
+---
+
+### Q138 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(D)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Resulting in failure to make a reasonable effort to prevent an action by another person that results in physical injury that results in substantial harm to the child.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(D).
+
+---
+
+### Q139 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(E)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing sexual conduct harmful to a child's mental, emotional, or physical welfare, including conduct that constitutes the offense of continuous sexual abuse of young child or disabled individual under Section 21.02, Penal Code, indecency with a child under Section 21.11, Penal Code, improper relationship between educator and student under Section 21.12, Penal Code, sexual assault under Section 22.011, Penal Code, or aggravated sexual assault under Section 22.021, Penal Code.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(E).
+
+---
+
+### Q140 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(F)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Resulting in failure to make a reasonable effort to prevent sexual conduct harmful to a child.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(F).
+
+---
+
+### Q141 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(G)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Compelling or encouraging the child to engage in sexual conduct as defined by Section 43.01, Penal Code, including compelling or encouraging the child in a manner that constitutes an offense of trafficking of persons under Section 20A.02(a)(7) or (8), Penal Code, solicitation of prostitution under Section 43.021, Penal Code, or compelling prostitution under Section 43.05(a)(2), Penal Code.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(G).
+
+---
+
+### Q142 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(H)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing, permitting, encouraging, engaging in, or allowing the photographing, filming, or depicting of the child if the person knew or should have known that the resulting photograph, film, or depiction of the child is obscene as defined by Section 43.21, Penal Code, or pornographic.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(H).
+
+---
+
+### Q143 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(I)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing the current use by a person of a controlled substance as defined by Chapter 481, Health and Safety Code, in a manner or to the extent that the use results in physical, mental, or emotional injury to a child.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(I).
+
+---
+
+### Q144 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(J)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing, expressly permitting, or encouraging a child to use a controlled substance as defined by Chapter 481, Health and Safety Code.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(J).
+
+---
+
+### Q145 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(K)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Causing, permitting, encouraging, engaging in, or allowing a sexual performance by a child as defined by Section 43.25, Penal Code.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(K).
+
+---
+
+### Q146 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(L)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Knowingly causing, permitting, encouraging, engaging in, or allowing a child to be trafficked in a manner punishable as an offense under Section 20A.02(a)(5), (6), (7), or (8), Penal Code, or the failure to make a reasonable effort to prevent a child from being trafficked in a manner punishable as an offense under any of those sections.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(L).
+
+---
+
+### Q147 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(1)(M)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Forcing or coercing a child to enter into a marriage.
+
+- [x] Abuse
+- [ ] Neglect
+
+**Explanation:** This is **abuse** under Family Code 261.001(1)(M).
+
+---
+
+### Q148 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)
+
+Under Family Code 261.001, which term is defined here?
+
+"_______" means an act or failure to act by a person responsible for a child's care, custody, or welfare evidencing the person's blatant disregard for the consequences of the act or failure to act that results in harm to the child or that creates an immediate danger to the child's physical health or safety.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is the definition of **neglect** under Family Code 261.001(4).
+
+---
+
+### Q149 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(i)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+The leaving of a child in a situation where the child would be exposed to an immediate danger of physical or mental harm, without arranging for necessary care for the child, and the demonstration of an intent not to return by a parent, guardian, or managing or possessory conservator of the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(i).
+
+---
+
+### Q150 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(ii)(a)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Placing a child in or failing to remove a child from a situation that a reasonable person would realize requires judgment or actions beyond the child's level of maturity, physical condition, or mental abilities and that results in bodily injury or an immediate danger of harm to the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(ii)(a).
+
+---
+
+### Q151 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(ii)(b)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Failing to seek, obtain, or follow through with medical care for a child, with the failure resulting in or presenting an immediate danger of death, disfigurement, or bodily injury or with the failure resulting in an observable and material impairment to the growth, development, or functioning of the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(ii)(b).
+
+---
+
+### Q152 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(ii)(c)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Resulting in the failure to provide a child with food, clothing, or shelter necessary to sustain the life or health of the child, excluding failure caused primarily by financial inability unless relief services had been offered and refused.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(ii)(c).
+
+---
+
+### Q153 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(ii)(d)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Placing a child in or failing to remove the child from a situation in which the child would be exposed to an immediate danger of sexual conduct harmful to the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(ii)(d).
+
+---
+
+### Q154 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(ii)(e)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+Placing a child in or failing to remove the child from a situation in which the child would be exposed to acts or omissions that constitute abuse under Subdivision (1)(E), (F), (G), (H), or (K) committed against another child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(ii)(e).
+
+---
+
+### Q155 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(iii)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+The failure by the person responsible for a child's care, custody, or welfare to permit the child to return to the child's home without arranging for the necessary care for the child after the child has been absent from the home for any reason, including having been in residential placement or having run away.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(iii).
+
+---
+
+### Q156 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(A)(iv)
+
+Under Family Code 261.001, does the following act or omission fall under the definition of abuse or of neglect?
+
+A negligent act or omission by an employee, volunteer, or other individual working under the auspices of a facility or program, including failure to comply with an individual treatment plan, plan of care, or individualized service plan, that causes or may cause substantial emotional harm or physical injury to, or the death of, a child served by the facility or program as further described by rule or policy.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** This is **neglect** under Family Code 261.001(4)(A)(iv).
+
+---
+
+### Q157 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(i)(a)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+The refusal by a person responsible for a child's care, custody, or welfare to permit the child to remain in or return to the child's home resulting in the placement of the child in the conservatorship of the department if the child has a severe emotional disturbance.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(i)(a) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q158 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(i)(b)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+The refusal by a person responsible for a child's care, custody, or welfare to permit the child to remain in or return to the child's home resulting in the placement of the child in the conservatorship of the department if the person's refusal is based solely on the person's inability to obtain mental health services necessary to protect the safety and well-being of the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(i)(b) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q159 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(i)(c)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+The refusal by a person responsible for a child's care, custody, or welfare to permit the child to remain in or return to the child's home resulting in the placement of the child in the conservatorship of the department if the person has exhausted all reasonable means available to the person to obtain the mental health services described by Sub-subparagraph (b).
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(i)(c) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q160 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(ii)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+Allowing the child to engage in independent activities that are appropriate and typical for the child's level of maturity, physical condition, developmental abilities, or culture.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(ii) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q161 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(iii)(a)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+A decision by a person responsible for a child's care, custody, or welfare to obtain an opinion from more than one medical provider relating to the child's medical care.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(iii)(a) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q162 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(iii)(b)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+A decision by a person responsible for a child's care, custody, or welfare to transfer the child's medical care to a new medical provider.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(iii)(b) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q163 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(iii)(c)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+A decision by a person responsible for a child's care, custody, or welfare to transfer the child to another health care facility.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(iii)(c) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q164 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(iv)(a)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+The refusal by a person responsible for a child's care, custody, or welfare to administer or consent to the administration of a psychotropic medication to the child, or to consent to any other psychiatric or psychological treatment of the child, unless the refusal presents a substantial risk of death, disfigurement, or bodily injury to the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(iv)(a) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q165 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(iv)(b)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+The refusal by a person responsible for a child's care, custody, or welfare to administer or consent to the administration of a psychotropic medication to the child, or to consent to any other psychiatric or psychological treatment of the child, unless the refusal results in an observable and material impairment to the growth, development, or functioning of the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(iv)(b) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q166 — Abuse/Neglect
+**LO:** 33.13 · **Source:** FC 261.001(4)(B)(v)
+
+Family Code 261.001 says one of these definitions specifically does **not** include the following. Which one?
+
+Choosing a recognized alternative health care treatment or therapy for the child that could be considered as new, emerging, or nonstandard, unless the treatment or therapy presents a substantial risk of death, disfigurement, or bodily injury to the child or results in an observable and material impairment to the growth, development, or functioning of the child.
+
+- [ ] Abuse
+- [x] Neglect
+
+**Explanation:** Family Code 261.001(4)(B)(v) lists this as an exclusion from the definition of **neglect** — it is not neglect.
+
+---
+
+### Q167 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(1)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to have physical possession, to direct the moral and religious training, and to designate the residence of the child.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(1) lists this as a parent's **right**.
+
+---
+
+### Q168 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(6)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to consent to the child's marriage, enlistment in the armed forces of the United States, medical and dental care, and psychiatric, psychological, and surgical treatment.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(6) lists this as a parent's **right**.
+
+---
+
+### Q169 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(7)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to represent the child in legal action and to make other decisions of substantial legal significance concerning the child.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(7) lists this as a parent's **right**.
+
+---
+
+### Q170 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(8)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to receive and give receipt for payments for the support of the child and to hold or disburse funds for the benefit of the child.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(8) lists this as a parent's **right**.
+
+---
+
+### Q171 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(9)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to inherit from and through the child.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(9) lists this as a parent's **right**.
+
+---
+
+### Q172 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(10)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to make decisions concerning the child's education.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(10) lists this as a parent's **right**.
+
+---
+
+### Q173 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(11)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to designate the school the child will attend and to enroll the child in the school, subject to any eligibility or admissions requirements.
+
+- [x] Right
+- [ ] Duty
+
+**Explanation:** Family Code 151.001(a)(11) lists this as a parent's **right**.
+
+---
+
+### Q174 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(2)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ of care, control, protection, and reasonable discipline of the child.
+
+- [ ] Right
+- [x] Duty
+
+**Explanation:** Family Code 151.001(a)(2) lists this as a parent's **duty**.
+
+---
+
+### Q175 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(3)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ to support the child, including providing the child with clothing, food, shelter, medical and dental care, and education.
+
+- [ ] Right
+- [x] Duty
+
+**Explanation:** Family Code 151.001(a)(3) lists this as a parent's **duty**.
+
+---
+
+### Q176 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(a)(4)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____, except when a guardian of the child's estate has been appointed, to manage the estate of the child, including the right as an agent of the child to act in relation to the child's estate if the child's action is required by a state, the United States, or a foreign government.
+
+- [ ] Right
+- [x] Duty
+
+**Explanation:** Family Code 151.001(a)(4) lists this as a parent's **duty**. (It is a duty to manage the estate, which includes the right to act as the child's agent.)
+
+---
+
+### Q177 — Right/Duty
+**LO:** 33.12 · **Source:** FC 151.001(b)
+
+Under Family Code 151.001, is this a parent's right or a parent's duty?
+
+The _____ of a parent to support his or her child exists while the child is an unemancipated minor and continues as long as the child is fully enrolled in a secondary school in a program leading toward a high school diploma and complies with attendance requirements described by Section 154.002(a)(2).
+
+- [ ] Right
+- [x] Duty
+
+**Explanation:** Family Code 151.001(b) lists this as a parent's **duty**.
