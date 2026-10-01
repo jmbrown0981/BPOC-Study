@@ -1631,3 +1631,564 @@ PC 71.01(d) and (e) define "Criminal street gang" and "Foreign terrorist organiz
 **Explanation:** All three concepts (Combination, Criminal street gang, Foreign terrorist organization) share the three-or-more-persons threshold but are defined around different organizing features — general criminal collaboration, an identifying symbol/leadership structure, or a partly foreign-based threat to state security — and any one of the three can support an Engaging in Organized Criminal Activity charge (71.02).
 
 ---
+
+---
+
+### Q114 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(1)
+
+**Answer:** Act
+
+"_________" means a bodily movement, whether voluntary or involuntary, and includes speech.
+
+**Explanation:** The term this defines is "Act", from PC 1.07(a)(1).
+
+---
+
+### Q115 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(2)
+
+**Answer:** Actor
+
+"_________" means a person whose criminal responsibility is in issue in a criminal action. Whenever the term "suspect" is used in this code, it means "[term].".
+
+**Explanation:** The term this defines is "Actor", from PC 1.07(a)(2).
+
+---
+
+### Q116 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(3)
+
+**Answer:** Agency
+
+"_________" includes authority, board, bureau, commission, committee, council, department, district, division, and office.
+
+**Explanation:** The term this defines is "Agency", from PC 1.07(a)(3).
+
+---
+
+### Q117 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(4); Alcoholic Beverage Code 1.04
+
+**Answer:** Alcoholic Beverage
+
+"_________" means alcohol, or any beverage containing more than one-half of one percent of alcohol by volume, which is capable of use for beverage purposes, either alone or when diluted.
+
+**Explanation:** The term this defines is "Alcoholic Beverage", from PC 1.07(a)(4), which adopts the definition in Alcoholic Beverage Code 1.04.
+
+---
+
+### Q118 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(5)
+
+**Answer:** Another
+
+"_________" means a person other than the actor.
+
+**Explanation:** The term this defines is "Another", from PC 1.07(a)(5).
+
+---
+
+### Q119 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(6)
+
+**Answer:** Association
+
+"_________" means a government or governmental subdivision or agency, trust, partnership, or two or more persons having a joint or common economic interest.
+
+**Explanation:** The term this defines is "Association", from PC 1.07(a)(6).
+
+---
+
+### Q120 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(7)
+
+**Answer:** Benefit
+
+"_________" means anything reasonably regarded as economic gain or advantage, including [term] to any other person in whose welfare the beneficiary is interested.
+
+**Explanation:** The term this defines is "Benefit", from PC 1.07(a)(7).
+
+---
+
+### Q121 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(8)
+
+**Answer:** Bodily Injury
+
+"_________" means physical pain, illness, or any impairment of physical condition.
+
+**Explanation:** The term this defines is "Bodily Injury", from PC 1.07(a)(8).
+
+---
+
+### Q122 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(8-a)
+
+**Answer:** Civil Commitment Facility
+
+"_________" means a facility owned, leased, or operated by the state, or by a vendor under contract with the state, that houses only persons who have been civilly committed as sexually violent predators under Chapter 841, Health and Safety Code.
+
+**Explanation:** The term this defines is "Civil Commitment Facility", from PC 1.07(a)(8-a).
+
+---
+
+### Q123 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(9)
+
+**Answer:** Coercion
+
+"_________" means a threat, however communicated to commit an offense, to inflict bodily injury in the future on the person threatened or another; to accuse a person of any offense; to expose a person to hatred, contempt, or ridicule; to harm the credit or business repute of any person; or to take or withhold action as a public servant, or to cause a public servant to take or withhold action.
+
+**Explanation:** The term this defines is "Coercion", from PC 1.07(a)(9).
+
+---
+
+### Q124 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(10)
+
+**Answer:** Conduct
+
+"_________" means an act or omission and its accompanying mental state.
+
+**Explanation:** The term this defines is "Conduct", from PC 1.07(a)(10).
+
+---
+
+### Q125 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(11)
+
+**Answer:** Consent
+
+"_________" means assent in fact, whether express or apparent.
+
+**Explanation:** The term this defines is "Consent", from PC 1.07(a)(11).
+
+---
+
+### Q126 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(12); HSC 481.002(5)
+
+**Answer:** Controlled Substance
+
+"_________" means a substance, including a drug, an adulterant, and a dilutant, listed in Schedules I through V or Penalty Group 1, 1-A, 1-B, 2, 2-A, 3, or 4.  The term includes the aggregate weight of any mixture, solution, or other substance containing a [term].  The term does not include hemp, as defined by Section 121.001, Agriculture Code, or the tetrahydrocannabinols in hemp.
+
+**Explanation:** The term this defines is "Controlled Substance", from PC 1.07(a)(12), which adopts the definition in HSC 481.002(5).
+
+---
+
+### Q127 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(13)
+
+**Answer:** Corporation
+
+"_________" includes nonprofit corporations, professional associations created pursuant to statute, and joint stock companies.
+
+**Explanation:** The term this defines is "Corporation", from PC 1.07(a)(13).
+
+---
+
+### Q128 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(14)
+
+**Answer:** Correctional Facility
+
+"_________" means a place designated by law for the confinement of a person arrested for, charged with, or convicted of a criminal offense. The term includes a municipal or county jail; a confinement facility operated by the Texas Department of Criminal Justice; a confinement facility operated under contract with any division of the Texas Department of Criminal Justice; and a community corrections facility operated by a community supervision and corrections department.
+
+**Explanation:** The term this defines is "Correctional Facility", from PC 1.07(a)(14).
+
+---
+
+### Q129 — Term ID
+**LO:** 8.4 · **Source:** PC 6.03(d)
+
+**Answer:** Criminal negligence | Criminally negligent
+
+"_________" (culpable mental state): acting when, with respect to circumstances surrounding his conduct or the result of his conduct, he ought to be aware of a substantial and unjustifiable risk that the circumstances exist or the result will occur. The risk must be of such a nature and degree that the failure to perceive it constitutes a gross deviation from the standard of care that an ordinary person would exercise under all the circumstances as viewed from the actor's standpoint.
+
+**Explanation:** This is the culpable mental state "Criminal Negligence" (criminally negligent), from PC 6.03(d).
+
+---
+
+### Q130 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(16); HSC 483.001
+
+**Answer:** Dangerous Drug
+
+"_________" means a device or a drug that is unsafe for self-medication and that is not included in Schedules I through V or Penalty Groups 1 through 4 of Chapter 481 (Texas Controlled Substances Act). The term includes a device or a drug that bears or is required to bear the legend "Caution:  federal law prohibits dispensing without prescription" or "Rx only" or another legend that complies with federal law; or "Caution:  federal law restricts this drug to use by or on the order of a licensed veterinarian.".
+
+**Explanation:** The term this defines is "Dangerous Drug", from PC 1.07(a)(16), which adopts the definition in HSC 483.001.
+
+---
+
+### Q131 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(17)
+
+**Answer:** Deadly Weapon
+
+"_________" means a firearm or anything manifestly designed, made, or adapted for the purpose of inflicting death or serious bodily injury; or anything that in the manner of its use or intended use is capable of causing death or serious bodily injury.
+
+**Explanation:** The term this defines is "Deadly Weapon", from PC 1.07(a)(17).
+
+---
+
+### Q132 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(18); HSC 481.002(16)
+
+**Answer:** Drug
+
+"_________" means a substance, other than a device or a component, part, or accessory of a device, that is recognized as a [term] in the official United States Pharmacopoeia, official Homeopathic Pharmacopoeia of the United States, official National Formulary, or a supplement to either pharmacopoeia or the formulary; intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in man or animals; intended to affect the structure or function of the body of man or animals but is not food; or intended for use as a component of a substance described by Paragraph (A), (B), or (C).
+
+**Explanation:** The term this defines is "Drug", from PC 1.07(a)(18), which adopts the definition in HSC 481.002(16).
+
+---
+
+### Q133 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(19)
+
+**Answer:** Effective Consent
+
+"_________" includes consent by a person legally authorized to act for the owner. Consent does not meet this definition if induced by force, threat, or fraud; given by a person the actor knows is not legally authorized to act for the owner; given by a person who by reason of youth, mental disease or defect, or intoxication is known by the actor to be unable to make reasonable decisions; or given solely to detect the commission of an offense.
+
+**Explanation:** The term this defines is "Effective Consent", from PC 1.07(a)(19).
+
+---
+
+### Q134 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(20)
+
+**Answer:** Electric Generating Plant
+
+"_________" means a facility that generates electric energy for distribution to the public.
+
+**Explanation:** The term this defines is "Electric Generating Plant", from PC 1.07(a)(20).
+
+---
+
+### Q135 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(21)
+
+**Answer:** Electric Utility Substation
+
+"_________" means a facility used to switch or change voltage in connection with the transmission of electric energy for distribution to the public.
+
+**Explanation:** The term this defines is "Electric Utility Substation", from PC 1.07(a)(21).
+
+---
+
+### Q136 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(22)
+
+**Answer:** Element of Offense
+
+"_________" means the forbidden conduct; the required culpability; any required result; and the negation of any exception to the offense.
+
+**Explanation:** The term this defines is "Element of Offense", from PC 1.07(a)(22).
+
+---
+
+### Q137 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(23)
+
+**Answer:** Felony
+
+"_________" means an offense so designated by law or punishable by death or confinement in a penitentiary.
+
+**Explanation:** The term this defines is "Felony", from PC 1.07(a)(23).
+
+---
+
+### Q138 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(24)
+
+**Answer:** Government
+
+"_________" means the state; a county, municipality, or political subdivision of the state; or any branch or agency of the state, a county, municipality, or political subdivision.
+
+**Explanation:** The term this defines is "Government", from PC 1.07(a)(24).
+
+---
+
+### Q139 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(25)
+
+**Answer:** Harm
+
+"_________" means anything reasonably regarded as loss, disadvantage, or injury, including [term] to another person in whose welfare the person affected is interested.
+
+**Explanation:** The term this defines is "Harm", from PC 1.07(a)(25).
+
+---
+
+### Q140 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(26)
+
+**Answer:** Individual
+
+"_________" means a human being who is alive, including an unborn child at every stage of gestation from fertilization until birth.
+
+**Explanation:** The term this defines is "Individual", from PC 1.07(a)(26).
+
+---
+
+### Q141 — Term ID
+**LO:** 8.4 · **Source:** PC 6.03(a)
+
+**Answer:** Intentional | Intentionally | With intent
+
+"_________" (culpable mental state): acting when it is his conscious objective or desire to engage in the conduct or cause the result.
+
+**Explanation:** This is the culpable mental state "Intentional" (intentionally), from PC 6.03(a).
+
+---
+
+### Q142 — Term ID
+**LO:** 8.4 · **Source:** PC 6.03(b)
+
+**Answer:** Knowing | Knowingly | With knowledge
+
+"_________" (culpable mental state): acting when he is aware of the nature of his conduct or that the circumstances exist or when he is aware that his conduct is reasonably certain to cause the result.
+
+**Explanation:** This is the culpable mental state "Knowing" (knowingly), from PC 6.03(b).
+
+---
+
+### Q143 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(30)
+
+**Answer:** Law
+
+"_________" means the constitution or a statute of this state or of the United States, a written opinion of a court of record, a municipal ordinance, an order of a county commissioners court, or a rule authorized by and lawfully adopted under a statute.
+
+**Explanation:** The term this defines is "Law", from PC 1.07(a)(30).
+
+---
+
+### Q144 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(30-a)
+
+**Answer:** Mass Shooting
+
+"_________" means a person's discharge of a firearm to cause serious bodily injury or death, or to attempt to cause serious bodily injury or death, to four or more persons during the same criminal transaction; or during different criminal transactions but pursuant to the same scheme or course of conduct.
+
+**Explanation:** The term this defines is "Mass Shooting", from PC 1.07(a)(30-a).
+
+---
+
+### Q145 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(31)
+
+**Answer:** Misdemeanor
+
+"_________" means an offense so designated by law or punishable by fine, by confinement in jail, or by both fine and confinement in jail.
+
+**Explanation:** The term this defines is "Misdemeanor", from PC 1.07(a)(31).
+
+---
+
+### Q146 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(32)
+
+**Answer:** Oath
+
+"_________" includes affirmation.
+
+**Explanation:** The term this defines is "Oath", from PC 1.07(a)(32).
+
+---
+
+### Q147 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(33)
+
+**Answer:** Official Proceeding
+
+"_________" means any type of administrative, executive, legislative, or judicial proceeding that may be conducted before a public servant.
+
+**Explanation:** The term this defines is "Official Proceeding", from PC 1.07(a)(33).
+
+---
+
+### Q148 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(34)
+
+**Answer:** Omission
+
+"_________" means failure to act.
+
+**Explanation:** The term this defines is "Omission", from PC 1.07(a)(34).
+
+---
+
+### Q149 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(35)
+
+**Answer:** Owner
+
+"_________" means a person who has title to the property, possession of the property, whether lawful or not, or a greater right to possession of the property than the actor; or is a holder in due course of a negotiable instrument.
+
+**Explanation:** The term this defines is "Owner", from PC 1.07(a)(35).
+
+---
+
+### Q150 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(36)
+
+**Answer:** Peace Officer
+
+"_________" means a person elected, employed, or appointed as a [term] under Article 2A.001, Code of Criminal Procedure, Section 51.212 or 51.214, Education Code, or other law.
+
+**Explanation:** The term this defines is "Peace Officer", from PC 1.07(a)(36).
+
+---
+
+### Q151 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(37)
+
+**Answer:** Penal Institution
+
+"_________" means a place designated by law for confinement of persons arrested for, charged with, or convicted of an offense.
+
+**Explanation:** The term this defines is "Penal Institution", from PC 1.07(a)(37).
+
+---
+
+### Q152 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(38)
+
+**Answer:** Person
+
+"_________" means an individual or a corporation, association, limited liability company, or other entity or organization governed by the Business Organizations Code.
+
+**Explanation:** The term this defines is "Person", from PC 1.07(a)(38).
+
+---
+
+### Q153 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(39)
+
+**Answer:** Possession
+
+"_________" means actual care, custody, control, or management.
+
+**Explanation:** The term this defines is "Possession", from PC 1.07(a)(39).
+
+---
+
+### Q154 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(40)
+
+**Answer:** Public Place
+
+"_________" means any place to which the public or a substantial group of the public has access and includes, but is not limited to, streets, highways, and the common areas of schools, hospitals, apartment houses, office buildings, transport facilities, and shops.
+
+**Explanation:** The term this defines is "Public Place", from PC 1.07(a)(40).
+
+---
+
+### Q155 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(41)
+
+**Answer:** Public Servant
+
+"_________" means a person elected, selected, appointed, employed, or otherwise designated as one of the following, even if he has not yet qualified for office or assumed his duties: an officer, employee, or agent of government; a juror or grand juror; or an arbitrator, referee, or other person who is authorized by law or private written agreement to hear or determine a cause or controversy; or an attorney at law or notary public when participating in the performance of a governmental function; or a candidate for nomination or election to public office; or a person who is performing a governmental function under a claim of right although he is not legally qualified to do so.
+
+**Explanation:** The term this defines is "Public Servant", from PC 1.07(a)(41).
+
+---
+
+### Q156 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(42)
+
+**Answer:** Reasonable Belief
+
+"_________" means a belief that would be held by an ordinary and prudent man in the same circumstances as the actor.
+
+**Explanation:** The term this defines is "Reasonable Belief", from PC 1.07(a)(42).
+
+---
+
+### Q157 — Term ID
+**LO:** 8.4 · **Source:** PC 6.03(c)
+
+**Answer:** Reckless | Recklessly
+
+"_________" (culpable mental state): acting when he is aware of but consciously disregards a substantial and unjustifiable risk that the circumstances exist or the result will occur. The risk must be of such a nature and degree that its disregard constitutes a gross deviation from the standard of care that an ordinary person would exercise under all the circumstances as viewed from the actor's standpoint.
+
+**Explanation:** This is the culpable mental state "Reckless" (recklessly), from PC 6.03(c).
+
+---
+
+### Q158 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(44)
+
+**Answer:** Rule
+
+"_________" includes regulation.
+
+**Explanation:** The term this defines is "Rule", from PC 1.07(a)(44).
+
+---
+
+### Q159 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(45)
+
+**Answer:** Secure Correctional Facility
+
+"_________" means a municipal or county jail; or a confinement facility operated by or under a contract with any division of the Texas Department of Criminal Justice.
+
+**Explanation:** The term this defines is "Secure Correctional Facility", from PC 1.07(a)(45).
+
+---
+
+### Q160 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(46)
+
+**Answer:** Serious Bodily Injury
+
+"_________" means bodily injury that creates a substantial risk of death or that causes death, serious permanent disfigurement, or protracted loss or impairment of the function of any bodily member or organ.
+
+**Explanation:** The term this defines is "Serious Bodily Injury", from PC 1.07(a)(46).
+
+---
+
+### Q161 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(46-a)
+
+**Answer:** Sight Order
+
+"_________" means a written or electronic instruction to pay money that is authorized by the person giving the instruction and that is payable on demand or at a definite time by the person being instructed to pay. The term includes a check, an electronic debit, or an automatic bank draft.
+
+**Explanation:** The term this defines is "Sight Order", from PC 1.07(a)(46-a).
+
+---
+
+### Q162 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(47)
+
+**Answer:** Swear
+
+"_________" includes affirm.
+
+**Explanation:** The term this defines is "Swear", from PC 1.07(a)(47).
+
+---
+
+### Q163 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(48)
+
+**Answer:** Unlawful
+
+"_________" means criminal or tortious or both and includes what would be criminal or tortious but for a defense not amounting to justification or privilege.
+
+**Explanation:** The term this defines is "Unlawful", from PC 1.07(a)(48).
+
+---
+
+### Q164 — Term ID
+**LO:** 8.2 · **Source:** PC 1.07(a)(49)
+
+**Answer:** Death
+
+"_________" includes, for an individual who is an unborn child, the failure to be born alive.
+
+**Explanation:** The term this defines is "Death", from PC 1.07(a)(49). (PC 1.07(b) adds that a definition applies to each grammatical variation of the term.)
