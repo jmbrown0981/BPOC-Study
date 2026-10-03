@@ -14,8 +14,8 @@
      - "§ 36.02" / "Sec. 20A.01"       -> the last non-CCP code named earlier in the text,
                                           else opts.secCode (the bank's main code), else no link
      - a bare number "under 481.112"   -> the last code cited earlier in the text, else opts.secCode
-   BPOC/LO/Day/Chapter numbers are never treated as sections, and naming a code that isn't
-   a Texas statute (TAC, CFR, U.S.C., a rule) stops bare numbers after it from linking.
+   BPOC/LO/Day/Chapter numbers are never treated as sections, and naming something that isn't
+   a Texas statute (TAC, CFR, U.S.C., a rule) stops later uncoded citations from linking.
    Links open in one shared, separate tab/window ("bpoc-codes") so the current page
    (e.g. a quiz in progress) is left alone. */
 (function(){
@@ -60,7 +60,7 @@
   var SEC = '\\d+[A-Za-z]?\\.\\d+[A-Za-z0-9]*';
   var SUB = '(?:\\([A-Za-z0-9-]+\\))*';
   var PRE = '(?:(?:Arts?\\.?|Articles?|Secs?\\.?|Sections?|&sect;&sect;?|§§?)\\s*)?';
-  var LIST_SEP = '(?:\\s*(?:,|and|or|through|to|-|–|/|&amp;)\\s*)';
+  var LIST_SEP = '(?:\\s*,?\\s*(?:and|or|through|to)\\s+|\\s*(?:,|-|–|/|&amp;)\\s*)';
   var TAIL = '((?:' + LIST_SEP + SEC + SUB + ')*)';
 
   // A: "FC 51.02(a)", "CCP Art. 2A.001, 2A.002", "Penal Code Section 22.01"
@@ -74,13 +74,13 @@
   var RE_SEC_G = new RegExp(SEC, 'g');
 
   // Context pass tokens (one left-to-right scan). Groups:
-  //  1 named code (sets context)   2 not-a-statute name (blocks context)   3 BPOC/LO-style number (blocks bare numbers)
+  //  1 named code (sets context)   2 not-a-statute name (blocks context)   3 BPOC/LO-style number list (skipped)
   //  4 article cite + 5 its tail   6 section cite + 7 its tail + 8 ", Penal Code"-style suffix (9 = the name)
   //  10 bare number + 11 its tail
   var RE_CTX = new RegExp(
     '\\b(' + LONG_RE + '|(?:' + SHORT.map(function(p){ return esc(p[0]); }).join('|') + ')(?=[,.]?\\s+(?:' + PRE + '(?:\\d|Chapter|Ch\\.)|offenses?\\b|sections?\\b|articles?\\b)))\\b' +
     '|\\b(' + NOT_STATUTE + ')(?![A-Za-z])' +
-    '|\\b((?:BPOC|LO|Day|Days|Chapter|Ch\\.|Q|Unit|Module)\\s*\\d+(?:\\.\\d+)*(?:' + LIST_SEP + '\\d+(?:\\.\\d+)*)*)' +
+    '|\\b((?:BPOC|LOs?|Day|Days|Chapter|Ch\\.|Q|Unit|Module)\\s*\\d+(?:\\.\\d+)*(?:' + LIST_SEP + '\\d+(?:\\.\\d+)*)*)' +
     '|\\b(?:Arts?\\.?|Articles?)\\s*(' + SEC + SUB + ')' + TAIL +
     '|(?:\\b(?:Secs?\\.?|Sections?)|&sect;(?:&sect;)?|§§?)\\s*(' + SEC + SUB + ')' + TAIL +
       '(,?\\s+(?:of\\s+the\\s+)?(' + ANY_RE + '|' + NOT_STATUTE + ')\\b)?' +
@@ -141,30 +141,30 @@
   }
 
   function contextPass(html, secCode){
-    var last = null, lastSec = null, bareBlocked = false, lastFromArt = false;
-    function setCode(code){ last = code; lastFromArt = false; if(code !== 'CR') lastSec = code; bareBlocked = false; }
+    var last = null, lastSec = null;
+    function setCode(code){ last = code; if(code !== 'CR') lastSec = code; }
     return mapText(html, function(t){
       return t.replace(RE_CTX, function(all, named, notStat, numRef, artSec, artTail, sSec, sTail, sSuffix, sName, bare, bareTail){
         if(named){ setCode(codeFor(named) || 'X'); return all; }
         if(notStat){ last = lastSec = 'X'; return all; }
-        if(numRef){ bareBlocked = true; return all; }
+        if(numRef) return all;
         if(artSec){
-          bareBlocked = false; last = 'CR'; lastFromArt = true;
+          last = 'CR';
           return linkRun(all.slice(0, all.length - artTail.length), artSec, artTail, 'CR');
         }
         if(sSec){
           sSuffix = sSuffix || '';
           var code;
           if(sName){ code = codeFor(sName) || 'X'; setCode(code); }
-          else { code = lastSec || secCode || null; bareBlocked = false; if(code) last = code; }
+          else { code = lastSec || secCode || null; if(code) last = code; }
           if(!code || code === 'X') return all;
           var core = all.slice(0, all.length - sSuffix.length);
           return linkRun(core.slice(0, core.length - sTail.length), sSec, sTail, code) + sSuffix;
         }
         if(bare){
-          if(bareBlocked) return all;
-          // after a bare "Art." cite, prefer the bank's own code when it has that section, else CCP
-          var bc = (lastFromArt && secCode && has(secCode, secOf(bare))) ? secCode : (last || secCode || null);
+          // CCP provisions are normally written "Art. x"; a bare number after a CCP cite is read as the
+          // bank's own code when that code has the section, otherwise as CCP
+          var bc = (last === 'CR' && secCode && secCode !== 'CR' && has(secCode, secOf(bare))) ? secCode : (last || secCode || null);
           if(!bc || bc === 'X') return all;
           return linkRun(bare, bare, bareTail, bc);
         }

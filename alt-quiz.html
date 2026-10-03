@@ -168,44 +168,44 @@
 
 // Add an entry here for every chapter bank you create.
 const ALT_QUIZ_CHAPTERS = [
-  {key:"1", num:1, title:"Professionalism and Ethics", file:"alt-quizzes/bank/01-professionalism-and-ethics.md"},
+  {key:"1", num:1, title:"Professionalism and Ethics", file:"alt-quizzes/bank/01-professionalism-and-ethics.md", secCode:"PE"},
   {key:"2", num:2, title:"Professional Policing", file:"alt-quizzes/bank/02-professional-policing.md"},
   {key:"3", num:3, title:"Fitness, Wellness, and Stress Management", file:"alt-quizzes/bank/03-fitness-wellness-stress.md"},
   {key:"4", num:4, title:"TCOLE Rules", file:"alt-quizzes/bank/04-tcole-rules.md"},
   {key:"5", num:5, title:"Multiculturalism and Human Relations", file:"alt-quizzes/bank/05-multiculturalism-human-relations.md"},
   {key:"6", num:6, title:"Racial Profiling", file:"alt-quizzes/bank/06-racial-profiling.md"},
   {key:"7", num:7, title:"US/Texas Constitution, Bill of Rights, and CJ System", file:"alt-quizzes/bank/07-us-texas-constitution-cj-system.md"},
-  {key:"8-def", num:8, short:"Ch 8 (Defs)", title:"Penal Code — Definitions", file:"alt-quizzes/bank/08-penal-code-definitions.md"},
-  {key:"8-off", num:8, short:"Ch 8 (Offenses)", title:"Penal Code — Offenses & Classifications", file:"alt-quizzes/bank/08-penal-code-offenses.md"},
-  {key:"8-class", num:8, short:"Ch 8 (Classifications)", title:"Penal Code — Offense Classifications & Defenses", file:"alt-quizzes/bank/08-penal-code-classifications.md", linkCodes:true},
-  {key:"9", num:9, title:"Code of Criminal Procedure", file:"alt-quizzes/bank/09-code-of-criminal-procedure.md"},
+  {key:"8-def", num:8, short:"Ch 8 (Defs)", title:"Penal Code — Definitions", file:"alt-quizzes/bank/08-penal-code-definitions.md", secCode:"PE"},
+  {key:"8-off", num:8, short:"Ch 8 (Offenses)", title:"Penal Code — Offenses & Classifications", file:"alt-quizzes/bank/08-penal-code-offenses.md", secCode:"PE"},
+  {key:"8-class", num:8, short:"Ch 8 (Classifications)", title:"Penal Code — Offense Classifications & Defenses", file:"alt-quizzes/bank/08-penal-code-classifications.md", linkCodes:true, secCode:"PE"},
+  {key:"9", num:9, title:"Code of Criminal Procedure", file:"alt-quizzes/bank/09-code-of-criminal-procedure.md", secCode:"PE"},
   {key:"10", num:10, short:"Ch 10 (Arrest/Search/Seizure)", title:"Arrest, Search, Seizure", file:"alt-quizzes/bank/10-arrest-search-seizure.md"},
   {key:"10-cases", num:10, short:"Ch 10 (Case Law)", title:"Arrest, Search, Seizure — Case Law", file:"alt-quizzes/bank/10-case-law.md"},
-  {key:"11", num:11, title:"Asset Forfeiture", file:"alt-quizzes/bank/11-asset-forfeiture.md", linkCodes:true},
+  {key:"11", num:11, title:"Asset Forfeiture", file:"alt-quizzes/bank/11-asset-forfeiture.md", linkCodes:true, secCode:"CR"},
   {key:"13", num:13, title:"Consular Notification", file:"alt-quizzes/bank/13-consular-notification.md"},
   {key:"14", num:14, title:"Civil Process", file:"alt-quizzes/bank/14-civil-process.md"},
-  {key:"15", num:15, short:"Ch 15 (Main)", title:"Health and Safety Code — Controlled Substances Act", file:"alt-quizzes/bank/15-controlled-substances-act.md"},
-  {key:"15-scenarios", num:15, short:"Ch 15 (Penalty Group Scenarios)", title:"Health and Safety Code — Controlled Substances Act — Penalty Group Scenarios", file:"alt-quizzes/bank/15-penalty-group-scenarios.md"},
-  {key:"18-main", num:18, short:"Ch 18 (Main)", title:"Missing and Exploited Persons — Full Chapter Bank", file:"alt-quizzes/bank/18-missing-exploited-persons.md"},
-  {key:"18-off", num:18, short:"Ch 18 (Offenses)", title:"Missing and Exploited Persons — Offenses & Classifications", file:"alt-quizzes/bank/18-offense-penalties.md"},
-  {key:"19", num:19, title:"Child Safety Check Alert List", file:"alt-quizzes/bank/19-child-safety-check-alert-list.md"},
+  {key:"15", num:15, short:"Ch 15 (Main)", title:"Health and Safety Code — Controlled Substances Act", file:"alt-quizzes/bank/15-controlled-substances-act.md", secCode:"HS"},
+  {key:"15-scenarios", num:15, short:"Ch 15 (Penalty Group Scenarios)", title:"Health and Safety Code — Controlled Substances Act — Penalty Group Scenarios", file:"alt-quizzes/bank/15-penalty-group-scenarios.md", secCode:"HS"},
+  {key:"18-main", num:18, short:"Ch 18 (Main)", title:"Missing and Exploited Persons — Full Chapter Bank", file:"alt-quizzes/bank/18-missing-exploited-persons.md", secCode:"PE"},
+  {key:"18-off", num:18, short:"Ch 18 (Offenses)", title:"Missing and Exploited Persons — Offenses & Classifications", file:"alt-quizzes/bank/18-offense-penalties.md", secCode:"PE"},
+  {key:"19", num:19, title:"Child Safety Check Alert List", file:"alt-quizzes/bank/19-child-safety-check-alert-list.md", secCode:"FA"},
   {key:"20", num:20, title:"Victims of Crime", file:"alt-quizzes/bank/20-victims-of-crime.md"},
-  {key:"21", num:21, title:"Human Trafficking", file:"alt-quizzes/bank/21-human-trafficking.md"},
-  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md", sourceHeader:true},
-  {key:"22-main", num:22, short:"Ch 22 (Main)", title:"Traffic Code and Crash Investigations — Full Chapter Bank (Days 1-9)", file:"alt-quizzes/bank/22-main.md"},
-  {key:"22-off", num:22, short:"Ch 22 (Offenses)", title:"Traffic Code and Crash Investigations — Offenses & Classifications", file:"alt-quizzes/bank/22-offense-penalties.md"},
-  {key:"22-crash-coding", num:22, short:"Ch 22 (Crash Report Coding)", title:"Traffic Code and Crash Investigations — CR-3 Crash Report Coding (CR-3CS / CR-80 / CR-100)", file:"alt-quizzes/bank/22-crash-report-coding.md"},
-  {key:"22-plates-temp-tags", num:22, short:"Ch 22 (Plates/Temp Tags)", title:"Traffic Code and Crash Investigations — License Plates & Temporary Tags (Fake Plates, HB 718)", file:"alt-quizzes/bank/22-plates-temp-tags.md"},
-  {key:"22-lighting-fmvss108", num:22, short:"Ch 22 (Lighting/FMVSS 108)", title:"Traffic Code and Crash Investigations — Vehicle Lighting & FMVSS 108 (THP-68)", file:"alt-quizzes/bank/22-lighting-fmvss108.md"},
+  {key:"21", num:21, title:"Human Trafficking", file:"alt-quizzes/bank/21-human-trafficking.md", secCode:"PE"},
+  {key:"22-term-id", num:22, short:"Ch 22 (Term ID)", title:"Traffic Code and Crash Investigations — Term Identification (Fill-in-the-Blank)", file:"alt-quizzes/bank/22-term-identification.md", sourceHeader:true, secCode:"TN"},
+  {key:"22-main", num:22, short:"Ch 22 (Main)", title:"Traffic Code and Crash Investigations — Full Chapter Bank (Days 1-9)", file:"alt-quizzes/bank/22-main.md", secCode:"TN"},
+  {key:"22-off", num:22, short:"Ch 22 (Offenses)", title:"Traffic Code and Crash Investigations — Offenses & Classifications", file:"alt-quizzes/bank/22-offense-penalties.md", secCode:"TN"},
+  {key:"22-crash-coding", num:22, short:"Ch 22 (Crash Report Coding)", title:"Traffic Code and Crash Investigations — CR-3 Crash Report Coding (CR-3CS / CR-80 / CR-100)", file:"alt-quizzes/bank/22-crash-report-coding.md", secCode:"TN"},
+  {key:"22-plates-temp-tags", num:22, short:"Ch 22 (Plates/Temp Tags)", title:"Traffic Code and Crash Investigations — License Plates & Temporary Tags (Fake Plates, HB 718)", file:"alt-quizzes/bank/22-plates-temp-tags.md", secCode:"TN"},
+  {key:"22-lighting-fmvss108", num:22, short:"Ch 22 (Lighting/FMVSS 108)", title:"Traffic Code and Crash Investigations — Vehicle Lighting & FMVSS 108 (THP-68)", file:"alt-quizzes/bank/22-lighting-fmvss108.md", secCode:"TN"},
   {key:"24", num:24, title:"Written Communication", file:"alt-quizzes/bank/24-written-communication.md"},
   {key:"25", num:25, title:"Verbal Communication", file:"alt-quizzes/bank/25-verbal-communication.md"},
-  {key:"28", num:28, title:"Use of Force Theory", file:"alt-quizzes/bank/28-use-of-force-theory.md"},
-  {key:"29", num:29, title:"Crisis Intervention Training", file:"alt-quizzes/bank/29-crisis-intervention-training.md", linkCodes:true},
+  {key:"28", num:28, title:"Use of Force Theory", file:"alt-quizzes/bank/28-use-of-force-theory.md", secCode:"PE"},
+  {key:"29", num:29, title:"Crisis Intervention Training", file:"alt-quizzes/bank/29-crisis-intervention-training.md", linkCodes:true, secCode:"HS"},
   {key:"30", num:30, title:"Traumatic Brain Injury", file:"alt-quizzes/bank/30-traumatic-brain-injury.md"},
   {key:"32", num:32, title:"Criminal Investigations", file:"alt-quizzes/bank/32-criminal-investigations.md", linkCodes:true},
-  {key:"33-jjc", num:33, short:"Ch 33 (Juvenile Justice Code)", title:"Juvenile Offenders — Juvenile Justice Code & Procedure", file:"alt-quizzes/bank/33-juvenile-justice-code.md", linkCodes:true},
+  {key:"33-jjc", num:33, short:"Ch 33 (Juvenile Justice Code)", title:"Juvenile Offenders — Juvenile Justice Code & Procedure", file:"alt-quizzes/bank/33-juvenile-justice-code.md", linkCodes:true, secCode:"FA"},
   {key:"33-mcg", num:33, short:"Ch 33 (Missing Children/Gangs)", title:"Juvenile Offenders — Missing Children, AMBER Alert & Gang Involvement", file:"alt-quizzes/bank/33-missing-children-and-gangs.md", linkCodes:true},
-  {key:"33-ikc", num:33, short:"Ch 33 (Instructor Knowledge Checks)", title:"Juvenile Offenders — Instructor Knowledge Check Bank", file:"alt-quizzes/bank/33-instructor-knowledge-checks.md", linkCodes:true},
+  {key:"33-ikc", num:33, short:"Ch 33 (Instructor Knowledge Checks)", title:"Juvenile Offenders — Instructor Knowledge Check Bank", file:"alt-quizzes/bank/33-instructor-knowledge-checks.md", linkCodes:true, secCode:"FA"},
   {key:"37", num:37, title:"Civilian Interaction Training", file:"alt-quizzes/bank/37-civilian-interaction-training.md"},
   {key:"case-law", num:0, short:"Case Law", title:"Case Law (Course List)", file:"alt-quizzes/bank/case-law.md"}
 ];
@@ -242,20 +242,26 @@ const TOTAL_OVERRIDE_KEY = 'altquiz_total_override_v1';
 function escapeHtml(s){
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
-// Statute citations in explanations/sources link to codes.html for banks flagged linkCodes:true
+// Statute citations in explanations/sources link to codes.html (all banks unless flagged linkCodes:false).
+// secCode = the bank's main code, used for citations that don't name their code ("§36.02", "under 481.112").
 // (pilot). See assets/code-links.js.
 function codeLinksOn(q){
   const key = q.bankKey || (activeChapter && activeChapter.key);
   const ch = ALT_QUIZ_CHAPTERS.find(c => c.key === key);
-  return !!(ch && ch.linkCodes && window.CodeLinks);
+  return !!(ch && ch.linkCodes !== false && window.CodeLinks);
+}
+function codeLinkOpts(q){
+  const key = q.bankKey || (activeChapter && activeChapter.key);
+  const ch = ALT_QUIZ_CHAPTERS.find(c => c.key === key);
+  return {context: true, secCode: (ch && ch.secCode) || null};
 }
 function explHtml(q){
   const h = inlineMd(q.explanation || '');
-  return codeLinksOn(q) ? CodeLinks.linkify(h) : h;
+  return codeLinksOn(q) ? CodeLinks.linkify(h, codeLinkOpts(q)) : h;
 }
 function srcHtml(q){
   const h = escapeHtml(q.source || '');
-  return codeLinksOn(q) ? CodeLinks.linkify(h) : h;
+  return codeLinksOn(q) ? CodeLinks.linkify(h, codeLinkOpts(q)) : h;
 }
 function inlineMd(s){
   let out = escapeHtml(s);
