@@ -42,6 +42,13 @@
   "sections": 1623
  },
  {
+  "code": "OC",
+  "name": "Occupations Code",
+  "asOf": "2026-10-03",
+  "chapters": 214,
+  "sections": 7010
+ },
+ {
   "code": "PE",
   "name": "Penal Code",
   "asOf": "2026-09-29",

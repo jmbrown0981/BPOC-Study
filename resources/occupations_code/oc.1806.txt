@@ -1,0 +1,210 @@
+OCCUPATIONS CODE
+TITLE 11. REGULATION OF SALES AND SOLICITATION
+CHAPTER 1806.  RESIDENTIAL SOLAR RETAILERS
+
+SUBCHAPTER A.  GENERAL PROVISIONS
+
+      Sec. 1806.001.  SHORT TITLE.  This chapter may be cited as the Residential Solar Retailer Regulatory Act.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.002.  GENERAL DEFINITIONS.  In this chapter:
+            (1)  "Commission" means the Texas Commission of Licensing and Regulation.
+            (2)  "Department" means the Texas Department of Licensing and Regulation.
+            (3)  "Electric cooperative" has the meaning assigned by Section 11.003, Utilities Code.
+            (4)  "Electrical contractor" means a person licensed as an electrical contractor under Chapter 1305.
+            (5)  "Executive director" means the executive director of the department.
+            (6)  "Municipally owned utility" has the meaning assigned by Section 11.003, Utilities Code.
+            (7)  "Residential solar energy system" means a solar energy system intended or designed primarily for family, personal, or household use.
+            (8)  "Residential solar retail" means:
+                  (A)  the sale or lease of, or an offer to sell or lease, a residential solar energy system; or
+                  (B)  a transaction involving any combination of the acts described by Paragraph (A).
+            (9)  "Solar energy system" means a system or configuration of solar energy devices that collects and uses solar energy to generate electricity.
+            (10)  "Solar retailer" means a person who is registered under this chapter as a solar retailer.
+            (11)  "Solar salesperson" means an individual who is registered under this chapter as a solar salesperson.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.003.  DEFINITION OF CONTROLLING PERSON.  (a) In this section, "business entity" means a corporation, business trust, estate, trust, partnership, including a limited partnership, association, or any other legal entity, regardless of whether the entity is incorporated in this state.
+      (b)  In this chapter, "controlling person" means an individual who:
+            (1)  has direct or indirect control of at least 25 percent of the voting securities of a business entity;
+            (2)  has the authority to set policy and direct the management of a business entity;
+            (3)  is the president, the secretary, or a director of a business entity; or
+            (4)  is a general partner of a partnership, including a limited partnership.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.004.  LIMITED APPLICABILITY TO ELECTRICAL CONTRACTORS.  (a) If an electrical contractor employs an individual to engage in residential solar retail on behalf of the electrical contractor, the electrical contractor is exempt from the registration and insurance requirements of this chapter applicable to a solar retailer, except that an agreement in which the electrical contractor is the seller or lessor is subject to Sections 1806.155 and 1806.156.
+      (b)  If an individual is employed by an electrical contractor to engage in residential solar retail on behalf of the electrical contractor, the individual is exempt from the registration requirements of this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.005.  APPLICABILITY.  (a) This chapter does not apply to:
+            (1)  except as provided by Subsection (b), a written agreement:
+                  (A)  entered into in this state for the sale or lease of a residential solar energy system; and
+                  (B)  pertaining to a residential property located outside this state; or
+            (2)  a solar energy system:
+                  (A)  intended:
+                        (i)  for temporary or emergency use; or
+                        (ii)  to provide power to a single appliance;
+                  (B)  that:
+                        (i)  if combined with other systems that produce electricity, produces in combination with the other systems a total peak output power of less than one kilowatt; or
+                        (ii)  if not combined with other systems that produce electricity, is designed to produce a peak output power of less than one kilowatt; or
+                  (C)  sold or leased:
+                        (i)  for commercial purposes, including a solar energy system installed on the premises of a nonresidential property;
+                        (ii)  to provide power to a multifamily dwelling that exceeds four dwelling units or stories;
+                        (iii)  before September 1, 2025; or
+                        (iv)  in connection with new residential construction.
+      (b)  This chapter applies to any residential solar retail occurring in this state in connection with an agreement described by Subsection (a)(1).
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.006.  PREEMPTION.  To the extent of any conflict between this chapter and any of the following laws, this chapter prevails over:
+            (1)  a municipal ordinance regulating the same conduct as this chapter; or
+            (2)  Chapter 115 or 601, Business & Commerce Code.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER B.  POWERS AND DUTIES
+
+      Sec. 1806.051.  GENERAL POWERS AND DUTIES.  (a) The department shall administer and enforce this chapter.
+      (b)  The commission shall adopt rules necessary to administer and enforce this chapter, including:
+            (1)  in addition to any practice prohibited or restricted by this chapter, prohibiting or restricting any specific unfair, deceptive, or misleading practices related to residential solar retail and specifying those practices;
+            (2)  requiring a solar retailer or solar salesperson to provide disclosures or educational materials when selling or leasing, or offering to sell or lease, a residential solar energy system and specifying the form and format of those disclosures;
+            (3)  regulating the form and format of an agreement for the sale or lease of a residential solar energy system;
+            (4)  establishing insurance requirements for solar retailers; and
+            (5)  establishing continuing education requirements as a prerequisite to renew a solar salesperson registration under this chapter.
+      (c)  The commission shall consult the Office of Consumer Credit Commissioner in adopting rules described by Subsections (b)(2) and (3) to ensure compliance with federal and state law governing financial transactions, including the Truth in Lending Act (15 U.S.C. Section 1601 et seq.).
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.052.  FEES.  The commission shall establish and collect reasonable and necessary fees in amounts sufficient to cover the costs of:
+            (1)  administering this chapter; and
+            (2)  any other activity or function necessary for effective regulation under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.053.  EDUCATIONAL MATERIALS.  (a) The Public Utility Commission of Texas shall develop, in consultation with the department and the office of the attorney general, educational materials that inform consumers of the consumers' rights and remedies related to the purchase or lease of residential solar energy systems under this chapter and other applicable laws.
+      (b)  The commission by rule may require solar retailers and solar salespersons when engaging in residential solar retail to provide solicited persons with the educational materials developed under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER C.  REGISTRATION
+
+      Sec. 1806.101.  REGISTRATION REQUIRED: SOLAR SALESPERSON.  A person may not engage in residential solar retail for compensation unless the person:
+            (1)  engages in residential solar retail on behalf of a solar retailer; and
+            (2)  is registered as a solar salesperson under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.102.  REGISTRATION REQUIRED: SOLAR RETAILER.  A person may not employ or otherwise contract for the services of an individual to engage in residential solar retail on behalf of the person unless the person is registered as a solar retailer.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.103.  ELIGIBILITY FOR REGISTRATION.  (a) To be eligible for a registration under this chapter, a person must:
+            (1)  submit an application to the department;
+            (2)  pay any required fees; and
+            (3)  meet the eligibility requirements of this chapter and of rules adopted under this chapter.
+      (b)  To be eligible to register as a solar salesperson, the applicant must be an individual.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.104.  SOLAR RETAILER APPLICATION.  An application to register as a solar retailer must include:
+            (1)  if the solar retailer is an entity, a list of each controlling person of the solar retailer;
+            (2)  the name and registration number of each solar salesperson who engages in residential solar retail on behalf of the solar retailer; and
+            (3)  evidence satisfactory to the department that the applicant has insurance meeting the requirements established by commission rule.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.105.  CRIMINAL HISTORY RECORD INFORMATION CHECK.  The department may conduct a criminal history record information check of each applicant or, if applicable, any controlling person of an applicant for a registration under this chapter using information:
+            (1)  provided by the applicant; and
+            (2)  made available to the department by the Department of Public Safety and any other criminal justice agency under Chapter 411, Government Code.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.106.  EXEMPTION FROM CONTINUING EDUCATION.  Notwithstanding Section 51.405 or any other provision of this chapter, a solar retailer may not be required to complete continuing education to renew the solar retailer's registration under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER D.  PRACTICE BY REGISTRANTS
+
+      Sec. 1806.151.  NOTICE TO DEPARTMENT OF SOLAR SALESPERSONS AUTHORIZED TO ENGAGE IN RESIDENTIAL SOLAR RETAIL.  A solar retailer shall promptly notify the department in a manner prescribed by the department of:
+            (1)  each solar salesperson authorized to engage in residential solar retail on behalf of the solar retailer; and
+            (2)  any change in an authorization described by Subdivision (1).
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.152.  SUPERVISION REQUIRED.  (a) A solar retailer shall provide reasonable supervision to each solar salesperson authorized to engage in residential solar retail on behalf of the solar retailer, including making reasonable efforts to correct any violation of this chapter or a rule adopted under this chapter that the solar retailer is aware of or of which a reasonable person under the same circumstances would be aware.
+      (b)  A solar retailer is responsible for any violation described by Subsection (a) committed by a solar salesperson authorized to engage in residential solar retail on behalf of the solar retailer.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.153.  CODE OF CONDUCT; COMPLIANCE WITH OTHER LAW.  A solar retailer and a solar salesperson shall comply with:
+            (1)  any code of conduct adopted by commission rule governing solar retailers or solar salespersons, as applicable;
+            (2)  Subchapter E, Chapter 17, Business & Commerce Code;
+            (3)  Chapter 115, Business & Commerce Code, as if the solar retailer or solar salesperson, as applicable, were a seller or lessor under that chapter; and
+            (4)  the Truth in Lending Act (15 U.S.C. Section 1601 et seq.) and applicable state laws governing financial transactions by providing any disclosure required by those laws.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.154.  REGISTRATION INFORMATION.  (a) On request by the department or a person to whom a solar retailer or solar salesperson has offered to sell or lease, or has sold or leased, a residential solar energy system, the solar retailer or solar salesperson, as applicable, shall provide the department or person with the retailer's or salesperson's name and registration number.
+      (b)  A solar retailer shall ensure that each agreement for the sale or lease of a residential solar energy system by the retailer includes the name and registration number of the retailer and the solar salesperson involved in the transaction.
+      (c)  An electrical contractor or individual acting on behalf of an electrical contractor shall provide the electrical contractor's name and license number under the same circumstances as a solar retailer or solar salesperson is required to provide the retailer's or salesperson's name and number under this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.155.  REQUIRED CONTRACT PROVISIONS.  (a) If the sale or lease of a residential solar energy system involves the installation of the system at a person's residence, the sale or lease agreement must:
+            (1)  provide that the installation of the residential solar energy system will be performed by an electrical contractor;
+            (2)  conspicuously state the name and license number of the electrical contractor who will perform the installation described by Subdivision (1); and
+            (3)  provide that the solar retailer or electrical contractor, as applicable, will obtain:
+                  (A)  any permit required by a government entity for the installation described by Subdivision (1);
+                  (B)  if Section 39.554 or 39.916, Utilities Code, applies, the approval by the electric utility serving the person's residence of the interconnection of the residential solar energy system; and
+                  (C)  if the person is a customer of an electric cooperative or a municipally owned utility, the cooperative's or utility's approval of the interconnection of the residential solar energy system.
+      (b)  The requirement under Subsection (a)(2) may be satisfied by providing a list of electrical contractors in the agreement from which one must be selected to perform the installation described by Subsection (a)(1).
+      (c)  If the sale or lease of a residential solar energy system involves a third-party lender that is affiliated with or referred by the solar retailer, the sale or lease agreement must include a provision requiring the third-party lender to cancel any accompanying loan made by the third-party lender to the buyer or lessee on the buyer's or lessee's cancellation of the agreement under Section 1806.156.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.156.  RIGHT TO CANCEL AGREEMENT.  (a) In this section, "business day" means a calendar day excluding Saturday, Sunday, or any legal holiday, as that term is defined by Section 662.021, Government Code.
+      (b)  Notwithstanding any other law, a solar retailer shall allow a buyer or lessee who enters into an agreement to purchase or lease a residential solar energy system to cancel the agreement without penalty or further obligation by providing written notice of the cancellation on or before the fifth business day after the date on which the agreement was executed by the buyer or lessee.
+      (c)  A solar retailer shall include in an agreement for the sale or lease of a residential solar energy system the last calendar date of the cancellation period prescribed by Subsection (b) and the mailing address or e-mail address for providing the notice of cancellation.
+      (d)  If the agreement does not contain the address for cancellation required by Subsection (c), the buyer or lessee may cancel the agreement during the period described by Subsection (b) by providing written notice of cancellation to the solar retailer by any reasonable method.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+SUBCHAPTER E.  ENFORCEMENT
+
+      Sec. 1806.201.  PROHIBITED ACTS.  A person may not:
+            (1)  intentionally, knowingly, or recklessly make a false, misleading, or deceptive oral or written statement to another person when engaging in residential solar retail;
+            (2)  falsely state or imply an affiliation with a public utility or government agency when engaging in residential solar retail;
+            (3)  fail to provide the disclosure statements or any educational materials as required by this chapter, by Chapter 115, Business & Commerce Code, or by commission rule when engaging in residential solar retail;
+            (4)  engage in residential solar retail at a residence in violation of posted signage indicating that soliciting is prohibited, unless otherwise directed by an occupant of the residence;
+            (5)  allow the installation of a residential solar energy system to be performed by a person who is not an electrical contractor;
+            (6)  make a material misrepresentation in an application submitted to the department under this chapter or in any other document submitted to the department under this chapter; or
+            (7)  violate, attempt to violate, or conspire to violate this chapter or a rule adopted under this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.202.  DENIAL OR REFUSAL TO RENEW.  The executive director may deny an application to register or refuse to renew a registration under this chapter if the applicant or, if applicable, a controlling person of the applicant has:
+            (1)  violated this chapter or a rule or order of the commission or executive director; or
+            (2)  had suspended or revoked, or has been otherwise formally disciplined in connection with, any authorization to practice an occupation or engage in a business that was issued by a licensing authority in this state or another state.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.203.  ADMINISTRATIVE PENALTY.  In imposing an administrative penalty under Subchapter F, Chapter 51, for a violation of Section 1806.201, the commission in determining the appropriate amount of the penalty may consider whether any individual over the age of 65 at the time of the prohibited conduct was harmed by the conduct.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.204.  WARNING LETTER.  (a) Before imposing an administrative penalty or sanction against a person under Chapter 51, the executive director may issue a warning letter directing a person to take corrective action regarding the violation that is the basis of the penalty or sanction.
+      (b)  In determining whether to issue a warning letter under Subsection (a), the executive director may consider any history of violations by the person, including whether the person complied with previous warning letters, and the person's efforts to correct the violation and prevent future violations.
+      (c)  A determination to issue a warning letter under this section is not a contested case under Chapter 2001, Government Code.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.205.  CEASE AND DESIST ORDER.  The executive director may issue a cease and desist order under Section 51.3513 to protect public health and safety.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.206.  AMOUNT OF CIVIL PENALTY.  (a) Notwithstanding Section 51.352 and except as provided by Subsection (b), the amount of a civil penalty imposed under Chapter 51 for a violation of this chapter or a rule adopted under this chapter may not exceed:
+            (1)  $2,500 for each violation; or
+            (2)  $50,000 in the aggregate for all violations of a similar nature.
+      (b)  In a proceeding imposing a civil penalty under Section 51.352 for a violation of this chapter or a rule adopted under this chapter, if the court finds that an individual over the age of 65 at the time of the violation was harmed by the violation, the amount of the civil penalty may not exceed:
+            (1)  $10,000 for each violation; or
+            (2)  $100,000 in the aggregate for all violations of a similar nature.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.207.  AGREEMENT CANCELLATION AND REFUND.  (a) Subject to Subsection (b), the commission or executive director may, after notice and a hearing and after finding that a violation of this chapter or a rule adopted under this chapter has occurred, order the cancellation of an agreement for the sale or lease of a residential solar energy system and the refund of any amount paid under the agreement.
+      (b)  The amount of a refund ordered under this section may not exceed the amounts paid under the agreement.
+      (c)  This section does not authorize the executive director or commission to impose or collect penalties, fines, or other damages, except that a proceeding under this section may be combined with a proceeding to impose an administrative penalty or sanction by the department.
+      (d)  A proceeding under this section is a contested case under Chapter 2001, Government Code.
+      (e)  This section does not prohibit an injured party who was refunded money under this section from bringing an action in a court with jurisdiction to collect damages, other than the refunded money, or obtain equitable relief under other applicable law.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+      Sec. 1806.208.  VIOLATION BY ELECTRICAL CONTRACTOR.  An electrical contractor who violates this chapter or a rule adopted under this chapter is subject to an administrative penalty or sanction or any other enforcement provision under Chapter 1305, Chapter 51, and this chapter.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1062 (S.B. 1036), Sec. 1, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

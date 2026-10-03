@@ -11,7 +11,7 @@
   :root{
     --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
     --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667; --rule:#C9BF9F;
-    --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#A6472E;
+    --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#A6472E; --nav-h:56px;
   }
   *{box-sizing:border-box;}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
@@ -34,18 +34,27 @@
   .search-wrap input:focus{outline:2px solid var(--brass-light); background:rgba(255,255,255,0.12);}
   .search-icon{position:absolute; left:12px; top:50%; transform:translateY(-50%); opacity:0.7; font-size:14px;}
 
-  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  nav.chips::-webkit-scrollbar{display:none;}
+  nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
   .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; transition:all 0.15s ease;}
+  .chip:hover{border-color:var(--brass); color:var(--ink);}
   .chip.active{background:var(--navy); border-color:var(--navy); color:#F3EFE4;}
+  .chip.ghost{border-style:dashed;}
+  .chip-spacer{margin-left:auto; display:flex; gap:6px;}
 
   main{max-width:780px; margin:0 auto; padding:16px 14px 60px;}
   .search-results-head{font-size:12.5px; color:var(--ink-soft); margin:6px 0 14px;}
 
-  .cat-block{margin:26px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--navy);}
-  .cat-block h2{font-family:'IBM Plex Serif', serif; font-size:16px; margin:0; font-weight:600;}
+  .cat-card{margin:22px 0; border-radius:10px; border:1px solid var(--rule); scroll-margin-top:calc(var(--nav-h) + 10px);}
+  .cat-header{background:var(--navy); color:#EDE7D6; padding:11px 16px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:8px; border-radius:9px;}
+  .cat-header.open{border-radius:9px 9px 0 0;}
+  .cat-header:hover{background:var(--navy-2);}
+  .cat-header h2{font-family:'IBM Plex Serif', serif; font-size:15px; margin:0; font-weight:600; flex:1;}
+  .cat-header .toggle{font-size:1.05rem; opacity:0.85; transition:transform 0.2s; flex-shrink:0;}
+  .cat-header.open .toggle{transform:rotate(180deg);}
+  .cat-body{padding:14px 2px 2px; display:none; border-radius:0 0 9px 9px;}
+  .cat-body.open{display:block;}
 
-  .case-card{background:#fff; border:1px solid var(--rule); border-left-width:5px; border-left-color:var(--brass); border-radius:6px; padding:14px 16px 15px; margin-bottom:12px;}
+  .case-card{background:#fff; border:1px solid var(--rule); border-left-width:5px; border-left-color:var(--brass); border-radius:6px; padding:14px 16px 15px; margin-bottom:12px; scroll-margin-top:calc(var(--nav-h) + 10px);}
   .case-name{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:15px; line-height:1.3;}
   .case-cite{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); display:block; margin-top:2px;}
   .case-section-label{font-family:'IBM Plex Mono', monospace; font-size:9.5px; text-transform:uppercase; letter-spacing:0.07em; color:var(--brass); margin-top:11px; margin-bottom:4px; font-weight:600;}
@@ -53,6 +62,7 @@
   .case-le{font-size:12.5px; line-height:1.6; color:var(--navy-2); background:var(--paper-dim); border-radius:5px; padding:9px 11px; border-left:3px solid var(--green);}
   .case-le::before{content:"\1F6A8"; margin-right:6px; opacity:0.7;}
   .case-correction{font-size:11px; color:var(--rust); margin-top:6px; font-style:italic;}
+  .case-card:target{outline:2px solid var(--brass); box-shadow:0 0 0 3px rgba(176,139,60,0.18);}
 
   footer{text-align:center; padding:26px 14px 12px; font-size:11px; color:var(--ink-soft);}
 
@@ -203,34 +213,81 @@ const categories = [
   ]}
 ];
 
+/* ===================== MAJOR CATEGORY GROUPS ===================== */
+const groups = [
+  {id:"traffic-stops", label:"Traffic Stops", cats:["traffic-reason","stop-duration"]},
+  {id:"reasonable-suspicion", label:"Reasonable Suspicion & Detention", cats:["pc-rs","terry-stops","standing"]},
+  {id:"searches", label:"Searches", cats:["sia","odor-pc","plain-view","curtilage","exigent"]},
+  {id:"arrests", label:"Arrests", cats:["home-arrest","crash-suspicious-place"]},
+  {id:"interrogation-statements", label:"Interrogation & Statements", cats:["interrogation","garrity"]},
+  {id:"use-of-force", label:"Use of Force", cats:["deadly-force","force-general","restrained-subjects","canine"]},
+  {id:"civil-liability", label:"Civil & Administrative Liability", cats:["qualified-immunity","supervisory-liability","officer-rights","custody-integrity"]},
+  {id:"substantive-offenses", label:"Substantive Offenses", cats:["organized-crime"]}
+];
+
+function catGroup(catId){
+  const g = groups.find(g => g.cats.includes(catId));
+  return g ? g.id : null;
+}
+
 /* ===================== ENGINE ===================== */
+function slugify(s){
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function findCaseBySlug(slug){
+  for(const cat of categories){
+    for(const c of cat.cases){
+      if(slugify(c.name) === slug) return {case:c, cat:cat};
+    }
+  }
+  return null;
+}
+
 function renderChips(){
   const wrap = document.getElementById('catChips');
+  wrap.innerHTML = '';
   const allChip = document.createElement('button');
   allChip.className = 'chip active';
   allChip.textContent = 'All Cases';
-  allChip.dataset.cat = 'all';
+  allChip.dataset.group = 'all';
   wrap.appendChild(allChip);
-  categories.forEach(cat => {
+  groups.forEach(g => {
     const b = document.createElement('button');
     b.className = 'chip';
-    b.textContent = cat.label;
-    b.dataset.cat = cat.id;
+    b.textContent = g.label;
+    b.dataset.group = g.id;
     wrap.appendChild(b);
   });
-  wrap.querySelectorAll('.chip').forEach(chip => {
+  const spacer = document.createElement('span');
+  spacer.className = 'chip-spacer';
+  const expandBtn = document.createElement('button');
+  expandBtn.type = 'button';
+  expandBtn.className = 'chip ghost';
+  expandBtn.textContent = 'Expand All';
+  expandBtn.addEventListener('click', expandAllCats);
+  const collapseBtn = document.createElement('button');
+  collapseBtn.type = 'button';
+  collapseBtn.className = 'chip ghost';
+  collapseBtn.textContent = 'Collapse All';
+  collapseBtn.addEventListener('click', collapseAllCats);
+  spacer.appendChild(expandBtn);
+  spacer.appendChild(collapseBtn);
+  wrap.appendChild(spacer);
+
+  wrap.querySelectorAll('.chip[data-group]').forEach(chip => {
     chip.addEventListener('click', () => {
       document.getElementById('caseSearch').value = '';
-      wrap.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      wrap.querySelectorAll('.chip[data-group]').forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-      history.replaceState(null, '', chip.dataset.cat === 'all' ? location.pathname : ('#' + chip.dataset.cat));
-      renderCategories(chip.dataset.cat);
+      history.replaceState(null, '', chip.dataset.group === 'all' ? location.pathname : ('#' + chip.dataset.group));
+      renderCategories(chip.dataset.group);
     });
   });
 }
 
 function caseCardHtml(c){
-  return `<div class="case-card">
+  return `<div class="case-card" id="case-${slugify(c.name)}">
     <span class="case-name">${c.name}</span>
     <span class="case-cite">${c.cite} (${c.year})</span>
     <div class="case-section-label">Summary</div>
@@ -241,20 +298,51 @@ function caseCardHtml(c){
   </div>`;
 }
 
-function renderCategories(filterId){
+function renderCategories(filterGroup){
   const main = document.getElementById('main');
-  const cats = filterId === 'all' ? categories : categories.filter(c => c.id === filterId);
+  const cats = filterGroup === 'all' ? categories : categories.filter(c => catGroup(c.id) === filterGroup);
+  const openAll = filterGroup !== 'all';
   main.innerHTML = cats.map(cat => `
-    <div class="cat-block"><h2>${cat.label}</h2></div>
-    ${cat.cases.map(caseCardHtml).join('')}
+    <div class="cat-card" id="cat-${cat.id}">
+      <div class="cat-header${openAll ? ' open' : ''}" onclick="toggleCat(this)">
+        <h2>${cat.label}</h2>
+        <span class="toggle">&#9662;</span>
+      </div>
+      <div class="cat-body${openAll ? ' open' : ''}">
+        ${cat.cases.map(caseCardHtml).join('')}
+      </div>
+    </div>
   `).join('');
+}
+
+function syncNavHeight(){
+  const nav = document.getElementById('catChips');
+  if(nav) document.documentElement.style.setProperty('--nav-h', nav.getBoundingClientRect().height + 'px');
+}
+window.addEventListener('resize', syncNavHeight);
+
+function toggleCat(hdr){
+  hdr.classList.toggle('open');
+  hdr.nextElementSibling.classList.toggle('open');
+}
+function expandAllCats(){
+  document.querySelectorAll('.cat-header').forEach(h => {
+    h.classList.add('open');
+    h.nextElementSibling.classList.add('open');
+  });
+}
+function collapseAllCats(){
+  document.querySelectorAll('.cat-header').forEach(h => {
+    h.classList.remove('open');
+    h.nextElementSibling.classList.remove('open');
+  });
 }
 
 function runSearch(query){
   const q = query.trim().toLowerCase();
   if(!q){
     const active = document.querySelector('.chip.active');
-    renderCategories(active ? active.dataset.cat : 'all');
+    renderCategories(active ? active.dataset.group : 'all');
     return;
   }
   let results = [];
@@ -274,11 +362,35 @@ document.getElementById('caseSearch').addEventListener('input', (e) => runSearch
 renderChips();
 (function(){
   const initial = (location.hash || '').replace('#', '');
-  const match = initial && categories.some(c => c.id === initial) ? initial : 'all';
-  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === match));
-  renderCategories(match);
-  if(match !== 'all'){
-    document.querySelector('.chip.active')?.scrollIntoView({inline:'center', block:'nearest'});
+  let activeGroup = 'all';
+  let focusCaseSlug = null;
+  let focusCatId = null;
+
+  if(initial){
+    if(groups.some(g => g.id === initial)){
+      activeGroup = initial;
+    } else if(categories.some(c => c.id === initial)){
+      focusCatId = initial;
+      activeGroup = catGroup(initial) || 'all';
+    } else if(initial.indexOf('case-') === 0){
+      const found = findCaseBySlug(initial.slice(5));
+      if(found){
+        focusCaseSlug = initial;
+        focusCatId = found.cat.id;
+        activeGroup = catGroup(found.cat.id) || 'all';
+      }
+    }
+  }
+
+  document.querySelectorAll('.chip[data-group]').forEach(c => c.classList.toggle('active', c.dataset.group === activeGroup));
+  syncNavHeight();
+  renderCategories(activeGroup);
+
+  if(focusCaseSlug || focusCatId){
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const target = focusCaseSlug ? document.getElementById(focusCaseSlug) : document.getElementById('cat-' + focusCatId);
+      target?.scrollIntoView({block:'start'});
+    }));
   }
 })();
 </script>

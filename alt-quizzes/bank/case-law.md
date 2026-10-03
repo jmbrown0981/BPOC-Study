@@ -4619,3 +4619,7 @@ Under Kentucky v. King, the exigent-circumstances exception is defeated only whe
 **Explanation:** This is King's precise limiting principle — the disqualifying conduct has to be unlawful in itself (or an unlawful threat), not merely conduct that happens to prompt someone inside to react by destroying evidence.
 
 ---
+
+#### Term ID
+Objectively reasonable | Objective reasonableness - means, according to Graham v. Connor, 490 U.S. 386 (1989), an officer cannot justify use of force actions based on a hunch or by showing that they acted in good faith. Instead, they must carefully articulate facts and events that that would show that a different, reasonable officer would have reacted similarly in the same situation. Facts and events should include the severity of the crime, any threat posed by the individual to the safety of officers or other people, and whether the individual is trying to flee or resist arrest.
+
