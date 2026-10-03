@@ -656,7 +656,7 @@ function renderWeightPanelHtml(config){
       </div>
       ${rows}
       <div class="wp-actions">
-        <button class="wp-toggle-btn" id="resetAllWeightsBtn" type="button">Reset all to file defaults</button>
+        <button class="wp-toggle-btn" id="resetAllWeightsBtn" type="button">Reset all percentages to 0</button>
         <span class="wr-meta">${Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)} custom value${(Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)) === 1 ? '' : 's'} active</span>
       </div>
     </div>
