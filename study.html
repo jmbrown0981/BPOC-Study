@@ -63,6 +63,8 @@
     font-family:'IBM Plex Serif',serif; font-weight:600; font-size:16px; color:var(--navy);
     margin:26px 0 8px; padding-top:14px; border-top:1px solid var(--paper-dim); scroll-margin-top:calc(var(--chips-h, 0px) + 45px);
   }
+  .chapter-content h2.lo-flash{animation:lo-flash 2.2s ease-out;}
+  @keyframes lo-flash{0%,35%{background:rgba(176,139,60,.22); box-shadow:0 0 0 6px rgba(176,139,60,.22);} 100%{background:transparent; box-shadow:0 0 0 6px transparent;}}
   .chapter-content h2:first-child{margin-top:0; padding-top:0; border-top:none;}
   .chapter-content h3{font-family:'IBM Plex Serif',serif; font-weight:600; font-size:14px; color:var(--ink-soft); margin:16px 0 6px;}
   .chapter-content p{margin:8px 0;}
@@ -136,6 +138,9 @@ const mdCache = new Map();      // num -> raw markdown text
 const renderCache = new Map();  // num -> rendered HTML string
 let allLoadedForSearch = false;
 let pendingScrollTerm = null;   // term to highlight+scroll to after next chapter render
+// LO deep link (study.html?ch=10#lo-10-3, used by quiz explanations via assets/ref-links.js),
+// applied once after the chapter renders.
+let pendingHash = (location.hash || '').slice(1);
 
 function markedAvailable(){
   return typeof window.marked !== 'undefined' && (typeof window.marked.parse === 'function' || typeof window.marked === 'function');
@@ -230,6 +235,10 @@ async function renderChapter(){
       highlightAndScroll(contentEl, pendingScrollTerm);
       pendingScrollTerm = null;
     }
+    if(pendingHash){
+      scrollToAnchor(pendingHash);
+      pendingHash = '';
+    }
   }catch(err){
     document.getElementById('chapterLoading').style.display = 'none';
     const contentEl = document.getElementById('chapterContent');
@@ -237,6 +246,35 @@ async function renderChapter(){
     contentEl.innerHTML = `<div class="warn-box"><b>Couldn't load chapter text.</b> (${escapeHtml(err.message)}) Try the <a href="${PDF_DIR}${encodeURIComponent(meta.pdfFile)}" target="_blank" rel="noopener">original PDF</a> instead.</div>`;
   }
 }
+
+/* ---------- jump to an LO heading (#lo-10-3) ---------- */
+// Falls back to the top of the chapter if the LO heading doesn't exist.
+function scrollToAnchor(id){
+  const el = document.getElementById(id);
+  if(!el || !document.getElementById('chapterContent').contains(el)) return;
+  requestAnimationFrame(()=>{
+    updateChipsHeight();
+    el.scrollIntoView({block:'start'});
+    el.classList.remove('lo-flash'); void el.offsetWidth; el.classList.add('lo-flash');
+  });
+}
+// A quiz link that reuses this tab for another LO in the same chapter changes only the hash.
+window.addEventListener('hashchange', ()=>{
+  const id = (location.hash || '').slice(1);
+  const m = id.match(/^lo-(\d+)-/);
+  const num = m ? parseInt(m[1], 10) : null;
+  const content = document.getElementById('chapterContent');
+  const showing = content && content.style.display !== 'none' && document.getElementById(id);
+  if(num && chapterMeta(num) && (num !== activeChapter || !showing)){
+    // another chapter (or search results) is showing since the URL was set: render the LO's chapter
+    document.getElementById('searchInput').value = '';
+    activeChapter = num;
+    pendingHash = id;
+    renderChapter();
+  } else if(id){
+    scrollToAnchor(id);
+  }
+});
 
 /* ---------- highlight + scroll to a search term inside rendered content ---------- */
 function highlightAndScroll(container, term){

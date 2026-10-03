@@ -253,6 +253,21 @@ Rules for this shape:
 - Options are shuffled per question at render time; question order is shuffled per attempt.
 - No build step — edit the `.md`, refresh the page.
 
+## Automatic links in Explanation and Source
+
+Nothing needs to be marked up — these are linked when the quiz renders them, opening in a separate
+tab so the quiz in progress is kept:
+
+- Statute citations (`PC 22.01`, `CCP Art. 14.03`, `FC 51.02(a)`) → `codes.html` (`assets/code-links.js`).
+- `BPOC 10.3` → that LO's heading in `study.html` (`study.html?ch=10#lo-10-3`). Lists and ranges
+  (`BPOC 33.24/33.25`, `BPOC 20.1-20.11`, `BPOC 32.17 and 32.25`) link each number; `BPOC Chapter 24`
+  links the chapter. Write the number right after `BPOC` — `LO 10.3` and a bare `10.3` don't link.
+- Case names listed in `case-law.html` (`Terry v. Ohio`, also `U.S. v. Sokolow`, `Cruz v. Laramie`)
+  → that case's card. Data lives in `assets/case-law-data.js`; a case not in that list stays plain
+  text until it's added there. Both come from `assets/ref-links.js`.
+
+Options are never linked, so links can't give away an answer.
+
 ## Conventions to keep the bank maintainable
 
 - One `.md` file per BPOC chapter number, named `{2-digit chapter}-{slug}.md`.

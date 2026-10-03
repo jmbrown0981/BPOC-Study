@@ -1282,3 +1282,16 @@ A person sells $200 of marijuana from a car worth $60,000, and the State seeks t
 - [x] That forfeiting a $60,000 car for a $200 sale is grossly disproportional and violates the Eighth Amendment's Excessive Fines Clause
 
 **Explanation:** Proportionality is the key Excessive Fines question (BPOC 11.2): the amount seized must bear some relationship to the gravity of the offense. Timbs v. Indiana (2019) applied the clause to state forfeitures.
+
+---
+
+### Q92 — Term ID
+**LO:** 11.5 · **Source:** Merriam-Webster Dictionary
+
+**Answer:** Signatory
+
+"_________" means: a signer with another or others; especially: a government bound with others by a signed convention.
+
+**Explanation:** The term is not defined in the Asset Forfeiture chapter or the CCP section it references, but is defined as such in the Merriam-Webster dictionary.
+
+---

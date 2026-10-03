@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Peace Officer vs. Federal Special Investigator Powers | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: who-can-do-what matrix, yes/no marks, zone cards */
+table.matrix{width:100%; border-collapse:collapse; font-size:13px; margin:4px 0 10px;}
+table.matrix th{background:var(--navy); color:#fff; text-align:left; padding:7px 10px; font-weight:600; vertical-align:bottom;}
+table.matrix th small{display:block; font-weight:400; font-size:11px; color:#C8C0AA;}
+table.matrix td{padding:7px 10px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.45;}
+table.matrix tr:nth-child(even) td{background:var(--paper);}
+table.matrix td:first-child{width:30%; font-weight:600; color:var(--navy);}
+.y, .n, .m{display:inline-block; font-weight:700; font-size:12px; border-radius:6px; padding:1px 7px; margin-right:4px; white-space:nowrap;}
+.y{background:#E4EDE5; color:var(--green);}
+.n{background:#F6E3DC; color:var(--rust);}
+.m{background:#F3EAD2; color:#7a5800;}
+.cite{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); white-space:nowrap;}
+.zones{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:4px 0 10px;}
+.zone{border:1px solid var(--rule); border-radius:10px; padding:10px 12px; background:#fff; font-size:13px; line-height:1.45;}
+.zone .k{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass); display:block;}
+.zone h3{margin:2px 0 4px; font-family:'IBM Plex Serif',serif; font-size:14.5px; color:var(--navy);}
+.zone .ex{display:block; margin-top:5px; font-size:11.8px; color:var(--ink-soft); font-style:italic;}
+.zone.wide{grid-column:span 2;}
+.zone.navy{background:var(--navy); color:#EDE7D6; border-color:var(--navy);} .zone.navy h3{color:var(--brass-light);} .zone.navy .ex{color:#C8C0AA;}
+.shall{display:grid; grid-template-columns:1.3fr 1fr; gap:14px; margin:4px 0 10px;}
+.shall ol{margin:0; padding-left:1.3em;} .shall li{font-size:13.5px; margin-bottom:4px;}
+.scen{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:6px;}
+.scen .panel{font-size:13px;}
+.scen .panel h3{font-size:14px;}
+@media (max-width:900px){ .zones{grid-template-columns:1fr 1fr;} }
+@media (max-width:760px){
+  .zones, .shall, .scen{grid-template-columns:1fr;} .zone.wide{grid-column:auto;}
+  table.matrix, table.matrix tbody, table.matrix tr, table.matrix td{display:block; width:auto !important;}
+  table.matrix tr:first-child{display:none;}
+  table.matrix tr{border:1px solid var(--rule); border-radius:9px; margin-bottom:8px; overflow:hidden;}
+  table.matrix tr:nth-child(even) td{background:transparent;}
+  table.matrix td{border-bottom:none; padding:4px 12px;}
+  table.matrix td:first-child{padding-top:10px;}
+  table.matrix td:last-child{padding-bottom:10px;}
+  table.matrix td[data-l]:not(:first-child)::before{content:attr(data-l) ": "; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass); text-transform:uppercase; letter-spacing:0.05em;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Code of Criminal Procedure &middot; Slides</p>
+      <h1>Peace Officers vs. Federal Special Investigators — Powers in Texas</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 9.2&ndash;9.3 &mdash; what a Texas peace officer can do under state law that a federal agent can't, and where the two overlap. Follows the <a href="ccp-2a-001-002.html" style="color:var(--brass-light);">Arts. 2A.001 &amp; 2A.002 slides</a>.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== 1. SOURCES OF AUTHORITY ===================== -->
+<section class="slide" data-key="1" data-alias="sources" aria-label="1. Three sources of authority">
+  <div class="slide-head"><span class="sub-badge">1</span><div><p class="kicker">The framework</p><h2>Three sources of arrest authority under Texas law</h2></div></div>
+  <div class="slide-body">
+    <div class="cols three">
+      <div class="panel navy"><h3>Peace officer</h3>
+        <ul>
+          <li>On the Art. 2A.001 list (or made one by other law)</li>
+          <li>Penal Code definition: <span class="cite">PC 1.07(a)(36)</span></li>
+          <li>Has <b>duties</b> (Art. 2A.051) and the <b>full set of powers</b> the Code gives &ldquo;peace officers&rdquo;</li>
+        </ul></div>
+      <div class="panel tint"><h3>Federal special investigator</h3>
+        <ul>
+          <li>Listed in Art. 2A.002 &mdash; <b>expressly not</b> a peace officer</li>
+          <li>Penal Code definition: <span class="cite">PC 1.07(a)(46-b)</span></li>
+          <li>Has only the <b>specific powers</b> 2A.002 grants (usually felonies only, or only in certain places)</li>
+        </ul></div>
+      <div class="panel tint"><h3>Any person</h3>
+        <ul>
+          <li>Citizen's arrest, Art. 14.01(a)</li>
+          <li>Only for a <b>felony</b> or an <b>offense against the public peace</b> committed in the person's presence or view</li>
+          <li>Applies to everyone, including federal agents and off-duty officers</li>
+        </ul></div>
+    </div>
+    <div class="callout"><b>Two separate legal systems.</b> These slides cover <b>Texas</b> law only. A federal agent enforcing a <b>federal</b> crime acts under federal law, which 2A.002 neither grants nor limits.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; PC 1.07(a)(36), (46-b); CCP 14.01(a)</summary><div class="statute">
+    <p>PC 1.07(a)(36) "Peace officer" means a person elected, employed, or appointed as a peace officer under Article 2A.001, Code of Criminal Procedure, Section 51.212 or 51.214, Education Code, or other law.</p>
+    <p>PC 1.07(a)(46-b) "Federal special investigator" means a person described by Article 2A.002, Code of Criminal Procedure.</p>
+    <p>CCP Art. 14.01(a) A peace officer or any other person, may, without a warrant, arrest an offender when the offense is committed in his presence or within his view, if the offense is one classed as a felony or as an offense against the public peace.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 2. DUTIES ===================== -->
+<section class="slide" data-key="2" data-alias="duties" aria-label="2. Duties vs. powers">
+  <div class="slide-head"><span class="sub-badge">2</span><div><p class="kicker">&ldquo;Shall&rdquo; vs. &ldquo;may&rdquo;</p><h2>Peace officers have duties; special investigators have powers</h2></div></div>
+  <div class="slide-body">
+    <div class="shall">
+      <div class="panel navy"><h3>Art. 2A.051 &mdash; each peace officer SHALL:</h3>
+        <ol>
+          <li>Preserve the peace in their jurisdiction by all lawful means</li>
+          <li>Step in without a warrant to prevent or suppress crime, where the Code allows</li>
+          <li>Execute all lawful process issued to them by a magistrate or court</li>
+          <li>Notify a magistrate of offenses committed in their jurisdiction</li>
+          <li>Arrest without a warrant when the law allows, so the offender can be brought before a magistrate or court</li>
+          <li>Take possession of a child under Art. 63.00905(g)</li>
+          <li>Execute a Civil Commitment Office emergency detention order on request</li>
+        </ol></div>
+      <div>
+        <div class="panel tint" style="margin-bottom:10px;"><h3>Art. 2A.002 &mdash; special investigators &ldquo;HAVE THE POWERS&rdquo;</h3>The article grants powers of arrest, search, and seizure. It doesn't impose any of the 2A.051 duties. Texas law doesn't require a federal agent to keep the peace or serve state process.</div>
+        <div class="panel tint"><h3>Other mandatory duties (peace officers only)</h3>
+          <ul>
+            <li><b>Must arrest</b> for a protective-order violation committed in their presence <span class="cite">14.03(b)</span></li>
+            <li><b>Must stay at the scene</b> when needed to verify a protective-order or family-violence allegation <span class="cite">14.03(c)</span></li>
+          </ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 2A.051; 14.03(b)&ndash;(c)</summary><div class="statute">
+    <p>Art. 2A.051. GENERAL POWERS AND DUTIES OF PEACE OFFICERS. Each peace officer shall:</p>
+    <p class="ind1">(1) preserve the peace within the officer's jurisdiction using all lawful means;</p>
+    <p class="ind1">(2) in every case authorized by this code, interfere without a warrant to prevent or suppress crime;</p>
+    <p class="ind1">(3) execute all lawful process issued to the officer by a magistrate or court;</p>
+    <p class="ind1">(4) give notice to an appropriate magistrate of all offenses committed in the officer's jurisdiction, where the officer has good reason to believe there has been a violation of the penal law;</p>
+    <p class="ind1">(5) when authorized by law, arrest an offender without a warrant so the offender may be taken before the proper magistrate or court and be tried;</p>
+    <p class="ind1">(6) take possession of a child under Article 63.00905(g); and</p>
+    <p class="ind1">(7) on a request made by the Texas Civil Commitment Office, execute an emergency detention order issued by that office under Section 841.0837, Health and Safety Code.</p>
+    <p>Art. 14.03(b) A peace officer shall arrest, without a warrant, a person the peace officer has probable cause to believe has committed an offense under Section 25.07, Penal Code, if the offense is committed in the presence of the peace officer.</p>
+    <p>Art. 14.03(c) If reasonably necessary to verify an allegation of a violation of a protective order or of the commission of an offense involving family violence, a peace officer shall remain at the scene of the investigation to verify the allegation and to prevent the further commission of the violation or of family violence.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 3. WARRANTLESS ARREST ===================== -->
+<section class="slide" data-key="3" data-alias="warrantless-arrest" aria-label="3. Arrest without a warrant">
+  <div class="slide-head"><span class="sub-badge">3</span><div><p class="kicker">CCP Chapter 14 vs. Art. 2A.002(a)</p><h2>Arrest without a warrant</h2></div></div>
+  <div class="slide-body">
+    <table class="matrix">
+      <tr><th>Situation</th><th>Peace officer</th><th>Federal agent<small>2A.002(a): FBI, DEA, ATF&hellip;</small></th><th>Any person</th></tr>
+      <tr><td>Felony committed in view</td><td><span class="y">YES</span><span class="cite">14.01</span></td><td><span class="y">YES</span><span class="cite">2A.002(a)</span></td><td><span class="y">YES</span><span class="cite">14.01(a)</span></td></tr>
+      <tr><td>Offense against the public peace, in view</td><td><span class="y">YES</span><span class="cite">14.01</span></td><td><span class="m">ONLY AS &ldquo;ANY PERSON&rdquo;</span><span class="cite">14.01(a)</span></td><td><span class="y">YES</span><span class="cite">14.01(a)</span></td></tr>
+      <tr><td>Any other offense in view (e.g. Class C theft, traffic offenses)</td><td><span class="y">YES</span><span class="cite">14.01(b)</span></td><td><span class="n">NO</span> felonies only</td><td><span class="n">NO</span></td></tr>
+      <tr><td>Not in view, but with probable cause: family violence, assault with danger of more injury, protective-order violation, suspicious places, felony suspect about to escape</td><td><span class="y">YES</span><span class="cite">14.03(a), 14.04</span></td><td><span class="m">FELONIES ONLY</span> (2A.002 doesn't spell out the standard)</td><td><span class="n">NO</span></td></tr>
+      <tr><td>Cite and release for a Class C misdemeanor</td><td><span class="y">YES</span><span class="cite">14.06(b)</span></td><td><span class="n">NO</span></td><td><span class="n">NO</span></td></tr>
+      <tr><td>Outside their own jurisdiction</td><td><span class="m">LIMITED</span> felonies, Ch. 42/49 offenses, breach of peace in view; licensed sheriffs, constables, DA investigators, and city police: any offense in view, except rules-of-the-road traffic offenses (city police may arrest for those only in their own county) <span class="cite">14.03(d), (g)</span></td><td><span class="m">N/A</span> the felony power applies statewide</td><td><span class="m">SAME RULES EVERYWHERE</span></td></tr>
+    </table>
+    <div class="callout def">Federal agents with <b>broader</b> Texas powers (Secret Service on protective duty, federal property officers, National Park Service, Forest Service) are on slide 5.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 14.01, 14.03(a), (d), 14.04, 14.06(b) (excerpts)</summary><div class="statute">
+    <p>Art. 14.01(a) A peace officer or any other person, may, without a warrant, arrest an offender when the offense is committed in his presence or within his view, if the offense is one classed as a felony or as an offense against the public peace. (b) A peace officer may arrest an offender without a warrant for any offense committed in his presence or within his view.</p>
+    <p>Art. 14.03(a) Any peace officer may arrest, without warrant: (1) persons found in suspicious places and under circumstances which reasonably show that such persons have been guilty of some felony, violation of Title 9, Chapter 42, Penal Code, breach of the peace, or offense under Section 49.02, Penal Code, or threaten, or are about to commit some offense against the laws; (2) persons who the peace officer has probable cause to believe have committed an assault resulting in bodily injury to another person and the peace officer has probable cause to believe that there is danger of further bodily injury to that person; (3) persons who the peace officer has probable cause to believe have committed an offense defined by Section 25.07, Penal Code, if the offense is not committed in the presence of the peace officer; (4) persons who the peace officer has probable cause to believe have committed an offense involving family violence; &hellip;</p>
+    <p>Art. 14.03(d) A peace officer who is outside his jurisdiction may arrest, without warrant, a person who commits an offense within the officer's presence or view, if the offense is a felony, a violation of Chapter 42 or 49, Penal Code, or a breach of the peace. &hellip;</p>
+    <p>Art. 14.04. Where it is shown by satisfactory proof to a peace officer, upon the representation of a credible person, that a felony has been committed, and that the offender is about to escape, so that there is no time to procure a warrant, such peace officer may, without warrant, pursue and arrest the accused.</p>
+    <p>Art. 14.06(b) A peace officer who is charging a person, including a child, with committing an offense that is a Class C misdemeanor, other than an offense under Section 49.02, Penal Code, may, instead of taking the person before a magistrate, issue a citation to the person &hellip;</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 4. WARRANTS ===================== -->
+<section class="slide" data-key="4" data-alias="warrants" aria-label="4. Texas arrest and search warrants">
+  <div class="slide-head"><span class="sub-badge">4</span><div><p class="kicker">CCP Chapters 15 &amp; 18</p><h2>Texas warrants are addressed to peace officers</h2></div></div>
+  <div class="slide-body">
+    <div class="cols">
+      <div class="panel tint"><h3>Arrest warrants</h3>
+        <ul>
+          <li>Directed to &ldquo;a <b>peace officer</b> or some other person <b>specially named</b>&rdquo; <span class="cite">15.01</span></li>
+          <li>Warrants from a clerk or magistrate (other than a mayor) reach the whole state, and <b>any peace officer</b> holding one may execute it in <b>any county</b> <span class="cite">15.06</span></li>
+        </ul></div>
+      <div class="panel tint"><h3>Search warrants</h3>
+        <ul>
+          <li>Issued by a magistrate and &ldquo;directed to a <b>peace officer</b>&rdquo; <span class="cite">18.01(a)</span></li>
+          <li>The <b>peace officer</b> who receives it must execute it without delay and return it <span class="cite">18.06(a)</span></li>
+        </ul></div>
+    </div>
+    <div class="flow">
+      <div class="step hot"><b class="t">Peace officer</b>Can execute Texas arrest &amp; search warrants anywhere the warrant reaches</div>
+      <div class="arrow">vs</div>
+      <div class="step"><b class="t">Federal agent</b>Only <b>National Park Service</b> officers are expressly given power to execute Texas warrants, and only <b>inside</b> a national park or recreation area <span class="cite">2A.002(d)(2)(A)</span></div>
+    </div>
+    <div class="callout">Federal agents get <b>federal</b> warrants from federal judges for federal crimes. When a <b>Texas</b> warrant is needed, a Texas peace officer is the one it's addressed to (unless a magistrate names someone else in an arrest warrant under 15.01).</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 15.01, 15.06, 18.01(a), 18.06(a), 2A.002(d)(2)</summary><div class="statute">
+    <p>Art. 15.01. A "warrant of arrest" is a written order from a magistrate, directed to a peace officer or some other person specially named, commanding him to take the body of the person accused of an offense, to be dealt with according to law.</p>
+    <p>Art. 15.06. A warrant of arrest, issued by any county or district clerk, or by any magistrate (except mayors of an incorporated city or town), shall extend to any part of the State; and any peace officer to whom said warrant is directed, or into whose hands the same has been transferred, shall be authorized to execute the same in any county in this State.</p>
+    <p>Art. 18.01(a) A "search warrant" is a written order, issued by a magistrate and directed to a peace officer, commanding him to search for any property or thing and to seize the same and bring it before such magistrate &hellip;</p>
+    <p>Art. 18.06(a) A peace officer to whom a search warrant is delivered shall execute the warrant without delay and shall return the warrant to the proper magistrate.</p>
+    <p>Art. 2A.002(d)(2) [A commissioned law enforcement officer of the National Park Service has,] within the boundaries of a national park or national recreation area: (A) the power to execute any arrest warrant or search warrant issued under the laws of this state; and (B) the powers granted to a peace officer by Chapters 573 and 574, Health and Safety Code.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 5. BY PLACE & ROLE ===================== -->
+<section class="slide" data-key="5" data-alias="zones" aria-label="5. Federal powers by place and role">
+  <div class="slide-head"><span class="sub-badge">5</span><div><p class="kicker">Art. 2A.002(b)&ndash;(g)</p><h2>Where federal officers get broader Texas powers</h2></div></div>
+  <div class="slide-body">
+    <p class="lede">Outside the felony-only baseline in 2A.002(a), the broader grants depend on <b>where</b> the officer is or <b>what duty</b> they're on.</p>
+    <div class="zones">
+      <div class="zone navy wide"><span class="k">(a) BASELINE &middot; ANYWHERE</span><h3>18 federal investigative agencies</h3>Arrest, search &amp; seizure for Texas <b>felonies only</b>.<span class="ex">FBI, DEA, ATF, U.S. Marshals, Secret Service, ICE, IRS-CI, Postal Inspectors, and more</span></div>
+      <div class="zone"><span class="k">(g) ON PROTECTIVE DUTY</span><h3>Secret Service</h3>Adds Texas <b>misdemeanors</b> and any federal crime while protecting a protectee or investigating a threat.</div>
+      <div class="zone"><span class="k">(b) FEDERAL PROPERTY</span><h3>DHS property-protection officers</h3><b>Any</b> Texas offense, for duty protecting federal property and the people on it.<span class="ex">e.g. federal courthouses and office buildings</span></div>
+      <div class="zone"><span class="k">(d) NATIONAL PARKS &amp; REC. AREAS</span><h3>National Park Service</h3><b>Any</b> Texas offense committed in the park; execute Texas warrants; mental-health emergency detention powers.<span class="ex">e.g. Big Bend National Park, Lake Meredith and Amistad National Recreation Areas</span></div>
+      <div class="zone"><span class="k">(e) NATIONAL FORESTS</span><h3>U.S. Forest Service</h3><b>Any</b> Texas offense committed in the National Forest System.<span class="ex">e.g. Sam Houston, Davy Crockett, Angelina, Sabine National Forests</span></div>
+      <div class="zone"><span class="k">(c) / (c-1) BORDER PORTS &amp; CHECKPOINTS</span><h3>CBP, Border Patrol, ICE officers</h3><b>Detain only</b> for intoxication offenses until handed to a peace officer; trained Border Patrol agents also get <b>felonies</b>, incident to a federal detainment.<span class="ex">land ports of entry from Mexico; permanent checkpoints</span></div>
+      <div class="zone"><span class="k">(f) NUCLEAR PLANT SITES</span><h3>Nuclear plant security</h3>Arrest, search &amp; seizure, including PC 9.51 force, on the plant site or in nearby areas covered by an agreement with local police.<span class="ex">e.g. Comanche Peak (Glen Rose), South Texas Project</span></div>
+    </div>
+    <div class="callout def">Even in these zones, the officer is still <b>not a peace officer</b>. They get only the listed powers, not the rest of the Code's peace-officer powers and duties.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Full text of each subsection: the <a class="codes" href="ccp-2a-001-002.html#2a002">2A.002 slide</a>.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=2A&amp;sec=2A.002" target="bpoc-codes">Open Art. 2A.002 in Texas Codes &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== 6. OTHER POWERS ===================== -->
+<section class="slide" data-key="6" data-alias="other-powers" aria-label="6. Other powers and protections">
+  <div class="slide-head"><span class="sub-badge">6</span><div><p class="kicker">Beyond arrest &amp; search</p><h2>Other powers and protections tied to &ldquo;peace officer&rdquo;</h2></div></div>
+  <div class="slide-body">
+    <table class="matrix">
+      <tr><th>Statute</th><th>Peace officer</th><th>Federal special investigator</th></tr>
+      <tr><td>Use of force to arrest or search <span class="cite">PC 9.51</span></td><td><span class="y">YES</span> (a) force; (c) <b>deadly force</b> to arrest or prevent escape in listed situations</td><td><span class="m">NOT NAMED</span> 9.51(a) and (c) cover peace officers and people acting at a peace officer's direction; anyone else relies on 9.51(b). Only 2A.002(f) (nuclear plant security) expressly grants 9.51 powers.</td></tr>
+      <tr><td>Resisting arrest, search, or transportation <span class="cite">PC 38.03</span></td><td><span class="y">PROTECTED</span> resisting a peace officer (or someone acting at their direction) by force is a Class A misdemeanor, or a 3rd-degree felony with a deadly weapon</td><td><span class="n">NOT COVERED</span> unless acting in a peace officer's presence and at their direction. Federal law has its own offenses for assaulting federal officers.</td></tr>
+      <tr><td>Mental-health emergency detention <span class="cite">H&amp;S Ch. 573&ndash;574</span></td><td><span class="y">YES</span> statewide</td><td><span class="m">NPS ONLY</span> inside a national park or recreation area <span class="cite">2A.002(d)(2)(B)</span></td></tr>
+      <tr><td>Temporarily disarming a person <span class="cite">CCP 14.03(h)</span></td><td><span class="y">YES</span> when reasonably necessary for safety</td><td><span class="n">NO</span> not granted by 2A.002</td></tr>
+      <tr><td>Carrying a weapon, including where the public is served <span class="cite">PC 46.15(a)(1)</span></td><td><span class="y">EXEMPT</span> from PC 46.02 &amp; 46.03</td><td><span class="y">EXEMPT</span> &mdash; the same exemption names special investigators under 2A.002</td></tr>
+    </table>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; PC 9.51(a)&ndash;(d), 38.03(a), 46.15(a)(1); CCP 14.03(h)(1)</summary><div class="statute">
+    <p>PC 9.51(a) A peace officer, or a person acting in a peace officer's presence and at his direction, is justified in using force against another when and to the degree the actor reasonably believes the force is immediately necessary to make or assist in making an arrest or search, or to prevent or assist in preventing escape after arrest, if: (1) the actor reasonably believes the arrest or search is lawful or, if the arrest or search is made under a warrant, he reasonably believes the warrant is valid; and (2) before using force, the actor manifests his purpose to arrest or search and identifies himself as a peace officer or as one acting at a peace officer's direction, unless he reasonably believes his purpose and identity are already known by or cannot reasonably be made known to the person to be arrested.</p>
+    <p>(b) A person other than a peace officer (or one acting at his direction) is justified in using force against another when and to the degree the actor reasonably believes the force is immediately necessary to make or assist in making a lawful arrest, or to prevent or assist in preventing escape after lawful arrest if, before using force, the actor manifests his purpose to and the reason for the arrest or reasonably believes his purpose and the reason are already known by or cannot reasonably be made known to the person to be arrested.</p>
+    <p>(c) A peace officer is justified in using deadly force against another when and to the degree the peace officer reasonably believes the deadly force is immediately necessary to make an arrest, or to prevent escape after arrest, if the use of force would have been justified under Subsection (a) and: (1) the actor reasonably believes the conduct for which arrest is authorized included the use or attempted use of deadly force; or (2) the actor reasonably believes there is a substantial risk that the person to be arrested will cause death or serious bodily injury to the actor or another if the arrest is delayed.</p>
+    <p>(d) A person other than a peace officer acting in a peace officer's presence and at his direction is justified in using deadly force against another when and to the degree the person reasonably believes the deadly force is immediately necessary to make a lawful arrest, or to prevent escape after a lawful arrest, if the use of force would have been justified under Subsection (b) and: (1) the actor reasonably believes the felony or offense against the public peace for which arrest is authorized included the use or attempted use of deadly force; or (2) the actor reasonably believes there is a substantial risk that the person to be arrested will cause death or serious bodily injury to another if the arrest is delayed.</p>
+    <p>PC 38.03(a) A person commits an offense if he intentionally prevents or obstructs a person he knows is a peace officer or a person acting in a peace officer's presence and at his direction from effecting an arrest, search, or transportation of the actor or another by using force against the peace officer or another.</p>
+    <p>PC 46.15(a) Sections 46.02 and 46.03 do not apply to: (1) peace officers or special investigators under Article 2A.002, Code of Criminal Procedure, and neither section prohibits a peace officer or special investigator from carrying a weapon in this state, including in an establishment in this state serving the public, regardless of whether the peace officer or special investigator is engaged in the actual discharge of the officer's or investigator's duties while carrying the weapon; &hellip;</p>
+    <p>CCP 14.03(h)(1) A peace officer who is acting in the lawful discharge of the officer's official duties may disarm a person at any time the officer reasonably believes it is necessary for the protection of the person, officer, or another individual. &hellip;</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 7. RECAP ===================== -->
+<section class="slide" data-key="7" data-alias="recap" aria-label="7. Recap and scenarios">
+  <div class="slide-head"><span class="sub-badge">7</span><div><p class="kicker">Review</p><h2>Recap &mdash; and how it plays out</h2></div></div>
+  <div class="slide-body">
+    <table class="recap">
+      <tr><th></th><th>Texas peace officer</th><th>Federal special investigator (2A.002(a))</th></tr>
+      <tr><td>Legal status</td><td>Peace officer (2A.001)</td><td><b>Not</b> a peace officer under Texas law</td></tr>
+      <tr><td>Duties under Texas law</td><td>Yes &mdash; 2A.051 and others</td><td>None &mdash; powers only</td></tr>
+      <tr><td>Warrantless arrest</td><td>Any offense in view; listed offenses on probable cause</td><td>Felonies (plus citizen's arrest, like anyone)</td></tr>
+      <tr><td>Texas warrants</td><td>Addressed to and executed by peace officers</td><td>Not addressed to them (NPS excepted, inside parks)</td></tr>
+      <tr><td>Use of force / resisting arrest</td><td>PC 9.51(a), (c); protected by PC 38.03</td><td>Not named in either</td></tr>
+      <tr><td>Carrying weapons</td><td>Exempt from PC 46.02 &amp; 46.03</td><td>Same exemption (PC 46.15(a)(1))</td></tr>
+    </table>
+    <div class="scen">
+      <div class="panel tint"><h3>FBI agent sees a $50 shoplift</h3>Class C theft, so not a felony and not an offense against the public peace. <b>No Texas arrest power.</b> Call local police.</div>
+      <div class="panel tint"><h3>DEA agent sees an aggravated robbery</h3>A felony committed in view. <b>Can arrest</b> under 2A.002(a), and as any person under 14.01(a).</div>
+      <div class="panel tint"><h3>Drunk driver at the Laredo port of entry</h3>CBP officer has probable cause of DWI (PC 49.04). <b>Detain only</b>, then hand to a Texas peace officer without unnecessary delay.</div>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span>Plain-language study aid &mdash; always verify against the current statute and your instructor's guidance.</span>
+    <a class="codes" href="ccp-2a-001-002.html">&larr; Who is a peace officer (2A.001 / 2A.002 slides)</a>
+  </div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>Peace officer vs. special investigator powers &middot; Statute text from the site's local copies of the CCP and Penal Code &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script>
+// label table cells with their column heading (stacked phone layout)
+document.querySelectorAll('table.matrix, table.recap').forEach(t => {
+  const heads = Array.from(t.rows[0].cells).map(c => c.textContent.trim().split('\n')[0].replace(/2A\.002\(a\).*$/, '').trim());
+  Array.from(t.rows).slice(1).forEach(r => Array.from(r.cells).forEach((c, i) => { if(heads[i]) c.dataset.l = heads[i]; }));
+});
+</script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>

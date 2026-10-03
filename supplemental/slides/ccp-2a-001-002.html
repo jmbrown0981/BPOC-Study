@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>CCP Arts. 2A.001 &amp; 2A.002 – Who Is a Peace Officer | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: grouped officer lists (2A.001) and the powers matrix (2A.002) */
+.cat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:2px 0 10px;}
+.cat{border:1px solid var(--rule); border-radius:10px; padding:9px 11px 8px; background:#fff;}
+.cat h3{margin:0 0 6px; font-family:'IBM Plex Serif',serif; font-size:14px; color:var(--navy); display:flex; justify-content:space-between; align-items:baseline; gap:6px;}
+.cat h3 .ct{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--brass); font-weight:700; white-space:nowrap;}
+.cat ul{list-style:none; margin:0; padding:0;}
+.cat li{font-size:12.4px; line-height:1.4; padding:2.5px 0; border-top:1px dotted var(--paper-dim); display:flex; gap:6px;}
+.cat li:first-child{border-top:none;}
+.cat li .n{flex:none; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--ink-soft); min-width:22px; padding-top:1px;}
+.cat li .lic{font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:700; color:var(--green); border:1px solid var(--green); border-radius:5px; padding:0 4px; margin-left:3px; white-space:nowrap;}
+.cat li .lim{font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:700; color:var(--rust); border:1px solid var(--rust); border-radius:5px; padding:0 4px; margin-left:3px; white-space:nowrap;}
+.legend{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:12.5px; color:var(--ink-soft); margin:0 0 4px;}
+.agencies{display:flex; flex-wrap:wrap; gap:4px; margin-top:6px;}
+.agencies span{font-size:11.5px; font-weight:600; background:var(--paper); border:1px solid var(--rule); border-radius:999px; padding:2px 8px; color:var(--navy); white-space:nowrap;}
+table.powers{width:100%; border-collapse:collapse; font-size:13px; margin:4px 0 10px;}
+table.powers th{background:var(--navy); color:#fff; text-align:left; padding:7px 10px; font-weight:600;}
+table.powers td{padding:8px 10px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.45;}
+table.powers td:first-child{width:38%;}
+table.powers tr.lead td{background:var(--paper);}
+table.powers .sub{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass); display:block; margin-bottom:2px;}
+.scope{display:inline-block; font-weight:700; color:var(--navy);}
+.scope.narrow{color:var(--rust);}
+@media (max-width:900px){ .cat-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:760px){
+  .cat-grid{grid-template-columns:1fr;}
+  table.powers, table.powers tbody, table.powers tr, table.powers td{display:block; width:auto !important;}
+  table.powers tr:first-child{display:none;}
+  table.powers tr{border:1px solid var(--rule); border-radius:9px; margin-bottom:8px; overflow:hidden;}
+  table.powers td{border-bottom:none; padding:5px 12px;}
+  table.powers td:first-child{padding-top:10px;}
+  table.powers td:last-child{padding-bottom:10px;}
+  table.powers td[data-l]:not(:first-child)::before{content:attr(data-l) ": "; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass); text-transform:uppercase; letter-spacing:0.05em;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Code of Criminal Procedure &middot; Slides</p>
+      <h1>CCP Arts. 2A.001 &amp; 2A.002 — Who Is (and Isn't) a Texas Peace Officer</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 9.2 &mdash; the 35 categories of Texas peace officers, and the federal officers who are <b>not</b> peace officers but get limited arrest, search, and seizure powers under Texas law. Continued in the <a href="ccp-2a-powers.html" style="color:var(--brass-light);">powers comparison slides</a>.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Code of Criminal Procedure &middot; Chapter 2A &middot; Subchapter A</p>
+    <h2 class="big">Peace Officers vs.<br>Special Investigators</h2>
+    <p class="lede">Texas law decides who is a <b>peace officer</b> (Art. 2A.001). Federal agents are <b>not</b> on that list. Art. 2A.002 gives some of them limited state-law powers instead.</p>
+    <div class="terms">
+      <div class="callout def"><b>Art. 2A.001 &mdash; peace officers.</b> A closed list of 35 categories. Being on it carries the duties in Art. 2A.051 and the powers the Code gives &ldquo;peace officers.&rdquo;</div>
+      <div class="callout def"><b>Art. 2A.002 &mdash; special investigators.</b> Federal officers who are <b>not</b> peace officers but may arrest, search, and seize under Texas law, usually for <b>felonies only</b> or only in certain places.</div>
+    </div>
+    <div class="callout"><b>Key point:</b> &ldquo;not a peace officer&rdquo; is about <b>Texas</b> law. A federal agent keeps full <b>federal</b> authority to enforce federal crimes. 2A.002 only sets what they can do when enforcing <b>Texas</b> offenses.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=2A&amp;sec=2A.001&amp;v=2" target="bpoc-codes">Open Art. 2A.001 in Texas Codes &#8599;</a>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=2A&amp;sec=2A.002" target="bpoc-codes">Open Art. 2A.002 &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== 2A.001 ===================== -->
+<section class="slide" data-key="2a001" data-dot="2A.001" data-alias="peace-officers" aria-label="Art. 2A.001 — Peace officers">
+  <div class="slide-head"><span class="sub-badge">2A.001</span><div><p class="kicker">Who IS a peace officer</p><h2>The 35 categories of Texas peace officers, grouped</h2></div></div>
+  <div class="slide-body">
+    <p class="legend"><span>Numbers are the subdivisions of Art. 2A.001.</span><span><span class="lic" style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;color:var(--green);border:1px solid var(--green);border-radius:5px;padding:0 4px;">LICENSE</span> statute requires a permanent TCOLE peace officer license</span><span><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;color:var(--rust);border:1px solid var(--rust);border-radius:5px;padding:0 4px;">LIMITED</span> powers limited by the agency's own statute</span></p>
+    <div class="cat-grid">
+      <div class="cat"><h3>Local law enforcement <span class="ct">6</span></h3><ul>
+        <li><span class="n">(1)</span><span>Sheriff, deputies, reserve deputies <span class="lic">LICENSE</span></span></li>
+        <li><span class="n">(2)</span><span>Constable, deputies, reserve deputies <span class="lic">LICENSE</span></span></li>
+        <li><span class="n">(3)</span><span>City marshal, police officer, reserve police officer <span class="lic">LICENSE</span></span></li>
+        <li><span class="n">(5)</span><span>DA, criminal DA, and county attorney investigators</span></li>
+        <li><span class="n">(12)</span><span>City park &amp; recreation patrol / security officers</span></li>
+        <li><span class="n">(18)</span><span>County park rangers</span></li>
+      </ul></div>
+      <div class="cat"><h3>State agencies <span class="ct">12</span></h3><ul>
+        <li><span class="n">(4)</span><span>DPS &mdash; Texas Rangers, officers, reserve officer corps</span></li>
+        <li><span class="n">(6)</span><span>TABC law enforcement agents</span></li>
+        <li><span class="n">(10)</span><span>Parks &amp; Wildlife officers (game wardens)</span></li>
+        <li><span class="n">(22)</span><span>Attorney General investigators</span></li>
+        <li><span class="n">(29)</span><span>TCOLE investigators</span></li>
+        <li><span class="n">(27)</span><span>TJJD inspector general officers</span></li>
+        <li><span class="n">(28)</span><span>Inspector general officers (Gov't Code 493.019 &mdash; TDCJ)</span></li>
+        <li><span class="n">(9)</span><span>Texas Facilities Commission officers</span></li>
+        <li><span class="n">(13)</span><span>Comptroller security officers / investigators</span></li>
+        <li><span class="n">(23)</span><span>State lottery security officers / investigators (Gov't Code Ch. 466)</span></li>
+        <li><span class="n">(24)</span><span>Officers appointed by an appellate court</span></li>
+        <li><span class="n">(34)</span><span>Alamo complex rangers (General Land Office) <span class="lim">LIMITED</span></span></li>
+      </ul></div>
+      <div class="cat"><h3>Fire &amp; arson <span class="ct">5</span></h3><ul>
+        <li><span class="n">(7)</span><span>Arson investigating units (city, county, or state)</span></li>
+        <li><span class="n">(25)</span><span>State Fire Marshal's officers</span></li>
+        <li><span class="n">(30)</span><span>County fire marshals, inspectors, investigators</span></li>
+        <li><span class="n">(31)</span><span>Emergency services district fire marshals, inspectors, investigators</span></li>
+        <li><span class="n">(32)</span><span>City fire marshals, inspectors, investigators <span class="lic">LICENSE</span></span></li>
+      </ul></div>
+      <div class="cat"><h3>Schools &amp; campuses <span class="ct">2</span></h3><ul>
+        <li><span class="n">(8)</span><span>School district police, college/university police, and school reserve officers (reserves: <span class="lic">LICENSE</span>)</span></li>
+        <li><span class="n">(35)</span><span>Texas Education Agency inspectors <span class="lim">LIMITED</span></span></li>
+      </ul></div>
+      <div class="cat"><h3>Special districts &amp; transportation <span class="ct">5</span></h3><ul>
+        <li><span class="n">(17)</span><span>Hospital district police (Dallas, Tarrant, Bexar, El Paso, Harris, Ector, Midland, Lubbock) and defense base development authorities</span></li>
+        <li><span class="n">(21)</span><span>Transit authority police (metro / regional transportation authorities)</span></li>
+        <li><span class="n">(14)</span><span>Water control &amp; improvement district officers</span></li>
+        <li><span class="n">(11)</span><span>Officers commissioned under Transportation Code Ch. 23</span></li>
+        <li><span class="n">(15)</span><span>Officers commissioned by a board of trustees under Transportation Code Ch. 54</span></li>
+      </ul></div>
+      <div class="cat"><h3>Licensing &amp; regulatory boards <span class="ct">5</span></h3><ul>
+        <li><span class="n">(16)</span><span>Texas Medical Board investigators</span></li>
+        <li><span class="n">(19)</span><span>Texas Racing Commission investigators</span></li>
+        <li><span class="n">(20)</span><span>Officers commissioned under Occupations Code Ch. 554 (pharmacy board)</span></li>
+        <li><span class="n">(26)</span><span>Insurance commissioner investigators</span></li>
+        <li><span class="n">(33)</span><span>State Board of Dental Examiners officers <span class="lim">LIMITED</span></span></li>
+      </ul></div>
+    </div>
+    <div class="callout def"><b>Nothing federal is on this list.</b> No FBI, DEA, ATF, U.S. Marshals, Border Patrol, or any other federal officer &mdash; they're covered by Art. 2A.002 instead.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 2A.001 (VERSION 2)</summary><div class="statute">
+    <p class="note-ver"><i>Texas Codes shows two versions of Art. 2A.001 because separate 2025 bills amended it differently. This is Version 2, as amended by H.B. 3248, H.B. 1620, S.B. 434, H.B. 1458, S.B. 2405, and H.B. 121 (all eff. Sept. 1, 2025). Version 1 (S.B. 502) has 34 subdivisions and numbers some entries differently.</i></p>
+    <p>Art. 2A.001. PEACE OFFICERS GENERALLY. The following are peace officers:</p>
+    <p class="ind1">(1) a sheriff, a sheriff's deputy, or a reserve deputy sheriff who holds a permanent peace officer license issued under Chapter 1701, Occupations Code;</p>
+    <p class="ind1">(2) a constable, a deputy constable, or a reserve deputy constable who holds a permanent peace officer license issued under Chapter 1701, Occupations Code;</p>
+    <p class="ind1">(3) a marshal or police officer of a municipality or a reserve municipal police officer who holds a permanent peace officer license issued under Chapter 1701, Occupations Code;</p>
+    <p class="ind1">(4) a ranger, officer, or member of the reserve officer corps commissioned by the Public Safety Commission and the director of the Department of Public Safety;</p>
+    <p class="ind1">(5) an investigator of a district attorney's, criminal district attorney's, or county attorney's office;</p>
+    <p class="ind1">(6) a law enforcement agent of the Texas Alcoholic Beverage Commission;</p>
+    <p class="ind1">(7) a member of an arson investigating unit commissioned by a municipality, a county, or the state;</p>
+    <p class="ind1">(8) an officer commissioned under Section 37.081 or 37.0818, Education Code, or Subchapter E, Chapter 51, Education Code, or a reserve police officer appointed under Section 37.0816, Education Code, who holds a permanent peace officer license issued under Chapter 1701, Occupations Code;</p>
+    <p class="ind1">(9) an officer commissioned by the Texas Facilities Commission;</p>
+    <p class="ind1">(10) a law enforcement officer commissioned by the Parks and Wildlife Commission;</p>
+    <p class="ind1">(11) an officer commissioned under Chapter 23, Transportation Code;</p>
+    <p class="ind1">(12) a municipal park and recreational patrol officer or security officer;</p>
+    <p class="ind1">(13) a security officer or investigator commissioned as a peace officer by the comptroller;</p>
+    <p class="ind1">(14) an officer commissioned by a water control and improvement district under Section 49.216, Water Code;</p>
+    <p class="ind1">(15) an officer commissioned by a board of trustees under Chapter 54, Transportation Code;</p>
+    <p class="ind1">(16) an investigator commissioned by the Texas Medical Board;</p>
+    <p class="ind1">(17) an officer commissioned by:</p>
+    <p class="ind2">(A) the board of managers of the Dallas County Hospital District, the Tarrant County Hospital District, the Bexar County Hospital District, the El Paso County Hospital District, or the Harris County Hospital District under Section 281.057, Health and Safety Code;</p>
+    <p class="ind2">(B) the board of directors of the Ector County Hospital District under Section 1024.117, Special District Local Laws Code;</p>
+    <p class="ind2">(C) the board of directors of the Midland County Hospital District of Midland County, Texas, under Section 1061.121, Special District Local Laws Code;</p>
+    <p class="ind2">(D) the board of hospital managers of the Lubbock County Hospital District of Lubbock County, Texas, under Section 1053.113, Special District Local Laws Code; or</p>
+    <p class="ind2">(E) the board of directors of a defense base development authority established under Chapter 379B, Local Government Code;</p>
+    <p class="ind1">(18) a county park ranger commissioned under Subchapter E, Chapter 351, Local Government Code;</p>
+    <p class="ind1">(19) an investigator employed by the Texas Racing Commission;</p>
+    <p class="ind1">(20) an officer commissioned under Chapter 554, Occupations Code;</p>
+    <p class="ind1">(21) an officer commissioned by the governing body of a metropolitan rapid transit authority under Section 451.108, Transportation Code, or a regional transportation authority under Section 452.110, Transportation Code;</p>
+    <p class="ind1">(22) an investigator commissioned by the attorney general under Section 402.009, Government Code;</p>
+    <p class="ind1">(23) a security officer or investigator commissioned as a peace officer under Chapter 466, Government Code;</p>
+    <p class="ind1">(24) an officer appointed by an appellate court under Subchapter F, Chapter 53, Government Code;</p>
+    <p class="ind1">(25) an officer commissioned by the state fire marshal under Chapter 417, Government Code;</p>
+    <p class="ind1">(26) an investigator commissioned by the commissioner of insurance under Section 701.104, Insurance Code;</p>
+    <p class="ind1">(27) an officer appointed by the inspector general of the Texas Juvenile Justice Department under Section 242.102, Human Resources Code;</p>
+    <p class="ind1">(28) an officer commissioned by the inspector general under Section 493.019, Government Code;</p>
+    <p class="ind1">(29) an investigator commissioned by the Texas Commission on Law Enforcement under Section 1701.160, Occupations Code;</p>
+    <p class="ind1">(30) a fire marshal or any related officer, inspector, or investigator commissioned by a county under Subchapter B, Chapter 352, Local Government Code;</p>
+    <p class="ind1">(31) a fire marshal or any officer, inspector, or investigator commissioned by an emergency services district under Chapter 775, Health and Safety Code;</p>
+    <p class="ind1">(32) a fire marshal or any officer, inspector, or investigator of a municipality who holds a permanent peace officer license issued under Chapter 1701, Occupations Code;</p>
+    <p class="ind1">(33) an officer commissioned by the State Board of Dental Examiners under Section 254.013, Occupations Code, subject to the limitations imposed by that section;</p>
+    <p class="ind1">(34) an Alamo complex ranger commissioned by the General Land Office under Section 31.0515, Natural Resources Code, subject to the limitations imposed by that section; and</p>
+    <p class="ind1">(35) an inspector employed by the Texas Education Agency under Section 37.1031, Education Code, subject to the limitations imposed by that section.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== 2A.002 ===================== -->
+<section class="slide" data-key="2a002" data-dot="2A.002" data-alias="special-investigators" aria-label="Art. 2A.002 — Special investigators (not peace officers)">
+  <div class="slide-head"><span class="sub-badge">2A.002</span><div><p class="kicker">Who is NOT a peace officer</p><h2>Federal officers: limited Texas-law powers</h2></div></div>
+  <div class="slide-body">
+    <p class="lede">Every officer below is <b>expressly not a Texas peace officer</b>. Each gets only the state-law powers listed, and only for the offenses and places listed.</p>
+    <table class="powers">
+      <tr><th>Who</th><th>Texas offenses they may arrest, search &amp; seize for</th><th>Where</th></tr>
+      <tr class="lead"><td><span class="sub">(a) &middot; 18 federal criminal investigators</span>
+        <div class="agencies"><span>FBI</span><span>Secret Service</span><span>ICE</span><span>ATF</span><span>DEA</span><span>Postal Inspectors</span><span>IRS-CI</span><span>NCIS (civilian)</span><span>U.S. Marshals</span><span>State Dept. Diplomatic Security</span><span>TIGTA</span><span>SSA-OIG</span><span>VA-OIG</span><span>USDA-OIG</span><span>Commerce Export Enforcement</span><span>Army CID</span><span>Air Force OSI</span><span>VA Police</span></div></td>
+        <td><span class="scope narrow">Felonies only</span></td><td>Anywhere in Texas</td></tr>
+      <tr><td><span class="sub">(g)</span>Secret Service agents <b>protecting</b> a protectee or investigating a threat against one</td><td><span class="scope">Felonies + misdemeanors</span>, plus any federal crime</td><td>While on that protective duty</td></tr>
+      <tr><td><span class="sub">(b)</span>Officers designated by Homeland Security to protect federal property (40 U.S.C. 1315)</td><td><span class="scope">Any offense</span></td><td>In connection with protecting federal property and people on it</td></tr>
+      <tr><td><span class="sub">(c)</span>CBP officers, Border Patrol agents, ICE immigration enforcement / deportation officers</td><td><span class="scope narrow">Detain only</span> &mdash; with probable cause of an intoxication offense (PC 49.02, 49.04, 49.07, 49.08), and only until handed to a peace officer without unnecessary delay</td><td>Land ports of entry from Mexico; permanent Border Patrol checkpoints</td></tr>
+      <tr><td><span class="sub">(c-1)</span>Border Patrol agents who completed the state training program in Gov't Code 411.02093</td><td><span class="scope">Felonies</span>, if incident to a detainment under federal law</td><td>Ports of entry; Border Patrol checkpoints</td></tr>
+      <tr><td><span class="sub">(d)</span>National Park Service law enforcement officers</td><td><span class="scope">Any offense</span>; can also execute Texas arrest &amp; search warrants and use peace-officer mental-health detention powers (H&amp;S Ch. 573, 574)</td><td>Inside national parks &amp; national recreation areas</td></tr>
+      <tr><td><span class="sub">(e)</span>U.S. Forest Service special agents &amp; officers</td><td><span class="scope">Any offense</span></td><td>In the National Forest System</td></tr>
+      <tr><td><span class="sub">(f)</span>Commercial nuclear power plant security (NRC-approved plan, incl. contractors)</td><td><span class="scope">Arrest, search &amp; seizure</span>, including deadly-force justification under PC 9.51</td><td>On plant premises, or nearby areas covered by an agreement with local police</td></tr>
+    </table>
+    <div class="callout"><b>Bottom line:</b> a typical federal agent (FBI, DEA, ATF&hellip;) who sees a Texas <b>misdemeanor</b> has no Texas-law power to arrest for it, because 2A.002(a) covers felonies only. A Texas peace officer would handle it.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 2A.002</summary><div class="statute">
+    <p>Art. 2A.002. SPECIAL INVESTIGATORS. (a) The following criminal investigators of the United States are not peace officers but have the powers of arrest, search, and seizure under the laws of this state as to felony offenses only:</p>
+    <p class="ind1">(1) a special agent of the Federal Bureau of Investigation;</p>
+    <p class="ind1">(2) a special agent of the Secret Service;</p>
+    <p class="ind1">(3) a special agent of United States Immigration and Customs Enforcement;</p>
+    <p class="ind1">(4) a special agent of the Bureau of Alcohol, Tobacco, Firearms and Explosives;</p>
+    <p class="ind1">(5) a special agent of the United States Drug Enforcement Administration;</p>
+    <p class="ind1">(6) an inspector of the United States Postal Inspection Service;</p>
+    <p class="ind1">(7) a special agent of the Criminal Investigation Division of the Internal Revenue Service;</p>
+    <p class="ind1">(8) a civilian special agent of the United States Naval Criminal Investigative Service;</p>
+    <p class="ind1">(9) a marshal or deputy marshal of the United States Marshals Service;</p>
+    <p class="ind1">(10) a special agent of the United States Department of State, Bureau of Diplomatic Security;</p>
+    <p class="ind1">(11) a special agent of the Treasury Inspector General for Tax Administration;</p>
+    <p class="ind1">(12) a special agent of the Office of Inspector General of the United States Social Security Administration;</p>
+    <p class="ind1">(13) a special agent of the Office of Inspector General of the United States Department of Veterans Affairs;</p>
+    <p class="ind1">(14) a special agent of the Office of Inspector General of the United States Department of Agriculture;</p>
+    <p class="ind1">(15) a special agent of the Office of Export Enforcement of the United States Department of Commerce;</p>
+    <p class="ind1">(16) a special agent of the Criminal Investigation Command of the United States Army;</p>
+    <p class="ind1">(17) a special agent of the Office of Special Investigations of the United States Air Force; and</p>
+    <p class="ind1">(18) a police officer with the Office of Security and Law Enforcement of the United States Department of Veterans Affairs.</p>
+    <p>(b) An officer or agent designated by the Secretary of Homeland Security under 40 U.S.C. Section 1315 for duty in connection with the protection of property owned or occupied by the federal government and persons on the property is not a peace officer but has the powers of arrest, search, and seizure as to any offense under the laws of this state.</p>
+    <p>(c) A customs and border protection officer or border patrol agent of United States Customs and Border Protection or an immigration enforcement agent or deportation officer of the Department of Homeland Security is not a peace officer under the laws of this state but, on the premises of a port facility designated by the commissioner of United States Customs and Border Protection as a port of entry for arrival in the United States by land transportation from the United Mexican States into this state or at a permanent established border patrol traffic checkpoint, has the authority to detain a person pending transfer without unnecessary delay to a peace officer if the agent or officer has probable cause to believe that the person has engaged in conduct that is a violation of Section 49.02, 49.04, 49.07, or 49.08, Penal Code, regardless of whether the violation may be disposed of in a criminal proceeding or a juvenile justice proceeding.</p>
+    <p>(c-1) In addition to the power granted under Subsection (c), a border patrol agent of the United States Customs and Border Protection who completed the training program described by Section 411.02093, Government Code, has the powers of arrest and search and seizure as to any felony offense under the laws of this state if the arrest, search, or seizure:</p>
+    <p class="ind1">(1) occurs on the premises of a port facility designated by the commissioner of the United States Customs and Border Protection as a port of entry or at a border patrol traffic checkpoint; and</p>
+    <p class="ind1">(2) is incident to a detainment under federal law.</p>
+    <p>(d) A commissioned law enforcement officer of the National Park Service is not a peace officer under the laws of this state but has:</p>
+    <p class="ind1">(1) the powers of arrest, search, and seizure as to any offense under the laws of this state committed in a national park or national recreation area; and</p>
+    <p class="ind1">(2) within the boundaries of a national park or national recreation area:</p>
+    <p class="ind2">(A) the power to execute any arrest warrant or search warrant issued under the laws of this state; and</p>
+    <p class="ind2">(B) the powers granted to a peace officer by Chapters 573 and 574, Health and Safety Code.</p>
+    <p>(d-1) For purposes of Subsection (d), "national park or national recreation area" means a national park or national recreation area included in the National Park System as defined by 54 U.S.C. Section 100102.</p>
+    <p>(e) A special agent or law enforcement officer of the United States Forest Service is not a peace officer under the laws of this state but has the powers of arrest, search, and seizure as to any offense under the laws of this state committed in the National Forest System, as that term is defined by 16 U.S.C. Section 1609.</p>
+    <p>(f) Security personnel working at a commercial nuclear power plant, including contract security personnel, trained and qualified under a security plan approved by the United States Nuclear Regulatory Commission, are not peace officers under the laws of this state but have the powers of arrest, search, and seizure, including the powers under Section 9.51, Penal Code, while in the performance of duties on the premises of a commercial nuclear power plant site or under an agreement entered into with local law enforcement regarding areas surrounding the plant site.</p>
+    <p>(g) In addition to the powers of arrest, search, and seizure under Subsection (a), a special agent of the Secret Service protecting or investigating a threat against a person described by 18 U.S.C. Section 3056(a) has the powers of arrest, search, and seizure as to:</p>
+    <p class="ind1">(1) a misdemeanor offense under the laws of this state; and</p>
+    <p class="ind1">(2) any criminal offense under federal law.</p>
+  </div></details></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>CCP Arts. 2A.001 (Version 2) &amp; 2A.002 slides &middot; Text current through the 2025 89th Leg., R.S. amendments &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script>
+// label powers-table cells with their column heading (stacked phone layout)
+document.querySelectorAll('table.powers').forEach(t => {
+  const heads = Array.from(t.rows[0].cells).map(c => c.textContent.trim());
+  Array.from(t.rows).slice(1).forEach(r => Array.from(r.cells).forEach((c, i) => { if(heads[i]) c.dataset.l = heads[i]; }));
+});
+</script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>

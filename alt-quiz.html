@@ -163,6 +163,9 @@
 <footer>Questions hand-authored from the Chapter &amp; Topic reference source materials &middot; format spec at <code>alt-quizzes/FORMAT.md</code> &middot; Built for study purposes by and for the FWPD Academy class</footer>
 
 <script src="assets/code-links.js"></script>
+<script src="assets/chapters-manifest.js"></script>
+<script src="assets/case-law-data.js"></script>
+<script src="assets/ref-links.js"></script>
 <script>
 /* ===================== ALT QUIZ ENGINE ===================== */
 
@@ -255,13 +258,23 @@ function codeLinkOpts(q){
   const ch = ALT_QUIZ_CHAPTERS.find(c => c.key === key);
   return {context: true, secCode: (ch && ch.secCode) || null};
 }
+// "BPOC 10.3" -> study.html LO heading, "Terry v. Ohio" -> case-law.html card (all banks unless
+// flagged refLinks:false). Runs after CodeLinks; see assets/ref-links.js.
+function refLinksOn(q){
+  const key = q.bankKey || (activeChapter && activeChapter.key);
+  const ch = ALT_QUIZ_CHAPTERS.find(c => c.key === key);
+  return !!(window.RefLinks && !(ch && ch.refLinks === false));
+}
+function linkRefs(h, q){
+  if(codeLinksOn(q)) h = CodeLinks.linkify(h, codeLinkOpts(q));
+  if(refLinksOn(q)) h = RefLinks.linkify(h);
+  return h;
+}
 function explHtml(q){
-  const h = inlineMd(q.explanation || '');
-  return codeLinksOn(q) ? CodeLinks.linkify(h, codeLinkOpts(q)) : h;
+  return linkRefs(inlineMd(q.explanation || ''), q);
 }
 function srcHtml(q){
-  const h = escapeHtml(q.source || '');
-  return codeLinksOn(q) ? CodeLinks.linkify(h, codeLinkOpts(q)) : h;
+  return linkRefs(escapeHtml(q.source || ''), q);
 }
 function inlineMd(s){
   let out = escapeHtml(s);
