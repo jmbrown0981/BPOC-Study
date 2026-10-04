@@ -174,7 +174,7 @@ const ALT_QUIZ_CHAPTERS = [
   {key:"1", num:1, title:"Professionalism and Ethics", file:"alt-quizzes/bank/01-professionalism-and-ethics.md", secCode:"PE"},
   {key:"2", num:2, title:"Professional Policing", file:"alt-quizzes/bank/02-professional-policing.md"},
   {key:"3", num:3, title:"Fitness, Wellness, and Stress Management", file:"alt-quizzes/bank/03-fitness-wellness-stress.md"},
-  {key:"4", num:4, title:"TCOLE Rules", file:"alt-quizzes/bank/04-tcole-rules.md"},
+  {key:"4", num:4, title:"TCOLE Rules", file:"alt-quizzes/bank/04-tcole-rules.md", secCode:"TAC"},
   {key:"5", num:5, title:"Multiculturalism and Human Relations", file:"alt-quizzes/bank/05-multiculturalism-human-relations.md"},
   {key:"6", num:6, title:"Racial Profiling", file:"alt-quizzes/bank/06-racial-profiling.md"},
   {key:"7", num:7, title:"US/Texas Constitution, Bill of Rights, and CJ System", file:"alt-quizzes/bank/07-us-texas-constitution-cj-system.md"},
@@ -645,7 +645,7 @@ function renderWeightPanelHtml(config){
   return `
     <div class="weight-panel">
       <h3>Customize exam percentages</h3>
-      <p class="wp-note">Every bank starts at <strong>0%</strong> (excluded) — dial in a percentage for just the handful of banks you want in this exam, and leave the rest alone. Editing a bank's percentage <strong>pins</strong> it at that exact value; any other bank you haven't touched stays pinned at 0. This is saved to <em>this browser only</em> (<code>localStorage</code>) — nothing is written back to <code>${EXAM_WEIGHTS_FILE}</code>, so there's nothing to commit or push. Clear your browser data or hit "Reset all" below to zero everything back out.</p>
+      <p class="wp-note">Every bank starts at <strong>0%</strong> allowing you to dial in a percentage for just the handful of subjects you want in the practice exam. All percentages combined <strong>must</strong> add up to 100%. Target total questions defaults at 250, but can be increased or decreased as well. Clear your browser data or hit "Reset all percentages to 0" below to set all percentages back to zero.</p>
       <div class="weight-row">
         <div class="wr-info">
           <div class="wr-title">Target total questions</div>

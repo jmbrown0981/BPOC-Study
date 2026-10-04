@@ -2376,7 +2376,7 @@ In Brothers v. Klevenhagen, a Harris County pretrial detainee was fatally shot b
 - [ ] The detainee was shot while resisting a routine cell search
 - [ ] The detainee was shot after threatening other inmates with a weapon
 
-**Explanation:** The department's blanket policy — authorizing deadly force to prevent any escape, regardless of the detainee's actual dangerousness — is central to why this case raised serious constitutional questions.
+**Explanation:** The department's blanket policy — authorizing deadly force to prevent any escape, regardless of the detainee's actual dangerousness — is what made the case controversial. The Fifth Circuit nonetheless found no due-process violation and affirmed summary judgment for the deputies (see the next questions).
 
 ---
 
@@ -2397,14 +2397,14 @@ What did the Fifth Circuit hold in Brothers v. Klevenhagen?
 ### Q172 — Scenario
 **LO:** 28.3 · **Source:** BPOC 28.3
 
-A detention officer shoots an unarmed, non-dangerous detainee who is attempting to walk away from a transport vehicle, relying on a facility policy that authorizes deadly force to prevent any escape. Does this policy create the same kind of constitutional exposure discussed in Brothers v. Klevenhagen?
+In Brothers v. Klevenhagen, the deputies admitted the escaping detainee was unarmed and they had no reason to think he was dangerous. What did the Fifth Circuit conclude?
 
-- [x] Yes — a blanket policy authorizing deadly force against any escape attempt, regardless of dangerousness, raises the same serious constitutional risk flagged in Brothers, echoing Garner's requirement (in the arrest context) that deadly force be tied to an actual threat, not merely to preventing escape
-- [ ] No — detention officers may always use deadly force to prevent any escape, regardless of dangerousness
-- [ ] No — Brothers v. Klevenhagen held that detainee escape shootings can never create liability
-- [ ] Yes, but only if the detainee was convicted rather than merely a pretrial detainee
+- [x] No due-process violation: the force was used in a good-faith effort to prevent the escape, not maliciously or sadistically, so summary judgment for the deputies was affirmed — over a dissent that would have applied Tennessee v. Garner
+- [ ] The deputies were liable because Garner forbids deadly force against any non-dangerous person
+- [ ] The case was sent to a jury on the Fourth Amendment claim
+- [ ] The county's escape policy was struck down as unconstitutional
 
-**Explanation:** Even though Brothers applies the Fourteenth rather than Fourth Amendment, the underlying concern is the same one Garner raised in the arrest context — force used merely to stop an escape, without a showing of dangerousness, is constitutionally risky.
+**Explanation:** Brothers is a cautionary case, not a model. It was widely criticized, the Supreme Court later held in Kingsley v. Hendrickson (2015) that force against pretrial detainees is judged by an objective-reasonableness standard, and agency policies generally follow Garner's dangerousness requirement.
 
 ---
 
@@ -2530,7 +2530,7 @@ What is the correct citation for the Fifth Circuit case reversing summary judgme
 - [ ] Brower v. County of Inyo, 489 U.S. 593 (1989)
 - [ ] Milstead v. Kibler, 243 F.3d 157 (4th Cir. 2001)
 
-**Explanation:** Estate of Ceballos v. Bridgwater, No. 09-10412 (5th Cir. 2010), is the Plainview, Texas shooting case with disputed facts. Fraire found the officer's force reasonable based on undisputed eyewitness confirmation, Brower addresses roadblock seizures, and Milstead addresses a mistaken-identity shooting.
+**Explanation:** Estate of Ceballos v. Bridgwater, No. 09-10412 (5th Cir. 2010), is the Plainview, Texas shooting case with disputed facts. Fraire found the officer's force reasonable based on undisputed eyewitness confirmation, Brower addresses roadblock seizures, and Milstead addresses a mistaken-identity shooting. (Technically, the Fifth Circuit's ruling on the officer's qualified immunity is the companion appeal Reyes v. Bridgwater, No. 09-10076; No. 09-10412, the number BPOC cites, affirmed judgment for the City of Plainview.)
 
 ---
 
@@ -2544,7 +2544,7 @@ In Estate of Ceballos v. Bridgwater, an officer shot and killed a man during an 
 - [ ] Both the trial court and the Fifth Circuit sided with the officer, ending the case
 - [ ] The case was dismissed before any court reached the merits
 
-**Explanation:** The reversal on appeal turned on disputed facts about the immediacy of the threat — exactly the kind of factual dispute that usually has to go to a jury rather than being resolved on summary judgment.
+**Explanation:** The reversal on appeal turned on disputed facts about the immediacy of the threat — exactly the kind of factual dispute that usually has to go to a jury rather than being resolved on summary judgment. (Technically, the Fifth Circuit's ruling on the officer's qualified immunity is the companion appeal Reyes v. Bridgwater, No. 09-10076; No. 09-10412, the number BPOC cites, affirmed judgment for the City of Plainview.)
 
 ---
 
@@ -3454,7 +3454,7 @@ What is the correct citation for the case establishing the modern "clearly estab
 - [ ] Saucier v. Katz, 533 U.S. 194 (2001)
 - [ ] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
 
-**Explanation:** Harlow v. Fitzgerald, 457 U.S. 800 (1982), is the case that reformulated qualified immunity around whether the official violated clearly established statutory or constitutional rights a reasonable person would have known. Anderson later clarified how specifically that standard must be applied; Saucier created (and Pearson later modified) a mandatory sequencing rule; Osabutey addresses excessive force in an immigration-arrest context.
+**Explanation:** Harlow v. Fitzgerald, 457 U.S. 800 (1982), is the case that reformulated qualified immunity around whether the official violated clearly established statutory or constitutional rights a reasonable person would have known. Anderson later clarified how specifically that standard must be applied; Saucier created (and Pearson later modified) a mandatory sequencing rule; Osabutey applied the standard to officers' warrantless searches on a corroborated informant tip.
 
 ---
 
@@ -3536,9 +3536,9 @@ What is the correct citation for the case holding that the "clearly established"
 - [x] Anderson v. Creighton, 483 U.S. 635 (1987)
 - [ ] Harlow v. Fitzgerald, 457 U.S. 800 (1982)
 - [ ] Saucier v. Katz, 533 U.S. 194 (2001)
-- [ ] Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997)
+- [ ] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
 
-**Explanation:** Anderson v. Creighton, 483 U.S. 635 (1987), is the case requiring fact-specific particularity in defining the clearly established right. Harlow created the underlying objective test that Anderson refined; Saucier addressed the order of operations for the two-step analysis; Okonkwo addresses excessive force in an immigration-enforcement context.
+**Explanation:** Anderson v. Creighton, 483 U.S. 635 (1987), is the case requiring fact-specific particularity in defining the clearly established right. Harlow created the underlying objective test that Anderson refined; Saucier addressed the order of operations for the two-step analysis; Osabutey is a Fourth Circuit case applying Anderson's objective-reasonableness test to warrantless searches based on an informant tip.
 
 ---
 
@@ -3671,140 +3671,140 @@ The sequencing rule established in Saucier v. Katz was later made discretionary,
 ### Q263 — Definition
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-What is the correct citation for the case addressing excessive force claims arising from an immigration-related arrest?
+What is the correct citation for the case granting qualified immunity to officers who searched a car and its occupants without a warrant on a detailed, corroborated informant tip and found no drugs?
 
-- [x] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
-- [ ] Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997)
-- [ ] Saucier v. Katz, 533 U.S. 194 (2001)
 - [ ] Anderson v. Creighton, 483 U.S. 635 (1987)
+- [x] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
+- [ ] Saucier v. Katz, 533 U.S. 194 (2001)
+- [ ] Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994)
 
-**Explanation:** Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988), addresses force used during an immigration enforcement arrest. Okonkwo is a related Fourth Circuit case in a similar area; Saucier and Anderson address separate qualified-immunity sequencing and particularity questions.
+**Explanation:** Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988). Some course materials list it as a Fifth Circuit case; it was decided by the Fourth Circuit. Anderson is the Supreme Court's particularized "clearly established" case, Saucier set the two-step sequence, and Shaw addresses supervisory liability.
 
 ---
 
 ### Q264 — Recall
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-In Osabutey v. Welch, what were immigration officers alleged to have done during the arrest of the plaintiff?
+In Osabutey v. Welch, what information did the officers act on?
 
-- [x] They used force, including striking the plaintiff, during an arrest related to immigration status, giving rise to an excessive-force claim evaluated under Fourth Amendment principles
-- [ ] They took no physical action of any kind during the arrest
-- [ ] They obtained a warrant before using any force
-- [ ] They released the plaintiff without ever making contact
+- [ ] An anonymous 911 call with no details
+- [ ] A radio report of a robbery in progress
+- [x] A proven-reliable informant's tip describing the car (a red Ford Granada with a broken window), the man's build and clothing, the arrival time and place, and about 1.5 ounces of cocaine — all of which the officers corroborated except that a woman was driving
+- [ ] A warrant issued the day before
 
-**Explanation:** The specific force used during the arrest is what triggered Fourth Amendment scrutiny, applying the same basic reasonableness principles used in other excessive-force cases to the immigration-enforcement context.
+**Explanation:** The car arrived on schedule at a known drug location with a matching passenger. Officers searched the car, the driver (Osabutey), and the passenger (Gaither) — including a visual inspection inside Gaither's underwear — without a warrant and found nothing.
 
 ---
 
 ### Q265 — Concept
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-What broader principle does Osabutey v. Welch illustrate about the scope of Fourth Amendment excessive-force analysis?
+What did the Fourth Circuit hold in Osabutey v. Welch?
 
-- [x] The Fourth Amendment's excessive-force reasonableness principles apply to arrests made by officers in the immigration-enforcement context just as they apply to ordinary criminal arrests, not a separate or lesser standard
-- [ ] Immigration officers are entirely exempt from Fourth Amendment excessive-force analysis
-- [ ] The Fourth Amendment applies only to United States citizens
-- [ ] Excessive-force claims can never arise from an immigration-related arrest
+- [x] The officers were entitled to qualified immunity, because a reasonable officer could have believed the corroborated tip gave probable cause and exigency for the warrantless searches
+- [ ] The officers were liable because no drugs were found
+- [ ] Informant tips can never support a search
+- [ ] The Fourth Amendment does not apply to vehicle occupants
 
-**Explanation:** Osabutey reinforces that the type of law being enforced — immigration law versus ordinary criminal law — doesn't change the underlying Fourth Amendment reasonableness framework that governs the force used.
+**Explanation:** Qualified immunity turns on objective legal reasonableness: officers need only have reasonably believed their actions complied with clearly established law, not have been correct.
 
 ---
 
 ### Q266 — Scenario
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-Immigration enforcement officers arrest an individual and use force well beyond what is needed to secure a non-resisting, cooperative person. The officers argue that because the arrest relates to immigration status rather than an ordinary state crime, ordinary Fourth Amendment excessive-force principles don't apply. Under Osabutey v. Welch, is this argument correct?
+Officers search a car on a reliable informant's detailed tip that they corroborated in every respect, and find nothing. The occupants sue, arguing the empty search proves the officers lacked probable cause. Under Osabutey v. Welch, how is qualified immunity decided?
 
-- [x] No — Osabutey applies ordinary Fourth Amendment reasonableness principles to force used during an immigration-related arrest just as it would to any other arrest; the type of underlying offense does not create a separate, lower standard
-- [ ] Yes — immigration arrests are analyzed under a completely different constitutional framework
-- [ ] Yes, because only U.S. citizens are protected by the Fourth Amendment during an arrest
-- [ ] No, but only because the officers lacked a warrant
+- [x] By whether a reasonable officer, with the information these officers had at the time, could have believed the search was lawful — not by what the search turned up
+- [ ] Automatically against the officers, because nothing was found
+- [ ] By whether the informant was paid
+- [ ] Only by a jury, never on summary judgment
 
-**Explanation:** This scenario reflects Osabutey's core lesson — the reasonableness analysis for force doesn't change based on the specific legal basis for the arrest.
+**Explanation:** Osabutey applied Anderson v. Creighton's objective-legal-reasonableness test. Documenting the informant's track record and every detail you corroborated is what makes the decision defensible.
 
 ---
 
-### Q267 — Definition
+### Q267 — Recall
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-Osabutey v. Welch confirms that Fourth Amendment reasonableness principles for use of force apply regardless of whether the underlying arrest involves:
+What happened to the driver, Osabutey, during the incident in Osabutey v. Welch?
 
-- [x] A criminal offense or a civil immigration violation
-- [ ] A misdemeanor versus a felony only
-- [ ] A weapon being present at the scene
-- [ ] The arrestee's citizenship status alone, without regard to any other factor
+- [ ] She was shot by an officer
+- [x] She became agitated and struck an officer with a stereo cord, and was arrested
+- [ ] She was released without being searched
+- [ ] She was bitten by a police dog
 
-**Explanation:** The broader lesson is that the Fourth Amendment reasonableness framework travels with the arrest itself, regardless of the specific statutory basis for making it.
+**Explanation:** Osabutey was arrested after striking Officer Harding (who was not sued) with a stereo cord. Both she and the passenger sued the two officers who conducted the searches.
 
 ---
 
 ### Q268 — Definition
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-What is the correct citation for the Fourth Circuit case further addressing excessive force in the context of an immigration enforcement arrest?
+What is the correct citation for Okonkwo v. Fernandez, as cited in BPOC 28.1?
 
-- [x] Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997)
+- [x] Okonkwo v. Fernandez, 2003 WL 22227858 (N.D. Tex. 2003)
+- [ ] Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997)
 - [ ] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
-- [ ] Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994)
 - [ ] City of Waco v. Williams, 209 S.W.3d 216 (Tex. App.—Waco 2006)
 
-**Explanation:** Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997), applies the same Fourth Amendment force framework in a later immigration-enforcement context. Osabutey addresses a similar earlier case; Shaw addresses supervisory liability; City of Waco addresses a Texas-specific municipal-liability issue.
+**Explanation:** Okonkwo v. Fernandez, 2003 WL 22227858 (N.D. Tex. 2003) — a federal district court decision from the Northern District of Texas (Civil Action No. 3:01-CV-1938). It is reported only on Westlaw ("WL"), not in a printed reporter.
 
 ---
 
 ### Q269 — Recall
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-In Okonkwo v. Fernandez, what standard did the Fourth Circuit apply to evaluate the force used by immigration officers during the arrest?
+Which court decided Okonkwo v. Fernandez (2003)?
 
-- [x] The same objective-reasonableness, totality-of-the-circumstances standard from Graham v. Connor used to evaluate any Fourth Amendment excessive-force claim
-- [ ] A subjective good-faith standard applicable only to immigration officers
-- [ ] A strict-liability standard with no reasonableness inquiry
-- [ ] No standard at all, since the court declined to reach the merits
+- [x] The U.S. District Court for the Northern District of Texas
+- [ ] The U.S. Supreme Court
+- [ ] The Fifth Circuit Court of Appeals
+- [ ] The Texas Court of Criminal Appeals
 
-**Explanation:** Okonkwo continues the pattern established in Osabutey — the ordinary Graham objective-reasonableness framework governs, regardless of the specific enforcement context.
+**Explanation:** Okonkwo v. Fernandez, 2003 WL 22227858 (N.D. Tex. 2003). The full opinion is not available through free public sources, so this study guide does not summarize its facts.
 
 ---
 
 ### Q270 — Concept
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-What did the Fourth Circuit hold in Okonkwo v. Fernandez?
+BPOC 28.1 lists Okonkwo v. Fernandez with Graham v. Connor and Estate of Ceballos v. Bridgwater as case studies. What legal question does a federal civil-rights suit like these turn on when officers raise qualified immunity?
 
-- [x] The objective-reasonableness standard from Graham v. Connor governs excessive-force claims arising from immigration enforcement arrests, and the specific facts of the force used must be evaluated under that same totality-of-the-circumstances test
-- [ ] Immigration officers are entitled to absolute immunity from all excessive-force claims
-- [ ] The Fourth Amendment does not apply to any immigration enforcement context
-- [ ] Excessive-force claims require proof of the officer's malicious intent, contrary to Graham v. Connor
+- [x] Whether the officer's conduct violated a constitutional right that was clearly established at the time, judged by what a reasonable officer would have known
+- [ ] Whether the officer had a perfect disciplinary record
+- [ ] Whether the plaintiff was convicted of a crime
+- [ ] Whether the officer acted in subjective good faith
 
-**Explanation:** Okonkwo reinforces, alongside Osabutey, that immigration-enforcement force claims are not evaluated under any special or reduced standard — Graham's objective-reasonableness test governs.
+**Explanation:** Harlow v. Fitzgerald replaced the subjective good-faith test with this objective one; Anderson v. Creighton requires the right to be clearly established in a particularized sense.
 
 ---
 
-### Q271 — Scenario
+### Q271 — Concept
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-Two different plaintiffs bring excessive-force claims against immigration officers in separate incidents, years apart. Both sets of officers argue that immigration arrests should be evaluated under a more lenient standard than ordinary Fourth Amendment reasonableness. How would Okonkwo v. Fernandez and Osabutey v. Welch, read together, likely resolve this argument?
+Why does an informant's proven track record matter so much in a case like Osabutey v. Welch?
 
-- [x] Both cases reject a separate, more lenient standard for immigration arrests — ordinary Graham v. Connor objective-reasonableness principles apply consistently across both incidents, regardless of the type of enforcement involved
-- [ ] Both cases establish that immigration officers are held to a stricter standard than other officers
-- [ ] The two cases conflict with each other, leaving the question unresolved in the Fourth Circuit
-- [ ] Neither case addresses excessive force at all
+- [x] Reliability plus corroboration of the tip's details is what lets a reasonable officer believe probable cause exists — which is the heart of the qualified-immunity question
+- [ ] Because officers may never act on informant tips
+- [ ] Because informants must testify at the scene
+- [ ] Because a reliable informant makes a warrant unnecessary in every case
 
-**Explanation:** Together, these two Fourth Circuit cases consistently confirm the same principle across a decade — immigration-context arrests don't get a separate force standard.
+**Explanation:** In Osabutey the informant had proven reliable before, and the officers personally verified nearly every detail before acting.
 
 ---
 
 ### Q272 — Definition
 **LO:** 28.1 · **Source:** BPOC 28.1
 
-Okonkwo v. Fernandez is best understood as reaffirming which earlier Fourth Circuit precedent in the immigration-enforcement force context?
+Osabutey v. Welch applied which Supreme Court qualified-immunity standard?
 
-- [x] Osabutey v. Welch, 857 F.2d 220 (4th Cir. 1988)
-- [ ] Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994)
-- [ ] Milstead v. Kibler, 243 F.3d 157 (4th Cir. 2001)
-- [ ] Brothers v. Klevenhagen, 28 F.3d 452 (5th Cir. 1994)
+- [x] The "objective legal reasonableness" test of Harlow v. Fitzgerald and Anderson v. Creighton
+- [ ] The "shocks the conscience" test
+- [ ] The Miranda custody test
+- [ ] The Terry reasonable-suspicion test
 
-**Explanation:** Okonkwo and Osabutey both come out of the Fourth Circuit and address the same basic question — whether the ordinary Fourth Amendment force standard applies in immigration-enforcement arrests — reaching the same answer.
+**Explanation:** The court asked whether reasonable officers could have believed the searches were lawful in light of clearly established law and the information they had.
 
 ---
 
@@ -3816,9 +3816,9 @@ What is the correct citation for the case addressing when a supervisor can be he
 - [x] Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994)
 - [ ] City of Waco v. Williams, 209 S.W.3d 216 (Tex. App.—Waco 2006)
 - [ ] Harlow v. Fitzgerald, 457 U.S. 800 (1982)
-- [ ] Okonkwo v. Fernandez, 121 F.3d 707 (4th Cir. 1997)
+- [ ] Okonkwo v. Fernandez, 2003 WL 22227858 (N.D. Tex. 2003)
 
-**Explanation:** Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994), lays out the standard for supervisory liability under Section 1983. City of Waco addresses a Texas municipal-liability issue; Harlow establishes the general qualified-immunity test; Okonkwo addresses excessive force in immigration enforcement.
+**Explanation:** Shaw v. Stroud, 13 F.3d 791 (4th Cir. 1994), lays out the standard for supervisory liability under Section 1983. City of Waco addresses a Texas municipal-liability issue; Harlow establishes the general qualified-immunity test; Okonkwo is a 2003 Northern District of Texas qualified-immunity decision.
 
 ---
 

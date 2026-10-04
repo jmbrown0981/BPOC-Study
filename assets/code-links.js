@@ -35,7 +35,10 @@
     ['Occ. Code', 'OC'], ['Human Resources Code', 'HR'], ['Business and Commerce Code', 'BC'],
     ['Business &amp; Commerce Code', 'BC'], ['Civil Practice and Remedies Code', 'CP'], ['Finance Code', 'FI'],
     ['Agriculture Code', 'AG'], ['Ag. Code', 'AG'], ['AB Code', 'AL'], ['Property Code', 'PR'],
-    ['Parks and Wildlife Code', 'PW'], ['Election Code', 'EL'], ['Water Code', 'WA'], ['Utilities Code', 'UT']
+    ['Parks and Wildlife Code', 'PW'], ['Election Code', 'EL'], ['Water Code', 'WA'], ['Utilities Code', 'UT'],
+    // Texas Administrative Code: only Title 37 (TCOLE, Part 7) is built, so only Title-37 / TCOLE wording maps to it;
+    // a bare "TAC" (e.g. "43 TAC 217.27", a TxDOT rule) stays unlinked.
+    ['37 TAC', 'TAC'], ['37 Tex. Admin. Code', 'TAC'], ['TCOLE Rules', 'TAC'], ['TCOLE Rule', 'TAC']
   ];
   var SHORT = [
     ['CCP', 'CR'], ['HSC', 'HS'], ['HS', 'HS'], ['FC', 'FA'], ['PC', 'PE'], ['GV', 'GV'], ['GC', 'GV'],
@@ -147,7 +150,11 @@
     return mapText(html, function(t){
       return t.replace(RE_CTX, function(all, named, notStat, numRef, artSec, artTail, sSec, sTail, sSuffix, sName, bare, bareTail){
         if(named){ setCode(codeFor(named) || 'X'); return all; }
-        if(notStat){ last = lastSec = 'X'; return all; }
+        if(notStat){
+          // in the TCOLE rules bank (secCode TAC), "Rule 217.7" means a TAC rule
+          if(secCode === 'TAC' && /^Rules?$/.test(notStat)){ setCode('TAC'); return all; }
+          last = lastSec = 'X'; return all;
+        }
         if(numRef) return all;
         if(artSec){
           last = 'CR';
