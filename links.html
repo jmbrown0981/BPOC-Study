@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<title>Useful Links — BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667; --rule:#C9BF9F;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:26px 20px 24px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap;}
+  .hero-eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); margin:0 0 6px;}
+  .hero h1{font-family:'IBM Plex Serif', serif; font-weight:700; font-size:22px; line-height:1.15; margin:0;}
+  .back{font-size:12px; color:var(--brass-light); text-decoration:none; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
+  .hero p.sub{margin:12px 0 0; font-size:13.5px; color:#C8C0AA; max-width:60ch; line-height:1.5;}
+
+  main{max-width:780px; margin:0 auto; padding:22px 14px 40px;}
+  .link-list{display:grid; gap:12px;}
+
+  .link-card{display:flex; align-items:center; gap:16px; background:#fff; border:1px solid var(--rule); border-left:5px solid var(--brass); border-radius:10px; padding:16px 18px; text-decoration:none; color:inherit; transition:box-shadow 0.15s ease, border-color 0.15s ease;}
+  .link-card:hover{box-shadow:0 3px 10px rgba(19,35,57,0.12); border-color:var(--brass);}
+  .link-card:focus-visible{outline:2px solid var(--brass); outline-offset:2px;}
+
+  .link-icon{flex:none; position:relative; width:52px; height:52px; border-radius:10px; background:var(--paper-dim); border:1px solid var(--rule); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Serif', serif; font-weight:700; font-size:22px; color:var(--navy); overflow:hidden;}
+  .link-icon img{position:absolute; inset:0; width:100%; height:100%; padding:9px; object-fit:contain; background:#fff;}
+
+  .link-text{flex:1; min-width:0;}
+  .link-title{font-family:'IBM Plex Serif', serif; font-weight:600; font-size:16px; line-height:1.25;}
+  .link-domain{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); display:block; margin-top:2px; overflow-wrap:anywhere;}
+  .link-desc{font-size:13px; line-height:1.55; color:var(--ink); margin-top:6px;}
+  .link-arrow{flex:none; font-size:18px; color:var(--brass);}
+
+  footer{text-align:center; padding:26px 14px 12px; font-size:11px; color:var(--ink-soft);}
+
+  @media (min-width:600px){ .hero h1{font-size:26px;} }
+  @media (max-width:420px){
+    .link-card{padding:14px 12px; gap:12px;}
+    .link-icon{width:44px; height:44px; font-size:19px;}
+    .link-arrow{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Fort Worth PD Academy &middot; BPOC Study Hub</p>
+      <h1>Useful Links</h1>
+    </div>
+    <a class="back" href="index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">Outside sites the class uses alongside this study guide. Each link opens in a new tab.</p>
+</header>
+
+<main>
+  <div class="link-list">
+
+    <a class="link-card" href="https://law.justia.com/" target="_blank" rel="noopener">
+      <span class="link-icon">J<img src="https://www.google.com/s2/favicons?domain=law.justia.com&amp;sz=128" alt="" loading="lazy" onerror="this.remove()"></span>
+      <span class="link-text">
+        <span class="link-title">Justia Law</span>
+        <span class="link-domain">law.justia.com</span>
+        <span class="link-desc">Free, searchable case law and statutes. Useful for pulling up the full text of a court opinion cited in the Case Law reference.</span>
+      </span>
+      <span class="link-arrow" aria-hidden="true">&#8599;</span>
+    </a>
+
+    <a class="link-card" href="https://statutes.capitol.texas.gov/" target="_blank" rel="noopener">
+      <span class="link-icon">T<img src="https://www.google.com/s2/favicons?domain=statutes.capitol.texas.gov&amp;sz=128" alt="" loading="lazy" onerror="this.remove()"></span>
+      <span class="link-text">
+        <span class="link-title">Texas Statutes</span>
+        <span class="link-domain">statutes.capitol.texas.gov</span>
+        <span class="link-desc">The Texas Legislature's official statutes site. Current text of the Penal Code, Code of Criminal Procedure, Transportation Code, and the rest of the Texas codes.</span>
+      </span>
+      <span class="link-arrow" aria-hidden="true">&#8599;</span>
+    </a>
+
+    <a class="link-card" href="https://www.tarrantcountytx.gov/en/criminal-district-attorney/this-week-s-trials.html" target="_blank" rel="noopener">
+      <span class="link-icon">TC<img src="https://www.google.com/s2/favicons?domain=tarrantcountytx.gov&amp;sz=128" alt="" loading="lazy" onerror="this.remove()"></span>
+      <span class="link-text">
+        <span class="link-title">Tarrant County DA &mdash; This Week's Trials</span>
+        <span class="link-domain">tarrantcountytx.gov</span>
+        <span class="link-desc">The Criminal District Attorney's weekly list of trials in the District/Criminal Courts and County Courts, with court, charge, and status.</span>
+      </span>
+      <span class="link-arrow" aria-hidden="true">&#8599;</span>
+    </a>
+
+  </div>
+</main>
+
+<footer>Links go to outside sites that are not run by this study guide &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="assets/site-nav.js" defer></script>
+</body>
+</html>

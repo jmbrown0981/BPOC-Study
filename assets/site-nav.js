@@ -9,7 +9,8 @@
     {href: 'flashcards.html', label: 'Flashcards'},
     {href: 'alt-quiz.html',   label: 'Alt Quiz'},
     {href: 'case-law.html',   label: 'Case Law'},
-    {href: 'codes.html',      label: 'Texas Codes'}
+    {href: 'codes.html',      label: 'Texas Codes'},
+    {href: 'links.html',      label: 'Useful Links'}
   ];
 
   var script = document.currentScript;
