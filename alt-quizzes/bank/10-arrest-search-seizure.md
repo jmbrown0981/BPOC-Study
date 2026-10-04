@@ -1883,3 +1883,14 @@ CCP Art. 56A.052 provides additional rights beyond the general baseline, specifi
 **Explanation:** Art. 56A.052 layers additional, offense-specific rights (such as disclosure regarding forensic evidence testing and DNA comparisons) on top of the general rights in Art. 56A.051, targeted at victims of particularly serious offenses like those enumerated under Penal Code Secs. 21.02, 21.11, 22.011, 22.012, and 22.021.
 
 ---
+
+### Q134 — Term ID
+**LO:** 10.7 · **Source:** Sec. 22.033 Estates Code
+
+**Answer:** Ward
+
+"_________" means a person for whom a guardian has been appointed.
+
+**Explanation:** This is the definition of "Ward" as supplied by Sec. 22.033 Estates Code.
+
+---

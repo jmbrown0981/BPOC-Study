@@ -66,11 +66,12 @@
   // A: "FC 51.02(a)", "CCP Art. 2A.001, 2A.002", "Penal Code Section 22.01"
   var RE_A = new RegExp('\\b(' + ANY_RE + ')[,.]?\\s+' + PRE + '(' + SEC + ')(' + SUB + ')' + TAIL, 'g');
   // B: "Section 22.01, Penal Code", "Article 2A.001 of the Code of Criminal Procedure"
-  var RE_B = new RegExp('\\b(?:Arts?\\.?|Articles?|Secs?\\.?|Sections?)\\s*(' + SEC + ')(' + SUB + '),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b', 'g');
+  // B and D ignore case so all-caps statute text ("SECTION 1.07, PENAL CODE") links too
+  var RE_B = new RegExp('\\b(?:Arts?\\.?|Articles?|Secs?\\.?|Sections?)\\s*(' + SEC + ')(' + SUB + '),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b','gi');
   // C: "Family Code Chapter 51", "FC Ch. 52"
   var RE_C = new RegExp('\\b(' + ANY_RE + ')[,.]?\\s+(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?)\\b', 'g');
   // D: "Chapter 573, Health and Safety Code"
-  var RE_D = new RegExp('\\b(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b', 'g');
+  var RE_D = new RegExp('\\b(?:Chapter|Ch\\.)\\s*(\\d+[A-Za-z]?),?\\s+(?:of\\s+the\\s+)?(' + LONG_RE + ')\\b','gi');
   var RE_SEC_G = new RegExp(SEC, 'g');
 
   // Context pass tokens (one left-to-right scan). Groups:

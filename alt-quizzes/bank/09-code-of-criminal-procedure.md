@@ -895,3 +895,49 @@ Taken together, this chapter's sexual assault investigation articles reflect a c
 - [ ] Eliminating any role for victim advocacy organizations in the investigative process
 
 **Explanation:** Each article in this LO reinforces a version of the same idea: victims aren't required to prove credibility via polygraph, they're entitled to support during interviews and exams, their identity can be shielded from public disclosure, and officers have affirmative duties to inform them of all of this — consistent with the broader victim-centered approach running through Chapters 7B and 56A.
+
+---
+
+### Q64 — Term ID
+**LO:** 9.4 · **Source:** Sec. 71.003 Family Code
+
+**Answer:** Family
+
+"_________" includes individuals related by consanguinity or affinity, as determined under Sections 573.022 and 573.024, Government Code, individuals who are former spouses of each other, individuals who are the parents of the same child, without regard to marriage, and a foster child and foster parent, without regard to whether those individuals reside together.
+
+**Explanation:** This is the definition of "Family" as supplied by Sec. 71.003 Family Code.
+
+---
+
+### Q65 — Term ID
+**LO:** 9.4 · **Source:** Sec. 71.004 Family Code
+
+**Answer:** Family Violence
+
+"_________" means: (1) an act by a member of a family or household against another member of the family or household that is intended to result in physical harm, bodily injury, assault, or sexual assault or that is a threat that reasonably places the member in fear of imminent physical harm, bodily injury, assault, or sexual assault, but does not include defensive measures to protect oneself; (2) abuse, as that term is defined by Sections 261.001(1)(C), (E), (G), (H), (I), (J), (K), and (M), by a member of a family or household toward a child of the family or household; or (3) dating violence, as that term is defined by Section 71.0021.
+
+**Explanation:** This is the definition of "Family Violence" as supplied by Sec. 71.004 Family Code.
+
+---
+
+### Q66 — Term ID
+**LO:** 9.4 · **Source:** Sec. 71.005 Family Code
+
+**Answer:** Household
+
+"_________" means a unit composed of persons living together in the same dwelling, without regard to whether they are related to each other.
+
+**Explanation:** This is the definition of "Household" as supplied by Sec. 71.005 Family Code.
+
+---
+
+### Q67 — Term ID
+**LO:** 9.4 · **Source:** Sec. 71.006 Family Code
+
+**Answer:** Member of a Household
+
+"_________" includes a person who previously lived in a household.
+
+**Explanation:** This is the definition of "Member of a Household" as supplied by Sec. 71.006 Family Code.
+
+---

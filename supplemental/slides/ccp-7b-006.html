@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>CCP Art. 7B.006 – Warning on Protective Order | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: warning matrix (7B.006) and the mock protective order */
+.trigger{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:4px 0 12px;}
+table.warn{width:100%; border-collapse:collapse; font-size:13px; margin:4px 0 12px;}
+table.warn th{background:var(--navy); color:#fff; text-align:left; padding:7px 10px; font-weight:600;}
+table.warn th.c{text-align:center; width:96px;}
+table.warn td{padding:8px 10px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.45;}
+table.warn td.c{text-align:center; font-weight:700; font-size:16px;}
+table.warn td.c.yes{color:var(--green);} table.warn td.c.no{color:var(--rust);}
+table.warn .w{font-weight:700; text-transform:uppercase; font-size:12.2px; color:var(--navy); letter-spacing:0.01em;}
+table.warn .sub{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass); display:block; margin-bottom:2px;}
+table.warn .why{display:block; margin-top:4px; font-size:12.5px; color:var(--ink-soft);}
+
+/* mock document */
+.disclaimer{background:#FBEDE7; border:2px solid var(--rust); border-radius:9px; padding:9px 14px; margin:0 0 14px; font-size:13.5px; line-height:1.5; color:#5a2414;}
+.disclaimer b{color:var(--rust); letter-spacing:0.03em;}
+.mock-wrap{background:var(--paper-dim); border-radius:10px; padding:16px; margin-bottom:10px;}
+.notice{position:relative; max-width:740px; margin:0 auto; background:#fff; border:1px solid var(--rule); box-shadow:0 2px 10px rgba(19,35,57,0.10); padding:26px 32px 22px; font-family:'IBM Plex Serif',serif; font-size:13.6px; line-height:1.55; color:var(--ink); overflow:hidden;}
+.notice::after{content:""; position:absolute; inset:0; pointer-events:none; background-repeat:repeat; background-size:420px 300px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300'%3E%3Ctext x='210' y='150' text-anchor='middle' transform='rotate(-24 210 150)' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='26' letter-spacing='2' fill='%23A6472E' fill-opacity='0.10'%3ESAMPLE %C2%B7 NOT AN OFFICIAL FORM%3C/text%3E%3C/svg%3E");}
+.notice .court{text-align:center; font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; color:var(--ink-soft); line-height:1.5;}
+.notice .court b{color:var(--navy); font-size:13.5px;}
+.notice .caption{display:grid; grid-template-columns:1fr auto 1fr; gap:10px; align-items:center; margin:12px 0; padding:10px 0; border-top:2px solid var(--navy); border-bottom:2px solid var(--navy); font-family:'IBM Plex Sans',sans-serif; font-size:12.5px;}
+.notice .caption .mid{font-weight:700; color:var(--navy); text-align:center;}
+.notice .caption small{display:block; color:var(--ink-soft);}
+.notice h3{text-align:center; font-family:'IBM Plex Sans',sans-serif; font-size:17px; letter-spacing:0.08em; color:var(--navy); margin:6px 0 4px;}
+.notice .h3sub{text-align:center; font-family:'IBM Plex Sans',sans-serif; font-size:11.5px; color:var(--ink-soft); margin:0 0 10px !important;}
+.notice h4{font-family:'IBM Plex Sans',sans-serif; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy); margin:14px 0 6px; border-bottom:1px solid var(--rule); padding-bottom:3px;}
+.notice p{margin:0 0 8px !important;}
+.notice .fill{font-family:'IBM Plex Sans',sans-serif; font-size:12.3px; background:#FFF6D8; border-bottom:1px solid var(--amber); padding:0 4px; color:#5c4810;}
+.notice .box{display:inline-block; text-indent:0; width:13px; height:13px; border:1.5px solid var(--ink); border-radius:2px; vertical-align:-2px; margin-right:6px; text-align:center; line-height:10px; font-size:12px; font-weight:700; font-family:'IBM Plex Sans',sans-serif;}
+.notice ul.opts{list-style:none; margin:0 0 8px; padding:0;}
+.notice ul.opts li{padding:3px 0 3px 22px; text-indent:-22px;}
+.notice ul.opts li.sub{padding-left:44px;}
+.ann{font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:700; color:#fff; background:var(--brass); border-radius:4px; padding:0 4px; margin-left:4px; vertical-align:1px; white-space:nowrap; text-indent:0;}
+.warnings{border:3px double var(--navy); padding:12px 14px 6px; margin:14px 0 10px;}
+.warnings p{font-weight:700; text-transform:uppercase; font-family:'IBM Plex Sans',sans-serif; font-size:12.6px; line-height:1.5; letter-spacing:0.01em;}
+.warnings .head{text-align:center; letter-spacing:0.1em; color:var(--navy);}
+.notice .sig{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:18px; font-family:'IBM Plex Sans',sans-serif; font-size:12px; color:var(--ink-soft);}
+.notice .sig span.l{display:block; border-bottom:1px solid var(--ink); height:24px; margin-bottom:3px;}
+.notice .foot{margin-top:14px; padding-top:8px; border-top:1px solid var(--rule); font-family:'IBM Plex Sans',sans-serif; font-size:11px; color:var(--ink-soft);}
+.key{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:12.5px; color:var(--ink-soft); margin:0 0 10px;}
+.key .fill{font-family:'IBM Plex Sans',sans-serif; font-size:12px; background:#FFF6D8; border-bottom:1px solid var(--amber); padding:0 4px; color:#5c4810;}
+@media (max-width:760px){
+  .trigger{grid-template-columns:1fr;}
+  table.warn th.c{width:auto;}
+  .mock-wrap{padding:8px; margin-left:-6px; margin-right:-6px;}
+  .notice{padding:18px 14px 16px; font-size:13.2px;}
+  .notice .caption{grid-template-columns:1fr; text-align:center;}
+  .notice .sig{grid-template-columns:1fr; gap:10px;}
+  .notice ul.opts li.sub{padding-left:30px;}
+}
+@media print{ .notice::after{opacity:1.5;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Code of Criminal Procedure &middot; Slides</p>
+      <h1>CCP Art. 7B.006 — Warning on Protective Order</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 9.7 &mdash; the warnings every Chapter 7B protective order must carry, which ones go on a temporary ex parte order, why they matter to the officer enforcing the order, and a sample order built from the statute.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Code of Criminal Procedure &middot; Chapter 7B &middot; Subchapter A</p>
+    <h2 class="big">Protective Orders:<br>The Required Warnings</h2>
+    <p class="lede">A Chapter 7B protective order protects victims of certain sexual assault, indecent assault, stalking, trafficking, and burglary offenses, whatever their relationship to the offender. Art. 7B.006 requires every one of these orders to warn the respondent, in plain view, what happens if they violate it.</p>
+    <div class="trigger">
+      <div class="callout def"><b>How it must look.</b> The warnings must be <b>prominently displayed</b> in <b>boldfaced type</b>, in <b>capital letters</b>, or <b>underlined</b>. <span class="tag">7B.006</span></div>
+      <div class="callout def"><b>Which orders.</b> Three warnings go on <b>every</b> order, including a <b>temporary ex parte</b> order. A fourth goes on every order <b>except</b> an ex parte order. <span class="tag">7B.006(a), (b)</span></div>
+    </div>
+    <div class="callout"><b>Why the officer cares:</b> violating the order is an offense under <b>Penal Code 25.07</b> (generally a Class A misdemeanor), and possessing a firearm while subject to the order is an offense under <b>Penal Code 46.04(c)</b>. The warnings put the respondent on notice of both.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=7B&amp;sec=7B.006" target="bpoc-codes">Open Art. 7B.006 in Texas Codes &#8599;</a>
+    <a class="codes" href="../../codes.html?code=PE&amp;ch=25&amp;sec=25.07" target="bpoc-codes">Open Penal Code 25.07 &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== WARNINGS ===================== -->
+<section class="slide" data-key="warnings" data-dot="Warnings" aria-label="7B.006 — The four warnings">
+  <div class="slide-head"><span class="sub-badge">(a)&ndash;(b)</span><div><p class="kicker">Which warning goes where</p><h2>The four required warnings</h2></div></div>
+  <div class="slide-body">
+    <table class="warn">
+      <tr><th>Warning (exact text)</th><th class="c">Ex parte order</th><th class="c">Protective order</th></tr>
+      <tr><td><span class="sub">(a) &middot; Contempt</span><span class="w">A person who violates this order may be punished for contempt of court by a fine of as much as $500 or by confinement in jail for as long as six months, or both.</span><span class="why">The court that issued the order can punish a violation directly.</span></td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+      <tr><td><span class="sub">(a) &middot; No one can give permission</span><span class="w">No person, including a person who is protected by this order, may give permission to anyone to ignore or violate any provision of this order. During the time in which this order is valid, every provision of this order is in full force and effect unless a court changes the order.</span><span class="why">An invitation from the protected person is no defense. Penal Code 25.07(d): reconciliation does not affect the order or the officer&rsquo;s duty to enforce it.</span></td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+      <tr><td><span class="sub">(a) &middot; Firearms</span><span class="w">It is unlawful for any person, other than a peace officer, as defined by Section 1.07, Penal Code, actively engaged in employment as a sworn, full-time paid employee of a state agency or political subdivision, who is subject to a protective order to possess a firearm or ammunition.</span><span class="why">Ties to Penal Code 46.04(c), a Class A misdemeanor. The only exception is a peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision.</span></td><td class="c yes">&#10003;</td><td class="c yes">&#10003;</td></tr>
+      <tr><td><span class="sub">(b) &middot; Criminal penalty</span><span class="w">A violation of this order by commission of an act prohibited by the order may be punishable by a fine of as much as $4,000 or by confinement in jail for as long as one year, or both. An act that results in a separate offense may be prosecuted as a separate offense in addition to a violation of this order.</span><span class="why">The Class A range for Penal Code 25.07. Not required on an ex parte order.</span></td><td class="c no">&#10007;</td><td class="c yes">&#10003;</td></tr>
+    </table>
+    <div class="callout"><b>Remember the split:</b> $500 / 6 months is <b>contempt</b> (the court). $4,000 / 1 year is the <b>criminal</b> penalty (a new charge). An act that is also another crime, such as an assault, can be charged <b>separately</b>.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 7B.006</summary><div class="statute">
+    <p>Art. 7B.006. WARNING ON PROTECTIVE ORDER. (a) Each protective order issued under this subchapter, including a temporary ex parte order, must contain the following prominently displayed statements in boldfaced type, in capital letters, or underlined:</p>
+    <p class="ind1">"A PERSON WHO VIOLATES THIS ORDER MAY BE PUNISHED FOR CONTEMPT OF COURT BY A FINE OF AS MUCH AS $500 OR BY CONFINEMENT IN JAIL FOR AS LONG AS SIX MONTHS, OR BOTH."</p>
+    <p class="ind1">"NO PERSON, INCLUDING A PERSON WHO IS PROTECTED BY THIS ORDER, MAY GIVE PERMISSION TO ANYONE TO IGNORE OR VIOLATE ANY PROVISION OF THIS ORDER. DURING THE TIME IN WHICH THIS ORDER IS VALID, EVERY PROVISION OF THIS ORDER IS IN FULL FORCE AND EFFECT UNLESS A COURT CHANGES THE ORDER."</p>
+    <p class="ind1">"IT IS UNLAWFUL FOR ANY PERSON, OTHER THAN A PEACE OFFICER, AS DEFINED BY SECTION 1.07, PENAL CODE, ACTIVELY ENGAGED IN EMPLOYMENT AS A SWORN, FULL-TIME PAID EMPLOYEE OF A STATE AGENCY OR POLITICAL SUBDIVISION, WHO IS SUBJECT TO A PROTECTIVE ORDER TO POSSESS A FIREARM OR AMMUNITION."</p>
+    <p>(b) Each protective order issued under this subchapter, except for a temporary ex parte order, must contain the following prominently displayed statement in boldfaced type, in capital letters, or underlined:</p>
+    <p class="ind1">"A VIOLATION OF THIS ORDER BY COMMISSION OF AN ACT PROHIBITED BY THE ORDER MAY BE PUNISHABLE BY A FINE OF AS MUCH AS $4,000 OR BY CONFINEMENT IN JAIL FOR AS LONG AS ONE YEAR, OR BOTH. AN ACT THAT RESULTS IN A SEPARATE OFFENSE MAY BE PROSECUTED AS A SEPARATE OFFENSE IN ADDITION TO A VIOLATION OF THIS ORDER."</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== SAMPLE ORDER ===================== -->
+<section class="slide" data-key="sample-order" data-dot="Sample" aria-label="Sample protective order (mockup)">
+  <div class="slide-head"><span class="sub-badge">Ch. 7B</span><div><p class="kicker">Visual aid</p><h2>Sample protective order</h2></div></div>
+  <div class="slide-body">
+    <div class="disclaimer"><b>DISCLAIMER:</b> This is <b>NOT</b> an official Fort Worth Police Department document, a real court order, or the standardized form courts must use. It is a mockup built from CCP Arts. 7B.003&ndash;7B.007, made only as a visual aid for study.</div>
+    <p class="key"><span>The boxed warnings are the exact text of Art. 7B.006.</span><span><span class="fill">[Highlighted]</span> = information the court fills in.</span><span><span class="ann" style="margin-left:0;">7B.005</span> tags = study notes, not part of an order.</span></p>
+    <div class="mock-wrap">
+      <div class="notice" role="document" aria-label="Sample protective order">
+        <div class="court">CAUSE NO. <span class="fill">[__________]</span><br><b>IN THE <span class="fill">[__________]</span> COURT OF <span class="fill">[__________]</span> COUNTY, TEXAS</b></div>
+        <div class="caption">
+          <div><b>In re:</b> <span class="fill">[Applicant name]</span><small>Applicant</small></div>
+          <div class="mid">v.</div>
+          <div><span class="fill">[Respondent name]</span><small>Respondent &middot; DOB <span class="fill">[__/__/____]</span></small></div>
+        </div>
+        <h3>PROTECTIVE ORDER</h3>
+        <p class="h3sub">Code of Criminal Procedure, Chapter 7B, Subchapter A</p>
+        <ul class="opts">
+          <li><span class="box"></span>Temporary Ex Parte Order (no notice or hearing) <span class="ann">7B.002</span></li>
+          <li><span class="box">&#10003;</span>Protective Order issued after a hearing <span class="ann">7B.003</span></li>
+        </ul>
+
+        <h4>Findings</h4>
+        <p>After a hearing, the Court finds that there are reasonable grounds to believe that the Applicant is the victim of the following offense listed in Article 7B.001(a)(1) or (2): <span class="fill">[offense and Penal Code section]</span>. <span class="ann">7B.003(b)</span></p>
+
+        <h4>Orders</h4>
+        <p>IT IS ORDERED that Respondent is <b>PROHIBITED</b> from: <span class="ann">7B.005(a)(2)</span></p>
+        <ul class="opts">
+          <li><span class="box">&#10003;</span>communicating directly or indirectly with the Applicant or any member of the Applicant&rsquo;s family or household in a threatening or harassing manner;</li>
+          <li><span class="box"></span>communicating in any manner with the Applicant or any member of the Applicant&rsquo;s family or household except through the Applicant&rsquo;s attorney or a person appointed by the Court;</li>
+          <li><span class="box">&#10003;</span>going to or near the following locations, and staying at least <span class="fill">[___ feet]</span> away: <span class="ann">7B.005(b)</span></li>
+          <li class="sub">Residence: <span class="fill">[address]</span> &nbsp; Employment / business: <span class="fill">[address]</span> &nbsp; Child-care facility or school: <span class="fill">[name / address]</span></li>
+          <li><span class="box">&#10003;</span>engaging in conduct directed specifically toward the Applicant or any member of the Applicant&rsquo;s family or household, including following the person, that is reasonably likely to harass, annoy, alarm, abuse, torment, or embarrass the person;</li>
+          <li><span class="box">&#10003;</span>possessing a firearm, unless Respondent is a peace officer actively engaged in employment as a sworn, full-time paid employee of a state agency or political subdivision;</li>
+          <li><span class="box">&#10003;</span>tracking or monitoring personal property or a motor vehicle in the possession of the Applicant or a member of the Applicant&rsquo;s family or household without the Applicant&rsquo;s effective consent, including by a tracking application or device, or by physically following the person or causing another to follow them.</li>
+        </ul>
+        <ul class="opts">
+          <li><span class="box"></span>Respondent&rsquo;s license to carry a handgun is <b>SUSPENDED</b>. <span class="ann">7B.005(c)</span></li>
+          <li><span class="box"></span>Respondent shall also: <span class="fill">[other action the Court finds necessary to prevent future harm]</span> <span class="ann">7B.005(a)(1)</span></li>
+        </ul>
+
+        <h4>Duration</h4>
+        <ul class="opts">
+          <li><span class="box"></span>This order is effective for the duration of the lives of the Respondent and the Applicant. <span class="ann">7B.007(a), (a-1)</span></li>
+          <li><span class="box">&#10003;</span>This order is effective until <span class="fill">[date]</span>.</li>
+        </ul>
+        <p style="font-size:12.3px; color:var(--ink-soft);"><i>If no period is stated, the order is effective until the second anniversary of the date it was issued. <span class="ann">7B.007(a)</span></i></p>
+
+        <div class="warnings" aria-label="Required warnings">
+          <p class="head">WARNINGS <span class="ann" style="text-transform:none; letter-spacing:0;">7B.006</span></p>
+          <p>A PERSON WHO VIOLATES THIS ORDER MAY BE PUNISHED FOR CONTEMPT OF COURT BY A FINE OF AS MUCH AS $500 OR BY CONFINEMENT IN JAIL FOR AS LONG AS SIX MONTHS, OR BOTH. <span class="ann">(a)</span></p>
+          <p>NO PERSON, INCLUDING A PERSON WHO IS PROTECTED BY THIS ORDER, MAY GIVE PERMISSION TO ANYONE TO IGNORE OR VIOLATE ANY PROVISION OF THIS ORDER. DURING THE TIME IN WHICH THIS ORDER IS VALID, EVERY PROVISION OF THIS ORDER IS IN FULL FORCE AND EFFECT UNLESS A COURT CHANGES THE ORDER. <span class="ann">(a)</span></p>
+          <p>IT IS UNLAWFUL FOR ANY PERSON, OTHER THAN A PEACE OFFICER, AS DEFINED BY SECTION 1.07, PENAL CODE, ACTIVELY ENGAGED IN EMPLOYMENT AS A SWORN, FULL-TIME PAID EMPLOYEE OF A STATE AGENCY OR POLITICAL SUBDIVISION, WHO IS SUBJECT TO A PROTECTIVE ORDER TO POSSESS A FIREARM OR AMMUNITION. <span class="ann">(a)</span></p>
+          <p>A VIOLATION OF THIS ORDER BY COMMISSION OF AN ACT PROHIBITED BY THE ORDER MAY BE PUNISHABLE BY A FINE OF AS MUCH AS $4,000 OR BY CONFINEMENT IN JAIL FOR AS LONG AS ONE YEAR, OR BOTH. AN ACT THAT RESULTS IN A SEPARATE OFFENSE MAY BE PROSECUTED AS A SEPARATE OFFENSE IN ADDITION TO A VIOLATION OF THIS ORDER. <span class="ann">(b) &middot; omitted on an ex parte order</span></p>
+        </div>
+
+        <div class="sig">
+          <div><span class="l"></span>Judge Presiding &middot; <span class="fill">[name]</span></div>
+          <div><span class="l"></span>Date signed &middot; <span class="fill">[__/__/____]</span></div>
+        </div>
+        <div class="foot">Sample prepared for BPOC study &middot; Not valid for any purpose &middot; Real orders use the standardized form created by the Office of Court Administration (Arts. 7B.0021, 7B.003(d)).</div>
+      </div>
+    </div>
+    <div class="callout"><b>Reading an order on scene:</b> check the <b>type</b> (ex parte or after a hearing), the <b>dates</b> it is in effect, and <b>exactly what is prohibited</b>, including each listed location and distance. Penal Code 25.07 applies only to conduct the order actually prohibits, and the protected person cannot be arrested for violating it (25.07(e)).</div>
+  </div>
+  <div class="slide-foot">
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=7B&amp;sec=7B.005" target="bpoc-codes">Open Art. 7B.005 (conditions) &#8599;</a>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=7B&amp;sec=7B.007" target="bpoc-codes">Open Art. 7B.007 (duration) &#8599;</a>
+  </div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>CCP Art. 7B.006 slides &middot; Text current through the 2025 89th Leg., R.S. amendments &middot; Sample order is a study mockup, not an official, court, or FWPD document &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  // the mock order is left alone so it reads like a printed form
+  document.querySelectorAll('.slide-body > .trigger, .slide-body > .callout, .slide-body > .lede, table.warn .why, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>

@@ -1295,3 +1295,14 @@ A person sells $200 of marijuana from a car worth $60,000, and the State seeks t
 **Explanation:** The term is not defined in the Asset Forfeiture chapter or the CCP section it references, but is defined as such in the Merriam-Webster dictionary.
 
 ---
+
+### Q93 — Term ID
+**LO:** 11.7 · **Source:** https://dictionary.law.com/default.aspx?selected=1172
+
+**Answer:** lis pendens
+
+"_________" means: Latin for "a suit pending," a written notice that a lawsuit has been filed which concerns the title to real property or some interest in that real property. The lis pendens (or notice of pending action) is filed with the clerk of the court, certified that it has been filed, and then recorded with the County Recorder. This gives notice to the defendant who owns real estate that there is a claim on the property, and the recording informs the general public (and particularly anyone interested in buying or financing the property) that there is this potential claim against it. The lis pendens must include a legal description of the real property, and the lawsuit must involve the property. Otherwise, if there is a petition to remove the lis pendens from real property not involved in the lawsuit, the plaintiff who originally recorded a false lis pendens will be subject to payment of attorney's fees as a penalty. Example: Joe Plumbob provides work and materials to Smith's home, sues to enforce a mechanic's lien, but records a lis pendens describing three other properties owned by Smith; Plumbob can be penalized by court order.
+
+**Explanation:** The term is not defined in the Asset Forfeiture chapter or the CCP section it references, but is defined as such at dictionary.law.com.
+
+---

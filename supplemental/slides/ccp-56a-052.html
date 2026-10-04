@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>CCP Art. 56A.052 – Additional Victim Rights | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: rights bundles, coverage matrix, evidence timeline, scenario checks */
+.bundles{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:4px 0 12px;}
+.bundle{border:1px solid var(--rule); border-radius:10px; padding:11px 13px; background:#fff; border-top:4px solid var(--navy);}
+.bundle.d{border-top-color:var(--brass);} .bundle.e{border-top-color:var(--green);}
+.bundle .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--ink-soft);}
+.bundle h3{margin:2px 0 5px; font-family:'IBM Plex Serif',serif; font-size:15.5px; color:var(--navy);}
+.bundle p{margin:0 !important; font-size:13.2px; line-height:1.5;}
+
+table.cover{width:100%; border-collapse:collapse; font-size:13px; margin:4px 0 10px;}
+table.cover th{background:var(--navy); color:#fff; text-align:left; padding:7px 9px; font-weight:600; vertical-align:bottom;}
+table.cover th.c{text-align:center; width:108px; line-height:1.25;}
+table.cover th.c small{display:block; font-weight:500; font-size:10.5px; color:var(--brass-light);}
+table.cover td{padding:7px 9px; border-bottom:1px solid var(--rule); vertical-align:middle;}
+table.cover td.pc{font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:700; color:var(--ink-soft); white-space:nowrap; width:90px;}
+table.cover td.c{text-align:center; font-size:16px; font-weight:700;}
+table.cover td.c.y{color:var(--green);} table.cover td.c.n{color:#cfc6ab;}
+table.cover tr.grp td{background:var(--paper); font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--brass); padding:4px 9px; text-transform:uppercase;}
+table.cover .pcm{display:none;}
+table.cover tr.none td{color:var(--ink-soft); font-style:italic;}
+.pill{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; border-radius:5px; padding:0 5px; margin-left:4px; vertical-align:1px; border:1px solid currentColor;}
+.pill.req{color:var(--amber);} .pill.auto{color:var(--green);}
+
+.flow .step{font-size:13px;}
+.flow .step .code{display:block; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass);}
+.flow .step.hot .code{color:var(--brass-light);}
+.exc{font-size:12.8px; color:var(--ink-soft); margin:-6px 0 10px !important;}
+
+.fork{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:2px 0 10px;}
+.methods{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:4px 0 12px;}
+.method{border:1px solid var(--rule); border-radius:10px; padding:9px 10px; background:var(--paper); text-align:center; font-size:12.8px; line-height:1.4;}
+.method b{display:block; font-family:'IBM Plex Serif',serif; font-size:14px; color:var(--navy); margin-bottom:2px;}
+
+.checks{display:grid; gap:8px; margin:4px 0 8px;}
+.checks details{border:1px solid var(--rule); border-radius:10px; background:#fff; padding:9px 13px;}
+.checks summary{cursor:pointer; font-size:13.8px; line-height:1.5; list-style:none;}
+.checks summary::-webkit-details-marker{display:none;}
+.checks summary::before{content:"Q" counter(q) "  "; counter-increment:q; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:12px;}
+.checks{counter-reset:q;}
+.checks summary .show{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:999px; padding:0 8px; margin-left:8px;}
+.checks details[open] summary .show{background:var(--navy); color:#fff;}
+.checks .ans{margin-top:7px; padding-top:7px; border-top:1px dotted var(--rule); font-size:13.4px; line-height:1.55;}
+.checks .ans b.v{color:var(--green);} .checks .ans b.x{color:var(--rust);}
+
+@media (max-width:900px){ .methods{grid-template-columns:1fr 1fr;} }
+@media (max-width:760px){
+  .bundles, .fork{grid-template-columns:1fr;}
+  table.cover th.c{width:auto; font-size:11.5px; padding:6px 4px;}
+  table.cover td{padding:6px 5px;}
+  table.cover td.pc{width:auto; font-size:10.5px;}
+  table.cover th.c small, table.cover .lg, table.cover td.pc, table.cover th.pc{display:none;}
+  table.cover th.c{width:34px;}
+  table.cover .pcm{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--ink-soft); margin-top:1px;}
+  table.cover tr.grp td{font-size:9.5px;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Code of Criminal Procedure &middot; Slides</p>
+      <h1>CCP Art. 56A.052 — Additional Rights of Victims of Certain Sexual, Trafficking, or Burglary Offenses</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 9.8 &mdash; which victims get these extra rights, what each bundle of rights covers, how victims are notified, and a set of quick scenario checks. These rights are on top of the general crime-victim rights in Art. 56A.051.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Code of Criminal Procedure &middot; Chapter 56A &middot; Subchapter B</p>
+    <h2 class="big">Three Bundles of<br>Extra Victim Rights</h2>
+    <p class="lede">Art. 56A.052 gives victims of certain sexual, trafficking, stalking, and burglary offenses rights beyond the general list in Art. 56A.051. Which bundle applies depends on the offense.</p>
+    <div class="bundles">
+      <div class="bundle"><span class="lbl">SUBSECTIONS (a)&ndash;(c)</span><h3>Evidence, prosecution &amp; medical</h3><p>Updates on evidence, lab requests, and DNA database comparisons; conferring with the prosecutor; HIV counseling and testing; the forensic exam and follow-up care.</p></div>
+      <div class="bundle d"><span class="lbl">SUBSECTION (d)</span><h3>Protective order information</h3><p>Being told about a Chapter 7B protective order, where to apply, and that the prosecutor can file for them, and generally must after a conviction.</p></div>
+      <div class="bundle e"><span class="lbl">SUBSECTION (e)</span><h3>Nondisclosure for trafficking victims</h3><p>Being told they may petition to seal a criminal record for an offense they committed <b>solely</b> because they were trafficked.</p></div>
+    </div>
+    <div class="callout def"><b>Who holds the rights:</b> the victim, the victim&rsquo;s guardian, or a close relative of a deceased victim. In (d), a parent or guardian acts for a victim who is under 18 or an adult ward. Most rights in (a) apply <b>only if requested</b>; the medical rights in (a)(5) belong to the <b>victim</b> without a request.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.052" target="bpoc-codes">Open Art. 56A.052 in Texas Codes &#8599;</a>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.051" target="bpoc-codes">Open Art. 56A.051 (general rights) &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== COVERAGE ===================== -->
+<section class="slide" data-key="who" data-dot="Who" aria-label="Which offenses get which rights">
+  <div class="slide-head"><span class="sub-badge">Coverage</span><div><p class="kicker">Match the offense to the bundle</p><h2>Which victims get which rights</h2></div></div>
+  <div class="slide-body">
+    <table class="cover">
+      <tr><th>Offense</th><th class="pc">Penal Code</th><th class="c">(a)<span class="lg"> Evidence &amp; medical</span><small>sexual offenses</small></th><th class="c">(d)<span class="lg"> Protective order info</span><small>Art. 7B.001 offenses</small></th><th class="c">(e)<span class="lg"> Nondisclosure</span><small>trafficking</small></th></tr>
+      <tr class="grp"><td colspan="5">Sexual offenses</td></tr>
+      <tr><td>Continuous sexual abuse of a young child<span class="pcm">PC 21.02</span></td><td class="pc">21.02</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr><td>Indecency with a child<span class="pcm">PC 21.11</span></td><td class="pc">21.11</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr><td>Sexual assault<span class="pcm">PC 22.011</span></td><td class="pc">22.011</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr><td>Indecent assault<span class="pcm">PC 22.012</span></td><td class="pc">22.012</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr><td>Aggravated sexual assault<span class="pcm">PC 22.021</span></td><td class="pc">22.021</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr class="grp"><td colspan="5">Trafficking &amp; prostitution</td></tr>
+      <tr><td>Trafficking of persons<span class="pcm">PC 20A.02</span></td><td class="pc">20A.02</td><td class="c n">&ndash;</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td></tr>
+      <tr><td>Continuous trafficking of persons<span class="pcm">PC 20A.03</span></td><td class="pc">20A.03</td><td class="c n">&ndash;</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td></tr>
+      <tr><td>Compelling prostitution<span class="pcm">PC 43.05</span></td><td class="pc">43.05</td><td class="c n">&ndash;</td><td class="c y">&#10003;</td><td class="c y">&#10003;</td></tr>
+      <tr class="grp"><td colspan="5">Stalking &amp; burglary</td></tr>
+      <tr><td>Stalking<span class="pcm">PC 42.072</span></td><td class="pc">42.072</td><td class="c n">&ndash;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr><td>Burglary of a <b>habitation</b> (punished under 30.02(c)(2) or (d))<span class="pcm">PC 30.02</span></td><td class="pc">30.02</td><td class="c n">&ndash;</td><td class="c y">&#10003;</td><td class="c n">&ndash;</td></tr>
+      <tr class="none"><td>Burglary of a building (not a habitation)<span class="pcm">PC 30.02(c)(1)</span></td><td class="pc">30.02(c)(1)</td><td class="c n">&ndash;</td><td class="c n">&ndash;</td><td class="c n">&ndash;</td></tr>
+    </table>
+    <div class="callout"><b>Where the (d) list comes from:</b> subsection (d) applies to victims of the offenses in Art. 7B.001(a)(1) or (2), the same offenses that qualify for a Chapter 7B protective order. Victims of <b>family violence</b> and stalking get a separate, similar set of rights in <b>Art. 56A.0521</b> (added in 2025); for stalking, that article also gives the (d) rights shown here.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.052(a) lead-in, (d) lead-in, (e) lead-in</summary><div class="statute">
+    <p>(a) A victim, guardian of a victim, or close relative of a deceased victim of an offense under Section 21.02, 21.11, 22.011, 22.012, or 22.021, Penal Code, is entitled to the following rights within the criminal justice system: &hellip;</p>
+    <p>(d) This subsection applies only to a victim of an offense listed in Article 7B.001(a)(1) or (2). A victim described by this subsection or a parent or guardian of the victim, if the victim is younger than 18 years of age or an adult ward, is entitled to the following rights within the criminal justice system: &hellip;</p>
+    <p>(e) A victim of an offense under Section 20A.02, 20A.03, or 43.05, Penal Code, is entitled to be informed, in the manner provided by Article 56A.0525, that the victim may petition for an order of nondisclosure &hellip;</p>
+    <p><i>Art. 7B.001(a)(1)&ndash;(2): a victim of an offense under Section 20A.02, 20A.03, 21.02, 21.11, 22.011, 22.012, 22.021, 42.072, or 43.05, Penal Code; or of an offense under Section 30.02, Penal Code, that is punishable under Subsection (c)(2) or (d) of that section.</i></p>
+  </div></details></div>
+</section>
+
+<!-- ===================== (a)-(c) ===================== -->
+<section class="slide" data-key="a" data-dot="(a)&ndash;(c)" aria-label="56A.052(a)-(c) — Evidence, prosecution, and medical rights">
+  <div class="slide-head"><span class="sub-badge">(a)&ndash;(c)</span><div><p class="kicker">Sexual offense victims</p><h2>Evidence, prosecution &amp; medical rights</h2></div></div>
+  <div class="slide-body">
+    <p style="margin-bottom:6px !important;"><b>Following the evidence</b> <span class="pill req">IF REQUESTED</span></p>
+    <div class="flow">
+      <div class="step"><b class="t">Collected</b>Information about any evidence collected in the investigation<span class="code">(a)(1)(A)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Sent to lab</b>Notice when a request is submitted to a crime lab to process it<span class="code">(a)(2)(A)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Analysis</b>The status of any analysis being performed<span class="code">(a)(1)(B)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">DNA database</b>Notice when biological evidence is submitted for comparison with state or federal DNA profiles<span class="code">(a)(2)(B)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">Results</b>The results of that DNA comparison<span class="code">(a)(2)(C)</span></div>
+    </div>
+    <p class="exc"><b>Exception:</b> if disclosing evidence information or DNA results would interfere with the investigation or prosecution, the victim is told the <b>estimated date</b> it will be disclosed instead.</p>
+    <div class="cols three">
+      <div class="panel"><h3>The prosecutor <span class="pill req">IF REQUESTED</span></h3><ul><li>Be informed about, and confer with the prosecutor on, the disposition of the case, including:</li><li>a decision <b>not to file</b> charges</li><li><b>dismissal</b> of charges</li><li>a <b>pretrial intervention</b> program</li><li>a <b>plea bargain</b></li></ul><span class="tag">(a)(4)</span></div>
+      <div class="panel"><h3>Medical <span class="pill auto">VICTIM</span></h3><ul><li>Testing for <b>HIV/AIDS</b> and related infection</li><li>A <b>forensic medical exam</b> (Subchapter G)</li><li>Prescribed <b>continuing medical care</b> related to the assault during the <b>30 days</b> after the exam</li><li><b>HIV/AIDS counseling</b> &mdash; if requested <span class="tag">(a)(3)</span></li></ul><span class="tag">(a)(5)</span></div>
+      <div class="panel tint"><h3>What the victim must do</h3><ul><li>Give a current <b>address and phone number</b> to the prosecutor <b>and</b> the investigating agency, and report changes <span class="tag">(b)</span></li><li>Choosing e-mail? Provide and update an <b>e-mail address</b> <span class="tag">(b), S.B. 2101 version</span></li><li>May <b>designate someone</b> (including a victim-services agency) to receive the (a)(2) lab notices &mdash; but <b>never the person charged</b> <span class="tag">(c)</span></li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.052(a)&ndash;(c)</summary><div class="statute">
+    <p>(a) A victim, guardian of a victim, or close relative of a deceased victim of an offense under Section 21.02, 21.11, 22.011, 22.012, or 22.021, Penal Code, is entitled to the following rights within the criminal justice system:</p>
+    <p class="ind1">(1) if requested, the right to a disclosure of information, in the manner provided by Article 56A.0525, regarding:</p>
+    <p class="ind2">(A) any evidence that was collected during the investigation of the offense, unless disclosing the information would interfere with the investigation or prosecution of the offense, in which event the victim, guardian, or relative shall be informed of the estimated date on which that information is expected to be disclosed; and</p>
+    <p class="ind2">(B) the status of any analysis being performed on any evidence described by Paragraph (A);</p>
+    <p class="ind1">(2) if requested, the right to be notified in the manner provided by Article 56A.0525:</p>
+    <p class="ind2">(A) at the time a request is submitted to a crime laboratory to process and analyze any evidence that was collected during the investigation of the offense;</p>
+    <p class="ind2">(B) at the time of the submission of a request to compare any biological evidence collected during the investigation of the offense with DNA profiles maintained in a state or federal DNA database; and</p>
+    <p class="ind2">(C) of the results of the comparison described by Paragraph (B), unless disclosing the results would interfere with the investigation or prosecution of the offense, in which event the victim, guardian, or relative shall be informed of the estimated date on which those results are expected to be disclosed;</p>
+    <p class="ind1">(3) if requested, the right to counseling regarding acquired immune deficiency syndrome (AIDS) and human immunodeficiency virus (HIV) infection;</p>
+    <p class="ind1">(4) if requested, the right to be informed about, and confer with the attorney representing the state regarding, the disposition of the offense, including sharing the victim's, guardian's, or relative's views regarding:</p>
+    <p class="ind2">(A) a decision not to file charges;</p>
+    <p class="ind2">(B) the dismissal of charges;</p>
+    <p class="ind2">(C) the use of a pretrial intervention program; or</p>
+    <p class="ind2">(D) a plea bargain agreement; and</p>
+    <p class="ind1">(5) for the victim, the right to:</p>
+    <p class="ind2">(A) testing for acquired immune deficiency syndrome (AIDS), human immunodeficiency virus (HIV) infection, antibodies to HIV, or infection with any other probable causative agent of AIDS;</p>
+    <p class="ind2">(B) a forensic medical examination as provided by Subchapter G; and</p>
+    <p class="ind2">(C) any prescribed continuing medical care that is related to the sexual assault and provided to the victim during the 30-day period following a forensic medical examination, as provided by Subchapter G.</p>
+    <p class="note-ver"><i>Two versions of subsection (b) are in effect (2023 amendments by S.B. 2101 and S.B. 409). Both are shown.</i></p>
+    <p>(b) <i>[S.B. 2101]</i> A victim, guardian of a victim, or close relative of a deceased victim who requests to be notified under Subsection (a)(2) must provide a current address and phone number to the attorney representing the state and the law enforcement agency that is investigating the offense. The victim, guardian, or relative must inform the attorney representing the state and the law enforcement agency of any change in the address or phone number. The victim, guardian, or relative must provide an e-mail address and update any change in that e-mail address if the victim, guardian, or relative chooses to receive notifications by e-mail.</p>
+    <p>(b) <i>[S.B. 409]</i> Subject to Subsection (c), a victim, guardian of a victim, or close relative of a deceased victim who requests to be notified or receive information under Subsection (a)(1), (2), or (4) must:</p>
+    <p class="ind1">(1) provide a current address and phone number to the attorney representing the state and the law enforcement agency that is investigating the offense; and</p>
+    <p class="ind1">(2) inform the attorney representing the state and the law enforcement agency of any change in the address or phone number.</p>
+    <p>(c) A victim, guardian of a victim, or close relative of a deceased victim may designate a person, including an entity that provides services to victims of an offense described by Subsection (a), to receive any notice requested under Subsection (a)(2). This person may not be the person charged with the offense.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== (d) ===================== -->
+<section class="slide" data-key="d" data-dot="(d)" aria-label="56A.052(d) — Protective order information">
+  <div class="slide-head"><span class="sub-badge">(d)</span><div><p class="kicker">Victims of Art. 7B.001 offenses</p><h2>Protective order information</h2></div></div>
+  <div class="slide-body">
+    <p class="lede">The victim (or, for a victim under 18 or an adult ward, a parent or guardian) has the right to be told four things about a Chapter 7B protective order, and to ask the prosecutor to apply for one.</p>
+    <div class="flow">
+      <div class="step"><b class="t">1 &middot; You can apply</b>The victim, or a parent, guardian, or other adult acting for a minor or adult ward, may apply under Art. 7B.001<span class="code">(d)(1)(A)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">2 &middot; Where</b>The court in which the application may be filed<span class="code">(d)(1)(B)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">3 &middot; Prosecutor may file</b>On request, the prosecutor may file the application for them<span class="code">(d)(1)(C) &middot; (d)(2)(A)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">4 &middot; After conviction</b>The prosecutor is generally <b>required</b> to file if the defendant is convicted or gets deferred adjudication<span class="code">(d)(1)(D)</span></div>
+    </div>
+    <p class="exc">Items 3 and 4 are subject to the Texas Disciplinary Rules of Professional Conduct. The victim also has the right to be <b>notified when the prosecutor files</b> an application. <span class="tag">(d)(2)(B)</span></p>
+    <p style="margin:4px 0 6px !important;"><b>At conviction or deferred adjudication, who tells the victim?</b></p>
+    <div class="fork">
+      <div class="panel tint"><h3>Victim (or parent/guardian) is present</h3><ul><li>The <b>court</b> gives the information in items 1&ndash;4.</li><li>They may <b>file the application immediately</b>, if that court has jurisdiction over it.</li></ul><span class="tag">(d)(3)</span></div>
+      <div class="panel tint"><h3>Not present</h3><ul><li>The <b>prosecutor</b> gives the information in items 1&ndash;4.</li></ul><span class="tag">(d)(4)</span></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.052(d)</summary><div class="statute">
+    <p>(d) This subsection applies only to a victim of an offense listed in Article 7B.001(a)(1) or (2). A victim described by this subsection or a parent or guardian of the victim, if the victim is younger than 18 years of age or an adult ward, is entitled to the following rights within the criminal justice system:</p>
+    <p class="ind1">(1) the right to be informed in the manner provided by Article 56A.0525:</p>
+    <p class="ind2">(A) that the victim or, if the victim is younger than 18 years of age or an adult ward, the victim's parent or guardian or another adult acting on the victim's behalf may file an application for a protective order under Article 7B.001;</p>
+    <p class="ind2">(B) of the court in which the application for a protective order may be filed;</p>
+    <p class="ind2">(C) that, on request of the victim or, if the victim is younger than 18 years of age or an adult ward, on request of the victim's parent or guardian or another adult acting on the victim's behalf, the attorney representing the state may, subject to the Texas Disciplinary Rules of Professional Conduct, file the application for a protective order on behalf of the requestor; and</p>
+    <p class="ind2">(D) that, subject to the Texas Disciplinary Rules of Professional Conduct, the attorney representing the state generally is required to file the application for a protective order with respect to the victim if the defendant is convicted of or placed on deferred adjudication community supervision for the offense;</p>
+    <p class="ind1">(2) the right to:</p>
+    <p class="ind2">(A) request that the attorney representing the state, subject to the Texas Disciplinary Rules of Professional Conduct, file an application for a protective order described by Subdivision (1); and</p>
+    <p class="ind2">(B) be notified in the manner provided by Article 56A.0525 when the attorney representing the state files an application for a protective order under Article 7B.001;</p>
+    <p class="ind1">(3) if the victim or the victim's parent or guardian, as applicable, is present when the defendant is convicted or placed on deferred adjudication community supervision, the right to:</p>
+    <p class="ind2">(A) be given by the court the information described by Subdivision (1), in the manner provided by Article 56A.0525; and</p>
+    <p class="ind2">(B) file an application for a protective order under Article 7B.001 immediately following the defendant's conviction or placement on deferred adjudication community supervision if the court has jurisdiction over the application; and</p>
+    <p class="ind1">(4) if the victim or the victim's parent or guardian, as applicable, is not present when the defendant is convicted or placed on deferred adjudication community supervision, the right to be given by the attorney representing the state the information described by Subdivision (1), in the manner provided by Article 56A.0525.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== (e) + HOW NOTIFIED ===================== -->
+<section class="slide" data-key="e" data-dot="(e) &amp; notice" aria-label="56A.052(e) and how notifications are given">
+  <div class="slide-head"><span class="sub-badge">(e)</span><div><p class="kicker">Trafficking victims &middot; and how every notice is given</p><h2>Nondisclosure, and how victims are notified</h2></div></div>
+  <div class="slide-body">
+    <div class="cols">
+      <div class="panel navy"><h3>(e) Nondisclosure for trafficking victims</h3><ul>
+        <li>Applies to a victim of <b>trafficking</b> (Penal Code 20A.02), <b>continuous trafficking</b> (20A.03), or <b>compelling prostitution</b> (43.05).</li>
+        <li>They have the right to be told they may <b>petition for an order of nondisclosure</b> (sealing their criminal history record) under Gov&rsquo;t Code 411.0728, if they:</li>
+        <li>&bull; were convicted of, or placed on deferred adjudication for, an offense listed in that section, <b>and</b></li>
+        <li>&bull; committed it <b>solely as a victim</b> of trafficking or compelling prostitution.</li></ul></div>
+      <div class="panel"><h3>Why it matters on the street</h3><ul>
+        <li>A person arrested for prostitution may be a trafficking victim. Identifying that early affects the victim services and rights they receive.</li>
+        <li>The responding officer&rsquo;s Art. 56A.403 written notice to a sexual assault victim must include information about the rights in <b>this article</b>. See the <a href="ccp-56a-403.html">Art. 56A.403 slides</a>.</li>
+        <li>A judge, prosecutor, officer, or agency is <b>not liable</b> for failing or being unable to provide one of these rights. <span class="tag">56A.053(a)</span></li></ul></div>
+    </div>
+    <p style="margin:4px 0 6px !important;"><b>How notices are given</b> &mdash; every notice or disclosure in this article is made in one of these ways <span class="tag">Art. 56A.0525</span></p>
+    <div class="methods">
+      <div class="method"><b>Electronically</b>text message, videoconference, or e-mail</div>
+      <div class="method"><b>By mail</b></div>
+      <div class="method"><b>Anonymous online portal</b></div>
+      <div class="method"><b>Phone or in person</b>telephone or other personal contact</div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.052(e) &middot; 56A.0525 &middot; 56A.053(a)</summary><div class="statute">
+    <p>(e) A victim of an offense under Section 20A.02, 20A.03, or 43.05, Penal Code, is entitled to be informed, in the manner provided by Article 56A.0525, that the victim may petition for an order of nondisclosure of criminal history record information under Section 411.0728, Government Code, if the victim:</p>
+    <p class="ind1">(1) has been convicted of or placed on deferred adjudication community supervision for an offense described by Subsection (a)(1) of that section; and</p>
+    <p class="ind1">(2) committed that offense solely as a victim of an offense under Section 20A.02, 20A.03, or 43.05, Penal Code.</p>
+    <p>Art. 56A.0525. AUTHORIZED FORM OF NOTIFICATIONS. For purposes of this subchapter, a judge, attorney representing the state, peace officer, or law enforcement agency that is required to notify, inform, or disclose information to a victim, guardian of a victim, or close relative of a deceased victim in accordance with a right granted under this subchapter shall provide the notification or information in the following manner:</p>
+    <p class="ind1">(1) electronically, including by text message, videoconference, or e-mail;</p>
+    <p class="ind1">(2) by mail;</p>
+    <p class="ind1">(3) through an anonymous, online portal; or</p>
+    <p class="ind1">(4) by contacting by telephone or otherwise making personal contact with the victim, guardian, or relative, as applicable.</p>
+    <p>Art. 56A.053. FAILURE TO PROVIDE RIGHT OR SERVICE. (a) A judge, attorney representing the state, peace officer, or law enforcement agency is not liable for a failure or inability to provide a right granted by this subchapter.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== CHECKS ===================== -->
+<section class="slide" data-key="recap" aria-label="Scenario checks">
+  <div class="slide-head"><span class="sub-badge">&#9733;</span><div><p class="kicker">Tap a scenario to see the answer</p><h2>Scenario checks</h2></div></div>
+  <div class="slide-body">
+    <div class="checks">
+      <details><summary>A man&rsquo;s storage building (not a habitation) is burglarized. Does Art. 56A.052 give him any of these extra rights? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> Burglary is covered only when it is punished under Penal Code 30.02(c)(2) or (d) &mdash; burglary of a <b>habitation</b>. He still has the general victim rights in Art. 56A.051.</div></details>
+      <details><summary>The parent of a child victim of indecency with a child wants to know when the child&rsquo;s evidence is compared against the DNA database. What right applies, and what must the parent do? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(a)(2)(B), if requested.</b> Indecency with a child (Penal Code 21.11) is an (a) offense, and a guardian holds the right. The parent must give a current address and phone number to the prosecutor and the investigating agency and keep them updated. <span class="tag">(b)</span></div></details>
+      <details><summary>A sexual assault victim wants her aunt to get the lab notifications. Allowed? Could she pick anyone she wants? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Yes</b>, she can designate a person or a victim-services organization to receive the (a)(2) notices &mdash; but <b>never the person charged</b> with the offense. <span class="tag">(c)</span></div></details>
+      <details><summary>A stalking victim asks the responding officer whether she can get a protective order even though she never dated the suspect. <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Yes.</b> Stalking (Penal Code 42.072) is a Chapter 7B offense, so the (d) rights apply: she can apply regardless of relationship, she is told where to file, and the prosecutor can file for her on request. Stalking is <b>not</b> an (a) offense, though (Art. 56A.0521 gives stalking victims a similar evidence-update set).</div></details>
+      <details><summary>The prosecutor is considering a plea bargain in an aggravated sexual assault case. What right does the victim have? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(a)(4), if requested:</b> to be informed about, and confer with, the prosecutor on the disposition &mdash; including sharing her views on the plea bargain. She does not get a veto.</div></details>
+      <details><summary>A woman convicted of prostitution is later identified as a trafficking victim who was forced into it. What is she entitled to be told? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(e):</b> that she may petition for an order of nondisclosure under Gov&rsquo;t Code 411.0728, if the offense is one that section covers and she committed it <b>solely</b> as a trafficking or compelling-prostitution victim.</div></details>
+    </div>
+  </div>
+  <div class="slide-foot"><span>See also: <a href="ccp-56a-403.html">Art. 56A.403 slides</a> (officer duties and the sample written notice) &middot; <a href="ccp-7b-006.html">Art. 7B.006 slides</a> (protective order warnings)</span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>CCP Art. 56A.052 slides &middot; Text current through the 2025 89th Leg., R.S. amendments &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body > .callout, .slide-body > .lede, .slide-body > .exc, .panel, .checks .ans, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>

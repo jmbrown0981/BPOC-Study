@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>BPOC 32.47 – Booking &amp; Impound Data | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: category panels (LO 32.47) and the practice booking form */
+.panel ul.tight li{margin-bottom:1px; font-size:13px;}
+.panel .ct{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--brass); font-weight:700;}
+
+.disclaimer{background:#FBEDE7; border:2px solid var(--rust); border-radius:9px; padding:9px 14px; margin:0 0 14px; font-size:13.5px; line-height:1.5; color:#5a2414;}
+.disclaimer b{color:var(--rust); letter-spacing:0.03em;}
+.mock-wrap{background:var(--paper-dim); border-radius:10px; padding:16px; margin-bottom:10px;}
+.notice{position:relative; max-width:800px; margin:0 auto; background:#fff; border:1px solid var(--rule); box-shadow:0 2px 10px rgba(19,35,57,0.10); padding:22px 26px 18px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:var(--ink); overflow:hidden;}
+.notice::after{content:""; position:absolute; inset:0; pointer-events:none; background-repeat:repeat; background-size:420px 300px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300'%3E%3Ctext x='210' y='150' text-anchor='middle' transform='rotate(-24 210 150)' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='26' letter-spacing='2' fill='%23A6472E' fill-opacity='0.10'%3ESAMPLE %C2%B7 NOT AN OFFICIAL FORM%3C/text%3E%3C/svg%3E");}
+.notice .agency{display:flex; justify-content:space-between; gap:12px; align-items:flex-end; border-bottom:2px solid var(--navy); padding-bottom:8px; margin-bottom:6px;}
+.notice .agency b{display:block; font-size:13px; color:var(--navy);}
+.notice .agency .ttl{font-size:16px; font-weight:700; letter-spacing:0.06em; color:var(--navy);}
+.notice .agency small{color:var(--ink-soft); font-size:11.5px;}
+.notice .bkno{font-size:11.5px; color:var(--ink-soft); text-align:right;}
+.sec-h{margin:12px 0 0; background:var(--navy); color:#fff; font-size:11.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 8px; display:flex; justify-content:space-between;}
+.sec-h span{font-weight:500; letter-spacing:0.02em; text-transform:none; color:var(--brass-light);}
+.grid{display:grid; grid-template-columns:repeat(12,1fr); border-left:1px solid var(--rule); border-top:none;}
+.f{grid-column:span 4; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:3px 6px 4px; min-width:0;}
+.f.s2{grid-column:span 2;} .f.s3{grid-column:span 3;} .f.s5{grid-column:span 5;} .f.s6{grid-column:span 6;} .f.s8{grid-column:span 8;} .f.s12{grid-column:span 12;}
+.f label{display:block; font-size:9.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); line-height:1.3;}
+.f label .n{color:var(--brass); font-family:'IBM Plex Mono',monospace; margin-right:3px;}
+.f input, .f textarea{width:100%; box-sizing:border-box; border:none; border-bottom:1px dashed #d8cfb4; background:transparent; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#1d3a8a; padding:2px 0; outline:none; resize:vertical;}
+.f input:focus, .f textarea:focus{border-bottom:1px solid var(--navy); background:#FFFBEA;}
+.f textarea{min-height:40px; line-height:1.4;}
+.yn{display:flex; gap:12px; align-items:center; font-size:12px; padding-top:2px;}
+.yn label{display:inline; font-size:12px; text-transform:none; letter-spacing:0; color:var(--ink); font-weight:500;}
+.notice .foot{margin-top:12px; padding-top:6px; border-top:1px solid var(--rule); font-size:11px; color:var(--ink-soft); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+.tools{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 10px;}
+.tools button{font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; font-weight:600; border:1px solid var(--navy); background:#fff; color:var(--navy); border-radius:999px; padding:5px 13px; cursor:pointer;}
+.tools button.primary{background:var(--navy); color:#fff;}
+.tools button:hover{background:var(--brass); border-color:var(--brass); color:var(--navy);}
+.tools span{font-size:12.5px; color:var(--ink-soft);}
+@media (max-width:760px){
+  .mock-wrap{padding:8px; margin-left:-6px; margin-right:-6px;}
+  .notice{padding:16px 12px 14px;}
+  .notice .agency{flex-direction:column; align-items:flex-start;}
+  .notice .bkno{text-align:left;}
+  .f, .f.s2, .f.s3, .f.s5, .f.s8{grid-column:span 6;}
+  .f.s6, .f.s12, .f.wide-m{grid-column:span 12;}
+}
+@media print{ .tools{display:none;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Ch. 32 Criminal Investigations &middot; Slides</p>
+      <h1>BPOC 32.47 — Booking Data and Vehicle Impound Information</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 32.47 &mdash; the personal, vehicle, and arrest data that most departmental booking and impound forms ask for, and a sample form you can type into for practice.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE / CATEGORIES ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title — the three data categories">
+  <div class="slide-body">
+    <p class="eyebrow">BPOC Chapter 32 &middot; Criminal Investigations &middot; LO 32.47</p>
+    <h2 class="big">Booking &amp; Impound:<br>What Goes on the Form</h2>
+    <p class="lede">Forms differ by department, but most ask for the same three groups of information. The <b>arrest data</b> is what gets the case through jail intake and into court, so it has to be complete and accurate.</p>
+    <div class="cols three">
+      <div class="panel tint"><h3>Personal data <span class="ct">23</span></h3><ul class="tight">
+        <li>Name, nickname(s), aliases</li><li>Race, sex, age, date and place of birth</li><li>Height, weight, hair, eyes, complexion</li><li>Tattoos, scars, marks, deformities</li><li>Residence address, city and state</li><li>Driver&rsquo;s license no. and state; SSN</li><li>Emergency contact name and address</li><li>Occupation, place of employment</li><li>Marital status and spouse&rsquo;s name</li><li>Persons arrested with / known associates</li></ul></div>
+      <div class="panel tint"><h3>Vehicle data <span class="ct">6</span></h3><ul class="tight">
+        <li>Color</li><li>Year of manufacture</li><li>Make</li><li>Body style</li><li>Registration: state and year; plate number and/or letters</li><li>Location of vehicle</li></ul></div>
+      <div class="panel tint"><h3>Arrest data <span class="ct">13</span></h3><ul class="tight">
+        <li>Charge (with any warrant numbers)</li><li>Place, date, and time of arrest</li><li>Arresting officer(s); booking officer</li><li>Time booked into jail</li><li>Complainant name, address, business and residence phone</li><li>Facts of arrest</li><li>Witness names, addresses, phones</li><li>Amount of bond</li><li>Whether the Miranda warning was given</li><li>Phone calls granted, and to whom</li><li>Prisoner&rsquo;s attorney</li></ul></div>
+    </div>
+    <div class="callout"><b>Lecture scenario (32.47):</b> students practice filling in sample booking forms. The next slide is one you can type into. It is not saved anywhere and clears when you leave the page.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+  </div>
+</section>
+
+<!-- ===================== SAMPLE FORM ===================== -->
+<section class="slide" data-key="sample-form" data-dot="Sample" aria-label="Sample booking and impound form (mockup)">
+  <div class="slide-head"><span class="sub-badge">32.47</span><div><p class="kicker">Visual aid &middot; practice form</p><h2>Sample booking &amp; impound form</h2></div></div>
+  <div class="slide-body">
+    <div class="disclaimer"><b>DISCLAIMER:</b> This is <b>NOT</b> an official Fort Worth Police Department document or the booking form used by any jail. It is a mockup built from the items listed in BPOC LO 32.47, made only as a visual aid for study.</div>
+    <div class="tools">
+      <button type="button" class="primary" id="fillBtn">Fill with example</button>
+      <button type="button" id="clearBtn">Clear form</button>
+      <span>The example is a made-up arrest. Nothing you type is saved.</span>
+    </div>
+    <div class="mock-wrap">
+      <form class="notice" id="bookingForm" autocomplete="off" aria-label="Sample booking and impound form" onsubmit="return false;">
+        <div class="agency">
+          <div><b>[Law Enforcement Agency]</b><span class="ttl">ARREST / BOOKING RECORD &amp; VEHICLE IMPOUND</span><br><small>Complete all items. Print clearly.</small></div>
+          <div class="bkno">Booking No. ________<br>Report No. ________</div>
+        </div>
+
+        <div class="sec-h">Personal data <span>23 items</span></div>
+        <div class="grid">
+          <div class="f s6"><label>Name (last, first, middle)</label><input name="name"></div>
+          <div class="f s3"><label>Nickname(s)</label><input name="nick"></div>
+          <div class="f s3"><label>Alias(es)</label><input name="alias"></div>
+          <div class="f s2"><label>Race</label><input name="race"></div>
+          <div class="f s2"><label>Sex</label><input name="sex"></div>
+          <div class="f s2"><label>Age</label><input name="age"></div>
+          <div class="f s3"><label>Date of birth</label><input name="dob"></div>
+          <div class="f s3"><label>Place of birth</label><input name="pob"></div>
+          <div class="f s2"><label>Height</label><input name="ht"></div>
+          <div class="f s2"><label>Weight</label><input name="wt"></div>
+          <div class="f s2"><label>Hair color</label><input name="hair"></div>
+          <div class="f s2"><label>Eye color</label><input name="eyes"></div>
+          <div class="f s4"><label>Complexion</label><input name="comp"></div>
+          <div class="f s12"><label>Tattoos, scars, marks, and/or deformities (describe and give location)</label><textarea name="smt" rows="2"></textarea></div>
+          <div class="f s6"><label>Residence address</label><input name="addr"></div>
+          <div class="f s6"><label>City and state of residence</label><input name="city"></div>
+          <div class="f s6"><label>Driver&rsquo;s license no. and issuing state</label><input name="dl"></div>
+          <div class="f s6"><label>Social security no.</label><input name="ssn"></div>
+          <div class="f s12"><label>Emergency contact: name and address</label><input name="emerg"></div>
+          <div class="f s6"><label>Occupation</label><input name="occ"></div>
+          <div class="f s6"><label>Place of employment</label><input name="emp"></div>
+          <div class="f s12"><label>Marital status and name of spouse</label><input name="marital"></div>
+          <div class="f s12"><label>Person(s) arrested with and/or known associates</label><input name="assoc"></div>
+        </div>
+
+        <div class="sec-h">Vehicle data <span>impound information &middot; 6 items</span></div>
+        <div class="grid">
+          <div class="f s3"><label>Color</label><input name="vcolor"></div>
+          <div class="f s3"><label>Year of manufacture</label><input name="vyear"></div>
+          <div class="f s3"><label>Make</label><input name="vmake"></div>
+          <div class="f s3"><label>Body style</label><input name="vbody"></div>
+          <div class="f s6"><label>Registration: state and year</label><input name="vreg"></div>
+          <div class="f s6"><label>License plate no. and/or letters</label><input name="vplate"></div>
+          <div class="f s12"><label>Location of vehicle</label><input name="vloc"></div>
+        </div>
+
+        <div class="sec-h">Arrest data <span>13 items</span></div>
+        <div class="grid">
+          <div class="f s8"><label>Charge(s)</label><input name="charge"></div>
+          <div class="f s4"><label>Warrant no(s).</label><input name="warrant"></div>
+          <div class="f s6"><label>Place of arrest</label><input name="place"></div>
+          <div class="f s3"><label>Date of arrest</label><input name="adate"></div>
+          <div class="f s3"><label>Time of arrest</label><input name="atime"></div>
+          <div class="f s5"><label>Arresting officer(s)</label><input name="aoff"></div>
+          <div class="f s4"><label>Booking officer</label><input name="boff"></div>
+          <div class="f s3"><label>Time booked into jail</label><input name="tbook"></div>
+          <div class="f s6"><label>Complainant: name and address</label><input name="comp_na"></div>
+          <div class="f s3"><label>Complainant business phone</label><input name="comp_bp"></div>
+          <div class="f s3"><label>Complainant residence phone</label><input name="comp_rp"></div>
+          <div class="f s12"><label>Facts of arrest</label><textarea name="facts" rows="4"></textarea></div>
+          <div class="f s12"><label>Witnesses: names, addresses, and phone numbers</label><textarea name="wits" rows="2"></textarea></div>
+          <div class="f s3"><label>Amount of bond</label><input name="bond"></div>
+          <div class="f s3"><label>Miranda warning given?</label><div class="yn"><label><input type="radio" name="miranda" value="yes" style="width:auto;"> Yes</label><label><input type="radio" name="miranda" value="no" style="width:auto;"> No</label></div></div>
+          <div class="f s6"><label>Miranda given by / time</label><input name="mirby"></div>
+          <div class="f s6"><label>Phone calls granted, and to whom</label><input name="calls"></div>
+          <div class="f s6"><label>Name of prisoner&rsquo;s attorney</label><input name="atty"></div>
+        </div>
+
+        <div class="foot"><span>Prisoner signature: ______________________ &nbsp; Officer signature: ______________________</span><span>Sample form &middot; BPOC LO 32.47</span></div>
+      </form>
+    </div>
+    <div class="callout"><b>Practice tip:</b> fill it in from a scenario, then check that a stranger could book the prisoner, find the vehicle, and contact every witness using only what you wrote. <b>Facts of arrest</b> should support each charge listed.</div>
+  </div>
+  <div class="slide-foot"><span>Source: BPOC Chapter 32, LO 32.47 &mdash; &ldquo;Practice proper procedure to record all necessary booking data on a prisoner and vehicle impound information.&rdquo;</span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>BPOC LO 32.47 slides &middot; Sample form is a study mockup, not an official or FWPD document &middot; All example entries are fictional &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script>
+// Fictional example entries for the practice form (no real person, place, or case)
+const EXAMPLE = {
+  name:'SAMPLE, JOHN QUINCY', nick:'"JQ"', alias:'Johnny Example', race:'W', sex:'M', age:'34', dob:'01/15/1992', pob:'Anytown, TX',
+  ht:"5'11\"", wt:'185 lb', hair:'BRO', eyes:'BLU', comp:'Medium',
+  smt:'Tattoo, eagle, left forearm; 2" scar over right eyebrow; no deformities observed',
+  addr:'123 Sample St., Apt. 4', city:'Anytown, TX', dl:'00000000 / TX', ssn:'000-00-0000 (sample)',
+  emerg:'Jane Sample (sister), 456 Example Ave., Anytown, TX', occ:'Warehouse associate', emp:'Example Distribution Co., Anytown, TX',
+  marital:'Married, Mary Sample', assoc:'Arrested with: Richard Roe (separate booking)',
+  vcolor:'Silver', vyear:'2018', vmake:'Honda', vbody:'4-door sedan', vreg:'TX, 2026', vplate:'SMP-0000',
+  vloc:'Parking lot, 400 block of Example Ave., Anytown, TX; towed to [storage facility]',
+  charge:'Burglary of Vehicles, PC 30.04', warrant:'None', place:'400 block of Example Ave., Anytown, TX',
+  adate:'10/04/2026', atime:'22:15', aoff:'Ofc. A. Example #0000; Ofc. B. Example #0001', boff:'Ofc. C. Example #0002', tbook:'23:40',
+  comp_na:'Pat Complainant, 789 Sample Rd., Anytown, TX', comp_bp:'(555) 555-0100', comp_rp:'(555) 555-0101',
+  facts:"Officers responded to a vehicle burglary in progress. Witness saw the arrestee break the rear passenger window of the complainant's vehicle and remove a backpack. Arrestee located two blocks away in the listed vehicle with the backpack on the front seat. Complainant identified the backpack and contents.",
+  wits:'Lee Witness, 321 Example Ave., Anytown, TX, (555) 555-0102', bond:'$1,500', mirby:'Ofc. A. Example, 22:30',
+  calls:'One call, 23:55, to Jane Sample (sister)', atty:'None stated'
+};
+const form = document.getElementById('bookingForm');
+document.getElementById('fillBtn').addEventListener('click', () => {
+  for(const [k, v] of Object.entries(EXAMPLE)){ const el = form.elements[k]; if(el) el.value = v; }
+  const yes = form.querySelector('input[name="miranda"][value="yes"]'); if(yes) yes.checked = true;
+});
+document.getElementById('clearBtn').addEventListener('click', () => form.reset());
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
