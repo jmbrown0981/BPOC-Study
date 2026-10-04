@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>CCP Art. 56A.403 – Duties to Sexual Assault Victims | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: numbered duty cards (56A.403(b)) and the mock written notice (56A.403(d)) */
+.duties{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:4px 0 12px;}
+.duty{border:1px solid var(--rule); border-radius:10px; padding:10px 13px 9px; background:#fff; display:flex; gap:11px; align-items:flex-start;}
+.duty .num{flex:none; width:30px; height:30px; border-radius:50%; background:var(--navy); color:var(--brass-light); font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center;}
+.duty h3{margin:0 0 3px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--navy); line-height:1.3;}
+.duty p{margin:0 !important; font-size:13.3px; line-height:1.5;}
+.duty .cite{display:block; margin-top:5px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass);}
+.duty.wide{grid-column:1 / -1; background:var(--paper);}
+.trigger{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:4px 0 12px;}
+.checklist{columns:2; column-gap:22px; margin:4px 0 10px; padding:0; list-style:none;}
+.checklist li{break-inside:avoid; font-size:13.2px; line-height:1.45; padding:4px 0 4px 22px; position:relative; border-top:1px dotted var(--paper-dim);}
+.checklist li::before{content:"\2713"; position:absolute; left:2px; top:4px; color:var(--green); font-weight:700;}
+.checklist li .q{font-family:'IBM Plex Serif',serif; font-style:italic; color:var(--navy);}
+
+/* mock notice */
+.disclaimer{background:#FBEDE7; border:2px solid var(--rust); border-radius:9px; padding:9px 14px; margin:0 0 14px; font-size:13.5px; line-height:1.5; color:#5a2414;}
+.disclaimer b{color:var(--rust); letter-spacing:0.03em;}
+.mock-wrap{background:var(--paper-dim); border-radius:10px; padding:16px; margin-bottom:10px;}
+.notice{position:relative; max-width:720px; margin:0 auto; background:#fff; border:1px solid var(--rule); box-shadow:0 2px 10px rgba(19,35,57,0.10); padding:26px 32px 22px; font-family:'IBM Plex Serif',serif; font-size:13.8px; line-height:1.55; color:var(--ink); overflow:hidden;}
+.notice::after{content:"SAMPLE \00B7  NOT AN OFFICIAL FORM"; position:absolute; top:46%; left:50%; transform:translate(-50%,-50%) rotate(-24deg); font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:34px; letter-spacing:0.06em; color:rgba(166,71,46,0.09); white-space:nowrap; pointer-events:none;}
+.notice .agency{display:flex; justify-content:space-between; gap:12px; font-family:'IBM Plex Sans',sans-serif; font-size:11.5px; color:var(--ink-soft); border-bottom:2px solid var(--navy); padding-bottom:8px; margin-bottom:12px;}
+.notice .agency b{display:block; font-size:13px; color:var(--navy);}
+.notice .lang{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:5px; padding:1px 6px; white-space:nowrap; align-self:flex-start;}
+.notice h3{text-align:center; font-family:'IBM Plex Sans',sans-serif; font-size:17px; letter-spacing:0.08em; color:var(--navy); margin:4px 0 12px;}
+.notice p{margin:0 0 9px !important;}
+.notice ol{margin:0 0 9px; padding-left:1.7em;}
+.notice ol li{margin-bottom:4px;}
+.notice ol.alpha{list-style:upper-alpha; margin-top:4px;}
+.notice .fill{font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; background:#FFF6D8; border-bottom:1px solid var(--amber); padding:0 4px; color:#5c4810; white-space:nowrap;}
+.notice .line{display:block; border-bottom:1px solid var(--ink-soft); height:20px; margin:2px 0 4px; max-width:460px;}
+.notice .hotline{border:1px solid var(--navy); border-radius:7px; padding:8px 12px; background:var(--paper); font-family:'IBM Plex Sans',sans-serif; font-size:13px; margin-top:12px;}
+.notice .foot{margin-top:14px; padding-top:8px; border-top:1px solid var(--rule); font-family:'IBM Plex Sans',sans-serif; font-size:11px; color:var(--ink-soft); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+.key{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:12.5px; color:var(--ink-soft); margin:0 0 10px;}
+.key .fill{font-family:'IBM Plex Sans',sans-serif; font-size:12px; background:#FFF6D8; border-bottom:1px solid var(--amber); padding:0 4px; color:#5c4810;}
+@media (max-width:760px){
+  .duties, .trigger{grid-template-columns:1fr;}
+  .checklist{columns:1;}
+  .mock-wrap{padding:8px; margin-left:-6px; margin-right:-6px;}
+  .notice{padding:18px 16px 16px; font-size:13.4px;}
+  .notice::after{font-size:26px;}
+  .notice .agency{flex-direction:column;}
+  .notice .fill{white-space:normal;}
+}
+@media print{ .notice::after{color:rgba(166,71,46,0.15);} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Code of Criminal Procedure &middot; Slides</p>
+      <h1>CCP Art. 56A.403 — Duties of Peace Officers Regarding Victims of Sexual Assault</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 9.8 &mdash; what the responding officer must do at first contact with a sexual assault victim, what the agency&rsquo;s written notice has to contain, and a sample of that notice built from the statute.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Code of Criminal Procedure &middot; Chapter 56A &middot; Subchapter I</p>
+    <h2 class="big">Sexual Assault Victims:<br>The Officer&rsquo;s Duties</h2>
+    <p class="lede">Art. 56A.403 tells the responding officer what to hand the victim, what to offer, and who to coordinate with. It also tells the agency what its written notice must say.</p>
+    <div class="trigger">
+      <div class="callout def"><b>Who it applies to.</b> A peace officer who <b>investigates an incident involving sexual assault</b>, or who <b>responds to a disturbance call that may involve</b> sexual assault. <span class="tag">56A.403(a)</span></div>
+      <div class="callout def"><b>When.</b> At the <b>initial contact</b>, or at the <b>earliest possible time</b> after the initial contact, with the victim. <span class="tag">56A.403(b)</span></div>
+    </div>
+    <div class="callout"><b>Two sets of rights the notice covers:</b> the rights of sexual assault victims under <b>Art. 56A.052</b> (evidence updates, forensic exam, HIV testing, conferring with the prosecutor, protective orders) and the pseudonym rights and procedures under <b>Chapter 58</b> (a made-up name in public records instead of the victim&rsquo;s real name).</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.403" target="bpoc-codes">Open Art. 56A.403 in Texas Codes &#8599;</a>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.052" target="bpoc-codes">Open Art. 56A.052 &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== DUTIES ===================== -->
+<section class="slide" data-key="duties" data-dot="Duties" aria-label="56A.403(a)-(b) — The officer's duties">
+  <div class="slide-head"><span class="sub-badge">(a)&ndash;(b)</span><div><p class="kicker">At initial contact, or as soon as possible after</p><h2>What the responding officer must do</h2></div></div>
+  <div class="slide-body">
+    <div class="duties">
+      <div class="duty"><span class="num">1A</span><div><h3>Give a written referral</h3><p>A <b>written referral</b> to the <b>nearest sexual assault program</b>. A program may give the agency a written description of its services to use for this.</p><span class="cite">(b)(1)(A) &middot; (e) &middot; Local Gov&rsquo;t Code 351.251</span></div></div>
+      <div class="duty"><span class="num">1B</span><div><h3>Give evidence-tracking information</h3><p>Information about the <b>statewide electronic tracking system</b> for sexual assault evidence (rape kits), which lets the victim follow where their evidence is and its status.</p><span class="cite">(b)(1)(B) &middot; Gov&rsquo;t Code 420.034</span></div></div>
+      <div class="duty"><span class="num">2</span><div><h3>Offer a forensic medical exam</h3><p><b>Offer to request</b> a forensic medical examination <b>on the victim&rsquo;s behalf</b>. The victim decides whether to accept.</p><span class="cite">(b)(2) &middot; Art. 56A.251</span></div></div>
+      <div class="duty"><span class="num">3</span><div><h3>Coordinate with the response team</h3><p>Work with the <b>local response team</b> (the county&rsquo;s sexual assault response team, or SART) to give the victim continuing care or to investigate further.</p><span class="cite">(b)(3) &middot; Local Gov&rsquo;t Code 351.251</span></div></div>
+      <div class="duty wide"><span class="num">4</span><div><h3>Give the written notice</h3><p>A <b>written notice</b> with all of the information this article requires: the victim&rsquo;s rights under Art. 56A.052, the rights and procedures under Chapter 58, and the statements and contact information listed in subsection (d). The notice is developed by the agency (next slide); the officer&rsquo;s job is to <b>deliver it</b>.</p><span class="cite">(a) &middot; (b)(4)</span></div></div>
+    </div>
+    <div class="callout"><b>Memory aid &mdash; &ldquo;Refer, Track, Offer, Coordinate, Notify.&rdquo;</b> Two documents go into the victim&rsquo;s hands (the <b>referral</b> and the <b>notice</b>), plus the <b>tracking-system information</b>. The exam is <b>offered</b>, not required.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.403(a), (b), (e)</summary><div class="statute">
+    <p>Art. 56A.403. DUTIES OF PEACE OFFICERS REGARDING VICTIMS OF SEXUAL ASSAULT. (a) A peace officer who investigates an incident involving sexual assault or who responds to a disturbance call that may involve sexual assault shall provide to the victim a written notice containing information about the rights of crime victims under Article 56A.052 and the rights and procedures under Chapter 58.</p>
+    <p>(b) At the initial contact or at the earliest possible time after the initial contact between a sexual assault victim and the peace officer responding to the incident or disturbance call about the offense, the peace officer shall:</p>
+    <p class="ind1">(1) provide to the victim:</p>
+    <p class="ind2">(A) a written referral to the nearest sexual assault program as defined by Section 351.251, Local Government Code; and</p>
+    <p class="ind2">(B) information about the statewide electronic tracking system established under Section 420.034, Government Code;</p>
+    <p class="ind1">(2) offer to request a forensic medical examination on behalf of the victim in accordance with Article 56A.251;</p>
+    <p class="ind1">(3) coordinate with the local response team, as defined by Section 351.251, Local Government Code, to provide continuing care to the victim or to further investigate the offense; and</p>
+    <p class="ind1">(4) provide to the victim a written notice containing all of the information required by this article.</p>
+    <p>(e) A sexual assault program may provide a written description of the program's services to a law enforcement agency, for use in delivering the written referral required by Subsection (b).</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== NOTICE REQUIREMENTS ===================== -->
+<section class="slide" data-key="notice-rules" data-dot="(c)&ndash;(d)" aria-label="56A.403(c)-(d) — What the written notice must contain">
+  <div class="slide-head"><span class="sub-badge">(c)&ndash;(d)</span><div><p class="kicker">The agency&rsquo;s job</p><h2>Building the written notice</h2></div></div>
+  <div class="slide-body">
+    <div class="cols three">
+      <div class="panel tint"><h3>Who writes it</h3><ul><li>Each <b>law enforcement agency</b>, after consulting a local <b>sexual assault program</b> or <b>response team</b>.</li><li>May be <b>combined</b> with the general victim-rights notice under Art. 56A.401.</li></ul></div>
+      <div class="panel tint"><h3>How often</h3><ul><li>Updated <b>at least once each biennium</b> (every two years).</li></ul></div>
+      <div class="panel tint"><h3>What it must have</h3><ul><li>Printed in <b>English and Spanish</b>.</li><li>Current contact info for the <b>victim assistance coordinator</b> (prosecutor&rsquo;s office, Art. 56A.201) and the <b>crime victim liaison</b> (law enforcement agency, Art. 56A.203).</li></ul></div>
+    </div>
+    <p style="margin-bottom:6px !important;"><b>Safe harbor:</b> the notice is <b>considered sufficient</b> if it includes these statements from subsection (d):</p>
+    <ul class="checklist">
+      <li>The heading <span class="q">&ldquo;Notice to Adult Victims of Sexual Assault&rdquo;</span></li>
+      <li>It is a crime for anyone to cause the victim physical injury or harm</li>
+      <li>Tell the officer if injured, or if in danger when the officer leaves or later</li>
+      <li>Right to a forensic exam <b>within 120 hours</b>, even without making a police report</li>
+      <li>Right to <b>anonymously track</b> each item of evidence</li>
+      <li>Right to an <b>advocate</b> at the forensic exam</li>
+      <li>Right to an advocate or other representative at the <b>investigative interview</b></li>
+      <li>Right to ask the prosecutor to file a complaint</li>
+      <li>After an arrest (certain sexual crimes, stalking, trafficking): emergency protection order, a <b>pseudonym</b> under Ch. 58, a permanent protective order</li>
+      <li>Examples of what a protective order can prohibit</li>
+      <li><b>No court fee</b> for filing, serving, or entering a protective order</li>
+      <li>The agency&rsquo;s <b>crime victim liaison</b>: name, address, phone</li>
+      <li>The prosecutor&rsquo;s <b>victim assistance coordinator</b>: address, phone</li>
+      <li>Local <b>sexual assault program</b> or social service organization</li>
+      <li>Location(s) for a <b>forensic medical exam</b></li>
+      <li><b>National Human Trafficking Hotline</b>: 1-888-373-7888, or text HELP or INFO to BeFree (233733)</li>
+    </ul>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 56A.403(c), (d)</summary><div class="statute">
+    <p>(c) Each law enforcement agency shall consult with a local sexual assault program or response team, as those terms are defined by Section 351.251, Local Government Code, to develop the written notice required by Subsection (b). The notice must include the information described by Subsection (d) and may be combined with the written notice required under Article 56A.401. At least once each biennium, the law enforcement agency shall update the notice required by Subsection (b).</p>
+    <p>(d) The notice required by Subsection (b) must be in English and Spanish and include the current contact information for a victim assistance coordinator under Article 56A.201 and a crime victim liaison under Article 56A.203. The notice is considered sufficient if it includes the following statements:</p>
+    <p class="ind1">"NOTICE TO ADULT VICTIMS OF SEXUAL ASSAULT"</p>
+    <p class="ind1">"It is a crime for any person to cause you any physical injury or harm."</p>
+    <p class="ind1">"Please tell the investigating peace officer if you have been injured or if you feel you are going to be in danger when the officer leaves or at a later time."</p>
+    <p class="ind1">"You have the right to:</p>
+    <p class="ind1">"(1) obtain a forensic medical examination within 120 hours of the assault to collect potential evidence and receive preventative medications, even if you decide not to make a report to a law enforcement agency;</p>
+    <p class="ind1">"(2) anonymously track or receive updates regarding the status and location of each item of evidence collected in your case;</p>
+    <p class="ind1">"(3) have a sexual assault program advocate present during a forensic medical examination;</p>
+    <p class="ind1">"(4) have a sexual assault program advocate or other victim's representative present during an investigative interview with law enforcement;</p>
+    <p class="ind1">"(5) ask the local prosecutor to file a criminal complaint against the person who assaulted you; and</p>
+    <p class="ind1">"(6) if a defendant is arrested for a crime against you involving certain sexual crimes, stalking, or trafficking:</p>
+    <p class="ind2">"(A) request an order for emergency protection to be issued by a magistrate;</p>
+    <p class="ind2">"(B) using procedures provided by Chapter 58, Code of Criminal Procedure, request a pseudonym to be used instead of your name in all public files and records concerning the offense; and</p>
+    <p class="ind2">"(C) apply to a court for a permanent order to protect you (you should consult a legal aid office, a prosecuting attorney, or a private attorney)."</p>
+    <p class="ind1">"For example, the court can enter an order that prohibits the person who assaulted you from:</p>
+    <p class="ind1">"(1) committing further acts of violence;</p>
+    <p class="ind1">"(2) threatening, harassing, or contacting you or a member of your family or household; and</p>
+    <p class="ind1">"(3) going near your place of employment or near a child care facility or school attended by you or a member of your family or household."</p>
+    <p class="ind1">"You cannot be charged a fee by a court in connection with filing, serving, or entering a protective order."</p>
+    <p class="ind1">"If you have questions about the status of your case or need assistance, you may contact the crime victim liaison (insert name) at our agency (law enforcement agency address and victim liaison phone number)."</p>
+    <p class="ind1">"If you would like to speak with someone in the prosecuting attorney's office, you may reach their victim assistance coordinator at (address and phone number)."</p>
+    <p class="ind1">"Call the following sexual assault program or social service organization if you need assistance or wish to speak with an advocate:</p>
+    <p class="ind1">"__________________________________________</p>
+    <p class="ind1">"__________________________________________."</p>
+    <p class="ind1">"You may receive a sexual assault forensic medical examination at the following location(s):</p>
+    <p class="ind1">"__________________________________________</p>
+    <p class="ind1">"__________________________________________."</p>
+    <p class="ind1">"To get help from the National Human Trafficking Hotline: 1-888-373-7888 or text HELP or INFO to BeFree (233733)."</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== SAMPLE NOTICE ===================== -->
+<section class="slide" data-key="sample-notice" data-dot="Sample" aria-label="Sample written notice (mockup)">
+  <div class="slide-head"><span class="sub-badge">(d)</span><div><p class="kicker">Visual aid</p><h2>Sample written notice</h2></div></div>
+  <div class="slide-body">
+    <div class="disclaimer"><b>DISCLAIMER:</b> This is <b>NOT</b> the actual notice used by the Fort Worth Police Department. It is a mockup built from the statements in CCP Art. 56A.403(d), made only as a visual aid for study.</div>
+    <p class="key"><span>Text in quotation marks in the statute is reproduced word for word.</span><span><span class="fill">[Highlighted]</span> = information the agency fills in.</span></p>
+    <div class="mock-wrap">
+      <div class="notice" role="document" aria-label="Sample notice to adult victims of sexual assault">
+        <div class="agency">
+          <div><b>[Law Enforcement Agency Name]</b>[Agency address] &middot; Report / Case No. <span class="fill">[__________]</span></div>
+          <span class="lang">ENGLISH &middot; ESPA&Ntilde;OL AL REVERSO</span>
+        </div>
+        <h3>NOTICE TO ADULT VICTIMS OF SEXUAL ASSAULT</h3>
+        <p>It is a crime for any person to cause you any physical injury or harm.</p>
+        <p>Please tell the investigating peace officer if you have been injured or if you feel you are going to be in danger when the officer leaves or at a later time.</p>
+        <p style="margin-bottom:3px !important;"><b>You have the right to:</b></p>
+        <ol>
+          <li>obtain a forensic medical examination within 120 hours of the assault to collect potential evidence and receive preventative medications, even if you decide not to make a report to a law enforcement agency;</li>
+          <li>anonymously track or receive updates regarding the status and location of each item of evidence collected in your case;</li>
+          <li>have a sexual assault program advocate present during a forensic medical examination;</li>
+          <li>have a sexual assault program advocate or other victim&rsquo;s representative present during an investigative interview with law enforcement;</li>
+          <li>ask the local prosecutor to file a criminal complaint against the person who assaulted you; and</li>
+          <li>if a defendant is arrested for a crime against you involving certain sexual crimes, stalking, or trafficking:
+            <ol class="alpha">
+              <li>request an order for emergency protection to be issued by a magistrate;</li>
+              <li>using procedures provided by Chapter 58, Code of Criminal Procedure, request a pseudonym to be used instead of your name in all public files and records concerning the offense; and</li>
+              <li>apply to a court for a permanent order to protect you (you should consult a legal aid office, a prosecuting attorney, or a private attorney).</li>
+            </ol>
+          </li>
+        </ol>
+        <p style="margin-bottom:3px !important;">For example, the court can enter an order that prohibits the person who assaulted you from:</p>
+        <ol>
+          <li>committing further acts of violence;</li>
+          <li>threatening, harassing, or contacting you or a member of your family or household; and</li>
+          <li>going near your place of employment or near a child care facility or school attended by you or a member of your family or household.</li>
+        </ol>
+        <p><b>You cannot be charged a fee by a court in connection with filing, serving, or entering a protective order.</b></p>
+        <p>If you have questions about the status of your case or need assistance, you may contact the crime victim liaison <span class="fill">[Liaison name]</span> at our agency <span class="fill">[Agency address]</span> <span class="fill">[Liaison phone]</span>.</p>
+        <p>If you would like to speak with someone in the prosecuting attorney&rsquo;s office, you may reach their victim assistance coordinator at <span class="fill">[Prosecutor&rsquo;s office address]</span> <span class="fill">[Phone]</span>.</p>
+        <p style="margin-bottom:2px !important;">Call the following sexual assault program or social service organization if you need assistance or wish to speak with an advocate:</p>
+        <span class="line"></span><span class="line"></span>
+        <p style="margin:8px 0 2px !important;">You may receive a sexual assault forensic medical examination at the following location(s):</p>
+        <span class="line"></span><span class="line"></span>
+        <div class="hotline">To get help from the <b>National Human Trafficking Hotline</b>: <b>1-888-373-7888</b> or text <b>HELP</b> or <b>INFO</b> to BeFree (<b>233733</b>).</div>
+        <div class="foot"><span>Officer: <span class="fill">[Name / ID No.]</span> &nbsp; Date given: <span class="fill">[__/__/____]</span></span><span>Rev. <span class="fill">[date]</span> &middot; updated at least once each biennium</span></div>
+      </div>
+    </div>
+    <div class="callout"><b>Not shown on this mockup:</b> the statute requires the notice in <b>English and Spanish</b>, so a real notice also has a Spanish version. It also has to explain the victim&rsquo;s rights under Art. 56A.052 and the pseudonym procedures under Chapter 58 (subsection (a)), which the agency can cover in the same document or in the combined Art. 56A.401 victim-rights notice.</div>
+  </div>
+  <div class="slide-foot">
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.403" target="bpoc-codes">Open Art. 56A.403 in Texas Codes &#8599;</a>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=56A&amp;sec=56A.401" target="bpoc-codes">Open Art. 56A.401 (general victim notice) &#8599;</a>
+  </div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>CCP Art. 56A.403 slides &middot; Text current through the 2025 89th Leg., R.S. amendments (S.B. 836) &middot; Sample notice is a study mockup, not an official or FWPD form &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  // the mock notice is left alone so it reads like a printed form
+  document.querySelectorAll('.slide-body > .duties, .slide-body > .cols, .slide-body > .callout, .slide-body > .trigger, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
