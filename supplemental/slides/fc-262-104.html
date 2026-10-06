@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Family Code 262.104 – Emergency Possession of a Child | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: three gates, condition matrix, limits, after-possession timeline, scenario checks */
+.gates{display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:0; align-items:stretch; margin:4px 0 12px;}
+.gate{border:1px solid var(--rule); border-radius:10px; padding:10px 13px; background:#fff; border-top:4px solid var(--navy);}
+.gate.b{border-top-color:var(--brass);} .gate.c{border-top-color:var(--green);}
+.gate .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--ink-soft);}
+.gate h3{margin:2px 0 5px; font-family:'IBM Plex Serif',serif; font-size:15.5px; color:var(--navy);}
+.gate p{margin:0 !important; font-size:13.2px; line-height:1.5;}
+.gates .and{align-self:center; padding:0 8px; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--brass);}
+
+table.mx{width:100%; border-collapse:collapse; font-size:13.2px; margin:4px 0 10px;}
+table.mx th{background:var(--navy); color:#fff; text-align:left; padding:7px 9px; font-weight:600; vertical-align:bottom;}
+table.mx th.c{text-align:center; width:150px; line-height:1.25;}
+table.mx .sm{display:none;}
+table.mx th.c small{display:block; font-weight:500; font-size:10.5px; color:var(--brass-light);}
+table.mx td{padding:8px 9px; border-bottom:1px solid var(--rule); vertical-align:middle; line-height:1.45;}
+table.mx td.c{text-align:center;}
+table.mx td.c .ok{display:block; font-size:17px; font-weight:700; color:var(--green); line-height:1.1;}
+table.mx td.c .no{display:block; font-size:17px; font-weight:700; color:var(--rust); line-height:1.1;}
+table.mx td.c .via{display:block; font-size:15px; font-weight:700; color:var(--amber); line-height:1.1;}
+table.mx td.c .cite{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--ink-soft); margin-top:2px;}
+table.mx td.what b{color:var(--navy);}
+table.mx td.what small{display:block; color:var(--ink-soft); font-size:11.8px; margin-top:2px;}
+table.mx tr.tip td{background:var(--paper);}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:12.5px; color:var(--ink-soft); margin:-4px 0 6px;}
+.legend b.ok{color:var(--green);} .legend b.via{color:var(--amber);} .legend b.no{color:var(--rust);}
+
+.nots{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:4px 0 12px;}
+.not{border:1px solid var(--rule); border-radius:10px; padding:11px 13px; background:#fff; border-left:4px solid var(--rust);}
+.not h3{margin:0 0 5px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--rust);}
+.not p{margin:0 !important; font-size:13.2px; line-height:1.5;}
+
+.flow .step{font-size:13px;}
+.flow .step .code{display:block; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass);}
+.flow .step.hot .code{color:var(--brass-light);}
+.exc{font-size:12.8px; color:var(--ink-soft); margin:-6px 0 10px !important;}
+
+.checks{display:grid; gap:8px; margin:4px 0 8px; counter-reset:q;}
+.checks details{border:1px solid var(--rule); border-radius:10px; background:#fff; padding:9px 13px;}
+.checks summary{cursor:pointer; font-size:13.8px; line-height:1.5; list-style:none;}
+.checks summary::-webkit-details-marker{display:none;}
+.checks summary::before{content:"Q" counter(q) "  "; counter-increment:q; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:12px;}
+.checks summary .show{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:999px; padding:0 8px; margin-left:8px;}
+.checks details[open] summary .show{background:var(--navy); color:#fff;}
+.checks .ans{margin-top:7px; padding-top:7px; border-top:1px dotted var(--rule); font-size:13.4px; line-height:1.55;}
+.checks .ans b.v{color:var(--green);} .checks .ans b.x{color:var(--rust);}
+
+@media (max-width:760px){
+  .gates{grid-template-columns:1fr;} .gates .and{text-align:center; padding:4px 0;}
+  .nots{grid-template-columns:1fr;}
+  table.mx{font-size:12.4px;}
+  table.mx .lg{display:none;} table.mx .sm{display:inline;}
+  table.mx th.c{width:58px; font-size:11px; padding:6px 3px;}
+  table.mx td.c .cite{font-size:9.5px;} table.mx td.c .via{font-size:12px;}
+  table.mx th.c small{display:none;}
+  table.mx td{padding:7px 5px;}
+  table.mx td.what small{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Family Code &middot; Slides</p>
+      <h1>Family Code 262.104 — Taking Possession of a Child in an Emergency Without a Court Order</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 19.5&ndash;19.6 &mdash; when an officer may take a child without a court order, what is <i>not</i> enough, what has to happen next (262.105&ndash;262.106), and who the child can be released to (CCP Art. 2A.058).</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE / GATES ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Family Code &middot; Chapter 262 &middot; Subchapter B</p>
+    <h2 class="big">Three Gates Before<br>You Take the Child</h2>
+    <p class="lede">Emergency removal without a court order is allowed only when all three are true. The statute says &ldquo;under the following conditions, <b>only</b>&rdquo; &mdash; the list is closed.</p>
+    <div class="gates">
+      <div class="gate"><span class="lbl">GATE 1 &middot; TIME</span><h3>No time for a court order</h3><p>There is no time, consistent with the child&rsquo;s health and safety, to get a temporary order, TRO, or attachment under Family Code 262.102(a).</p></div>
+      <span class="and">AND</span>
+      <div class="gate b"><span class="lbl">GATE 2 &middot; WHO</span><h3>An authorized person</h3><p>A <b>law enforcement officer</b>, an authorized <b>DFPS</b> representative, or a <b>juvenile probation officer</b>.</p></div>
+      <span class="and">AND</span>
+      <div class="gate c"><span class="lbl">GATE 3 &middot; GROUNDS</span><h3>One listed condition</h3><p>Facts that would lead a <b>person of ordinary prudence and caution</b> to believe one of the conditions on the next slide exists.</p></div>
+    </div>
+    <div class="callout def"><b>&ldquo;Personal knowledge&rdquo; vs. &ldquo;corroborated information&rdquo;:</b> every condition is satisfied either by what <b>you</b> know first-hand, or by what <b>someone else</b> tells you that you have <b>corroborated with your own personal knowledge</b>. An uncorroborated report, by itself, never satisfies the statute.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=FA&amp;ch=262&amp;sec=262.104" target="bpoc-codes">Open Family Code 262.104 in Texas Codes &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== MATRIX ===================== -->
+<section class="slide" data-key="grounds" data-dot="Grounds" aria-label="The conditions — what you believe and how you know it">
+  <div class="slide-head"><span class="sub-badge">(a)&ndash;(b)</span><div><p class="kicker">What you believe &times; how you know it</p><h2>The conditions that allow removal</h2></div></div>
+  <div class="slide-body">
+    <table class="mx">
+      <tr><th><span class="lg">A person of ordinary prudence and caution would believe&hellip;</span><span class="sm">Would believe&hellip;</span></th><th class="c"><span class="lg">Your personal knowledge</span><span class="sm">Seen yourself</span><small>what you saw, heard, found</small></th><th class="c"><span class="lg">Another&rsquo;s info, corroborated</span><span class="sm">Tip + verified</span><small>tip + your own verification</small></th><th class="c"><span class="lg">Another&rsquo;s info, uncorroborated</span><span class="sm">Tip only</span><small>tip only</small></th></tr>
+      <tr><td class="what"><b>Immediate danger</b> to the child&rsquo;s physical health or safety</td><td class="c"><span class="ok">&#10003;</span><span class="cite">(a)(1)</span></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(a)(2)</span></td><td class="c"><span class="no">&#10007;</span></td></tr>
+      <tr><td class="what">The child has been a victim of <b>sexual abuse</b> or of <b>trafficking</b><small>trafficking = Penal Code 20A.02 or 20A.03</small></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(a)(3)</span></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(a)(4)</span></td><td class="c"><span class="no">&#10007;</span></td></tr>
+      <tr><td class="what">The parent or person in possession is <b>currently using a controlled substance</b>, <i>and</i> the use is an <b>immediate danger</b> to the child<small>controlled substance = Health &amp; Safety Code Ch. 481</small></td><td class="c"><span class="via">&rarr; (a)(1)</span><span class="cite">see note</span></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(a)(5)</span></td><td class="c"><span class="no">&#10007;</span></td></tr>
+      <tr><td class="what">The parent or person in possession let the child <b>remain on premises used to manufacture methamphetamine</b><small>no separate &ldquo;immediate danger&rdquo; finding required</small></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(b)</span></td><td class="c"><span class="ok">&#10003;</span><span class="cite">(b)</span></td><td class="c"><span class="no">&#10007;</span></td></tr>
+    </table>
+    <div class="legend"><span><b class="ok">&#10003;</b> listed ground</span><span><b class="via">&rarr; (a)(1)</b> not its own ground; your first-hand view of the danger is (a)(1)</span><span><b class="no">&#10007;</b> not enough</span></div>
+    <div class="callout"><b>Drug-use note:</b> (a)(5) is written only for information from another person that you corroborate. If you see the drug use and the danger yourself, you are already under (a)(1) &mdash; personal knowledge of an immediate danger. Either way, <b>drug use alone is not enough</b>; it must be an immediate danger to the child. Meth <b>manufacturing</b> premises under (b) is the one ground that does not require a separate immediate-danger finding.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 262.104(a)&ndash;(b)</summary><div class="statute">
+    <p>(a) If there is no time to obtain a temporary order, temporary restraining order, or attachment under Section 262.102(a) before taking possession of a child consistent with the health and safety of that child, an authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may take possession of a child without a court order under the following conditions, only:</p>
+    <p class="ind1">(1) on personal knowledge of facts that would lead a person of ordinary prudence and caution to believe that there is an immediate danger to the physical health or safety of the child;</p>
+    <p class="ind1">(2) on information furnished by another that has been corroborated by personal knowledge of facts and all of which taken together would lead a person of ordinary prudence and caution to believe that there is an immediate danger to the physical health or safety of the child;</p>
+    <p class="ind1">(3) on personal knowledge of facts that would lead a person of ordinary prudence and caution to believe that the child has been the victim of sexual abuse or of trafficking under Section 20A.02 or 20A.03, Penal Code;</p>
+    <p class="ind1">(4) on information furnished by another that has been corroborated by personal knowledge of facts and all of which taken together would lead a person of ordinary prudence and caution to believe that the child has been the victim of sexual abuse or of trafficking under Section 20A.02 or 20A.03, Penal Code; or</p>
+    <p class="ind1">(5) on information furnished by another that has been corroborated by personal knowledge of facts and all of which taken together would lead a person of ordinary prudence and caution to believe that the parent or person who has possession of the child is currently using a controlled substance as defined by Chapter 481, Health and Safety Code, and the use constitutes an immediate danger to the physical health or safety of the child.</p>
+    <p>(b) An authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may take possession of a child under Subsection (a) on personal knowledge or information furnished by another, that has been corroborated by personal knowledge, that would lead a person of ordinary prudence and caution to believe that the parent or person who has possession of the child has permitted the child to remain on premises used for the manufacture of methamphetamine.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== NOT ENOUGH ===================== -->
+<section class="slide" data-key="not" data-dot="Not enough" aria-label="What is not enough">
+  <div class="slide-head"><span class="sub-badge">(c)</span><div><p class="kicker">Limits on the authority</p><h2>What is <i>not</i> enough</h2></div></div>
+  <div class="slide-body">
+    <div class="nots">
+      <div class="not"><h3>An uncorroborated report</h3><p>A call, a neighbor, or an anonymous tip by itself. You need to corroborate it with your own personal knowledge of facts before it counts. <span class="tag">(a)(2), (4), (5) &middot; (b)</span></p></div>
+      <div class="not"><h3>A remote medical opinion</h3><p>The opinion of a medical professional under contract with DFPS who did <b>not</b> physically examine the child cannot be the <b>sole</b> basis for removal. <span class="tag">(c)</span></p></div>
+      <div class="not"><h3>There was time to get an order</h3><p>If the child&rsquo;s safety allows time to get a temporary order, TRO, or attachment under 262.102(a), this section does not apply &mdash; the court order route does. <span class="tag">(a) lead-in</span></p></div>
+    </div>
+    <div class="cols">
+      <div class="panel"><h3>Also not a ground by itself</h3><ul>
+        <li><b>Drug use</b> by the parent with no immediate danger to the child.</li>
+        <li><b>Neglect</b> that is not an immediate danger. (A judge may consider neglect for an emergency order under 262.102, but 262.104 lists only the conditions on the previous slide.)</li>
+        <li>A <b>dirty or unsafe home</b> that is not an immediate danger to the child&rsquo;s physical health or safety.</li></ul></div>
+      <div class="panel tint"><h3>Write it so the affidavit holds up</h3><ul>
+        <li>The suit filed after removal must be backed by an <b>affidavit</b> stating the facts that met one of these conditions, based on personal knowledge or corroborated information. <span class="tag">262.105(b)</span></li>
+        <li>It must also show removal was necessary: staying home was contrary to the child&rsquo;s welfare, there was no time for a full hearing, and <b>reasonable efforts</b> were made to avoid removal.</li>
+        <li>Your report is where those facts come from: what you saw, who told you what, and <b>how you verified it</b>.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 262.104(c)</summary><div class="statute">
+    <p>(c) An authorized representative of the Department of Family and Protective Services, a law enforcement officer, or a juvenile probation officer may not take possession of a child under Subsection (a) based solely on the opinion of a medical professional under contract with the Department of Family and Protective Services who did not conduct a physical examination of the child.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== AFTER ===================== -->
+<section class="slide" data-key="after" data-dot="After" aria-label="After taking possession">
+  <div class="slide-head"><span class="sub-badge">19.6</span><div><p class="kicker">Family Code 262.105&ndash;262.106 &middot; CCP Art. 2A.058</p><h2>After you take the child</h2></div></div>
+  <div class="slide-body">
+    <div class="flow">
+      <div class="step"><b class="t">Take possession</b>Under one of the 262.104 conditions<span class="code">262.104</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Without unnecessary delay</b>File a suit affecting the parent-child relationship, ask for an attorney ad litem for the child, and request an initial hearing<span class="code">262.105(a)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Initial hearing</b>By the <b>first business day</b> after removal; if the court is unavailable, the first business day it is available, but no later than the <b>third</b><span class="code">262.106(a)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">No timely hearing?</b>The child is <b>returned</b> to the person entitled to possession<span class="code">262.106(c)</span></div>
+    </div>
+    <p class="exc">262.105 places these filing duties on &ldquo;the person taking the child into possession.&rdquo; Officers normally release the child to DFPS (below), and DFPS carries the case forward &mdash; follow department policy on the hand-off.</p>
+    <div class="cols">
+      <div class="panel navy"><h3>CCP Art. 2A.058(a) &mdash; release the child to</h3><ul>
+        <li>a DFPS-licensed <b>residential child-care facility</b> authorized by DFPS to take possession,</li>
+        <li>a <b>juvenile probation department</b>,</li>
+        <li><b>DFPS</b>, or</li>
+        <li>any other person <b>authorized by law</b> to take possession of the child.</li></ul></div>
+      <div class="panel"><h3>2A.058(b) &mdash; before releasing to a non-governmental person</h3><ul>
+        <li><b>NCIC:</b> confirm the child is not a missing child.</li>
+        <li><b>NCIC:</b> confirm the person has no protective order against them and is not a registered sex offender (unless the child&rsquo;s parent or guardian with no contact restrictions), plus other info DFPS considers relevant.</li>
+        <li>Call the <b>DFPS Texas Abuse Hotline</b> to check the abuse/neglect registry.</li>
+        <li>Verify the person is at least <b>18</b>.</li>
+        <li>Keep a <b>record</b>: the child&rsquo;s name or pseudonyms, and the name and address of the person receiving the child.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; FC 262.105(a) &middot; 262.106(a), (c) &middot; CCP 2A.058</summary><div class="statute">
+    <p>Family Code 262.105(a) When a child is taken into possession without a court order, the person taking the child into possession, without unnecessary delay, shall:</p>
+    <p class="ind1">(1) file a suit affecting the parent-child relationship;</p>
+    <p class="ind1">(2) request the court to appoint an attorney ad litem for the child; and</p>
+    <p class="ind1">(3) request an initial hearing to be held by no later than the first business day after the date the child is taken into possession.</p>
+    <p>Family Code 262.106(a) The court in which a suit has been filed after a child has been taken into possession without a court order by a governmental entity shall hold an initial hearing on or before the first business day after the date the child is taken into possession. The court shall render orders that are necessary to protect the physical health and safety of the child. If the court is unavailable for a hearing on the first business day, then, and only in that event, the hearing shall be held no later than the first business day after the court becomes available, provided that the hearing is held no later than the third business day after the child is taken into possession.</p>
+    <p>(c) If the initial hearing is not held within the time required, the child shall be returned to the parent, managing conservator, possessory conservator, guardian, caretaker, or custodian who is presently entitled to possession of the child.</p>
+    <p>Code of Criminal Procedure Art. 2A.058. (a) A law enforcement officer who takes possession of a child under Section 262.104, Family Code, may release the child to:</p>
+    <p class="ind1">(1) a residential child-care facility licensed by the Department of Family and Protective Services under Chapter 42, Human Resources Code, if the facility is authorized by the department to take possession of the child;</p>
+    <p class="ind1">(2) a juvenile probation department;</p>
+    <p class="ind1">(3) the Department of Family and Protective Services; or</p>
+    <p class="ind1">(4) any other person authorized by law to take possession of the child.</p>
+    <p>(b) Before a law enforcement officer may release a child to a person authorized by law to take possession of the child other than a governmental entity, the officer must:</p>
+    <p class="ind1">(1) verify with the National Crime Information Center that the child is not a missing child;</p>
+    <p class="ind1">(2) search the relevant databases of the National Crime Information Center system, including those pertaining to protection orders, historical protection orders, warrants, sex offender registries, and persons on supervised release to:</p>
+    <p class="ind2">(A) verify that the person to whom the child is being released: (i) does not have a protective order issued against the person; and (ii) is not registered as a sex offender unless the person is the child's parent or guardian and there are no restrictions regarding the person's contact with the child; and</p>
+    <p class="ind2">(B) obtain any other information the Department of Family and Protective Services considers: (i) relevant to protect the welfare of the child; or (ii) reflective of the responsibility of the person to whom the child is being released;</p>
+    <p class="ind1">(3) call the Department of Family and Protective Services Texas Abuse Hotline to determine whether the person to whom the child is being released is listed in the registry as a person who abused or neglected a child;</p>
+    <p class="ind1">(4) verify that the person to whom the child is being released is at least 18 years of age; and</p>
+    <p class="ind1">(5) maintain a record regarding the child's placement, including: (A) identifying information about the child, including the child's name or pseudonyms; and (B) the name and address of the person to whom the child is being released.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== CHECKS ===================== -->
+<section class="slide" data-key="recap" aria-label="Scenario checks">
+  <div class="slide-head"><span class="sub-badge">&#9733;</span><div><p class="kicker">Tap a scenario to see the answer</p><h2>Scenario checks</h2></div></div>
+  <div class="slide-body">
+    <div class="checks">
+      <details><summary>An anonymous caller says a mother is high and her toddler is in danger. You arrive; the mother answers the door coherent, and the child appears unharmed. Can you take the child under 262.104? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> The tip is not corroborated by anything you personally observed, and nothing you saw shows current drug use that is an immediate danger. Uncorroborated information never satisfies (a)(5). Document what you saw and make the DFPS report.</div></details>
+      <details><summary>Same call, but inside you see the mother passed out next to a pipe, and the 2-year-old is alone next to an open, filled bathtub. Which condition applies? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(a)(5)</b> &mdash; the caller&rsquo;s information, corroborated by your personal knowledge, shows current drug use that is an immediate danger. Your own observations also support <b>(a)(1)</b>. Either one works if there is no time to get a court order.</div></details>
+      <details><summary>During a CSCAL encounter, a 12-year-old tells you a relative has been sexually abusing her, and her account matches injuries you can see. She lives with that relative. <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(a)(4)</b> &mdash; information from another (the child) corroborated by your personal knowledge (the visible injuries) that the child has been a victim of sexual abuse. A sexual-abuse ground does not need a separate immediate-danger finding.</div></details>
+      <details><summary>On a narcotics search warrant you find an active meth cook in the kitchen and a 6-year-old asleep in the back bedroom. <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">(b)</b> &mdash; personal knowledge that the person in possession let the child remain on premises used to manufacture methamphetamine. It also likely supports (a)(1) (immediate danger), but (b) does not require that finding.</div></details>
+      <details><summary>A DFPS-contracted doctor reviews photos and says the bruises look like abuse, but never examined the child. Nothing else has been verified. Can that alone support removal? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> 262.104(c) bars removal based <b>solely</b> on the opinion of a DFPS-contracted medical professional who did not physically examine the child. You would need other facts that meet one of the (a) or (b) conditions.</div></details>
+      <details><summary>You take a child under 262.104. The child&rsquo;s adult aunt arrives and offers to take her. What must you do before releasing the child to the aunt? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">CCP 2A.058(b):</b> NCIC check that the child is not missing; NCIC checks that the aunt has no protective order against her and is not a registered sex offender; call the DFPS Texas Abuse Hotline registry; verify she is at least 18; and keep a record of the child&rsquo;s identity and the aunt&rsquo;s name and address. Releasing to DFPS, a juvenile probation department, or a licensed facility does not require these checks.</div></details>
+    </div>
+  </div>
+  <div class="slide-foot"><span>See also: <a href="../../codes.html?code=FA&amp;ch=262&amp;sec=262.105" target="bpoc-codes">Family Code 262.105 (affidavit requirements) &#8599;</a> &middot; <a href="../../codes.html?code=CR&amp;ch=2A&amp;sec=2A.058" target="bpoc-codes">CCP Art. 2A.058 &#8599;</a></span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>Family Code 262.104 slides &middot; Text from the site&rsquo;s Texas Codes copy of the Family Code &middot; Study aid only &mdash; always verify against current statute and department policy &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body > .callout, .slide-body > .lede, .slide-body > .exc, .gate p, .not p, .panel, .checks .ans, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'FA'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>

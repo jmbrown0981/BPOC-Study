@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>Family Code 261.301 – Investigation of Report | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: who-investigates cards, priority clock, DFPS checklist, CSCAL flow, scenario checks */
+.who{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:4px 0 12px;}
+.card{border:1px solid var(--rule); border-radius:10px; padding:10px 12px; background:#fff; border-top:4px solid var(--navy);}
+.card.b{border-top-color:var(--brass);} .card.c{border-top-color:var(--rust);} .card.d{border-top-color:var(--green);}
+.card .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--ink-soft);}
+.card h3{margin:2px 0 4px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--navy);}
+.card .q{font-size:12.6px; color:var(--ink-soft); margin:0 0 6px !important; line-height:1.45;}
+.card p{margin:0 !important; font-size:13.2px; line-height:1.5;}
+
+.clock{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:4px 0 12px;}
+.tier{border-radius:10px; padding:11px 13px; border:1px solid var(--rule); background:#fff;}
+.tier .big{display:block; font-family:'IBM Plex Serif',serif; font-size:26px; font-weight:700; line-height:1.1;}
+.tier .lbl{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--ink-soft); margin:2px 0 6px;}
+.tier p{margin:0 !important; font-size:13px; line-height:1.5;}
+.tier.t1{background:var(--navy); color:#EDE7D6; border-color:var(--navy);} .tier.t1 .big{color:var(--brass-light);} .tier.t1 .lbl{color:#cfc6ab;}
+.tier.t2 .big{color:var(--rust);} .tier.t3 .big{color:var(--amber);}
+
+.dets{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:4px 0 10px; counter-reset:d;}
+.det{border:1px solid var(--rule); border-radius:8px; padding:7px 10px; background:var(--paper); font-size:12.8px; line-height:1.4;}
+.det::before{content:"(" counter(d) ") "; counter-increment:d; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:11px;}
+
+.flow .step{font-size:13px;}
+.flow .step .code{display:block; margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--brass);}
+.flow .step.hot .code{color:var(--brass-light);}
+.exc{font-size:12.8px; color:var(--ink-soft); margin:-6px 0 10px !important;}
+
+table.cmp{width:100%; border-collapse:collapse; font-size:13px; margin:4px 0 10px;}
+table.cmp th{background:var(--navy); color:#fff; text-align:left; padding:7px 9px; font-weight:600;}
+table.cmp td{padding:7px 9px; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.45;}
+table.cmp td:first-child{font-weight:600; color:var(--navy); width:22%;}
+
+.checks{display:grid; gap:8px; margin:4px 0 8px; counter-reset:q;}
+.checks details{border:1px solid var(--rule); border-radius:10px; background:#fff; padding:9px 13px;}
+.checks summary{cursor:pointer; font-size:13.8px; line-height:1.5; list-style:none;}
+.checks summary::-webkit-details-marker{display:none;}
+.checks summary::before{content:"Q" counter(q) "  "; counter-increment:q; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:12px;}
+.checks summary .show{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:999px; padding:0 8px; margin-left:8px;}
+.checks details[open] summary .show{background:var(--navy); color:#fff;}
+.checks .ans{margin-top:7px; padding-top:7px; border-top:1px dotted var(--rule); font-size:13.4px; line-height:1.55;}
+.checks .ans b.v{color:var(--green);} .checks .ans b.x{color:var(--rust);}
+
+@media (max-width:900px){ .who, .dets{grid-template-columns:1fr 1fr;} }
+@media (max-width:760px){
+  .clock{grid-template-columns:1fr;}
+  .who{grid-template-columns:1fr;}
+  table.cmp{font-size:12.4px;} table.cmp td, table.cmp th{padding:6px 5px;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Family Code &middot; Slides</p>
+      <h1>Family Code 261.301 — Investigation of Report</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC 19.3 &mdash; who investigates a child abuse or neglect report, how fast DFPS must respond, when an officer must investigate jointly with DFPS (with CCP Art. 2A.057), and the subsection (i) update that feeds the Child Safety Check Alert List.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE / WHO ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title — who investigates">
+  <div class="slide-body">
+    <p class="eyebrow">Family Code &middot; Chapter 261 &middot; Subchapter D</p>
+    <h2 class="big">Who Investigates<br>the Report?</h2>
+    <p class="lede">It depends on <b>who</b> allegedly harmed the child, <b>where</b> it happened, and <b>how serious</b> the risk is. The primary purpose of every investigation is the <b>protection of the child</b>.</p>
+    <div class="who">
+      <div class="card"><span class="lbl">(a) &middot; CAREGIVER</span><h3>DFPS, with police help</h3><p class="q">Abuse or neglect by a person responsible for the child&rsquo;s care, custody, or welfare</p><p>DFPS makes a <b>prompt and thorough</b> investigation, with help from the appropriate law enforcement agency &mdash; even if a custody suit is pending.</p></div>
+      <div class="card b"><span class="lbl">(b) &middot; FACILITY</span><h3>The licensing state agency</h3><p class="q">Abuse, neglect, or exploitation in a facility a state agency operates, licenses, certifies, or registers</p><p>That agency investigates under Subchapter E (for DFPS facilities, also the Human Resources Code).</p></div>
+      <div class="card c"><span class="lbl">(c) &middot; NON-CAREGIVER</span><h3>Law enforcement</h3><p class="q">Abuse, neglect, or exploitation by someone who is <b>not</b> responsible for the child&rsquo;s care</p><p>DFPS is <b>not required</b> to investigate. The law enforcement agency investigates if it decides an investigation should be conducted.</p></div>
+      <div class="card d"><span class="lbl">(f), (h) &middot; IMMEDIATE RISK</span><h3>Jointly: officer + DFPS</h3><p class="q">A criminal offense posing an immediate risk of physical or sexual abuse that could cause death or serious harm</p><p>A <b>peace officer</b> from the local agency and DFPS (or the Subchapter E agency) investigate <b>together</b>.</p></div>
+    </div>
+    <div class="callout def"><b>&ldquo;Person responsible for a child&rsquo;s care, custody, or welfare&rdquo;</b> (defined in 261.001) covers parents, guardians, and conservators, plus others such as household members, relatives, foster parents, and child-care or school staff who have that responsibility. A stranger or an acquaintance with no caregiving role is a <b>non-caregiver</b> &mdash; that case is a police investigation under (c).</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=FA&amp;ch=261&amp;sec=261.301" target="bpoc-codes">Open Family Code 261.301 in Texas Codes &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== PRIORITIES ===================== -->
+<section class="slide" data-key="clock" data-dot="Response times" aria-label="Response priorities and what DFPS determines">
+  <div class="slide-head"><span class="sub-badge">(d)&ndash;(e)</span><div><p class="kicker">Priorities set by rule, based on severity and immediacy of harm</p><h2>How fast DFPS must respond</h2></div></div>
+  <div class="slide-body">
+    <div class="clock">
+      <div class="tier t1"><span class="big">Immediately</span><span class="lbl">(d)(1)</span><p>Death or <b>substantial bodily harm</b> to the child would result unless DFPS intervenes immediately.</p></div>
+      <div class="tier t2"><span class="big">24 hours</span><span class="lbl">(d)(2) &middot; HIGHEST PRIORITY</span><p>Any other report assigned the <b>highest priority</b>.</p></div>
+      <div class="tier t3"><span class="big">72 hours</span><span class="lbl">(d)(3) &middot; SECOND-HIGHEST</span><p>A report assigned the <b>second-highest priority</b>.</p></div>
+    </div>
+    <p class="exc">These deadlines apply &ldquo;subject to the availability of funds.&rdquo; The executive commissioner sets the priorities and procedures by rule.</p>
+    <p style="margin:2px 0 6px !important;"><b>What DFPS determines</b>, as necessary to protect the child <span class="tag">(e)</span></p>
+    <div class="dets">
+      <div class="det">Nature, extent, and <b>cause</b> of the abuse or neglect</div>
+      <div class="det"><b>Identity</b> of the person responsible</div>
+      <div class="det">Names and conditions of the <b>other children</b> in the home</div>
+      <div class="det">Evaluation of the <b>parents</b> or caregivers</div>
+      <div class="det">Adequacy of the <b>home environment</b></div>
+      <div class="det">The child&rsquo;s <b>relationship</b> to the caregivers</div>
+      <div class="det">All other pertinent data</div>
+    </div>
+    <div class="cols three">
+      <div class="panel tint"><h3>(j) After-hours</h3><ul><li>Where there is demonstrated need, DFPS designates staff as after-hours investigators and responders.</li></ul></div>
+      <div class="panel tint"><h3>(k) Military families</h3><ul><li>DFPS checks whether the alleged caregiver is active-duty military or the spouse of one; if so, it notifies the DoD <b>Family Advocacy Program</b> at the closest installation.</li></ul></div>
+      <div class="panel tint"><h3>(l) Reopening a case</h3><ul><li>Before day 60 after closing: may reopen and change the finding only for <b>good cause</b>.</li><li>After day 60: may <b>not</b> reopen to find abuse or neglect.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 261.301(a)&ndash;(e), (j)&ndash;(l)</summary><div class="statute">
+    <p>(a) With assistance from the appropriate law enforcement agency as provided by this section, the department shall make a prompt and thorough investigation of a report of child abuse or neglect allegedly committed by a person responsible for a child's care, custody, or welfare. The investigation shall be conducted without regard to any pending suit affecting the parent-child relationship.</p>
+    <p>(b) A state agency shall investigate a report that alleges abuse, neglect, or exploitation occurred in a facility operated, licensed, certified, or registered by that agency as provided by Subchapter E. In conducting an investigation for a facility operated, licensed, certified, registered, or listed by the department, the department shall perform the investigation as provided by: (1) Subchapter E; and (2) the Human Resources Code.</p>
+    <p>(c) The department is not required to investigate a report that alleges child abuse, neglect, or exploitation by a person other than a person responsible for a child's care, custody, or welfare. The appropriate law enforcement agency shall investigate that report if the agency determines an investigation should be conducted.</p>
+    <p>(d) The executive commissioner shall by rule assign priorities and prescribe investigative procedures for investigations based on the severity and immediacy of the alleged harm to the child. The primary purpose of the investigation shall be the protection of the child. The rules must require the department, subject to the availability of funds, to:</p>
+    <p class="ind1">(1) immediately respond to a report of abuse and neglect that involves circumstances in which the death of the child or substantial bodily harm to the child would result unless the department immediately intervenes;</p>
+    <p class="ind1">(2) respond within 24 hours to a report of abuse and neglect that is assigned the highest priority, other than a report described by Subdivision (1); and</p>
+    <p class="ind1">(3) respond within 72 hours to a report of abuse and neglect that is assigned the second highest priority.</p>
+    <p>(e) As necessary to provide for the protection of the child, the department shall determine: (1) the nature, extent, and cause of the abuse or neglect; (2) the identity of the person responsible for the abuse or neglect; (3) the names and conditions of the other children in the home; (4) an evaluation of the parents or persons responsible for the care of the child; (5) the adequacy of the home environment; (6) the relationship of the child to the persons responsible for the care, custody, or welfare of the child; and (7) all other pertinent data.</p>
+    <p>(j) In geographic areas with demonstrated need, the department shall designate employees to serve specifically as investigators and responders for after-hours reports of child abuse or neglect.</p>
+    <p>(k) In an investigation of a report of abuse or neglect allegedly committed by a person responsible for a child's care, custody, or welfare, the department shall determine whether the person is an active duty member of the United States armed forces or the spouse of a member on active duty. If the department determines the person is an active duty member of the United States armed forces or the spouse of a member on active duty, the department shall notify the United States Department of Defense Family Advocacy Program at the closest active duty military installation of the investigation.</p>
+    <p>(l) After the 60th day after the date an investigation is closed, the department may not reopen the investigation or change the department's finding in the investigation to find abuse or neglect occurred. Before the 60th day after the date an investigation is closed, the department may reopen a closed investigation and change the department's finding in the investigation only for good cause shown. The commissioner by rule shall establish procedures for reopening a closed investigation as authorized by this section.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== JOINT ===================== -->
+<section class="slide" data-key="joint" data-dot="Joint" aria-label="Joint investigations with DFPS">
+  <div class="slide-head"><span class="sub-badge">(f)&ndash;(h)</span><div><p class="kicker">Where the officer comes in &middot; with CCP Art. 2A.057</p><h2>Joint investigations</h2></div></div>
+  <div class="slide-body">
+    <div class="flow">
+      <div class="step"><b class="t">Report to DFPS</b>Alleges a criminal offense posing an <b>immediate risk</b> of physical or sexual abuse that could cause death or serious harm<span class="code">261.301(f), (h)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">DFPS notifies police</b><b>Immediately</b> on receipt, DFPS notifies the appropriate local law enforcement agency<span class="code">261.301(h)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Investigate jointly</b>A peace officer (CCP 2A.001) and DFPS or the Subchapter E agency investigate together<span class="code">261.301(f) &middot; 2A.057(b)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">Respond with DFPS</b>As soon as possible, and <b>no later than 24 hours</b> after notice, the officer accompanies the DFPS investigator on the initial response<span class="code">2A.057(c)</span></div>
+    </div>
+    <div class="cols">
+      <div class="panel navy"><h3>When the officer <i>must</i> investigate jointly &mdash; CCP 2A.057(b)</h3><ul>
+        <li>The report is assigned the <b>highest priority</b> under DFPS rules (261.301(d)), <b>and</b></li>
+        <li>it alleges an <b>immediate risk of physical or sexual abuse</b> that could result in <b>death or serious harm</b> to the child,</li>
+        <li>by a <b>person responsible</b> for the child&rsquo;s care, custody, or welfare.</li></ul></div>
+      <div class="panel"><h3>If police can&rsquo;t or won&rsquo;t join &mdash; (g)</h3><ul>
+        <li>That does <b>not</b> stop DFPS from doing its own investigation.</li>
+        <li>DFPS must <b>document</b> every instance in which a law enforcement agency is unable or unwilling to conduct a joint investigation.</li>
+        <li>Joint investigations under (h) do not include Subchapter E (facility) investigations, which follow their own procedure.</li></ul></div>
+    </div>
+    <div class="callout"><b>Why it matters:</b> on these calls DFPS is working the child-protection side (safety, placement, the family) while you work the <b>criminal</b> side (evidence, statements, arrest). If removal becomes necessary and there is no time for a court order, your authority comes from <a href="fc-262-104.html">Family Code 262.104</a>.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 261.301(f)&ndash;(h) &middot; CCP 2A.057(b)&ndash;(c)</summary><div class="statute">
+    <p>(f) An investigation of a report to the department that alleges that a child has been or may be the victim of conduct that constitutes a criminal offense that poses an immediate risk of physical or sexual abuse of a child that could result in the death of or serious harm to the child shall be conducted jointly by a peace officer, as defined by Article 2A.001, Code of Criminal Procedure, from the appropriate local law enforcement agency and the department or the agency responsible for conducting an investigation under Subchapter E.</p>
+    <p>(g) The inability or unwillingness of a local law enforcement agency to conduct a joint investigation under this section does not constitute grounds to prevent or prohibit the department from performing its duties under this subtitle. The department shall document any instance in which a law enforcement agency is unable or unwilling to conduct a joint investigation under this section.</p>
+    <p>(h) The department and the appropriate local law enforcement agency shall conduct an investigation, other than an investigation under Subchapter E, as provided by this section and Article 2A.057, Code of Criminal Procedure, if the investigation is of a report that alleges that a child has been or may be the victim of conduct that constitutes a criminal offense that poses an immediate risk of physical or sexual abuse of a child that could result in the death of or serious harm to the child. Immediately on receipt of a report described by this subsection, the department shall notify the appropriate local law enforcement agency of the report.</p>
+    <p>Code of Criminal Procedure Art. 2A.057(b) A peace officer from the appropriate local law enforcement agency shall, on receipt of a report, investigate jointly with the department or with the agency responsible for conducting an investigation under Subchapter E, Chapter 261, Family Code, if the report:</p>
+    <p class="ind1">(1) is assigned the highest priority in accordance with rules adopted by the department under Section 261.301(d), Family Code; and</p>
+    <p class="ind1">(2) alleges an immediate risk of physical or sexual abuse of a child that could result in the death of or serious harm to the child by a person responsible for the care, custody, or welfare of the child.</p>
+    <p>(c) As soon as possible, but not later than 24 hours, after being notified by the department of a report described by Subsection (b), the peace officer shall accompany the department investigator in initially responding to the report.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== (i) CSCAL ===================== -->
+<section class="slide" data-key="cscal" data-dot="(i) &amp; CSCAL" aria-label="Subsection (i) and the Child Safety Check Alert List">
+  <div class="slide-head"><span class="sub-badge">(i)</span><div><p class="kicker">BPOC 19.3 &middot; the HB 2053 update</p><h2>When DFPS can&rsquo;t find the child</h2></div></div>
+  <div class="slide-body">
+    <div class="flow">
+      <div class="step"><b class="t">Highest priority</b>DFPS is investigating a report it assigned the <b>highest priority</b><span class="code">261.301(i)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Can&rsquo;t locate</b>At <b>any time</b> during that investigation, DFPS can&rsquo;t locate the child or the child&rsquo;s family<span class="code">261.301(i)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Notify DPS</b>DFPS tells DPS the location of the child and family is unknown; DPS has <b>TCIC</b> place them on the <b>CSCAL</b><span class="code">261.301(i) &middot; 261.3022(c)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">Located</b>If DPS finds them, DPS tells DFPS where they are. An officer who finds them follows CCP 2A.056<span class="code">261.301(i) &middot; 2A.056</span></div>
+    </div>
+    <table class="cmp">
+      <tr><th></th><th>261.301(i) &mdash; highest-priority investigation</th><th>261.3022(b) &mdash; any CSCAL purpose</th></tr>
+      <tr><td>Which cases</td><td>An investigation DFPS assigned the <b>highest priority</b></td><td>Investigating abuse/neglect, family-based support services, or a child in DFPS conservatorship</td></tr>
+      <tr><td>When DFPS notifies DPS</td><td>At <b>any time</b> it can&rsquo;t locate the child or family &mdash; no waiting period</td><td>After attempting to locate the child for <b>not more than 20 days</b></td></tr>
+    </table>
+    <div class="cols">
+      <div class="panel tint"><h3>If you encounter a CSCAL child or person &mdash; CCP 2A.056</h3><ul>
+        <li><b>Immediately</b> call DFPS on its dedicated law-enforcement statewide intake line.</li>
+        <li>Ask DFPS about the case; ask the child and the other person about the child&rsquo;s safety, well-being, and current residence.</li>
+        <li>You may <b>temporarily detain</b> the child or other person to ensure the child&rsquo;s safety. <span class="tag">(c)</span></li>
+        <li>Take possession only if <a href="fc-262-104.html">262.104</a> conditions exist. <span class="tag">(d)</span></li></ul></div>
+      <div class="panel"><h3>Before you clear</h3><ul>
+        <li>If you don&rsquo;t take the child: get the child&rsquo;s <b>current address</b> and other relevant information and report it to DFPS. <span class="tag">2A.056(d)</span></li>
+        <li>Report to <b>TCIC</b> that the child or person was located, and to whom the child was released. <span class="tag">2A.056(e)</span></li>
+        <li>TCIC then removes the child and family from the list. <span class="tag">261.3024</span></li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; 261.301(i) &middot; 261.3022(a)&ndash;(b) &middot; CCP 2A.056(b)&ndash;(e)</summary><div class="statute">
+    <p>(i) If at any time during an investigation of a report of child abuse or neglect to which the department has assigned the highest priority the department is unable to locate the child who is the subject of the report of abuse or neglect or the child's family, the department shall notify the Department of Public Safety that the location of the child and the child's family is unknown. If the Department of Public Safety locates the child and the child's family, the Department of Public Safety shall notify the department of the location of the child and the child's family.</p>
+    <p>Family Code 261.3022(a) The Department of Public Safety of the State of Texas shall maintain a child safety check alert list as part of the Texas Crime Information Center to help locate a child or the child's family for purposes of: (1) investigating a report of child abuse or neglect; (2) providing protective services to a family receiving family-based support services; or (3) providing protective services to the family of a child in the managing conservatorship of the department.</p>
+    <p>(b) If the department is unable to locate a child or the child's family for a purpose described by Subsection (a) after the department has attempted to locate the child for not more than 20 days, the department shall notify the Texas Department of Public Safety that the department is unable to locate the child or the child's family. The notice must include the information required by Subsections (c)(1)-(10).</p>
+    <p>Code of Criminal Procedure Art. 2A.056(b) A peace officer who locates a child or other person listed on the Texas Crime Information Center's child safety check alert list established under Section 261.3022, Family Code, shall:</p>
+    <p class="ind1">(1) immediately contact the department on the department's dedicated law-enforcement telephone number for statewide intake;</p>
+    <p class="ind1">(2) request information from the department regarding the circumstances of the case involving the child or other person; and</p>
+    <p class="ind1">(3) request information from the child and the other person regarding the child's safety, well-being, and current residence.</p>
+    <p>(c) The peace officer may temporarily detain the child or other person to ensure the safety and well-being of the child.</p>
+    <p>(d) If the peace officer determines that the circumstances described by Section 262.104, Family Code, exist, the officer may take temporary possession of the child without a court order as provided by that section. If the peace officer does not take temporary possession of the child, the officer shall obtain the child's current address and any other relevant information and report that information to the department.</p>
+    <p>(e) A peace officer who locates a child or other person listed on the Texas Crime Information Center's child safety check alert list and who reports the child's or other person's current address and other relevant information to the department shall report to the Texas Crime Information Center that the child or other person has been located and to whom the child was released, as applicable.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== CHECKS ===================== -->
+<section class="slide" data-key="recap" aria-label="Scenario checks">
+  <div class="slide-head"><span class="sub-badge">&#9733;</span><div><p class="kicker">Tap a scenario to see the answer</p><h2>Scenario checks</h2></div></div>
+  <div class="slide-body">
+    <div class="checks">
+      <details><summary>A 10-year-old reports that a neighbor (no caregiving role) touched her inappropriately. Who investigates under 261.301? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Law enforcement, under (c).</b> The neighbor is not a person responsible for the child&rsquo;s care, custody, or welfare, so DFPS is not required to investigate. The police agency investigates if it determines an investigation should be conducted &mdash; for a child sexual-abuse allegation, it will.</div></details>
+      <details><summary>DFPS calls your agency at 2 p.m. about a highest-priority report: a father allegedly beat his 3-year-old and is threatening to do it again. When must an officer go out with the DFPS investigator? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">As soon as possible, no later than 24 hours</b> after the notice (CCP 2A.057(c)). It is a highest-priority report alleging an immediate risk of physical abuse that could cause serious harm, by a caregiver, so the officer must investigate jointly with DFPS.</div></details>
+      <details><summary>A parent says, &ldquo;CPS can&rsquo;t investigate me &mdash; there&rsquo;s a custody case pending in family court.&rdquo; Is that right? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> Under (a), DFPS investigates &ldquo;without regard to any pending suit affecting the parent-child relationship.&rdquo;</div></details>
+      <details><summary>Your agency is short-staffed and cannot send an officer for a joint investigation. Does DFPS have to wait? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> Under (g), law enforcement&rsquo;s inability or unwillingness to join does not prevent DFPS from doing its job. DFPS must document that the agency could not or would not participate.</div></details>
+      <details><summary>Three days into a highest-priority investigation, the family moves and DFPS cannot find them. Must DFPS wait 20 days before notifying DPS? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No.</b> Under 261.301(i), DFPS notifies DPS at <b>any time</b> during a highest-priority investigation that it can&rsquo;t locate the child or family. The &ldquo;not more than 20 days&rdquo; language in 261.3022(b) is the general rule for all CSCAL purposes.</div></details>
+      <details><summary>On a traffic stop, TCIC returns a CSCAL hit on the driver&rsquo;s child in the back seat. The child appears well cared for. What do you do? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">CCP 2A.056:</b> immediately call the DFPS law-enforcement intake line; ask DFPS about the case; ask the child and driver about the child&rsquo;s safety, well-being, and residence (you may temporarily detain them while you do). If 262.104 conditions don&rsquo;t exist, get the current address and other relevant information, report it to DFPS, and report to TCIC that the child was located and to whom the child was released.</div></details>
+    </div>
+  </div>
+  <div class="slide-foot"><span>See also: <a href="fc-262-104.html">Family Code 262.104 slides</a> (emergency possession without a court order) &middot; <a href="../../codes.html?code=FA&amp;ch=261&amp;sec=261.3022" target="bpoc-codes">Family Code 261.3022 (CSCAL) &#8599;</a></span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>Family Code 261.301 slides &middot; Text from the site&rsquo;s Texas Codes copy of the Family Code and Code of Criminal Procedure &middot; Study aid only &mdash; always verify against current statute and department policy &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body > .callout, .slide-body > .lede, .slide-body > .exc, .card p, .panel, .checks .ans, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'FA'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
