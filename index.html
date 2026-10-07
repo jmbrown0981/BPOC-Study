@@ -298,10 +298,24 @@
 <div class="section-block">
   <h2>Supplemental Materials</h2>
   <span class="section-controls">
-    <span class="count">24 resources · 11 groups</span>
+    <span class="count" id="suppCount">24 resources · 11 groups</span>
     <button type="button" class="mini-btn" onclick="expandAllGroups()">Expand all</button>
     <button type="button" class="mini-btn" onclick="collapseAllGroups()">Collapse all</button>
   </span>
+</div>
+
+<div class="supp-group">
+  <div class="supp-group-header" onclick="toggleGroup(this)">
+    <span class="supp-group-name">Universal Truths of Policing <span class="supp-group-count">1 resource</span></span>
+    <span class="supp-group-toggle">▾</span>
+  </div>
+  <div class="supp-group-body">
+    <!-- Instructor "nuggets" that apply everywhere but aren't tied to a BPOC chapter or LO. -->
+    <a class="supp-card status-live" href="supplemental/slides/scene-priorities.html">
+      <div class="supp-name">The 5 Steps at Any Scene</div>
+      <div class="supp-desc">Instructor guidance for every call, in order: assess threats, secure the scene (neutralize threats, establish the crime scene, back off onlookers), render medical aid, conduct the investigation, then reports / admin.</div>
+    </a>
+  </div>
 </div>
 
 <div class="supp-group">
@@ -558,10 +572,18 @@
 
 <div class="supp-group">
   <div class="supp-group-header" onclick="toggleGroup(this)">
-    <span class="supp-group-name">Ch. 32 — Criminal Investigations <span class="supp-group-count">2 resources</span></span>
+    <span class="supp-group-name">Ch. 32 — Criminal Investigations <span class="supp-group-count">3 resources</span></span>
     <span class="supp-group-toggle">▾</span>
   </div>
   <div class="supp-group-body">
+    <a class="supp-card status-live" href="alt-quizzes/32-property-offenders-sorting-game.html">
+      <div class="supp-name">Ch. 32 — LO 32.7 — Property Offender Types — Sorting Game</div>
+      <div class="supp-desc">Drag-and-drop (or tap-to-select) mini-game: 7 offender types (professional thief, semi-professional thief, burglar, robber, con artist, forger / credit card abuser, auto thief) and 56 characteristic cards from the LO 32.7 outline. Each round deals a random mix; sort each card into the type it describes and track correct/incorrect across the session.</div>
+    </a>
+    <a class="supp-card status-live" href="alt-quizzes/32-preliminary-investigation-sorting-game.html">
+      <div class="supp-name">Ch. 32 — LOs 32.17&ndash;32.18 — Preliminary Investigation Procedures — Sorting Game</div>
+      <div class="supp-desc">Drag-and-drop (or tap-to-select) mini-game: sort 50 preliminary-investigation steps into Crimes Against Property (the six officer duties in LO 32.17), Homicide, Assaults, Sexual Assaults, Child Abuse and Exploitation, or Child Fatalities (LO 32.18). Each round deals a random mix; track correct/incorrect across the session.</div>
+    </a>
     <a class="supp-card status-live" href="supplemental/slides/ccp-62-051.html">
       <div class="supp-name">Ch. 32 — CCP Art. 62.051 — Sex Offender Registration Slides</div>
       <div class="supp-desc">One slide per subsection, (a) through (k): who must register and where, the 7-day deadline, what the registration form must contain, verification, the supervised vs. unsupervised no-address rules, out-of-state work or school, and a recap of every deadline. Each slide includes the exact statute text.</div>
@@ -672,5 +694,20 @@
 </script>
 
 <script src="assets/site-nav.js" defer></script>
+<script>
+// Supplemental counts are computed from the cards on the page, so they stay right as resources are added.
+(function(){
+  const groups = document.querySelectorAll('.supp-group');
+  let total = 0;
+  groups.forEach(g => {
+    const n = g.querySelectorAll('.supp-group-body .supp-card').length;
+    total += n;
+    const c = g.querySelector('.supp-group-count');
+    if(c) c.textContent = n + (n === 1 ? ' resource' : ' resources');
+  });
+  const el = document.getElementById('suppCount');
+  if(el) el.textContent = total + ' resources · ' + groups.length + ' groups';
+})();
+</script>
 </body>
 </html>

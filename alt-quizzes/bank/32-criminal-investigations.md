@@ -721,7 +721,7 @@ Which statement best describes a "reasonable doubt" as BPOC 32.5 explains it?
 ### Q56 — Concept
 **LO:** 32.5 · **Source:** BPOC 32.5
 
-Given the beyond-a-reasonable-doubt standard, what does BPOC 32.5 say the investigator should do?
+Given the beyond-a-reasonable-doubt standard, what does BPOC 32.5 say the investigator SHALL do?
 
 - [x] Collect corroborating evidence of the accused's guilt to negate the defense's claims
 - [ ] Rely mainly on the suspect's confession
@@ -1410,7 +1410,7 @@ The least violent of offenders.
 
 Which type of property offender does this describe?
 
-Four steps: forging, use of false or stolen ID, a presentation that overcomes a merchant's reluctance, and a sense of the right time, place, and victim.
+Four steps: forging, use of false or stolen ID, a presentation that overcomes a merchant's reluctance, and a sense of the right time, place, and victim (referred to as "four steps in check fraud" in BPOC).
 
 - [ ] Professional thief
 - [ ] Semi-professional (unskilled) thief
@@ -4108,3 +4108,231 @@ How can a properly prepared case file help resolve a case without trial?
 - [ ] It guarantees a confession
 
 **Explanation:** BPOC 32.63 lists this among the reasons for properly prepared case files.
+
+---
+
+### Q279 — True/False
+**LO:** 32.1 · **Source:** BPOC 32.1
+
+True or False: Statements alone represent corpus delicti.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Corpus delicti is the "body or substance" of a crime: proof that a crime occurred. Statements cannot be introduced without evidence to support them.
+
+---
+
+### Q280 — True/False
+**LO:** 32.2 · **Source:** BPOC 32.2
+
+True or False: Although the tools available to a criminal investigator will continue to increase over time, the fundamentals of criminal investigation (finding evidence to establish guilt or innocence) remain the same.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. BPOC 32.2: the tools have increased and will keep increasing in number and sophistication, but the fundamentals of criminal investigation remain the same.
+
+---
+
+### Q281 — Recall
+**LO:** 32.2 · **Source:** BPOC 32.2 (fingerprints as a forensic science tool)
+
+What does the acronym AFIS stand for?
+
+- [x] Automated Fingerprint Identification System
+- [ ] Automated Forensic Identification System
+- [ ] Advanced Fingerprint Investigation Service
+- [ ] Automated Federal Identification Service
+
+**Explanation:** AFIS is the Automated Fingerprint Identification System, used to search and match fingerprints. BPOC 32.2 lists fingerprints among the investigator's forensic science tools. The expansion itself isn't in the outline.
+
+---
+
+### Q282 — Term ID
+**LO:** 32.2 · **Source:** NCBI, pmc.ncbi.nlm.nih.gov/articles/PMC4553097/
+
+**Answer:** Serology
+
+"______" is classically defined as the study of proteins, predominantly antibodies, found in blood and secretions such as saliva.
+
+**Explanation:** The term is "Serology." BPOC 32.2 lists serology among the investigator's forensic science tools, along with fingerprints, ballistics, and DNA analysis.
+
+---
+
+### Q283 — Term ID
+**LO:** 32.6 · **Source:** BPOC 32.6
+
+**Answer:** Objectivity
+
+Criminal investigators must strive for ______ when conducting an investigation, as their actions or omissions of action can affect the lives of all those involved, both guilty and innocent.
+
+**Explanation:** BPOC 32.6: criminal investigators must strive for objectivity when conducting any investigation.
+
+---
+
+### Q284 — Term ID
+**LO:** 32.6 · **Source:** BPOC 32.6
+
+**Answer:** Bias | Prejudice
+
+______ and ______ in an investigation will result in sloppy investigation, incorrect conclusions, and unfairness to victims and suspects.
+
+**Explanation:** BPOC 32.6: an investigator must be unbiased and unprejudiced. Allowing bias or prejudice into a case results in a sloppy investigation, incorrect conclusions, and unfairness to victims and suspects.
+
+---
+
+### Q285 — True/False
+**LO:** 32.6 · **Source:** BPOC 32.6
+
+True or False: Criminal investigators must not attempt to exhibit expertise in all fields of law enforcement, nor discuss case details with anyone outside the police or authorized circles.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. BPOC 32.6: doing either can be prejudicial and compromising to both the prosecution and the defense.
+
+---
+
+### Q286 — Term ID
+**LO:** 32.8 · **Source:** BPOC 32.8
+
+**Answer:** Street
+
+Uniformed officers encounter "______" thieves more often than truly professional car thieves.
+
+**Explanation:** BPOC 32.8: uniformed officers encounter "street" thieves more often than the truly professional car thief.
+
+---
+
+### Q287 — Term ID
+**LO:** 32.8 · **Source:** BPOC 32.8
+
+**Answer:** Professional
+
+A truly ______ thief will rarely be armed, and will try to use his mind to outwit his captor.
+
+**Explanation:** BPOC 32.8: the truly professional thief rarely carries a weapon, since a weapon charge would bring more time than the theft charge.
+
+---
+
+### Q288 — Term ID
+**LO:** 32.8 · **Source:** BPOC 32.8
+
+**Answer:** Street
+
+______ thieves often carry weapons and take reckless chances. They are also often stealing for trading material to procure narcotics or alcohol, and are known as the most dangerous auto thieves.
+
+**Explanation:** BPOC 32.8: street thieves carry weapons, take reckless chances to avoid apprehension, steal to trade for narcotics or alcohol, and are the most dangerous auto thieves.
+
+---
+
+### Q289 — Recall
+**LO:** 32.9 · **Source:** merriam-webster.com/dictionary/VIN
+
+What does the acronym VIN stand for?
+
+- [x] Vehicle Identification Number
+- [ ] Vehicle Information Number
+- [ ] Vehicle Inspection Number
+- [ ] Vehicle Insurance Number
+
+**Explanation:** VIN stands for Vehicle Identification Number. BPOC 32.9 (salvage switches) and 32.11 (documenting rental cars) both rely on checking the VIN.
+
+---
+
+### Q290 — True/False
+**LO:** 32.11 · **Source:** BPOC 32.11
+
+True or False: Rental cars are easily identified as stolen because rental companies can easily track their large inventories of vehicles, and they cannot be missing from inventory for months before being reported stolen.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. The opposite is true: rental agencies often have trouble tracking their large inventories, and a vehicle may be missing for months before it is reported stolen.
+
+---
+
+### Q291 — Term ID
+**LO:** 32.14 · **Source:** BPOC 32.14
+
+**Answer:** Crime Information Center | CIC
+
+An officer can check if recovered property is linked with previous crimes by checking the Texas and/or National ______ databases.
+
+**Explanation:** BPOC 32.14: check stolen reports, NCIC/TCIC (National and Texas Crime Information Center), and teletypes from other jurisdictions.
+
+---
+
+### Q292 — Term ID
+**LO:** 32.14 · **Source:** BPOC 32.14
+
+**Answer:** Impounded
+
+An officer should check with dispatch if it is necessary to determine whether or not a vehicle had been ______ by an agency.
+
+**Explanation:** BPOC 32.14: check with the dispatcher to determine whether the vehicle was impounded by an agency, and with any lien holder to see if it was repossessed.
+
+---
+
+### Q293 — True/False
+**LO:** 32.15 · **Source:** BPOC 32.15
+
+True or False: The terms Sudden Infant Death (SID) and Sudden Unexpected Infant Death (SUID) are medical diagnoses and should NOT be used by officers responding at scenes involving deceased infants.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. BPOC 32.15: both are medical diagnoses that can be made only after a complete and thorough investigation, so responding officers must not use them at the scene.
+
+---
+
+### Q294 — Recall
+**LO:** 32.15 · **Source:** BPOC 32.15
+
+When a responding officer is making the initial investigation of a scene involving a deceased infant, what should the officer do while questioning the caretaker?
+
+- [ ] Identify where the infant was found
+- [ ] Keep questions related to the scene
+- [ ] Make notes of the position of the head and any bruises on the body
+- [ ] Establish a general timeline
+- [x] All of the above
+
+**Explanation:** BPOC 32.15 lists all four: identify where the infant was found (position is critical), keep questions related to the scene, note the position of the head and any bruises, and get a general timeline.
+
+---
+
+### Q295 — Term ID
+**LO:** 32.15 · **Source:** BPOC 32.15
+
+**Answer:** Hate Crime
+
+"______" means: a criminal offense against a person or property which is motivated, in whole or in part, by the offender's bias against race, religion, ethnic/national origin group, or sexual orientation group.
+
+**Explanation:** The term is "Hate Crime" (BPOC 32.15, citing CCP Art. 42.014(a)). Hate crime is not a specific offense; Penal Code 12.47 raises the penalty when an offense is committed because of bias or prejudice.
+
+---
+
+### Q296 — True/False
+**LO:** 32.19 · **Source:** Class instructors
+
+True or False: An officer should inform a witness participating in a lineup that there is no pressure to choose a member of the lineup if they are unsure or do not see the suspect in the array.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. The witness should not pick a person at random or someone who looks somewhat similar. They should be told they are free to not pick anyone and to say they do not see the suspect in the lineup. (Instructor guidance; BPOC 32.19 covers line-up procedures.)
+
+---
+
+### Q297 — Recall
+**LO:** 32.2 · **Source:** Class instructors
+
+What does the acronym NIBIN stand for?
+
+- [x] National Integrated Ballistic Information Network
+- [ ] National Integrated Ballistic Identification Network
+- [ ] National Investigative Bullet Imaging Network
+- [ ] National Interstate Ballistics Intelligence Network
+
+**Explanation:** NIBIN is the National Integrated Ballistic Information Network, the ATF-run network for comparing images of fired cartridge cases. BPOC 32.2 lists ballistics among the investigator's forensic science tools. (Instructor-provided.)
