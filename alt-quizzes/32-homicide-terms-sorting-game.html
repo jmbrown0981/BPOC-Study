@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-<title>Ch. 32 Criminal Investigations Preliminary Investigation Procedures Sorting Game | BPOC Study</title>
+<title>Ch. 32 Criminal Investigations Homicide Investigation Terms Sorting Game | BPOC Study</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -157,9 +157,9 @@
 <header class="hero">
   <div class="hero-inner">
     <a class="back-link" href="../index.html">&larr; Study Hub</a>
-    <p class="hero-eyebrow">Ch. 32 &middot; Criminal Investigations &middot; LOs 32.17&ndash;32.18 &middot; Supplemental Practice</p>
-    <h1>Preliminary Investigation Procedures Sorting Game</h1>
-    <p class="sub">Sort each preliminary-investigation step into the type of crime it&rsquo;s listed under: <b>Crimes Against Property</b> (LO 32.17, officer duties) or the crimes against persons in LO 32.18 &mdash; <b>Homicide</b>, <b>Assaults</b>, <b>Sexual Assaults</b>, <b>Child Abuse and Exploitation</b>, and <b>Child Fatalities</b>. Several steps sound alike across types; the exact wording is the clue. &ldquo;Prepare preliminary report&rdquo; is left out because the outline lists it under four of the crimes against persons.</p>
+    <p class="hero-eyebrow">Ch. 32 &middot; Criminal Investigations &middot; LO 32.21 &middot; Supplemental Practice</p>
+    <h1>Homicide Investigation Terms Sorting Game</h1>
+    <p class="sub">Sort each fact from LO 32.21 into the postmortem change it describes: <b>Postmortem Lividity</b>, <b>Rigor Mortis</b>, <b>Body Temperature</b>, <b>Putrefaction</b>, or <b>Cadaveric Spasm</b>. Watch the numbers &mdash; lividity, rigor mortis, and cadaveric spasm each have their own timing. &ldquo;May help establish time of death&rdquo; is left out because the outline says it about rigor mortis, body temperature, and putrefaction.</p>
   </div>
 </header>
 
@@ -171,8 +171,8 @@
       <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
     </div>
     <div class="setup-row">
-      <div class="setup-field">Crime types in round <input type="number" id="numBuckets" min="2" max="6" value="6"></div>
-      <div class="setup-field">Cards/type <input type="number" id="numCards" min="1" max="17" value="4"></div>
+      <div class="setup-field">Terms in round <input type="number" id="numBuckets" min="2" max="5" value="5"></div>
+      <div class="setup-field">Cards/type <input type="number" id="numCards" min="1" max="6" value="3"></div>
       <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
       <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
     </div>
@@ -197,17 +197,17 @@
     <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
   </div>
 
-  <h2 class="section-title">Crime Types <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse types</button></h2>
+  <h2 class="section-title">Homicide Terms <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse terms</button></h2>
   <div class="bucket-grid" id="bucketGrid"></div>
 
-  <h2 class="section-title tray-title">Procedures to Sort</h2>
+  <h2 class="section-title tray-title">Facts to Sort</h2>
   <div class="tray" id="tray"></div>
 </main>
 
-<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 32.17&ndash;32.18 of the Ch.32 Criminal Investigations outline (Weston and Wells) &middot; Not an official TCOLE or academy publication</footer>
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LO 32.21 of the Ch.32 Criminal Investigations outline (O&rsquo;Hara) &middot; Not an official TCOLE or academy publication</footer>
 
 <script>
-const CATEGORIES = [{"name": "Crimes Against Property", "items": [{"text": "Establish whether a crime was committed, arrest the perpetrator, and classify the crime by category and, if possible, specific classification"}, {"text": "In eyewitness cases: get descriptions of the perpetrator, vehicle, and direction of flight, and transmit them to dispatch for broadcast"}, {"text": "Locate and interview the victim and witnesses; take statements and record identities and addresses for future contact"}, {"text": "Protect the scene; search for, mark, and safeguard evidence, keeping control of it from discovery until trial"}, {"text": "Determine how the crime was committed, the extent of personal injuries, and the nature and value of property taken"}, {"text": "Record everything in field notes and sketches, arrange a photographic summary of the scene and major evidence, and make required reports"}]}, {"name": "Homicide", "items": [{"text": "CCP Art. 49.04 — Deaths Requiring an Inquest"}, {"text": "CCP Art. 49.25 — Medical Examiners"}, {"text": "Care for injured persons"}, {"text": "Protect the integrity of the crime scene"}, {"text": "Determine what offense, as near as possible, has been committed"}, {"text": "Record the scene"}, {"text": "Seal the scene"}, {"text": "Identify the victim"}, {"text": "Develop a tentative crime theory"}, {"text": "Obtain names, addresses, etc. of all living victims and witnesses"}, {"text": "Interview witnesses and living victims"}, {"text": "Determine time of death"}, {"text": "Determine place of death (if different from the scene of discovery)"}, {"text": "Determine cause of death"}, {"text": "Determine means of death"}, {"text": "Ascertain the background and activities of the victim"}, {"text": "Determine motive"}]}, {"name": "Assaults", "items": [{"text": "Care for the injured and record injuries"}, {"text": "Process the scene"}, {"text": "Determine the type of dispute (origin, place, time, participants, witnesses)"}, {"text": "Identify the weapon or weapons"}, {"text": "Interview participants and witnesses"}]}, {"name": "Sexual Assaults", "items": [{"text": "Aid the victim — care for injuries and provide emotional support"}, {"text": "Preserve evidence at the scene, on the victim, and on clothing"}, {"text": "Document injuries", "detail": "Instructor note: Occupations Code 1701.352 requires training (3232 Special Investigative Topics) on documenting injuries by photograph or videotape."}, {"text": "Photograph or videotape the area"}, {"text": "Interview witnesses (if any)"}, {"text": "Interview the victim"}]}, {"name": "Child Abuse and Exploitation", "items": [{"text": "Reconstruct the event or events"}, {"text": "Determine if a crime has been committed"}, {"text": "Identify the person or persons responsible"}, {"text": "Take appropriate action to protect the child"}]}, {"name": "Child Fatalities", "items": [{"text": "Secure crime scene tape around the entire crime scene"}, {"text": "Start a crime scene log documenting every person who enters the scene"}, {"text": "Request an officer specifically trained in crime scene photography"}, {"text": "The body belongs to the Medical Examiner’s office"}, {"text": "Take overall photos of the body as found — never touch or move the deceased for pictures"}, {"text": "Photograph the deceased only after the ME investigator arrives, as the ME processes the body"}, {"text": "After photographs, collect evidence while keeping the scene’s integrity intact"}, {"text": "Place wet items, such as bloody clothing, in paper bags"}, {"text": "Give each piece of evidence its own paper bag, labeled with case number, date/time, collecting officer, and description"}, {"text": "Take wet items to a secure location to be hung and dried"}, {"text": "Place fiber or hair evidence in a manila envelope"}, {"text": "Give each fiber or hair item its own envelope, labeled with case number, date/time, collecting officer, and description"}]}];
+const CATEGORIES = [{"name": "Postmortem Lividity", "items": [{"text": "Purplish discoloration on the parts of the body nearest the ground"}, {"text": "Appears one to two hours after death"}, {"text": "May give a clue as to whether the body was moved after death"}, {"text": "Depends on ambient temperature, body temperature at death, body mass, age, etc."}]}, {"name": "Rigor Mortis", "items": [{"text": "Muscles stiffen after death because of chemical changes in body tissues"}, {"text": "Starts at the neck and lower jaw and spreads downward"}, {"text": "Onset can be 15 minutes to 15 hours after death, but generally starts 5 to 6 hours after"}, {"text": "Upper body affected within about 12 hours; whole body within about 18 hours"}, {"text": "Usually disappears within 36 hours, again beginning at the head and neck"}, {"text": "Disappearing takes from 8 to 10 hours"}]}, {"name": "Body Temperature", "items": [{"text": "Normally 98.6 °F"}, {"text": "Rate of cooling depends on air temperature, how the body is clothed, and the person’s size"}]}, {"name": "Putrefaction", "items": [{"text": "Decomposition of body tissues"}, {"text": "Onset and rate are influenced by the temperature of the environment"}, {"text": "Bloating of the body by gas"}, {"text": "Darkening of the skin in suspended parts of the body"}, {"text": "Green discoloration of the abdominal area"}, {"text": "Blisters filled with fluid or gas"}]}, {"name": "Cadaveric Spasm", "items": [{"text": "Stiffening occurs immediately, after severe injury to the central nervous system or great tension at death"}, {"text": "Usually in the small muscles of the face and/or hands"}, {"text": "Strong presumptive evidence of suicide if the hand is clutching the weapon"}]}];
 
 let session = { correct: 0, incorrect: 0 };
 let round = { cards: [], buckets: [] };
@@ -227,8 +227,8 @@ function escapeHtml(s){
 }
 
 function newRound(){
-  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
-  const numCards = Math.max(1, Math.min(17, Number(document.getElementById('numCards').value) || 4));
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 5));
+  const numCards = Math.max(1, Math.min(6, Number(document.getElementById('numCards').value) || 3));
 
   const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
   const cards = [];
@@ -427,7 +427,7 @@ function updateBucketHover(x, y){
 }
 
 /* ---------- collapse/expand the type boxes ---------- */
-const COMPACT_KEY = 'ch32_preliminary_procedures_sortgame_bucket_compact_v1';
+const COMPACT_KEY = 'ch32_homicide_terms_sortgame_bucket_compact_v1';
 function loadCompactPref(){
   try {
     const v = localStorage.getItem(COMPACT_KEY);
@@ -442,7 +442,7 @@ function saveCompactPref(val){
 let bucketsCompact = loadCompactPref();
 function applyCompactState(){
   document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
-  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand types' : 'Collapse types';
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand terms' : 'Collapse terms';
 }
 
 /* ---------- wiring ---------- */

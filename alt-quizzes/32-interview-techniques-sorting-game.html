@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-<title>Ch. 32 Criminal Investigations Preliminary Investigation Procedures Sorting Game | BPOC Study</title>
+<title>Ch. 32 Criminal Investigations Interview Techniques Sorting Game | BPOC Study</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -157,9 +157,9 @@
 <header class="hero">
   <div class="hero-inner">
     <a class="back-link" href="../index.html">&larr; Study Hub</a>
-    <p class="hero-eyebrow">Ch. 32 &middot; Criminal Investigations &middot; LOs 32.17&ndash;32.18 &middot; Supplemental Practice</p>
-    <h1>Preliminary Investigation Procedures Sorting Game</h1>
-    <p class="sub">Sort each preliminary-investigation step into the type of crime it&rsquo;s listed under: <b>Crimes Against Property</b> (LO 32.17, officer duties) or the crimes against persons in LO 32.18 &mdash; <b>Homicide</b>, <b>Assaults</b>, <b>Sexual Assaults</b>, <b>Child Abuse and Exploitation</b>, and <b>Child Fatalities</b>. Several steps sound alike across types; the exact wording is the clue. &ldquo;Prepare preliminary report&rdquo; is left out because the outline lists it under four of the crimes against persons.</p>
+    <p class="hero-eyebrow">Ch. 32 &middot; Criminal Investigations &middot; LO 32.44 &middot; Supplemental Practice</p>
+    <h1>Interview Techniques Sorting Game</h1>
+    <p class="sub">Sort each point from LO 32.44 into the part of the outline it comes from: separating persons, interview locations, constitutional rights, do&rsquo;s and don&rsquo;ts, interview techniques, street interviews, or preparing written statements. Rapport, discrepancies, and distractions come up in more than one section; the exact wording is the clue.</p>
   </div>
 </header>
 
@@ -171,8 +171,8 @@
       <span class="stat-pill progress">This round: <b id="statProgress">0 / 0</b></span>
     </div>
     <div class="setup-row">
-      <div class="setup-field">Crime types in round <input type="number" id="numBuckets" min="2" max="6" value="6"></div>
-      <div class="setup-field">Cards/type <input type="number" id="numCards" min="1" max="17" value="4"></div>
+      <div class="setup-field">Sections in round <input type="number" id="numBuckets" min="2" max="7" value="7"></div>
+      <div class="setup-field">Cards/type <input type="number" id="numCards" min="1" max="13" value="3"></div>
       <button class="btn btn-primary" id="newRoundBtn" type="button">New Round</button>
       <button class="btn btn-ghost" id="resetScoreBtn" type="button">Reset score</button>
     </div>
@@ -197,17 +197,17 @@
     <button class="btn btn-primary" id="roundBannerNewRound" type="button">New Round</button>
   </div>
 
-  <h2 class="section-title">Crime Types <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse types</button></h2>
+  <h2 class="section-title">Outline Sections <span class="hint">drop zones &mdash; drag or tap-select a card, then choose one</span><button class="collapse-toggle" id="toggleBucketsBtn" type="button">Collapse sections</button></h2>
   <div class="bucket-grid" id="bucketGrid"></div>
 
-  <h2 class="section-title tray-title">Procedures to Sort</h2>
+  <h2 class="section-title tray-title">Points to Sort</h2>
   <div class="tray" id="tray"></div>
 </main>
 
-<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LOs 32.17&ndash;32.18 of the Ch.32 Criminal Investigations outline (Weston and Wells) &middot; Not an official TCOLE or academy publication</footer>
+<footer>Built for study purposes by and for the FWPD Academy class &middot; Content drawn from LO 32.44 of the Ch.32 Criminal Investigations outline &middot; Not an official TCOLE or academy publication</footer>
 
 <script>
-const CATEGORIES = [{"name": "Crimes Against Property", "items": [{"text": "Establish whether a crime was committed, arrest the perpetrator, and classify the crime by category and, if possible, specific classification"}, {"text": "In eyewitness cases: get descriptions of the perpetrator, vehicle, and direction of flight, and transmit them to dispatch for broadcast"}, {"text": "Locate and interview the victim and witnesses; take statements and record identities and addresses for future contact"}, {"text": "Protect the scene; search for, mark, and safeguard evidence, keeping control of it from discovery until trial"}, {"text": "Determine how the crime was committed, the extent of personal injuries, and the nature and value of property taken"}, {"text": "Record everything in field notes and sketches, arrange a photographic summary of the scene and major evidence, and make required reports"}]}, {"name": "Homicide", "items": [{"text": "CCP Art. 49.04 — Deaths Requiring an Inquest"}, {"text": "CCP Art. 49.25 — Medical Examiners"}, {"text": "Care for injured persons"}, {"text": "Protect the integrity of the crime scene"}, {"text": "Determine what offense, as near as possible, has been committed"}, {"text": "Record the scene"}, {"text": "Seal the scene"}, {"text": "Identify the victim"}, {"text": "Develop a tentative crime theory"}, {"text": "Obtain names, addresses, etc. of all living victims and witnesses"}, {"text": "Interview witnesses and living victims"}, {"text": "Determine time of death"}, {"text": "Determine place of death (if different from the scene of discovery)"}, {"text": "Determine cause of death"}, {"text": "Determine means of death"}, {"text": "Ascertain the background and activities of the victim"}, {"text": "Determine motive"}]}, {"name": "Assaults", "items": [{"text": "Care for the injured and record injuries"}, {"text": "Process the scene"}, {"text": "Determine the type of dispute (origin, place, time, participants, witnesses)"}, {"text": "Identify the weapon or weapons"}, {"text": "Interview participants and witnesses"}]}, {"name": "Sexual Assaults", "items": [{"text": "Aid the victim — care for injuries and provide emotional support"}, {"text": "Preserve evidence at the scene, on the victim, and on clothing"}, {"text": "Document injuries", "detail": "Instructor note: Occupations Code 1701.352 requires training (3232 Special Investigative Topics) on documenting injuries by photograph or videotape."}, {"text": "Photograph or videotape the area"}, {"text": "Interview witnesses (if any)"}, {"text": "Interview the victim"}]}, {"name": "Child Abuse and Exploitation", "items": [{"text": "Reconstruct the event or events"}, {"text": "Determine if a crime has been committed"}, {"text": "Identify the person or persons responsible"}, {"text": "Take appropriate action to protect the child"}]}, {"name": "Child Fatalities", "items": [{"text": "Secure crime scene tape around the entire crime scene"}, {"text": "Start a crime scene log documenting every person who enters the scene"}, {"text": "Request an officer specifically trained in crime scene photography"}, {"text": "The body belongs to the Medical Examiner’s office"}, {"text": "Take overall photos of the body as found — never touch or move the deceased for pictures"}, {"text": "Photograph the deceased only after the ME investigator arrives, as the ME processes the body"}, {"text": "After photographs, collect evidence while keeping the scene’s integrity intact"}, {"text": "Place wet items, such as bloody clothing, in paper bags"}, {"text": "Give each piece of evidence its own paper bag, labeled with case number, date/time, collecting officer, and description"}, {"text": "Take wet items to a secure location to be hung and dried"}, {"text": "Place fiber or hair evidence in a manila envelope"}, {"text": "Give each fiber or hair item its own envelope, labeled with case number, date/time, collecting officer, and description"}]}];
+const CATEGORIES = [{"name": "Separating Persons to Interview", "items": [{"text": "Separate persons so their statements reflect their own opinions and observations"}, {"text": "Lets the interviewer locate discrepancies and establish the validity of each statement"}, {"text": "Confront the subject with any discrepancies and allow them to explain or retract"}]}, {"name": "Locations for Interviews", "items": [{"text": "Get the facts and as much pertinent information as necessary at the scene"}, {"text": "Conduct the more in-depth interview where the interviewer can control the environment"}, {"text": "Allow no distractions for the subject being interviewed"}, {"text": "One officer should conduct the interview, depending on the interview technique"}, {"text": "Lighting and temperature should be comfortable"}, {"text": "A small room, not cramped, with minimal furnishings is ideal"}]}, {"name": "Constitutional Rights", "items": [{"text": "Whenever a person is in custody, read their rights before interviewing"}, {"text": "If the person becomes a suspect and is taken into custody mid-interview, stop and advise them of their rights"}]}, {"name": "Do’s and Don’ts", "items": [{"text": "Eliminate any physical barriers or distractions, especially furnishings"}, {"text": "Know what information you have and what information you need to get from the suspect"}, {"text": "Establish rapport with questions unrelated to the case — the most important phase of the interview", "detail": "Keep the suspect talking and let them tell their own story. The outline stresses this phase cannot be emphasized enough."}, {"text": "Direct questions toward establishing the validity of the statement and the facts of the incident"}, {"text": "Confront discrepancies and falsehoods only after they have told the whole story at least once", "detail": "Prevents confusion from starting and stopping; the more they talk, the more comfortable they get and the more they share; you can always go back and confront discrepancies later."}, {"text": "Avoid questions that can be answered with just yes or no — have them explain their answers"}, {"text": "Avoid leading or suggestive questions"}, {"text": "Avoid rapid-fire questions; give the suspect the chance to answer"}, {"text": "Control your emotions and be patient, or pass the interview to another officer", "detail": "Treat them as human beings, regardless of what they have done."}, {"text": "Allow a complete narrative", "detail": "Keeps the person from becoming confused, and lets the interviewer review what they know, locate discrepancies, and confront them about it."}]}, {"name": "Interview Techniques", "items": [{"text": "Spend plenty of time establishing rapport"}, {"text": "Get to know the subject and find a way to empathize"}, {"text": "Be sincere — sincerity breeds trust"}, {"text": "Don’t be judgmental — act as though whatever they admit was expected"}, {"text": "Their biggest fear is being thought of as worth less than everyone else"}, {"text": "Make it a conversation — keep them comfortable until you confront them about lies"}, {"text": "Concentrate on motives — offer one that lets the suspect confess while saving face"}, {"text": "Convince them confessing is in their best interest, but make no promises you can’t keep (probation, lighter sentence)"}, {"text": "Watch for signs of agreement as you propose each possible motive"}, {"text": "A comfortable suspect is unlikely to confess — confront with confidence; any hint of doubt hurts"}, {"text": "Sell yourself and your investigation"}, {"text": "Stay in control of the conversation; be confident, but not cocky"}, {"text": "Watch others interview subjects and learn from them"}]}, {"name": "Street Interviews", "items": [{"text": "Less time available than detectives at the station, but still must not be rushed"}, {"text": "Establishing rapport is still important"}, {"text": "Point out when their story does not make sense"}, {"text": "With multiple suspects, use them against one another"}, {"text": "Same techniques a detective would use, with a shorter rapport-building time", "detail": "If you have dealt with this individual before, use the previous relationship to help."}]}, {"name": "Preparing Written Statements", "items": [{"text": "Record information obtained from the person involved"}, {"text": "Make notes of information received during the interview"}, {"text": "Review notes and correct discrepancies"}, {"text": "Write or type statements in the person’s own words"}, {"text": "Have the person sign the statement and initial any changes"}, {"text": "Enter statements as evidence"}]}];
 
 let session = { correct: 0, incorrect: 0 };
 let round = { cards: [], buckets: [] };
@@ -227,8 +227,8 @@ function escapeHtml(s){
 }
 
 function newRound(){
-  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 6));
-  const numCards = Math.max(1, Math.min(17, Number(document.getElementById('numCards').value) || 4));
+  const numBuckets = Math.max(2, Math.min(CATEGORIES.length, Number(document.getElementById('numBuckets').value) || 7));
+  const numCards = Math.max(1, Math.min(13, Number(document.getElementById('numCards').value) || 3));
 
   const chosenCats = shuffle(CATEGORIES).slice(0, numBuckets);
   const cards = [];
@@ -427,7 +427,7 @@ function updateBucketHover(x, y){
 }
 
 /* ---------- collapse/expand the type boxes ---------- */
-const COMPACT_KEY = 'ch32_preliminary_procedures_sortgame_bucket_compact_v1';
+const COMPACT_KEY = 'ch32_interview_techniques_sortgame_bucket_compact_v1';
 function loadCompactPref(){
   try {
     const v = localStorage.getItem(COMPACT_KEY);
@@ -442,7 +442,7 @@ function saveCompactPref(val){
 let bucketsCompact = loadCompactPref();
 function applyCompactState(){
   document.getElementById('bucketGrid').classList.toggle('compact', bucketsCompact);
-  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand types' : 'Collapse types';
+  document.getElementById('toggleBucketsBtn').textContent = bucketsCompact ? 'Expand sections' : 'Collapse sections';
 }
 
 /* ---------- wiring ---------- */
