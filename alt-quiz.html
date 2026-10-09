@@ -58,18 +58,22 @@
 
   .wp-toggle-btn{font-family:'IBM Plex Mono',monospace; font-size:10.5px; background:none; border:1px solid var(--rule); border-radius:999px; padding:4px 10px; cursor:pointer; color:var(--ink-soft); white-space:nowrap;}
   .wp-toggle-btn:hover{border-color:var(--brass); color:var(--ink);}
-  .weight-panel{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 18px 6px; margin-top:14px;}
-  .weight-panel h3{font-family:'IBM Plex Serif',serif; font-size:15px; margin:0 0 4px;}
-  .weight-panel .wp-note{font-size:11.5px; color:var(--ink-soft); line-height:1.55; margin:0 0 12px;}
-  .weight-panel .wp-note code{font-family:'IBM Plex Mono',monospace; background:var(--paper-dim); padding:1px 5px; border-radius:4px;}
-  .weight-row{display:flex; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--rule);}
-  .weight-row:first-of-type{border-top:none;}
-  .weight-row .wr-info{flex:1; min-width:0;}
-  .weight-row .wr-title{font-size:12.5px; color:var(--ink); font-weight:600;}
-  .weight-row .wr-meta{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray); margin-top:2px;}
-  .weight-row input[type=number]{width:64px; padding:6px 8px; border-radius:6px; border:1px solid var(--rule); font-family:'IBM Plex Mono',monospace; font-size:13px; text-align:right; background:#fff; color:var(--ink);}
-  .weight-row input[type=number].overridden{border-color:var(--brass); background:rgba(176,139,60,0.08);}
-  .weight-row .wr-reset{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gray); text-decoration:underline; cursor:pointer; white-space:nowrap; background:none; border:none; padding:0;}
+  .bd-head, .bd-row{display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:14px; align-items:center;}
+  .bd-list.editing .bd-head, .bd-list.editing .bd-row{grid-template-columns:minmax(0,1fr) auto 118px;}
+  .bd-head{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--gray); padding:0 0 4px; border-bottom:1px solid var(--rule);}
+  .bd-head .r, .bd-row .bd-count{text-align:right;}
+  .bd-row{font-size:12.5px; line-height:1.45; color:var(--ink-soft); padding:4px 0;}
+  .bd-list.editing .bd-row{border-top:1px solid var(--rule); padding:6px 0;}
+  .bd-list.editing .bd-row:first-of-type{border-top:none;}
+  .bd-row .bd-count{font-family:'IBM Plex Mono',monospace; white-space:nowrap;}
+  .bd-row .bd-edit{display:flex; align-items:center; justify-content:flex-end; gap:8px;}
+  .bd-row input[type=number]{width:64px; padding:5px 7px; border-radius:6px; border:1px solid var(--rule); font-family:'IBM Plex Mono',monospace; font-size:13px; text-align:right; background:#fff; color:var(--ink);}
+  .bd-row input[type=number].overridden{border-color:var(--brass); background:rgba(176,139,60,0.08);}
+  .bd-row .wr-reset{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gray); text-decoration:underline; cursor:pointer; white-space:nowrap; background:none; border:none; padding:0;}
+  .bd-row.bd-total{color:var(--ink); font-weight:600;}
+  .wr-meta{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray);}
+  .bd-note{font-size:11.5px; color:var(--ink-soft); line-height:1.55; margin:0 0 10px;}
+  @media (max-width:520px){ .bd-list.editing .bd-head, .bd-list.editing .bd-row{grid-template-columns:minmax(0,1fr) auto 100px; column-gap:10px;} }
   .wp-actions{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0 4px; border-top:1px solid var(--rule); margin-top:4px;}
 
   .quiz-status{display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:6px;}
@@ -627,39 +631,27 @@ function recomputeExamPool(){
   examPool = shuffle(examPool);
 }
 
-function renderWeightPanelHtml(config){
+// Bank breakdown card. With the percentage controls open, each bank's % input sits on the
+// same row as its pulled/available count (one frame instead of a separate panel).
+function renderBreakdownHtml(config){
+  const editing = weightPanelOpen;
   const fileDefaultTotal = (examConfig && examConfig.totalQuestions) || 250;
-  const rows = examParsedByBank.map(b => {
-    const pct = config.percentages[b.key] !== undefined ? config.percentages[b.key] : 0;
+  const nCustom = Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0);
+  const rows = examBreakdown.map(b => {
     const isOverridden = config.overrides[b.key] !== undefined;
-    return `
-      <div class="weight-row">
-        <div class="wr-info">
-          <div class="wr-title">${escapeHtml(b.fullTitle)}</div>
-          <div class="wr-meta">${b.questions.length} available</div>
-        </div>
-        ${isOverridden ? `<button class="wr-reset" data-reset-key="${b.key}" type="button">reset</button>` : ''}
-        <input type="number" min="0" max="100" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${formatPct(pct)}">
-      </div>`;
+    const pctLabel = editing ? '' : ` <span class="fn-source" style="display:inline;">(${formatPct(b.percent)}%)</span>`;
+    const edit = editing ? `<span class="bd-edit">${isOverridden ? `<button class="wr-reset" data-reset-key="${b.key}" type="button">reset</button>` : ''}<input type="number" min="0" max="100" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${formatPct(b.percent)}" aria-label="Percent for ${escapeHtml(b.fullTitle)}"></span>` : '';
+    return `<div class="bd-row"><span>${escapeHtml(b.fullTitle)}${pctLabel}</span><span class="bd-count">${b.pulled} / ${b.available}</span>${edit}</div>`;
   }).join('');
+  const head = `<div class="bd-head"><span>Bank</span><span class="r">Pulled / avail.</span>${editing ? '<span class="r">Percent</span>' : ''}</div>`;
+  const total = editing ? `<div class="bd-row bd-total"><span>Target total questions <span class="wr-meta" style="display:inline; font-weight:400;">(file default: ${fileDefaultTotal})</span></span><span class="bd-count">${examPool.length}</span><span class="bd-edit">${config.totalOverride !== null ? '<button class="wr-reset" data-reset-total="1" type="button">reset</button>' : ''}<input type="number" min="1" step="5" id="totalQOverride" value="${config.totalQuestions}" aria-label="Target total questions"></span></div>` : '';
   return `
-    <div class="weight-panel">
-      <h3>Customize exam percentages</h3>
-      <p class="wp-note">Every bank starts at <strong>0%</strong> allowing you to dial in a percentage for just the handful of subjects you want in the practice exam. All percentages combined <strong>must</strong> add up to 100%. Target total questions defaults at 250, but can be increased or decreased as well. Clear your browser data or hit "Reset all percentages to 0" below to set all percentages back to zero.</p>
-      <div class="weight-row">
-        <div class="wr-info">
-          <div class="wr-title">Target total questions</div>
-          <div class="wr-meta">file default: ${fileDefaultTotal}</div>
-        </div>
-        ${config.totalOverride !== null ? `<button class="wr-reset" data-reset-total="1" type="button">reset</button>` : ''}
-        <input type="number" min="1" step="5" id="totalQOverride" value="${config.totalQuestions}">
-      </div>
-      ${rows}
-      <div class="wp-actions">
+    ${editing ? `<p class="bd-note">Every bank starts at <strong>0%</strong> allowing you to dial in a percentage for just the handful of subjects you want in the practice exam. All percentages combined <strong>must</strong> add up to 100%. Target total questions defaults at 250, but can be increased or decreased as well. Clear your browser data or hit "Reset all percentages to 0" below to set all percentages back to zero.</p>` : ''}
+    <div class="bd-list${editing ? ' editing' : ''}">${head}${total}${rows}</div>
+    ${editing ? `<div class="wp-actions">
         <button class="wp-toggle-btn" id="resetAllWeightsBtn" type="button">Reset all percentages to 0</button>
-        <span class="wr-meta">${Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)} custom value${(Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0)) === 1 ? '' : 's'} active</span>
-      </div>
-    </div>
+        <span class="wr-meta">${nCustom} custom value${nCustom === 1 ? '' : 's'} active</span>
+      </div>` : ''}
   `;
 }
 
@@ -726,11 +718,8 @@ function renderExamSetup(){
         <span>Bank breakdown</span>
         <button class="wp-toggle-btn" id="weightToggleBtn" type="button">${weightPanelOpen ? 'Hide percentage controls' : 'Customize percentages'}</button>
       </div>
-      <div style="font-size:12.5px; line-height:1.9; color:var(--ink-soft);">
-        ${examBreakdown.map(b => `<div style="display:flex; justify-content:space-between; gap:10px;"><span>${escapeHtml(b.fullTitle)} <span class="fn-source" style="display:inline;">(${formatPct(b.percent)}%)</span></span><span style="font-family:'IBM Plex Mono',monospace; white-space:nowrap;">${b.pulled} / ${b.available}</span></div>`).join('')}
-      </div>
+      ${renderBreakdownHtml(config)}
     </div>
-    ${weightPanelOpen ? renderWeightPanelHtml(config) : ''}
   `;
   document.getElementById('practiceBtn').onclick = () => startQuiz('practice');
   document.getElementById('timedBtn').onclick = () => startQuiz('timed');
