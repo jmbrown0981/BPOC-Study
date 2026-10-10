@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 32 LO 32.45 Booking Search Procedure — What Comes Next? | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-inner{position:relative; max-width:860px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy); padding:10px 20px;}
+  .controls-inner{max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule); border-radius:20px; padding:5px 12px; white-space:nowrap;}
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);} .stat-pill.incorrect b{color:var(--rust);} .stat-pill.progress b{color:var(--navy);} .stat-pill.streak b{color:var(--amber);}
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-left:auto;}
+  .seg{display:inline-flex; border:1px solid var(--rule); border-radius:8px; overflow:hidden; background:#fff;}
+  .seg button{font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; padding:6px 10px; border:none; background:#fff; color:var(--ink-soft); cursor:pointer; border-left:1px solid var(--rule);}
+  .seg button:first-child{border-left:none;}
+  .seg button.on{background:var(--navy); color:#fff;}
+  .seg-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-right:4px;}
+  .btn{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer; border-radius:7px; padding:7px 14px; border:1px solid transparent;}
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);} .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);} .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:860px; margin:0 auto; padding:20px 20px 60px;}
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+  .note .x{float:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:underline;}
+
+  .card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 18px 16px; box-shadow:0 1px 0 rgba(0,0,0,0.03);}
+  .q-meta{display:flex; justify-content:space-between; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-bottom:10px; flex-wrap:wrap;}
+  .order-tag{border:1px solid currentColor; border-radius:999px; padding:1px 8px; font-weight:700;}
+  .order-tag.a{color:var(--navy);} .order-tag.b{color:var(--amber);}
+  .q-ask{font-family:'IBM Plex Serif',serif; font-size:19px; font-weight:600; color:var(--navy); margin:0 0 10px;}
+  .given{border-left:4px solid var(--navy); background:var(--paper); border-radius:6px; padding:10px 12px; margin:0 0 14px;}
+  .given .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--brass); text-transform:uppercase;}
+  .given .txt{font-size:15px; font-weight:600; margin-top:3px;}
+  .who{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; border-radius:5px; padding:1px 6px; margin-left:6px; vertical-align:2px; border:1px solid currentColor;}
+  .who.state{color:var(--navy);} .who.def{color:var(--rust);} .who.both{color:var(--green);} .who.court{color:var(--amber);}
+
+  .opts{display:grid; gap:8px;}
+  .opt{display:flex; gap:10px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:1.5px solid var(--rule); border-radius:9px; padding:10px 12px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; line-height:1.45; color:var(--ink); cursor:pointer;}
+  .opt:hover:not(:disabled){border-color:var(--brass);}
+  .opt .k{flex:0 0 auto; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--gray); border:1px solid var(--rule); border-radius:5px; padding:1px 6px; margin-top:2px;}
+  .opt.correct{border-color:var(--green); background:rgba(75,106,80,0.1);}
+  .opt.correct .k{color:var(--green); border-color:var(--green);}
+  .opt.incorrect{border-color:var(--rust); background:rgba(154,74,30,0.08);}
+  .opt.incorrect .k{color:var(--rust); border-color:var(--rust);}
+  .opt:disabled{cursor:default;}
+
+  .feedback{display:none; margin-top:14px; border-top:1px dotted var(--rule); padding-top:12px; font-size:13.5px; line-height:1.6;}
+  .feedback.show{display:block;}
+  .feedback .verdict{font-weight:700;} .feedback .verdict.ok{color:var(--green);} .feedback .verdict.no{color:var(--rust);}
+  .feedback .stat{margin:8px 0 0; padding:8px 10px; background:var(--paper); border-radius:6px; font-family:'IBM Plex Serif',serif; font-size:13.5px; color:var(--ink);}
+  .feedback .stat .src{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray); margin-bottom:3px;}
+  .next-row{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px;}
+  .kbd-hint{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray);}
+
+  .done{display:none; text-align:center; padding:24px 18px;}
+  .done.show{display:block;}
+  .done h2{font-family:'IBM Plex Serif',serif; color:var(--navy); margin:0 0 6px;}
+  .done .score{font-family:'IBM Plex Serif',serif; font-size:40px; font-weight:700; color:var(--navy); margin:4px 0;}
+  .missed{text-align:left; margin:14px auto 0; max-width:560px; font-size:13px; line-height:1.55;}
+  .missed li{margin-bottom:5px;}
+
+  details.ref{margin-top:20px; background:#fff; border:1px solid var(--rule); border-radius:12px; padding:12px 16px;}
+  details.ref summary{cursor:pointer; font-family:'IBM Plex Serif',serif; font-weight:600; color:var(--navy); font-size:15px;}
+  .ref-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;}
+  .ref-grid h3{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); margin:0 0 6px;}
+  .ref-grid ol{margin:0; padding-left:1.4em; font-size:13px; line-height:1.55;}
+  .ref-grid li{margin-bottom:4px;}
+  .ref-grid li.moved{color:var(--amber); font-weight:600;}
+  .ref-note{font-size:12.5px; color:var(--ink-soft); line-height:1.6; margin:12px 0 0;}
+  .statute p{font-family:'IBM Plex Serif',serif; font-size:13px; line-height:1.6; margin:6px 0;}
+  .statute p.i1{padding-left:1.4em;}
+
+  @media (max-width:700px){
+    .ref-grid{grid-template-columns:1fr;}
+    .setup-row{margin-left:0;}
+    .controls{position:static;}
+    .q-ask{font-size:17px;}
+  }
+  .sec-tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; border-radius:5px; padding:1px 6px; margin-left:6px; vertical-align:2px; border:1px solid currentColor;}
+  .sec-tag.body{color:var(--navy);} .sec-tag.prop{color:var(--amber);} .sec-tag.fem{color:var(--rust);}
+  .ref-list{margin:12px 0 0; padding-left:1.6em; font-size:13px; line-height:1.55; columns:2; column-gap:28px;}
+  .ref-list li{margin-bottom:4px; break-inside:avoid;}
+  .ref-list li.grp{list-style:none; margin-left:-1.6em; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); margin-top:6px;}
+  .ref-list li.fem{color:var(--rust); font-weight:600;}
+  @media (max-width:700px){ .ref-list{columns:1;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Back to hub</a>
+    <p class="hero-eyebrow">Ch. 32 Criminal Investigations &middot; BPOC LO 32.45</p>
+    <h1>Booking Search Procedure &mdash; What Comes Next?</h1>
+    <p class="sub">You&rsquo;re shown one step of the booking search from LO 32.45. Pick the step that comes next (or right before) &mdash; the body search, then clothing and personal items, with the two female-search additions as the final steps.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill progress">Q <b id="qNum">1</b>/<span id="qTotal">10</span></span>
+      <span class="stat-pill correct">Correct <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Missed <b id="statIncorrect">0</b></span>
+      <span class="stat-pill streak">Streak <b id="statStreak">0</b> <span style="color:var(--gray)">best <span id="statBest">0</span></span></span>
+    </div>
+    <div class="setup-row">
+      <span><span class="seg-label">STEPS</span><span class="seg" id="segScope"><button data-v="all" class="on">Full search</button><button data-v="body">Body</button><button data-v="prop">Clothing &amp; items</button></span></span>
+      <span><span class="seg-label">ASK</span><span class="seg" id="segDir"><button data-v="next" class="on">Next</button><button data-v="prev">Before</button><button data-v="mix">Mixed</button></span></span>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New round</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <button class="x" id="hideInstructions" type="button">hide</button>
+    <b>How to play:</b> each round is 10 questions. Click an answer or press <b>1&ndash;4</b>; press <b>Enter</b> for the next question. <b>Full search</b> covers all 31 steps, ending with the two female-search additions. <b>Body</b> drills the hands-on search of the prisoner (through the zipper area); <b>Clothing &amp; items</b> drills the coat, shoes, belt, headgear, and personal items, plus the step where the body search hands off to them.
+  </div>
+
+  <div class="card" id="qCard">
+    <div class="q-meta"><span id="qTag"></span><span></span></div>
+    <p class="q-ask" id="qAsk"></p>
+    <div class="given"><div class="lbl" id="givenLbl">Given step</div><div class="txt" id="givenTxt"></div></div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="next-row"><span class="kbd-hint">1&ndash;4 to answer &middot; Enter for next</span><button class="btn btn-primary" id="nextBtn" type="button" style="display:none;">Next question &rarr;</button></div>
+  </div>
+
+  <div class="card done" id="doneCard">
+    <h2>Round complete</h2>
+    <div class="score" id="doneScore"></div>
+    <p id="doneMsg" style="margin:0; color:var(--ink-soft); font-size:13.5px;"></p>
+    <ul class="missed" id="doneMissed"></ul>
+    <button class="btn btn-primary" id="doneNewRound" type="button" style="margin-top:12px;">New round</button>
+  </div>
+
+  <details class="ref" id="refPanel">
+    <summary>Reference &mdash; LO 32.45 reasons and full search order</summary>
+    <div class="ref-grid">
+      <div><h3>Reasons for the search</h3><ul style="margin:0; padding-left:1.2em; font-size:13px; line-height:1.55;">
+        <li>Safety</li>
+        <li>Eliminate suicide risk and prevent death in custody (suicide screening for all prisoners being booked; see the Commission on Jail Standards)</li>
+        <li>Security of the facility</li>
+        <li>Safeguarding the prisoner&rsquo;s personal property</li></ul></div>
+      <div><h3>Who searches</h3><ul style="margin:0; padding-left:1.2em; font-size:13px; line-height:1.55;">
+        <li>Except in an emergency, a male officer searches a male prisoner and a female officer searches a female prisoner.</li>
+        <li>The search should be done out of view of the opposite sex.</li>
+        <li>Female searches are generally the same, plus the brassiere and, if she is wearing a dress, raising it to search the undergarment waistband.</li>
+        <li>Strip searches are regulated by the Texas Commission on Jail Standards.</li></ul></div>
+    </div>
+    <ol class="ref-list" id="refList"></ol>
+    <p class="ref-note">The BPOC list ends with &ldquo;use other applicable techniques&rdquo; before the female additions; it isn&rsquo;t a distinct step, so the game leaves it out. Instructor note references: CCP Art. 49.18 (death in custody) and Penal Code 9.53 (maintaining security in a correctional facility).</p>
+  </details>
+</main>
+
+<script>
+/* BPOC LO 32.45 booking search, in BPOC order. 0 is the starting point. Groups: body, prop (clothing & items), fem (female additions). */
+const STEPS = [
+{
+"n": 0,
+"short": "Begin the search",
+"text": "Begin the search of the prisoner",
+"grp": "start",
+"note": ""
+},
+{
+"n": 1,
+"short": "Empty pockets, remove outer items",
+"text": "Empty the pockets; remove the coat, hat, and tie (if applicable), the shoes, and the belt",
+"grp": "body",
+"note": "Watch the property as the prisoner removes it for contraband or anything that poses a threat, and move it out of the prisoner's immediate reach."
+},
+{
+"n": 2,
+"short": "Hair",
+"text": "Tell the prisoner to lower the head; run a comb or fingers through the hair",
+"grp": "body",
+"note": ""
+},
+{
+"n": 3,
+"short": "Collar",
+"text": "Run your fingers under the collar, crushing the fabric",
+"grp": "body",
+"note": ""
+},
+{
+"n": 4,
+"short": "Arms and cuffs",
+"text": "With both hands, run down each arm feeling for items attached to the arm or inner sleeve, crushing the shirt cuffs",
+"grp": "body",
+"note": ""
+},
+{
+"n": 5,
+"short": "Sides",
+"text": "Starting at the armpits, run your hands down both sides to the belt line",
+"grp": "body",
+"note": ""
+},
+{
+"n": 6,
+"short": "Front",
+"text": "Starting at the collar, run your hands down the front, crushing pockets and button areas, to the waistline",
+"grp": "body",
+"note": ""
+},
+{
+"n": 7,
+"short": "Back",
+"text": "Starting at the shoulders, run your hands down the back",
+"grp": "body",
+"note": ""
+},
+{
+"n": 8,
+"short": "Waistband",
+"text": "At the belt line, check the waistband of the pants, crushing the reinforcement fabric",
+"grp": "body",
+"note": ""
+},
+{
+"n": 9,
+"short": "Belt loops",
+"text": "Crush each belt loop",
+"grp": "body",
+"note": ""
+},
+{
+"n": 10,
+"short": "Buttocks, hips, groin",
+"text": "Starting at the waist, go down the buttocks, crushing the back pockets and checking the hips down into the groin area",
+"grp": "body",
+"note": ""
+},
+{
+"n": 11,
+"short": "Legs",
+"text": "With both hands, check each leg by placing your hands where the legs and hips join and running them all the way into the groin area",
+"grp": "body",
+"note": ""
+},
+{
+"n": 12,
+"short": "Front pockets",
+"text": "Crush the front pockets (remove any items detected)",
+"grp": "body",
+"note": ""
+},
+{
+"n": 13,
+"short": "Zipper",
+"text": "Crush the zipper area (pants fly)",
+"grp": "body",
+"note": ""
+},
+{
+"n": 14,
+"short": "Coat",
+"text": "Check the coat for contraband",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 15,
+"short": "Shoes — look",
+"text": "Visually inspect the shoes for contraband",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 16,
+"short": "Shoes — flex",
+"text": "Flex the shoes, bending them in several directions",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 17,
+"short": "Shoes — strike heel",
+"text": "Hold each shoe by the toe and strike the heel on the floor to break open a false heel or loosen contraband in the inner sole",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 18,
+"short": "Belt — look and roll",
+"text": "Inspect the belt for contraband visually and by rolling it up",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 19,
+"short": "Belt — buckle",
+"text": "Tug on the belt buckle",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 20,
+"short": "Belt — seams",
+"text": "Twist the belt to see whether the seams separate",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 21,
+"short": "Hat — crown",
+"text": "Inspect the hat or other headgear by running your fingers around the crown",
+"grp": "prop",
+"note": "Watch for razor blades or pins."
+},
+{
+"n": 22,
+"short": "Hat — sweatband",
+"text": "Turn the headgear's sweatband down or out and inspect it for contraband",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 23,
+"short": "Wig",
+"text": "Remove and inspect any wig",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 24,
+"short": "Tie",
+"text": "Inspect the tie by pulling and crushing it",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 25,
+"short": "Cigarette packages",
+"text": "Empty cigarette packages and look into or flatten them (return the cigarettes to the package)",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 26,
+"short": "Tobacco packages",
+"text": "Inspect tobacco packages or pouches",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 27,
+"short": "Matches",
+"text": "Inspect matchboxes or matchbooks",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 28,
+"short": "Handkerchief",
+"text": "Hold the handkerchief by one corner and shake it out",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 29,
+"short": "Comb",
+"text": "Visually inspect the comb",
+"grp": "prop",
+"note": ""
+},
+{
+"n": 30,
+"short": "Brassiere (female)",
+"text": "Female prisoner: search the brassiere",
+"grp": "fem",
+"note": ""
+},
+{
+"n": 31,
+"short": "Dress raised (female)",
+"text": "Female prisoner wearing a dress: raise the dress so the waistband of the undergarments can be searched",
+"grp": "fem",
+"note": ""
+}
+];
+const LAST_BODY = 13, LAST_PROP = 29;
+const GRP = {start:['START','body'], body:['BODY','body'], prop:['CLOTHING & ITEMS','prop'], fem:['FEMALE','fem']};
+const ROUND = 10;
+const BEST_KEY = 'bpoc-32-45-best-streak';
+
+let optScope = 'all', optDir = 'next';
+let round = [], qi = 0, answered = false, cur = null;
+let correct = 0, incorrect = 0, streak = 0, best = 0, missed = [];
+try { best = Number(localStorage.getItem(BEST_KEY)) || 0; } catch(e){ best = 0; }
+
+const $ = id => document.getElementById(id);
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function tag(s){ const g = GRP[s.grp]; return `<span class="sec-tag ${g[1]}">${g[0]}</span>`; }
+
+/* Range of step numbers in play for the chosen scope (pairs must have both ends in range). */
+function scopeRange(){
+  if(optScope === 'body') return [0, LAST_BODY];
+  if(optScope === 'prop') return [LAST_BODY, LAST_PROP];
+  return [0, STEPS.length - 1];
+}
+
+function buildPool(){
+  const [lo, hi] = scopeRange();
+  const dirs = optDir === 'mix' ? ['next','prev'] : [optDir];
+  const pool = [];
+  for(const d of dirs){
+    for(let i=lo;i<=hi;i++){
+      const j = d === 'next' ? i+1 : i-1;
+      if(j < lo || j > hi) continue;
+      pool.push({dir:d, given:i, answer:j});
+    }
+  }
+  return pool;
+}
+
+function newRound(){
+  const pool = buildPool();
+  round = [];
+  while(round.length < ROUND){ round.push(...shuffle(pool)); }
+  round = round.slice(0, ROUND);
+  for(let i=1;i<round.length;i++){
+    const p = round[i-1], q = round[i];
+    if(p.dir===q.dir && p.given===q.given){ const k=(i+1)%round.length; [round[i],round[k]]=[round[k],round[i]]; }
+  }
+  qi = 0; correct = 0; incorrect = 0; streak = 0; missed = [];
+  $('doneCard').classList.remove('show'); $('qCard').style.display = '';
+  $('qTotal').textContent = ROUND;
+  showQ();
+}
+
+function showQ(){
+  answered = false;
+  cur = round[qi];
+  const g = STEPS[cur.given];
+  $('qNum').textContent = qi + 1;
+  $('qTag').innerHTML = '<span class="order-tag a">LO 32.45 BOOKING SEARCH</span>';
+  $('qAsk').textContent = cur.dir === 'next' ? 'What comes next?' : 'What came right before this?';
+  $('givenLbl').textContent = cur.given === 0 ? 'Starting point' : 'Given step';
+  $('givenTxt').innerHTML = esc(g.text);
+  // distractors: steps near the given step (not the answer, not the given, not the start), so the choices are plausible
+  const cand = STEPS.map(s => s.n).filter(n => n !== cur.answer && n !== cur.given && n !== 0);
+  const near = shuffle(cand.filter(n => Math.abs(n - cur.given) <= 4));
+  const far = shuffle(cand.filter(n => !near.includes(n)));
+  const wrong = near.concat(far).slice(0, 3);
+  const opts = shuffle([cur.answer, ...wrong]);
+  $('opts').innerHTML = opts.map((n, i) => `<button class="opt" type="button" data-n="${n}"><span class="k">${i+1}</span><span>${esc(STEPS[n].text)}</span></button>`).join('');
+  document.querySelectorAll('.opt').forEach(b => b.onclick = () => answer(Number(b.dataset.n), b));
+  $('feedback').classList.remove('show'); $('feedback').innerHTML = '';
+  $('nextBtn').style.display = 'none';
+  updateStats();
+}
+
+function answer(n, btn){
+  if(answered) return;
+  answered = true;
+  const ok = n === cur.answer;
+  document.querySelectorAll('.opt').forEach(b => {
+    b.disabled = true;
+    if(Number(b.dataset.n) === cur.answer) b.classList.add('correct');
+  });
+  if(!ok) btn.classList.add('incorrect');
+  if(ok){ correct++; streak++; if(streak > best){ best = streak; try { localStorage.setItem(BEST_KEY, String(best)); } catch(e){} } }
+  else { incorrect++; streak = 0; missed.push(cur); }
+  const a = STEPS[cur.answer], g = STEPS[cur.given];
+  let why = '';
+  const pair = [Math.min(cur.given, cur.answer), Math.max(cur.given, cur.answer)];
+  if(pair[0] === LAST_BODY && pair[1] === LAST_BODY + 1) why = ' This is the hand-off from the body search to clothing and personal items, which starts with the coat.';
+  if(pair[0] === LAST_PROP && pair[1] === LAST_PROP + 1) why = ' The two female-search additions come after the general procedure.';
+  const list = cur.answer === 0 ? '' : ` &mdash; step ${cur.answer} of ${STEPS.length - 1}`;
+  $('feedback').innerHTML = `<span class="verdict ${ok ? 'ok' : 'no'}">${ok ? 'Correct.' : 'Not quite.'}</span> ${cur.dir === 'next' ? 'After' : 'Before'} &ldquo;${esc(g.short)}&rdquo; comes <b>${esc(a.short)}</b>${list} ${tag(a)}.${why}${a.note ? '<div class="stat"><span class="src">BPOC LO 32.45 NOTE</span>' + esc(a.note) + '</div>' : ''}`;
+  $('feedback').classList.add('show');
+  $('nextBtn').style.display = '';
+  $('nextBtn').textContent = qi + 1 >= ROUND ? 'See results \u2192' : 'Next question \u2192';
+  updateStats();
+}
+
+function next(){
+  if(!answered) return;
+  qi++;
+  if(qi >= ROUND){ finish(); return; }
+  showQ();
+}
+
+function finish(){
+  $('qCard').style.display = 'none';
+  $('doneCard').classList.add('show');
+  $('doneScore').textContent = `${correct} / ${ROUND}`;
+  $('doneMsg').textContent = correct === ROUND ? 'Clean round. Try Mixed direction or the full search next.' : 'Review the transitions you missed, then run another round.';
+  $('doneMissed').innerHTML = missed.map(q => `<li>${q.dir === 'next' ? 'After' : 'Before'} &ldquo;${esc(STEPS[q.given].short)}&rdquo; &rarr; <b>${esc(STEPS[q.answer].short)}</b></li>`).join('');
+}
+
+function updateStats(){
+  $('statCorrect').textContent = correct;
+  $('statIncorrect').textContent = incorrect;
+  $('statStreak').textContent = streak;
+  $('statBest').textContent = best;
+}
+
+function wireSeg(id, set){
+  document.querySelectorAll(`#${id} button`).forEach(b => b.onclick = () => {
+    document.querySelectorAll(`#${id} button`).forEach(x => x.classList.toggle('on', x === b));
+    set(b.dataset.v); newRound();
+  });
+}
+wireSeg('segScope', v => optScope = v);
+wireSeg('segDir', v => optDir = v);
+$('newRoundBtn').onclick = newRound;
+$('doneNewRound').onclick = newRound;
+$('nextBtn').onclick = next;
+$('hideInstructions').onclick = () => { $('instructionsNote').style.display = 'none'; };
+document.addEventListener('keydown', e => {
+  if(e.target.closest && e.target.closest('input, textarea, summary')) return;
+  if(!answered && /^[1-4]$/.test(e.key)){ const b = document.querySelectorAll('.opt')[Number(e.key)-1]; if(b){ b.click(); e.preventDefault(); } }
+  else if(answered && e.key === 'Enter'){ next(); e.preventDefault(); }
+});
+
+// reference list, grouped
+(function(){
+  const heads = {1:'Search of the prisoner', [LAST_BODY+1]:'Clothing and personal items', [LAST_PROP+1]:'Female prisoners (added)'};
+  $('refList').innerHTML = STEPS.slice(1).map(s => (heads[s.n] ? `<li class="grp">${heads[s.n]}</li>` : '') + `<li value="${s.n}" class="${s.grp === 'fem' ? 'fem' : ''}">${esc(s.text)}${s.note ? ' <i style="color:var(--ink-soft)">(' + esc(s.note) + ')</i>' : ''}</li>`).join('');
+})();
+
+newRound();
+</script>
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 32 CCP Art. 36.01 Order of Proceeding in Trial — What Comes Next? | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-inner{position:relative; max-width:860px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+
+  .controls{position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy); padding:10px 20px;}
+  .controls-inner{max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule); border-radius:20px; padding:5px 12px; white-space:nowrap;}
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);} .stat-pill.incorrect b{color:var(--rust);} .stat-pill.progress b{color:var(--navy);} .stat-pill.streak b{color:var(--amber);}
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-left:auto;}
+  .seg{display:inline-flex; border:1px solid var(--rule); border-radius:8px; overflow:hidden; background:#fff;}
+  .seg button{font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; padding:6px 10px; border:none; background:#fff; color:var(--ink-soft); cursor:pointer; border-left:1px solid var(--rule);}
+  .seg button:first-child{border-left:none;}
+  .seg button.on{background:var(--navy); color:#fff;}
+  .seg-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-right:4px;}
+  .btn{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer; border-radius:7px; padding:7px 14px; border:1px solid transparent;}
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);} .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);} .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:860px; margin:0 auto; padding:20px 20px 60px;}
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+  .note .x{float:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:underline;}
+
+  .card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 18px 16px; box-shadow:0 1px 0 rgba(0,0,0,0.03);}
+  .q-meta{display:flex; justify-content:space-between; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-bottom:10px; flex-wrap:wrap;}
+  .order-tag{border:1px solid currentColor; border-radius:999px; padding:1px 8px; font-weight:700;}
+  .order-tag.a{color:var(--navy);} .order-tag.b{color:var(--amber);}
+  .q-ask{font-family:'IBM Plex Serif',serif; font-size:19px; font-weight:600; color:var(--navy); margin:0 0 10px;}
+  .given{border-left:4px solid var(--navy); background:var(--paper); border-radius:6px; padding:10px 12px; margin:0 0 14px;}
+  .given .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:0.08em; color:var(--brass); text-transform:uppercase;}
+  .given .txt{font-size:15px; font-weight:600; margin-top:3px;}
+  .who{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; border-radius:5px; padding:1px 6px; margin-left:6px; vertical-align:2px; border:1px solid currentColor;}
+  .who.state{color:var(--navy);} .who.def{color:var(--rust);} .who.both{color:var(--green);} .who.court{color:var(--amber);}
+
+  .opts{display:grid; gap:8px;}
+  .opt{display:flex; gap:10px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:1.5px solid var(--rule); border-radius:9px; padding:10px 12px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; line-height:1.45; color:var(--ink); cursor:pointer;}
+  .opt:hover:not(:disabled){border-color:var(--brass);}
+  .opt .k{flex:0 0 auto; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--gray); border:1px solid var(--rule); border-radius:5px; padding:1px 6px; margin-top:2px;}
+  .opt.correct{border-color:var(--green); background:rgba(75,106,80,0.1);}
+  .opt.correct .k{color:var(--green); border-color:var(--green);}
+  .opt.incorrect{border-color:var(--rust); background:rgba(154,74,30,0.08);}
+  .opt.incorrect .k{color:var(--rust); border-color:var(--rust);}
+  .opt:disabled{cursor:default;}
+
+  .feedback{display:none; margin-top:14px; border-top:1px dotted var(--rule); padding-top:12px; font-size:13.5px; line-height:1.6;}
+  .feedback.show{display:block;}
+  .feedback .verdict{font-weight:700;} .feedback .verdict.ok{color:var(--green);} .feedback .verdict.no{color:var(--rust);}
+  .feedback .stat{margin:8px 0 0; padding:8px 10px; background:var(--paper); border-radius:6px; font-family:'IBM Plex Serif',serif; font-size:13.5px; color:var(--ink);}
+  .feedback .stat .src{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray); margin-bottom:3px;}
+  .next-row{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px;}
+  .kbd-hint{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray);}
+
+  .done{display:none; text-align:center; padding:24px 18px;}
+  .done.show{display:block;}
+  .done h2{font-family:'IBM Plex Serif',serif; color:var(--navy); margin:0 0 6px;}
+  .done .score{font-family:'IBM Plex Serif',serif; font-size:40px; font-weight:700; color:var(--navy); margin:4px 0;}
+  .missed{text-align:left; margin:14px auto 0; max-width:560px; font-size:13px; line-height:1.55;}
+  .missed li{margin-bottom:5px;}
+
+  details.ref{margin-top:20px; background:#fff; border:1px solid var(--rule); border-radius:12px; padding:12px 16px;}
+  details.ref summary{cursor:pointer; font-family:'IBM Plex Serif',serif; font-weight:600; color:var(--navy); font-size:15px;}
+  .ref-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;}
+  .ref-grid h3{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); margin:0 0 6px;}
+  .ref-grid ol{margin:0; padding-left:1.4em; font-size:13px; line-height:1.55;}
+  .ref-grid li{margin-bottom:4px;}
+  .ref-grid li.moved{color:var(--amber); font-weight:600;}
+  .ref-note{font-size:12.5px; color:var(--ink-soft); line-height:1.6; margin:12px 0 0;}
+  .statute p{font-family:'IBM Plex Serif',serif; font-size:13px; line-height:1.6; margin:6px 0;}
+  .statute p.i1{padding-left:1.4em;}
+
+  @media (max-width:700px){
+    .ref-grid{grid-template-columns:1fr;}
+    .setup-row{margin-left:0;}
+    .controls{position:static;}
+    .q-ask{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Back to hub</a>
+    <p class="hero-eyebrow">Ch. 32 Criminal Investigations &middot; CCP Art. 36.01</p>
+    <h1>Order of Proceeding in Trial &mdash; What Comes Next?</h1>
+    <p class="sub">You&rsquo;re shown one step of a jury trial. Pick the step that comes next (or before) under Code of Criminal Procedure Art. 36.01 &mdash; including the subsection (b) order, where the defense gives its opening statement right after the State&rsquo;s.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill progress">Q <b id="qNum">1</b>/<span id="qTotal">10</span></span>
+      <span class="stat-pill correct">Correct <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Missed <b id="statIncorrect">0</b></span>
+      <span class="stat-pill streak">Streak <b id="statStreak">0</b> <span style="color:var(--gray)">best <span id="statBest">0</span></span></span>
+    </div>
+    <div class="setup-row">
+      <span><span class="seg-label">ORDER</span><span class="seg" id="segOrder"><button data-v="a" class="on">(a) Standard</button><button data-v="b">(b) Defense opens early</button><button data-v="mix">Mixed</button></span></span>
+      <span><span class="seg-label">ASK</span><span class="seg" id="segDir"><button data-v="next" class="on">Next</button><button data-v="prev">Before</button><button data-v="mix">Mixed</button></span></span>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New round</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <button class="x" id="hideInstructions" type="button">hide</button>
+    <b>How to play:</b> each round is 10 questions. Click an answer or press <b>1&ndash;4</b>; press <b>Enter</b> for the next question. <b>(a) Standard</b> is the default order. <b>(b)</b> is the option where the defense makes its opening statement immediately after the State&rsquo;s, before any testimony. <b>Mixed</b> switches between them &mdash; the tag on each question tells you which order applies.
+  </div>
+
+  <div class="card" id="qCard">
+    <div class="q-meta"><span id="qOrderTag"></span><span id="qSrc"></span></div>
+    <p class="q-ask" id="qAsk"></p>
+    <div class="given"><div class="lbl" id="givenLbl">Given step</div><div class="txt" id="givenTxt"></div></div>
+    <div class="opts" id="opts"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="next-row"><span class="kbd-hint">1&ndash;4 to answer &middot; Enter for next</span><button class="btn btn-primary" id="nextBtn" type="button" style="display:none;">Next question &rarr;</button></div>
+  </div>
+
+  <div class="card done" id="doneCard">
+    <h2>Round complete</h2>
+    <div class="score" id="doneScore"></div>
+    <p id="doneMsg" style="margin:0; color:var(--ink-soft); font-size:13.5px;"></p>
+    <ul class="missed" id="doneMissed"></ul>
+    <button class="btn btn-primary" id="doneNewRound" type="button" style="margin-top:12px;">New round</button>
+  </div>
+
+  <details class="ref" id="refPanel">
+    <summary>Reference &mdash; the full order, side by side</summary>
+    <div class="ref-grid">
+      <div><h3>Art. 36.01(a) &mdash; standard</h3><ol id="refA"></ol></div>
+      <div><h3>Art. 36.01(b) &mdash; defense opens early</h3><ol id="refB"></ol></div>
+    </div>
+    <p class="ref-note">Art. 36.01 does not list the court&rsquo;s charge, closing arguments, or the verdict. Those come from other articles: the judge delivers the written <b>charge before argument begins</b> (Art. 36.14), the judge may regulate the <b>order of argument</b> but the <b>State gets the concluding address</b> (Art. 36.07), and the court may allow <b>testimony at any time</b> before argument concludes if needed for the due administration of justice (Art. 36.02).</p>
+    <details style="margin-top:10px;"><summary style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--ink-soft);">STATUTE TEXT &mdash; ART. 36.01</summary>
+      <div class="statute" id="statuteText"></div>
+    </details>
+  </details>
+</main>
+
+<script>
+/* Steps of Art. 36.01(a). 0 is the starting condition ("A jury being impaneled"). */
+const STEPS = [
+  {n:0, short:'Jury impaneled', who:'court', whoLbl:'COURT', text:'The jury is impaneled and sworn', src:'Art. 36.01(a)', stat:'(a) A jury being impaneled in any criminal action, except as provided by Subsection (b) of this article, the cause shall proceed in the following order:'},
+  {n:1, short:'Read indictment', who:'state', whoLbl:'STATE', text:'The prosecutor reads the indictment or information to the jury', src:'Art. 36.01(a)(1)', stat:'1. The indictment or information shall be read to the jury by the attorney prosecuting. When prior convictions are alleged for purposes of enhancement only and are not jurisdictional, that portion of the indictment or information reciting such convictions shall not be read until the hearing on punishment is held as provided in Article 37.07.', note:'Prior convictions alleged only for enhancement (not jurisdictional) are not read now; they wait for the punishment hearing.'},
+  {n:2, short:'Defendant’s plea', who:'def', whoLbl:'DEFENSE', text:'Defense counsel reads any special pleas and states the plea of not guilty', src:'Art. 36.01(a)(2)', stat:'2. The special pleas, if any, shall be read by the defendant\'s counsel, and if the plea of not guilty is also relied upon, it shall also be stated.'},
+  {n:3, short:'State opening', who:'state', whoLbl:'STATE', text:'The State’s opening statement: the nature of the accusation and the facts it expects to prove', src:'Art. 36.01(a)(3)', stat:'3. The State\'s attorney shall state to the jury the nature of the accusation and the facts which are expected to be proved by the State in support thereof.'},
+  {n:4, short:'State testimony', who:'state', whoLbl:'STATE', text:'The State offers its testimony (its case-in-chief)', src:'Art. 36.01(a)(4)', stat:'4. The testimony on the part of the State shall be offered.'},
+  {n:5, short:'Defense opening', who:'def', whoLbl:'DEFENSE', text:'The defense opening statement: the defenses relied on and the facts it expects to prove', src:'Art. 36.01(a)(5)', stat:'5. The nature of the defenses relied upon and the facts expected to be proved in their support shall be stated by defendant\'s counsel.'},
+  {n:6, short:'Defense testimony', who:'def', whoLbl:'DEFENSE', text:'The defendant offers testimony', src:'Art. 36.01(a)(6)', stat:'6. The testimony on the part of the defendant shall be offered.'},
+  {n:7, short:'Rebuttal', who:'both', whoLbl:'BOTH', text:'Rebutting testimony may be offered by each party', src:'Art. 36.01(a)(7)', stat:'7. Rebutting testimony may be offered on the part of each party.'},
+  {n:8, short:'Punishment (if guilty)', who:'court', whoLbl:'COURT', text:'If the defendant is found guilty, the trial proceeds to punishment under Art. 37.07', src:'Art. 36.01(a)(8)', stat:'8. In the event of a finding of guilty, the trial shall then proceed as set forth in Article 37.07.'}
+];
+const STAT_B = '(b) The defendant\'s counsel may make the opening statement for the defendant immediately after the attorney representing the State makes the opening statement for the State. After the defendant\'s attorney concludes the defendant\'s opening statement, the State\'s testimony shall be offered. At the conclusion of the presentation of the State\'s testimony, the defendant\'s testimony shall be offered, and the order of proceedings shall continue in the manner described by Subsection (a) of this article.';
+const ORDERS = { a:[0,1,2,3,4,5,6,7,8], b:[0,1,2,3,5,4,6,7,8] };
+const ROUND = 10;
+const BEST_KEY = 'bpoc-36-01-best-streak';
+
+let optOrder = 'a', optDir = 'next';
+let round = [], qi = 0, answered = false, cur = null;
+let correct = 0, incorrect = 0, streak = 0, best = 0, missed = [];
+try { best = Number(localStorage.getItem(BEST_KEY)) || 0; } catch(e){ best = 0; }
+
+const $ = id => document.getElementById(id);
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function whoTag(s){ return `<span class="who ${s.who}">${s.whoLbl}</span>`; }
+
+/* All possible questions for the chosen settings: {order, dir, given, answer} */
+function buildPool(){
+  const orders = optOrder === 'mix' ? ['a','b'] : [optOrder];
+  const dirs = optDir === 'mix' ? ['next','prev'] : [optDir];
+  const pool = [];
+  for(const o of orders){
+    const seq = ORDERS[o];
+    for(const d of dirs){
+      for(let i=0;i<seq.length;i++){
+        const j = d === 'next' ? i+1 : i-1;
+        if(j < 0 || j >= seq.length) continue;
+        // in Mixed order, only ask (b) about the positions that differ, so (b) questions test the variation
+        if(optOrder === 'mix' && o === 'b' && ![3,4,5,6].includes(seq[i])) continue;
+        pool.push({order:o, dir:d, given:seq[i], answer:seq[j], pos:i});
+      }
+    }
+  }
+  return pool;
+}
+
+function newRound(){
+  const pool = buildPool();
+  round = [];
+  while(round.length < ROUND){ round.push(...shuffle(pool)); }
+  round = round.slice(0, ROUND);
+  // avoid the same question twice in a row
+  for(let i=1;i<round.length;i++){
+    const p = round[i-1], q = round[i];
+    if(p.order===q.order && p.dir===q.dir && p.given===q.given){ const k=(i+1)%round.length; [round[i],round[k]]=[round[k],round[i]]; }
+  }
+  qi = 0; correct = 0; incorrect = 0; streak = 0; missed = [];
+  $('doneCard').classList.remove('show'); $('qCard').style.display = '';
+  $('qTotal').textContent = ROUND;
+  showQ();
+}
+
+function showQ(){
+  answered = false;
+  cur = round[qi];
+  const g = STEPS[cur.given];
+  $('qNum').textContent = qi + 1;
+  $('qOrderTag').innerHTML = cur.order === 'a' ? '<span class="order-tag a">36.01(a) STANDARD ORDER</span>' : '<span class="order-tag b">36.01(b) DEFENSE OPENS EARLY</span>';
+  $('qSrc').textContent = '';
+  $('qAsk').textContent = cur.dir === 'next' ? 'What comes next?' : 'What came right before this?';
+  $('givenLbl').textContent = cur.given === 0 ? 'Starting point' : 'Given step';
+  $('givenTxt').innerHTML = esc(g.text) + whoTag(g);
+  // distractors: other steps, preferring neighbours so it isn't a giveaway
+  const seq = ORDERS[cur.order];
+  const near = shuffle(seq.filter(n => n !== cur.answer && n !== cur.given && n !== 0 && Math.abs(seq.indexOf(n) - cur.pos) <= 3));
+  const far = shuffle(seq.filter(n => n !== cur.answer && n !== cur.given && n !== 0 && !near.includes(n)));
+  const wrong = near.concat(far).slice(0, 3);
+  const opts = shuffle([cur.answer, ...wrong]);
+  $('opts').innerHTML = opts.map((n, i) => `<button class="opt" type="button" data-n="${n}"><span class="k">${i+1}</span><span>${esc(STEPS[n].text)}${whoTag(STEPS[n])}</span></button>`).join('');
+  document.querySelectorAll('.opt').forEach(b => b.onclick = () => answer(Number(b.dataset.n), b));
+  $('feedback').classList.remove('show'); $('feedback').innerHTML = '';
+  $('nextBtn').style.display = 'none';
+  updateStats();
+}
+
+function answer(n, btn){
+  if(answered) return;
+  answered = true;
+  const ok = n === cur.answer;
+  document.querySelectorAll('.opt').forEach(b => {
+    b.disabled = true;
+    if(Number(b.dataset.n) === cur.answer) b.classList.add('correct');
+  });
+  if(!ok) btn.classList.add('incorrect');
+  if(ok){ correct++; streak++; if(streak > best){ best = streak; try { localStorage.setItem(BEST_KEY, String(best)); } catch(e){} } }
+  else { incorrect++; streak = 0; missed.push(cur); }
+  const a = STEPS[cur.answer], g = STEPS[cur.given];
+  let why = '';
+  if(cur.order === 'b' && [3,4,5,6].includes(cur.answer) && [3,4,5,6].includes(cur.given)){
+    why = ' Under (b), the defense opening statement moves up to right after the State&rsquo;s opening, so the State&rsquo;s testimony follows the defense opening and the defense testimony follows the State&rsquo;s testimony.';
+  } else if(cur.order === 'a' && cur.answer === 5 && cur.given === 4){
+    why = ' In the standard order the defense doesn&rsquo;t open until the State has rested its testimony.';
+  } else if(cur.order === 'a' && cur.given === 5 && cur.answer === 4){
+    why = ' In the standard order the defense opening comes after the State&rsquo;s testimony.';
+  }
+  $('feedback').innerHTML = `<span class="verdict ${ok ? 'ok' : 'no'}">${ok ? 'Correct.' : 'Not quite.'}</span> ${cur.dir === 'next' ? 'After' : 'Before'} &ldquo;${esc(g.short)}&rdquo; comes <b>${esc(a.short)}</b>.${why}${a.note ? ' ' + esc(a.note) : ''}<div class="stat"><span class="src">${esc(a.src)}</span>${esc(a.stat)}</div>`;
+  $('feedback').classList.add('show');
+  $('nextBtn').style.display = '';
+  $('nextBtn').textContent = qi + 1 >= ROUND ? 'See results →' : 'Next question →';
+  updateStats();
+}
+
+function next(){
+  if(!answered) return;
+  qi++;
+  if(qi >= ROUND){ finish(); return; }
+  showQ();
+}
+
+function finish(){
+  $('qCard').style.display = 'none';
+  $('doneCard').classList.add('show');
+  $('doneScore').textContent = `${correct} / ${ROUND}`;
+  $('doneMsg').textContent = correct === ROUND ? 'Clean round. Try Mixed order and Mixed direction next.' : 'Review the transitions you missed, then run another round.';
+  $('doneMissed').innerHTML = missed.map(q => `<li><b>${q.order === 'b' ? '(b)' : '(a)'}</b> ${q.dir === 'next' ? 'After' : 'Before'} &ldquo;${esc(STEPS[q.given].short)}&rdquo; &rarr; <b>${esc(STEPS[q.answer].short)}</b></li>`).join('');
+}
+
+function updateStats(){
+  $('statCorrect').textContent = correct;
+  $('statIncorrect').textContent = incorrect;
+  $('statStreak').textContent = streak;
+  $('statBest').textContent = best;
+}
+
+function wireSeg(id, set){
+  document.querySelectorAll(`#${id} button`).forEach(b => b.onclick = () => {
+    document.querySelectorAll(`#${id} button`).forEach(x => x.classList.toggle('on', x === b));
+    set(b.dataset.v); newRound();
+  });
+}
+wireSeg('segOrder', v => optOrder = v);
+wireSeg('segDir', v => optDir = v);
+$('newRoundBtn').onclick = newRound;
+$('doneNewRound').onclick = newRound;
+$('nextBtn').onclick = next;
+$('hideInstructions').onclick = () => { $('instructionsNote').style.display = 'none'; };
+document.addEventListener('keydown', e => {
+  if(e.target.closest && e.target.closest('input, textarea, summary')) return;
+  if(!answered && /^[1-4]$/.test(e.key)){ const b = document.querySelectorAll('.opt')[Number(e.key)-1]; if(b){ b.click(); e.preventDefault(); } }
+  else if(answered && e.key === 'Enter'){ next(); e.preventDefault(); }
+});
+
+// reference lists and statute text
+$('refA').innerHTML = ORDERS.a.slice(1).map(n => `<li>${esc(STEPS[n].text)}</li>`).join('');
+$('refB').innerHTML = ORDERS.b.slice(1).map(n => `<li class="${[4,5].includes(n) ? 'moved' : ''}">${esc(STEPS[n].text)}</li>`).join('');
+$('statuteText').innerHTML = STEPS.map(s => `<p class="${s.n ? 'i1' : ''}">${esc(s.stat)}</p>`).join('') + `<p>${esc(STAT_B)}</p>`;
+
+newRound();
+</script>
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>

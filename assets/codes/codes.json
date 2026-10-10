@@ -1,5 +1,12 @@
 [
  {
+  "code": "ABC",
+  "name": "Alcoholic Beverage Code",
+  "asOf": "2026-09-15",
+  "chapters": 62,
+  "sections": 833
+ },
+ {
   "code": "BC",
   "name": "Business and Commerce Code",
   "asOf": "2026-09-29",
