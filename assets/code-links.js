@@ -29,12 +29,12 @@
   var APOS = "(?:'|’|&#39;|&#x27;)";
   var LONG = [
     ['Code of Criminal Procedure', 'CR'], ['Health and Safety Code', 'HS'], ['Health &amp; Safety Code', 'HS'],
-    ['Alcoholic Beverage Code', 'AL'], ['Transportation Code', 'TN'], ['Local Government Code', 'LG'],
+    ['Alcoholic Beverage Code', 'ABC'], ['Alco. Bev. Code', 'ABC'], ['Transportation Code', 'TN'], ['Local Government Code', 'LG'],
     ['Local Gov' + APOS + 't Code', 'LG', true], ['Government Code', 'GV'], ['Gov' + APOS + 't Code', 'GV', true],
     ['Education Code', 'ED'], ['Family Code', 'FA'], ['Penal Code', 'PE'], ['Occupations Code', 'OC'],
     ['Occ. Code', 'OC'], ['Human Resources Code', 'HR'], ['Business and Commerce Code', 'BC'],
     ['Business &amp; Commerce Code', 'BC'], ['Civil Practice and Remedies Code', 'CP'], ['Finance Code', 'FI'],
-    ['Agriculture Code', 'AG'], ['Ag. Code', 'AG'], ['AB Code', 'AL'], ['Property Code', 'PR'],
+    ['Agriculture Code', 'AG'], ['Ag. Code', 'AG'], ['AB Code', 'ABC'], ['Property Code', 'PR'],
     ['Parks and Wildlife Code', 'PW'], ['Election Code', 'EL'], ['Water Code', 'WA'], ['Utilities Code', 'UT'],
     // Texas Administrative Code: only Title 37 (TCOLE, Part 7) is built, so only Title-37 / TCOLE wording maps to it;
     // a bare "TAC" (e.g. "43 TAC 217.27", a TxDOT rule) stays unlinked.
@@ -42,7 +42,7 @@
   ];
   var SHORT = [
     ['CCP', 'CR'], ['HSC', 'HS'], ['HS', 'HS'], ['FC', 'FA'], ['PC', 'PE'], ['GV', 'GV'], ['GC', 'GV'],
-    ['ED', 'ED'], ['AL', 'AL'], ['TN', 'TN'], ['TC', 'TN'], ['TRC', 'TN'], ['OC', 'OC'], ['HRC', 'HR'],
+    ['ED', 'ED'], ['AL', 'ABC'], ['ABC', 'ABC'], ['TN', 'TN'], ['TC', 'TN'], ['TRC', 'TN'], ['OC', 'OC'], ['HRC', 'HR'],
     ['BCC', 'BC'], ['LGC', 'LG'], ['CPRC', 'CP']
   ];
   // Names that look like code citations but are not Texas statutes; they only block context.

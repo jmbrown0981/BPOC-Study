@@ -4336,3 +4336,144 @@ What does the acronym NIBIN stand for?
 - [ ] National Interstate Ballistics Intelligence Network
 
 **Explanation:** NIBIN is the National Integrated Ballistic Information Network, the ATF-run network for comparing images of fired cartridge cases. BPOC 32.2 lists ballistics among the investigator's forensic science tools. (Instructor-provided.)
+
+---
+
+### Q298 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Individual | Individual characteristic
+
+Fingerprints are a(n) __________ characteristic; no two people have the same fingerprints.
+
+**Explanation:** Fingerprints are an individual characteristic: they can be tied to one specific person, unlike class characteristics shared by a group. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q299 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Fingerprint classification | Fingerprint classification system | Classification
+
+___________ ______________ means the formula given to all 10 fingers on a print card. Pattern type, ridge count, and ridge tracing are indexed and searchable.
+
+**Explanation:** The classification formula indexes pattern type, ridge count, and ridge tracing so a print card can be searched. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q300 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Bifurcation | Ridge bifurcation
+
+___________ means where a ridge forks and becomes two or more ridges.
+
+**Explanation:** A bifurcation is a ridge characteristic (minutia) used in comparisons, along with ending ridges. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q301 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Ending ridge | Ridge ending
+
+______ _____ means the point where a ridge comes to a sudden stop.
+
+**Explanation:** An ending ridge is a ridge characteristic (minutia) used in comparisons, along with bifurcations. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q302 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Visible impression | Visible print | Patent impression | Patent print
+
+_______ __________ means a distinct impression that can be seen without additional lifting, such as those that appear on glass.
+
+**Explanation:** Compare plastic impressions (left in soft substances) and latent impressions (mostly or totally invisible). (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q303 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Plastic impression | Plastic print
+
+_______ __________ means an impression left in soft substances such as wet paint or adhesive tape.
+
+**Explanation:** Compare visible impressions (seen without lifting) and latent impressions (mostly or totally invisible). (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q304 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Latent impression | Latent print
+
+______ __________ means an impression that is mostly or totally invisible to the naked eye.
+
+**Explanation:** Latent impressions must be developed (for example, by dusting) to be seen. Compare visible and plastic impressions. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q305 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Intentional mutilation
+
+___________ __________ means biting, cutting, or burning the tips of the fingers to alter fingerprints.
+
+**Explanation:** Intentional mutilation is a deliberate attempt to alter fingerprints. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q306 — Term ID
+**LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
+
+**Answer:** Developing | Development | Developing prints
+
+__________ means the process of attempting to make fingerprints visible by dusting or other methods.
+
+**Explanation:** Developing is how latent impressions are made visible. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q307 — Recall
+**LO:** 32.4 · **Source:** Class Instructor PowerPoint slides
+
+What principle states that whenever two objects come into contact, there is a mutual exchange of materials between them?
+
+- [x] Locard's Exchange Principle
+- [ ] Kirk's Silent Witness Principle
+- [ ] Bertillon's Principle of Individualization
+- [ ] The Doctrine of Inevitable Discovery
+
+**Explanation:** Locard's Exchange Principle, from French criminologist Edmond Locard, is often summarized as "every contact leaves a trace." It is why investigators look for transferred trace evidence between a suspect, a victim, and a scene. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q308 — Recall
+**LO:** 32.4 · **Source:** Class Instructor PowerPoint slides
+
+What criminologist later expanded on the idea that contact leaves a trace, stating that physical evidence acts as a "silent witness" that cannot lie, panic, or be cross-examined in the same way a person can?
+
+- [ ] Edmond Locard
+- [x] Paul L. Kirk
+- [ ] Alphonse Bertillon
+- [ ] Sir Francis Galton
+
+**Explanation:** Paul L. Kirk built on Locard's Exchange Principle: unlike a witness, physical evidence is not mistaken, does not forget, and is not swayed by emotion. Only its interpretation by people can be wrong. (Not in the BPOC outline; from class instructor slides.)
+
+---
+
+### Q309 — Recall
+**LO:** 32.41 · **Source:** Class Instructor PowerPoint slides
+
+Attempting to process fingerprints on which materials can disrupt later physical and chemical analysis performed on them, so it should not be attempted on scene?
+
+- [ ] Glass, metal, and plastic
+- [x] Blood, fabrics, and documents
+- [ ] Painted surfaces, tile, and mirrors
+- [ ] Vehicle doors, windows, and countertops
+
+**Explanation:** Processing prints on blood, fabrics, or documents at the scene can interfere with the lab's later physical and chemical analysis (for example, serology or document examination). Collect and preserve these items so the lab can process them. (Not in the BPOC outline; from class instructor slides.)
