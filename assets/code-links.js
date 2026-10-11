@@ -172,7 +172,12 @@
         if(bare){
           // CCP provisions are normally written "Art. x"; a bare number after a CCP cite is read as the
           // bank's own code when that code has the section, otherwise as CCP
-          var bc = (last === 'CR' && secCode && secCode !== 'CR' && has(secCode, secOf(bare))) ? secCode : (last || secCode || null);
+          // and when the last-named code doesn't have the section but the bank's own code does
+          // (e.g. "TC 521.451 ... under PC 12.21 ... at 521.453"), the bank's code wins too
+          var s = secOf(bare), bc;
+          if(last === 'CR' && secCode && secCode !== 'CR' && has(secCode, s)) bc = secCode;
+          else if(last && last !== 'X' && secCode && last !== secCode && !has(last, s) && has(secCode, s)) bc = secCode;
+          else bc = last || secCode || null;
           if(!bc || bc === 'X') return all;
           return linkRun(bare, bare, bareTail, bc);
         }

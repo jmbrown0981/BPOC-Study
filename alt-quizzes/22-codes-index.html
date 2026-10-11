@@ -35,7 +35,7 @@
     <div>
       <p class="hero-eyebrow">Ch. 22 &middot; Traffic Code &amp; Crash Investigations</p>
       <h1>Codes &amp; Sections Index</h1>
-      <p class="sub">Every code section the Ch.22 BPOC material cites &mdash; grouped the way the chapter teaches it (Day 1&ndash;8), each one linked straight to the current statute text on statutes.capitol.texas.gov.</p>
+      <p class="sub">Every code section the Ch.22 BPOC material cites &mdash; grouped the way the chapter teaches it (Day 1&ndash;8), each one linked to the current statute text in the site's Texas Codes pages.</p>
     </div>
     <a class="back" href="../index.html">&larr; Study Hub</a>
   </div>
@@ -65,7 +65,7 @@
 <main id="mainContent">
 
 <div class="intro-note">
-  <b>How to use this:</b> every term, offense name, or topic below is exactly as the <a href="../resources/BPOC_markdown/22.%20Traffic%20Code%20and%20Crash%20Investigations.md">Ch.22 BPOC outline</a> cites it, tagged with the code chapter/section it comes from and linked to that section on the Legislature's own statute site. Example: <b>&ldquo;Golf cart&rdquo;</b> has the meaning assigned by <a href="https://statutes.capitol.texas.gov/Docs/TN/htm/TN.551.htm#551.401" target="_blank" rel="noopener">Transportation Code &sect; 551.401</a> &mdash; find it under Day 7 below, or just search &ldquo;golf cart&rdquo;. <b>LO</b> = the BPOC learning-objective number the item is taught under. Offenses here show only the citation &mdash; for classification, fines, and jail time see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
+  <b>How to use this:</b> every term, offense name, or topic below is exactly as the <a href="../resources/BPOC_markdown/22.%20Traffic%20Code%20and%20Crash%20Investigations.md">Ch.22 BPOC outline</a> cites it, tagged with the code chapter/section it comes from and linked to that section on the Legislature's own statute site. Example: <b>&ldquo;Golf cart&rdquo;</b> has the meaning assigned by <a href="../codes.html?code=TN&amp;sec=551.401" target="_blank" rel="noopener">Transportation Code &sect; 551.401</a> &mdash; find it under Day 7 below, or just search &ldquo;golf cart&rdquo;. <b>LO</b> = the BPOC learning-objective number the item is taught under. Offenses here show only the citation &mdash; for classification, fines, and jail time see the <a href="22-offense-penalties.html">Offense &amp; Penalty Reference</a>.
 </div>
 
 <div id="clusterCards"></div>
@@ -608,14 +608,20 @@ const CLUSTERS = [
 
 /* ===================== LINK BUILDING ===================== */
 const ABBR = {TC:"TN", PC:"PE", HSC:"HS"};
+// Sections the BPOC outline cites that are no longer in the current Transportation Code (repealed), so the
+// site's Texas Codes pages don't have them; those keep the Legislature's link, which shows the repeal note.
+const NOT_LOCAL = new Set(["548.051","548.052","503.0626"]);
 function citeLink(code, section){
   const abbr = ABBR[code] || code;
   const chapterMatch = section.match(/^[0-9]+[A-Za-z]?/);
   const chapter = chapterMatch ? chapterMatch[0] : section;
   const anchorMatch = section.match(/^[0-9]+[A-Za-z]?\.[0-9A-Za-z]+/);
   const anchor = anchorMatch ? anchorMatch[0] : null;
-  const base = `https://statutes.capitol.texas.gov/Docs/${abbr}/htm/${abbr}.${chapter}.htm`;
-  return anchor ? `${base}#${anchor}` : base;
+  if(anchor && NOT_LOCAL.has(anchor)){
+    return `https://statutes.capitol.texas.gov/Docs/${abbr}/htm/${abbr}.${chapter}.htm#${anchor}`;
+  }
+  // Transportation, Penal, and Health & Safety Code are built into the site's Texas Codes pages
+  return anchor ? `../codes.html?code=${abbr}&sec=${anchor}` : `../codes.html?code=${abbr}&ch=${chapter}`;
 }
 function esc(s){
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -630,7 +636,7 @@ function renderClusters(){
       const label = `${code} &sect; ${esc(section)}`;
       return `<tr data-search="${esc((term+' '+code+' '+section+' '+lo).toLowerCase())}">
         <td>${esc(term)}</td>
-        <td><span class="code-tag ${code}">${code}</span><a href="${url}" target="_blank" rel="noopener">${esc(section)}<span class="ext">&#8599;</span></a></td>
+        <td><span class="code-tag ${code}">${code}</span><a href="${url}" target="bpoc-codes">${esc(section)}<span class="ext">&#8599;</span></a></td>
         <td>${esc(lo)}</td>
       </tr>`;
     }).join('');

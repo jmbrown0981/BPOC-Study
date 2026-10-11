@@ -154,6 +154,14 @@ function escapeHtml(s){
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+// Chapters whose bare section numbers ("see 545.060(b)") belong to one code. For these, code-links
+// also reads unlabeled numbers as that code when the section exists there. Other chapters link only
+// citations that name their code.
+const STUDY_SEC_CODE = {22: 'TN'};
+function studyLinkOpts(meta){
+  const code = STUDY_SEC_CODE[Number(meta && meta.num)];
+  return code ? {context: true, secCode: code} : undefined;
+}
 function chapterMeta(num){
   return CHAPTER_MANIFEST.find(c=>c.num===num);
 }
@@ -224,11 +232,11 @@ async function renderChapter(){
     if(window.CodeLinks) await CodeLinks.ready;
     if(markedAvailable()){
       const html = renderMarkdown(text);
-      contentEl.innerHTML = window.CodeLinks ? CodeLinks.linkify(html) : html;
+      contentEl.innerHTML = window.CodeLinks ? CodeLinks.linkify(html, studyLinkOpts(meta)) : html;
       assignHeadingIds(contentEl);
     } else {
       contentEl.innerHTML = `<div class="warn-box"><b>Markdown renderer didn't load.</b> This page loads a small formatting library from a CDN (cdn.jsdelivr.net) &mdash; if that domain is blocked on this network, or you're offline, chapter text below shows as plain text instead of formatted. Try reloading, or use the <a href="${PDF_DIR}${encodeURIComponent(meta.pdfFile)}" target="_blank" rel="noopener">original PDF</a> instead.</div>` +
-        `<pre style="white-space:pre-wrap; font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.6;">${window.CodeLinks ? CodeLinks.linkify(escapeHtml(text)) : escapeHtml(text)}</pre>`;
+        `<pre style="white-space:pre-wrap; font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.6;">${window.CodeLinks ? CodeLinks.linkify(escapeHtml(text), studyLinkOpts(meta)) : escapeHtml(text)}</pre>`;
     }
 
     if(pendingScrollTerm){
