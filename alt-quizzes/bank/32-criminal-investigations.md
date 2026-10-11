@@ -4375,7 +4375,7 @@ ___________ means where a ridge forks and becomes two or more ridges.
 ### Q301 — Term ID
 **LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
 
-**Answer:** Ending ridge | Ridge ending
+**Answer:** Ending ridge | Ridge ending | Ending ridges
 
 ______ _____ means the point where a ridge comes to a sudden stop.
 
@@ -4397,7 +4397,7 @@ _______ __________ means a distinct impression that can be seen without addition
 ### Q303 — Term ID
 **LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
 
-**Answer:** Plastic impression | Plastic print
+**Answer:** Plastic impression | Plastic print | Plastic impressions
 
 _______ __________ means an impression left in soft substances such as wet paint or adhesive tape.
 
@@ -4408,7 +4408,7 @@ _______ __________ means an impression left in soft substances such as wet paint
 ### Q304 — Term ID
 **LO:** 32.2 · **Source:** Class Instructor PowerPoint slides
 
-**Answer:** Latent impression | Latent print
+**Answer:** Latent impression | Latent print | Latent impressions
 
 ______ __________ means an impression that is mostly or totally invisible to the naked eye.
 

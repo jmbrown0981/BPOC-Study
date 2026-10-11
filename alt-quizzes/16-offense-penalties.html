@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 16 Alcoholic Beverage Code Offense &amp; Penalty Reference | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .off-table{table-layout:fixed;}
+  .off-table td{word-wrap:break-word; overflow-wrap:break-word;}
+  .off-table td:first-child{font-weight:600; width:26%;}
+  .off-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px; width:11%;}
+  .off-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .off-table td:nth-child(2) a:hover{color:var(--rust);}
+  .off-table td:nth-child(3){white-space:nowrap; width:11%;}
+  .off-table td:nth-child(4){font-size:12px; width:38%;}
+  .off-table td:nth-child(5){font-size:12px; width:14%; word-break:break-word;}
+
+  .catchall-table{table-layout:fixed;}
+  .catchall-table td{word-wrap:break-word; overflow-wrap:break-word; white-space:normal;}
+  .catchall-table td:first-child{font-weight:600; width:16%;}
+  .catchall-table td:nth-child(2){white-space:nowrap; font-family:'IBM Plex Mono', monospace; font-size:12px; width:12%;}
+  .catchall-table td:nth-child(2) a{color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy);}
+  .catchall-table td:nth-child(2) a:hover{color:var(--rust);}
+  .catchall-table td:nth-child(3){width:42%; font-size:12.5px;}
+  .catchall-table td:nth-child(4){width:30%; font-size:12.5px;}
+
+  .case-group{margin:18px 0 6px;}
+  .case-group h3{color:var(--navy); font-family:'IBM Plex Serif', serif; font-size:14px; font-weight:700; margin:0 0 2px; padding-left:10px; border-left:3px solid var(--brass); display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .case-group h3 a{font-family:'IBM Plex Sans', sans-serif; font-size:11px; font-weight:600; color:var(--navy); text-decoration:none; border-bottom:1px solid var(--rule); white-space:nowrap;}
+  .case-group h3 a:hover{color:var(--rust); border-color:var(--rust);}
+  .case-group p.group-note{font-size:12px; color:var(--ink-soft); margin:2px 0 8px; padding-left:13px;}
+  .case-table{table-layout:fixed;}
+  .case-table td{word-wrap:break-word; overflow-wrap:break-word; font-size:12.5px; vertical-align:top;}
+  .case-table td:first-child{font-weight:600; width:24%;}
+  .case-table td:nth-child(2){white-space:normal; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); width:19%; line-height:1.4;}
+  .case-table td:nth-child(3){width:57%;}
+  .case-followup{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:9px 12px; font-size:12px; line-height:1.55; color:var(--ink-soft); margin:8px 0 4px;}
+  .case-followup b{color:var(--ink);}
+  tr.no-match{display:none;}
+  .sec-card.no-match{display:none;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  .lvl{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.02em; padding:2px 7px; border-radius:10px; white-space:nowrap;}
+  .lvl.C{background:#EAE4D3; color:#7A5F1E;}
+  .lvl.B{background:#E7D9C5; color:#8A5A28;}
+  .lvl.A{background:#F0DCC8; color:#9A4A1E;}
+  .lvl.SJF{background:#E9D3D3; color:#8A2E2E;}
+  .lvl.F3{background:#E3C7C7; color:#7A1F1F;}
+  .lvl.F2{background:#DDB8B8; color:#6E1414;}
+  .lvl.F1{background:#D6A8A8; color:#5C0F0F;}
+  .lvl.MISD{background:#EDEADF; color:#5B564A;}
+  .lvl.ADMIN{background:#DDE3DD; color:#3C5C40;}
+  .lvl.TIER{background:#DDD3C5; color:#6E4A28;}
+  .ladder-ref{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px;}
+  .ladder-ref th, .ladder-ref td{border:1px solid var(--rule); padding:6px 10px; text-align:left;}
+  .ladder-ref th{background:var(--paper-dim);}
+  .note-inline{font-size:11.5px; color:var(--ink-soft); font-style:italic;}
+
+  /* Value ladder (weight/volume-tiered offenses) — same visual language as the
+     Theft & Criminal Mischief Value Ladder on the Penal Code Offense Reference page */
+  .value-ladder{display:flex; margin:10px 0; border-radius:8px; overflow:hidden; border:1px solid var(--rule); flex-wrap:wrap;}
+  .vl-cell{flex:1; min-width:130px; padding:10px 10px; text-align:center; font-size:11.5px; line-height:1.35; color:#F3EFE4; border-right:1px solid rgba(0,0,0,0.18);}
+  .vl-cell:last-child{border-right:none;}
+  .vl-cell .rng{display:block; font-family:'IBM Plex Mono', monospace; font-size:10px; opacity:0.9; margin-top:4px; line-height:1.5;}
+  .vl-cell .rng2{display:block; font-family:'IBM Plex Mono', monospace; font-size:9.5px; opacity:0.75; margin-top:2px;}
+  .vl-cell.mc{background:#4B6A50;}
+  .vl-cell.mb{background:#6F7A3E;}
+  .vl-cell.ma{background:#9B7E32;}
+  .vl-cell.sj{background:#B4712E;}
+  .ladder-note{background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; font-size:12px; line-height:1.6; color:var(--ink-soft); margin-top:10px;}
+  .ladder-note b{color:var(--ink);}
+  /* table-layout:fixed sizes columns from the header row, so give the th cells the widths */
+  .off-table th:nth-child(1){width:24%;} .off-table th:nth-child(2){width:12%;} .off-table th:nth-child(3){width:14%;}
+  .off-table th:nth-child(4){width:36%;} .off-table th:nth-child(5){width:14%;}
+  .catchall-table th:nth-child(1){width:16%;} .catchall-table th:nth-child(2){width:12%;} .catchall-table th:nth-child(3){width:42%;} .catchall-table th:nth-child(4){width:30%;}
+  .off-table td:nth-child(3){white-space:normal;} .off-table td:nth-child(3) .lvl{white-space:normal; line-height:1.3;}
+  /* phones: stack each offense row into a card instead of five squeezed columns */
+  @media (max-width:700px){
+    .off-table, .off-table tbody, .off-table tr, .off-table td{display:block; width:auto !important;}
+    .off-table thead{display:none;}
+    .off-table tr{border:1px solid var(--rule); border-radius:8px; margin:0 0 10px; padding:8px 10px; background:#fff;}
+    .off-table td{border:none !important; padding:3px 0 !important; white-space:normal !important;}
+    .off-table td:nth-child(2)::before{content:"Statute: "; font-family:'IBM Plex Sans',sans-serif; font-weight:600; color:var(--ink-soft);}
+    .off-table td:nth-child(5)::before{content:"Falls to: "; font-weight:600; color:var(--ink-soft);}
+    .catchall-table, .catchall-table tbody, .catchall-table tr, .catchall-table td{display:block; width:auto !important;}
+    .catchall-table thead{display:none;}
+    .hours-table td:last-child{white-space:normal;}
+  }
+  .lvl.ORD{background:#E4E2EA; color:#4A4870;}
+  .lvl.FEL{background:#E3C7C7; color:#7A1F1F;}
+  .vl-cell.jl{background:#8A4A2E;}
+  .hours-table{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px;}
+  .hours-table th, .hours-table td{border:1px solid var(--rule); padding:6px 10px; text-align:left; vertical-align:top;}
+  .hours-table th{background:var(--paper-dim);}
+  .hours-table td:first-child{font-weight:600; width:24%;}
+  .hours-table td:last-child{font-family:'IBM Plex Mono', monospace; font-size:11.5px; white-space:nowrap; width:12%;}
+  .hours-table a, .ladder-ref a, .ladder-note a, .intro-note a{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 16 &middot; Alcoholic Beverage Code</p>
+      <h1>Offense &amp; Penalty Reference</h1>
+      <p class="sub">Every offense in the Alcoholic Beverage Code sections the Ch. 16 BPOC material covers, with its section, classification, and fine/jail range from the statute &mdash; plus the &sect;1.05 general penalty that applies when a section doesn't state its own punishment, the minor-offense escalation ladder, and the hours that drive &sect;105.10.</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Find an offense:</label>
+  <input type="text" id="searchBox" placeholder="e.g. Sale to Minors, 106.06, Class A..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-ladder">Punishment Ladder</a>
+  <a class="chip" href="#sec-catchall">General Penalty (&sect;1.05)</a>
+  <a class="chip" href="#sec-minor">Minor-Offense Ladder (&sect;106.071)</a>
+  <a class="chip" href="#sec-o1">Enforcement &amp; Inspection Offenses (Ch. 101)</a>
+  <a class="chip" href="#sec-o2">Seizure Reports (Ch. 103)</a>
+  <a class="chip" href="#sec-o3">Conduct on Retail Premises (Ch. 104)</a>
+  <a class="chip" href="#sec-o4">Hours of Sale &amp; Consumption (Ch. 105)</a>
+  <a class="chip" href="#sec-o5">Offenses by Minors (Ch. 106)</a>
+  <a class="chip" href="#sec-o6">Offenses by Sellers &amp; Adults Involving Minors (Ch. 106)</a>
+  <a class="chip" href="#sec-o7">Related: Unlicensed Sales (BPOC 16.3 Scenario #2)</a>
+  <a class="chip" href="#sec-o8">Administrative Sanctions Against the License or Permit (TABC)</a>
+  <a class="chip" href="#sec-hours">Legal Hours Table</a>
+  <a class="chip" href="#sec-related">Related Penal &amp; Education Code Offenses</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to read this:</b> classifications and fine/jail figures come from the site's copy of the Alcoholic Beverage Code (<a href="../codes.html?code=ABC" target="bpoc-codes">Texas Codes &rarr; Alcoholic Beverage Code</a>, built from <code>resources/ABC</code>) and the Penal Code. Several Alcoholic Beverage Code offenses state a <b>fine/jail range instead of a class</b> (for example, &sect;101.63), and some state <b>no penalty at all</b>, so the &sect;1.05 general penalty applies. Those are tagged <span class="lvl MISD">Misdemeanor (stated range)</span>. <span class="lvl ADMIN">Administrative</span> rows are TABC actions against a license or permit, not criminal charges; both can come from the same event (BPOC 16.6). Statute links open the section in Texas Codes.
+</div>
+
+<div class="sec-card" id="sec-ladder">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC 12</span>
+    <span class="sec-name">The Punishment Ladder (Penal Code Ch. 12) &mdash; what each classification means</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-ref">
+      <thead><tr><th>Classification</th><th>Fine</th><th>Confinement</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lvl C">Class C Misdemeanor</span></td><td>Up to $500</td><td>None</td><td><a href="../codes.html?code=PE&amp;sec=12.23" target="bpoc-codes">PC 12.23</a></td></tr>
+        <tr><td><span class="lvl B">Class B Misdemeanor</span></td><td>Up to $2,000</td><td>Up to 180 days county jail</td><td><a href="../codes.html?code=PE&amp;sec=12.22" target="bpoc-codes">PC 12.22</a></td></tr>
+        <tr><td><span class="lvl A">Class A Misdemeanor</span></td><td>Up to $4,000</td><td>Up to 1 year county jail</td><td><a href="../codes.html?code=PE&amp;sec=12.21" target="bpoc-codes">PC 12.21</a></td></tr>
+        <tr><td><span class="lvl SJF">State Jail Felony</span></td><td>Up to $10,000</td><td>180 days &ndash; 2 years state jail</td><td><a href="../codes.html?code=PE&amp;sec=12.35" target="bpoc-codes">PC 12.35</a></td></tr>
+        <tr><td><span class="lvl F3">Felony, 3rd Degree</span></td><td>Up to $10,000</td><td>2 &ndash; 10 years TDCJ</td><td><a href="../codes.html?code=PE&amp;sec=12.34" target="bpoc-codes">PC 12.34</a></td></tr>
+      </tbody>
+    </table>
+    <p class="note-inline" style="display:block; margin-top:8px;">Only one Alcoholic Beverage Code offense covered here is a felony with a named class: &sect;106.06(c-1) (state jail felony). &sect;103.05(d) is a felony stated as 2&ndash;5 years TDCJ without a degree.</p>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-catchall">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">CATCH-ALL</span>
+    <span class="sec-name">General Penalty &mdash; the bottom rung for the whole code</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>When an Alcoholic Beverage Code section creates a duty or prohibition but doesn't say what breaking it costs, &sect;1.05 supplies the penalty.</p>
+    <table class="ladder-table catchall-table">
+      <thead><tr><th>Catchall</th><th>Statute</th><th>Applies to</th><th>Penalty</th></tr></thead>
+      <tbody><tr><td>General Penalty</td><td><a href="../codes.html?code=ABC&amp;sec=1.05" target="bpoc-codes">ABC &sect; 1.05</a></td><td>Any Alcoholic Beverage Code provision for which a specific penalty is not provided (for example, 104.01 and 61.01). A &ldquo;specific penalty&rdquo; is one that might be imposed as a result of a criminal prosecution (1.05(b)).</td><td>Misdemeanor: fine $100&ndash;$1,000, county jail up to 1 year, or both</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-minor">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">106.071</span>
+    <span class="sec-name">Minor-Offense Ladder &mdash; how 106.02, 106.025, 106.04, 106.05, and 106.07 escalate</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <p>A &ldquo;minor&rdquo; is anyone under 21 (&sect;106.01). The offenses below share one punishment section. It counts prior <b>convictions</b>; a prior juvenile adjudication or order of deferred disposition counts as one (&sect;106.071(f)).</p>
+    <div class="value-ladder">
+      <div class="vl-cell mc">No prior conviction<span class="rng">Class C misdemeanor</span><span class="rng2">8&ndash;12 hrs community service &middot; 30-day DL suspension</span></div>
+      <div class="vl-cell ma">One prior<span class="rng">Class C misdemeanor</span><span class="rng2">20&ndash;40 hrs community service &middot; 60-day DL suspension</span></div>
+      <div class="vl-cell jl">Two or more priors, not a &ldquo;child&rdquo;<span class="rng">Fine $250&ndash;$2,000, jail up to 180 days, or both</span><span class="rng2">180-day DL suspension &middot; no deferred</span></div>
+    </div>
+    <div class="ladder-note">
+      <b>&ldquo;Child&rdquo;</b> has the Family Code 51.02 meaning (generally 10 through 16), so the enhanced range in &sect;106.071(c) applies to minors 17 through 20. The driver's license suspension (or denial, if the minor has none) takes effect on the 11th day after conviction (&sect;106.071(h)). Under &sect;106.115, a first conviction also requires an alcohol awareness or substance misuse education program.<br><br>
+      <b>Public intoxication by a person under 21</b> is punished the same way as these offenses (<a href="../codes.html?code=PE&amp;sec=49.02" target="bpoc-codes">PC 49.02</a>(e)).<br><br>
+      <b>DUI by a minor</b> (&sect;106.041) has its own similar ladder: Class C; with two or more priors and not a child, fine $500&ndash;$2,000, jail up to 180 days, or both; community service 20&ndash;40 hrs (40&ndash;60 with a prior).
+    </div>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-o1">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">101</span>
+    <span class="sec-name">Enforcement &amp; Inspection Offenses (Ch. 101)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="refusing entry for inspection (licensed or permitted premises) abc 101.04 class a misdemeanor refusing to allow the commission, its representative, or a peace officer to enter a licensed or permitted premises. by accepting a license or permit, the holder consents to entry at any time (101.04(a)). per pc 12.21: fine up to $4,000, up to 1 year jail.">
+          <td>Refusing Entry for Inspection (licensed or permitted premises)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=101.04" target="bpoc-codes">ABC &sect; 101.04</a></td>
+          <td><span class="lvl A">Class A misdemeanor</span></td>
+          <td>Refusing to allow the commission, its representative, or a peace officer to enter a licensed or permitted premises. By accepting a license or permit, the holder consents to entry at any time (101.04(a)). Per PC 12.21: fine up to $4,000, up to 1 year jail.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="sale to an intoxicated person, habitual drunkard, or insane person / commercial delivery to an intoxicated person abc 101.63 misdemeanor (stated range) criminal negligence. 1st offense: fine $100 $500, jail up to 1 year, or both. with a prior conviction under 101.63 or 106.03 : fine $500 $1,000, jail up to 1 year, or both.">
+          <td>Sale to an Intoxicated Person, Habitual Drunkard, or Insane Person / Commercial Delivery to an Intoxicated Person</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=101.63" target="bpoc-codes">ABC &sect; 101.63</a></td>
+          <td><span class="lvl MISD">Misdemeanor (stated range)</span></td>
+          <td>Criminal negligence. 1st offense: fine $100&ndash;$500, jail up to 1 year, or both. With a prior conviction under 101.63 <b>or 106.03</b>: fine $500&ndash;$1,000, jail up to 1 year, or both.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="consumption of alcoholic beverages near schools (open container or consumption on a public street, alley, or sidewalk within 1,000 ft of a k 12 school's property line) abc 101.75 class c misdemeanor per pc 12.23: fine up to $500. exception: an event duly authorized by appropriate authorities. open container = a container that is no longer sealed (109.35(e)).">
+          <td>Consumption of Alcoholic Beverages Near Schools (open container or consumption on a public street, alley, or sidewalk within 1,000 ft of a K&ndash;12 school's property line)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=101.75" target="bpoc-codes">ABC &sect; 101.75</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Per PC 12.23: fine up to $500. Exception: an event duly authorized by appropriate authorities. &ldquo;Open container&rdquo; = a container that is no longer sealed (109.35(e)).</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o2">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">103</span>
+    <span class="sec-name">Seizure Reports (Ch. 103) &mdash; offenses by the peace officer</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="false report of property seized abc 103.05 felony (2 5 years tdcj) 103.05(d): a peace officer who makes a false report of property seized under 103.03 commits a felony punishable by confinement in tdcj for 2 to 5 years. the section states the range; it does not name a degree.">
+          <td>False Report of Property Seized</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=103.05" target="bpoc-codes">ABC &sect; 103.05</a></td>
+          <td><span class="lvl FEL">Felony (2&ndash;5 years TDCJ)</span></td>
+          <td>103.05(d): a peace officer who makes a false report of property seized under 103.03 commits a felony punishable by confinement in TDCJ for 2 to 5 years. The section states the range; it does not name a degree.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="failure to file seizure reports abc 103.05 misdemeanor (stated range) 103.05(e): fine $50 $100, or jail 10 90 days, or both. reports are made in triplicate, one verified by oath (103.05(a)).">
+          <td>Failure to File Seizure Reports</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=103.05" target="bpoc-codes">ABC &sect; 103.05</a></td>
+          <td><span class="lvl MISD">Misdemeanor (stated range)</span></td>
+          <td>103.05(e): fine $50&ndash;$100, or jail 10&ndash;90 days, or both. Reports are made in triplicate, one verified by oath (103.05(a)).</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o3">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">104</span>
+    <span class="sec-name">Conduct on Retail Premises (Ch. 104)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="lewd, immoral, indecent conduct (retailer or its agent, servant, or employee): obscene language, exposure, rude display of a weapon, soliciting drinks, being intoxicated on the licensed premises, lewd entertainment, solicitation for immoral purposes, health-law violations, narcotics or synthetic cannabinoids abc 104.01 misdemeanor (stated range) 104.01 states no penalty of its own, so the general penalty applies: fine $100 $1,000, county jail up to 1 year, or both. also grounds for administrative action against the license or permit.">
+          <td>Lewd, Immoral, Indecent Conduct (retailer or its agent, servant, or employee): obscene language, exposure, rude display of a weapon, soliciting drinks, being intoxicated on the licensed premises, lewd entertainment, solicitation for immoral purposes, health-law violations, narcotics or synthetic cannabinoids</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=104.01" target="bpoc-codes">ABC &sect; 104.01</a></td>
+          <td><span class="lvl MISD">Misdemeanor (stated range)</span></td>
+          <td>104.01 states no penalty of its own, so the general penalty applies: fine $100&ndash;$1,000, county jail up to 1 year, or both. Also grounds for administrative action against the license or permit.</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=1.05" target="bpoc-codes">ABC &sect; 1.05</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o4">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">105</span>
+    <span class="sec-name">Hours of Sale &amp; Consumption (Ch. 105)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="sale or offer for sale during prohibited hours / consuming or permitting consumption on licensed or permitted premises during prohibited hours abc 105.10 class a misdemeanor per pc 12.21: fine up to $4,000, up to 1 year jail. applies to violations of chapter 105 or 32.17(a)(7). see the hours table below.">
+          <td>Sale or Offer for Sale During Prohibited Hours / Consuming or Permitting Consumption on Licensed or Permitted Premises During Prohibited Hours</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=105.10" target="bpoc-codes">ABC &sect; 105.10</a></td>
+          <td><span class="lvl A">Class A misdemeanor</span></td>
+          <td>Per PC 12.21: fine up to $4,000, up to 1 year jail. Applies to violations of Chapter 105 or 32.17(a)(7). See the hours table below.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="consumption (or possession with intent to consume) in a public place during prohibited hours abc 105.06 class c misdemeanor per pc 12.23: fine up to $500. a licensed or permitted premises is a public place for this section. proof of possession with intent to consume requires evidence the person consumed alcohol that day in violation of the section. registered hotel guests may consume in the hotel bar at any time.">
+          <td>Consumption (or Possession with Intent to Consume) in a Public Place During Prohibited Hours</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=105.06" target="bpoc-codes">ABC &sect; 105.06</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Per PC 12.23: fine up to $500. A licensed or permitted premises is a public place for this section. Proof of possession with intent to consume requires evidence the person consumed alcohol that day in violation of the section. Registered hotel guests may consume in the hotel bar at any time.</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o5">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">106</span>
+    <span class="sec-name">Offenses by Minors (Ch. 106) &mdash; punished under 106.071</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="purchase of alcohol by a minor abc 106.02 class c misdemeanor punished under 106.071 (see the minor-offense ladder below). not an offense when the minor buys under the immediate supervision of a commissioned peace officer enforcing the code.">
+          <td>Purchase of Alcohol by a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.02" target="bpoc-codes">ABC &sect; 106.02</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Punished under 106.071 (see the minor-offense ladder below). Not an offense when the minor buys under the immediate supervision of a commissioned peace officer enforcing the code.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="attempt to purchase alcohol by a minor abc 106.025 class c misdemeanor punished under 106.071. specific intent to buy, plus an act amounting to more than mere preparation that fails. (the bpoc scenario cites 106.024 ; the section is 106.025.)">
+          <td>Attempt to Purchase Alcohol by a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.025" target="bpoc-codes">ABC &sect; 106.025</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Punished under 106.071. Specific intent to buy, plus an act amounting to more than mere preparation that fails. (The BPOC scenario cites &ldquo;106.024&rdquo;; the section is 106.025.)</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="consumption of alcohol by a minor abc 106.04 class c misdemeanor punished under 106.071. affirmative defense: consumed in the visible presence of the minor's adult parent, guardian, or spouse. does not apply to a minor who first requested medical help for an alcohol overdose, or who reports a sexual assault.">
+          <td>Consumption of Alcohol by a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.04" target="bpoc-codes">ABC &sect; 106.04</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Punished under 106.071. Affirmative defense: consumed in the visible presence of the minor's adult parent, guardian, or spouse. Does not apply to a minor who first requested medical help for an alcohol overdose, or who reports a sexual assault.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="possession of alcohol by a minor abc 106.05 class c misdemeanor punished under 106.071. exceptions: lawful employment by a licensee or permittee; visible presence of an adult parent, guardian, spouse, or court-ordered custodian; under a peace officer's supervision; lawfully provided under 106.16.">
+          <td>Possession of Alcohol by a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.05" target="bpoc-codes">ABC &sect; 106.05</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Punished under 106.071. Exceptions: lawful employment by a licensee or permittee; visible presence of an adult parent, guardian, spouse, or court-ordered custodian; under a peace officer's supervision; lawfully provided under 106.16.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="misrepresentation of age by a minor abc 106.07 class c misdemeanor punished under 106.071. falsely stating to be 21 or older, or presenting any document showing 21 or older, to a person selling or serving alcohol.">
+          <td>Misrepresentation of Age by a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.07" target="bpoc-codes">ABC &sect; 106.07</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Punished under 106.071. Falsely stating to be 21 or older, or presenting any document showing 21 or older, to a person selling or serving alcohol.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="driving or operating a watercraft under the influence of alcohol by a minor (any detectable amount) abc 106.041 class c misdemeanor class c for a 1st or 2nd offense, plus 20 40 hrs community service (40 60 with a prior). minor who is not a child with 2+ priors: fine $500 $2,000, jail up to 180 days, or both; no deferred disposition or adjudication. not a lesser included offense of dwi. the officer may cite instead of taking the minor into custody.">
+          <td>Driving or Operating a Watercraft Under the Influence of Alcohol by a Minor (any detectable amount)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.041" target="bpoc-codes">ABC &sect; 106.041</a></td>
+          <td><span class="lvl C">Class C misdemeanor</span></td>
+          <td>Class C for a 1st or 2nd offense, plus 20&ndash;40 hrs community service (40&ndash;60 with a prior). Minor who is not a child with 2+ priors: fine $500&ndash;$2,000, jail up to 180 days, or both; no deferred disposition or adjudication. Not a lesser included offense of DWI. The officer may cite instead of taking the minor into custody.</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o6">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">106</span>
+    <span class="sec-name">Offenses by Sellers &amp; Adults Involving Minors (Ch. 106)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="sale to minors abc 106.03 class a misdemeanor criminal negligence. per pc 12.21: fine up to $4,000, up to 1 year jail. defense: the minor showed an apparently valid, government-issued photo id consistent with their appearance (lost if an electronic id check showed it invalid).">
+          <td>Sale to Minors</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.03" target="bpoc-codes">ABC &sect; 106.03</a></td>
+          <td><span class="lvl A">Class A misdemeanor</span></td>
+          <td>Criminal negligence. Per PC 12.21: fine up to $4,000, up to 1 year jail. Defense: the minor showed an apparently valid, government-issued photo ID consistent with their appearance (lost if an electronic ID check showed it invalid).</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="purchase of alcohol for a minor; furnishing alcohol to a minor abc 106.06 class a misdemeanor class a by default. state jail felony if the minor, as a result of drinking it, caused serious bodily injury or death to another. exception: the minor's own adult parent, guardian, spouse, or court-ordered custodian who is visibly present. on community supervision for a binge-drinking gathering: 20 40 hrs community service, an alcohol awareness program, and a 180-day license suspension.">
+          <td>Purchase of Alcohol for a Minor; Furnishing Alcohol to a Minor</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.06" target="bpoc-codes">ABC &sect; 106.06</a></td>
+          <td><span class="lvl A">Class A misdemeanor</span></td>
+          <td>Class A by default. <b>State jail felony</b> if the minor, as a result of drinking it, caused serious bodily injury or death to another. Exception: the minor's own adult parent, guardian, spouse, or court-ordered custodian who is visibly present. On community supervision for a binge-drinking gathering: 20&ndash;40 hrs community service, an alcohol awareness program, and a 180-day license suspension.</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o7">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">61 / 1.05</span>
+    <span class="sec-name">Related: Unlicensed Sales (BPOC 16.3 Scenario #2)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="selling malt beverages or possessing them for sale without a license or permit abc 61.01 misdemeanor (stated range) 61.01 states no penalty, so the general penalty applies: fine $100 $1,000, county jail up to 1 year, or both. the beer is an illicit beverage (1.04(4)(c)) subject to seizure. a search warrant for a private residence needs the affidavit of two credible persons (101.03(b)).">
+          <td>Selling Malt Beverages or Possessing Them for Sale Without a License or Permit</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=61.01" target="bpoc-codes">ABC &sect; 61.01</a></td>
+          <td><span class="lvl MISD">Misdemeanor (stated range)</span></td>
+          <td>61.01 states no penalty, so the general penalty applies: fine $100&ndash;$1,000, county jail up to 1 year, or both. The beer is an illicit beverage (1.04(4)(C)) subject to seizure. A search warrant for a private residence needs the affidavit of two credible persons (101.03(b)).</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=1.05" target="bpoc-codes">ABC &sect; 1.05</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="sec-card" id="sec-o8">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">ADMIN</span>
+    <span class="sec-name">Administrative Sanctions Against the License or Permit (TABC)</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Falls to (if no penalty stated)</th></tr></thead>
+      <tbody>
+        <tr data-search="cancellation or suspension of a permit (code or rule violation, conviction, disorderly or lewd establishment, etc.) abc 11.61 administrative after notice and hearing: suspension for up to 60 days, or cancellation. separate from any criminal case against an individual; double jeopardy does not apply (bpoc 16.6).">
+          <td>Cancellation or Suspension of a Permit (code or rule violation, conviction, disorderly or lewd establishment, etc.)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=11.61" target="bpoc-codes">ABC &sect; 11.61</a></td>
+          <td><span class="lvl ADMIN">Administrative</span></td>
+          <td>After notice and hearing: suspension for up to 60 days, or cancellation. Separate from any criminal case against an individual; double jeopardy does not apply (BPOC 16.6).</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="sanctions against a retailer for sale to a minor (or permitting a minor to consume or possess on the premises) abc 106.13 administrative 1st: suspension up to 90 days or cancellation. 2nd: up to 6 months or cancellation. 3rd within 36 months: up to 12 months or cancellation. the commission may relax sanctions if the violation could not reasonably have been prevented, the permittee was entrapped, or an employee acted without the permittee's knowledge.">
+          <td>Sanctions Against a Retailer for Sale to a Minor (or permitting a minor to consume or possess on the premises)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.13" target="bpoc-codes">ABC &sect; 106.13</a></td>
+          <td><span class="lvl ADMIN">Administrative</span></td>
+          <td>1st: suspension up to 90 days or cancellation. 2nd: up to 6 months or cancellation. 3rd within 36 months: up to 12 months or cancellation. The commission may relax sanctions if the violation could not reasonably have been prevented, the permittee was entrapped, or an employee acted without the permittee's knowledge.</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr data-search="actions of employee not attributed to employer (seller training safe harbor ) abc 106.14 administrative an employee's sale to a minor or an intoxicated person is not attributed to the employer if the employer requires commission-approved seller training, the employee attended it, and the employer did not encourage the violation. it does not excuse the employee's own criminal conduct.">
+          <td>Actions of Employee Not Attributed to Employer (seller training &ldquo;safe harbor&rdquo;)</td>
+          <td><a href="../codes.html?code=ABC&amp;sec=106.14" target="bpoc-codes">ABC &sect; 106.14</a></td>
+          <td><span class="lvl ADMIN">Administrative</span></td>
+          <td>An employee's sale to a minor or an intoxicated person is not attributed to the employer if the employer requires commission-approved seller training, the employee attended it, and the employer did not encourage the violation. It does not excuse the employee's own criminal conduct.</td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-hours">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">105</span>
+    <span class="sec-name">Legal Hours Table &mdash; what &ldquo;prohibited hours&rdquo; means for &sect;105.10 and &sect;105.06</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="hours-table">
+      <thead><tr><th>Who / what</th><th>Legal hours</th><th>Section</th></tr></thead>
+      <tbody>
+        <tr><td>Liquor (package store)</td><td>10 a.m. &ndash; 9 p.m. Monday&ndash;Saturday. No sales on Sunday, New Year's Day, Thanksgiving, or Christmas; if Christmas or New Year's falls on Sunday, the following Monday too.</td><td><a href="../codes.html?code=ABC&amp;sec=105.01" target="bpoc-codes">ABC &sect; 105.01</a></td></tr>
+        <tr><td>Mixed beverages</td><td>7 a.m. &ndash; midnight Monday&ndash;Saturday. Sunday: midnight &ndash; 1 a.m. and 10 a.m. &ndash; midnight (10 a.m. &ndash; noon only with food service). Late hours certificate: also midnight &ndash; 2 a.m. in a city or county of 800,000+ (or 500,000+ by the 2000 census), elsewhere by ordinance or commissioners court order.</td><td><a href="../codes.html?code=ABC&amp;sec=105.03" target="bpoc-codes">ABC &sect; 105.03</a></td></tr>
+        <tr><td>Malt beverages; wine and malt beverage retailers</td><td>7 a.m. &ndash; midnight Monday&ndash;Saturday. Sunday: midnight &ndash; 1 a.m. and noon &ndash; midnight. On-premise sales 10 a.m. &ndash; noon Sunday with food; retail dealer's on- and off-premise licensees also 10 a.m. &ndash; noon for off-premise. Late hours (midnight &ndash; 2 a.m.) for retail dealer's on-premise licensees with a late hours certificate, same population rules.</td><td><a href="../codes.html?code=ABC&amp;sec=105.05" target="bpoc-codes">ABC &sect; 105.04&ndash;.05</a></td></tr>
+        <tr><td>Public consumption: standard hours area</td><td>Offense to consume Sunday 1:15 a.m. &ndash; noon, other days 12:15 a.m. &ndash; 7 a.m.</td><td><a href="../codes.html?code=ABC&amp;sec=105.06" target="bpoc-codes">ABC &sect; 105.06</a></td></tr>
+        <tr><td>Public consumption: extended hours area (e.g., Fort Worth)</td><td>Offense to consume Sunday 2:15 a.m. &ndash; noon, other days 2:15 a.m. &ndash; 7 a.m.</td><td><a href="../codes.html?code=ABC&amp;sec=105.06" target="bpoc-codes">ABC &sect; 105.06</a></td></tr>
+        <tr><td>Sports venues; festivals, fairs, concerts</td><td>Additional sale and consumption 10 a.m. &ndash; noon.</td><td><a href="../codes.html?code=ABC&amp;sec=105.07" target="bpoc-codes">ABC &sect; 105.07, .09</a></td></tr>
+        <tr><td>Winery</td><td>8 a.m. &ndash; midnight Monday&ndash;Saturday; 10 a.m. &ndash; midnight Sunday; midnight &ndash; 2 a.m. New Year's Day.</td><td><a href="../codes.html?code=ABC&amp;sec=105.08" target="bpoc-codes">ABC &sect; 105.08</a></td></tr>
+        <tr><td>Hotel bar</td><td>May sell to, and a registered guest may consume, at any time.</td><td><a href="../codes.html?code=ABC&amp;sec=105.091" target="bpoc-codes">ABC &sect; 105.091</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec-card" id="sec-related">
+  <div class="sec-header" onclick="toggleSec(this)">
+    <span class="sec-num">PC / ED</span>
+    <span class="sec-name">Related Penal &amp; Education Code Offenses in the Ch. 16 Material</span>
+    <span class="toggle">&#9662;</span>
+  </div>
+  <div class="sec-body">
+    <table class="ladder-table off-table">
+      <thead><tr><th>Offense</th><th>Statute</th><th>Level</th><th>Fine / Jail</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr data-search="public intoxication pc 49.02 class c licensed premises public place under 21"><td>Public Intoxication</td><td><a href="../codes.html?code=PE&amp;sec=49.02" target="bpoc-codes">PC 49.02</a></td><td><span class="lvl C">Class C misdemeanor</span></td><td>Intoxicated in a public place to the degree the person may endanger self or another. A premises licensed or permitted under the Alcoholic Beverage Code is a public place.</td><td>Under 21: punished like a &sect;106.071 offense</td></tr>
+        <tr data-search="open container motor vehicle pc 49.031 class c citation"><td>Possession of Alcoholic Beverage in Motor Vehicle (open container)</td><td><a href="../codes.html?code=PE&amp;sec=49.031" target="bpoc-codes">PC 49.031</a></td><td><span class="lvl C">Class C misdemeanor</span></td><td>Open container in the passenger area of a vehicle on a public highway, moving, stopped, or parked. Exceptions for passengers in buses, taxis, limousines, and RV living quarters.</td><td>Handled by citation</td></tr>
+        <tr data-search="open container central business district city ordinance 109.35"><td>Open Container / Public Consumption in a Central Business District</td><td><a href="../codes.html?code=ABC&amp;sec=109.35" target="bpoc-codes">ABC &sect; 109.35</a></td><td><span class="lvl ORD">City ordinance</span></td><td>&sect;109.35 lets a city prohibit open containers and public consumption in its central business district by charter or ordinance. It creates no state offense; the penalty is whatever the ordinance sets. A city may not reach motor vehicles, buildings it doesn't own or control, residences, or licensed premises.</td><td>&mdash;</td></tr>
+        <tr data-search="possession of intoxicants on public school grounds education code 37.122 class c athletic event"><td>Possession of Intoxicants on Public School Grounds (or at a public school athletic event)</td><td>Educ. Code &sect; 37.122</td><td><span class="lvl C">Class C misdemeanor</span></td><td>The officer must seize the beverage and deliver it to the county or district attorney as evidence.</td><td>Education Code isn't in the site's Texas Codes yet, so this row has no link</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<footer>Ch. 16 Alcoholic Beverage Code &mdash; Offense &amp; Penalty Reference &middot; Study aid only &mdash; always verify against current statute &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script>
+function toggleSec(el){
+  var hdr = el.closest('.sec-header');
+  hdr.classList.toggle('open');
+  hdr.nextElementSibling.classList.toggle('open');
+}
+function expandAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.add('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.add('open');});
+}
+function collapseAll(){
+  document.querySelectorAll('.sec-header').forEach(function(h){h.classList.remove('open');});
+  document.querySelectorAll('.sec-body').forEach(function(b){b.classList.remove('open');});
+}
+var STATIC = ['sec-ladder','sec-catchall','sec-minor','sec-hours'];
+function runSearch(){
+  var q = document.getElementById('searchBox').value.trim().toLowerCase();
+  var total = 0;
+  document.querySelectorAll('.sec-card').forEach(function(card){
+    if(STATIC.indexOf(card.id) !== -1) return;
+    var n = 0;
+    card.querySelectorAll('tbody tr').forEach(function(row){
+      var hit = q === '' || (row.getAttribute('data-search') || '').indexOf(q) !== -1;
+      row.classList.toggle('no-match', !hit);
+      if(hit && q !== '') n++;
+    });
+    if(q === ''){ card.classList.remove('no-match'); return; }
+    card.classList.toggle('no-match', n === 0);
+    if(n > 0){ card.querySelector('.sec-header').classList.add('open'); card.querySelector('.sec-body').classList.add('open'); }
+    total += n;
+  });
+  document.getElementById('searchCount').textContent = q === '' ? '' : (total + ' match' + (total === 1 ? '' : 'es'));
+}
+document.getElementById('searchBox').addEventListener('input', runSearch);
+['sec-ladder','sec-catchall','sec-minor','sec-o1'].forEach(function(id){
+  var c = document.getElementById(id);
+  c.querySelector('.sec-header').classList.add('open');
+  c.querySelector('.sec-body').classList.add('open');
+});
+</script>
+
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>

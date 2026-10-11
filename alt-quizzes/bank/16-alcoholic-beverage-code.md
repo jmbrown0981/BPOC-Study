@@ -460,7 +460,7 @@ True or False: A peace officer must obtain an arrest warrant before arresting a 
 ### Q33 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(a)
 
-A search warrant under §101.03 is issued under which chapter of the Code of Criminal Procedure?
+A search warrant under §101.03 (SEARCH AND SEIZURE) is issued under which chapter of the Code of Criminal Procedure?
 
 - [ ] Chapter 14 (arrest without warrant)
 - [ ] Chapter 15 (arrest under warrant)
@@ -474,7 +474,7 @@ A search warrant under §101.03 is issued under which chapter of the Code of Cri
 ### Q34 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(a)
 
-Which of these is NOT an item listed in §101.03(a) as something a search warrant may issue to search for and seize?
+Which of these is NOT an item listed in §101.03(a) (SEARCH AND SEIZURE) as something a search warrant may issue to search for and seize?
 
 - [ ] An illicit beverage
 - [ ] A vehicle used or to be used for the illegal transportation of an illicit beverage
@@ -488,7 +488,7 @@ Which of these is NOT an item listed in §101.03(a) as something a search warran
 ### Q35 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(a)(6)
 
-Under §101.03(a)(6), a warrant may also issue for:
+Under §101.03(a)(6) (SEARCH AND SEIZURE), a warrant may also issue for:
 
 - [ ] Business records of a licensed premises
 - [ ] Surveillance video of a bar
@@ -502,7 +502,7 @@ Under §101.03(a)(6), a warrant may also issue for:
 ### Q36 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(b)
 
-Who may issue a search warrant under §101.03?
+Who may issue a search warrant under §101.03 (SEARCH AND SEIZURE)?
 
 - [ ] Only a district judge
 - [ ] Only the TABC administrator
@@ -516,7 +516,7 @@ Who may issue a search warrant under §101.03?
 ### Q37 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(b)
 
-What must the affidavit for a §101.03 search warrant set out?
+What must the affidavit for a §101.03 (SEARCH AND SEIZURE) search warrant set out?
 
 - [ ] Only the address of the premises
 - [ ] The names of every person expected to be present
@@ -558,7 +558,7 @@ Does a peace officer need a search warrant to search premises covered by a TABC 
 ### Q40 — Recall
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03(d)
 
-What must the officer executing a §101.03 warrant do with the items described in subsection (a)?
+What must the officer executing a §101.03 (SEARCH AND SEIZURE) warrant do with the items described in subsection (a)?
 
 - [x] Seize all of them and retain them pending final judgment; they cannot be taken from the officer by replevin or any other process
 - [ ] Inventory them and leave them with the owner
@@ -614,7 +614,7 @@ A bar manager refuses to let a peace officer enter the licensed premises to cond
 ### Q44 — Concept
 **LO:** 16.3 · **Source:** Alcoholic Beverage Code §101.03, §101.04
 
-What is the key difference between an inspection under §101.04 and a search under §101.03?
+What is the key difference between an inspection under §101.04 (CONSENT TO INSPECTION; PENALTY) and a search under §101.03 (SEARCH AND SEIZURE)?
 
 - [ ] An inspection requires a warrant; a search does not
 - [ ] There is no difference
@@ -628,7 +628,7 @@ What is the key difference between an inspection under §101.04 and a search und
 ### Q45 — Concept
 **LO:** 16.3 · **Source:** Code of Criminal Procedure Art. 18.01; Alcoholic Beverage Code §101.03(c)
 
-A §101.03 warrant affidavit must also satisfy which general Code of Criminal Procedure requirement?
+A §101.03 (SEARCH AND SEIZURE) warrant affidavit must also satisfy which general Code of Criminal Procedure requirement?
 
 - [x] It must set out sufficient facts to show probable cause, under Chapter 18
 - [ ] It must be approved by the elected district attorney
@@ -642,7 +642,7 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q46 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #1; Alcoholic Beverage Code §101.04
 
-<i>BPOC 16.3 Scenario #1.</i> At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder.<br><br>Under what authority were you behind the bar?
+**BPOC 16.3 Scenario #1:** At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder. **Under what authority were you behind the bar?**
 
 - [ ] A search warrant is required to go behind a bar, so the entry was unlawful
 - [x] Inspection: by accepting its license or permit, the bar consented to peace officers entering the licensed premises at any time to inspect (§101.04(a))
@@ -656,7 +656,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q47 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #1; CCP Art. 14.01(b); Health & Safety Code Ch. 481
 
-<i>BPOC 16.3 Scenario #1.</i> At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder.<br><br>What authority do you have to seize the baggie and arrest the bartender?
+**BPOC 16.3 Scenario #1.** At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder.
+
+What authority do you have to seize the baggie and arrest the bartender?
 
 - [ ] None. You must leave and get a search warrant for the shelf
 - [x] You lawfully saw the bartender discard it, so you may seize it as evidence and, once probable cause shows it is a controlled substance, arrest without a warrant for an offense committed in your presence or view (CCP Art. 14.01(b))
@@ -670,7 +672,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q48 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #1; Alcoholic Beverage Code §104.01(a)(9)
 
-<i>BPOC 16.3 Scenario #1.</i> At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder.<br><br>Which Alcoholic Beverage Code provision does the bartender's conduct also violate, supporting administrative action against the bar?
+**BPOC 16.3 Scenario #1.** At 2345, you and your partner enter a bar that has drawn complaints about noise, intoxicated persons, fights, and drug use. A nervous bartender tries to avoid you. As you move behind the bar, the bartender pulls something from a pocket and drops it between liquor bottles on a shelf. You find a small plastic baggie of white powder.
+
+Which Alcoholic Beverage Code provision does the bartender's conduct also violate, supporting administrative action against the bar?
 
 - [ ] §106.03: sale to a minor
 - [ ] §105.10: sale during prohibited hours
@@ -684,7 +688,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q49 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #2; Alcoholic Beverage Code §101.03(b)
 
-<i>BPOC 16.3 Scenario #2.</i> A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.<br><br>Can you enter the house to seize the beer under §101.04 inspection authority?
+**BPOC 16.3 Scenario #2.** A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.
+
+Can you enter the house to seize the beer under §101.04 inspection authority?
 
 - [ ] Yes. All peace officers may inspect any place alcohol is stored
 - [x] No. The house is not a licensed or permitted premises, so there is no implied consent to inspection; you need a search warrant
@@ -698,7 +704,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q50 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #2; Alcoholic Beverage Code §101.03(b)
 
-<i>BPOC 16.3 Scenario #2.</i> A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.<br><br>The house is used only as a private residence. What is required for the search warrant affidavit?
+**BPOC 16.3 Scenario #2.** A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.
+
+The house is used only as a private residence. What is required for the search warrant affidavit?
 
 - [ ] One officer's affidavit is always enough
 - [x] It must be made by two credible persons, describe the owner or person in charge (or state they are unknown), describe the premises, and show the code has been or is being violated there
@@ -712,7 +720,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q51 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #2; Alcoholic Beverage Code §1.04(4)(C); §61.01; §1.05
 
-<i>BPOC 16.3 Scenario #2.</i> A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.<br><br>What makes the stacked beer an "illicit beverage," and what code provision is being violated?
+**BPOC 16.3 Scenario #2.** A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.
+
+What makes the stacked beer an "illicit beverage," and what code provision is being violated?
 
 - [x] It is possessed with intent to sell in violation of the code (§1.04(4)(C)); selling or possessing malt beverages for sale without a license or permit violates §61.01, which carries the §1.05 general penalty
 - [ ] It is not illicit, because beer is legal to possess
@@ -726,7 +736,9 @@ A §101.03 warrant affidavit must also satisfy which general Code of Criminal Pr
 ### Q52 — Scenario
 **LO:** 16.3 · **Source:** BPOC 16.3 Scenario #2; Alcoholic Beverage Code §101.03(a)(1), (d); §103.05
 
-<i>BPOC 16.3 Scenario #2.</i> A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.<br><br>After you execute the warrant and seize the beer, what are your obligations?
+**BPOC 16.3 Scenario #2.** A neighbor reports beer being sold from a house: heavy foot traffic at all hours, people arriving empty-handed and leaving with a case of beer. You watch exactly that happen. When you knock, the door opens and you see multiple cases of beer stacked in the living room. You ask to come in; the occupants say they have nothing to say and close the door.
+
+After you execute the warrant and seize the beer, what are your obligations?
 
 - [ ] Return the beer once the occupant promises to stop selling
 - [x] Seize all items described in the warrant, keep them pending final judgment (they cannot be replevied), and complete a seizure report that lists each item and the person it was seized from
@@ -798,7 +810,7 @@ What must an officer who observes a violation of Education Code §37.122 do with
 ### Q57 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.63(a)
 
-Under §101.63(a), a person commits an offense by selling an alcoholic beverage with criminal negligence to whom?
+Under §101.63(a) (SALE OR DELIVERY TO CERTAIN PERSONS), a person commits an offense by selling an alcoholic beverage with criminal negligence to whom?
 
 - [ ] Any person over 65
 - [ ] Any person without identification
@@ -812,7 +824,7 @@ Under §101.63(a), a person commits an offense by selling an alcoholic beverage 
 ### Q58 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.63
 
-What culpable mental state does §101.63 require for selling an alcoholic beverage to an intoxicated person?
+What culpable mental state does §101.63 (SALE OR DELIVERY TO CERTAIN PERSONS) require for selling an alcoholic beverage to an intoxicated person?
 
 - [ ] Intentionally
 - [x] Criminal negligence
@@ -826,7 +838,7 @@ What culpable mental state does §101.63 require for selling an alcoholic bevera
 ### Q59 — Classification
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.63(b)
 
-What is the punishment for a first violation of §101.63 (sale to certain persons)?
+What is the punishment for a first violation of §101.63 (SALE OR DELIVERY TO CERTAIN PERSONS)?
 
 - [ ] Class C misdemeanor: fine only, up to $500
 - [x] A misdemeanor: fine of $100 to $500, jail for not more than one year, or both
@@ -868,7 +880,7 @@ When is an employee's sale to an intoxicated person or a minor NOT attributed to
 ### Q62 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.75(a)
 
-Under §101.75, it is an offense to possess an open container or consume an alcoholic beverage on a public street, alley, or sidewalk within what distance of a school's property line?
+Under §101.75 (CONSUMPTION OF ALCOHOLIC BEVERAGES NEAR SCHOOLS), it is an offense to possess an open container or consume an alcoholic beverage on a public street, alley, or sidewalk within what distance of a school's property line?
 
 - [ ] 300 feet
 - [ ] 500 feet
@@ -882,7 +894,7 @@ Under §101.75, it is an offense to possess an open container or consume an alco
 ### Q63 — Classification
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.75(c)
 
-What offense level is consumption of alcohol near a school under §101.75?
+What offense level is consumption of alcohol near a school under §101.75 (CONSUMPTION OF ALCOHOLIC BEVERAGES NEAR SCHOOLS)?
 
 - [ ] Class B misdemeanor
 - [ ] Class A misdemeanor
@@ -896,7 +908,7 @@ What offense level is consumption of alcohol near a school under §101.75?
 ### Q64 — Concept
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.75(b)
 
-Which of the following is an exception to §101.75?
+Which of the following is an exception to §101.75 (CONSUMPTION OF ALCOHOLIC BEVERAGES NEAR SCHOOLS)?
 
 - [ ] Consumption after school hours
 - [ ] Consumption on weekends
@@ -910,7 +922,7 @@ Which of the following is an exception to §101.75?
 ### Q65 — Concept
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §101.75(a)
 
-Does §101.75 apply near a private or parochial school?
+Does §101.75 (CONSUMPTION OF ALCOHOLIC BEVERAGES NEAR SCHOOLS) apply near a private or parochial school?
 
 - [ ] No, only public schools
 - [ ] Only parochial schools that receive state funding
@@ -1270,7 +1282,7 @@ What offense level is possession of alcohol by a minor (first offense)?
 ---
 
 ### Q91 — Recall
-**LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.06(a)–(b)
+**LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.06(a)–(b) (PURCHASE OF ALCOHOL FOR A MINOR; FURNISHING ALCOHOL TO A MINOR)
 
 Who may lawfully purchase an alcoholic beverage for, or give one to, a minor under §106.06(b)?
 
@@ -1300,7 +1312,7 @@ What offense level is purchasing alcohol for, or furnishing alcohol to, a minor?
 ### Q93 — Classification
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.06(c-1)
 
-An adult buys beer for a 19-year-old, who drinks it, drives, and causes a crash that seriously injures another driver. What is the offense level for the adult under §106.06?
+An adult buys beer for a 19-year-old, who drinks it, drives, and causes a crash that seriously injures another driver. What is the offense level for the adult under §106.06 (PURCHASE OF ALCOHOL FOR A MINOR; FURNISHING ALCOHOL TO A MINOR)?
 
 - [ ] Class A misdemeanor
 - [ ] Class B misdemeanor
@@ -1314,7 +1326,7 @@ An adult buys beer for a 19-year-old, who drinks it, drives, and causes a crash 
 ### Q94 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.06(d)
 
-If a defendant convicted under §106.06 is placed on community supervision for furnishing alcohol at a gathering involving binge drinking, what must the judge also order?
+If a defendant convicted under §106.06 (PURCHASE OF ALCOHOL FOR A MINOR; FURNISHING ALCOHOL TO A MINOR) is placed on community supervision for furnishing alcohol at a gathering involving binge drinking, what must the judge also order?
 
 - [ ] A $10,000 fine
 - [ ] 90 days in county jail
@@ -1342,7 +1354,7 @@ What does misrepresentation of age by a minor under §106.07 prohibit?
 ### Q96 — Classification
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.071(a)
 
-Which offenses are punished under §106.071?
+Which offenses are punished under §106.071 (PUNISHMENT FOR ALCOHOL-RELATED OFFENSE BY MINOR)?
 
 - [ ] Sale to a minor (§106.03) and furnishing to a minor (§106.06)
 - [x] Purchase (§106.02), attempt to purchase (§106.025), consumption (§106.04), possession (§106.05), and misrepresentation of age (§106.07) by a minor
@@ -1356,7 +1368,7 @@ Which offenses are punished under §106.071?
 ### Q97 — Classification
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.071(c)
 
-A 19-year-old is convicted of minor in possession for the third time (two prior §106.071 convictions). What punishment range applies?
+A 19-year-old is convicted of minor in possession for the third time (two prior §106.071 PUNISHMENT FOR ALCOHOL-RELATED OFFENSE BY MINOR convictions). What punishment range applies?
 
 - [ ] Class C misdemeanor, fine only, up to $500
 - [ ] Class A misdemeanor
@@ -1370,7 +1382,7 @@ A 19-year-old is convicted of minor in possession for the third time (two prior 
 ### Q98 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.071(d)(1)
 
-What community service must the court order for a minor convicted of (or placed on deferred disposition for) a first §106.071 offense?
+What community service must the court order for a minor convicted of (or placed on deferred disposition for) a first §106.071 (PUNISHMENT FOR ALCOHOL-RELATED OFFENSE BY MINOR) offense?
 
 - [ ] 20 to 40 hours
 - [ ] 40 to 60 hours
@@ -1384,7 +1396,7 @@ What community service must the court order for a minor convicted of (or placed 
 ### Q99 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §106.071(d)(2)
 
-On a first conviction for a §106.071 offense, how long must the court order DPS to suspend (or deny) the minor's driver's license?
+On a first conviction for a §106.071 (PUNISHMENT FOR ALCOHOL-RELATED OFFENSE BY MINOR) offense, how long must the court order DPS to suspend (or deny) the minor's driver's license?
 
 - [ ] 60 days
 - [ ] 90 days
@@ -1454,7 +1466,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q104 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #1; Alcoholic Beverage Code §101.63
 
-<i>BPOC 16.4 Scenario #1.</i> At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.<br><br>What offense did the bartender commit?
+**BPOC 16.4 Scenario #1.** At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.
+
+What offense did the bartender commit?
 
 - [ ] Sale to a minor (§106.03)
 - [ ] Lewd conduct (§104.01)
@@ -1468,7 +1482,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q105 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #1; Alcoholic Beverage Code §101.02; §101.04
 
-<i>BPOC 16.4 Scenario #1.</i> At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.<br><br>What authority did you have to be inside, and to arrest the bartender?
+**BPOC 16.4 Scenario #1.** At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.
+
+What authority did you have to be inside, and to arrest the bartender?
 
 - [ ] A search warrant was required; no arrest is possible
 - [x] Inspection of licensed premises under §101.04, and warrantless arrest under §101.02 for a violation committed in your view
@@ -1482,7 +1498,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q106 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #1; Penal Code §49.02
 
-<i>BPOC 16.4 Scenario #1.</i> At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.<br><br>The customer is intoxicated to the degree of being a danger to himself and others. What can you charge him with, and why does the location matter?
+**BPOC 16.4 Scenario #1.** At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.
+
+The customer is intoxicated to the degree of being a danger to himself and others. What can you charge him with, and why does the location matter?
 
 - [ ] Nothing; a bar is private property
 - [x] Public intoxication (Penal Code 49.02), a Class C misdemeanor; a licensed or permitted premises is a public place for PI
@@ -1496,7 +1514,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q107 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #1; Alcoholic Beverage Code §101.63(b)
 
-<i>BPOC 16.4 Scenario #1.</i> At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.<br><br>The bartender has no prior convictions. What is the punishment range?
+**BPOC 16.4 Scenario #1.** At 2345 you and your partner enter a bar with a history of complaints. A person standing at the bar shows obvious signs of intoxication. Before you can approach, the bartender hands that customer a freshly opened bottle of beer. The customer pays and walks away.
+
+The bartender has no prior convictions. What is the punishment range?
 
 - [x] Fine of $100 to $500, jail for up to one year, or both
 - [ ] Class C misdemeanor, fine up to $500
@@ -1510,7 +1530,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q108 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #2; Alcoholic Beverage Code §104.01(a)(5)
 
-<i>BPOC 16.4 Scenario #2.</i> At 2345 in the same bar, a person showing obvious signs of intoxication walks toward you. You stop the person and confirm intoxication. The person turns out to be a bar employee who just got off duty and "had a couple of drinks at the end of my day."<br><br>Which Alcoholic Beverage Code provision applies?
+**BPOC 16.4 Scenario #2.** At 2345 in the same bar, a person showing obvious signs of intoxication walks toward you. You stop the person and confirm intoxication. The person turns out to be a bar employee who just got off duty and "had a couple of drinks at the end of my day."
+
+Which Alcoholic Beverage Code provision applies?
 
 - [ ] §101.63: sale to an intoxicated person, only
 - [ ] §106.04: consumption by a minor
@@ -1524,7 +1546,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q109 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #2; Alcoholic Beverage Code §1.05; §11.61
 
-<i>BPOC 16.4 Scenario #2.</i> At 2345 in the same bar, a person showing obvious signs of intoxication walks toward you. You stop the person and confirm intoxication. The person turns out to be a bar employee who just got off duty and "had a couple of drinks at the end of my day."<br><br>What outcomes can follow from this violation?
+**BPOC 16.4 Scenario #2.** At 2345 in the same bar, a person showing obvious signs of intoxication walks toward you. You stop the person and confirm intoxication. The person turns out to be a bar employee who just got off duty and "had a couple of drinks at the end of my day."
+
+What outcomes can follow from this violation?
 
 - [ ] Only a criminal case; TABC cannot act on an employee's conduct
 - [x] A criminal case against the employee under the §1.05 general penalty (or Penal Code 49.02 if dangerous), and an administrative case by TABC against the bar's permit or license
@@ -1538,7 +1562,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q110 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #3; Alcoholic Beverage Code §106.02; §106.03
 
-<i>BPOC 16.4 Scenario #3.</i> Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.<br><br>What offenses occurred?
+**BPOC 16.4 Scenario #3.** Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.
+
+What offenses occurred?
 
 - [ ] Only purchase by a minor
 - [ ] Only sale to a minor
@@ -1552,7 +1578,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q111 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #3; Alcoholic Beverage Code §106.03(c); §106.071
 
-<i>BPOC 16.4 Scenario #3.</i> Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.<br><br>What are the offense levels for the minor and for the clerk?
+**BPOC 16.4 Scenario #3.** Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.
+
+What are the offense levels for the minor and for the clerk?
 
 - [x] Minor: Class C misdemeanor (§106.071). Clerk: Class A misdemeanor (§106.03(c))
 - [ ] Both Class C
@@ -1566,7 +1594,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q112 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #3; Alcoholic Beverage Code §106.05; §106.07
 
-<i>BPOC 16.4 Scenario #3.</i> Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.<br><br>When you stop the minor, she hands you a driver license showing she is 22. It belongs to her older sister. What additional offense may apply?
+**BPOC 16.4 Scenario #3.** Stopping at a convenience store for coffee, you see what appears to be an underage person buying wine coolers at the register. You wait outside, stop the person as they exit, and confirm they are 19.
+
+When you stop the minor, she hands you a driver license showing she is 22. It belongs to her older sister. What additional offense may apply?
 
 - [ ] None; the license is real
 - [ ] Forgery of a government record only
@@ -1580,7 +1610,9 @@ Can a 17-year-old work as a server carrying drinks to tables at a restaurant wit
 ### Q113 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #4; Alcoholic Beverage Code §106.025
 
-<i>BPOC 16.4 Scenario #4.</i> At the same store, an underage-looking person at the register is buying wine coolers. Seeing you, they quickly put their money away, leave the wine coolers on the counter, and head for the door. You stop them and confirm they are 20.<br><br>What offense, if any, did the person commit?
+**BPOC 16.4 Scenario #4.** At the same store, an underage-looking person at the register is buying wine coolers. Seeing you, they quickly put their money away, leave the wine coolers on the counter, and head for the door. You stop them and confirm they are 20.
+
+What offense, if any, did the person commit?
 
 - [x] Attempt to purchase alcohol by a minor (§106.025): with specific intent to buy, they did an act amounting to more than mere preparation that failed to complete the purchase
 - [ ] Purchase by a minor (§106.02), because they were at the register
@@ -1608,7 +1640,9 @@ A 20-year-old walks into a store, looks at the beer cooler, then leaves without 
 ### Q115 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #5; Alcoholic Beverage Code §106.06
 
-<i>BPOC 16.4 Scenario #5.</i> At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."<br><br>Does the parent's exception in §106.06(b) protect the homeowner?
+**BPOC 16.4 Scenario #5.** At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."
+
+Does the parent's exception in §106.06(b) (PURCHASE OF ALCOHOL FOR A MINOR; FURNISHING ALCOHOL TO A MINOR) protect the homeowner?
 
 - [ ] Yes, as to all the minors, because it is the homeowner's house
 - [ ] Yes, because the homeowner is supervising
@@ -1622,7 +1656,9 @@ A 20-year-old walks into a store, looks at the beer cooler, then leaves without 
 ### Q116 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #5; Alcoholic Beverage Code §106.06(c)
 
-<i>BPOC 16.4 Scenario #5.</i> At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."<br><br>What offense level applies to the homeowner for furnishing alcohol to the other minors?
+**BPOC 16.4 Scenario #5.** At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."
+
+What offense level applies to the homeowner for furnishing alcohol to the other minors?
 
 - [x] Class A misdemeanor (a state jail felony if a minor, as a result of drinking it, caused serious bodily injury or death)
 - [ ] Class C misdemeanor
@@ -1636,7 +1672,9 @@ A 20-year-old walks into a store, looks at the beer cooler, then leaves without 
 ### Q117 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #5; Alcoholic Beverage Code §106.04; §106.05
 
-<i>BPOC 16.4 Scenario #5.</i> At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."<br><br>What about the minors who are drinking?
+**BPOC 16.4 Scenario #5.** At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."
+
+What about the minors who are drinking?
 
 - [x] The other minors may be cited for possession (§106.05) and consumption (§106.04); the homeowner's own child is covered by the parent-presence exception and affirmative defense
 - [ ] None of the minors committed an offense because an adult was present
@@ -1650,7 +1688,9 @@ A 20-year-old walks into a store, looks at the beer cooler, then leaves without 
 ### Q118 — Scenario
 **LO:** 16.4 · **Source:** BPOC 16.4 Scenario #5; Alcoholic Beverage Code §101.03(b)
 
-<i>BPOC 16.4 Scenario #5.</i> At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."<br><br>The homeowner refuses to let you in. Can you enter to inspect under §101.04?
+**BPOC 16.4 Scenario #5.** At a loud-party call, a minor holding a clearly marked beer can opens the door. Inside, you see several people who are obviously under 21 drinking. The homeowner, the parent of the minor at the door and the only adult present, says they are hosting so the kids are "safe," since "they are going to get alcohol anyway."
+
+The homeowner refuses to let you in. Can you enter to inspect under §101.04?
 
 - [x] No. A private residence is not a licensed premises; you need consent, a warrant, or a recognized exception such as exigent circumstances
 - [ ] Yes. §101.04 applies to any place alcohol is served
@@ -1820,7 +1860,7 @@ A mixed beverage permittee in a large city or county (such as Fort Worth or Tarr
 ### Q130 — Concept
 **LO:** 16.5 · **Source:** Alcoholic Beverage Code §105.03(d)
 
-In a city or county below the §105.03(c) population thresholds, how do late hours (midnight to 2 a.m.) become available?
+In a city or county below the §105.03(c) (HOURS OF SALE: MIXED BEVERAGES) population thresholds, how do late hours (midnight to 2 a.m.) become available?
 
 - [ ] They are never available
 - [ ] Automatically, with a late hours certificate
