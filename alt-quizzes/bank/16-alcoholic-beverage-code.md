@@ -936,7 +936,7 @@ Does §101.75 (CONSUMPTION OF ALCOHOLIC BEVERAGES NEAR SCHOOLS) apply near a pri
 ### Q66 — Definition
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §109.35(e)
 
-How does §109.35(e) define "open container"?
+How does §109.35(e) (ORDERS FOR PROHIBITION ON CONSUMPTION) define "open container"?
 
 - [ ] Any container with alcohol in it
 - [x] A container that is no longer sealed
@@ -950,7 +950,7 @@ How does §109.35(e) define "open container"?
 ### Q67 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §109.35(a)
 
-Under §109.35, what may a city do about open containers and public consumption?
+Under §109.35 (ORDERS FOR PROHIBITION ON CONSUMPTION), what may a city do about open containers and public consumption?
 
 - [ ] Prohibit them anywhere in the city limits
 - [ ] Prohibit them in all motor vehicles
@@ -964,7 +964,7 @@ Under §109.35, what may a city do about open containers and public consumption?
 ### Q68 — Recall
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §109.35(c)
 
-A city ordinance under §109.35 may NOT prohibit open containers or consumption in which of these places?
+A city ordinance under §109.35 (ORDERS FOR PROHIBITION ON CONSUMPTION) may NOT prohibit open containers or consumption in which of these places?
 
 - [x] Motor vehicles, buildings not owned or controlled by the city, residential structures, or licensed premises in the area
 - [ ] City-owned parks in the central business district
@@ -978,7 +978,7 @@ A city ordinance under §109.35 may NOT prohibit open containers or consumption 
 ### Q69 — Definition
 **LO:** 16.4 · **Source:** Alcoholic Beverage Code §109.35(d)
 
-For a §109.35 ordinance, what is a "central business district"?
+For a §109.35 (ORDERS FOR PROHIBITION ON CONSUMPTION) ordinance, what is a "central business district"?
 
 - [ ] Any area within one mile of city hall
 - [ ] Any area zoned commercial
@@ -2526,3 +2526,220 @@ Under Alcoholic Beverage Code §11.49(a), which is the definition of "Premises"?
 "_________": The grounds and all buildings, vehicles, and appurtenances pertaining to the grounds, including any adjacent [same term] if they are directly or indirectly under the control of the same person.
 
 **Explanation:** This is the definition of "Premises" in Alcoholic Beverage Code §11.49(a).
+
+---
+
+### Q180 — Scenario
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(14); §101.63
+
+You watch a bartender serve another beer to a customer who is slurring and can barely stand. Besides the criminal case against the bartender, which §11.61(b) ground lets TABC suspend or cancel the bar's permit?
+
+- [x] The permittee sold or delivered an alcoholic beverage to an intoxicated person
+- [ ] The permittee is in the habit of using alcoholic beverages to excess
+- [ ] The permittee knowingly misrepresented to a customer any liquor sold
+- [ ] The permittee possessed an alcoholic beverage it was not authorized to sell
+
+**Explanation:** §11.61(b)(14) covers selling or delivering to an intoxicated person. The same sale is a criminal offense under §101.63, and the two cases can proceed separately (LO 16.6). Under §11.64(a), a (b)(14) violation is also one of the few where the permittee can't simply pay a civil penalty instead of serving the suspension.
+
+---
+
+### Q181 — Scenario
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(13), (b)(11)
+
+On a bar check, you find the owner (the permittee) visibly intoxicated behind the bar on the licensed premises. Which §11.61(b) ground fits this single incident?
+
+- [ ] The permittee is in the habit of using alcoholic beverages to excess
+- [x] The permittee was intoxicated on the licensed premises
+- [ ] The permittee is not of good moral character
+- [ ] The permittee sold an alcoholic beverage to an intoxicated person
+
+**Explanation:** §11.61(b)(13). The "habit of using alcoholic beverages to excess" ground in (b)(11) describes a pattern, not one night.
+
+---
+
+### Q182 — Scenario
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(21)
+
+A fight breaks out inside a licensed bar and patrons are injured. The permittee never tells TABC about it. Which §11.61(b) ground specifically addresses the permittee's failure?
+
+- [ ] The permittee maintains a noisy, lewd, disorderly, or unsanitary establishment
+- [ ] The place or manner of the business warrants cancellation based on the general welfare
+- [x] The permittee failed to promptly report to the commission a breach of the peace occurring on the licensed premises
+- [ ] The permittee is insolvent or has an incapacity that prevents managing the business safely
+
+**Explanation:** §11.61(b)(21) makes the failure to promptly report a breach of the peace on the premises its own ground for suspension or cancellation.
+
+---
+
+### Q183 — True/False
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(20)
+
+True or False: A permittee who does not hold a mixed beverage permit for the premises may still allow customers to open and possess open containers of alcoholic beverages on the licensed premises without risking the permit.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. §11.61(b)(20): permitting a person to open, or possess an open container of, an alcoholic beverage on the licensed premises is a ground for suspension or cancellation unless a mixed beverage permit has been issued for the premises.
+
+---
+
+### Q184 — Concept
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(22)–(23)
+
+A store clerk rings up a 12-pack of beer during hours when its sale is prohibited. Which §11.61(b) ground applies to the store's permit?
+
+- [ ] The permittee consumed an alcoholic beverage on the premises when consumption is prohibited
+- [x] The permittee sold, served, or delivered an alcoholic beverage at a time when its sale is prohibited
+- [ ] The permittee is not maintaining an acceptable bond
+- [ ] The permittee transported liquor into a dry area
+
+**Explanation:** §11.61(b)(23) covers sales at prohibited times. (b)(22) is the separate ground for consumption on the premises at prohibited times. See Ch. 105 for the legal hours.
+
+---
+
+### Q185 — Scenario
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)(9)
+
+Officers have answered repeated calls about loud music, fights in the parking lot, and lewd conduct at the same licensed club. Which §11.61(b) ground best fits this pattern?
+
+- [x] The permittee maintains a noisy, lewd, disorderly, or unsanitary establishment
+- [ ] The permittee made a false statement on the permit application
+- [ ] The permittee is indebted to the state for taxes or fees
+- [ ] The permittee is residentially domiciled with someone whose permit was cancelled
+
+**Explanation:** §11.61(b)(9). The same subdivision also covers supplying impure or otherwise deleterious beverages.
+
+---
+
+### Q186 — Term ID
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(a)
+
+**Answer:** Permittee
+
+As used in Subsection (b) of this section, the word "______" also includes each member of a partnership or association and, with respect to a corporation, each officer and the owner or owners of a majority of the corporate stock.
+
+**Explanation:** §11.61(a). For the grounds in (b), conduct by a partner, association member, corporate officer, or majority stockholder counts as the permittee's.
+
+---
+
+### Q187 — Recall
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(b)
+
+What must happen before the commission or administrator can suspend or cancel a permit on one of the grounds in §11.61(b)?
+
+- [ ] A criminal conviction of the permittee
+- [x] Notice and a hearing
+- [ ] A written complaint signed by a peace officer
+- [ ] Nothing; the commission may act immediately
+
+**Explanation:** §11.61(b) requires a finding "after notice and hearing." A conviction is only one of the grounds ((b)(1) and (3)); most grounds don't need one. Only the narrow summary suspension in (d) skips the hearing.
+
+---
+
+### Q188 — Recall
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(d)
+
+Without a hearing, for investigative purposes, for how long may the commission or administrator summarily suspend a permit under §11.61(d)?
+
+- [ ] Not more than 24 hours
+- [ ] Not more than 72 hours
+- [x] Not more than 7 days
+- [ ] Not more than 60 days
+
+**Explanation:** §11.61(d) allows a summary suspension of not more than seven days. The 60-day limit applies to suspensions after notice and hearing under (b).
+
+---
+
+### Q189 — Concept
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(d)
+
+Which event on licensed premises can trigger a §11.61(d) summary suspension without a hearing?
+
+- [ ] Any arrest made on the premises
+- [ ] A sale to a minor discovered during a minor sting
+- [x] A shooting, stabbing, or murder that is likely to result in a subsequent act of violence
+- [ ] A patron leaving the premises and causing a DWI crash
+
+**Explanation:** §11.61(d) requires a shooting, stabbing, or murder on the licensed premises that is likely to result in a subsequent act of violence. The other events are handled through the regular notice-and-hearing process.
+
+---
+
+### Q190 — Recall
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(d)
+
+Which permits can be summarily suspended under §11.61(d)?
+
+- [ ] Any license or permit issued by the commission
+- [x] A mixed beverage permit or a wine and malt beverage retailer's permit
+- [ ] Only a package store permit
+- [ ] Only permits in counties of 1.4 million or more
+
+**Explanation:** §11.61(d) applies only to a mixed beverage permit or a wine and malt beverage retailer's permit.
+
+---
+
+### Q191 — Recall
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(d)
+
+After a §11.61(d) summary suspension, notice must be given to the permittee personally within 24 hours of the violent act. If the permittee cannot be located, how is notice provided?
+
+- [ ] By certified mail to the address on the permit
+- [ ] By notifying the local police department
+- [x] By posting a copy of the order on the front door of the licensed premises
+- [ ] By publishing the order in a local newspaper
+
+**Explanation:** §11.61(d): personal notice within 24 hours of the violent act; if the permittee cannot be located, post a copy of the order on the front door of the licensed premises.
+
+---
+
+### Q192 — Concept
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(d-1); §101.76
+
+A permittee is convicted under §101.76 of knowingly allowing another person to display or use the permit in a manner not allowed by law. What does §11.61(d-1) require after notice and hearing?
+
+- [ ] The commission may suspend the permit for up to 60 days
+- [ ] The commission may summarily suspend the permit for up to 7 days
+- [x] The commission shall cancel the permit
+- [ ] No administrative action; the criminal conviction is the only consequence
+
+**Explanation:** §11.61(d-1) makes cancellation mandatory ("shall cancel") for a §101.76 conviction, notwithstanding §11.64 (which otherwise generally lets the permittee pay a civil penalty instead of a suspension).
+
+---
+
+### Q193 — Concept
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(g)–(h)
+
+In deciding how long to suspend a permit, which factor MUST the commission or administrator consider?
+
+- [ ] The volume of alcoholic beverages the business sells
+- [ ] The taxes the business has paid
+- [x] The permittee's previous violations
+- [ ] The financial condition of the permittee
+
+**Explanation:** §11.61(g) requires considering the type of license or permit, the type of violation, aggravating or ameliorating circumstances, and previous violations. §11.61(h) says the length may not be based on volume sold, receipts, taxes paid, or financial condition.
+
+---
+
+### Q194 — True/False
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(c)
+
+True or False: The commission may refuse to renew an alcoholic beverage permit if the permittee no longer holds a required sales tax permit for the place of business.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. §11.61(c)(1). The commission may also, after notice and hearing, suspend for up to 60 days or cancel on this ground, or when the comptroller shows a final determination of sales taxes due.
+
+---
+
+### Q195 — Recall
+**LO:** 16.6 · **Source:** Alcoholic Beverage Code §11.61(j)
+
+For a wine and malt beverage retailer's permit (without a food and beverage certificate) in a county with a population of 1.4 million or more, such as Tarrant County, when must a §11.61(b) hearing be concluded?
+
+- [ ] Within 30 days after the violation
+- [x] Not later than the 60th day after notice is provided, and neither side may waive this
+- [ ] Within 90 days, unless both sides agree to extend it
+- [ ] There is no deadline for these hearings
+
+**Explanation:** §11.61(j): the hearing must be concluded not later than the 60th day after notice, and neither the permittee nor the commission may waive this.

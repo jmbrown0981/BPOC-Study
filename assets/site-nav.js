@@ -47,6 +47,17 @@
     else document.body.appendChild(nav);
   }
 
+  // Pages whose chip nav is a list of #anchor jumps: when the nav is pinned (sticky) and wraps to
+  // several rows, offset anchor jumps by its height so the target isn't hidden underneath it.
+  function offsetAnchors(){
+    var chips = document.querySelector('nav.chips');
+    if(!chips || !chips.querySelector('a[href^="#"]')) return;
+    var pinned = getComputedStyle(chips).position === 'sticky';
+    document.documentElement.style.scrollPaddingTop = pinned ? (chips.offsetHeight + 8) + 'px' : '';
+  }
+  window.addEventListener('load', offsetAnchors);
+  window.addEventListener('resize', offsetAnchors);
+
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
   else build();
 })();

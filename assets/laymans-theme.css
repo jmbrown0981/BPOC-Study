@@ -25,9 +25,15 @@ header.hero p.sub{font-size:12.5px; color:#C8C0AA; line-height:1.55; margin:8px 
 .back{font-size:12px; color:var(--brass-light); text-decoration:none; font-family:'IBM Plex Mono', monospace; white-space:nowrap;}
 .back:hover{color:#fff;}
 
-/* ── sticky chip nav (chapter guide pages only) ── */
-nav.chips{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch; align-items:center;}
-nav.chips::-webkit-scrollbar{display:none;}
+/* ── chip nav (chapter guide pages) ──
+   Same behavior as study.html's chapter chips: every chip stays visible and wraps to a new row
+   instead of scrolling off-screen. Pinned to the top only on wide screens (900px+), where the
+   extra rows don't crowd the page; assets/site-nav.js offsets #anchor jumps by its height. */
+nav.chips{background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+@media (min-width:900px){ nav.chips{position:sticky; top:0; z-index:20;} }
+/* a label too long for a phone screen wraps inside its chip instead of running off the edge */
+.chip{max-width:100%;}
+@media (max-width:600px){ nav.chips .chip{white-space:normal; text-align:left;} }
 .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; transition:all 0.15s ease; text-decoration:none; display:inline-block;}
 .chip:hover{border-color:var(--brass); color:var(--ink);}
 .chip.ghost{margin-left:auto; border-style:dashed;}

@@ -119,15 +119,14 @@
   .ladder-cell.mc{background:var(--c-c);}
 
   /* ---------- FILTER CHIPS ---------- */
+  /* wraps to new rows like study.html's chapter chips; pinned only on wide screens */
   nav.chips{
-    position:sticky; top:0; z-index:20;
     background:var(--paper);
     border-bottom:1px solid var(--rule);
     padding:10px 14px;
-    display:flex; gap:7px; overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
+    display:flex; flex-wrap:wrap; gap:7px;
   }
-  nav.chips::-webkit-scrollbar{display:none;}
+  @media (min-width:900px){ nav.chips{position:sticky; top:0; z-index:20;} }
   .chip{
     flex:none;
     font-family:'IBM Plex Sans', sans-serif;
