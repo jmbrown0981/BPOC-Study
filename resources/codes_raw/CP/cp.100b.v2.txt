@@ -1,0 +1,65 @@
+CIVIL PRACTICE AND REMEDIES CODE
+TITLE 4. LIABILITY IN TORT
+Chapter 100B, consisting of Secs. 100B.001 to 100B.004, was added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 1.
+For another Chapter 100B, consisting of Secs. 100B.001 to 100B.003, added by Acts 2025, 89th Leg., R.S., Ch. 654 (H.B. 4281), Sec. 1, see Sec. 100B.001 et seq., post.
+CHAPTER 100B.  LIABILITY FOR FINANCIAL EXPLOITATION
+
+      Sec. 100B.001.  DEFINITIONS.  In this chapter:
+            (1)  "Artificial intelligence" means a machine-based system that can, for a given set of explicit or implicit objectives, make predictions, recommendations, or decisions that influence real or virtual environments.
+            (2)  "Artificially generated media" means an image, an audio file, a video file, a radio broadcast, written text, or other media created or modified using artificial intelligence or other computer software with the intent to deceive.
+            (3)  "Financial exploitation" has the meaning assigned by Section 281.001, Finance Code.
+            (4)  "Phishing communication" means an attempt to deceive or manipulate a person into providing personal, financial, or identifying information through e-mail, electronic communication, or other digital means.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 1, eff. September 1, 2025.
+
+      Sec. 100B.002.  CAUSE OF ACTION FOR DISSEMINATION OF CERTAIN COMMUNICATIONS FOR FINANCIAL EXPLOITATION.  (a)  A person is liable for damages resulting from a knowing or intentional dissemination of artificially generated media or a phishing communication for the purpose of financial exploitation.
+      (b)  A court shall award a claimant who prevails in an action brought under this section:
+            (1)  actual damages, including damages for mental anguish and the defendant's profits attributable to the dissemination of the artificially generated media or phishing communication; and
+            (2)  court costs and reasonable attorney's fees incurred in bringing the action.
+      (c)  A court in which an action is brought under this section, on a motion of a claimant, may issue a temporary restraining order or a temporary or permanent injunction to restrain and prevent the further dissemination of artificially generated media or a phishing communication to the claimant.
+      (d)  This section may not be construed to impose liability, for content provided by another person, on:
+            (1)  the provider of an interactive computer service, as defined by 47 U.S.C. Section 230(f);
+            (2)  a telecommunications service, as defined by 47 U.S.C. Section 153; or
+            (3)  a radio or television station licensed by the Federal Communications Commission.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 1, eff. September 1, 2025.
+
+      Sec. 100B.003.  CIVIL PENALTY FOR DISSEMINATION OF CERTAIN COMMUNICATIONS FOR FINANCIAL EXPLOITATION.  (a)  A person who knowingly or intentionally disseminates artificially generated media or a phishing communication for purposes of financial exploitation is subject to a civil penalty not to exceed $1,000 per day the media or communication is disseminated.  The attorney general may bring an action to collect the civil penalty.
+      (b)  An action brought by the attorney general under this section shall be filed in a district court:
+            (1)  in Travis County; or
+            (2)  in any county in which all or part of the events or omissions giving rise to the action occurred.
+      (c)  This section may not be construed to impose liability, for content provided by another person, on:
+            (1)  the provider of an interactive computer service, as defined by 47 U.S.C. Section 230(f);
+            (2)  a telecommunications service, as defined by 47 U.S.C. Section 153; or
+            (3)  a radio or television station licensed by the Federal Communications Commission.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 1, eff. September 1, 2025.
+
+      Sec. 100B.004.  CONFIDENTIAL IDENTITY IN ACTION FOR DISSEMINATION OF CERTAIN COMMUNICATIONS.  (a)  In this section, "confidential identity" means:
+            (1)  the use of a pseudonym; and
+            (2)  the absence of any other identifying information, including address, telephone number, and social security number.
+      (b)  In an action brought under Section 100B.002 or 100B.003, the court shall:
+            (1)  notify the person who is the subject of the action as early as possible in the action that the person may use a confidential identity in relation to the action;
+            (2)  allow a person who is the subject of the action to use a confidential identity in all petitions, filings, and other documents presented to the court;
+            (3)  use the person's confidential identity in all of the court's proceedings and records relating to the action, including any appellate proceedings; and
+            (4)  maintain the records relating to the action in a manner that protects the person's confidentiality.
+      (c)  In an action brought under Section 100B.002 or 100B.003, only the following persons are entitled to know the true identifying information about the person who is the subject of the action:
+            (1)  the court;
+            (2)  a party to the action;
+            (3)  an attorney representing a party to the action; and
+            (4)  a person authorized by a written order of the court specific to that person.
+      (d)  The court shall order that a person entitled to know the true identifying information under Subsection (c) may not divulge that information to anyone without a written order of the court.  The court shall hold a person who violates the order in contempt.
+      (e)  Repealed by Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(17), eff. December 4, 2025.
+      (f)  A person is not required to use a confidential identity as provided by this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1154 (S.B. 2373), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(17), eff. December 4, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

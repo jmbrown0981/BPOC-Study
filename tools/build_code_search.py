@@ -25,11 +25,11 @@ from pathlib import Path
 # ============================ CONFIGURATION ============================
 # Edit these to build a different code.
 REPO_ROOT    = Path(__file__).resolve().parent.parent
-SOURCE_DIR   = REPO_ROOT / "resources" / "codes_raw" / "finance_code"   # where the chapter .txt files are read from
-FILE_PATTERN = "fi.*.txt"                             # which files in SOURCE_DIR to read (glob; case-insensitive)
+SOURCE_DIR   = REPO_ROOT / "resources" / "codes_raw" / "CP"   # where the chapter .txt files are read from
+FILE_PATTERN = "cp.*.txt"                             # which files in SOURCE_DIR to read (glob; case-insensitive)
 OUTPUT_ROOT  = REPO_ROOT / "assets" / "codes"         # generated files go in OUTPUT_ROOT/<CODE_ID>/
-CODE_ID      = "FI"                                   # short code id; also used in statutes.capitol.texas.gov URLs
-CODE_NAME    = "Finance Code"                          # display name
+CODE_ID      = "CP"                                   # short code id; also used in statutes.capitol.texas.gov URLs
+CODE_NAME    = "Civil Practice and Remedies Code"                          # display name
 SOURCE_ENCODING = "utf-8"                             # source files are ASCII; bad bytes are replaced, not fatal
 SECTION_WORDS = ("Sec", "Art")                        # words that start a section line ("Sec. 51.02." / "Art. 2A.001.")
 INDEX_PREFIX_LEN = 2                                  # search-index shard key length (first N chars of each word)

@@ -1,0 +1,128 @@
+CIVIL PRACTICE AND REMEDIES CODE
+TITLE 6. MISCELLANEOUS PROVISIONS
+CHAPTER 134A.  TRADE SECRETS
+
+      Sec. 134A.001.  SHORT TITLE.  This chapter may be cited as the Texas Uniform Trade Secrets Act.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+
+      Sec. 134A.002.  DEFINITIONS.  In this chapter:
+            (1)  "Claimant" means a party seeking to recover damages under this chapter, including a plaintiff, counterclaimant, cross-claimant, or third-party plaintiff.  In an action in which a party seeks recovery of damages under this chapter on behalf of another person, "claimant" includes both that other person and the party seeking recovery of damages.
+            (1-a)  "Clear and convincing" means the measure or degree of proof that will produce in the mind of the trier of fact a firm belief or conviction as to the truth of the allegations sought to be established.
+            (2)  "Improper means" includes theft, bribery, misrepresentation, breach or inducement of a breach of a duty to maintain secrecy, to limit use, or to prohibit discovery of a trade secret, or espionage through electronic or other means.
+            (3)  "Misappropriation" means:
+                  (A)  acquisition of a trade secret of another by a person who knows or has reason to know that the trade secret was acquired by improper means; or
+                  (B)  disclosure or use of a trade secret of another without express or implied consent by a person who:
+                        (i)  used improper means to acquire knowledge of the trade secret;
+                        (ii)  at the time of disclosure or use, knew or had reason to know that the person's knowledge of the trade secret was:
+                              (a)  derived from or through a person who used improper means to acquire the trade secret;
+                              (b)  acquired under circumstances giving rise to a duty to maintain the secrecy of or limit the use of the trade secret; or
+                              (c)  derived from or through a person who owed a duty to the person seeking relief to maintain the secrecy of or limit the use of the trade secret; or
+                        (iii)  before a material change of the position of the person, knew or had reason to know that the trade secret was a trade secret and that knowledge of the trade secret had been acquired by accident or mistake.
+            (3-a)  "Owner" means, with respect to a trade secret, the person or entity in whom or in which rightful, legal, or equitable title to, or the right to enforce rights in, the trade secret is reposed.
+            (4)  "Proper means" means discovery by independent development, reverse engineering unless prohibited, or any other means that is not improper means.
+            (5)  "Reverse engineering" means the process of studying, analyzing, or disassembling a product or device to discover its design, structure, construction, or source code provided that the product or device was acquired lawfully or from a person having the legal right to convey it.
+            (6)  "Trade secret" means all forms and types of information, including business, scientific, technical, economic, or engineering information, and any formula, design, prototype, pattern, plan, compilation, program device, program, code, device, method, technique, process, procedure, financial data, or list of actual or potential customers or suppliers, whether tangible or intangible and whether or how stored, compiled, or memorialized physically, electronically, graphically, photographically, or in writing if:
+                  (A)  the owner of the trade secret has taken reasonable measures under the circumstances to keep the information secret; and
+                  (B)  the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information.
+            (7)  "Willful and malicious misappropriation" means intentional misappropriation resulting from the conscious disregard of the rights of the owner of the trade secret.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2017, 85th Leg., R.S., Ch. 37 (H.B. 1995), Sec. 1, eff. September 1, 2017.
+
+      Sec. 134A.003.  INJUNCTIVE RELIEF.  (a)  Actual or threatened misappropriation may be enjoined if the order does not prohibit a person from using general knowledge, skill, and experience that person acquired during employment.
+      (a-1)  On application to the court, an injunction shall be terminated when the trade secret has ceased to exist, but the injunction may be continued for an additional reasonable period of time in order to eliminate commercial advantage that otherwise would be derived from the misappropriation.
+      (b)  In exceptional circumstances, an injunction may condition future use upon payment of a reasonable royalty for no longer than the period of time for which use could have been prohibited.  Exceptional circumstances include a material and prejudicial change of position before acquiring knowledge or reason to know of misappropriation that renders a prohibitive injunction inequitable.
+      (c)  In appropriate circumstances, affirmative acts to protect a trade secret may be compelled by court order.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2017, 85th Leg., R.S., Ch. 37 (H.B. 1995), Sec. 2, eff. September 1, 2017.
+
+      Sec. 134A.004.  DAMAGES.  (a)  In addition to or in lieu of injunctive relief, a claimant is entitled to recover damages for misappropriation.  Damages can include both the actual loss caused by misappropriation and the unjust enrichment caused by misappropriation that is not taken into account in computing actual loss.  In lieu of damages measured by any other methods, the damages caused by misappropriation may be measured by imposition of liability for a reasonable royalty for a misappropriator's unauthorized disclosure or use of a trade secret.
+      (b)  If willful and malicious misappropriation is proven by clear and convincing evidence, the fact finder may award exemplary damages in an amount not exceeding twice any award made under Subsection (a).
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2017, 85th Leg., R.S., Ch. 37 (H.B. 1995), Sec. 3, eff. September 1, 2017.
+
+      Sec. 134A.005.  ATTORNEY'S FEES.  The court may award reasonable attorney's fees to the prevailing party if:
+            (1)  a claim of misappropriation is made in bad faith;
+            (2)  a motion to terminate an injunction is made or resisted in bad faith; or
+            (3)  willful and malicious misappropriation exists.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2017, 85th Leg., R.S., Ch. 37 (H.B. 1995), Sec. 4, eff. September 1, 2017.
+
+      Sec. 134A.006.  PRESERVATION OF SECRECY.  (a)  In an action under this chapter, a court shall preserve the secrecy of an alleged trade secret by reasonable means.  There is a presumption in favor of granting protective orders to preserve the secrecy of trade secrets.  Protective orders may include provisions limiting access to confidential information to only the attorneys and their experts, holding in camera hearings, sealing the records of the action, and ordering any person involved in the litigation not to disclose an alleged trade secret without prior court approval.
+      (b)  In an action under this chapter, a presumption exists that a party is allowed to participate and assist counsel in the presentation of the party's case.  At any stage of the action, the court may exclude a party and the party's representative or limit a party's access to the alleged trade secret of another party if other countervailing interests overcome the presumption.  In making this determination, the court must conduct a balancing test that considers:
+            (1)  the value of an owner's alleged trade secret;
+            (2)  the degree of competitive harm an owner would suffer from the dissemination of the owner's alleged trade secret to the other party;
+            (3)  whether the owner is alleging that the other party is already in possession of the alleged trade secret;
+            (4)  whether a party's representative acts as a competitive decision maker;
+            (5)  the degree to which a party's defense would be impaired by limiting that party's access to the alleged trade secret;
+            (6)  whether a party or a party's representative possesses specialized expertise that would not be available to a party's outside expert; and
+            (7)  the stage of the action.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2017, 85th Leg., R.S., Ch. 37 (H.B. 1995), Sec. 5, eff. September 1, 2017.
+
+      Sec. 134A.0065.  SEALING OF CERTAIN DOCUMENTS.  (a)  A party to an action under this chapter seeking to seal a document containing the party's own alleged trade secret must:
+            (1)  file with the trial court:
+                  (A)  a notice of sealing; and
+                  (B)  an affidavit:
+                        (i)  generally describing the type of information contained in the document;
+                        (ii)  providing contact information for subsequent notice of any motion to unseal the document; and
+                        (iii)  setting forth the factual basis for the party's allegation that the information constitutes a trade secret;
+            (2)  deliver a copy of the document to be sealed to the trial court in a sealed envelope labeled to identify the notice of sealing to which the document corresponds; and
+            (3)  serve a copy of the notice, affidavit, and document on each other party to the action.
+      (b)  A party to an action under this chapter filing a document the party knows another person alleges to contain the person's trade secret shall:
+            (1)  file with the trial court:
+                  (A)  a notice of sealing; and
+                  (B)  a statement:
+                        (i)  generally describing the type of information contained in the document; and
+                        (ii)  identifying the person who alleges the document contains the person's trade secret;
+            (2)  deliver a copy of the document to be sealed to the trial court in a sealed envelope labeled to identify the notice of sealing to which the document corresponds; and
+            (3)  serve a copy of the notice, statement, and document on:
+                  (A)  each other party to the action; and
+                  (B)  any person who alleges the document contains the person's trade secret who is not a party to the action.
+      (c)  Not later than the 14th day after the date a person who alleges a document contains the person's trade secret receives a notice under Subsection (b) with respect to the document, the person must file with the trial court in the same numbered cause an affidavit:
+            (1)  generally describing the type of information contained in the document;
+            (2)  providing contact information for subsequent notice of any motion to unseal the document; and
+            (3)  setting forth the factual basis for the person's allegation that the information in the document constitutes a trade secret.
+      (d)  If the trial court receives a notice, statement, and sealed document under Subsection (b):
+            (1)  the document shall be treated as filed under seal until the time for filing an affidavit under Subsection (c) expires; and
+            (2)  if no affidavit is timely filed under Subsection (c), the document shall be treated as publicly filed until an affidavit described by that subsection is filed.
+      (e)  Once the trial court receives a notice, affidavit, and sealed document under Subsection (a) or a notice, statement, affidavit, and sealed document under Subsections (b) and (c), the document shall be treated as permanently filed under seal.
+      (f)  Any person may intervene as a matter of right at any time before or after judgment in an action under this chapter to seal or unseal a document.  If a person alleges the person's trade secret was filed of public record, the person may seal the document containing the alleged trade secret by taking the same actions with respect to the document that a party to an action under this chapter is authorized to take with respect to the party's alleged trade secret under Subsection (a).
+      (g)  The trial court retains continuing jurisdiction to seal or unseal a document filed in an action under this chapter.
+      (h)  Any person may move to unseal any document filed under seal under this section.  The motion, and notice of hearing, shall be served on the parties to the action in which the document was filed, and the person who submitted an affidavit under Subsection (c) or (f), by certified mail, return receipt requested, not later than the 14th day before any hearing on the motion in the trial court.  The trial court shall grant the motion and unseal all or part of the document if the person who alleges that the document contains the person's trade secrets fails to demonstrate by a preponderance of the evidence that the document, or a part of the document, contains a trade secret.
+      (i)  If the trial court determines that only a part of the document should be unsealed, the trial court shall redact all information that contains a trade secret before providing the document to the movant.
+      (j)  An order granting or denying a motion to unseal a document under Subsection (h) is considered to be severed from the action and is a final judgment that may be appealed by any party or intervenor who participated in the hearing preceding the issuance of the order.
+      (k)  Repealed by Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(18), eff. December 4, 2025.
+Added by Acts 2025, 89th Leg., R.S., Ch. 946 (H.B. 4081), Sec. 1, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(18), eff. December 4, 2025.
+
+      Sec. 134A.007.  EFFECT ON OTHER LAW.  (a)  Except as provided by Subsection (b), this chapter displaces conflicting tort, restitutionary, and other law of this state providing civil remedies for misappropriation of a trade secret.
+      (b)  This chapter does not affect:
+            (1)  contractual remedies, whether or not based upon misappropriation of a trade secret;
+            (2)  other civil remedies that are not based upon misappropriation of a trade secret; or
+            (3)  criminal remedies, whether or not based upon misappropriation of a trade secret.
+      (c)  Repealed by Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(19), eff. December 4, 2025.
+      (d)  This chapter does not affect the disclosure of public information by a governmental body under Chapter 552, Government Code.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+Amended by: 
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(19), eff. December 4, 2025.
+
+      Sec. 134A.008.  UNIFORMITY OF APPLICATION AND CONSTRUCTION.  This chapter shall be applied and construed to effectuate its general purpose to make uniform the law with respect to the subject of this chapter among states enacting it.
+Added by Acts 2013, 83rd Leg., R.S., Ch. 10 (S.B. 953), Sec. 1, eff. September 1, 2013.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+

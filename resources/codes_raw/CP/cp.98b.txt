@@ -1,0 +1,108 @@
+CIVIL PRACTICE AND REMEDIES CODE
+TITLE 4. LIABILITY IN TORT
+CHAPTER 98B.  UNLAWFUL PRODUCTION, SOLICITATION, DISCLOSURE, OR PROMOTION OF INTIMATE VISUAL MATERIAL
+
+      Sec. 98B.001.  DEFINITIONS.  In this chapter:
+            (1)  "Artificial intimate visual material" means computer-generated intimate visual material that was produced, adapted, or modified using an artificial intelligence application or other computer software in which the person is recognizable as an actual person by a person's face, likeness, voice, or other distinguishing characteristic, such as a unique birthmark or other recognizable feature which, when viewed by a reasonable person, is indistinguishable from the person depicted.
+            (1-a) "Consent" means affirmative, conscious, and voluntary agreement, made by a person freely and without coercion, fraud, or misrepresentation. 
+            (1-b) "Intimate parts," "promote," "sexual conduct," and "visual material" have the meanings assigned by Section 21.16, Penal Code.
+            (2)  "Intimate visual material" means visual material that depicts a person:
+                  (A)  with the person's intimate parts exposed; or
+                  (B)  engaged in sexual conduct.
+            (3)  "Nudification application" means an artificial intelligence application that is primarily designed and marketed for the purpose of producing artificial intimate visual material.
+            (4)  "Social media platform" has the meaning assigned by Section 120.001, Business & Commerce Code.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+Amended by: 
+      Acts 2025, 89th Leg., R.S., Ch. 1133 (S.B. 441), Sec. 5, eff. September 1, 2025.
+
+      Sec. 98B.002.  LIABILITY FOR UNLAWFUL DISCLOSURE OR PROMOTION OF CERTAIN INTIMATE VISUAL MATERIAL.  (a)  A defendant is liable, as provided by this chapter, to a person depicted in intimate visual material for damages arising from the disclosure of the material if:
+            (1)  the defendant discloses the intimate visual material without the effective consent of the depicted person and with the intent to harm that person;
+            (2)  at the time of the disclosure, the defendant knows or has reason to believe that the intimate visual material was obtained by the defendant or created under circumstances in which the depicted person had a reasonable expectation that the material would remain private;
+            (3)  the disclosure of the intimate visual material causes harm to the depicted person; and
+            (4)  the disclosure of the intimate visual material reveals the identity of the depicted person in any manner, including through:
+                  (A)  any accompanying or subsequent information or material related to the intimate visual material; or
+                  (B)  information or material provided by a third party in response to the disclosure of the intimate visual material.
+      (b)  A defendant is liable, as provided by this chapter, to a person depicted in intimate visual material for damages arising from the promotion of the material if, knowing the character and content of the material, the defendant promotes intimate visual material described by Subsection (a) on an Internet website or other forum for publication that is owned or operated by the defendant.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+Amended by: 
+      Acts 2019, 86th Leg., R.S., Ch. 1354 (H.B. 98), Sec. 1, eff. September 1, 2019.
+
+      Sec. 98B.0021.  LIABILITY FOR UNLAWFUL PRODUCTION, SOLICITATION, DISCLOSURE, OR PROMOTION OF CERTAIN ARTIFICIAL INTIMATE VISUAL MATERIAL.  A defendant is liable, as provided by this chapter, to a person depicted in artificial intimate visual material for damages arising from the production, solicitation, disclosure, or promotion of the material if:
+            (1)  the defendant produces, solicits, discloses, or promotes the artificial intimate visual material without the effective consent of the depicted person and with the intent to harm that person;
+            (2)  the production, solicitation, disclosure, or promotion of the artificial intimate visual material causes harm to the depicted person; and
+            (3)  the production, solicitation, disclosure, or promotion of the artificial intimate visual material reveals the identity of the depicted person in any manner, including through any accompanying or subsequent information or material related to the artificial intimate visual material.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1133 (S.B. 441), Sec. 6, eff. September 1, 2025.
+
+      Sec. 98B.0022.  LIABILITY OF OWNERS OF INTERNET WEBSITES AND ARTIFICIAL INTELLIGENCE APPLICATIONS AND PAYMENT PROCESSORS.  (a)  A person who owns an Internet website or application, including a social media platform, and who recklessly facilitates the production or disclosure of artificial intimate visual material in exchange for payment, who owns a publicly accessible nudification application from which the material is produced, or who recklessly processes or facilitates payment for the production or disclosure of the material through the website or application, is liable, as provided by this chapter, to a person depicted in the material for damages arising from the production or disclosure of the material if the person knows or recklessly disregards that the depicted person did not consent to the production or disclosure of the material.
+      (b)  A person who owns an Internet website or application, including a social media platform, on which artificial intimate visual material is disclosed is liable, as provided by this chapter, to the person depicted in the material for damages arising from the disclosure of the material if the person depicted requests the website or application to remove the material and the person who owns the website or application fails to remove the material within 72 hours of receiving the request and make reasonable efforts to identify and remove any known identical copies of such material.
+      (c)  A person who owns an Internet website or application, including a social media platform, shall make available on the website or application an easily accessible system that allows a person to submit a request for the removal of artificial intimate visual material.
+      (d)  A person who owns an Internet website or application, including a social media platform, shall make available on the website or application a clear and conspicuous notice, which may be provided through a clear and conspicuous link to another web page or disclosure, of the removal process established under Subsection (c), that:
+            (1)  is written in plain language that is easy to read; and
+            (2)  provides information regarding the responsibilities of the person who owns the website or application under this section, including a description of how a person can submit a request for the removal of artificial intimate visual material.
+      (e)  A violation of Subsection (b), (c), or (d) is a deceptive trade practice actionable under Subchapter E, Chapter 17, Business & Commerce Code.
+      (f)  The attorney general may investigate and bring an action for injunctive relief against a person who repeatedly violates Subsection (b), (c), or (d).  If the attorney general prevails in the action, the attorney general may recover costs and attorney's fees.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1133 (S.B. 441), Sec. 6, eff. September 1, 2025.
+
+      Sec. 98B.003.  DAMAGES.  (a)  A claimant who prevails in a suit under this chapter shall be awarded:
+            (1)  actual damages, including damages for mental anguish;
+            (2)  court costs; and
+            (3)  reasonable attorney's fees.
+      (b)  In addition to an award under Subsection (a), a claimant who prevails in a suit under this chapter may recover exemplary damages.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+
+      Sec. 98B.004.  INJUNCTIVE RELIEF.  (a)  A court in which a suit is brought under this chapter, on the motion of a party, may issue a temporary restraining order or a temporary or permanent injunction to restrain and prevent the disclosure or promotion of intimate visual material with respect to the person depicted in the material.
+      (b)  A court that issues a temporary restraining order or a temporary or permanent injunction under Subsection (a) may award to the party who brought the motion damages in the amount of:
+            (1)  $1,000 for each violation of the court's order or injunction, if the disclosure or promotion of intimate visual material is wilful or intentional; or
+            (2)  $500 for each violation of the court's order or injunction, if the disclosure or promotion of intimate visual material is not wilful or intentional.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+
+      Sec. 98B.005.  CAUSE OF ACTION CUMULATIVE.  The cause of action created by this chapter is cumulative of any other remedy provided by common law or statute.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+
+      Sec. 98B.006.  JURISDICTION.  A court has personal jurisdiction over a defendant in a suit brought under this chapter if:
+            (1)  the defendant resides in this state;
+            (2)  the claimant who is depicted in the intimate visual material resides in this state;
+            (3)  the intimate visual material is stored on a server that is located in this state; or
+            (4)  the intimate visual material is available for view in this state.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+
+      Sec. 98B.007.  LIBERAL CONSTRUCTION AND APPLICATION; CERTAIN CONDUCT EXCEPTED.  (a)  This chapter shall be liberally construed and applied to promote its underlying purpose to protect persons from, and provide adequate remedies to victims of, the disclosure or promotion of intimate visual material.
+      (b)  This chapter does not apply to a claim brought against an interactive computer service, as defined by 47 U.S.C. Section 230, for a disclosure or promotion consisting of intimate visual material provided by another person.
+Added by Acts 2015, 84th Leg., R.S., Ch. 852 (S.B. 1135), Sec. 2, eff. September 1, 2015.
+
+      Sec. 98B.008.  CONFIDENTIAL IDENTITY IN CERTAIN ACTIONS.  (a)  In this section, "confidential identity" means:
+            (1)  the use of a pseudonym; and
+            (2)  the absence of any other identifying information, including address, telephone number, and social security number.
+      (b)  Except as otherwise provided by this section, in a suit brought under this chapter, the court shall:
+            (1)  make it known to the claimant as early as possible in the proceedings of the suit that the claimant may use a confidential identity in relation to the suit;
+            (2)  allow a claimant to use a confidential identity in all petitions, filings, and other documents presented to the court;
+            (3)  use the confidential identity in all of the court's proceedings and records relating to the suit, including any appellate proceedings; and
+            (4)  maintain the records relating to the suit in a manner that protects the confidentiality of the claimant.
+      (c)  In a suit brought under this chapter, only the following persons are entitled to know the true identifying information about the claimant:
+            (1)  the judge;
+            (2)  a party to the suit;
+            (3)  the attorney representing a party to the suit; and
+            (4)  a person authorized by a written order of a court specific to that person.
+      (d)  The court shall order that a person entitled to know the true identifying information under Subsection (c) may not divulge that information to anyone without a written order of the court.  A court shall hold a person who violates the order in contempt.
+      (e)  Repealed by Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(16), eff. December 4, 2025.
+      (f)  A claimant is not required to use a confidential identity as provided by this section.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1133 (S.B. 441), Sec. 6, eff. September 1, 2025.
+Amended by: 
+      Acts 2025, 89th Leg., 2nd C.S., Ch. 7 (H.B. 16), Sec. 12.10(16), eff. December 4, 2025.
+
+      Sec. 98B.009.  STATUTE OF LIMITATIONS.  A person must bring suit under this chapter not later than 10 years after the later of the date on which:
+            (1)  the person depicted in the intimate visual material that is the basis for the suit reasonably discovers the intimate visual material; or
+            (2)  the person depicted in the intimate visual material that is the basis for the suit turns 18 years of age.
+Added by Acts 2025, 89th Leg., R.S., Ch. 1133 (S.B. 441), Sec. 6, eff. September 1, 2025.
+
+
+
+
+	Page -2 -
+
+
+
+
+
+	Page - 1 -
+
