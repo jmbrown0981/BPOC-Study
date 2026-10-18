@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 26 Spanish 101 — How the BPOC Phrases Work | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/laymans-theme.css">
+<style>
+  main{max-width:1100px;}
+  .intro-note{font-size:12.5px; line-height:1.65; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; margin-bottom:18px;}
+  .intro-note b{color:var(--ink);}
+  .intro-note a{color:var(--navy); font-weight:600;}
+  .es{font-weight:600; color:var(--navy);}
+  .lit{font-style:italic; color:var(--ink-soft);}
+  .bpoc{display:inline-block; font-size:11px; font-family:'IBM Plex Mono',monospace; color:#8A5A28; background:#F3E7D2; border:1px solid #E2CDA8; border-radius:6px; padding:0 6px; margin-left:4px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; border-radius:5px; padding:1px 6px; border:1px solid currentColor; margin-left:4px; vertical-align:1px;}
+  .pill.reg{color:var(--green, #4B6A50);} .pill.irr{color:#9A4A1E;} .pill.stem{color:#9B7E32;} .pill.refl{color:var(--navy);}
+  table.gt{width:100%; border-collapse:collapse; font-size:13px; margin:8px 0 14px;}
+  table.gt th, table.gt td{border:1px solid var(--rule); padding:7px 10px; text-align:left; vertical-align:top;}
+  table.gt th{background:var(--navy); color:#fff; font-weight:600; border-color:var(--navy);}
+  table.gt tbody tr:nth-child(even) td{background:var(--paper-dim);}
+  table.gt td.c{text-align:center;}
+  .ex{background:var(--paper-dim); border-left:3px solid var(--brass); border-radius:6px; padding:9px 13px; margin:8px 0 12px; font-size:13.3px; line-height:1.6;}
+  .ex .es{font-size:14px;}
+  .ex .arrow{color:var(--brass); font-weight:700; margin:0 4px;}
+
+  /* verb cards */
+  .verb-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:12px; margin-top:8px;}
+  .verb{border:1px solid var(--rule); border-radius:10px; background:#fff; overflow:hidden;}
+  .verb .vh{background:var(--paper-dim); padding:9px 12px; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap;}
+  .verb .vh .inf{font-family:'IBM Plex Serif',serif; font-size:16px; font-weight:700; color:var(--navy);}
+  .verb .vh .en{font-size:12.5px; color:var(--ink-soft);}
+  .verb table{width:100%; border-collapse:collapse; font-size:12.5px;}
+  .verb td{padding:4px 12px; border-bottom:1px solid #EFE9DA;}
+  .verb td:first-child{color:var(--ink-soft); width:44%; font-size:11.5px;}
+  .verb td:last-child{font-weight:600; color:var(--ink);}
+  .verb tr.sub td{background:#FAF7EF; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--brass); font-weight:700; padding:3px 12px;}
+  .verb .vb{padding:8px 12px 10px; font-size:12px; line-height:1.55; color:var(--ink-soft); border-top:1px solid var(--rule);}
+  .verb .vb b{color:var(--ink);}
+  .filter-row{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 10px;}
+  .filter-row button{font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; padding:5px 11px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer;}
+  .filter-row button.on{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+  /* phrase breakdowns */
+  .phr{border:1px solid var(--rule); border-radius:10px; background:#fff; margin-bottom:12px; overflow:hidden;}
+  .phr .ph{padding:10px 14px; background:var(--paper-dim); border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:baseline;}
+  .phr .ph .es{font-size:15.5px; font-family:'IBM Plex Serif',serif;}
+  .phr .ph .en{font-size:13px; color:var(--ink-soft);}
+  .phr .ph .lo{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--brass); font-weight:700;}
+  .phr .words{display:flex; flex-wrap:wrap; gap:6px; padding:10px 14px 4px;}
+  .phr .w{border:1px solid var(--rule); border-radius:8px; padding:4px 9px 5px; text-align:center; background:#fff; min-width:54px;}
+  .phr .w .s{display:block; font-weight:700; color:var(--navy); font-size:13.5px;}
+  .phr .w .g{display:block; font-size:11px; color:var(--ink-soft); line-height:1.3; margin-top:1px;}
+  .phr .pb{padding:4px 14px 11px; font-size:12.8px; line-height:1.6;}
+  .phr .pb .litline{color:var(--ink-soft);}
+  .phr .pb a{color:var(--navy);}
+
+  .gloss-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px;}
+  .gloss-grid table.gt{margin:0;}
+  .gloss-grid h4{margin-top:0 !important;}
+
+  .checks{display:grid; gap:8px; counter-reset:q;}
+  .checks details{border:1px solid var(--rule); border-radius:10px; background:#fff; padding:9px 13px;}
+  .checks summary{cursor:pointer; font-size:13.8px; line-height:1.5; list-style:none;}
+  .checks summary::-webkit-details-marker{display:none;}
+  .checks summary::before{content:"Q" counter(q) "  "; counter-increment:q; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:12px;}
+  .checks summary .show{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:999px; padding:0 8px; margin-left:8px;}
+  .checks details[open] summary .show{background:var(--navy); color:#fff;}
+  .checks .ans{margin-top:7px; padding-top:7px; border-top:1px dotted var(--rule); font-size:13.4px; line-height:1.55;}
+
+  .no-match{display:none !important;}
+  .search-count{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); white-space:nowrap;}
+  @media (max-width:700px){
+    table.gt{font-size:12.3px;} table.gt th, table.gt td{padding:6px 7px;}
+    .verb-grid{grid-template-columns:1fr;}
+    .scroll-x{overflow-x:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Ch. 26 &middot; Spanish &middot; Supplemental</p>
+      <h1>Spanish 101 &mdash; How the BPOC Phrases Actually Work</h1>
+      <p class="sub">The BPOC teaches Spanish phrase-for-phrase. This page explains <i>why</i> each phrase is built the way it is: how verbs change form, why &ldquo;usted&rdquo; takes the &ldquo;he/she&rdquo; verb, where the pronouns go in a command, and why <span class="es">&iquest;Quiere que llame una gr&uacute;a?</span> means &ldquo;Do you want me to call a tow truck?&rdquo;</p>
+    </div>
+    <a class="back" href="../index.html">&larr; Study Hub</a>
+  </div>
+</header>
+
+<div class="tool-bar">
+  <label for="searchBox">Search:</label>
+  <input type="text" id="searchBox" placeholder="a verb, a phrase, or an English word (e.g. sentarse, tow truck, kick)..." style="flex:1; min-width:180px; padding:8px 12px; border-radius:8px; border:1.5px solid var(--rule); font-size:13.5px; font-family:'IBM Plex Sans',sans-serif;">
+  <span class="search-count" id="searchCount"></span>
+</div>
+
+<nav class="chips" id="tocChips">
+  <a class="chip" href="#sec-sounds">1 &middot; Sounds &amp; Accents</a>
+  <a class="chip" href="#sec-you">2 &middot; Usted vs. T&uacute;</a>
+  <a class="chip" href="#sec-verbs">3 &middot; How Verbs Work</a>
+  <a class="chip" href="#sec-commands">4 &middot; Commands</a>
+  <a class="chip" href="#sec-pronouns">5 &middot; Him / Her / Me / Yourself</a>
+  <a class="chip" href="#sec-structures">6 &middot; Sentence Patterns</a>
+  <a class="chip" href="#sec-nouns">7 &middot; Nouns, Gender &amp; Adjectives</a>
+  <a class="chip" href="#sec-questions">8 &middot; Questions</a>
+  <a class="chip" href="#sec-verbref">9 &middot; Verb Reference</a>
+  <a class="chip" href="#sec-phrases">10 &middot; Every BPOC Phrase, Broken Down</a>
+  <a class="chip" href="#sec-glossary">11 &middot; Word Lists</a>
+  <a class="chip" href="#sec-checks">12 &middot; Self-Check</a>
+  <span class="chip-spacer">
+    <button class="chip" type="button" onclick="expandAll()">Expand All</button>
+    <button class="chip ghost" type="button" onclick="collapseAll()">Collapse All</button>
+  </span>
+</nav>
+
+<main id="mainContent">
+
+<div class="intro-note">
+  <b>How to use this:</b> sections 1&ndash;8 are short lessons, in the order they build on each other. Section 9 conjugates every verb that appears in the BPOC Ch. 26 phrases, and section 10 breaks down every BPOC sentence and command word by word, with links back to the lesson that explains it. Where the BPOC handout misspells something, this page teaches the standard form and shows the BPOC spelling in a tag like <span class="bpoc">BPOC: desp&aacute;rale</span> so you can match it to the card. For the drill-and-speak side, see the <a href="https://just-a-trashpanda.github.io/bpoc-spanish/" target="_blank" rel="noopener">Tactical Spanish Trainer</a>, and for a quick overview, the <a href="slides/spanish-101.html">Spanish 101 slides</a>.
+</div>
+
+<!-- ============ 1 SOUNDS ============ -->
+<div class="sec-card" id="sec-sounds">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">1</span><span class="sec-name">Sounds &amp; Accent Marks &mdash; reading a word out loud</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Spanish is spelled the way it sounds. Learn a handful of letters and you can read any phrase on the card.</p>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Letter(s)</th><th>Sounds like</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>a / e / i / o / u</td><td>always &ldquo;ah / eh / ee / oh / oo&rdquo; &mdash; short and clean</td><td><span class="es">mano</span> (MAH-noh)</td></tr>
+        <tr><td>h</td><td>silent</td><td><span class="es">hermano</span> (er-MAH-noh), <span class="es">hija</span> (EE-hah)</td></tr>
+        <tr><td>j, and g before e/i</td><td>a breathy English &ldquo;h&rdquo;</td><td><span class="es">ojo</span>, <span class="es">agente</span></td></tr>
+        <tr><td>ll</td><td>&ldquo;y&rdquo; as in &ldquo;yes&rdquo;</td><td><span class="es">llame</span> (YAH-meh), <span class="es">cuchillo</span></td></tr>
+        <tr><td>&ntilde;</td><td>&ldquo;ny&rdquo; as in &ldquo;canyon&rdquo;</td><td><span class="es">espa&ntilde;ol</span>, <span class="es">due&ntilde;o</span></td></tr>
+        <tr><td>rr (or r at the start of a word)</td><td>rolled/trilled</td><td><span class="es">carro</span>, <span class="es">rojo</span></td></tr>
+        <tr><td>qu</td><td>&ldquo;k&rdquo; (the u is silent)</td><td><span class="es">qu&eacute;</span> (keh), <span class="es">aqu&iacute;</span></td></tr>
+        <tr><td>c before e/i, and z</td><td>&ldquo;s&rdquo; (in Latin American Spanish)</td><td><span class="es">cinco</span>, <span class="es">cruce</span></td></tr>
+        <tr><td>v</td><td>close to a soft &ldquo;b&rdquo;</td><td><span class="es">veh&iacute;culo</span></td></tr>
+      </tbody>
+    </table></div>
+    <h3>Where the stress falls</h3>
+    <ul>
+      <li>Words ending in a <b>vowel, n, or s</b> are stressed on the <b>next-to-last</b> syllable: <span class="es">MA-no</span>, <span class="es">HA-blan</span>.</li>
+      <li>Words ending in any <b>other consonant</b> are stressed on the <b>last</b> syllable: <span class="es">ha-BLAR</span>, <span class="es">es-pa-&Ntilde;OL</span>.</li>
+      <li>A <b>written accent</b> overrides both rules: <span class="es">veh&iacute;culo</span> (veh-EE-cu-lo). That's why commands pick up accents when pronouns are attached (<span class="es">si&eacute;ntese</span>, <span class="es">golp&eacute;alo</span>) &mdash; see <a href="#sec-commands">section 4</a>.</li>
+      <li>Some accents only tell two words apart: <span class="es">s&iacute;</span> (yes) vs. <span class="es">si</span> (if); <span class="es">t&uacute;</span> (you) vs. <span class="es">tu</span> (your); <span class="es">&eacute;l</span> (he) vs. <span class="es">el</span> (the); <span class="es">qu&eacute;?</span> (what?) vs. <span class="es">que</span> (that). The instructor alternatives on the card (&ldquo;&iquest;ambulancia, s&iacute; o no?&rdquo;) need the accent on <span class="es">s&iacute;</span>.</li>
+      <li>The little word <span class="es">a</span> (to, at) never takes an accent. The BPOC handout writes it <span class="bpoc">BPOC: &aacute;</span> in several phrases; that's an old typewriter habit, not standard spelling.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ 2 USTED vs TU ============ -->
+<div class="sec-card" id="sec-you">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">2</span><span class="sec-name">Usted vs. T&uacute; &mdash; two words for &ldquo;you&rdquo;</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>English has one &ldquo;you.&rdquo; Spanish has two for one person: <b>t&uacute;</b> (informal &mdash; friends, family, children) and <b>usted</b> (formal &mdash; strangers, adults, anyone you're showing respect to). On duty, <b>default to usted</b>. It's respectful, and it's what most of the BPOC phrases use.</p>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Person</th><th>Pronoun</th><th>English</th></tr></thead>
+      <tbody>
+        <tr><td>1st singular</td><td class="es">yo</td><td>I</td></tr>
+        <tr><td>2nd singular, informal</td><td class="es">t&uacute;</td><td>you (friend, child)</td></tr>
+        <tr><td>3rd singular</td><td class="es">&eacute;l / ella / <b>usted</b></td><td>he / she / <b>you (formal)</b></td></tr>
+        <tr><td>1st plural</td><td class="es">nosotros / nosotras</td><td>we</td></tr>
+        <tr><td>3rd plural</td><td class="es">ellos / ellas / <b>ustedes</b></td><td>they / <b>you all</b></td></tr>
+      </tbody>
+    </table></div>
+    <h3>The key idea: usted uses the &ldquo;he/she&rdquo; verb</h3>
+    <p><b>Usted</b> started out as a title (roughly &ldquo;your grace&rdquo;), so grammatically it is treated like a third person. It always takes the same verb form as <i>he/she</i>. That's why one verb form can mean three things:</p>
+    <div class="ex"><span class="es">&iquest;Habla ingl&eacute;s?</span><span class="arrow">&rarr;</span> &ldquo;Does he speak English?&rdquo; / &ldquo;Does she speak English?&rdquo; / &ldquo;Do <b>you</b> speak English?&rdquo;<br>Adding the pronoun removes the doubt: <span class="es">&iquest;Habla <b>usted</b> ingl&eacute;s?</span> = &ldquo;Do <b>you</b> speak English?&rdquo; (BPOC 26.5)</div>
+    <h3>Why you'll see both on the card</h3>
+    <p>Most BPOC commands are in the <b>usted</b> form (<span class="es">si&eacute;ntese</span>, <span class="es">lev&aacute;ntese</span>, <span class="es">no se mueva</span>), but some are <b>t&uacute;</b> forms because that's how they're said on the street or to a younger person: <span class="es">suelta el arma</span>, <span class="es">cruza los pies</span>, <span class="es">dame la otra mano</span>, and all of the 26.3 &ldquo;danger words&rdquo; (<span class="es">des&aacute;rmalo</span>, <span class="es">p&eacute;gale</span>), which are what suspects say <i>to each other</i>. Section 9 lists both command forms for every verb so you can recognize either.</p>
+    <h3>Dropping the pronoun</h3>
+    <p>Because the verb ending already shows who is acting, Spanish usually leaves the subject pronoun out: <span class="es">Hablo s&oacute;lo un poco de espa&ntilde;ol</span> = &ldquo;(I) speak only a little Spanish.&rdquo; <span class="es">No entiendo</span> = &ldquo;(I) don't understand.&rdquo; Put the pronoun in only for emphasis or to make &ldquo;you&rdquo; clear (<span class="es">&iquest;Usted llam&oacute; a la polic&iacute;a?</span>).</p>
+  </div>
+</div>
+
+<!-- ============ 3 VERBS ============ -->
+<div class="sec-card" id="sec-verbs">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">3</span><span class="sec-name">How Verbs Work &mdash; stem + ending</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Every Spanish verb has a dictionary form (the <b>infinitive</b>, &ldquo;to ___&rdquo;) ending in <b>-ar</b>, <b>-er</b>, or <b>-ir</b>. Take off those two letters to get the <b>stem</b>, then add an ending that shows <i>who</i> is doing it. English mostly uses separate words (I / you / we) to show who; Spanish builds it into the verb.</p>
+    <h3>Present tense &mdash; regular endings</h3>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Who</th><th>-ar: <span class="es" style="color:#fff">trabajar</span> (to work)</th><th>-er: <span class="es" style="color:#fff">beber</span> (to drink)</th><th>-ir: <span class="es" style="color:#fff">vivir</span> (to live)</th></tr></thead>
+      <tbody>
+        <tr><td>yo (I)</td><td>trabaj<b>o</b></td><td>beb<b>o</b></td><td>viv<b>o</b></td></tr>
+        <tr><td>t&uacute; (you, informal)</td><td>trabaj<b>as</b></td><td>beb<b>es</b></td><td>viv<b>es</b></td></tr>
+        <tr><td>&eacute;l / ella / usted</td><td>trabaj<b>a</b></td><td>beb<b>e</b></td><td>viv<b>e</b></td></tr>
+        <tr><td>nosotros (we)</td><td>trabaj<b>amos</b></td><td>beb<b>emos</b></td><td>viv<b>imos</b></td></tr>
+        <tr><td>ellos / ellas / ustedes</td><td>trabaj<b>an</b></td><td>beb<b>en</b></td><td>viv<b>en</b></td></tr>
+      </tbody>
+    </table></div>
+    <p>One Spanish present-tense form covers several English ones: <span class="es">trabajo</span> = &ldquo;I work,&rdquo; &ldquo;I am working,&rdquo; and &ldquo;I do work.&rdquo; Spanish doesn't need &ldquo;do&rdquo; for questions or negatives either: <span class="es">&iquest;Entiende?</span> = &ldquo;Do you understand?&rdquo;; <span class="es">No entiendo</span> = &ldquo;I don't understand.&rdquo;</p>
+    <h3>Three kinds of &ldquo;irregular&rdquo;</h3>
+    <ul>
+      <li><b>Stem-changing</b> <span class="pill stem">STEM</span>: the vowel in the stem changes when it's stressed &mdash; everywhere except nosotros. <span class="es">entender &rarr; ent<b>ie</b>ndo</span>, <span class="es">sentarse &rarr; me s<b>ie</b>nto</span>, <span class="es">acostarse &rarr; me ac<b>ue</b>sto</span>, <span class="es">repetir &rarr; rep<b>i</b>to</span>. The three patterns are e&rarr;ie, o&rarr;ue, and e&rarr;i.</li>
+      <li><b>Spelling changes</b>: some letters change to keep the sound: <span class="es">apagar &rarr; apa<b>gu</b>e</span> (keeps the hard g), <span class="es">cruzar &rarr; cru<b>c</b>e</span>, <span class="es">brincar &rarr; brin<b>qu</b>e</span>. These show up in commands.</li>
+      <li><b>Truly irregular</b> <span class="pill irr">IRR</span>: the most common verbs (<span class="es">ser, estar, ir, dar, hacer, salir, venir, haber</span>) have to be memorized. They're also the ones you'll hear most.</li>
+    </ul>
+    <h3>Past forms that appear on the card</h3>
+    <p>The BPOC phrases only use a few past forms, but they're worth recognizing:</p>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Form</th><th>Name</th><th>Use</th><th>BPOC examples</th></tr></thead>
+      <tbody>
+        <tr><td><b>Preterite</b></td><td>simple past, a completed event</td><td>&ldquo;called,&rdquo; &ldquo;saw,&rdquo; &ldquo;happened&rdquo;</td><td><span class="es">llam&oacute;</span> (he/she/you called), <span class="es">llam&eacute;</span> (I called), <span class="es">vio</span> (saw), <span class="es">pas&oacute;</span> (happened)</td></tr>
+        <tr><td><b>Imperfect</b></td><td>ongoing past, &ldquo;was ___ing&rdquo;</td><td>what was going on at the time of the crash</td><td><span class="es">iba</span> (was going), <span class="es">ven&iacute;a</span> (was coming), <span class="es">llevaba</span> (was wearing)</td></tr>
+        <tr><td><b>Present perfect</b></td><td><span class="es">haber</span> + past participle = &ldquo;have ___ed&rdquo;</td><td>anything up to now</td><td><span class="es">ha bebido</span> (have you drunk), <span class="es">ha tomado</span> (have you taken)</td></tr>
+        <tr><td><b>Gerund</b> (-ando / -iendo)</td><td>the &ldquo;-ing&rdquo; form</td><td>after estar/venir/ir for an action in progress</td><td><span class="es">ven&iacute;a manejando</span> (was driving)</td></tr>
+        <tr><td><b>Past participle</b> (-ado / -ido)</td><td>the &ldquo;-ed&rdquo; form</td><td>after haber, or as an adjective</td><td><span class="es">arrestado</span> (arrested), <span class="es">herido</span> (injured), <span class="es">puesto</span> (put on)</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ============ 4 COMMANDS ============ -->
+<div class="sec-card" id="sec-commands">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">4</span><span class="sec-name">Commands &mdash; how &ldquo;sit down,&rdquo; &ldquo;get out,&rdquo; and &ldquo;don't move&rdquo; are built</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Most of 26.5&ndash;26.8 is commands. There are two sets, matching the two words for &ldquo;you.&rdquo;</p>
+    <h3>Usted commands (use these on duty)</h3>
+    <p>Start from the <b>yo</b> form, drop the -o, and add the <b>&ldquo;opposite&rdquo; vowel</b>: -ar verbs take <b>-e</b>, and -er/-ir verbs take <b>-a</b>. The same form works for positive and negative.</p>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Infinitive</th><th>yo form</th><th>Usted command</th><th>Negative</th></tr></thead>
+      <tbody>
+        <tr><td>firmar (sign)</td><td>firm<b>o</b></td><td><span class="es">firm<b>e</b> aqu&iacute;</span> &mdash; sign here</td><td>no firm<b>e</b></td></tr>
+        <tr><td>mover (move)</td><td>muev<b>o</b></td><td><span class="es">muev<b>a</b></span></td><td><span class="es">no muev<b>a</b> la cabeza</span> &mdash; don't move your head</td></tr>
+        <tr><td>salir (get out)</td><td>salg<b>o</b></td><td><span class="es">salg<b>a</b> del veh&iacute;culo</span> &mdash; get out of the vehicle</td><td>no salg<b>a</b></td></tr>
+        <tr><td>repetir (repeat)</td><td>repit<b>o</b></td><td><span class="es">repit<b>a</b>, por favor</span></td><td>no repit<b>a</b></td></tr>
+        <tr><td>apagar (turn off)</td><td>apag<b>o</b></td><td><span class="es">apag<b>ue</b> el motor</span> (gu keeps the hard g)</td><td>no apague</td></tr>
+      </tbody>
+    </table></div>
+    <p>Because they start from the yo form, irregular yo forms carry through: <span class="es">salgo &rarr; salga</span>, <span class="es">hago &rarr; haga</span>, <span class="es">vengo &rarr; venga</span>, <span class="es">pongo &rarr; ponga</span>. Only a few are fully irregular: <span class="es">ir &rarr; vaya</span>, <span class="es">ser &rarr; sea</span>, <span class="es">dar &rarr; d&eacute;</span>, <span class="es">estar &rarr; est&eacute;</span>.</p>
+    <h3>T&uacute; commands (what you'll hear between suspects)</h3>
+    <p>The positive t&uacute; command usually looks just like the he/she present form: <span class="es">suelta</span> (drop), <span class="es">cruza</span> (cross), <span class="es">corre</span> (run), <span class="es">dispara</span> (shoot). A few short irregulars: <span class="es">sal</span> (get out), <span class="es">ven</span> (come), <span class="es">pon</span> (put), <span class="es">haz</span> (do), <span class="es">ve</span> (go). The negative t&uacute; command is different &mdash; it uses the usted form plus -s: <span class="es">no corras</span>, <span class="es">no te muevas</span>.</p>
+    <h3>Where pronouns go in a command</h3>
+    <ul>
+      <li><b>Positive command: pronoun attaches to the end</b>, making one word: <span class="es">si&eacute;nte<b>se</b></span> (sit yourself), <span class="es">d&eacute;<b>me</b></span> (give me), <span class="es">golp&eacute;a<b>lo</b></span> (beat him).</li>
+      <li><b>Negative command: pronoun moves in front</b>, as a separate word: <span class="es">no <b>se</b> mueva</span> (don't move yourself), <span class="es">no <b>me</b> mire</span> (don't look at me).</li>
+      <li><b>The accent rule</b>: attaching a pronoun adds a syllable, so the stress would land in the wrong place. A written accent keeps it where it was: <span class="es">siente &rarr; si&eacute;ntese</span>, <span class="es">golpea &rarr; golp&eacute;alo</span>, <span class="es">quita &rarr; qu&iacute;tale</span>. One-syllable <span class="es">d&eacute;</span> + me is now usually written <span class="es">deme</span> <span class="bpoc">BPOC: d&eacute;me</span>.</li>
+    </ul>
+    <div class="ex"><b>Compare:</b> <span class="es">Mu&eacute;vase</span> (move!) <span class="arrow">&harr;</span> <span class="es">No se mueva</span> (don't move!) &nbsp;&middot;&nbsp; <span class="es">M&iacute;reme</span> (look at me) <span class="arrow">&harr;</span> <span class="es">No me mire</span> (don't look at me)</div>
+    <h3>&ldquo;Let's&rdquo; commands</h3>
+    <p>The nosotros command means &ldquo;let's ___&rdquo;: <span class="es">Hablemos en otro cuarto</span> = &ldquo;Let's talk in another room.&rdquo; It's formed like the usted command plus -mos (<span class="es">hable &rarr; hablemos</span>).</p>
+    <h3>Short commands with no verb</h3>
+    <p>Some commands drop the verb entirely, just like English &ldquo;Hands up!&rdquo;: <span class="es">&iexcl;Manos arriba!</span> (hands above), <span class="es">&iexcl;Alto!</span> (halt), <span class="es">&iexcl;Polic&iacute;a!</span>. The instructor alternatives on the card work the same way: <span class="es">&iexcl;Manos atr&aacute;s!</span> (hands behind), <span class="es">&iquest;Cintur&oacute;n, s&iacute; o no?</span></p>
+  </div>
+</div>
+
+<!-- ============ 5 PRONOUNS ============ -->
+<div class="sec-card" id="sec-pronouns">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">5</span><span class="sec-name">Him / Her / Me / Yourself &mdash; object and reflexive pronouns</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <h3>Object pronouns</h3>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Pronoun</th><th>Meaning</th><th>BPOC examples</th></tr></thead>
+      <tbody>
+        <tr><td class="es">me</td><td>me / to me</td><td><span class="es">d&eacute;me</span> (give me), <span class="es">no me mire</span> (don't look at me)</td></tr>
+        <tr><td class="es">lo / la</td><td><b>him / her</b> (or it), receiving the action directly</td><td><span class="es">desarma<b>lo</b></span> (disarm him), <span class="es">golp&eacute;a<b>lo</b> / golp&eacute;a<b>la</b></span> (beat him / her), <span class="es">p&iacute;ca<b>lo</b></span> (stab him)</td></tr>
+        <tr><td class="es">le</td><td>to him / to her / <b>to you (usted)</b> &mdash; the indirect object</td><td><span class="es">p&eacute;ga<b>le</b></span> (hit him), <span class="es">disp&aacute;ra<b>le</b></span> (shoot at him), <span class="es">qu&iacute;ta<b>le</b> la pistola</span> (take the gun <i>from him</i>), <span class="es">&iquest;D&oacute;nde <b>le</b> duele?</span> (where does it hurt <i>you</i>?), <span class="es">servir<b>le</b></span> (serve you)</td></tr>
+      </tbody>
+    </table></div>
+    <p>The danger words in 26.3 show why this matters: the ending on the word tells you <b>who the target is</b>. <span class="es">Golp&eacute;alo</span> is &ldquo;beat <i>him</i>&rdquo;; <span class="es">golp&eacute;ala</span> is &ldquo;beat <i>her</i>.&rdquo; If one suspect says it to another while looking at you, it's about you.</p>
+    <h3>Reflexive verbs: &ldquo;yourself&rdquo; built into the verb</h3>
+    <p>Many body-position commands are <b>reflexive</b>: the person does the action to themselves. English says &ldquo;sit down&rdquo;; Spanish says, in effect, &ldquo;seat yourself.&rdquo; The dictionary form ends in <b>-se</b> (<span class="es">sentarse</span>), and the pronoun changes with the person:</p>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Who</th><th>Pronoun</th><th><span class="es" style="color:#fff">sentarse</span> (to sit down)</th></tr></thead>
+      <tbody>
+        <tr><td>yo</td><td class="es">me</td><td>me siento (I sit down)</td></tr>
+        <tr><td>t&uacute;</td><td class="es">te</td><td>te sientas</td></tr>
+        <tr><td>&eacute;l / ella / usted</td><td class="es">se</td><td>se sienta</td></tr>
+        <tr><td>nosotros</td><td class="es">nos</td><td>nos sentamos</td></tr>
+        <tr><td>ellos / ustedes</td><td class="es">se</td><td>se sientan</td></tr>
+      </tbody>
+    </table></div>
+    <p>So the usted command ends in <b>-se</b>: <span class="es">si&eacute;nte<b>se</b></span> (sit down), <span class="es">lev&aacute;nte<b>se</b></span> (get up), <span class="es">ac&uacute;este<b>se</b></span> (lie down), <span class="es">c&aacute;lme<b>se</b></span> (calm down), <span class="es">qu&eacute;de<b>se</b></span> (stay), <span class="es">b&aacute;je<b>se</b></span> (get out/down), <span class="es">volt&eacute;e<b>se</b></span> (turn around). The t&uacute; version ends in <b>-te</b>: <span class="es">si&eacute;ntate</span>, <span class="es">arr&aacute;ncate</span> (take off!).</p>
+    <div class="ex"><span class="es">mover</span> = to move something &nbsp;&rarr;&nbsp; <span class="es">No mueva la cabeza</span> (don't move <i>your head</i>)<br><span class="es">moverse</span> = to move (yourself) &nbsp;&rarr;&nbsp; <span class="es">&iexcl;No se mueva!</span> (don't move!)</div>
+    <h3>Body parts take &ldquo;the,&rdquo; not &ldquo;your&rdquo;</h3>
+    <p>Spanish usually says &ldquo;the head,&rdquo; &ldquo;the hands,&rdquo; &ldquo;the feet&rdquo; where English says &ldquo;your&rdquo;: <span class="es">No mueva <b>la</b> cabeza</span>, <span class="es">Cruce <b>los</b> pies</span>, <span class="es">Deme <b>la</b> otra mano</span>. Who it belongs to is already clear from the verb.</p>
+  </div>
+</div>
+
+<!-- ============ 6 STRUCTURES ============ -->
+<div class="sec-card" id="sec-structures">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">6</span><span class="sec-name">Sentence Patterns English Doesn't Have</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <h3>&ldquo;Do you want me to call&hellip;?&rdquo; &mdash; querer que + subjunctive</h3>
+    <p>English can say &ldquo;want <b>me to</b> call.&rdquo; Spanish can't. It says &ldquo;want <b>that I call</b>,&rdquo; and the second verb goes into a special form called the <b>subjunctive</b>, used after wanting, asking, or needing someone else to do something. For most verbs it looks exactly like the usted command.</p>
+    <div class="ex"><span class="es">&iquest;Quiere que llame una gr&uacute;a?</span><br>
+      <span class="es">Quiere</span> (do you want) + <span class="es">que</span> (that) + <span class="es">llame</span> (I call &mdash; subjunctive of <span class="es">llamar</span>) + <span class="es">una gr&uacute;a</span> (a tow truck)<br>
+      <span class="lit">Literally: &ldquo;Do you want that I call a tow truck?&rdquo;</span><span class="arrow">&rarr;</span> &ldquo;Do you want me to call a tow truck?&rdquo; (BPOC 26.6)</div>
+    <p>Compare <span class="es">&iquest;Quiere <b>llamar</b> a alguien?</span> = &ldquo;Do <i>you</i> want to call someone?&rdquo; When the same person wants and does, Spanish uses the infinitive, just like English. <span class="es">Quiere que</span> + subjunctive is only for wanting <i>someone else</i> to act.</p>
+    <h3>&ldquo;I'm going to&hellip;&rdquo; &mdash; ir a + infinitive</h3>
+    <div class="ex"><span class="es">Voy a llamar una ambulancia</span><span class="arrow">&rarr;</span> &ldquo;I'm going to call an ambulance.&rdquo; Same structure as English: <span class="es">voy</span> (I go) + <span class="es">a</span> (to) + infinitive. <span class="bpoc">BPOC: Voy &aacute; llamar</span></div>
+    <h3>&ldquo;Where does it hurt?&rdquo; &mdash; doler works backwards</h3>
+    <p><span class="es">Doler</span> (to hurt) works like <span class="es">gustar</span> (to please): the thing that hurts is the subject, and the person is the indirect object.</p>
+    <div class="ex"><span class="es">&iquest;D&oacute;nde le duele?</span><span class="arrow">&rarr;</span> <span class="lit">&ldquo;Where does (it) hurt to you?&rdquo;</span> &rarr; &ldquo;Where does it hurt?&rdquo;<br><span class="es">Me duele la cabeza</span> = &ldquo;My head hurts&rdquo; (lit. &ldquo;the head hurts me&rdquo;). <span class="es">Me duelen las piernas</span> = &ldquo;My legs hurt&rdquo; (plural verb, because <i>legs</i> is the subject).</div>
+    <h3>&ldquo;There is / there are&rdquo; &mdash; hay</h3>
+    <div class="ex"><span class="es">&iquest;Hay alguien herido?</span><span class="arrow">&rarr;</span> <span class="lit">&ldquo;Is there someone injured?&rdquo;</span> &rarr; &ldquo;Is anyone injured?&rdquo; <span class="es">Hay</span> covers both &ldquo;there is&rdquo; and &ldquo;there are,&rdquo; and doesn't change for plural.</div>
+    <h3>Two verbs for &ldquo;to be&rdquo; &mdash; ser and estar</h3>
+    <ul>
+      <li><b>Ser</b> = what or who something <i>is</i> (identity, role): <span class="es">&iquest;Qui&eacute;n <b>es</b> la v&iacute;ctima?</span>, <span class="es">&iquest;<b>Es</b> usted el due&ntilde;o del veh&iacute;culo?</span></li>
+      <li><b>Estar</b> = how or where something is right now (condition, location, result): <span class="es">&iquest;<b>Est&aacute;</b> bien?</span> (are you OK?), <span class="es"><b>Est&aacute;</b> arrestado</span> (you are under arrest).</li>
+    </ul>
+    <p>&ldquo;You are under arrest&rdquo; uses <b>estar</b> because being arrested is a condition you're now in, not who you are.</p>
+    <h3>&ldquo;Was driving&rdquo; &mdash; venir + gerund</h3>
+    <div class="ex"><span class="es">&iquest;Qui&eacute;n ven&iacute;a manejando?</span><span class="arrow">&rarr;</span> <span class="lit">&ldquo;Who was coming driving?&rdquo;</span> &rarr; &ldquo;Who was driving?&rdquo; Using <span class="es">venir</span> (to come) instead of <span class="es">estar</span> adds the sense of &ldquo;on the way here,&rdquo; which fits a crash. <span class="es">&iquest;Qui&eacute;n estaba manejando?</span> also works.</div>
+    <h3>&ldquo;Were you wearing&hellip;?&rdquo; &mdash; llevar puesto</h3>
+    <div class="ex"><span class="es">&iquest;Llevaba puesto el cintur&oacute;n de seguridad?</span><span class="arrow">&rarr;</span> <span class="lit">&ldquo;Were you carrying put-on the belt of safety?&rdquo;</span> &rarr; &ldquo;Were you wearing your seat belt?&rdquo; <span class="es">Llevar</span> = carry/wear, <span class="es">puesto</span> = &ldquo;put on,&rdquo; and <span class="es">cintur&oacute;n de seguridad</span> = &ldquo;belt of safety.&rdquo;</div>
+    <h3>The &ldquo;personal a&rdquo;</h3>
+    <p>When the object of a verb is a <b>person</b>, Spanish puts <span class="es">a</span> in front of it. It has no English translation.</p>
+    <div class="ex"><span class="es">&iquest;Quiere que llame <b>a</b> alguien?</span> (call someone) vs. <span class="es">&iquest;Quiere que llame una gr&uacute;a?</span> (call a tow truck &mdash; a thing, no <span class="es">a</span>). <span class="es">&iquest;Qui&eacute;n llam&oacute; <b>a</b> la polic&iacute;a?</span> treats the police as people. <span class="bpoc">BPOC: &aacute; alquien</span></div>
+    <h3>Contractions: al and del</h3>
+    <p>Spanish has only two: <span class="es">a + el = al</span> and <span class="es">de + el = del</span>. <span class="es">Salga <b>del</b> veh&iacute;culo</span> (out of the vehicle); <span class="es">&iquest;Es usted el due&ntilde;o <b>del</b> carro?</span> (owner of the car).</p>
+    <h3>&ldquo;What happened&rdquo; &mdash; lo que</h3>
+    <div class="ex"><span class="es">&iquest;Qui&eacute;n vio lo que pas&oacute;?</span><span class="arrow">&rarr;</span> &ldquo;Who saw what happened?&rdquo; Inside a sentence, &ldquo;what&rdquo; meaning &ldquo;the thing that&rdquo; is <span class="es">lo que</span>, not <span class="es">qu&eacute;</span>.</div>
+  </div>
+</div>
+
+<!-- ============ 7 NOUNS ============ -->
+<div class="sec-card" id="sec-nouns">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">7</span><span class="sec-name">Nouns, Gender &amp; Adjectives</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <h3>Every noun is masculine or feminine</h3>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th></th><th>Masculine</th><th>Feminine</th></tr></thead>
+      <tbody>
+        <tr><td>&ldquo;the&rdquo; (one)</td><td class="es">el</td><td class="es">la</td></tr>
+        <tr><td>&ldquo;the&rdquo; (more than one)</td><td class="es">los</td><td class="es">las</td></tr>
+        <tr><td>&ldquo;a / an&rdquo;</td><td class="es">un</td><td class="es">una</td></tr>
+        <tr><td>Usual ending</td><td>-o: <span class="es">el cuchillo, el carro</span></td><td>-a: <span class="es">la pistola, la botella</span></td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Many nouns don't follow the -o/-a pattern and have to be learned with their article: <span class="es">el motor</span>, <span class="es">la mano</span> (hand, feminine despite -o), <span class="es">el pie / los pies</span> (foot, masculine), <span class="es">la direcci&oacute;n</span>, <span class="es">la licencia</span>.</li>
+      <li><b>El arma</b>: <span class="es">arma</span> (weapon) is feminine, but because it starts with a stressed &ldquo;a&rdquo; sound it takes <span class="es">el</span> in the singular to avoid &ldquo;la arma.&rdquo; The plural goes back to <span class="es">las armas</span>. <span class="es">Suelte el arma</span> is correct.</li>
+      <li><span class="es">La polic&iacute;a</span> = the police (the force); <span class="es">el polic&iacute;a / la polic&iacute;a</span> = a police officer.</li>
+      <li>For people and many animals, the ending changes with the person: <span class="es">hijo / hija</span>, <span class="es">novio / novia</span>, <span class="es">due&ntilde;o / due&ntilde;a</span>. The BPOC lists show the feminine in parentheses: <span class="es">golp&eacute;alo (golp&eacute;ala)</span>, <span class="es">prometido (prometida)</span>.</li>
+      <li><b>A mixed group uses the masculine plural.</b> <span class="es">Hijos</span> = sons <i>or</i> children; <span class="es">padres</span> = fathers <i>or</i> parents; <span class="es">hermanos</span> = brothers <i>or</i> siblings.</li>
+    </ul>
+    <h3>Adjectives go after the noun and match it</h3>
+    <div class="ex"><span class="es">el carro rojo</span> (the red car) &middot; <span class="es">la camisa roja</span> (the red shirt) &middot; <span class="es">los zapatos negros</span> (the black shoes)</div>
+    <ul>
+      <li>Adjectives ending in -o change to -a / -os / -as to match. Adjectives ending in -e or a consonant change only for plural: <span class="es">verde / verdes</span>, <span class="es">azul / azules</span>, <span class="es">gris / grises</span>.</li>
+      <li>Some colors named after things don't change at all: <span class="es">caf&eacute;</span>, <span class="es">naranja</span>, <span class="es">beige</span> (<span class="es">la camisa naranja, los pantalones caf&eacute;</span>).</li>
+      <li>Matching applies to the person you're talking to, too: <span class="es">Qu&eacute;dese tranquil<b>o</b></span> to a man, <span class="es">tranquil<b>a</b></span> to a woman; <span class="es">Est&aacute; arrestad<b>o</b> / arrestad<b>a</b></span>.</li>
+      <li>&ldquo;Of&rdquo; phrases do the work of English compound nouns: <span class="es">cintur&oacute;n <b>de</b> seguridad</span> (seat belt), <span class="es">licencia <b>de</b> manejar</span> (driver's license), <span class="es">lugar <b>de</b> nacimiento</span> (place of birth), <span class="es">n&uacute;mero <b>de</b> tel&eacute;fono</span>.</li>
+    </ul>
+    <h3>&ldquo;Another&rdquo; doesn't take &ldquo;a&rdquo;</h3>
+    <p><span class="es">Hablemos en otro cuarto</span> = &ldquo;Let's talk in another room&rdquo; &mdash; never <i>un otro</i>. Likewise <span class="es">el otro veh&iacute;culo</span> = the other vehicle, <span class="es">la otra mano</span> = the other hand.</p>
+  </div>
+</div>
+
+<!-- ============ 8 QUESTIONS ============ -->
+<div class="sec-card" id="sec-questions">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">8</span><span class="sec-name">Questions &mdash; the 26.4 question words and how questions are built</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <ul>
+      <li>Written questions open with <b>&iquest;</b> and close with <b>?</b>; exclamations use <b>&iexcl; &hellip; !</b>. They mark where the question starts, since the words alone often don't.</li>
+      <li>There's no &ldquo;do / does / did&rdquo; helper. A yes/no question is the statement with a rising voice, optionally with the subject moved after the verb: <span class="es">Usted habla ingl&eacute;s</span> (you speak English) &rarr; <span class="es">&iquest;Habla usted ingl&eacute;s?</span></li>
+      <li>Question words always carry an accent mark, and the verb usually comes right after them.</li>
+    </ul>
+    <div class="scroll-x"><table class="gt">
+      <thead><tr><th>Spanish</th><th>English</th><th>Notes / BPOC use</th></tr></thead>
+      <tbody>
+        <tr><td class="es">&iquest;Qu&eacute;?</td><td>What?</td><td><span class="es">&iquest;En qu&eacute; direcci&oacute;n iba?</span> &mdash; &ldquo;In what direction were you going?&rdquo; Also &ldquo;which&rdquo; before a noun.</td></tr>
+        <tr><td class="es">&iquest;C&oacute;mo?</td><td>How?</td><td>Also what you say for &ldquo;Pardon? What did you say?&rdquo;</td></tr>
+        <tr><td class="es">&iquest;Por qu&eacute;?</td><td>Why?</td><td>Lit. &ldquo;for what?&rdquo; The answer &ldquo;because&rdquo; is one word, <span class="es">porque</span>.</td></tr>
+        <tr><td class="es">&iquest;Cu&aacute;ndo?</td><td>When?</td><td></td></tr>
+        <tr><td class="es">&iquest;D&oacute;nde?</td><td>Where?</td><td><span class="es">&iquest;D&oacute;nde le duele?</span></td></tr>
+        <tr><td class="es">&iquest;Cu&aacute;ntos? / &iquest;Cu&aacute;ntas?</td><td>How many?</td><td>Matches the gender of what's counted: <span class="es">&iquest;Cu&aacute;ntos hombres?</span> / <span class="es">&iquest;Cu&aacute;ntas personas?</span></td></tr>
+        <tr><td class="es">&iquest;Cu&aacute;l? / &iquest;Cu&aacute;les?</td><td>Which (one/ones)?</td><td>Used for choosing from options; plural <span class="es">cu&aacute;les</span>.</td></tr>
+        <tr><td class="es">&iquest;Qui&eacute;n? / &iquest;Qui&eacute;nes?</td><td>Who?</td><td><span class="es">&iquest;Qui&eacute;n llam&oacute; a la polic&iacute;a?</span>; plural <span class="es">qui&eacute;nes</span> for more than one person.</td></tr>
+        <tr><td class="es">&iquest;De qui&eacute;n? / &iquest;De qui&eacute;nes?</td><td>Whose?</td><td>Lit. &ldquo;of whom?&rdquo; &mdash; Spanish has no &rsquo;s possessive: <span class="es">&iquest;De qui&eacute;n es el carro?</span> = &ldquo;Whose car is it?&rdquo; (lit. &ldquo;Of whom is the car?&rdquo;)</td></tr>
+        <tr><td class="es">&iquest;A qu&eacute; velocidad?</td><td>How fast?</td><td>Lit. &ldquo;At what speed?&rdquo; (BPOC 26.6)</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ============ 9 VERB REFERENCE ============ -->
+<div class="sec-card" id="sec-verbref">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">9</span><span class="sec-name">Verb Reference &mdash; every verb in the BPOC Ch. 26 phrases</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Each card shows the present tense, the usted and t&uacute; commands (positive and negative), the BPOC forms built from that verb, and what's unusual about it. Tags: <span class="pill reg">REG</span> regular, <span class="pill stem">STEM</span> stem-changing, <span class="pill irr">IRR</span> irregular, <span class="pill refl">-SE</span> reflexive.</p>
+    <div class="filter-row" id="verbFilter">
+      <button type="button" class="on" data-f="all">All</button>
+      <button type="button" data-f="danger">26.3 Danger words</button>
+      <button type="button" data-f="interview">26.4&ndash;26.5 Interviews &amp; stops</button>
+      <button type="button" data-f="crash">26.6 Crashes</button>
+      <button type="button" data-f="control">26.7&ndash;26.8 Control &amp; arrest</button>
+      <button type="button" data-f="refl">Reflexive (-se)</button>
+      <button type="button" data-f="irr">Irregular / stem-changing</button>
+    </div>
+    <div class="verb-grid" id="verbGrid"></div>
+  </div>
+</div>
+
+<!-- ============ 10 PHRASES ============ -->
+<div class="sec-card" id="sec-phrases">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">10</span><span class="sec-name">Every BPOC Phrase, Broken Down</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Each phrase shows the word-by-word meaning, a literal translation, and the pattern that explains it. The links go to the lesson above.</p>
+    <div id="phraseList"></div>
+  </div>
+</div>
+
+<!-- ============ 11 GLOSSARY ============ -->
+<div class="sec-card" id="sec-glossary">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">11</span><span class="sec-name">Word Lists &mdash; the BPOC vocabulary with gender and notes</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <p>Nouns are shown with <span class="es">el</span> / <span class="es">la</span> so you learn the gender along with the word (<a href="#sec-nouns">section 7</a>).</p>
+    <div class="gloss-grid" id="glossGrid"></div>
+  </div>
+</div>
+
+<!-- ============ 12 CHECKS ============ -->
+<div class="sec-card" id="sec-checks">
+  <div class="sec-header" onclick="toggleSec(this)"><span class="sec-num">12</span><span class="sec-name">Self-Check &mdash; tap to reveal</span><span class="toggle">&#9662;</span></div>
+  <div class="sec-body">
+    <div class="checks">
+      <details><summary>Why is &ldquo;Do you speak English?&rdquo; <span class="es">&iquest;Habla usted ingl&eacute;s?</span> and not <span class="es">&iquest;Hablas ingl&eacute;s?</span> <span class="show">Answer</span></summary><div class="ans">Both are correct Spanish. <span class="es">Hablas</span> is the t&uacute; (informal) form; <span class="es">habla</span> + <span class="es">usted</span> is the formal form, which is what you use with the public. Usted takes the he/she verb form (<a href="#sec-you">section 2</a>).</div></details>
+      <details><summary>Turn <span class="es">Si&eacute;ntese</span> (sit down) into &ldquo;Don't sit down.&rdquo; <span class="show">Answer</span></summary><div class="ans"><span class="es">No se siente.</span> In a negative command the pronoun moves in front of the verb, and the accent goes away because the stress is back in its normal place (<a href="#sec-commands">section 4</a>).</div></details>
+      <details><summary>A suspect yells <span class="es">&iexcl;Qu&iacute;tale la pistola!</span> to a friend. What's being said, and about whom? <span class="show">Answer</span></summary><div class="ans">&ldquo;Take the gun <i>from him/her</i>!&rdquo; <span class="es">Quita</span> = take away (t&uacute; command), <span class="es">le</span> = from him/her &mdash; you, the officer. <span class="es">La pistola</span> = the pistol.</div></details>
+      <details><summary>How would you say &ldquo;Do you want me to call your mother?&rdquo; using the BPOC pattern? <span class="show">Answer</span></summary><div class="ans"><span class="es">&iquest;Quiere que llame a su madre?</span> &mdash; <span class="es">quiere que</span> + <span class="es">llame</span> (subjunctive), the personal <span class="es">a</span> because the mother is a person, and <span class="es">su</span> = your (formal) (<a href="#sec-structures">section 6</a>).</div></details>
+      <details><summary>Why is it <span class="es">el arma</span> but <span class="es">la pistola</span>, when both are feminine? <span class="show">Answer</span></summary><div class="ans"><span class="es">Arma</span> starts with a stressed &ldquo;a,&rdquo; so singular <span class="es">la</span> changes to <span class="es">el</span> to avoid &ldquo;la arma.&rdquo; It's still feminine: <span class="es">las armas</span>, <span class="es">el arma blanca</span> (<a href="#sec-nouns">section 7</a>).</div></details>
+      <details><summary>Fix the BPOC spelling: <span class="es">sep&aacute;re las pies</span>. <span class="show">Answer</span></summary><div class="ans"><span class="es">Separe los pies.</span> <span class="es">Pie</span> is masculine (<span class="es">el pie / los pies</span>), and <span class="es">separe</span> is already stressed on the right syllable (se-PA-re), so it takes no accent.</div></details>
+      <details><summary>What tense is <span class="es">&iquest;En qu&eacute; direcci&oacute;n iba usted?</span> and why? <span class="show">Answer</span></summary><div class="ans">The <b>imperfect</b> of <span class="es">ir</span>: &ldquo;Which way <i>were you going</i>?&rdquo; It describes an action in progress at the moment of the crash (<a href="#sec-verbs">section 3</a>).</div></details>
+      <details><summary>How does <span class="es">&iquest;D&oacute;nde le duele?</span> mean &ldquo;Where does it hurt?&rdquo; when <span class="es">le</span> means &ldquo;to you&rdquo;? <span class="show">Answer</span></summary><div class="ans"><span class="es">Doler</span> works backwards from English: the body part is the subject and the person is the indirect object. Literally, &ldquo;Where does (it) hurt to you?&rdquo; (<a href="#sec-structures">section 6</a>).</div></details>
+      <details><summary>Which of these is a t&uacute; command: <span class="es">suelte el arma</span> or <span class="es">suelta el arma</span>? <span class="show">Answer</span></summary><div class="ans"><span class="es">Suelta</span> is t&uacute;; <span class="es">suelte</span> is usted. The BPOC card uses the t&uacute; form. Both mean &ldquo;drop the weapon.&rdquo;</div></details>
+      <details><summary>Say &ldquo;Look at me&rdquo; (usted). <span class="show">Answer</span></summary><div class="ans"><span class="es">M&iacute;reme.</span> The positive command attaches <span class="es">me</span> to the end and adds an accent to keep the stress on MI. The BPOC negative is <span class="es">No me mire</span>.</div></details>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>Ch. 26 Spanish 101 &middot; Built from the BPOC Ch. 26 phrase lists &middot; Study aid only, not an official academy publication &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="spanish-101-data.js"></script>
+<script>
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function toggleSec(el){ var h = el.closest('.sec-header'); h.classList.toggle('open'); h.nextElementSibling.classList.toggle('open'); }
+function openSec(id){ var c = document.getElementById(id); if(!c) return; c.querySelector('.sec-header').classList.add('open'); c.querySelector('.sec-body').classList.add('open'); }
+function expandAll(){ document.querySelectorAll('.sec-header').forEach(function(h){ h.classList.add('open'); }); document.querySelectorAll('.sec-body').forEach(function(b){ b.classList.add('open'); }); }
+function collapseAll(){ document.querySelectorAll('.sec-header').forEach(function(h){ h.classList.remove('open'); }); document.querySelectorAll('.sec-body').forEach(function(b){ b.classList.remove('open'); }); }
+var PERSONS = ['yo', 'tú', 'él / ella / usted', 'nosotros', 'ellos / ustedes'];
+var TAGS = {reg:'REG', stem:'STEM', irr:'IRR', refl:'-SE'};
+
+function renderVerbs(){
+  document.getElementById('verbGrid').innerHTML = VERBS.map(function(v){
+    var pills = v.type.map(function(t){ return '<span class="pill '+t+'">'+TAGS[t]+'</span>'; }).join('');
+    var pres = v.pres ? v.pres.map(function(f,i){ return '<tr><td>'+PERSONS[i]+'</td><td>'+esc(f)+'</td></tr>'; }).join('') : '';
+    var cmd = '';
+    if(v.ud) cmd += '<tr><td>usted command</td><td>'+esc(v.ud[0])+' &nbsp;/&nbsp; '+esc(v.ud[1])+'</td></tr>';
+    if(v.tu) cmd += '<tr><td>tú command</td><td>'+esc(v.tu[0])+' &nbsp;/&nbsp; '+esc(v.tu[1])+'</td></tr>';
+    var bp = v.bpoc.map(function(b){ return '<b>'+esc(b[0])+'</b> = '+esc(b[1])+(b[2] ? ' <span class="bpoc">BPOC: '+esc(b[2])+'</span>' : ''); }).join('<br>');
+    var hay = (v.inf+' '+v.en+' '+(v.pres||[]).join(' ')+' '+(v.ud||[]).join(' ')+' '+(v.tu||[]).join(' ')+' '+v.bpoc.map(function(b){return b.join(' ');}).join(' ')+' '+(v.note||'')).toLowerCase();
+    return '<div class="verb" data-groups="'+v.groups.join(' ')+' '+v.type.join(' ')+'" data-search="'+esc(hay)+'">' +
+      '<div class="vh"><span class="inf">'+esc(v.inf)+pills+'</span><span class="en">'+esc(v.en)+'</span></div>' +
+      '<table>' + (pres ? '<tr class="sub"><td colspan="2">Present tense</td></tr>'+pres : '') +
+      (cmd ? '<tr class="sub"><td colspan="2">Commands (positive / negative)</td></tr>'+cmd : '') + '</table>' +
+      '<div class="vb">'+bp+(v.note ? '<br>'+v.note : '')+'</div></div>';
+  }).join('');
+}
+function renderPhrases(){
+  var cur = '';
+  document.getElementById('phraseList').innerHTML = PHRASES.map(function(p){
+    var head = '';
+    if(p.lo !== cur){ cur = p.lo; head = '<h3>'+esc(LO_TITLES[p.lo])+'</h3>'; }
+    var words = p.w.map(function(w){ return '<span class="w"><span class="s">'+esc(w[0])+'</span><span class="g">'+esc(w[1])+'</span></span>'; }).join('');
+    var see = p.see ? ' <a href="#'+p.see+'" onclick="openSec(\''+p.see+'\')">See section '+SEC_NUM[p.see]+' &rarr;</a>' : '';
+    var hay = (p.es+' '+p.en+' '+p.w.map(function(w){return w.join(' ');}).join(' ')+' '+(p.bpoc||'')+' '+p.note).toLowerCase();
+    return head + '<div class="phr" data-search="'+esc(hay)+'"><div class="ph"><span class="es">'+esc(p.es)+(p.bpoc ? ' <span class="bpoc">BPOC: '+esc(p.bpoc)+'</span>' : '')+'</span><span class="en">'+esc(p.en)+' &nbsp;<span class="lo">'+esc(p.lo)+'</span></span></div>' +
+      '<div class="words">'+words+'</div><div class="pb"><span class="litline">Literally: &ldquo;'+esc(p.lit)+'&rdquo;</span><br>'+p.note+see+'</div></div>';
+  }).join('');
+}
+function renderGloss(){
+  document.getElementById('glossGrid').innerHTML = GLOSS.map(function(g){
+    var rows = g.rows.map(function(r){ var hay=(r.join(' ')+' '+g.title).toLowerCase(); return '<tr data-search="'+esc(hay)+'"><td>'+esc(r[0])+'</td><td class="es">'+esc(r[1])+'</td>'+(r[2]?'<td>'+r[2]+'</td>':'<td></td>')+'</tr>'; }).join('');
+    return '<div class="gl"><h4>'+esc(g.title)+'</h4><table class="gt"><thead><tr><th>English</th><th>Spanish</th><th>Note</th></tr></thead><tbody>'+rows+'</tbody></table>'+(g.note?'<p style="font-size:12px;color:var(--ink-soft);margin-top:6px;">'+g.note+'</p>':'')+'</div>';
+  }).join('');
+}
+var activeFilter = 'all';
+function applyVerbFilter(){
+  document.querySelectorAll('#verbGrid .verb').forEach(function(c){
+    var g = c.getAttribute('data-groups').split(' ');
+    var ok = activeFilter === 'all' || g.indexOf(activeFilter) !== -1 || (activeFilter === 'irr' && (g.indexOf('irr') !== -1 || g.indexOf('stem') !== -1));
+    c.classList.toggle('filtered', !ok); c.style.display = ok ? '' : 'none';
+  });
+}
+document.getElementById('verbFilter').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  activeFilter = b.getAttribute('data-f');
+  this.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x === b); });
+  applyVerbFilter(); runSearch();
+});
+function runSearch(){
+  var q = document.getElementById('searchBox').value.trim().toLowerCase();
+  var norm = function(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g,''); };
+  var qn = norm(q), total = 0;
+  document.querySelectorAll('[data-search]').forEach(function(el){
+    var hit = q === '' || norm(el.getAttribute('data-search')).indexOf(qn) !== -1;
+    if(el.classList.contains('filtered')) hit = false;
+    el.classList.toggle('no-match', !hit);
+    if(hit && q !== '') total++;
+  });
+  ['sec-verbref','sec-phrases','sec-glossary'].forEach(function(id){ if(q !== '') openSec(id); });
+  document.getElementById('searchCount').textContent = q === '' ? '' : (total + ' match' + (total === 1 ? '' : 'es'));
+}
+document.getElementById('searchBox').addEventListener('input', runSearch);
+renderVerbs(); renderPhrases(); renderGloss();
+openSec('sec-sounds');
+if(location.hash){ var id = location.hash.slice(1); openSec(id); }
+</script>
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>
