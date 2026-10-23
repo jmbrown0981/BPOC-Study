@@ -59,6 +59,30 @@ A good trauma-informed approach should:
 - get answers from the victim, regardless of their state of mind
 - rely solely on written statements in chronological order provided by the victim
 
+### LO 17.5
+According to BPOC LO 17.5, which of the below is a part of "Be Patient" while using a trauma-informed attitude to build rapport with victims?
+  - Source: BPOC 17.5 Explanation: Do not interrupt the victim. At least two full sleep cycles should elapse between the initial statement and the investigative interview to allow the victim to mentally process, and to allow time for forensic medical exams, report reviews, and witness and suspect interviews. The officer should also speak clearly and use a calm tone; the victim should not be pressed for time nor should they be subjected to loud speaking/yelling as it can re-traumatize.
+- Interrupt and ask questions as soon as you hear something that you don't understand
+- **Do not interrupt**
+- Ensure the investigative interview is conducted as soon as possible after the initial statement
+- Speak loudly and be sure the victim understands that things must happen as fast as possible
+
+As a part of "Meet victim's basic needs and concerns" under LO 17.5, __________ __________ should be offered to the victim when possible.
+  - Source: BPOC 17.5
+- free food
+- **language services**
+- additional interviews
+- report readings
+
+A trauma-informed attitude for building rapport with victims includes which of the following principles?
+  - Source: BPOC 17.5 Explanation: Victims should be made to feel at ease when providing information. They should not be engaged in a fashion in which they would think they deserved what happened to them, nor that they will be prosecuted for not being able to provide every single detail of the event.
+- Threaten victims with prosecution for false reporting
+- Infer that they are being untruthful if details are missing
+- **Explain why you are asking questions, emphasizing that is not to question credibility, but to establish elements of the crime**
+- Determine what behaviors the victim engaged in proving them deserving of the trauma
+
+
+
 ### LO 17.11
 Under the Texas Family Code, the existence of a dating relationship is based on three factors. Which of the below is one of them?
   - Source: Family Code Sec. 71.0021
@@ -163,6 +187,9 @@ True or False: Sex workers are considered a high-risk population for sexual assa
 
 ### LO 17.4
 True or False: A trauma-informed approach reminds us that not anyone can be a trauma survivor.  Answer: False Explanation: Traumatic experiences can happen to anyone, making it possible for anyone to be a trauma survivor.
+
+### LO 17.5
+True or False: Meeting a victim's basic needs and concerns includes allowing family members, friends, or suspects to act as interpreters. Answer: False Explanation: While victims may need interpreters, family members, friends, and suspects should not be allowed to act in this capacity.
 
 ### LO 17.12
 True or False: Family violence calls are one of the least dangerous for responding officers.    Answer: False   Explanation: The opposite is true. They are one of the most dangerous types of calls for responding officers.
