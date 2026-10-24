@@ -418,8 +418,11 @@ function answerHtml(card){
   if(card.fillBlank){
     return `<div class="face-answer"><span class="ans-label">Term</span>${escapeHtml(card.answerDisplay.join(' or '))}</div>`;
   }
-  const correct = card.options.find(o => o.correct);
-  return `<div class="face-answer"><span class="ans-label">Answer</span>${inlineMd(correct ? correct.text : '—')}</div>`;
+  const correct = card.options.filter(o => o.correct);
+  if(correct.length > 1){   // select-all question: show every correct option
+    return `<div class="face-answer"><span class="ans-label">All correct answers</span><ul style="margin:6px 0 0; padding-left:1.2em; text-align:left;">${correct.map(o => `<li>${inlineMd(o.text)}</li>`).join('')}</ul></div>`;
+  }
+  return `<div class="face-answer"><span class="ans-label">Answer</span>${inlineMd(correct.length ? correct[0].text : '—')}</div>`;
 }
 
 function backContentHtml(card){

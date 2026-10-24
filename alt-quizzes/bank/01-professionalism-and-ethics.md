@@ -1355,3 +1355,21 @@ You're aware a fellow officer has developed a serious drinking problem, and at r
 - [ ] Deferring entirely to the officer's supervisor with no personal obligation to act
 
 **Explanation:** Like Q95, this is presented in the source as an open-ended discussion scenario rather than one resolved by a specific statute. It's best answered through the duty-to-intervene and moral-courage material from LO 1.5, which the chapter explicitly frames as applicable to situations involving a fellow officer's misconduct, not just excessive force.
+
+---
+
+### Q97 — Select All
+**LO:** 1.4 · **Source:** BPOC 1.4
+
+Which of the following are Pillars of Character?
+
+- [x] Respect
+- [x] Fairness
+- [x] Caring
+- [x] Citizenship
+- [ ] Honor
+- [ ] Empathy
+- [ ] Professionalism
+- [ ] Humility
+
+**Explanation:** The six Pillars of Character in BPOC 1.4 are Trustworthiness, Respect, Responsibility, Fairness, Caring, and Citizenship.

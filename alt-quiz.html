@@ -101,6 +101,9 @@
   .option.correct{border-color:var(--green); background:rgba(75,106,80,0.12); color:var(--green); font-weight:600;}
   .option.incorrect{border-color:var(--rust); background:rgba(166,71,46,0.1); color:var(--rust); font-weight:600;}
   .option.locked{cursor:default;}
+  /* select-all questions: a correct option the user didn't pick, and the instruction line */
+  .option.missed{border-color:var(--green); border-style:dashed; color:var(--green); font-weight:600;}
+  .multi-hint{font-size:12.5px; color:var(--ink-soft); margin:0 0 8px; font-family:'IBM Plex Mono',monospace;}
 
   .options.tf{flex-direction:row;}
   .options.tf .option{flex:1; text-align:center; font-weight:600;}
@@ -352,7 +355,9 @@ function parseBank(text){
       out.push({id, tag, lo, source, prompt, fillBlank:true, multiBlank, acceptable, answerDisplay: acceptable, blanks: multiBlank ? acceptable : null, explanation: explanation.trim()});
     } else {
       if(optLines.length < 2) continue;
-      out.push({id, tag, lo, source, prompt, options: optLines, explanation: explanation.trim()});
+      // Select-all-that-apply: more than one [x] option, or a "Select All" tag. See MULTI_MAX_SHOWN.
+      const multi = optLines.filter(o => o.correct).length > 1 || /select all/i.test(tag);
+      out.push({id, tag, lo, source, prompt, options: optLines, multi, explanation: explanation.trim()});
     }
   }
   return out;
@@ -849,6 +854,11 @@ function shuffle(arr){
   return a;
 }
 
+// Select-all questions show at most this many options per attempt, drawn at random from all of
+// the question's options (correct and distractor alike). A deal can include any number of correct
+// options, including none -- submitting with nothing selected is then the right answer.
+const MULTI_MAX_SHOWN = 8;
+
 function startQuiz(mode){
   quizMode = mode;
   const source = examMode ? examPool : bankQuestions;
@@ -857,7 +867,7 @@ function startQuiz(mode){
     ? {...q, offenseOptions: shuffle(q.offenseOptions), classificationOptions: shuffle(q.classificationOptions)}
     : q.fillBlank
       ? {...q}
-      : {...q, options: shuffle(q.options)});
+      : {...q, options: q.multi ? shuffle(q.options).slice(0, MULTI_MAX_SHOWN) : shuffle(q.options)});
   qIndex = 0;
   score = 0;
   missedList = [];
@@ -1013,6 +1023,37 @@ function renderQuestion(){
     return;
   }
 
+  if(q.multi){
+    main.innerHTML = `
+      <div class="quiz-status">
+        <span>Question ${qIndex + 1} of ${questions.length}</span>
+        ${quizMode === 'timed' ? `<span class="timer" id="timerDisplay">${Math.floor(secondsLeft/60)}:${String(secondsLeft%60).padStart(2,'0')}</span>` : `<span>${score} correct so far</span>`}
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="q-card">
+        <div class="q-eyebrow"><span>${escapeHtml(questionHeaderLabel(q))}</span><span class="q-tag">${escapeHtml(q.tag)}</span></div>
+        <div class="q-prompt">${renderPrompt(q.prompt)}</div>
+      </div>
+      <p class="multi-hint">Select all that apply, then submit. Any number may be correct &mdash; including none.</p>
+      <div class="options" id="optionsWrap">
+        ${q.options.map((opt, i) => `<button class="option" data-opt="${i}" aria-pressed="false">${inlineMd(opt.text)}</button>`).join('')}
+      </div>
+      <div id="feedbackArea"></div>
+      <button class="btn" id="submitBtn">Submit Answer</button>
+      <button class="btn" id="nextBtn" style="display:none;">${qIndex + 1 >= questions.length ? 'See Results' : 'Next Question'}</button>
+    `;
+    document.querySelectorAll('#optionsWrap .option').forEach(btn => {
+      btn.onclick = () => {
+        if(locked) return;
+        const on = btn.classList.toggle('selected');
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      };
+    });
+    document.getElementById('submitBtn').onclick = () => submitMulti(q);
+    document.getElementById('nextBtn').onclick = advanceQuestion;
+    return;
+  }
+
   const tf = isTrueFalse(q);
   main.innerHTML = `
     <div class="quiz-status">
@@ -1141,6 +1182,41 @@ function submitFillBlank(q){
     document.getElementById('feedbackArea').innerHTML =
       `<div class="feedback-note">${correct ? 'Correct.' : `Not quite — correct answer: <span class="fill-blank-correct-answer">${escapeHtml(correctAnswerText)}</span>.`} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
   }
+  document.getElementById('nextBtn').style.display = 'block';
+}
+
+// All-or-nothing: correct only if the picked set exactly matches the correct options shown.
+function submitMulti(q){
+  if(locked) return;
+  locked = true;
+  const btns = [...document.querySelectorAll('#optionsWrap .option')];
+  const picked = btns.filter(b => b.classList.contains('selected')).map(b => q.options[Number(b.dataset.opt)]);
+  const shownCorrect = q.options.filter(o => o.correct);
+  const correct = picked.length === shownCorrect.length && picked.every(o => o.correct);
+
+  if(correct){ score++; } else {
+    missedList.push({prompt: q.prompt,
+      you: picked.length ? picked.map(o => o.text).join('; ') : '(nothing selected)',
+      correct: shownCorrect.length ? shownCorrect.map(o => o.text).join('; ') : 'None of the options shown',
+      explanation: q.explanation, source: q.source, bankKey: q.bankKey || (activeChapter && activeChapter.key)});
+  }
+
+  btns.forEach(b => b.classList.add('locked'));
+  if(quizMode === 'practice'){
+    btns.forEach(b => {
+      const opt = q.options[Number(b.dataset.opt)];
+      const wasPicked = b.classList.contains('selected');
+      b.classList.remove('selected');
+      if(opt.correct) b.classList.add(wasPicked ? 'correct' : 'missed');
+      else if(wasPicked) b.classList.add('incorrect');
+    });
+    const verdict = correct ? 'Correct.'
+      : shownCorrect.length ? 'Not quite &mdash; solid green were correct picks, dashed green were correct but missed, red were wrong picks.'
+      : 'Not quite &mdash; none of the options shown were correct.';
+    document.getElementById('feedbackArea').innerHTML =
+      `<div class="feedback-note">${verdict} ${explHtml(q)}${q.source ? `<span class="fn-source">${srcHtml(q)}</span>` : ''}</div>`;
+  }
+  document.getElementById('submitBtn').style.display = 'none';
   document.getElementById('nextBtn').style.display = 'block';
 }
 

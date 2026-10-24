@@ -244,6 +244,46 @@ Rules for this shape:
   the term itself swapped for the blank — this question type exists specifically so the reader is
   studying the real defining language, not a paraphrase.
 
+## Select-all-that-apply questions (rotating options)
+
+For drilling a list ("Which of the following are Pillars of Character?"), mark **every** correct
+option with `- [x]` and every distractor with `- [ ]`. Any question with more than one `[x]` is
+treated as select-all automatically; tag it `Select All` so it can be filtered.
+
+```markdown
+### Q97 — Select All
+**LO:** 1.4 · **Source:** BPOC 1.4
+
+Which of the following are Pillars of Character?
+
+- [x] Respect
+- [x] Fairness
+- [x] Caring
+- [x] Citizenship
+- [ ] Honor
+- [ ] Empathy
+- [ ] Professionalism
+- [ ] Humility
+
+**Explanation:** The six Pillars of Character are Trustworthiness, Respect, Responsibility,
+Fairness, Caring, and Citizenship.
+```
+
+How it works:
+- The quiz shows **at most 8 options per attempt**, picked at random from all the options you list
+  (`MULTI_MAX_SHOWN` in `alt-quiz.html`). List as many correct answers and distractors as you like,
+  e.g. 10 of each; each attempt deals a different mix, so the whole list gets drilled over time.
+  With 8 or fewer options, all of them are shown every time.
+- Because the deal is random, an attempt can show any number of correct options, **including
+  none**. The question tells the student this, and Submit works with nothing selected.
+- Grading is all-or-nothing: the student must pick exactly the correct options that were shown,
+  with no misses and no extra picks.
+- In practice mode, correct picks turn solid green, correct options that were missed show a
+  dashed green border, and wrong picks turn red. Flashcards show every correct option.
+- A select-all question with only one correct answer can still be forced with a `Select All` tag.
+- Distractors must not be on the real list (e.g. "Responsibility" can't be a distractor for the
+  Pillars of Character) or on a similar list from the same chapter.
+
 ## What the engine does with this
 
 - Loads every `.md` file in `alt-quizzes/bank/`, one per chapter.
