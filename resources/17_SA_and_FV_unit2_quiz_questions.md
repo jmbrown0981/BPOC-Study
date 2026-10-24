@@ -25,6 +25,105 @@ A female finds a male passed out drunk at a party. While he is unconscious, she 
 - Consent
 - **Not Consent**
 
+## Select All
+### LO 17.5
+Select all of the terms and phrases listed by BPOC that officers should avoid using to remain non-judgmental.
+  - Source: BPOC 17.5
+- **allegedly or alleged**
+- Tell me about the conditions that prevented you from leaving/escaping
+- **Their story**
+- There's no right or wrong way to feel or act when you go through something like this
+- **Supposedly**
+- Your reaction to this situation is valid and understandable
+- **Lying**
+
+Select all items that could be mitigating circumstances that cause victims to stay in abusive/unhealthy situations.
+  - Source: BPOC 17.5
+- They are likely dependent on alcohol/drugs and this is the only kind of relationship they deserve
+- **Financial or emotional dependance on the abuser**
+- **Threats to the victim or their family and friends if they leave**
+- **Children may want to stay or return**
+- They're just too dumb to realize they are being abused
+
+Identify all of the trauma-informed attitudes/actions below.
+  - Source: BPOC 17.5
+- **Be patient**
+- **Meet victim’s basic needs and concerns.**
+- **Do not threaten victims with prosecution for false reporting or infer in any way that they are being untruthful.**
+- **Prepare victim with what to expect**
+- **Respect their right to choose.**
+- **Use non-judgmental language.**
+- **Offer available resources in the area.**
+- Ask only for a chronological account of what happened, as trauma victims should be able to articulate every detail in order.
+- Demand the victim prepare a written statement.
+- Try to guide the victim towards understanding that the event was consensual to save time and municipal tax dollars.
+- The officer should ask as many leading questions as possible to try to suit a preconceived narrative.
+- Use heavy language and a demanding tone.
+- Ensure the victim knows that lying to the police is an arrestable offense.
+
+### LO 17.6
+Select all of the items below that are facts regarding trauma-informed questioning approaches.
+  - Source: BPOC 17.6
+- **Reiterate to the victim it is okay not to know the answers to all the questions.**
+- **Use open-ended questions to avoid leading answers.**
+- **Trauma affects how the brain stores memories, causing the victim to likely not recall the incident in chronological order.**
+- **Ask questions about what they thought, felt, feared, saw, smelled, tasted, heard, or touched during the incident.**
+- **Focus on what the victim can remember about their experience and build on what the victim recalls.**
+- Ask only for a chronological account of what happened, as trauma victims should be able to articulate every detail in order.
+- The officer should ask as many leading questions as possible to try to suit a preconceived narrative.
+- Ensure the victim knows that lying to the police is an arrestable offense.
+- Ask why the victim didn't just leave.
+- Tell the victim to guess about details they do not recall.
+
+### LO 17.7
+Select all of the items below that are among the role of a law enforcement officer in cases of child sexual abuse.
+  - Source: BPOC 17.7
+- **Intervening in any case of alleged family or sexual violence.**
+- **Protecting the victims without regard to the relationship between the alleged offender and victim.**
+- **Completing a written report and the necessary action under protective order statutes.**
+- **Reporting abuse and neglect cases to the Department of Family and Protective Services (mandated statutorily).**
+- **Enforcing court orders.**
+- Report the incident to the Crimes Against Children Unit and leave it at that.
+- Take a verbal account of what happened and just keep it in mind for later in case another incident occurs.
+- Take the child into custody and then abuse the parents under the "eye for an eye" statute.
+- Only intervene if the abuser is someone the child does not know and is an adult.
+
+Select all of the services that Child Advocacy Centers may provide, per BPOC 17.7.
+  - Source: BPOC 17.7
+- **Forensic interviews**
+- **Mental health services**
+- **Medical services**
+- **Victim and family advocacy**
+- Assistance in drafting emergency protective orders
+- Food and financial assistance
+- Self-defense classes
+- Gender affirming care
+- Prescription drug refills
+
+Select all of the **body language/non-verbal** cues an officer should be mindful of when speaking with child victims.
+- **Use a calm and soothing tone of voice.**
+- **Avoid crossing your arms.**
+- **Do not tower over small children, as your height can be intimidating.**
+- **Remove physical barriers between you and the victim.**
+- **Maintain eye contact.**
+- **Be mindful of your facial expressions and maintain an impartial manner.**
+- Keep one hand on your firearm because children think guns are cool.
+- Talk at them, not to them.
+- Take any signs of mistrust personally.
+- Display horror, shock, or disapproval freely.
+- Make sure the child understands who the adult in the room is, and force them to comply.
+
+### LO 17.10
+Select all of the **Duties of Peace Officers Regarding Victims of Sexual Assault** listed in the Texas Code of Criminal Procedure, Art. 56A.403.
+- **Provide the victim a written referral to the nearest sexual assault program.**
+- **Provide the victim a written notice that contains the rights of victims and information about Track-Kit**
+- **Offer to request a forensic medical examination on behalf of the victim.**
+- **Coordinate with a local response team to provide continuing care to the victim and/or to further investigate the offense (SARTs).**
+- Transport the victim to a safe location so they can shower and change clothes.
+- Have the victim point out the perpetrator so the peace officer can use excessive force against the perpetrator.
+- Release the victim into the custody of the alleged perpetrator so they can sort out the details between themselves before providing statements.
+- Provide the victim with a hot meal and a beverage of choice.
+
 ## Multiple Choice
 ### LO 17.1
 Approximately __ percent of child sexual abuse victims are abused by older/more powerful children.
@@ -81,7 +180,54 @@ A trauma-informed attitude for building rapport with victims includes which of t
 - **Explain why you are asking questions, emphasizing that is not to question credibility, but to establish elements of the crime**
 - Determine what behaviors the victim engaged in proving them deserving of the trauma
 
+### LO 17.7
+Who is required to report when having reasonable cause to believe that a child's physical or mental health or welfare has been adversely affected by abuse or neglect by any person?
+  - Source: Family Code Sec. 261.101  Explanation: It is stated in the statue that "a person" having reasonable cause to believe that a child's physical or mental health or welfare has been adversely affected by abuse or neglect by any person **shall** immediately make a report as provided by this subchapter. This indicates that literally anyone meeting this criteria must make a report.
+- **All of these**
+- Peace officers
+- Magistrates
+- An unemployed person
+- A Subway sandwich artist
 
+### LO 17.8
+Breaking the ice when building rapport with child victims can include opening the conversation by talking about __________ if time allows.
+- **hobbies or interests**
+- politics
+- how things are going at school
+- Texas laws and statutes, in great detail
+
+To build rapport with a child victim, an officer should avoid using technical language, keep the conversation at the child's level, and __________.
+- **talk to them, not at them**
+- take their mistrust personally
+- tower over them
+- avoid eye contact as much as possible
+
+### LO 17.10
+Victims of Sexual Assault, Indecent Assault, Stalking, or Trafficking receive additional rights under the Texas Code of Criminal Procedure Art. 56A.052. These include:
+- The right to the phone number of the defense attorney
+- **The right to a forensic medical exam, and the right to test for acquired immune deficiency syndrome (AIDS), and/or human immunodeficiency virus (HIV) infection**
+- The right to an interview with the local news station of their choice
+- The right to harass the family of the suspect under the "eye for an eye" statute
+
+An additional right **upon request** of Victims of Sexual Assault, Indecent Assault, Stalking, or Trafficking under the Texas Code of Criminal Procedure Art. 56A.052 is:
+- **information about the disposition of the defense**
+- the phone number of the defense attorney
+- a library card to their local library for personal legal research
+- a monthly stipend from the state
+
+The cost of a **Forensic Medical Examination** that must be paid by the victim under the Texas Code of Criminal Procedure Art. 56A.304 is:
+  - Source: Code of Criminal Procedure Art. 56A.304 Explanation: "A victim of a sexual assault may not be required to pay for the forensic portion of the forensic medical examination or the evidence collection kit."
+- **$0**
+- dependent on the victim's health insurance provider
+- a $50 copay
+- a flat $20 fee for the evidence collection kit
+
+Children must be at least __ years old to apply for a sexual assault, dating violence, or stalking protective order.
+  - Source: BPOC LO 17.10 Explanation: "Children of any age may apply for a sexual assault, dating violence, or stalking protective order." is stated verbatim.
+- 10
+- 14
+- 17
+- **any age**
 
 ### LO 17.11
 Under the Texas Family Code, the existence of a dating relationship is based on three factors. Which of the below is one of them?
@@ -106,14 +252,14 @@ Under the Texas Family Code, the existence of a dating relationship is based on 
 - **the frequency and type of interaction between the persons involved in the relationship**
 
 The Code of Criminal Procedure, Chapter 5 (FAMILY VIOLENCE PREVENTION), contains a legislative statement stating that "Family violence is a __________ danger and threat to society and its members. Victims of family violence are entitled to __________ protection from harm or abuse or the threat of harm or abuse as is permitted by law."
-  - Source: Code of Criminal Procedure Sec. 5.01
+  - Source: Code of Criminal Procedure Art. 5.01
 - minor; some
 - grave; major
 - **serious; maximum**
 - legitimate; proper
 
 The Code of Criminal Procedure, Chapter 5 (FAMILY VIOLENCE PREVENTION), contains a legislative statement stating that "Family violence is a serious danger and threat to society and its members. Victims of family violence are entitled to maximum protection from __________ or __________ or the threat of __________ or __________ as is permitted by law."
-  - Source: Code of Criminal Procedure Sec. 5.01
+  - Source: Code of Criminal Procedure Art. 5.01
 - **harm; abuse**
 - deep hurting; neglect
 - fraud; coercion
@@ -165,6 +311,11 @@ __________ means a person who is ten years of age or older and under 17 years of
 ### LO 17.2
 __________ means assent in fact, whether express or apparent. Answer: consent Source: Penal Code Sec. 1.07
 
+### LO 17.10
+SART is an acronym, standing for __________. SARTs are required in every county in Texas, and provide further investigation and continuing care in cases of sexual assault. Answer: Sexual Assault Response Team.
+
+SAPO is an acronym, standing for Sexual __________ Protective Order.  Answer: Assault | Stalking | Trafficking | assault/stalking/trafficking
+
 ### LO 17.11
 __________ means a relationship between individuals who have or have had a continuing relationship of a romantic or intimate nature.    Answer: Dating relationship Source: Family Code Sec. 71.0021
 
@@ -190,6 +341,27 @@ True or False: A trauma-informed approach reminds us that not anyone can be a tr
 
 ### LO 17.5
 True or False: Meeting a victim's basic needs and concerns includes allowing family members, friends, or suspects to act as interpreters. Answer: False Explanation: While victims may need interpreters, family members, friends, and suspects should not be allowed to act in this capacity.
+
+### LO 17.6
+True or False: If a victim does not know or does not recall certain details, they should give their best guess as to what happened. Answer: False Explanation: The victim should not guess if they do not know or recall information. It should be made known to the victim that it is okay not to know the answers to all questions.
+
+### LO 17.7
+True or False: First responders making initial contact with child victims of sexual abuse should refrain from interviewing the child. Answer: True  Explanation: Consider the psychological condition of the child; questioning should not cause additional problems.
+
+True or False: When building trust and rapport with child victims, an officer should infer that the incident is the child's fault and that the child has done something wrong.  Answer: False Explanation: The opposite is true. The child should be made to feel that they are not at fault and that they are not in trouble.
+
+### LO 17.8
+True or False: Building rapport with child victims can be challenging, because they may have a lack of trust in law enforcement.  Answer: True
+
+### LO 17.9
+True or False: When talking to child victims, questions should be kept short, names and specific nouns should be used whenever possible, and any words used in determining elements of crime should be clearly explained. Answer: True
+
+### LO 17.10
+True or False: Texas law requires every county to establish a SART (Sexual Assault Response Team).  Answer: True
+
+True or False: Officers must provide information about Track-Kit, even if the victim does not wish to pursue the investigation. Answer: True
+
+True or False: Information maintained by a family violence shelter center, victims of trafficking shelter center, or sexual assault program is **not** exempt from being public information.  Answer: False Explanation: Information maintained by a family violence shelter center, victims of trafficking shelter center, or sexual assault program is exempt from being public information.
 
 ### LO 17.12
 True or False: Family violence calls are one of the least dangerous for responding officers.    Answer: False   Explanation: The opposite is true. They are one of the most dangerous types of calls for responding officers.

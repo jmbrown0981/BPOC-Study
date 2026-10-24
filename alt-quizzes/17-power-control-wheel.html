@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>Ch. 17 Power and Control Wheel — Sort the Tactics | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-inner{position:relative; max-width:860px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:70ch; line-height:1.55;}
+  .hero p.sub a{color:var(--brass-light);}
+
+  .controls{position:sticky; top:0; z-index:20; background:var(--paper-dim); border-bottom:2px solid var(--navy); padding:10px 20px;}
+  .controls-inner{max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;}
+  .stat-pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .stat-pill{font-family:'IBM Plex Mono',monospace; font-size:11.5px; background:#fff; border:1px solid var(--rule); border-radius:20px; padding:5px 12px; white-space:nowrap;}
+  .stat-pill b{font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .stat-pill.correct b{color:var(--green);} .stat-pill.incorrect b{color:var(--rust);} .stat-pill.progress b{color:var(--navy);} .stat-pill.streak b{color:var(--amber);}
+  .setup-row{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-left:auto;}
+  .seg{display:inline-flex; border:1px solid var(--rule); border-radius:8px; overflow:hidden; background:#fff;}
+  .seg button{font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; padding:6px 10px; border:none; background:#fff; color:var(--ink-soft); cursor:pointer; border-left:1px solid var(--rule);}
+  .seg button:first-child{border-left:none;}
+  .seg button.on{background:var(--navy); color:#fff;}
+  .seg-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-right:4px;}
+  .btn{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:12.5px; cursor:pointer; border-radius:7px; padding:7px 14px; border:1px solid transparent;}
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);} .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);} .btn-ghost:hover{border-color:var(--brass);}
+
+  main{max-width:860px; margin:0 auto; padding:20px 20px 60px;}
+  .note{font-size:12.5px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 18px;}
+  .note b{color:var(--ink);}
+  .note .x{float:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:underline;}
+
+  .card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:18px 18px 16px; box-shadow:0 1px 0 rgba(0,0,0,0.03);}
+  .q-meta{display:flex; justify-content:space-between; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-bottom:10px; flex-wrap:wrap;}
+  .kind-tag{border:1px solid currentColor; border-radius:999px; padding:1px 8px; font-weight:700;}
+  .kind-tag.wheel{color:var(--navy);} .kind-tag.stmt{color:var(--amber);}
+  .q-ask{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); font-weight:700; margin:0 0 6px;}
+  .q-text{font-family:'IBM Plex Serif',serif; font-size:20px; font-weight:600; color:var(--navy); line-height:1.35; margin:0 0 12px;}
+  .q-text.quote{font-style:italic;}
+
+  .wheel-wrap{max-width:560px; margin:4px auto 0;}
+  svg.wheel{width:100%; height:auto; display:block; user-select:none; -webkit-user-select:none;}
+  .wedge path{fill:#fff; stroke:var(--navy); stroke-width:2; cursor:pointer; transition:fill .15s;}
+  .wedge:hover path, .wedge:focus path{fill:#F6EEDB;}
+  .wedge:focus{outline:none;}
+  .wedge:focus-visible path{stroke:var(--brass); stroke-width:4;}
+  .wedge text{font-family:'IBM Plex Sans',sans-serif; font-weight:700; font-size:14px; fill:var(--navy); pointer-events:none; text-anchor:middle;}
+  .wedge .num{font-family:'IBM Plex Mono',monospace; font-size:10px; fill:var(--gray); font-weight:600;}
+  .wedge .tally{font-family:'IBM Plex Mono',monospace; font-size:10px; fill:var(--green); font-weight:600;}
+  .wedge.correct path{fill:#CFDCCF;}
+  .wedge.incorrect path{fill:#EBCFC1;}
+  .wedge.locked path{cursor:default;}
+  .rim{fill:var(--navy);}
+  .rim-text{font-family:'IBM Plex Sans',sans-serif; font-weight:700; fill:#fff; letter-spacing:0.12em;}
+  .hub circle{fill:#fff; stroke:var(--navy); stroke-width:2.5;}
+  .hub text{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:17px; fill:var(--navy); text-anchor:middle;}
+
+  .feedback{display:none; margin-top:14px; border-top:1px dotted var(--rule); padding-top:12px; font-size:13.5px; line-height:1.6;}
+  .feedback.show{display:block;}
+  .feedback .verdict{font-weight:700;} .feedback .verdict.ok{color:var(--green);} .feedback .verdict.no{color:var(--rust);}
+  .feedback .why{margin:6px 0 0;}
+  .feedback .spoke{margin:8px 0 0; padding:8px 10px; background:var(--paper); border-radius:6px; font-size:13px;}
+  .feedback .spoke .src{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray); margin-bottom:3px;}
+  .next-row{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px;}
+  .kbd-hint{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray);}
+
+  .done{display:none; text-align:center; padding:24px 18px;}
+  .done.show{display:block;}
+  .done h2{font-family:'IBM Plex Serif',serif; color:var(--navy); margin:0 0 6px;}
+  .done .score{font-family:'IBM Plex Serif',serif; font-size:40px; font-weight:700; color:var(--navy); margin:4px 0;}
+  .missed{text-align:left; margin:14px auto 0; max-width:560px; font-size:13px; line-height:1.55;}
+  .missed li{margin-bottom:5px;}
+
+  details.ref{margin-top:20px; background:#fff; border:1px solid var(--rule); border-radius:12px; padding:12px 16px;}
+  details.ref summary{cursor:pointer; font-family:'IBM Plex Serif',serif; font-weight:600; color:var(--navy); font-size:15px;}
+  .ref-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;}
+  .ref-grid h3{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass); margin:0 0 6px;}
+  .ref-grid ul{margin:0; padding-left:1.2em; font-size:13px; line-height:1.55;}
+  .ref-note{font-size:12.5px; color:var(--ink-soft); line-height:1.6; margin:12px 0 0;}
+
+  @media (max-width:700px){
+    .ref-grid{grid-template-columns:1fr;}
+    .setup-row{margin-left:0;}
+    .controls{position:static;}
+    .q-text{font-size:17px;}
+    .card{padding:14px 12px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Back to hub</a>
+    <p class="hero-eyebrow">Ch. 17 Sexual Assault &amp; Family Violence &middot; BPOC 17.13</p>
+    <h1>Power and Control Wheel &mdash; Sort the Tactics</h1>
+    <p class="sub">You&rsquo;re shown an abusive behavior from the wheel, or something a victim might say on a call. Tap the spoke of the wheel it belongs to. Based on the Domestic Abuse Intervention Project&rsquo;s Power and Control Wheel (<a href="https://www.med.unc.edu/beacon/wp-content/uploads/sites/598/2018/03/powercontrolwheelnoshading.pdf" target="_blank" rel="noopener">view the original PDF</a>).</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="stat-pills">
+      <span class="stat-pill progress">Q <b id="qNum">1</b>/<span id="qTotal">15</span></span>
+      <span class="stat-pill correct">Correct <b id="statCorrect">0</b></span>
+      <span class="stat-pill incorrect">Missed <b id="statIncorrect">0</b></span>
+      <span class="stat-pill streak">Streak <b id="statStreak">0</b> <span style="color:var(--gray)">best <span id="statBest">0</span></span></span>
+    </div>
+    <div class="setup-row">
+      <span><span class="seg-label">CARDS</span><span class="seg" id="segMode"><button data-v="wheel" class="on">Wheel examples</button><button data-v="stmt">Victim statements</button><button data-v="mix">Mixed</button></span></span>
+      <span><span class="seg-label">LENGTH</span><span class="seg" id="segLen"><button data-v="15" class="on">15</button><button data-v="all">All</button></span></span>
+      <button class="btn btn-primary" id="newRoundBtn" type="button">New round</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="note" id="instructionsNote">
+    <button class="x" id="hideInstructions" type="button">hide</button>
+    <b>How to play:</b> tap a spoke or press <b>1&ndash;8</b> (the small numbers on the wheel); press <b>Enter</b> for the next card. <b>Wheel examples</b> are the behaviors printed on the wheel itself. <b>Victim statements</b> are practice statements of the kind BPOC 17.13 suggests discussing (written for this game, not from the wheel), to practice spotting the tactic behind what a victim tells you. The green tally on each spoke counts the cards you&rsquo;ve placed there correctly this round.
+  </div>
+
+  <div class="card" id="qCard">
+    <div class="q-meta"><span id="qKind"></span><span>BPOC 17.13</span></div>
+    <p class="q-ask" id="qAsk"></p>
+    <p class="q-text" id="qText"></p>
+    <div class="wheel-wrap"><svg class="wheel" id="wheel" viewBox="0 0 500 500" role="group" aria-label="Power and Control Wheel"></svg></div>
+    <div class="feedback" id="feedback">
+      <div><span class="verdict" id="verdict"></span> <span id="verdictTxt"></span></div>
+      <p class="why" id="why"></p>
+      <div class="spoke" id="spokeRef"></div>
+      <div class="next-row"><span class="kbd-hint">Enter = next</span><button class="btn btn-primary" id="nextBtn" type="button">Next</button></div>
+    </div>
+  </div>
+
+  <div class="card done" id="doneCard">
+    <h2>Round complete</h2>
+    <div class="score" id="doneScore"></div>
+    <div id="doneMsg"></div>
+    <ul class="missed" id="missedList"></ul>
+    <p style="margin-top:16px"><button class="btn btn-primary" id="againBtn" type="button">New round</button></p>
+  </div>
+
+  <details class="ref" id="refDetails">
+    <summary>The full wheel (reference)</summary>
+    <div class="ref-grid" id="refGrid"></div>
+    <p class="ref-note">The outer rim of the wheel is <b>Physical and Sexual Violence</b>. The spokes are the tactics used alongside, or in place of, that violence. BPOC 17.13: the tactics can be subtle, continuous, and escalate over time, and they are used in combination with each other. The wheel says &ldquo;her&rdquo; to reflect the statistics when it was created; anybody can be a victim. Source: Domestic Abuse Intervention Programs, Duluth, MN (1984).</p>
+  </details>
+</main>
+
+<script>
+// Spokes in wheel order, clockwise from 12 o'clock (matches the PDF layout).
+const SPOKES = [
+  {id:'intim',  name:'Using Intimidation', lines:['USING','INTIMIDATION'],
+   ex:['Making her afraid by using looks, actions, gestures','Smashing things','Destroying her property','Abusing pets','Displaying weapons']},
+  {id:'emot',   name:'Using Emotional Abuse', lines:['USING','EMOTIONAL','ABUSE'],
+   ex:['Putting her down','Making her feel bad about herself','Calling her names','Making her think she’s crazy','Playing mind games','Humiliating her','Making her feel guilty']},
+  {id:'iso',    name:'Using Isolation', lines:['USING','ISOLATION'],
+   ex:['Controlling what she does, who she sees and talks to, what she reads, where she goes','Limiting her outside involvement','Using jealousy to justify actions']},
+  {id:'mdb',    name:'Minimizing, Denying and Blaming', lines:['MINIMIZING,','DENYING AND','BLAMING'],
+   ex:['Making light of the abuse and not taking her concerns about it seriously','Saying the abuse didn’t happen','Shifting responsibility for abusive behavior','Saying she caused it']},
+  {id:'kids',   name:'Using Children', lines:['USING','CHILDREN'],
+   ex:['Making her feel guilty about the children','Using the children to relay messages','Using visitation to harass her','Threatening to take the children away']},
+  {id:'priv',   name:'Using Male Privilege', lines:['USING MALE','PRIVILEGE'],
+   ex:['Treating her like a servant','Making all the big decisions','Acting like the “master of the castle”','Being the one to define men’s and women’s roles']},
+  {id:'econ',   name:'Using Economic Abuse', lines:['USING','ECONOMIC','ABUSE'],
+   ex:['Preventing her from getting or keeping a job','Making her ask for money','Giving her an allowance','Taking her money','Not letting her know about or have access to family income']},
+  {id:'coerce', name:'Using Coercion and Threats', lines:['USING','COERCION','AND THREATS'],
+   ex:['Making and/or carrying out threats to do something to hurt her','Threatening to leave her','Threatening to commit suicide','Threatening to report her to welfare','Making her drop charges','Making her do illegal things']}
+];
+const BY_ID = Object.fromEntries(SPOKES.map(s=>[s.id,s]));
+
+// Practice statements (written for this game; not part of the wheel).
+const STATEMENTS = [
+  ['econ',  'He takes my whole paycheck and gives me twenty dollars a week for gas.', 'Taking her money and giving her an allowance.'],
+  ['econ',  'Every time I get a job he shows up and causes a scene until they fire me.', 'Preventing her from getting or keeping a job.'],
+  ['econ',  'I don’t even know what bank our money is in. He won’t tell me.', 'Not letting her know about or have access to family income.'],
+  ['iso',   'He checks my phone every night and I’m not allowed to see my sister anymore.', 'Controlling who she sees and talks to.'],
+  ['iso',   'He says the only reason he goes through my stuff is because he loves me so much.', 'Using jealousy to justify actions.'],
+  ['iso',   'I had to quit church choir. He said I didn’t need to be out of the house that much.', 'Limiting her outside involvement.'],
+  ['intim', 'When he gets mad he just stares at me and cracks his knuckles until I stop talking.', 'Making her afraid by using looks, actions, gestures.'],
+  ['intim', 'He keeps his pistol on the kitchen table when we argue.', 'Displaying weapons.'],
+  ['intim', 'He kicked the dog across the room to show me what would happen.', 'Abusing pets.'],
+  ['emot',  'He tells me I’m fat and stupid and nobody else would ever want me.', 'Putting her down, calling her names, making her feel bad about herself.'],
+  ['emot',  'He moves my keys and then tells me I’m losing my mind.', 'Making her think she’s crazy; playing mind games.'],
+  ['coerce','He said if I leave, he’ll kill himself and it’ll be my fault.', 'Threatening to commit suicide.'],
+  ['coerce','He told me if I don’t drop the charges, I’ll regret it.', 'Making her drop charges.'],
+  ['coerce','He makes me sign for the packages he has shipped here so it’s on me, not him.', 'Making her do illegal things.'],
+  ['kids',  'He tells the kids to tell me I’m a bad mom. He won’t talk to me himself.', 'Using the children to relay messages.'],
+  ['kids',  'He said if I call the cops, I’ll never see the kids again.', 'Threatening to take the children away.'],
+  ['kids',  'Every pickup and drop-off turns into him screaming at me in the driveway.', 'Using visitation to harass her.'],
+  ['mdb',   'He says it was just a little push and I’m being dramatic.', 'Making light of the abuse and not taking her concerns seriously.'],
+  ['mdb',   'He says if I hadn’t mouthed off he never would have done it.', 'Saying she caused it; shifting responsibility for abusive behavior.'],
+  ['mdb',   'He told the officer last time that nothing happened and I fell.', 'Saying the abuse didn’t happen.'],
+  ['priv',  'He says it’s his house and his rules, and my job is to cook and keep my mouth shut.', 'Treating her like a servant; acting like the “master of the castle.”'],
+  ['priv',  'He bought a truck and moved us across the state without asking me.', 'Making all the big decisions.']
+];
+
+// Build the card deck.
+const WHEEL_CARDS = [];
+SPOKES.forEach(s=>s.ex.forEach(e=>WHEEL_CARDS.push({kind:'wheel', spoke:s.id, text:e})));
+const STMT_CARDS = STATEMENTS.map(([sp,t,why])=>({kind:'stmt', spoke:sp, text:t, why}));
+
+// ---- SVG wheel ----
+const NS='http://www.w3.org/2000/svg';
+const C=250, R_OUT=246, R_RIM=212, R_HUB=62;
+function pt(r,deg){const a=(deg-90)*Math.PI/180; return [C+r*Math.cos(a), C+r*Math.sin(a)];}
+function el(tag,attrs,parent){const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e;}
+const wheel=document.getElementById('wheel');
+const wedgeEls={};
+function buildWheel(){
+  el('circle',{cx:C,cy:C,r:R_OUT,class:'rim'},wheel);
+  const defs=el('defs',{},wheel);
+  el('path',{id:'rimTop',d:`M ${C-229},${C} A 229 229 0 0 1 ${C+229},${C}`},defs);
+  el('path',{id:'rimBot',d:`M ${C-229},${C} A 229 229 0 0 0 ${C+229},${C}`},defs);
+  const t1=el('text',{class:'rim-text','font-size':'16'},wheel);
+  const tp1=el('textPath',{href:'#rimTop',startOffset:'50%','text-anchor':'middle','dominant-baseline':'middle'},t1); tp1.textContent='PHYSICAL   VIOLENCE   SEXUAL';
+  const t2=el('text',{class:'rim-text','font-size':'16'},wheel);
+  const tp2=el('textPath',{href:'#rimBot',startOffset:'50%','text-anchor':'middle','dominant-baseline':'middle'},t2); tp2.textContent='PHYSICAL   VIOLENCE   SEXUAL';
+  SPOKES.forEach((s,i)=>{
+    const a0=i*45, a1=a0+45, mid=a0+22.5;
+    const g=el('g',{class:'wedge',tabindex:'0',role:'button','aria-label':`${i+1}: ${s.name}`,'data-id':s.id},wheel);
+    const [x0,y0]=pt(R_RIM,a0),[x1,y1]=pt(R_RIM,a1),[h1x,h1y]=pt(R_HUB,a1),[h0x,h0y]=pt(R_HUB,a0);
+    el('path',{d:`M ${h0x},${h0y} L ${x0},${y0} A ${R_RIM} ${R_RIM} 0 0 1 ${x1},${y1} L ${h1x},${h1y} A ${R_HUB} ${R_HUB} 0 0 0 ${h0x},${h0y} Z`},g);
+    const [lx,ly]=pt(140,mid);
+    const n=s.lines.length, lh=16, top=ly-((n-1)*lh)/2;
+    const txt=el('text',{x:lx,y:top},g);
+    s.lines.forEach((ln,j)=>{const ts=el('tspan',{x:lx,y:top+j*lh},txt); ts.textContent=ln;});
+    const nt=el('text',{x:lx,y:top-18,class:'num'},g); nt.textContent=String(i+1);
+    const tl=el('text',{x:lx,y:top+(n-1)*lh+18,class:'tally'},g); tl.textContent='';
+    g.addEventListener('click',()=>answer(s.id));
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault(); e.stopPropagation(); if(!answered) answer(s.id); else next();}});
+    wedgeEls[s.id]={g,tally:tl};
+  });
+  const hub=el('g',{class:'hub'},wheel);
+  el('circle',{cx:C,cy:C,r:R_HUB},hub);
+  [['POWER',-14],['AND',4],['CONTROL',22]].forEach(([w,dy])=>{const t=el('text',{x:C,y:C+dy+5},hub); t.textContent=w;});
+}
+
+// ---- Game state ----
+const BEST_KEY='bpoc-ch17-pcw-best';
+let mode='wheel', len='15', deck=[], idx=0, correct=0, missed=0, streak=0, best=0, answered=false, missedItems=[], tally={};
+try { best = Number(localStorage.getItem(BEST_KEY)) || 0; } catch(e){ best = 0; }
+const $=id=>document.getElementById(id);
+
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;}
+function newRound(){
+  let pool = mode==='wheel'?WHEEL_CARDS : mode==='stmt'?STMT_CARDS : WHEEL_CARDS.concat(STMT_CARDS);
+  pool=shuffle(pool.slice());
+  deck = len==='all'?pool:pool.slice(0,15);
+  idx=0; correct=0; missed=0; streak=0; missedItems=[]; tally={};
+  $('doneCard').classList.remove('show'); $('qCard').style.display='';
+  render();
+}
+function render(){
+  answered=false;
+  const c=deck[idx];
+  $('qNum').textContent=idx+1; $('qTotal').textContent=deck.length;
+  $('statCorrect').textContent=correct; $('statIncorrect').textContent=missed; $('statStreak').textContent=streak; $('statBest').textContent=best;
+  $('qKind').innerHTML = c.kind==='wheel' ? '<span class="kind-tag wheel">Wheel example</span>' : '<span class="kind-tag stmt">Victim statement</span>';
+  $('qAsk').textContent = c.kind==='wheel' ? 'Which spoke is this behavior on?' : 'Which tactic does this statement describe?';
+  $('qText').textContent = c.kind==='wheel' ? c.text : '“'+c.text+'”';
+  $('qText').classList.toggle('quote', c.kind==='stmt');
+  SPOKES.forEach(s=>{const w=wedgeEls[s.id]; w.g.classList.remove('correct','incorrect','locked'); w.tally.textContent = tally[s.id]?('✓ '+tally[s.id]):'';});
+  $('feedback').classList.remove('show');
+}
+function answer(id){
+  if(answered) return;
+  answered=true;
+  const c=deck[idx], ok = id===c.spoke, s=BY_ID[c.spoke];
+  SPOKES.forEach(x=>wedgeEls[x.id].g.classList.add('locked'));
+  wedgeEls[c.spoke].g.classList.add('correct');
+  if(!ok) wedgeEls[id].g.classList.add('incorrect');
+  if(ok){ correct++; streak++; tally[c.spoke]=(tally[c.spoke]||0)+1; wedgeEls[c.spoke].tally.textContent='✓ '+tally[c.spoke];
+    if(streak>best){ best=streak; try{ localStorage.setItem(BEST_KEY,String(best)); }catch(e){} } }
+  else { missed++; streak=0; missedItems.push({c, picked:id}); }
+  $('statCorrect').textContent=correct; $('statIncorrect').textContent=missed; $('statStreak').textContent=streak; $('statBest').textContent=best;
+  $('verdict').textContent = ok?'Correct.':'Not quite.'; $('verdict').className='verdict '+(ok?'ok':'no');
+  $('verdictTxt').textContent = ok ? s.name+'.' : 'You picked '+BY_ID[id].name+'; the answer is '+s.name+'.';
+  $('why').textContent = c.kind==='stmt' ? 'On the wheel: '+c.why : '';
+  $('why').style.display = c.kind==='stmt' ? '' : 'none';
+  $('spokeRef').innerHTML = '<span class="src">'+s.name.toUpperCase()+' — everything on this spoke</span>'+s.ex.map(esc).join(' • ');
+  $('feedback').classList.add('show');
+  $('nextBtn').focus({preventScroll:true});
+}
+function esc(t){return t.replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
+function next(){
+  if(!answered) return;
+  idx++;
+  if(idx>=deck.length) return finish();
+  render();
+}
+function finish(){
+  $('qCard').style.display='none';
+  const pct=Math.round(100*correct/deck.length);
+  $('doneScore').textContent=correct+' / '+deck.length;
+  $('doneMsg').textContent = pct===100 ? 'Perfect round.' : pct+'% — the cards you missed are below.';
+  $('missedList').innerHTML = missedItems.map(m=>'<li><b>'+esc(m.c.text)+'</b> — '+esc(BY_ID[m.c.spoke].name)+' <span style="color:var(--rust)">(you picked '+esc(BY_ID[m.picked].name)+')</span></li>').join('');
+  $('doneCard').classList.add('show');
+}
+
+function buildRef(){
+  $('refGrid').innerHTML = SPOKES.map(s=>'<div><h3>'+esc(s.name)+'</h3><ul>'+s.ex.map(e=>'<li>'+esc(e)+'</li>').join('')+'</ul></div>').join('');
+}
+function bindSeg(id,fn){
+  document.querySelectorAll('#'+id+' button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.toggle('on',x===b)); fn(b.dataset.v); newRound();
+  }));
+}
+bindSeg('segMode',v=>mode=v);
+bindSeg('segLen',v=>len=v);
+$('newRoundBtn').addEventListener('click',newRound);
+$('againBtn').addEventListener('click',newRound);
+$('nextBtn').addEventListener('click',next);
+$('hideInstructions').addEventListener('click',()=>{$('instructionsNote').style.display='none';});
+document.addEventListener('keydown',e=>{
+  if(e.target.closest && e.target.closest('.wedge')) return;
+  if(e.target.tagName==='BUTTON' && e.key==='Enter' && e.target.id!=='nextBtn') return;
+  if(!answered && /^[1-8]$/.test(e.key)){ answer(SPOKES[Number(e.key)-1].id); }
+  else if(answered && e.key==='Enter'){ e.preventDefault(); next(); }
+});
+
+buildWheel(); buildRef(); newRound();
+</script>
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>
