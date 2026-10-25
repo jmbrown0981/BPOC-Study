@@ -284,9 +284,112 @@ From 1980 through the present, what irony does the chapter note about the profes
 
 ---
 
+### Q21 — Select All
+**LO:** 2.2 · **Source:** BPOC 2.2
+
+Select all of the changes/developments in police service that took place from 1900 through the 1940s
+
+- [x] The use of the automobile provided a more rapid response to police calls for service.
+- [x] Many officers were reassigned from walking beats to radio cars.
+- [x] The advent of radio communications allowed calls for service to be dispatched to officers in the field.
+- [x] The assignment of officers from walking beats initiated the distancing of the police from the individual citizens through increased mobility.
+- [x] The police performance level increased due to rapid response, while actual communications with citizens decreased.
+- [x] The absence of quality evaluation was prevalent throughout the period.
+- [x] During this era, law enforcement personnel (especially the “beat officers”) were known by the citizens in the areas in which they worked.
+- [x] This relationship created a bond that made the officer feel an ownership of his work area. The community also felt a more personal relationship with their officer(s).
+- [x] American policing went through a “reform” era marked by the contributions of such men as August Vollmer, whose goal was to bring professionalism to the police. This age also saw the emergence of the present federal law enforcement system and the contributions of J. Edgar Hoover and the FBI.
+- [x] The National Commission on Law Observance and Enforcement (Wickersham Commission) reported in 1931 “the greatest promise for the future of policing is the college or university.”
+- [ ] Technology continued to improve, with computers and communications gradually becoming commonplace.
+- [ ] The use of automobiles improved response time to calls for service.
+- [ ] The increased use of automobile travel and technology created a fast-paced service style, which further removed peace officers from constant citizen contact.
+- [ ] The professional police model developed with emphasis on accountability and increased standards. Success measures such as response time, crime statistics, and citizen complaints became common indicators of police performance.
+- [ ] Police professionalism was again an issue in the late 60s when the President’s Commission on Law Enforcement and the Administration of Justice stated in 1967 that, in their opinion, police personnel should have two or four years of college education. This Commission indicated that the ultimate aim of all police departments was for personnel with general enforcement powers to have baccalaureate degrees.
+- [ ] The National Advisory Commission on Criminal Justice Standards and Goals (NAC) reported in 1973 that the police still had low educational requirements. The NAC cited the recommendations of the 1967 commission and established minimum entry-level requirements. The immediate educational standard was to be one year of college. The educational standard increase was to continue by requiring two years of college by 1975, three years of college by 1978, and a baccalaureate degree by 1982. A study was done in 1986 of entry-level educational requirements to determine which of the NAC’s goals had been met. The responding 289 agencies reported that 0.9% had no minimum educational requirement, 84.8% had a high school or G.E.D. requirement, and 0.6% required a four-year baccalaureate degree.
+- [ ] Evaluation research became a tool for success measurement.
+- [ ] The Law Enforcement Assistance Administration (LEAA) funded numerous projects to speed up the criminal justice process.
+- [ ] The development and use of numerous specialized units resulted in the removal of patrol officers from most follow-up activities.
+- [ ] The patrol system became an incident-driven approach in which police officers often became little more than report takers in most communities.
+- [ ] During this era, the police became controlled by the radio system. As a result of officers being required to answer calls for police services in a larger area, the peace officer lost much of the positive relationship and communications with the community.
+- [ ] Technology continues to improve with computers, mobile devices, and weapons.
+- [ ] There is increased interest in evaluation research. Interest in other styles of police service led to considerable interest in new methods and experimentations.
+- [ ] The development of community- or problem-oriented policing has opened new potential for progressive policing in agencies using both the traditional model and the problem-oriented model.
+- [ ] The implementation of community or problem-oriented policing projects. Ironically, professionalization of policing has resulted, very often, in emphasis on walking beats and citizens interaction.
+
+**Explanation:** BPOC 2.2 (1900 through the 1940s): the automobile and radio moved officers from walking beats to radio cars, distancing police from citizens; response improved while communication decreased; quality evaluation was absent; beat officers were known by citizens; the "reform" era (August Vollmer, J. Edgar Hoover and the FBI); and the 1931 Wickersham Commission report on college education.
+
+---
+
+### Q22 — Select All
+**LO:** 2.2 · **Source:** BPOC 2.2
+
+Select all of the changes/developments in police service that took place from 1950 through the 1970s
+
+- [ ] Many officers were reassigned from walking beats to radio cars.
+- [ ] The advent of radio communications allowed calls for service to be dispatched to officers in the field.
+- [ ] The assignment of officers from walking beats initiated the distancing of the police from the individual citizens through increased mobility.
+- [ ] The police performance level increased due to rapid response, while actual communications with citizens decreased.
+- [ ] The absence of quality evaluation was prevalent throughout the period.
+- [ ] During this era, law enforcement personnel (especially the “beat officers”) were known by the citizens in the areas in which they worked.
+- [ ] This relationship created a bond that made the officer feel an ownership of his work area. The community also felt a more personal relationship with their officer(s).
+- [ ] American policing went through a “reform” era marked by the contributions of such men as August Vollmer, whose goal was to bring professionalism to the police. This age also saw the emergence of the present federal law enforcement system and the contributions of J. Edgar Hoover and the FBI.
+- [ ] The National Commission on Law Observance and Enforcement (Wickersham Commission) reported in 1931 “the greatest promise for the future of policing is the college or university.”
+- [x] Technology continued to improve, with computers and communications gradually becoming commonplace.
+- [x] The use of automobiles improved response time to calls for service.
+- [x] The increased use of automobile travel and technology created a fast-paced service style, which further removed peace officers from constant citizen contact.
+- [x] The professional police model developed with emphasis on accountability and increased standards. Success measures such as response time, crime statistics, and citizen complaints became common indicators of police performance.
+- [x] Police professionalism was again an issue in the late 60s when the President’s Commission on Law Enforcement and the Administration of Justice stated in 1967 that, in their opinion, police personnel should have two or four years of college education. This Commission indicated that the ultimate aim of all police departments was for personnel with general enforcement powers to have baccalaureate degrees.
+- [x] The National Advisory Commission on Criminal Justice Standards and Goals (NAC) reported in 1973 that the police still had low educational requirements. The NAC cited the recommendations of the 1967 commission and established minimum entry-level requirements. The immediate educational standard was to be one year of college. The educational standard increase was to continue by requiring two years of college by 1975, three years of college by 1978, and a baccalaureate degree by 1982. A study was done in 1986 of entry-level educational requirements to determine which of the NAC’s goals had been met. The responding 289 agencies reported that 0.9% had no minimum educational requirement, 84.8% had a high school or G.E.D. requirement, and 0.6% required a four-year baccalaureate degree.
+- [x] Evaluation research became a tool for success measurement.
+- [x] The Law Enforcement Assistance Administration (LEAA) funded numerous projects to speed up the criminal justice process.
+- [x] The development and use of numerous specialized units resulted in the removal of patrol officers from most follow-up activities.
+- [x] The patrol system became an incident-driven approach in which police officers often became little more than report takers in most communities.
+- [x] During this era, the police became controlled by the radio system. As a result of officers being required to answer calls for police services in a larger area, the peace officer lost much of the positive relationship and communications with the community.
+- [ ] Technology continues to improve with computers, mobile devices, and weapons.
+- [ ] There is increased interest in evaluation research. Interest in other styles of police service led to considerable interest in new methods and experimentations.
+- [ ] The development of community- or problem-oriented policing has opened new potential for progressive policing in agencies using both the traditional model and the problem-oriented model.
+- [ ] The implementation of community or problem-oriented policing projects. Ironically, professionalization of policing has resulted, very often, in emphasis on walking beats and citizens interaction.
+
+**Explanation:** BPOC 2.2 (1950 through the 1970s): technology and the automobile sped up a service style that further removed officers from citizen contact; the professional model (accountability, response time, crime statistics, complaints); the 1967 President's Commission and 1973 NAC education standards; evaluation research; LEAA funding; specialized units; incident-driven "report taker" patrol; and police controlled by the radio system.
+
+---
+
+### Q23 — Select All
+**LO:** 2.2 · **Source:** BPOC 2.2
+
+Select all of the changes/developments in police service that took place from 1980 through present
+
+- [ ] Many officers were reassigned from walking beats to radio cars.
+- [ ] The advent of radio communications allowed calls for service to be dispatched to officers in the field.
+- [ ] The assignment of officers from walking beats initiated the distancing of the police from the individual citizens through increased mobility.
+- [ ] The police performance level increased due to rapid response, while actual communications with citizens decreased.
+- [ ] The absence of quality evaluation was prevalent throughout the period.
+- [ ] During this era, law enforcement personnel (especially the “beat officers”) were known by the citizens in the areas in which they worked.
+- [ ] This relationship created a bond that made the officer feel an ownership of his work area. The community also felt a more personal relationship with their officer(s).
+- [ ] American policing went through a “reform” era marked by the contributions of such men as August Vollmer, whose goal was to bring professionalism to the police. This age also saw the emergence of the present federal law enforcement system and the contributions of J. Edgar Hoover and the FBI.
+- [ ] The National Commission on Law Observance and Enforcement (Wickersham Commission) reported in 1931 “the greatest promise for the future of policing is the college or university.”
+- [ ] Technology continued to improve, with computers and communications gradually becoming commonplace.
+- [ ] The use of automobiles improved response time to calls for service.
+- [ ] The increased use of automobile travel and technology created a fast-paced service style, which further removed peace officers from constant citizen contact.
+- [ ] The professional police model developed with emphasis on accountability and increased standards. Success measures such as response time, crime statistics, and citizen complaints became common indicators of police performance.
+- [ ] Police professionalism was again an issue in the late 60s when the President’s Commission on Law Enforcement and the Administration of Justice stated in 1967 that, in their opinion, police personnel should have two or four years of college education. This Commission indicated that the ultimate aim of all police departments was for personnel with general enforcement powers to have baccalaureate degrees.
+- [ ] The National Advisory Commission on Criminal Justice Standards and Goals (NAC) reported in 1973 that the police still had low educational requirements. The NAC cited the recommendations of the 1967 commission and established minimum entry-level requirements. The immediate educational standard was to be one year of college. The educational standard increase was to continue by requiring two years of college by 1975, three years of college by 1978, and a baccalaureate degree by 1982. A study was done in 1986 of entry-level educational requirements to determine which of the NAC’s goals had been met. The responding 289 agencies reported that 0.9% had no minimum educational requirement, 84.8% had a high school or G.E.D. requirement, and 0.6% required a four-year baccalaureate degree.
+- [ ] Evaluation research became a tool for success measurement.
+- [ ] The Law Enforcement Assistance Administration (LEAA) funded numerous projects to speed up the criminal justice process.
+- [ ] The development and use of numerous specialized units resulted in the removal of patrol officers from most follow-up activities.
+- [ ] The patrol system became an incident-driven approach in which police officers often became little more than report takers in most communities.
+- [ ] During this era, the police became controlled by the radio system. As a result of officers being required to answer calls for police services in a larger area, the peace officer lost much of the positive relationship and communications with the community.
+- [x] Technology continues to improve with computers, mobile devices, and weapons.
+- [x] There is increased interest in evaluation research. Interest in other styles of police service led to considerable interest in new methods and experimentations.
+- [x] The development of community- or problem-oriented policing has opened new potential for progressive policing in agencies using both the traditional model and the problem-oriented model.
+- [x] The implementation of community or problem-oriented policing projects. Ironically, professionalization of policing has resulted, very often, in emphasis on walking beats and citizens interaction.
+
+**Explanation:** BPOC 2.2 (1980 through present): technology continues to improve (computers, mobile devices, weapons); increased interest in evaluation research and new methods; the development and implementation of community- or problem-oriented policing, which ironically has often meant renewed emphasis on walking beats and citizen interaction.
+
+---
+
 ## LO 2.3 — Evolution of policing in Texas
 
-### Q21 — Recall
+### Q24 — Recall
 **LO:** 2.3 · **Source:** BPOC 2.3
 
 During Texas's roughly 100 years as a province of Mexico, who handled policing in the territory?
@@ -300,7 +403,7 @@ During Texas's roughly 100 years as a province of Mexico, who handled policing i
 
 ---
 
-### Q22 — Fill-in-Blank
+### Q25 — Fill-in-Blank
 **LO:** 2.3 · **Source:** BPOC 2.3
 
 Texas became a free and independent republic after the Battle of ______ in 1836.
@@ -314,7 +417,7 @@ Texas became a free and independent republic after the Battle of ______ in 1836.
 
 ---
 
-### Q23 — Definition
+### Q26 — Definition
 **LO:** 2.3 · **Source:** BPOC 2.3
 
 The origin of the Texas Rangers is tied to which historical figure and purpose, per this chapter?
@@ -328,7 +431,7 @@ The origin of the Texas Rangers is tied to which historical figure and purpose, 
 
 ---
 
-### Q24 — Concept
+### Q27 — Concept
 **LO:** 2.3 · **Source:** BPOC 2.3
 
 Why did the watch/ward system of policing (seen in the northeastern U.S.) not evolve in Texas, per this chapter?
@@ -342,7 +445,7 @@ Why did the watch/ward system of policing (seen in the northeastern U.S.) not ev
 
 ---
 
-### Q25 — Fill-in-Blank
+### Q28 — Fill-in-Blank
 **LO:** 2.3 · **Source:** BPOC 2.3; Texas Constitution Art. 5
 
 Constables are established under Texas Constitution Article 5, Section ______.
@@ -356,7 +459,7 @@ Constables are established under Texas Constitution Article 5, Section ______.
 
 ---
 
-### Q26 — Fill-in-Blank
+### Q29 — Fill-in-Blank
 **LO:** 2.3 · **Source:** BPOC 2.3; Texas Constitution Art. 5
 
 Sheriffs are established under Texas Constitution Article 5, Section ______.
@@ -370,7 +473,7 @@ Sheriffs are established under Texas Constitution Article 5, Section ______.
 
 ---
 
-### Q27 — Definition
+### Q30 — Definition
 **LO:** 2.3 · **Source:** BPOC 2.3; Local Government Code §341.001
 
 Local Government Code §341.001 covers the police force of which type of municipality?
@@ -384,7 +487,7 @@ Local Government Code §341.001 covers the police force of which type of municip
 
 ---
 
-### Q28 — Definition
+### Q31 — Definition
 **LO:** 2.3 · **Source:** BPOC 2.3; Local Government Code §341.003
 
 Local Government Code §341.003 covers the police force of which type of municipality?
@@ -398,7 +501,7 @@ Local Government Code §341.003 covers the police force of which type of municip
 
 ---
 
-### Q29 — Recall
+### Q32 — Recall
 **LO:** 2.3 · **Source:** BPOC 2.3; Local Government Code §341.002
 
 Which Local Government Code section covers the police force of a Type C General-law Municipality?
@@ -412,9 +515,27 @@ Which Local Government Code section covers the police force of a Type C General-
 
 ---
 
+### Q33 — Select All
+**LO:** 2.3 · **Source:** BPOC 2.3
+
+Select all facts that are true about Texas's 100 years as a province of Mexico.
+
+- [ ] Spanish governors reigned over the territory that would later become Texas
+- [x] Mexican governors reigned over the territory that would later become Texas
+- [x] Policing was handled by the Spanish military
+- [ ] Policing was handled by the Mexican military
+- [x] Texas became a free and independent republic after the Battle of San Jacinto in 1836
+- [ ] Texas became a free and independent republic after the Battle of the Bulge in 1836
+- [ ] Texas became a free and independent republic after the Battle of the Bulge in 1945
+- [ ] Texas became a free and independent republic after the Battle of San Jacinto in 1945
+
+**Explanation:** BPOC 2.3: "During Texas’ 100 years as a province of Mexico, Mexican governors reigned over the territory that would later become Texas. Policing was handled by the Spanish military. This ended when Texas became a free and independent republic after the Battle of San Jacinto in 1836."
+
+---
+
 ## LO 2.4 — Licensee requirements under selected Commission Rules
 
-### Q30 — Fill-in-Blank
+### Q34 — Fill-in-Blank
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Reporting Responsibilities of Individuals is covered by Rule 211.27 and Occupations Code Chapter ______.
@@ -428,7 +549,7 @@ Reporting Responsibilities of Individuals is covered by Rule 211.27 and Occupati
 
 ---
 
-### Q31 — Definition
+### Q35 — Definition
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Rule 217.1, paired with Occupations Code §1701.301 and §1701.307, governs which requirement topic?
@@ -442,7 +563,7 @@ Rule 217.1, paired with Occupations Code §1701.301 and §1701.307, governs whic
 
 ---
 
-### Q32 — Definition
+### Q36 — Definition
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Rule 219.1, paired with Occupations Code §1701.304, governs which requirement topic?
@@ -456,7 +577,7 @@ Rule 219.1, paired with Occupations Code §1701.304, governs which requirement t
 
 ---
 
-### Q33 — Definition
+### Q37 — Definition
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Rule 218.3, paired with Occupations Code §1701.351–354, governs which requirement topic?
@@ -470,7 +591,7 @@ Rule 218.3, paired with Occupations Code §1701.351–354, governs which require
 
 ---
 
-### Q34 — Definition
+### Q38 — Definition
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Rule 218.9, paired with Occupations Code §1701.355, governs which requirement topic?
@@ -484,7 +605,7 @@ Rule 218.9, paired with Occupations Code §1701.355, governs which requirement t
 
 ---
 
-### Q35 — Fill-in-Blank
+### Q39 — Fill-in-Blank
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Reactivation of a License is covered by Rule 217.19 and Occupations Code Chapter ______.
@@ -498,7 +619,7 @@ Reactivation of a License is covered by Rule 217.19 and Occupations Code Chapter
 
 ---
 
-### Q36 — Recall
+### Q40 — Recall
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Per Rule 215.9, what is the licensing course coordinator required to do?
@@ -512,7 +633,7 @@ Per Rule 215.9, what is the licensing course coordinator required to do?
 
 ---
 
-### Q37 — Recall
+### Q41 — Recall
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Which Commission Rule covers Law Enforcement Achievement Awards?
@@ -526,7 +647,7 @@ Which Commission Rule covers Law Enforcement Achievement Awards?
 
 ---
 
-### Q38 — Recall
+### Q42 — Recall
 **LO:** 2.4 · **Source:** BPOC 2.4
 
 Which Commission Rule number governs Reinstatement of a License, among the rules a coordinator must review during a licensing course?
@@ -542,7 +663,7 @@ Which Commission Rule number governs Reinstatement of a License, among the rules
 
 ## LO 2.5 — The traditional police service model
 
-### Q39 — Definition
+### Q43 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model describes most of a patrol officer's or detective's workload as handling crimes already committed, disturbances in progress, and traffic violations?
@@ -556,7 +677,7 @@ Which characteristic of the traditional police service model describes most of a
 
 ---
 
-### Q40 — Definition
+### Q44 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model relies on limited information — mostly from victims, witnesses, and suspects — with focus on resolving one matter before moving to the next?
@@ -570,7 +691,7 @@ Which characteristic of the traditional police service model relies on limited i
 
 ---
 
-### Q41 — Definition
+### Q45 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model treats the criminal justice process as the primary means of resolving incidents?
@@ -584,7 +705,7 @@ Which characteristic of the traditional police service model treats the criminal
 
 ---
 
-### Q42 — Definition
+### Q46 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model measures a department's performance largely through statistical comparisons like citywide crime rate and arrest rate?
@@ -598,7 +719,7 @@ Which characteristic of the traditional police service model measures a departme
 
 ---
 
-### Q43 — Definition
+### Q47 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model describes most decisions being made at the management and mid-management level with little citizen involvement?
@@ -612,7 +733,7 @@ Which characteristic of the traditional police service model describes most deci
 
 ---
 
-### Q44 — Definition
+### Q48 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model reflects that community and agency expectations are often unmet because of the belief that officers will have a high impact on crime?
@@ -626,7 +747,7 @@ Which characteristic of the traditional police service model reflects that commu
 
 ---
 
-### Q45 — Definition
+### Q49 — Definition
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which characteristic of the traditional police service model involves directed patrol, traffic, and investigative approaches that the chapter says have had a large degree of success?
@@ -640,7 +761,7 @@ Which characteristic of the traditional police service model involves directed p
 
 ---
 
-### Q46 — Recall
+### Q50 — Recall
 **LO:** 2.5 · **Source:** BPOC 2.5
 
 Which of the following is NOT one of the traditional police service model's characteristics, per this chapter?
@@ -654,9 +775,33 @@ Which of the following is NOT one of the traditional police service model's char
 
 ---
 
+### Q51 — Select All
+**LO:** 2.5 · **Source:** BPOC 2.5
+
+Select all of the elements of the **traditional police service model**
+
+- [x] Reactive response: Most of the workload of patrol officers and detectives consists of handling crimes that have already been committed, disturbances in progress, traffic violations, and such. Exceptions include crime prevention and narcotics investigations.
+- [x] Incident driven: This relies on limited information, mostly from victims, witnesses, and suspects. Focus tends to be on one “incident” which is resolved before moving to the next “incident.”
+- [x] Use of the criminal justice system: The primary means of resolving incidents is to involve the criminal justice process. It is critical to consider and utilize all elements of the criminal justice system, both sworn and civilian personnel.
+- [x] Use of aggregate statistics: The department’s performance is largely measured by statistical comparisons. The department is doing a good job when the citywide crime rate is low, or the citywide arrest rate is high. The best officers are those who make many arrests or service many calls. Statistics can be affected by a number of factors.
+- [x] Lack of community and employee involvement in the decision-making process: Most decisions are made at the management and mid-management level with little citizen involvement.
+- [x] Citizen and employee expectations: The expectations of both the community and agency employees are often not met due to the expectation that peace officers will have a high impact on crime in the community.
+- [x] The use of specialized units: The traditional model has used specialized units with a high degree of effectiveness. Directed patrol, traffic, investigative, and other related approaches have had a large degree of success in many police agencies.
+- [ ] A new philosophy of policing, based on the concept that police officers and private citizens working together in creative ways can help solve contemporary community problems related to crime, fear of crime, social and physical disorder, and neighborhood decay.
+- [ ] Predicated on the belief that achieving these goals requires that police departments develop a new relationship with the law-abiding people in the community, allowing them a greater voice in setting local police priorities and involving them in efforts to improve the overall quality of life in their neighborhoods. It shifts the focus of police work from handling random calls to solving community problems.
+- [ ] The philosophy is expressed in a new organizational strategy that allows police departments to put theory into practice.
+- [ ] This requires freeing some patrol officers from the isolation of the patrol car and the incessant demands of the police radio, so that these officers can maintain direct, face-to-face contact with people in the same defined geographic area (beat) every day.
+- [ ] This new “community policing officer” (CPO) serves as a generalist: an officer whose mission includes developing imaginative, new ways to address the broad spectrum of community concerns embraced by the community policing philosophy.
+- [ ] The goal is to allow CPOs to own their beat areas, so that they can develop the rapport and trust that is vital in encouraging people to become involved in efforts to address the problems in their neighborhoods. The CPO acts as the police department’s outreach to the community, serving as the people’s link to other public and private agencies that can help. The CPO not only enforces the law but supports and supervises community-based efforts aimed at local concerns. The CPO allows people direct input in setting day-to-day, local police priorities in exchange for their cooperation and participation in efforts to police themselves.
+- [ ] Community policing requires both a philosophical shift in the way that police departments think about their mission and a commitment to the structural changes this new form of policing demands. Community policing provides a new way for the police to provide decentralized and personalized police service that offers every law-abiding citizen an opportunity to become active in the police process.
+
+**Explanation:** BPOC 2.5 lists the elements of the traditional police service model: reactive response, incident driven, use of the criminal justice system, use of aggregate statistics, lack of community and employee involvement in decision-making, citizen and employee expectations, and the use of specialized units. The remaining options describe community policing (BPOC 2.6).
+
+---
+
 ## LO 2.6 — Community policing: definition and service model
 
-### Q47 — Definition
+### Q52 — Definition
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 How does this chapter define "community policing"?
@@ -670,7 +815,7 @@ How does this chapter define "community policing"?
 
 ---
 
-### Q48 — Concept
+### Q53 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 Community policing is described as shifting the focus of police work from what, to what?
@@ -684,7 +829,7 @@ Community policing is described as shifting the focus of police work from what, 
 
 ---
 
-### Q49 — Definition
+### Q54 — Definition
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 The "community policing officer" (CPO) is described as serving in which role?
@@ -698,7 +843,7 @@ The "community policing officer" (CPO) is described as serving in which role?
 
 ---
 
-### Q50 — Concept
+### Q55 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 What is the stated goal of allowing CPOs to "own their beat areas"?
@@ -712,7 +857,7 @@ What is the stated goal of allowing CPOs to "own their beat areas"?
 
 ---
 
-### Q51 — Recall
+### Q56 — Recall
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 As the police department's outreach to the community, the CPO serves as the people's link to what?
@@ -726,7 +871,7 @@ As the police department's outreach to the community, the CPO serves as the peop
 
 ---
 
-### Q52 — Recall
+### Q57 — Recall
 **LO:** 2.6 · **Source:** BPOC 2.6 (Principles of Community Oriented Policing)
 
 The Principles of Community Oriented Policing rest on the belief that who deserves input into the police process, in exchange for their participation and support?
@@ -740,7 +885,7 @@ The Principles of Community Oriented Policing rest on the belief that who deserv
 
 ---
 
-### Q53 — Concept
+### Q58 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Principles of Community Oriented Policing)
 
 Meaningful organizational change under community policing is described as ranging across which areas of a department?
@@ -754,7 +899,7 @@ Meaningful organizational change under community policing is described as rangin
 
 ---
 
-### Q54 — Recall
+### Q59 — Recall
 **LO:** 2.6 · **Source:** BPOC 2.6
 
 Community policing is described as stressing new ways to protect and enhance the lives of vulnerable populations. Which of the following is NOT named among that list?
@@ -768,7 +913,7 @@ Community policing is described as stressing new ways to protect and enhance the
 
 ---
 
-### Q55 — Concept
+### Q60 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per this chapter's comparison table, what is the primary goal of community policing, versus the primary goal of Police-Community Relations (PCR)?
@@ -782,7 +927,7 @@ Per this chapter's comparison table, what is the primary goal of community polic
 
 ---
 
-### Q56 — Concept
+### Q61 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how does community policing's "line function" contrast with PCR's "staff function"?
@@ -796,7 +941,7 @@ Per the comparison table, how does community policing's "line function" contrast
 
 ---
 
-### Q57 — Concept
+### Q62 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 According to the comparison table, community policing reflects a department-wide philosophy and acceptance. How does PCR compare?
@@ -810,7 +955,7 @@ According to the comparison table, community policing reflects a department-wide
 
 ---
 
-### Q58 — Concept
+### Q63 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, community policing has a well-defined role as a "full-service officer" doing both proactive and reactive policing. How is the PCR role defined by contrast?
@@ -824,7 +969,7 @@ Per the comparison table, community policing has a well-defined role as a "full-
 
 ---
 
-### Q59 — Concept
+### Q64 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how does "direct service" under community policing differ from "indirect service" under PCR?
@@ -838,7 +983,7 @@ Per the comparison table, how does "direct service" under community policing dif
 
 ---
 
-### Q60 — Concept
+### Q65 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, who identifies problems and sets the police agenda under community policing, versus under PCR?
@@ -852,7 +997,7 @@ Per the comparison table, who identifies problems and sets the police agenda und
 
 ---
 
-### Q61 — Concept
+### Q66 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how is the officer's role described in reducing fear, disorder, and crime in the neighborhood under community policing, versus under PCR?
@@ -866,7 +1011,7 @@ Per the comparison table, how is the officer's role described in reducing fear, 
 
 ---
 
-### Q62 — Concept
+### Q67 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how does the Chief of Police's role differ between community policing and PCR?
@@ -880,7 +1025,7 @@ Per the comparison table, how does the Chief of Police's role differ between com
 
 ---
 
-### Q63 — Concept
+### Q68 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, what kind of trust develops between officers and citizens under community policing, versus under PCR?
@@ -894,7 +1039,7 @@ Per the comparison table, what kind of trust develops between officers and citiz
 
 ---
 
-### Q64 — Concept
+### Q69 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how accessible is the community policing officer to the public, compared to the PCR officer?
@@ -908,7 +1053,7 @@ Per the comparison table, how accessible is the community policing officer to th
 
 ---
 
-### Q65 — Concept
+### Q70 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how is the officer generally viewed by the community under community policing, versus under PCR?
@@ -922,7 +1067,7 @@ Per the comparison table, how is the officer generally viewed by the community u
 
 ---
 
-### Q66 — Concept
+### Q71 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, which direction does "influence" flow under community policing, versus under PCR?
@@ -936,7 +1081,7 @@ Per the comparison table, which direction does "influence" flow under community 
 
 ---
 
-### Q67 — Concept
+### Q72 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, when intervention becomes necessary, which type of control is the first choice under community policing, versus under PCR?
@@ -950,7 +1095,7 @@ Per the comparison table, when intervention becomes necessary, which type of con
 
 ---
 
-### Q68 — Concept
+### Q73 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how is "success" measured under community policing, versus under PCR?
@@ -964,7 +1109,7 @@ Per the comparison table, how is "success" measured under community policing, ve
 
 ---
 
-### Q69 — Concept
+### Q74 — Concept
 **LO:** 2.6 · **Source:** BPOC 2.6 (Community Policing vs. Police-Community Relations)
 
 Per the comparison table, how does officer staffing composition differ between community policing and PCR?
@@ -978,7 +1123,7 @@ Per the comparison table, how does officer staffing composition differ between c
 
 ---
 
-### Q70 — Recall
+### Q75 — Recall
 **LO:** 2.6 · **Source:** BPOC 2.6 (networking with other professionals)
 
 Per this chapter, what should an officer NEVER do regarding private attorneys or bail bondsmen?
@@ -992,7 +1137,7 @@ Per this chapter, what should an officer NEVER do regarding private attorneys or
 
 ---
 
-### Q71 — Definition
+### Q76 — Definition
 **LO:** 2.6 · **Source:** BPOC 2.6; Government Code §28.003
 
 Small Claims Court handles money matters of what amount or less, without requiring an attorney?
@@ -1006,7 +1151,7 @@ Small Claims Court handles money matters of what amount or less, without requiri
 
 ---
 
-### Q72 — Definition
+### Q77 — Definition
 **LO:** 2.6 · **Source:** BPOC 2.6 (SART)
 
 County-level Sexual Assault Response Teams (SARTs) were mandated in Texas during which legislative session?
@@ -1020,7 +1165,7 @@ County-level Sexual Assault Response Teams (SARTs) were mandated in Texas during
 
 ---
 
-### Q73 — Recall
+### Q78 — Recall
 **LO:** 2.6 · **Source:** BPOC 2.6 (MDT)
 
 What is the statutory focus of a Multidisciplinary Team (MDT), per this chapter?
@@ -1034,7 +1179,7 @@ What is the statutory focus of a Multidisciplinary Team (MDT), per this chapter?
 
 ---
 
-### Q74 — Definition
+### Q79 — Definition
 **LO:** 2.6 · **Source:** BPOC 2.6 (DVHRT)
 
 A Domestic Violence High Risk Team (DVHRT) is focused on what, per this chapter?
@@ -1048,9 +1193,322 @@ A Domestic Violence High Risk Team (DVHRT) is focused on what, per this chapter?
 
 ---
 
+### Q80 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the elements of the **community policing service model**
+
+- [ ] Reactive response: Most of the workload of patrol officers and detectives consists of handling crimes that have already been committed, disturbances in progress, traffic violations, and such. Exceptions include crime prevention and narcotics investigations.
+- [ ] Incident driven: This relies on limited information, mostly from victims, witnesses, and suspects. Focus tends to be on one “incident” which is resolved before moving to the next “incident.”
+- [ ] Use of the criminal justice system: The primary means of resolving incidents is to involve the criminal justice process. It is critical to consider and utilize all elements of the criminal justice system, both sworn and civilian personnel.
+- [ ] Use of aggregate statistics: The department’s performance is largely measured by statistical comparisons. The department is doing a good job when the citywide crime rate is low, or the citywide arrest rate is high. The best officers are those who make many arrests or service many calls. Statistics can be affected by a number of factors.
+- [ ] Lack of community and employee involvement in the decision-making process: Most decisions are made at the management and mid-management level with little citizen involvement.
+- [ ] Citizen and employee expectations: The expectations of both the community and agency employees are often not met due to the expectation that peace officers will have a high impact on crime in the community.
+- [ ] The use of specialized units: The traditional model has used specialized units with a high degree of effectiveness. Directed patrol, traffic, investigative, and other related approaches have had a large degree of success in many police agencies.
+- [x] A new philosophy of policing, based on the concept that police officers and private citizens working together in creative ways can help solve contemporary community problems related to crime, fear of crime, social and physical disorder, and neighborhood decay.
+- [x] Predicated on the belief that achieving these goals requires that police departments develop a new relationship with the law-abiding people in the community, allowing them a greater voice in setting local police priorities and involving them in efforts to improve the overall quality of life in their neighborhoods. It shifts the focus of police work from handling random calls to solving community problems.
+- [x] The philosophy is expressed in a new organizational strategy that allows police departments to put theory into practice.
+- [x] This requires freeing some patrol officers from the isolation of the patrol car and the incessant demands of the police radio, so that these officers can maintain direct, face-to-face contact with people in the same defined geographic area (beat) every day.
+- [x] This new “community policing officer” (CPO) serves as a generalist: an officer whose mission includes developing imaginative, new ways to address the broad spectrum of community concerns embraced by the community policing philosophy.
+- [x] The goal is to allow CPOs to own their beat areas, so that they can develop the rapport and trust that is vital in encouraging people to become involved in efforts to address the problems in their neighborhoods. The CPO acts as the police department’s outreach to the community, serving as the people’s link to other public and private agencies that can help. The CPO not only enforces the law but supports and supervises community-based efforts aimed at local concerns. The CPO allows people direct input in setting day-to-day, local police priorities in exchange for their cooperation and participation in efforts to police themselves.
+- [x] Community policing requires both a philosophical shift in the way that police departments think about their mission and a commitment to the structural changes this new form of policing demands. Community policing provides a new way for the police to provide decentralized and personalized police service that offers every law-abiding citizen an opportunity to become active in the police process.
+
+**Explanation:** These are from the BPOC 2.6 definition of community policing: a new philosophy built on police and citizens working together, a new relationship with law-abiding people, a new organizational strategy, freeing officers from the patrol car for daily face-to-face beat contact, the generalist community policing officer (CPO) who owns the beat, and a philosophical and structural shift toward decentralized, personalized service. The remaining options are elements of the traditional model (BPOC 2.5).
+
+---
+
+### Q81 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the duties of the Community Policing Officer (CPO) described by BPOC chapter 2.
+
+- [x] acts as the direct link between the police and people in the community.
+- [x] As the department’s community outreach specialists, CPOs must be freed from the isolation of the patrol car and the demands of the police radio, so that they can maintain daily, direct, face-to-face contact with the people they serve in a clearly defined beat area.
+- [x] The CPO’s broad role demands continuous, sustained contact with the law-abiding people in the community, so that together they can explore creative new solutions to local concerns involving crime, fear of crime, disorder, and decay, with private citizens serving as unpaid volunteers.
+- [x] As full-fledged law enforcement officers, CPOs respond to calls for service and make arrests, but they also go beyond this narrow focus to develop and monitor broad-based, long-term initiatives that can involve community residents in efforts to improve the overall quality of life in the area over time.
+- [x] As the community’s ombudsman, the CPO also links individuals and groups in the community to the public and private agencies that offer help.
+- [ ] Act with the absence of quality evaluation
+- [ ] Must have a baccalaureate degree
+- [ ] Be controlled by the radio system
+- [ ] Maintain irregular contact between officers and citizens
+
+**Explanation:** BPOC 2.6: the CPO is the direct link between police and the community; is freed from the patrol car and radio for daily face-to-face contact in a defined beat; maintains continuous, sustained contact with law-abiding citizens; responds to calls and makes arrests but also develops long-term initiatives; and serves as the community's ombudsman, linking people to public and private agencies.
+
+---
+
+### Q82 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of those listed as most vulnerable populations in BPOC chapter 2.
+
+- [x] Juveniles
+- [x] LGBTQIA+
+- [x] Elderly people
+- [x] People of color
+- [x] People with a disability
+- [x] Undocumented people
+- [x] People who are economically disadvantaged
+- [x] People experiencing homelessness
+- [ ] Upper class citizens
+- [ ] White people
+- [ ] Tourists
+- [ ] People who "aren't from around here"
+- [ ] Canadians
+- [ ] US citizens
+
+**Explanation:** BPOC 2.6: community policing stresses exploring new ways to protect and enhance the lives of those who are most vulnerable: juveniles, LGBTQIA+, elderly people, people of color, people with a disability, undocumented people, people who are economically disadvantaged, and people experiencing homelessness.
+
+---
+
+### Q83 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all that are aspects of **COMMUNITY POLICING** as opposed to aspects of **POLICE-COMMUNITY RELATIONS**
+
+- [x] Goal: Solve problems - improved relations with citizens is a welcome byproduct
+- [x] Line function: Regular contact between officers and citizens
+- [x] A department-wide philosophy and department-wide acceptance
+- [x] Internal and external influence and respect for officers
+- [x] Well defined role - does both proactive and reactive policing - a full-service officer
+- [x] Direct service - same officer takes complaints and gives crime prevention tips
+- [x] Citizens nominate problems and cooperate in setting up the police agenda
+- [x] The citizens receiving the service (in addition to administrative mechanisms) ensure police accountability
+- [x] Officer is the leader and catalyst for change in the neighborhood to reduce fear, disorder, decay and crime
+- [x] Chief of Police is an advocate and sets the tone for the delivery of both law enforcement and social services in the jurisdiction
+- [x] Officers educate public about issues (such as response time or preventive patrol) and the need to prioritize services
+- [x] Increased trust between the police officer and citizens because of long term, regular contact results in an enhanced flow of information to the police
+- [x] Officer is continually accessible in person, by telephone, or in a decentralized office
+- [x] Regular visibility in the neighborhood
+- [x] Officer is viewed as having a “stake in the community”
+- [x] Officer is a role model (especially a youth role model) because of regular contact with citizens
+- [x] Influence is “from the bottom up” - citizens receiving service help set priorities and influence police policy
+- [x] Meaningful organizational change and departmental restructuring - ranging from officer selection to training, evaluation, and promotion
+- [x] When intervention is necessary, informal social control is the first choice
+- [x] Officer encourages citizens to solve many of their own problems and volunteer to assist neighbors
+- [x] Officer encourages other service providers such as animal control, fire fighters, and mail carriers to become involved in community problem solving
+- [x] Officer mobilizes all community resources, including citizens, private and public agencies, and private businesses
+- [x] Success is determined by the reduction in citizen fear, neighborhood disorder, and crime
+- [x] All officers are sworn personnel
+- [ ] Goal: Change attitudes and project a positive image - improved relations with citizens is a main focus
+- [ ] Staff Function: Irregular contact between officers and citizens
+- [ ] Isolated acceptance often localized in the PCR unit
+- [ ] Limited influence and respect for officers
+- [ ] Loose role definition - focus on dealing with problems of strained relations between police and citizens; crime prevention encouraged
+- [ ] Indirect service - advice on crime prevention from PCR officer but “regular” officers respond to complaints
+- [ ] “Blue Ribbon” committees identify the problems and “preach” to police
+- [ ] Police accountability is ensured by civilian review boards and formal police supervision
+- [ ] Officer provides consultation on crime issues without having identified beat boundaries or “field responsibilities”
+- [ ] Chief of Police reacts to only the law enforcement concerns of special interest groups
+- [ ] Officers focus on racial and ethnic tension issues and encourage increased services
+- [ ] Cordial relationship but often-superficial trust with minimum information flows to prevent and solve crime
+- [ ] Intermittent contact with the public because of city-wide responsibility - contact is made through central headquarters
+- [ ] Officer seldom seen “on the streets”
+- [ ] Officer is viewed as an “outsider”
+- [ ] Citizens do not get to know officer on an intense basis
+- [ ] Influence is “from the top down” - those who “know best” have input and make decisions
+- [ ] Traditional organization stays intact with ‘new” programs periodically added - no fundamental organizational change
+- [ ] When intervention is necessary, formal means of control are typically the first choice
+- [ ] Citizens are encouraged to volunteer but are told to request and expect more government services (including law enforcement)
+- [ ] Service providers stay in traditional roles
+- [ ] Officers do not have mobilization responsibility because there is no specific beat area for which they are responsible
+- [ ] Success is determined by traditional measures (e.g., crime rates and citizen satisfaction with the police)
+- [ ] Most staff members are sworn personnel, but some are non-sworn
+
+**Explanation:** From the BPOC 2.6 Community Policing vs. Police-Community Relations comparison table. The correct options are from the Community Policing column; the others are their Police-Community Relations counterparts.
+
+---
+
+### Q84 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all that are aspects of **POLICE-COMMUNITY RELATIONS** as opposed to aspects of **COMMUNITY POLICING**
+
+- [ ] Goal: Solve problems - improved relations with citizens is a welcome byproduct
+- [ ] Line function: Regular contact between officers and citizens
+- [ ] A department-wide philosophy and department-wide acceptance
+- [ ] Internal and external influence and respect for officers
+- [ ] Well defined role - does both proactive and reactive policing - a full-service officer
+- [ ] Direct service - same officer takes complaints and gives crime prevention tips
+- [ ] Citizens nominate problems and cooperate in setting up the police agenda
+- [ ] The citizens receiving the service (in addition to administrative mechanisms) ensure police accountability
+- [ ] Officer is the leader and catalyst for change in the neighborhood to reduce fear, disorder, decay and crime
+- [ ] Chief of Police is an advocate and sets the tone for the delivery of both law enforcement and social services in the jurisdiction
+- [ ] Officers educate public about issues (such as response time or preventive patrol) and the need to prioritize services
+- [ ] Increased trust between the police officer and citizens because of long term, regular contact results in an enhanced flow of information to the police
+- [ ] Officer is continually accessible in person, by telephone, or in a decentralized office
+- [ ] Regular visibility in the neighborhood
+- [ ] Officer is viewed as having a “stake in the community”
+- [ ] Officer is a role model (especially a youth role model) because of regular contact with citizens
+- [ ] Influence is “from the bottom up” - citizens receiving service help set priorities and influence police policy
+- [ ] Meaningful organizational change and departmental restructuring - ranging from officer selection to training, evaluation, and promotion
+- [ ] When intervention is necessary, informal social control is the first choice
+- [ ] Officer encourages citizens to solve many of their own problems and volunteer to assist neighbors
+- [ ] Officer encourages other service providers such as animal control, fire fighters, and mail carriers to become involved in community problem solving
+- [ ] Officer mobilizes all community resources, including citizens, private and public agencies, and private businesses
+- [ ] Success is determined by the reduction in citizen fear, neighborhood disorder, and crime
+- [ ] All officers are sworn personnel
+- [x] Goal: Change attitudes and project a positive image - improved relations with citizens is a main focus
+- [x] Staff Function: Irregular contact between officers and citizens
+- [x] Isolated acceptance often localized in the PCR unit
+- [x] Limited influence and respect for officers
+- [x] Loose role definition - focus on dealing with problems of strained relations between police and citizens; crime prevention encouraged
+- [x] Indirect service - advice on crime prevention from PCR officer but “regular” officers respond to complaints
+- [x] “Blue Ribbon” committees identify the problems and “preach” to police
+- [x] Police accountability is ensured by civilian review boards and formal police supervision
+- [x] Officer provides consultation on crime issues without having identified beat boundaries or “field responsibilities”
+- [x] Chief of Police reacts to only the law enforcement concerns of special interest groups
+- [x] Officers focus on racial and ethnic tension issues and encourage increased services
+- [x] Cordial relationship but often-superficial trust with minimum information flows to prevent and solve crime
+- [x] Intermittent contact with the public because of city-wide responsibility - contact is made through central headquarters
+- [x] Officer seldom seen “on the streets”
+- [x] Officer is viewed as an “outsider”
+- [x] Citizens do not get to know officer on an intense basis
+- [x] Influence is “from the top down” - those who “know best” have input and make decisions
+- [x] Traditional organization stays intact with ‘new” programs periodically added - no fundamental organizational change
+- [x] When intervention is necessary, formal means of control are typically the first choice
+- [x] Citizens are encouraged to volunteer but are told to request and expect more government services (including law enforcement)
+- [x] Service providers stay in traditional roles
+- [x] Officers do not have mobilization responsibility because there is no specific beat area for which they are responsible
+- [x] Success is determined by traditional measures (e.g., crime rates and citizen satisfaction with the police)
+- [x] Most staff members are sworn personnel, but some are non-sworn
+
+**Explanation:** From the BPOC 2.6 Community Policing vs. Police-Community Relations comparison table. The correct options are from the Police-Community Relations column; the others are their Community Policing counterparts.
+
+---
+
+### Q85 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the below options that are handled by Sexual Assault Response Teams (SART)
+
+- [x] County-level SARTs were mandated in Texas in the 87th Legislative Session.
+- [x] SARTs are community-based, multi-disciplinary teams that work collaboratively to improve their local area’s response to adult sexual assault.
+- [x] Representatives from law enforcement agencies are contributing members of SARTs, along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [x] Wherever possible, survivor representatives should be considered and included.
+- [ ] The MDT is a statutorily authorized local multidisciplinary team that focuses on the investigation and prosecution of child abuse offenders, and the treatment of child abuse victims.
+- [ ] Representatives from law enforcement agencies are contributing members of MDTs, along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] Local multidisciplinary teams focused on reducing risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing and ongoing monitoring.
+- [ ] Local multidisciplinary teams focused on providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services.
+- [ ] Multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18.
+
+**Explanation:** BPOC 2.6, Sexual Assault Response Teams (SART): county-level SARTs were mandated in Texas in the 87th Legislative Session; they are community-based, multi-disciplinary teams improving the local response to adult sexual assault; law enforcement, prosecutors, advocacy agencies, and healthcare professionals contribute; and survivor representatives should be included wherever possible.
+
+---
+
+### Q86 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the below options that are handled by Multidisciplinary Teams (MDTs)
+
+- [ ] County-level SARTs were mandated in Texas in the 87th Legislative Session.
+- [ ] SARTs are community-based, multi-disciplinary teams that work collaboratively to improve their local area’s response to adult sexual assault.
+- [ ] Wherever possible, survivor representatives should be considered and included.
+- [x] The MDT is a statutorily authorized local multidisciplinary team that focuses on the investigation and prosecution of child abuse offenders, and the treatment of child abuse victims.
+- [x] Representatives from law enforcement agencies are contributing members of MDTs, along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] Local multidisciplinary teams focused on reducing risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing and ongoing monitoring.
+- [ ] Local multidisciplinary teams focused on providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services.
+- [ ] Multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18.
+
+**Explanation:** BPOC 2.6, Multidisciplinary Teams (MDTs): statutorily authorized local teams focused on investigating and prosecuting child abuse offenders and treating child abuse victims, with law enforcement, prosecutors, advocacy agencies, and healthcare professionals as contributing members.
+
+---
+
+### Q87 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the below options that are handled by Domestic Violence High Risk Teams (DVHRTs)
+
+- [ ] The MDT is a statutorily authorized local multidisciplinary team that focuses on the investigation and prosecution of child abuse offenders, and the treatment of child abuse victims.
+- [ ] County-level SARTs were mandated in Texas in the 87th Legislative Session.
+- [ ] SARTs are community-based, multi-disciplinary teams that work collaboratively to improve their local area’s response to adult sexual assault.
+- [ ] Wherever possible, survivor representatives should be considered and included.
+- [x] Local multidisciplinary teams focused on reducing risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing and ongoing monitoring.
+- [x] Law enforcement officers are contributing partners on these teams along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] Local multidisciplinary teams focused on providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services.
+- [ ] Multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18.
+
+**Explanation:** BPOC 2.6, Domestic Violence High Risk Teams (DVHRTs): local multidisciplinary teams focused on reducing the risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing, and ongoing monitoring, with law enforcement as contributing partners.
+
+---
+
+### Q88 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the below options that are handled by Care Coordination Teams – Commercially Sexually Exploited Youth (CSEY)
+
+- [x] Local multidisciplinary teams focused on providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services.
+- [x] Law enforcement officers are contributing partners on these teams along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] Multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18.
+- [ ] County-level SARTs were mandated in Texas in the 87th Legislative Session.
+- [ ] SARTs are community-based, multi-disciplinary teams that work collaboratively to improve their local area’s response to adult sexual assault.
+- [ ] Wherever possible, survivor representatives should be considered and included.
+- [ ] The MDT is a statutorily authorized local multidisciplinary team that focuses on the investigation and prosecution of child abuse offenders, and the treatment of child abuse victims.
+- [ ] Representatives from law enforcement agencies are contributing members of MDTs, along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] Local multidisciplinary teams focused on reducing risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing and ongoing monitoring.
+
+**Explanation:** BPOC 2.6, Care Coordination Teams – Commercially Sexually Exploited Youth (CSEY): local multidisciplinary teams providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services, with law enforcement as contributing partners.
+
+---
+
+### Q89 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+Select all of the below options that are handled by Child Fatality Review Teams
+
+- [x] Multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18.
+- [x] Law enforcement officers are contributing partners on these teams along with prosecutors’ offices, advocacy agencies, and healthcare professionals, among others.
+- [ ] County-level SARTs were mandated in Texas in the 87th Legislative Session.
+- [ ] SARTs are community-based, multi-disciplinary teams that work collaboratively to improve their local area’s response to adult sexual assault.
+- [ ] Wherever possible, survivor representatives should be considered and included.
+- [ ] The MDT is a statutorily authorized local multidisciplinary team that focuses on the investigation and prosecution of child abuse offenders, and the treatment of child abuse victims.
+- [ ] Local multidisciplinary teams focused on reducing risk of near-lethal or lethal violence for family violence victims through risk assessment, information sharing and ongoing monitoring.
+- [ ] Local multidisciplinary teams focused on providing comprehensive, coordinated holistic services to CSEY, including specialized advocacy services.
+
+**Explanation:** BPOC 2.6, Child Fatality Review Teams: multidisciplinary teams charged with investigating unexpected and/or preventable deaths of persons under the age of 18, with law enforcement as contributing partners.
+
+---
+
+### Q90 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+What is the importance of involving the community in all policing activities that directly affect the quality of community life (select all that apply)?
+
+- [x] Reducing fear by addressing problem of crime in the community.
+- [x] Establishing trust and harmony between the community residents and the peace officer.
+- [x] Exchanging information to strengthen rapport and enhance community safety.
+- [x] Assisting in identifying and resolving community problems.
+- [x] Clarifying responsibilities on behalf of citizens and peace officers.
+- [x] Helping define service needs.
+- [ ] Driving a wedge between citizens and their accessibility to the police
+- [ ] Allowing the agency to make their own decisions without corrupting factors from the public at large
+- [ ] Set up law enforcement agencies to be a "one-stop shop" for arrest, trial, and sentencing
+- [ ] Leave citizens of high-crime communities to solve their own problems before risking the health and welfare of law enforcement personnel
+- [ ] Maintain a completely reactive, incident driven method of policing in place
+
+**Explanation:** BPOC 2.6 lists six reasons: reducing fear by addressing crime; establishing trust and harmony between residents and officers; exchanging information to strengthen rapport and safety; assisting in identifying and resolving community problems; clarifying responsibilities of citizens and officers; and helping define service needs.
+
+---
+
+### Q91 — Select All
+**LO:** 2.6 · **Source:** BPOC 2.6
+
+The role of the community policing officer (CPO) can be complex. Select all of the below duties the CPO may take on.
+
+- [x] Law Enforcer - CFS, incident driven and reactive
+- [x] Planner - information gatherer and analyst
+- [x] Problem Solver - strategist, critical thinker
+- [x] Community organizer - co-active role in resolving community problems through joint efforts
+- [ ] Legal Expert - Provide personal referrals to attorneys
+- [ ] Magistrate - The authority on judging people and incidents within the community, including sentencing for felonies
+- [ ] Militant - Maintains an abrasive personality to keep members of the community at a distance
+
+**Explanation:** BPOC 2.6: the CPO's role is more complex than the traditional, call-driven role. It includes Law Enforcer (CFS, incident driven and reactive), Planner (information gatherer and analyst), Problem Solver (strategist, critical thinker), and Community Organizer (co-active role in resolving community problems through joint efforts).
+
+---
+
 ## LO 2.7 — The police organization's role in society
 
-### Q75 — Recall
+### Q92 — Recall
 **LO:** 2.7 · **Source:** BPOC 2.7
 
 This chapter poses several possible answers to "what is the purpose of a police organization?" Which of the following is one of them?
@@ -1064,7 +1522,7 @@ This chapter poses several possible answers to "what is the purpose of a police 
 
 ---
 
-### Q76 — Definition
+### Q93 — Definition
 **LO:** 2.7 · **Source:** BPOC 2.7 (quality customer service)
 
 When this chapter asks "for whom do we work," what is the answer given?
@@ -1078,7 +1536,7 @@ When this chapter asks "for whom do we work," what is the answer given?
 
 ---
 
-### Q77 — Definition
+### Q94 — Definition
 **LO:** 2.7 · **Source:** BPOC 2.7 (quality customer service)
 
 When this chapter asks "to whom are we responsible," what is the answer given?
@@ -1092,7 +1550,7 @@ When this chapter asks "to whom are we responsible," what is the answer given?
 
 ---
 
-### Q78 — Definition
+### Q95 — Definition
 **LO:** 2.7 · **Source:** BPOC 2.7 (quality customer service)
 
 How does this chapter define "quality police customer service"?
@@ -1106,7 +1564,7 @@ How does this chapter define "quality police customer service"?
 
 ---
 
-### Q79 — Definition
+### Q96 — Definition
 **LO:** 2.7 · **Source:** BPOC 2.7 (Procedural Justice and Police Legitimacy Policing Model)
 
 How does this chapter define "Procedural Justice"?
@@ -1120,7 +1578,7 @@ How does this chapter define "Procedural Justice"?
 
 ---
 
-### Q80 — Concept
+### Q97 — Concept
 **LO:** 2.7 · **Source:** BPOC 2.7 (Procedural Justice and Police Legitimacy Policing Model)
 
 This chapter distinguishes the official/strict definition of "legitimacy" from "police legitimacy." How?
@@ -1134,7 +1592,7 @@ This chapter distinguishes the official/strict definition of "legitimacy" from "
 
 ---
 
-### Q81 — Recall
+### Q98 — Recall
 **LO:** 2.7 · **Source:** BPOC 2.7 (Four Principles of Procedural Justice)
 
 Which of the following is NOT one of this chapter's Four Principles of Procedural Justice?
@@ -1148,7 +1606,7 @@ Which of the following is NOT one of this chapter's Four Principles of Procedura
 
 ---
 
-### Q82 — Fill-in-Blank
+### Q99 — Fill-in-Blank
 **LO:** 2.7 · **Source:** BPOC 2.7 (Four Principles of Procedural Justice)
 
 Per this chapter's Four Principles of Procedural Justice, "Trustworthiness comes from a Fair and Transparent process" — meaning officers should ______.
@@ -1162,7 +1620,7 @@ Per this chapter's Four Principles of Procedural Justice, "Trustworthiness comes
 
 ---
 
-### Q83 — Definition
+### Q100 — Definition
 **LO:** 2.7 · **Source:** BPOC 2.7 (Aspects of Procedural Justice and Police Legitimacy)
 
 Under the "Community/Individual Involvement" aspect of the Procedural Justice and Police Legitimacy Model, giving others a voice allows a person to do what?
@@ -1176,7 +1634,7 @@ Under the "Community/Individual Involvement" aspect of the Procedural Justice an
 
 ---
 
-### Q84 — Recall
+### Q101 — Recall
 **LO:** 2.7 · **Source:** BPOC 2.7 (Aspects of Procedural Justice and Police Legitimacy)
 
 Under the "Core Goals are emphasized" aspect of this model, which of the following is listed as one of policing's core goals?
@@ -1190,7 +1648,7 @@ Under the "Core Goals are emphasized" aspect of this model, which of the followi
 
 ---
 
-### Q85 — Concept
+### Q102 — Concept
 **LO:** 2.7 · **Source:** BPOC 2.7 (Aspects of Procedural Justice and Police Legitimacy)
 
 What gains or benefits does this chapter attribute to increased legitimacy through procedural justice?
@@ -1204,9 +1662,49 @@ What gains or benefits does this chapter attribute to increased legitimacy throu
 
 ---
 
+### Q103 — Select All
+**LO:** 2.7 · **Source:** BPOC 2.7
+
+There are four principles of procedural justice. Select all of those that are represented below.
+
+- [x] Give people a Voice (listen)
+- [x] Neutrality (be fair)
+- [x] Respectful treatment (be respectful)
+- [x] Trustworthiness comes from a Fair and Transparent process (explain the reason for the decision or action)
+- [ ] Law Enforcement (CFS, incident driven and reactive)
+- [ ] Problem Solving (strategist, critical thinker)
+- [ ] Use of aggregate statistics (everyone is a number)
+- [ ] Distancing from citizens (do not be emotionally involved)
+
+**Explanation:** BPOC 2.7, the four principles of procedural justice: give people a Voice (listen); Neutrality (be fair); Respectful treatment (be respectful); and Trustworthiness from a Fair and Transparent process (explain the reason for the decision or action).
+
+---
+
+### Q104 — Term ID
+**LO:** 2.7 · **Source:** BPOC 2.7
+
+**Answer:** procedural justice
+
+The __________ perspective argues that the legitimacy of the police is linked to public judgements about the fairness of the processes through which the police make decisions and exercise authority. If the public judges that the police exercise their authority using fair procedures, then the public will hopefully view the police as legitimate and will cooperate with policing efforts.
+
+**Explanation:** BPOC 2.7: procedural justice is the perspective that police legitimacy is linked to public judgments about the fairness of the processes police use to make decisions and exercise authority.
+
+---
+
+### Q105 — Term ID
+**LO:** 2.7 · **Source:** BPOC 2.7
+
+**Answer:** legitimacy | police legitimacy
+
+__________ is the community’s view of whether police have acted legally and lawfully. The community’s perception of legitimacy is sometimes influenced strongly by many factors and should be considered when making policies and developing relationships within the community.
+
+**Explanation:** BPOC 2.7: the official definition of "legitimacy" is strictly whether something is lawful, legal, or recognized by law; "police legitimacy" is the community's view of whether police have acted legally and lawfully.
+
+---
+
 ## LO 2.8 — Values of providing quality police customer service
 
-### Q86 — Definition
+### Q106 — Definition
 **LO:** 2.8 · **Source:** BPOC 2.8
 
 Per this chapter, how should a quality-driven police agency and its employees think of themselves?
@@ -1220,7 +1718,7 @@ Per this chapter, how should a quality-driven police agency and its employees th
 
 ---
 
-### Q87 — Recall
+### Q107 — Recall
 **LO:** 2.8 · **Source:** BPOC 2.8
 
 What is described as the most desirable outcome of providing quality police customer service?
@@ -1234,7 +1732,7 @@ What is described as the most desirable outcome of providing quality police cust
 
 ---
 
-### Q88 — Recall
+### Q108 — Recall
 **LO:** 2.8 · **Source:** BPOC 2.8
 
 What rewards does this chapter say come from providing quality police customer service?
@@ -1248,7 +1746,7 @@ What rewards does this chapter say come from providing quality police customer s
 
 ---
 
-### Q89 — Concept
+### Q109 — Concept
 **LO:** 2.8 · **Source:** BPOC 2.8
 
 A peace officer who serves in an agency providing high-quality customer service should enjoy what from the community, per this chapter?
@@ -1264,7 +1762,7 @@ A peace officer who serves in an agency providing high-quality customer service 
 
 ## LO 2.9 — Traditional (formal) organizational structure and police subculture
 
-### Q90 — Recall
+### Q110 — Recall
 **LO:** 2.9 · **Source:** BPOC 2.9
 
 Which of the following is NOT one of the characteristics this chapter lists for the paramilitary organizational model?
@@ -1278,7 +1776,7 @@ Which of the following is NOT one of the characteristics this chapter lists for 
 
 ---
 
-### Q91 — Definition
+### Q111 — Definition
 **LO:** 2.9 · **Source:** BPOC 2.9
 
 The chapter's "Participative" alternative organizational model is described how?
@@ -1292,7 +1790,7 @@ The chapter's "Participative" alternative organizational model is described how?
 
 ---
 
-### Q92 — Recall
+### Q112 — Recall
 **LO:** 2.9 · **Source:** BPOC 2.9
 
 This chapter lists several reasons for examining police subculture. Which of the following is one of them?
@@ -1306,7 +1804,7 @@ This chapter lists several reasons for examining police subculture. Which of the
 
 ---
 
-### Q93 — Concept
+### Q113 — Concept
 **LO:** 2.9 · **Source:** BPOC 2.9
 
 Per this chapter, what shapes and molds young officers, and where does authoritarianism in policing actually come from?
@@ -1320,7 +1818,7 @@ Per this chapter, what shapes and molds young officers, and where does authorita
 
 ---
 
-### Q94 — Recall
+### Q114 — Recall
 **LO:** 2.9 · **Source:** BPOC 2.9 (Characteristics of the Police Subculture)
 
 Which of the following is NOT one of the characteristics of police subculture listed in this chapter?
@@ -1334,7 +1832,7 @@ Which of the following is NOT one of the characteristics of police subculture li
 
 ---
 
-### Q95 — Definition
+### Q115 — Definition
 **LO:** 2.9 · **Source:** BPOC 2.9 (Characteristics of the Police Subculture)
 
 Which police subculture characteristic describes "taking care of one another"?
@@ -1348,7 +1846,7 @@ Which police subculture characteristic describes "taking care of one another"?
 
 ---
 
-### Q96 — Definition
+### Q116 — Definition
 **LO:** 2.9 · **Source:** BPOC 2.9 (Characteristics of the Police Subculture)
 
 Which police subculture characteristic is described as "protection from hostile environment"?
@@ -1362,7 +1860,7 @@ Which police subculture characteristic is described as "protection from hostile 
 
 ---
 
-### Q97 — Definition
+### Q117 — Definition
 **LO:** 2.9 · **Source:** BPOC 2.9 (Characteristics of the Police Subculture)
 
 Which police subculture characteristic is described using a "Hobbesian view of social work"?
@@ -1376,7 +1874,7 @@ Which police subculture characteristic is described using a "Hobbesian view of s
 
 ---
 
-### Q98 — Recall
+### Q118 — Recall
 **LO:** 2.9 · **Source:** BPOC 2.9 (Subculture social problems)
 
 This chapter's discussion of subculture social problems attributes "cynicism and alienation" to which researcher?
@@ -1390,7 +1888,7 @@ This chapter's discussion of subculture social problems attributes "cynicism and
 
 ---
 
-### Q99 — Concept
+### Q119 — Concept
 **LO:** 2.9 · **Source:** BPOC 2.9 (Subculture benefits)
 
 Per this chapter's brief note on subculture benefits, what must officers ultimately choose between?
@@ -1404,7 +1902,7 @@ Per this chapter's brief note on subculture benefits, what must officers ultimat
 
 ---
 
-### Q100 — Definition
+### Q120 — Definition
 **LO:** 2.9 · **Source:** BPOC 2.9 (Characteristics of the Police Subculture)
 
 Which police subculture characteristic reflects officers being watchful and questioning as a product of the demands of the job?
@@ -1418,9 +1916,31 @@ Which police subculture characteristic reflects officers being watchful and ques
 
 ---
 
+### Q121 — Select All
+**LO:** 2.9 · **Source:** BPOC 2.9
+
+Select all of the below that are defined as characteristics of the police subculture.
+
+- [x] Curiosity and suspiciousness
+- [x] Solidarity - taking care of one another
+- [x] Secrecy - protection from hostile environment
+- [x] Political and social conservatism
+- [x] Cynicism - Hobbesian view of social work
+- [x] Social isolation
+- [x] Authoritarian approach to control, conformity
+- [x] Support during difficult/stressful time
+- [ ] Extreme optimism - difficulty viewing any situation as bad
+- [ ] Pacifism - unwillingness to use force in any situation
+- [ ] Outgoing - strong desire to engage in small talk with all persons
+- [ ] Flamboyance - cool, aloof, and the life of the party
+
+**Explanation:** BPOC 2.9 characteristics of the police subculture: curiosity and suspiciousness; solidarity; secrecy; political and social conservatism; cynicism; social isolation; authoritarian approach to control and conformity; and support during difficult/stressful times.
+
+---
+
 ## LO 2.10 — Crime Stoppers
 
-### Q101 — Recall
+### Q122 — Recall
 **LO:** 2.10 · **Source:** BPOC 2.10
 
 Per the instructor note in this chapter, which numbered TCOLE course is to be delivered at this point in the curriculum for Crime Stoppers?
@@ -1434,7 +1954,7 @@ Per the instructor note in this chapter, which numbered TCOLE course is to be de
 
 ---
 
-### Q102 — Recall
+### Q123 — Recall
 **LO:** 2.10 · **Source:** BPOC 2.10
 
 Who is recommended as a co-presenter for this Crime Stoppers section of the course?
