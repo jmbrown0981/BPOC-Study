@@ -1373,3 +1373,132 @@ Which of the following are Pillars of Character?
 - [ ] Humility
 
 **Explanation:** The six Pillars of Character in BPOC 1.4 are Trustworthiness, Respect, Responsibility, Fairness, Caring, and Citizenship.
+
+---
+
+### Q98 — Select All
+**LO:** 1.1 · **Source:** BPOC 1.1
+
+Select all of the statements that would define a vocation as a profession.
+
+- [x] The members possess a specialized body of knowledge, not easily acquired, accomplished through advanced education or training.
+- [x] The members share a commitment to serving the public (or community they serve).
+- [x] The members share a commitment to promoting the common good.
+- [x] The members share a professional creed or code of ethics that effectively holds themselves and their colleagues to a higher standard of behavior than is the norm for other vocations.
+- [ ] The members have meetings at a set interval to discuss potential changes.
+- [ ] The members wear an identifying mark or insignia
+- [ ] The members are 7 or more in number.
+
+**Explanation:** BPOC 1.1: a profession is a vocation whose members possess a specialized body of knowledge, not easily acquired, through advanced education or training; share a commitment to serving the public; share a commitment to promoting the common good; and share a professional creed or code of ethics that holds them to a higher standard of behavior than other vocations.
+
+---
+
+### Q99 — Select All
+**LO:** 1.2 · **Source:** BPOC 1.2
+
+Identify all characteristics of professionalism listed below.
+
+- [x] Service to others
+- [x] Assessment of needs to others
+- [x] Theoretical body of knowledge obtained through extended pre-service education.
+- [x] Standards for entry, practice, and ethical conduct
+- [x] Professional association to maintain standards.
+- [x] Continuing education and lifelong learning
+- [ ] "Alpha" personality and belief that they are better than others.
+- [ ] Upper middle class or higher income bracket.
+- [ ] Micromanaging of people.
+- [ ] Pursues their craft solely for monetary gain.
+
+**Explanation:** BPOC 1.2 lists six characteristics of professionalism: service to others; assessment of needs to others; a theoretical body of knowledge obtained through extended pre-service education; standards for entry, practice, and ethical conduct; a professional association to maintain standards; and continuing education and lifelong learning.
+
+---
+
+### Q100 — Select All
+**LO:** 1.4 · **Source:** BPOC 1.4
+
+Select all items that comprise elements of the ethical role.
+
+- [x] To act in a manner that reflects belief in the fundamental value of ethical behavior and in application of this value to your job.
+- [x] To conduct daily activities in an objective manner striving to be uninfluenced by emotion, personal prejudice, or insufficient evidence.
+- [x] To provide objective and constructive assistance or information to all persons, regardless of personal feelings.
+- [x] To assist the public to understand how they can help in achieving objective and ethical behavior.
+- [x] To embrace fairness and consistency, giving a voice to all parties, transparency and impartiality.
+- [ ] To selectively choose cases to pursue based on personal opinion of their importance.
+- [ ] To treat others differently based on race, gender, immigration status, income bracket, and other social factors.
+- [ ] To occasionally disregard a person's constitutional rights if it could provide an advantage.
+- [ ] To take advantage of less fortunate persons in an effort to gain personal status or advantage.
+
+**Explanation:** BPOC 1.4 lists five elements of the ethical role: acting in a way that reflects belief in the value of ethical behavior; conducting daily activities objectively, uninfluenced by emotion, personal prejudice, or insufficient evidence; giving objective, constructive assistance to all persons regardless of personal feelings; helping the public understand how they can help achieve objective and ethical behavior; and embracing fairness and consistency, voice for all parties, transparency, and impartiality.
+
+---
+
+### Q101 — Select All
+**LO:** 1.4 · **Source:** BPOC 1.4
+
+Identify motivations for ethical behavior listed in BPOC Chapter 1.
+
+- [x] Inner Benefit
+- [x] Personal Advantage
+- [x] Approval (of family, peers, etc)
+- [x] Religion
+- [x] Habit
+- [ ] Self-interest
+- [ ] Pursuit of happiness
+- [ ] Desire to be better than others
+- [ ] Camouflage a secret, unsavory lifestyle
+
+**Explanation:** BPOC 1.4 lists five motivations for ethical behavior: Inner Benefit (virtue is its own reward), Personal Advantage (it is prudent and good business), Approval (self-esteem and the admiration of loved ones and peers), Religion, and Habit (upbringing or training). Self-interest and the pursuit of happiness are listed in the outline as obstacles to ethical behavior, not motivations.
+
+---
+
+### Q102 — Select All
+**LO:** 1.4 · **Source:** BPOC 1.4
+
+Identify the possible attitude stages of a peace officer's career listed in BPOC chapter 1.
+
+- [x] Idealistic
+- [x] Frustrated
+- [x] Defiant
+- [x] Resigned
+- [x] Aware
+- [x] Decisive
+- [x] Commitment
+- [ ] Desire
+- [ ] Angry
+- [ ] Jealous
+- [ ] Disgusted
+- [ ] Denial
+- [ ] Bargaining
+- [ ] Acceptance
+
+**Explanation:** BPOC 1.4 lists seven attitude stages of an officer's career, in order: Idealistic, Frustrated, Defiant, Resigned, Aware, Decisive, and Commitment.
+
+---
+
+### Q103 — Select All
+**LO:** 1.5 · **Source:** BPOC 1.5
+
+Identify examples of physical courage from the list below.
+
+- [x] Facing barricaded, armed suspect
+- [x] Duty to intervene.
+- [ ] Refusing gratuities
+- [ ] Refusing to participate in cover-up.
+- [ ] Refusing to participate in ethnic or gender-based humor or practical joking, etc.
+
+**Explanation:** BPOC 1.5 lists two examples of physical courage: facing a barricaded, armed suspect, and the duty to intervene. The duty to intervene is also an example of moral courage.
+
+---
+
+### Q104 — Select All
+**LO:** 1.5 · **Source:** BPOC 1.5
+
+Identify examples of moral courage from the list below.
+
+- [x] Refusing gratuities
+- [x] Refusing to participate in cover-up.
+- [x] Refusing to participate in ethnic or gender-based humor or practical joking, etc.
+- [x] Duty to intervene.
+- [ ] Facing barricaded, armed suspect
+
+**Explanation:** BPOC 1.5 lists four examples of moral courage: refusing gratuities; refusing to participate in a cover-up; refusing to participate in ethnic or gender-based humor or practical joking; and the duty to intervene. The duty to intervene is also an example of physical courage.
