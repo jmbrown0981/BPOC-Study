@@ -260,20 +260,16 @@ federal texts are nearly word-for-word identical.
 ---
 
 ### Q15 — Concept
-**LO:** 7.1 · **Source:** TX Constitution Art. 1 Sec. 9; USC Amendment IV
+**LO:** 7.1 · **Source:** TX Constitution Art. 1 Sec. 9; USC Amendment IV; CCP Art. 1.06
 
-Compare the wording of TX Const. Art. 1 Sec. 9 to the federal Fourth Amendment. What's true of
-the two texts?
+Compare the wording of TX Const. Art. 1 Sec. 9 to the federal Fourth Amendment. What's true of the two texts?
 
 - [ ] The Texas version has no probable cause requirement at all
-- [ ] The federal version requires the warrant to particularly describe the place/persons/things, while the Texas version has no such requirement
-- [x] Both require a warrant to be supported by probable cause (oath or affirmation) and to describe with reasonable particularity what is to be searched or seized — the two provisions are substantively very close in wording and scope
+- [ ] The federal version requires the warrant to describe the place/persons/things, while the Texas version has no such requirement
+- [x] Both require probable cause supported by oath or affirmation and a description of what is to be searched or seized (federal: "particularly describing"; Texas: "describing them as near as may be") — the two provisions are substantively very close
 - [ ] The Texas version applies only to searches of vehicles, not homes
 
-**Explanation:** Unlike habeas corpus or bail, the Fourth Amendment and TX Art. 1 Sec. 9 are a
-case where the state and federal texts largely mirror each other — both require probable cause
-supported by oath or affirmation, and both require reasonable particularity in describing the
-place or person to be searched/seized.
+**Explanation:** Unlike habeas corpus or bail, the Fourth Amendment and TX Art. 1 Sec. 9 largely mirror each other. Both require probable cause supported by oath or affirmation and a description of the place, person, or thing to be searched or seized. The federal text says "particularly describing"; the Texas text, repeated in CCP Art. 1.06, says "describing them as near as may be."
 
 ---
 
@@ -651,22 +647,16 @@ directly.
 ---
 
 ### Q37 — Recall
-**LO:** 7.1 · **Source:** TX Constitution Art. 1 Secs. 11a–11d
+**LO:** 7.1 · **Source:** BPOC 7.1; TX Constitution Art. 1 Secs. 11a, 11b, 11c
 
-TX Constitution Art. 1 has an entire family of sections (11a, 11b, 11c, 11d) added over the
-decades that let a judge **deny** bail entirely under specific circumstances. Which of the
-following is one of those circumstances?
+BPOC 7.1 lists Texas Constitution Art. 1 Secs. 11a, 11b, and 11c alongside the bail provision (Sec. 11). Which of the following matches the circumstances those sections address?
 
 - [ ] The defendant cannot afford the bail amount initially set
-- [x] The accused has previously violated a condition of release or a family-violence protective order, or is charged with certain violent/sexual offenses and the state shows denial is needed to prevent nonappearance or protect community safety
+- [x] Multiple convictions (11a), violation of a condition of release (11b), and violation of a family-violence protective order (11c)
 - [ ] The defendant requests a jury trial instead of a bench trial
 - [ ] The defendant has hired a private attorney rather than accepting appointed counsel
 
-**Explanation:** Sec. 11a covers repeat felony offenders and certain violent/sexual offense
-accusations; Sec. 11b covers violations of release conditions; Sec. 11c covers violations of
-family-violence protective orders; Sec. 11d (added November 2025) allows denial for a specific
-list of violent/sexual offenses when the state proves by the applicable standard that bail can't
-reasonably prevent nonappearance or ensure community/victim safety.
+**Explanation:** BPOC 7.1 titles: Sec. 11a "Multiple Convictions, Denial of Bail"; Sec. 11b "Violation of Condition of Release"; Sec. 11c "Violation of Protective Order - Family Violence." Each sets out circumstances in which a judge may deny bail. Texas voters approved an additional bail-denial amendment in November 2025 (Proposition 3) that is not yet reflected in the BPOC outline.
 
 ---
 
@@ -739,20 +729,16 @@ Amendment's core protections with Texas's separate "open courts" guarantee.
 ---
 
 ### Q42 — Scenario
-**LO:** 7.1 · **Source:** TX Constitution Art. 1 Sec. 11; TX Constitution Art. 1 Sec. 11d
+**LO:** 7.1 · **Source:** TX Constitution Art. 1 Sec. 11; November 2025 bail amendment (Proposition 3, SJR 5) — not in the BPOC outline
 
-A defendant is charged with aggravated robbery. The state wants bail denied outright, not just
-set high. Under current Texas constitutional law, can that happen?
+A defendant is charged with aggravated robbery committed after November 2025. The state wants bail denied outright, not just set high. Under current Texas constitutional law, can that happen?
 
-- [x] Yes, if the state satisfies the requirements of Art. 1 Sec. 11d — aggravated robbery is on the specific offense list, and the state can seek denial by showing (by the applicable evidentiary standard) that bail can't reasonably prevent nonappearance or protect community/victim safety, following a hearing
+- [x] Yes — under the November 2025 bail amendment (Proposition 3), aggravated robbery is one of the listed violent offenses, and a judge may deny bail after a hearing if the state meets its burden (clear and convincing evidence that release can't protect the community, law enforcement, or the victim, or a preponderance that release can't ensure appearance)
 - [ ] No — the Eighth Amendment guarantees that bail must always be set, just not excessively
 - [ ] No — Texas has never permitted outright denial of bail under any circumstances
 - [ ] Yes, but only if the defendant has no prior criminal history at all
 
-**Explanation:** Aggravated robbery is one of the enumerated offenses in Sec. 11d, added by the
-November 2025 constitutional amendment, which allows a judge to deny bail entirely (not just set
-it high) after a hearing where the state meets its burden — a much more direct denial mechanism
-than the older "denial after multiple felonies" framework in Sec. 11a.
+**Explanation:** Proposition 3 (SJR 5), approved by voters in November 2025, lets judges deny bail for listed violent offenses (including capital murder, murder, certain aggravated assaults, aggravated kidnapping, aggravated robbery, aggravated sexual assault, indecency with a child, and trafficking) after a hearing. Denial is not automatic; the state must request it and meet its burden. This goes beyond the BPOC outline, which lists Secs. 11, 11a, 11b, and 11c.
 
 ---
 
@@ -1089,7 +1075,189 @@ obtained as a result of the unlawful stop or search.
 
 ---
 
-### Q61 — Recall
+### Q61 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+Select all of the Texas Constitution sections BPOC 7.1 pairs with the **First Amendment**.
+
+- [x] TX Constitution Art. 1 Sec. 4: No religious test
+- [x] TX Constitution Art. 1 Sec. 6: Freedom of worship
+- [x] TX Constitution Art. 1 Sec. 8: Freedom of speech and press
+- [x] TX Constitution Art. 1 Sec. 27: Right of Assembly and Petition
+- [ ] TX Constitution Art. 1 Sec. 9: Searches and Seizures
+- [ ] TX Constitution Art. 1 Sec. 23: Right to Keep and Bear Arms
+- [ ] TX Constitution Art. 1 Sec. 25: Quartering Soldiers in Houses
+
+**Explanation:** BPOC 7.1 pairs Art. 1 Secs. 4, 6, 8, and 27 (plus CCP Arts. 1.16 and 1.17) with the First Amendment. Sec. 9 pairs with the Fourth, Sec. 23 with the Second, and Sec. 25 with the Third.
+
+---
+
+### Q62 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+Select all of the Texas Constitution and CCP provisions BPOC 7.1 pairs with the **Fifth Amendment**.
+
+- [x] TX Constitution Art. 1 Sec. 10: Rights of Accused in Criminal Prosecutions
+- [x] TX Constitution Art. 1 Sec. 14: Double Jeopardy
+- [x] TX Constitution Art. 1 Sec. 17: Taking Property
+- [x] TX Constitution Art. 1 Sec. 19: Deprivation of Life, Liberty, Property, Due Course of Law
+- [x] CCP Art. 1.04: Due Course of Law
+- [x] CCP Art. 1.10: Jeopardy
+- [x] CCP Art. 1.11: Acquittal a Bar
+- [ ] CCP Art. 1.24: Public Trial
+- [ ] CCP Art. 1.25: Confronted by Witnesses
+- [ ] CCP Art. 1.09: Cruelty Forbidden
+
+**Explanation:** BPOC 7.1 Fifth Amendment pairings: TX Const. Art. 1 Secs. 10, 13, 14, 17, 19 and CCP Arts. 1.04, 1.05, 1.10, 1.11. Public trial (1.24) and confrontation (1.25) pair with the Sixth Amendment; Cruelty Forbidden (1.09) pairs with the Eighth.
+
+---
+
+### Q63 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+Select all of the Texas Constitution and CCP provisions BPOC 7.1 pairs with the **Sixth Amendment**.
+
+- [x] TX Constitution Art. 1 Sec. 15: Right of Trial by Jury
+- [x] CCP Art. 1.051: Right to Representation by Counsel
+- [x] CCP Art. 1.12: Right to Jury
+- [x] CCP Art. 1.15: Jury in Felony
+- [x] CCP Art. 1.24: Public Trial
+- [x] CCP Art. 1.25: Confronted by Witnesses
+- [ ] CCP Art. 1.06: Searches and Seizures
+- [ ] CCP Art. 1.08: Habeas Corpus
+- [ ] TX Constitution Art. 1 Sec. 17: Taking Property
+
+**Explanation:** BPOC 7.1 Sixth Amendment pairings: TX Const. Art. 1 Secs. 10 and 15; CCP Arts. 1.05, 1.051, 1.12, 1.15, 1.24, 1.25. Searches and seizures (1.06) pairs with the Fourth Amendment, habeas corpus (1.08) with USC Art. 1 Sec. 9 Cl. 2, and taking property (Sec. 17) with the Fifth.
+
+---
+
+### Q64 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+Select all of the Texas Constitution and CCP provisions BPOC 7.1 pairs with the **Eighth Amendment**.
+
+- [x] TX Constitution Art. 1 Sec. 11: Bail
+- [x] TX Constitution Art. 1 Sec. 11a: Multiple Convictions, Denial of Bail
+- [x] TX Constitution Art. 1 Sec. 11b: Violation of Condition of Release
+- [x] TX Constitution Art. 1 Sec. 11c: Violation of Protective Order - Family Violence
+- [x] TX Constitution Art. 1 Sec. 20: Outlawry or Transportation
+- [x] TX Constitution Art. 1 Sec. 21: Corruption of Blood
+- [x] CCP Art. 1.07: Right to Bail
+- [x] CCP Art. 1.09: Cruelty Forbidden
+- [x] CCP Art. 1.18: Outlawry and Transportation
+- [x] CCP Art. 1.19: Corruption of Blood
+- [ ] CCP Art. 1.10: Jeopardy
+- [ ] TX Constitution Art. 1 Sec. 3: Equal Rights
+- [ ] TX Constitution Art. 1 Sec. 1: Freedom and Sovereignty of the State
+
+**Explanation:** BPOC 7.1 Eighth Amendment pairings also include TX Const. Art. 1 Sec. 13. Jeopardy pairs with the Fifth Amendment, Equal Rights with the Fourteenth, and Freedom and Sovereignty of the State with the Tenth.
+
+---
+
+### Q65 — Recall
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+Per BPOC 7.1, CCP Art. 1.07 (Right to Bail) was updated by which legislative session, effective January 1, 2022?
+
+- [x] The 87th Legislative Session
+- [ ] The 85th Legislative Session
+- [ ] The 86th Legislative Session
+- [ ] The 88th Legislative Session
+
+**Explanation:** BPOC 7.1: "CCP Art. 1.07: Right to Bail Updated by the 87th Legislative Session effective 01/01/2022." It now reads: "Any person shall be eligible for bail unless denial of bail is expressly permitted by the Texas Constitution or by other law."
+
+---
+
+### Q66 — Recall
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+BPOC 7.1 pairs the **Tenth Amendment** (powers not delegated to the federal government are retained by the states) with which Texas Constitution section?
+
+- [x] Art. 1 Sec. 1: Freedom and Sovereignty of the State
+- [ ] Art. 1 Sec. 2: Inherent Political Power
+- [ ] Art. 1 Sec. 3: Equal Rights
+- [ ] Art. 1 Sec. 16: Bills of Attainder, Ex Post Facto Law
+
+**Explanation:** BPOC 7.1: 10th Amendment = TX Const. Art. 1 Sec. 1; 9th Amendment = Art. 1 Sec. 2; 14th Amendment = Art. 1 Secs. 3 and 3a; Bills of Attainder/Ex Post Facto = Art. 1 Sec. 16.
+
+---
+
+### Q67 — Recall
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+BPOC 7.1 pairs the **Ninth Amendment** (all rights not enumerated are retained by the people) with which Texas Constitution section?
+
+- [x] Art. 1 Sec. 2: Inherent Political Power
+- [ ] Art. 1 Sec. 1: Freedom and Sovereignty of the State
+- [ ] Art. 1 Sec. 3a: Equality Under the Law
+- [ ] Art. 1 Sec. 27: Right of Assembly and Petition
+
+**Explanation:** BPOC 7.1: 9th Amendment = TX Const. Art. 1 Sec. 2 (Inherent Political Power).
+
+---
+
+### Q68 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1 (Miscellaneous Rights)
+
+"Any person may waive any right guaranteed them in court." Select all of the CCP articles BPOC 7.1 lists under this miscellaneous right.
+
+- [x] CCP Art. 1.13: Waiver of Trial by Jury
+- [x] CCP Art. 1.14: Waiver of Rights
+- [x] CCP Art. 1.141: Waiver of Indictment for Noncapital Felony
+- [ ] CCP Art. 1.12: Right to Jury
+- [ ] CCP Art. 1.15: Jury in Felony
+- [ ] CCP Art. 1.051: Right to Representation by Counsel
+
+**Explanation:** BPOC 7.1 Miscellaneous Rights: CCP Arts. 1.13, 1.14, and 1.141. Arts. 1.12, 1.15, and 1.051 are paired with the Sixth Amendment.
+
+---
+
+### Q69 — Recall
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+BPOC 7.1 lists the Seventh Amendment right as:
+
+- [x] Right to trial by jury in civil cases
+- [ ] Right to a speedy and public trial
+- [ ] Right to a grand jury indictment
+- [ ] Right to counsel
+
+**Explanation:** BPOC 7.1: "USC 7th Amendment - Right to trial by jury in civil cases." BPOC lists no Texas Constitution or CCP pairing for it.
+
+---
+
+### Q70 — Recall
+**LO:** 7.1 · **Source:** BPOC 7.1
+
+BPOC 7.1 pairs TX Constitution Art. 1 Sec. 13 (Excessive Bail, Cruel and Unusual Punishment, Due Course of Law) with which amendments?
+
+- [x] Both the Fifth and the Eighth Amendments
+- [ ] Only the Fifth Amendment
+- [ ] Only the Eighth Amendment
+- [ ] The Sixth and Fourteenth Amendments
+
+**Explanation:** BPOC 7.1 lists Art. 1 Sec. 13 under both the 5th Amendment (due course of law) and the 8th Amendment (excessive bail, cruel and unusual punishment). The instructor note says some TX Constitution and CCP references appear under more than one USC right.
+
+---
+
+### Q71 — Select All
+**LO:** 7.1 · **Source:** BPOC 7.1 Comprehensive Scenario (attempted burglary/carwash)
+
+In the BPOC 7.1 carwash scenario, select all of the facts that support the officer's suspicion of the two men.
+
+- [x] The man's description matches the earlier attempted burglary call
+- [x] The carwash's coin machines had been burglarized three times that week
+- [x] The business closed at 10 pm, and it is now 11:30 pm
+- [x] Bandanas filled with jewelry, watches, and loose change are in the front seat
+- [x] The brothers give conflicting accounts of who owns the items, despite sharing the same address
+- [ ] The men are Hispanic
+- [ ] The car has tinted windows
+
+**Explanation:** Race or ethnicity alone is never a basis for suspicion, and tinted windows say nothing about burglary. The matching description, the pattern of burglaries at an after-hours location, the bundled property, and the contradictory ownership stories are the specific, articulable facts.
+
+---
+
+### Q72 — Recall
 **LO:** 7.2 · **Source:** BPOC 7.2
 
 BPOC Chapter 7 breaks the criminal justice system into three components. What are they?
@@ -1105,7 +1273,7 @@ corrections, municipal/county/state/probation/parole) layers.
 
 ---
 
-### Q62 — Concept
+### Q73 — Concept
 **LO:** 7.2 · **Source:** BPOC 7.2
 
 Which statement best describes the layered structure of Texas law enforcement?
@@ -1122,7 +1290,7 @@ on where and what kind of offense occurs.
 
 ---
 
-### Q63 — Recall
+### Q74 — Recall
 **LO:** 7.2 · **Source:** BPOC 7.2
 
 Which correctional-system layer corresponds to community supervision *before* a person is sent
@@ -1139,7 +1307,7 @@ to confinement (i.e., in lieu of incarceration, following a conviction)?
 
 ---
 
-### Q64 — Definition
+### Q75 — Definition
 **LO:** 7.2 · **Source:** BPOC 7.2
 
 What's the key difference between probation and parole?
@@ -1155,7 +1323,7 @@ conditions, but they arise at different points in the process.
 
 ---
 
-### Q65 — Recall
+### Q76 — Recall
 **LO:** 7.2 · **Source:** BPOC 7.2; CCP Art. 4.14
 
 Municipal courts handle criminal matters at what level?
@@ -1171,7 +1339,7 @@ ceiling as Justice of the Peace courts, just for city rather than county-level m
 
 ---
 
-### Q66 — Scenario
+### Q77 — Scenario
 **LO:** 7.2 · **Source:** BPOC 7.2 Comprehensive Scenario (military reservation)
 
 A single-car fatality occurs on a highway. Skid marks begin inside city limits; the car's final
@@ -1192,7 +1360,7 @@ investigation.
 
 ---
 
-### Q67 — Scenario
+### Q78 — Scenario
 **LO:** 7.2 · **Source:** BPOC 7.2 Comprehensive Scenario (Rio Grande)
 
 A body is found floating in the Rio Grande River near an unused international bridge, at a point
@@ -1212,7 +1380,7 @@ nuance BPOC wants officers to recognize rather than assume based on who responde
 
 ---
 
-### Q68 — Concept
+### Q79 — Concept
 **LO:** 7.2 · **Source:** BPOC 7.2
 
 Why does it matter, practically, whether a case is investigated at the city, county, state, or
@@ -1229,7 +1397,42 @@ valid. A case tried in a court without jurisdiction can be challenged on that ba
 
 ---
 
-### Q69 — Concept
+### Q80 — Select All
+**LO:** 7.2 · **Source:** BPOC 7.2
+
+Select all of the parts of the **correctional system** BPOC 7.2 lists.
+
+- [x] Municipal Fines
+- [x] County Jail
+- [x] State Prison
+- [x] Probation
+- [x] Parole
+- [ ] Municipal Court
+- [ ] Sheriff's Office
+- [ ] Court of Criminal Appeals
+
+**Explanation:** BPOC 7.2 correctional system: municipal fines, county jail, state prison, probation, and parole. Municipal Court and the Court of Criminal Appeals are courts; the Sheriff's Office is law enforcement.
+
+---
+
+### Q81 — Select All
+**LO:** 7.2 · **Source:** BPOC 7.2
+
+Select all of the levels of **courts** BPOC 7.2 lists in the structure of the criminal justice system.
+
+- [x] Municipal
+- [x] County
+- [x] State
+- [x] Federal
+- [ ] Probation
+- [ ] Parole
+- [ ] County Jail
+
+**Explanation:** BPOC 7.2 courts: municipal, county, state, and federal. Law enforcement is listed as city, county, state, and federal; probation, parole, and county jail are part of the correctional system.
+
+---
+
+### Q82 — Concept
 **LO:** 7.3 · **Source:** BPOC 7.3
 
 BPOC 7.3 describes how the three components of the criminal justice system affect each other.
@@ -1247,7 +1450,7 @@ in isolation from one another.
 
 ---
 
-### Q70 — Scenario
+### Q83 — Scenario
 **LO:** 7.3 · **Source:** BPOC 7.3
 
 A city dramatically increases proactive arrests for low-level offenses without any corresponding
@@ -1265,7 +1468,23 @@ chain.
 
 ---
 
-### Q71 — Definition
+### Q84 — Select All
+**LO:** 7.3 · **Source:** BPOC 7.3
+
+Select all of the effects of criminal justice component interaction listed in BPOC 7.3.
+
+- [x] Increased arrests cause increase in court dockets
+- [x] Court dispositions increase correctional populations
+- [x] Correctional releases (parole and time complete) often impact police functions if the correctional system fails
+- [ ] Increased arrests reduce court dockets
+- [ ] Court dispositions reduce police workload
+- [ ] Correctional releases have no effect on police functions
+
+**Explanation:** BPOC 7.3 lists these three effects. The lecture scenario adds variables such as early parole, plea bargaining, and city police vs. FBI on cases.
+
+---
+
+### Q85 — Definition
 **LO:** 7.4 · **Source:** BPOC 7.4
 
 How does BPOC define **civil law**?
@@ -1281,7 +1500,7 @@ criminal proceedings."
 
 ---
 
-### Q72 — Definition
+### Q86 — Definition
 **LO:** 7.4 · **Source:** BPOC 7.4 (citing Cochran's Law Lexicon, Fifth Edition)
 
 BPOC defines a **tort** as:
@@ -1296,7 +1515,7 @@ recognized, private injuries or wrongs. A civil action."
 
 ---
 
-### Q73 — Definition
+### Q87 — Definition
 **LO:** 7.4 · **Source:** BPOC 7.4
 
 How does BPOC define **criminal law**?
@@ -1312,7 +1531,7 @@ Penal Code.
 
 ---
 
-### Q74 — Recall
+### Q88 — Recall
 **LO:** 7.4 · **Source:** BPOC 7.4
 
 BPOC lists divorce, child custody, protective orders, injunctions, debt, and personal damages as
@@ -1328,45 +1547,101 @@ criminal-law examples: criminal trespass, murder, assault, and theft.
 
 ---
 
-### Q75 — Scenario
-**LO:** 7.4 · **Source:** BPOC 7.4 Comprehensive Scenario (child custody/support)
+### Q89 — Scenario
+**LO:** 7.4 · **Source:** BPOC 7.4 Comprehensive Scenario (child custody/support); Penal Code Sec. 25.05
 
-An officer responds to a child custody dispute. The mother reports that, per an existing court
-order, her ex-husband is required to pay monetary child support — and he hasn't paid anything in
-six months. Is this a civil or criminal matter?
+An officer responds to a child custody dispute. The mother reports that, per an existing court order, her ex-husband is required to pay monetary support for their five-year-old son — and he hasn't paid anything in six months. Is this a civil or criminal matter?
 
 - [ ] Purely civil — nonpayment of court-ordered child support is never a criminal matter in Texas
-- [x] It can be both — the underlying custody/support arrangement is fundamentally civil (family law), but a documented, willful, ongoing failure to comply with an existing court support order can also meet the elements of a separate criminal offense (criminal nonsupport), which is why the responding officer should document the facts carefully rather than assume it's purely a civil dispute to be worked out between the parties
+- [x] It can be both — the custody/support order is civil (family law), but intentionally or knowingly failing to support his child can also be the criminal offense of Criminal Nonsupport (Penal Code Sec. 25.05), so the officer should document the facts rather than dismiss it as purely civil
 - [ ] Purely criminal — any missed child support payment is automatically a felony
 - [ ] Neither — this is exclusively a matter for the school district to handle
 
-**Explanation:** The existence of a formal court support order the father is knowingly and
-willfully disregarding is the key fact that can elevate a family-law (civil) support dispute
-into a criminal nonsupport referral, rather than treating it as a purely civil enforcement
-matter left to family court.
+**Explanation:** Penal Code Sec. 25.05: an individual commits an offense if they intentionally or knowingly fail to provide support for their child younger than 18, or for their child who is the subject of a court order requiring support. It is a state jail felony, and it is an affirmative defense that the actor could not provide support. The family court can still enforce its order civilly while a prosecution is pending (Sec. 25.05(e)).
 
 ---
 
-### Q76 — Scenario
-**LO:** 7.4 · **Source:** BPOC 7.4 Comprehensive Scenario (separated couple)
+### Q90 — Scenario
+**LO:** 7.4 · **Source:** BPOC 7.4 Comprehensive Scenario (separated couple); Penal Code Sec. 25.05
 
-A separated (but not divorced) couple has no court order in place. The wife says her husband
-verbally agreed to help financially during the separation but hasn't provided anything; she
-wants to "press charges." What should the responding officer recognize?
+A separated (but not divorced) couple has no court order in place. The wife says her husband verbally agreed to help her financially during the separation but hasn't provided anything; she wants to "press charges." What should the responding officer recognize?
 
-- [x] Without an existing court order or other established legal duty of support, this looks like a civil matter (a broken informal agreement, properly addressed through family court — e.g., seeking a temporary support order) rather than a criminal case; the absence of a court-imposed duty makes it much harder to establish the kind of willful, unlawful failure that criminal nonsupport requires
-- [ ] This is automatically a criminal case identical in strength to Q75's scenario
+- [x] This is a civil matter: Criminal Nonsupport (Penal Code Sec. 25.05) covers failing to support one's child, not a spouse, and a broken informal agreement between spouses is addressed in family court (e.g., by seeking a temporary support order)
+- [ ] This is a criminal case identical to the court-ordered child support scenario
 - [ ] The officer should arrest the husband on the spot for theft
 - [ ] Nothing can be done for the wife in either the civil or criminal system
 
-**Explanation:** Contrast with Q75: here there's no formal support order, just an informal
-verbal understanding during a separation. That's a much weaker basis for a criminal referral —
-the appropriate path is typically directing the spouse toward family court to establish a formal
-support obligation, which is a civil, not criminal, process.
+**Explanation:** Contrast with the first BPOC 7.4 scenario, where a father failed to support his child. Sec. 25.05 applies to support for "the individual's child," so a spouse's own financial support under an informal agreement is not criminal nonsupport. The appropriate path is family court, a civil process.
 
 ---
 
-### Q77 — Recall
+### Q91 — Select All
+**LO:** 7.4 · **Source:** BPOC 7.4
+
+Select all of the examples BPOC 7.4 gives of **civil** law matters.
+
+- [x] Divorce
+- [x] Child custody
+- [x] Protective orders
+- [x] Injunctions
+- [x] Debt
+- [x] Personal damages
+- [ ] Criminal trespass
+- [ ] Murder
+- [ ] Assault
+- [ ] Theft
+
+**Explanation:** BPOC 7.4 civil examples: divorce, child custody, protective orders, injunctions, debt, personal damages. Criminal examples: criminal trespass, murder, assault, theft.
+
+---
+
+### Q92 — Select All
+**LO:** 7.4 · **Source:** BPOC 7.4
+
+Select all of the examples BPOC 7.4 gives of **criminal** law matters.
+
+- [x] Criminal trespass
+- [x] Murder
+- [x] Assault
+- [x] Theft
+- [ ] Divorce
+- [ ] Injunctions
+- [ ] Debt
+- [ ] Personal damages
+
+**Explanation:** BPOC 7.4 criminal examples: criminal trespass, murder, assault, theft.
+
+---
+
+### Q93 — Recall
+**LO:** 7.4 · **Source:** Penal Code Sec. 25.05
+
+In the first BPOC 7.4 child-support scenario, if the ex-husband intentionally or knowingly failed to support his five-year-old son, what offense and level would apply?
+
+- [x] Criminal Nonsupport, a state jail felony
+- [ ] Criminal Nonsupport, a Class C misdemeanor
+- [ ] Theft, a Class B misdemeanor
+- [ ] Interference with Child Custody, a Class A misdemeanor
+
+**Explanation:** Penal Code Sec. 25.05: an individual commits an offense if they intentionally or knowingly fail to provide support for their child younger than 18, or for their child who is the subject of a court order requiring support. Sec. 25.05(f): a state jail felony. Sec. 25.05(d): it is an affirmative defense that the actor could not provide support.
+
+---
+
+### Q94 — Recall
+**LO:** 7.4 · **Source:** BPOC 7.4
+
+The BPOC 7.4 instructor note directs instructors to which reference for civil and criminal law definitions?
+
+- [x] Black's Law Dictionary
+- [ ] Cochran's Law Lexicon only
+- [ ] The Texas Penal Code only
+- [ ] The Texas Rules of Civil Procedure
+
+**Explanation:** BPOC 7.4 instructor note: "Refer to Black's Law Dictionary." The tort definition itself is cited to Cochran's Law Lexicon, Fifth Edition.
+
+---
+
+### Q95 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Sec. 3
 
 Which Texas court is the state's highest **civil**-only appellate court?
@@ -1382,7 +1657,7 @@ appellate authority between two separate top courts.
 
 ---
 
-### Q78 — Recall
+### Q96 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Sec. 4; CCP Art. 4.04
 
 Which Texas court is the state's highest **criminal**-only appellate court, and has final
@@ -1399,7 +1674,7 @@ US Supreme Court is the single top court for both civil and criminal federal mat
 
 ---
 
-### Q79 — Concept
+### Q97 — Concept
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Sec. 5
 
 Where do death-penalty case appeals go under Texas Constitution Art. 5 Sec. 5?
@@ -1415,7 +1690,7 @@ Courts of Appeals first, with further CCA review being discretionary rather than
 
 ---
 
-### Q80 — Recall
+### Q98 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Sec. 6; CCP Art. 4.03
 
 The intermediate Courts of Appeals have jurisdiction over:
@@ -1431,7 +1706,7 @@ district.
 
 ---
 
-### Q81 — Recall
+### Q99 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Secs. 7–8; CCP Art. 4.05
 
 District Courts generally have original jurisdiction over:
@@ -1447,7 +1722,7 @@ here.
 
 ---
 
-### Q82 — Recall
+### Q100 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Secs. 15–16; CCP Arts. 4.07–4.08
 
 County Courts at Law typically handle criminal cases at what grade?
@@ -1463,7 +1738,7 @@ Justice/Municipal Courts in the criminal hierarchy.
 
 ---
 
-### Q83 — Recall
+### Q101 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Constitution Art. 5 Sec. 19; CCP Art. 4.11
 
 Justice of the Peace courts have criminal jurisdiction limited to:
@@ -1479,7 +1754,7 @@ municipal courts, just covering county rather than city territory.
 
 ---
 
-### Q84 — Recall
+### Q102 — Recall
 **LO:** 7.5 · **Source:** BPOC 7.5; TX Government Code Sec. 27.060; TX Family Code Sec. 51.04
 
 Small claims matters and juvenile matters are both handled in what kind of proceeding, according
@@ -1497,7 +1772,7 @@ committed by an adult.
 
 ---
 
-### Q85 — Scenario
+### Q103 — Scenario
 **LO:** 7.5 · **Source:** BPOC 7.5 Comprehensive Scenario (murder); TX Constitution Art. 5 Sec. 8
 
 An individual is arrested and charged with Murder under Penal Code Chapter 19. Which Texas court
@@ -1513,10 +1788,10 @@ felony prosecutions under Art. 5 Sec. 8.
 
 ---
 
-### Q86 — Scenario
+### Q104 — Scenario
 **LO:** 7.5 · **Source:** BPOC 7.5 Comprehensive Scenario (murder)
 
-If the defendant in Q85 is convicted at trial and appeals (and this is not a death-penalty
+If the defendant in Q103 is convicted at trial and appeals (and this is not a death-penalty
 case), where does the appeal go first?
 
 - [x] The Court of Appeals for that district
@@ -1530,7 +1805,7 @@ the CCA after a Court of Appeals decision is discretionary, not automatic.
 
 ---
 
-### Q87 — Scenario
+### Q105 — Scenario
 **LO:** 7.5 · **Source:** BPOC 7.5 Comprehensive Scenario (park citations)
 
 Two men are found in a city park after closing hours. One is issued a Class C citation for the
@@ -1550,7 +1825,69 @@ separately for the same incident.
 
 ---
 
-### Q88 — Concept
+### Q106 — Select All
+**LO:** 7.5 · **Source:** BPOC 7.5
+
+Per the BPOC 7.5 court table, select all of the courts listed as handling **civil** cases (alone or along with criminal cases).
+
+- [x] U.S. Supreme Court
+- [x] Texas Supreme Court
+- [x] Courts of Appeals
+- [x] District Courts
+- [x] County Court at Law
+- [x] Justice Courts
+- [x] Small claims court
+- [x] Juvenile court
+- [ ] Court of Criminal Appeals
+- [ ] Municipal Courts
+
+**Explanation:** BPOC 7.5 table: the Court of Criminal Appeals is criminal only, and Municipal Courts handle criminal cases, city ordinances, and Class C misdemeanors. Every other listed court handles civil cases.
+
+---
+
+### Q107 — Recall
+**LO:** 7.5 · **Source:** BPOC 7.5
+
+Under the state judicial system, how high could a non-death-penalty murder conviction ultimately be appealed?
+
+- [x] The Court of Criminal Appeals, Texas's highest criminal court
+- [ ] The Texas Supreme Court
+- [ ] The Court of Appeals for the district only
+- [ ] The District Court
+
+**Explanation:** The appeal goes first to the Court of Appeals (CCP 4.03), with further review by the Court of Criminal Appeals, which has "final appellate and review jurisdiction in criminal cases coextensive with the limits of the state" (CCP 4.04 Sec. 2). The Texas Supreme Court is civil only. Beyond the state system, review would be by the U.S. Supreme Court.
+
+---
+
+### Q108 — Recall
+**LO:** 7.5 · **Source:** CCP Art. 4.05
+
+Under CCP Art. 4.05, district courts have original jurisdiction in criminal cases of the grade of felony and of which misdemeanors?
+
+- [x] All misdemeanors involving official misconduct
+- [ ] All Class A misdemeanors
+- [ ] All Class C misdemeanors
+- [ ] Misdemeanors committed in a municipality
+
+**Explanation:** CCP Art. 4.05: "District courts and criminal district courts shall have original jurisdiction in criminal cases of the grade of felony, of all misdemeanors involving official misconduct, and of misdemeanor cases transferred to the district court under Article 4.17."
+
+---
+
+### Q109 — Recall
+**LO:** 7.5 · **Source:** CCP Art. 4.14
+
+Under CCP Art. 4.14, a municipal court's jurisdiction over Class C (fine-only) state-law offenses arising within the city limits is:
+
+- [x] Concurrent with the justice court of the precinct in which the municipality is located
+- [ ] Exclusive, with no other court having jurisdiction
+- [ ] Shared with the district court
+- [ ] Limited to traffic offenses only
+
+**Explanation:** CCP Art. 4.14(a) gives municipal courts exclusive original jurisdiction over city ordinance cases; 4.14(b) gives them concurrent jurisdiction with the justice court over fine-only state-law offenses arising within the city limits.
+
+---
+
+### Q110 — Concept
 **LO:** 7.6 · **Source:** CCP Art. 2A.151
 
 Under CCP Art. 2A.151 (Types of Magistrates), which of the following is included in the
@@ -1569,7 +1906,7 @@ exercising that role in every case.
 
 ---
 
-### Q89 — Recall
+### Q111 — Recall
 **LO:** 7.6 · **Source:** CCP Art. 2A.152
 
 CCP Art. 2A.152 (General Duties of Magistrates) requires each magistrate to do all of the
@@ -1587,7 +1924,7 @@ judicial officers, not prosecutors.
 
 ---
 
-### Q90 — Concept
+### Q112 — Concept
 **LO:** 7.6 · **Source:** CCP Art. 2A.151; BPOC 7.6
 
 Why does it matter for a patrol officer to understand that a wide range of judges — not just
@@ -1604,3 +1941,31 @@ review or initial appearance — any qualifying magistrate in the jurisdiction c
 perform those duties, which matters heavily for after-hours and weekend operations.
 
 ---
+
+### Q113 — Recall
+**LO:** 7.6 · **Source:** CCP Art. 2A.151
+
+Which of the following is listed as a magistrate under CCP Art. 2A.151?
+
+- [x] A mayor or recorder of a municipality
+- [ ] A chief of police
+- [ ] A district attorney
+- [ ] A county sheriff
+
+**Explanation:** CCP Art. 2A.151(14): "a mayor or recorder of a municipality or a judge of a municipal court." Peace officers and prosecutors are not magistrates.
+
+---
+
+### Q114 — Select All
+**LO:** 7.6 · **Source:** CCP Art. 2A.152
+
+Select all of the general duties of magistrates under CCP Art. 2A.152.
+
+- [x] Preserve the peace within the magistrate's jurisdiction using all lawful means
+- [x] Issue all process intended to aid in preventing and suppressing crime
+- [x] Cause the arrest of offenders using lawful means so that the offenders may be brought to punishment
+- [ ] Prosecute criminal cases in the magistrate's own court
+- [ ] Serve as defense counsel for indigent defendants
+- [ ] Investigate offenses as a peace officer
+
+**Explanation:** CCP Art. 2A.152 lists exactly these three duties.
