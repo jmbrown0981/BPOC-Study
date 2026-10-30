@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<title>SFST Instructions — Verbal Practice | BPOC Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE4; --paper-dim:#EAE4D3; --ink:#221F19; --ink-soft:#5B564A;
+    --navy:#132339; --navy-2:#1C3552; --brass:#B08B3C; --brass-light:#D7B667;
+    --rule:#C9BF9F; --green:#4B6A50; --amber:#9B7E32; --gray:#8B8674; --rust:#9A4A1E;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased;}
+  header.hero{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color:#EDE7D6; padding:30px 20px 22px; position:relative; overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(215,182,103,0.05) 0 2px, transparent 2px 26px); pointer-events:none;}
+  .hero-inner{position:relative; max-width:900px; margin:0 auto;}
+  .back-link{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--brass-light); text-decoration:none; margin-bottom:12px;}
+  .back-link:hover{text-decoration:underline;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brass-light); margin:0 0 8px;}
+  .hero h1{font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; line-height:1.15; margin:0 0 8px;}
+  .hero p.sub{margin:0; font-size:13.5px; color:#C8C0AA; max-width:72ch; line-height:1.55;}
+  .hero p.sub a{color:var(--brass-light);}
+
+  main{max-width:900px; margin:0 auto; padding:20px 20px 60px;}
+  .note{font-size:12.8px; line-height:1.6; color:var(--ink-soft); background:var(--paper-dim); border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin:0 0 16px;}
+  .note b{color:var(--ink);}
+  .note.warn{background:#F7EFD9; border-color:#E3CF9A; color:var(--ink);}
+  .note .x{float:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:underline;}
+
+  .tabs{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 14px;}
+  .tab{flex:1 1 180px; text-align:left; background:#fff; border:1.5px solid var(--rule); border-radius:10px; padding:10px 14px; cursor:pointer; font-family:'IBM Plex Sans',sans-serif; color:var(--ink);}
+  .tab .k{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; color:var(--brass); font-weight:700;}
+  .tab b{font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--navy);}
+  .tab .best{display:block; font-size:11.5px; color:var(--ink-soft); margin-top:2px;}
+  .tab.on{background:var(--navy); border-color:var(--navy);}
+  .tab.on b{color:#fff;} .tab.on .k{color:var(--brass-light);} .tab.on .best{color:#C8C0AA;}
+
+  .card{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:16px 18px; margin:0 0 14px;}
+  .card h2{font-family:'IBM Plex Serif',serif; font-size:18px; color:var(--navy); margin:0 0 4px;}
+  .card .sub{font-size:13px; color:var(--ink-soft); margin:0 0 12px; line-height:1.5;}
+
+  .rec-row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 10px;}
+  .btn{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13px; cursor:pointer; border-radius:8px; padding:9px 16px; border:1px solid transparent;}
+  .btn-primary{background:var(--brass); color:#221F19; border-color:var(--brass);} .btn-primary:hover{background:var(--brass-light);}
+  .btn-ghost{background:#fff; color:var(--navy); border-color:var(--rule);} .btn-ghost:hover{border-color:var(--brass);}
+  .btn:disabled{opacity:0.45; cursor:default;}
+  .mic{display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:#fff; border:none;}
+  .mic .dot{width:10px; height:10px; border-radius:50%; background:#C8C0AA;}
+  .mic.live{background:var(--rust);}
+  .mic.live .dot{background:#fff; animation:pulse 1s infinite;}
+  @keyframes pulse{0%,100%{opacity:1} 50%{opacity:0.25}}
+  .status{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-soft);}
+  textarea{width:100%; min-height:150px; resize:vertical; font-family:'IBM Plex Sans',sans-serif; font-size:14.5px; line-height:1.55; border:1.5px solid var(--rule); border-radius:9px; padding:10px 12px; background:#FBF9F4; color:var(--ink);}
+  textarea:focus{outline:none; border-color:var(--brass);}
+  .interim{min-height:20px; font-size:13.5px; color:var(--gray); font-style:italic; margin:6px 2px 0;}
+
+  details.peek{margin-top:10px; border:1px dashed var(--rule); border-radius:9px; padding:8px 12px; background:var(--paper);}
+  details.peek summary{cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-weight:700; color:var(--navy);}
+  details.peek ol{margin:8px 0 2px; padding-left:1.4em; font-size:13.5px; line-height:1.55;}
+
+  .grades{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:0 0 14px;}
+  .grade{border-radius:12px; padding:14px 16px;}
+  .grade.a{background:var(--navy); color:#EDE7D6;}
+  .grade.b{background:var(--paper); border:2px dashed var(--rule);}
+  .grade .k{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass-light); display:block;}
+  .grade.b .k{color:var(--brass);}
+  .grade .v{font-family:'IBM Plex Serif',serif; font-size:40px; font-weight:700; line-height:1.1;}
+  .grade.b .v{color:var(--navy);}
+  .grade .s{display:block; font-size:12.8px; line-height:1.45; margin-top:4px;}
+  .grade.a .s{color:#C8C0AA;}
+
+  .kp{display:grid; gap:7px;}
+  .kpi{display:flex; gap:10px; align-items:flex-start; border:1px solid var(--rule); border-radius:9px; padding:8px 12px; font-size:13.6px; line-height:1.45; background:#fff;}
+  .kpi .m{flex:none; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; color:#fff;}
+  .kpi.ok .m{background:var(--green);} .kpi.no .m{background:var(--rust);} .kpi.opt .m{background:var(--gray);}
+  .kpi.no{background:#FBF1EC; border-color:#E6C3B2;}
+  .kpi b{color:var(--navy);}
+  .kpi .why{display:block; font-size:12.2px; color:var(--ink-soft);}
+  .kpi .why .def{color:var(--rust); font-weight:600;}
+
+  .diff{font-size:14px; line-height:1.9;}
+  .diff .ln{margin:0 0 8px; padding:6px 10px; border-left:3px solid var(--rule); background:#FBF9F4; border-radius:0 6px 6px 0;}
+  .diff .ln .pct{float:right; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; color:var(--ink-soft); margin-left:8px;}
+  .diff .hit{color:var(--green); font-weight:600;}
+  .diff .miss{color:var(--rust); text-decoration:underline dotted; text-underline-offset:3px;}
+  .legend{display:flex; gap:14px; flex-wrap:wrap; font-size:12px; color:var(--ink-soft); margin:0 0 8px;}
+  .legend .hit{color:var(--green); font-weight:700;} .legend .miss{color:var(--rust); font-weight:700;}
+  .tag{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; padding:1px 7px; border-radius:7px; background:var(--paper-dim); color:var(--ink-soft); vertical-align:1px;}
+  .hidden{display:none !important;}
+
+  @media (max-width:700px){
+    .grades{grid-template-columns:1fr;}
+    .hero h1{font-size:22px;}
+    .card{padding:14px 12px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <a class="back-link" href="../index.html">&larr; Back to hub</a>
+    <p class="hero-eyebrow">Ch. 23 Intoxicated Driver &middot; SFST &middot; Verbal Practice</p>
+    <h1>Say the Instructions &mdash; SFST Verbal Practice</h1>
+    <p class="sub">Pick a test, press the mic, and give the instructions out loud from memory as if the subject were in front of you. You get two grades: <b>key points</b> (every instruction a clue depends on) and <b>script match</b> (how closely you followed the Participant Manual script). Companion to the <a href="slides/sfst.html">SFST slides</a>.</p>
+  </div>
+</header>
+
+<main>
+  <div class="note" id="howNote">
+    <button class="x" id="hideHow" type="button">hide</button>
+    <b>Why two grades?</b> Following the script word for word is never wrong. But what holds up in court is that the subject was given every instruction a clue depends on, so there is no &ldquo;the subject was never told to&nbsp;___&rdquo; defense. <b>Key points</b> should be 100%; <b>script match</b> shows how close to verbatim you were. Demonstrations (&ldquo;like this&rdquo;) are part of the script but can&rsquo;t be graded by voice.
+  </div>
+  <div class="note warn hidden" id="noSpeech"><b>Speech recognition isn&rsquo;t available in this browser.</b> It works in Chrome, Edge, and Safari (desktop, Android, and iPhone). You can still practice by typing your instructions into the box and pressing <b>Grade</b>.</div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div class="card">
+    <h2 id="testTitle"></h2>
+    <p class="sub" id="testSub"></p>
+    <div class="rec-row">
+      <button class="btn mic" id="micBtn" type="button"><span class="dot"></span><span id="micLbl">Start speaking</span></button>
+      <button class="btn btn-primary" id="gradeBtn" type="button">Grade</button>
+      <button class="btn btn-ghost" id="clearBtn" type="button">Clear</button>
+      <span class="status" id="status"></span>
+    </div>
+    <textarea id="transcript" placeholder="Your words appear here as you speak. You can also type, or fix a word the recognizer got wrong, before grading."></textarea>
+    <div class="interim" id="interim"></div>
+    <details class="peek" id="peek"><summary>Peek at the Participant Manual script</summary><ol id="peekList"></ol></details>
+  </div>
+
+  <div id="results" class="hidden">
+    <div class="grades">
+      <div class="grade a"><span class="k">Key points</span><span class="v" id="kpScore"></span><span class="s" id="kpSub"></span></div>
+      <div class="grade b"><span class="k">Script match</span><span class="v" id="smScore"></span><span class="s" id="smSub"></span></div>
+    </div>
+    <div class="card">
+      <h2>Key points</h2>
+      <p class="sub">Each one ties to an evaluation criterion or a clue. A miss is an instruction the subject could say they never received.</p>
+      <div class="kp" id="kpList"></div>
+    </div>
+    <div class="card">
+      <h2>Script match</h2>
+      <div class="legend"><span><span class="hit">green</span> = said, in order</span><span><span class="miss">red</span> = missed or out of order</span></div>
+      <div class="diff" id="diff"></div>
+    </div>
+  </div>
+</main>
+
+<script>
+/* ===================== TEST DATA ===================== */
+/* script: the spoken Participant Manual lines (officer notes in parentheses removed).
+   keys: groups = every group must match; each group lists alternative patterns.
+   Pattern syntax: words separated by spaces; "a|b" = either word; "word*" = word prefix;
+   "~" = up to 4 other words in between. min = how many times the first group must match. */
+const TESTS = {
+  hgn: {
+    name:'Horizontal Gaze Nystagmus', short:'HGN',
+    sub:'Give the HGN instructions. The script is short; the key points are the stance, head still, and following with the eyes.',
+    script:[
+      'Feet together, hands at sides.',
+      'Head still.',
+      'Look at stimulus.',
+      'Follow movement with eyes.'
+    ],
+    keys:[
+      {label:'Remove glasses, if worn', ref:'Evaluation criterion 1', opt:true, groups:[['glass*','contact*']]},
+      {label:'Feet together', ref:'Stance &mdash; criterion 2 (proper verbal instructions)', groups:[['feet ~ together','foot ~ together']]},
+      {label:'Hands at sides', ref:'Stance &mdash; criterion 2', groups:[['hand*|arm* ~ side*']]},
+      {label:'Keep the head still', ref:'Criterion 2; head movement undermines the smooth pursuit check', defense:'subject was never told to keep their head still', groups:[['head ~ still','do not ~ move ~ head','not ~ move ~ head']]},
+      {label:'Look at the stimulus', ref:'Criterion 2', groups:[['look* ~ stimulus|pen|light|finger|tip|object|this','focus ~ stimulus|pen|light|finger|tip|object']]},
+      {label:'Follow the movement with the eyes (only)', ref:'Criterion 2; all six clues come from eye tracking', defense:'subject was never told to follow with their eyes only', groups:[['follow* ~ eye*','follow* ~ movement','eye* ~ only','only ~ eye*']]}
+    ]
+  },
+  wat: {
+    name:'Walk and Turn', short:'WAT',
+    sub:'Give the full Walk and Turn instructions: the stance, then the walking instructions.',
+    script:[
+      'Place your left foot on the line.',
+      'Place your right foot on the line ahead of the left foot, with the heel of your right foot against the toe of the left foot.',
+      'Place your arms down at your sides.',
+      'Maintain this position until I have completed the instructions. Do not start to walk until told to do so.',
+      'Do you understand the instructions so far?',
+      'When I tell you to start, take nine heel-to-toe steps on the line, turn, and take nine heel-to-toe steps down the line.',
+      'When you turn, keep the front foot on the line, and turn by taking a series of small steps with the other foot, like this.',
+      'While you are walking, keep your arms at your sides, watch your feet at all times, and count your steps out loud.',
+      'Once you start walking, do not stop until you have completed the test.',
+      'Do you understand the instructions?'
+    ],
+    keys:[
+      {label:'Heel-to-toe stance on the line (left foot behind right)', ref:'Criterion 2 &middot; clue: cannot keep balance', defense:'subject was never told how to stand', groups:[['left foot ~ line','left ~ behind'],['heel ~ toe']]},
+      {label:'Arms down at sides (stance)', ref:'Criterion 2 &middot; clue: cannot keep balance', groups:[['arm* ~ side*']]},
+      {label:'Do not start walking until told', ref:'Criterion 3 &middot; clue: starts too soon', defense:'subject was never told not to start walking', groups:[['do not ~ start*|walk*|begin* ~ until','wait ~ until ~ tell*|told','not ~ start* ~ until','not ~ walk* ~ until']]},
+      {label:'Asks if the instructions so far are understood', ref:'Criterion 3', groups:[['understand*']]},
+      {label:'Nine heel-to-toe steps', ref:'Criterion 4 &middot; clues: misses heel-to-toe, incorrect number of steps', defense:'subject was never told how many steps to take', groups:[['nine ~ heel ~ toe','nine ~ step*']]},
+      {label:'Turn: lead foot stays on the line, small steps with the other foot', ref:'Criterion 5 &middot; clue: improper turn', defense:'subject was never told how to turn', groups:[['turn*'],['front|lead ~ foot','keep ~ foot ~ on ~ line'],['small ~ step*','series ~ step*']]},
+      {label:'Nine heel-to-toe steps back', ref:'Criterion 6 &middot; clue: incorrect number of steps', defense:'subject was never told to take nine steps back', groups:[['nine ~ heel ~ toe','nine ~ step*']], min:2, alt:[['nine ~ back|down|return*']]},
+      {label:'Keep arms at sides while walking', ref:'Criterion 9 &middot; clue: uses arms to balance', defense:'subject was never told to keep their arms down', groups:[['arm* ~ side*']], min:2, alt:[['do not ~ raise ~ arm*','not ~ raise ~ arm*']]},
+      {label:'Watch your feet', ref:'Criterion 8', groups:[['watch* ~ feet|foot','look* ~ feet|foot','eye* ~ feet|foot']]},
+      {label:'Count steps out loud', ref:'Criterion 7 (divided attention)', groups:[['count* ~ loud|aloud','count* ~ step*']]},
+      {label:'Do not stop walking once you start', ref:'Criterion 10 &middot; clue: stops walking', defense:'subject was never told not to stop', groups:[['do not ~ stop','not ~ stop','keep walking','without stopping']]},
+      {label:'Asks if all instructions are understood', ref:'Criterion 11', groups:[['understand*']], min:2}
+    ]
+  },
+  ols: {
+    name:'One Leg Stand', short:'OLS',
+    sub:'Give the full One Leg Stand instructions, through telling the subject to begin.',
+    script:[
+      'Please stand with your feet together and your arms down at the sides, like this.',
+      'Do not start to perform the test until I tell you to do so.',
+      'Do you understand the instructions so far?',
+      'When I tell you to start, raise either leg with the foot approximately six inches off the ground, keeping your foot parallel to the ground.',
+      'Keep both legs straight and your arms at your side.',
+      'While holding that position, count out loud in the following manner: one thousand one, one thousand two, one thousand three, and so on until told to stop.',
+      'Keep your arms at your sides at all times and keep watching the raised foot.',
+      'Do you understand?',
+      'Go ahead and perform the test.'
+    ],
+    keys:[
+      {label:'Stand with feet together', ref:'Criterion 2', groups:[['feet ~ together','foot ~ together']]},
+      {label:'Arms down at sides (stance)', ref:'Criterion 2', groups:[['arm* ~ side*']]},
+      {label:'Do not start until told', ref:'Criterion 3', defense:'subject was never told not to start', groups:[['do not ~ start*|perform*|begin* ~ until','wait ~ until ~ tell*|told','not ~ start* ~ until']]},
+      {label:'Asks if the instructions so far are understood', ref:'Criterion 3', groups:[['understand*']]},
+      {label:'Raise either leg', ref:'Criterion 4 &middot; clue: puts foot down', groups:[['raise|lift ~ either|one ~ leg|foot','either leg']]},
+      {label:'About six inches off the ground', ref:'Criterion 4 &middot; clue: puts foot down', defense:'subject was never told how high to hold the foot', groups:[['six ~ inch*']]},
+      {label:'Raised foot parallel to the ground', ref:'Criterion 4', groups:[['parallel']]},
+      {label:'Keep both legs straight', ref:'Criterion 5', groups:[['leg* ~ straight']]},
+      {label:'Count out loud: “one thousand one, one thousand two…”', ref:'Criterion 6 (divided attention)', defense:'subject was never told how to count', groups:[['count*'],['thousand one','one thousand']]},
+      {label:'Until told to stop', ref:'Criteria 6 and 8 (officer times 30 seconds)', groups:[['until ~ stop','until ~ told ~ stop']]},
+      {label:'Keep arms at sides at all times', ref:'Clue: uses arms to balance', defense:'subject was never told to keep their arms down', groups:[['arm* ~ side*']], min:2},
+      {label:'Watch the raised foot', ref:'Criterion 5', groups:[['watch* ~ foot','look* ~ raised|elevated ~ foot','look* at ~ foot','eye* ~ foot']]},
+      {label:'Asks if all instructions are understood', ref:'Criterion 7', groups:[['understand*']], min:2}
+    ]
+  }
+};
+
+/* ===================== TEXT NORMALIZATION ===================== */
+const ONES=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+const TENS=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+function numWords(n){
+  if(n<20) return ONES[n];
+  if(n<100) return TENS[Math.floor(n/10)]+(n%10?' '+ONES[n%10]:'');
+  if(n<1000) return ONES[Math.floor(n/100)]+' hundred'+(n%100?' '+numWords(n%100):'');
+  if(n<10000) return ONES[Math.floor(n/1000)]+' thousand'+(n%1000?' '+numWords(n%1000):'');
+  return String(n);
+}
+const CONTRACTIONS=[[/\bdon'?t\b/g,'do not'],[/\bdoesn'?t\b/g,'does not'],[/\bcan'?t\b/g,'can not'],[/\bcannot\b/g,'can not'],[/\bwon'?t\b/g,'will not'],[/\bi'?ve\b/g,'i have'],[/\byou'?re\b/g,'you are'],[/\bit'?s\b/g,'it is'],[/\bi'?m\b/g,'i am'],[/\bi'?ll\b/g,'i will'],[/\byou'?ll\b/g,'you will'],[/\bokay\b/g,'ok']];
+function normalize(t){
+  t=t.toLowerCase().replace(/[‘’]/g,"'").replace(/[“”]/g,'"');
+  t=t.replace(/(\d)\s*[″"]/g,'$1 inches').replace(/(\d)-inch/g,'$1 inch');
+  for(const [re,s] of CONTRACTIONS) t=t.replace(re,s);
+  t=t.replace(/\d[\d,]*/g,m=>' '+numWords(parseInt(m.replace(/,/g,''),10))+' ');
+  t=t.replace(/[-–—\/]/g,' ').replace(/[^a-z' ]+/g,' ').replace(/'/g,'');
+  return t.replace(/\s+/g,' ').trim();
+}
+function tokens(t){ const n=normalize(t); return n?n.split(' '):[]; }
+
+/* ===================== KEY POINT MATCHING ===================== */
+function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+function compile(p){
+  const parts=p.trim().split(/\s+/).map(w=>{
+    if(w==='~') return '(?:\\S+ ){0,4}';
+    const alts=w.split('|').map(a=>a.endsWith('*')?esc(a.slice(0,-1))+'\\S*':esc(a));
+    return '(?:'+alts.join('|')+') ';
+  });
+  return new RegExp('(?:^| )'+parts.join(''),'g');
+}
+function countPat(text,p){ const re=compile(p); let c=0,m; const s=' '+text+' '; re.lastIndex=0; while((m=re.exec(s))){ c++; re.lastIndex=m.index+m[0].length-1; } return c; }
+function groupHits(text,g){ return Math.max(0,...g.map(p=>countPat(text,p))); }
+function keyMet(text,k){
+  const min=k.min||1;
+  const firstOk = groupHits(text,k.groups[0])>=min;
+  const restOk = k.groups.slice(1).every(g=>groupHits(text,g)>=1);
+  if(firstOk && restOk) return true;
+  if(k.alt) return k.alt.every(g=>groupHits(text,g)>=1);
+  return false;
+}
+
+/* ===================== SCRIPT MATCH (LCS) ===================== */
+function scriptMatch(scriptLines, saidTokens){
+  const ref=[]; scriptLines.forEach((l,i)=>tokens(l).forEach(w=>ref.push({w,line:i})));
+  const n=ref.length, m=saidTokens.length;
+  const dp=Array.from({length:n+1},()=>new Uint16Array(m+1));
+  for(let i=n-1;i>=0;i--) for(let j=m-1;j>=0;j--)
+    dp[i][j]= ref[i].w===saidTokens[j] ? dp[i+1][j+1]+1 : Math.max(dp[i+1][j],dp[i][j+1]);
+  let i=0,j=0; while(i<n&&j<m){ if(ref[i].w===saidTokens[j]){ref[i].hit=true;i++;j++;} else if(dp[i+1][j]>=dp[i][j+1]) i++; else j++; }
+  return {ref, pct: n? Math.round(100*dp[0][0]/n):0, hits:dp[0][0], total:n};
+}
+
+/* ===================== UI ===================== */
+const $=id=>document.getElementById(id);
+let cur='wat';
+const BEST='bpoc-sfst-verbal-best';
+function loadBest(){ try{ return JSON.parse(localStorage.getItem(BEST)||'{}'); }catch(e){ return {}; } }
+function saveBest(b){ try{ localStorage.setItem(BEST,JSON.stringify(b)); }catch(e){} }
+function h(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+function renderTabs(){
+  const best=loadBest();
+  $('tabs').innerHTML=Object.entries(TESTS).map(([k,t])=>{
+    const b=best[k]; const bl=b?`Best: key points ${b.kp}% &middot; script ${b.sm}%`:'Not tried yet';
+    return `<button class="tab${k===cur?' on':''}" data-k="${k}" type="button"><span class="k">${t.short}</span><b>${t.name}</b><span class="best">${bl}</span></button>`;
+  }).join('');
+  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ if(recording) stopRec(); cur=b.dataset.k; renderTabs(); renderTest(); }));
+}
+function renderTest(){
+  const t=TESTS[cur];
+  $('testTitle').textContent=t.name;
+  $('testSub').textContent=t.sub;
+  $('peekList').innerHTML=t.script.map(l=>`<li>${h(l)}</li>`).join('');
+  $('peek').open=false;
+  $('transcript').value=''; $('interim').textContent='';
+  $('results').classList.add('hidden');
+}
+
+function grade(){
+  const t=TESTS[cur]; const raw=$('transcript').value; const text=normalize(raw);
+  if(!text){ $('status').textContent='Nothing to grade yet.'; return; }
+  // key points
+  let req=0, met=0;
+  $('kpList').innerHTML=t.keys.map(k=>{
+    const ok=keyMet(text,k);
+    if(!k.opt){ req++; if(ok) met++; }
+    const cls= ok?'ok':(k.opt?'opt':'no');
+    const mark= ok?'&#10003;':(k.opt?'&ndash;':'&#10007;');
+    const def= (!ok && !k.opt && k.defense) ? ` <span class="def">Defense: &ldquo;the ${h(k.defense)}.&rdquo;</span>` : '';
+    const opt= k.opt ? ' <span class="tag">recommended, not scored</span>' : '';
+    return `<div class="kpi ${cls}"><span class="m">${mark}</span><div><b>${k.label}</b>${opt}<span class="why">${k.ref}${def}</span></div></div>`;
+  }).join('');
+  const kp=Math.round(100*met/req);
+  $('kpScore').textContent=`${met} / ${req}`;
+  $('kpSub').textContent= kp===100 ? 'Every required instruction was given.' : `${kp}% — ${req-met} instruction${req-met>1?'s':''} missing. Aim for 100%.`;
+  // script match
+  const sm=scriptMatch(t.script, tokens(raw));
+  $('smScore').textContent=sm.pct+'%';
+  $('smSub').textContent=`${sm.hits} of ${sm.total} script words said in order. Extra words don't count against you.`;
+  const lines=t.script.map(()=>[]);
+  sm.ref.forEach(r=>lines[r.line].push(r));
+  // show original wording, colored word-by-word by its normalized match
+  $('diff').innerHTML=t.script.map((l,i)=>{
+    const words=lines[i]; const hit=words.filter(w=>w.hit).length; const pct=words.length?Math.round(100*hit/words.length):0;
+    const html=words.map(w=>`<span class="${w.hit?'hit':'miss'}">${h(w.w)}</span>`).join(' ');
+    return `<div class="ln"><span class="pct">${pct}%</span>${html}</div>`;
+  }).join('');
+  $('results').classList.remove('hidden');
+  const best=loadBest(); const b=best[cur]||{kp:0,sm:0};
+  best[cur]={kp:Math.max(b.kp,kp), sm:Math.max(b.sm,sm.pct)}; saveBest(best); renderTabs();
+  $('results').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ===================== SPEECH ===================== */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec=null, recording=false, baseText='';
+function setMic(on){
+  recording=on;
+  $('micBtn').classList.toggle('live',on);
+  $('micLbl').textContent= on?'Stop':'Start speaking';
+  $('status').textContent= on?'Listening… speak the instructions.':'';
+}
+const OFFLINE_MSG='Voice recognition needs an internet connection in this browser — type your instructions instead.';
+function startRec(){
+  if(!SR) return;
+  if(navigator.onLine===false){ $('status').textContent=OFFLINE_MSG; return; }
+  rec=new SR(); rec.lang='en-US'; rec.continuous=true; rec.interimResults=true;
+  baseText=$('transcript').value.trim();
+  rec.onresult=e=>{
+    let interim='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const r=e.results[i];
+      if(r.isFinal){ baseText=(baseText?baseText+' ':'')+r[0].transcript.trim(); $('transcript').value=baseText; }
+      else interim+=r[0].transcript;
+    }
+    $('interim').textContent=interim;
+  };
+  rec.onerror=e=>{
+    if(e.error==='not-allowed'||e.error==='service-not-allowed'){ $('status').textContent='Microphone access was blocked. Allow the mic for this site, or type instead.'; setMic(false); }
+    else if(e.error==='no-speech'){ /* keep listening */ }
+    else if(e.error==='network'){ setMic(false); $('status').textContent=OFFLINE_MSG; }
+    else $('status').textContent='Speech error: '+e.error;
+  };
+  rec.onend=()=>{ $('interim').textContent=''; if(recording){ try{ rec.start(); }catch(err){ setMic(false); } } };
+  try{ rec.start(); setMic(true); }catch(err){ $('status').textContent='Could not start the microphone.'; }
+}
+function stopRec(){ setMic(false); if(rec){ try{ rec.stop(); }catch(e){} } }
+
+if(!SR){ $('noSpeech').classList.remove('hidden'); $('micBtn').disabled=true; }
+$('micBtn').addEventListener('click',()=> recording?stopRec():startRec());
+$('gradeBtn').addEventListener('click',()=>{ if(recording) stopRec(); grade(); });
+$('clearBtn').addEventListener('click',()=>{ if(recording) stopRec(); $('transcript').value=''; baseText=''; $('interim').textContent=''; $('results').classList.add('hidden'); $('status').textContent=''; });
+$('hideHow').addEventListener('click',()=>{ $('howNote').style.display='none'; });
+
+renderTabs(); renderTest();
+</script>
+<script src="../assets/site-nav.js" defer></script>
+</body>
+</html>
