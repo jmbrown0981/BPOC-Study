@@ -74,6 +74,9 @@
   .wr-meta{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--gray);}
   .bd-note{font-size:11.5px; color:var(--ink-soft); line-height:1.55; margin:0 0 10px;}
   @media (max-width:520px){ .bd-list.editing .bd-head, .bd-list.editing .bd-row{grid-template-columns:minmax(0,1fr) auto 100px; column-gap:10px;} }
+  .bd-sort{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:0 0 8px;}
+  .bd-sort .filter-chip{padding:3px 10px; font-size:11px;}
+  .bd-row .bd-ch{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; color:var(--brass); margin-right:5px; white-space:nowrap;}
   .wp-actions{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0 4px; border-top:1px solid var(--rule); margin-top:4px;}
 
   .quiz-status{display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:6px;}
@@ -253,6 +256,7 @@ let weightPanelOpen = false;
 
 const PERCENT_OVERRIDES_KEY = 'altquiz_percent_overrides_v1';
 const TOTAL_OVERRIDE_KEY = 'altquiz_total_override_v1';
+const BREAKDOWN_SORT_KEY = 'altquiz_breakdown_sort_v1';   // 'chapter' (default) or 'alpha'
 
 /* ---------- markdown bank parser ---------- */
 
@@ -609,7 +613,7 @@ async function startFullExam(){
       if(!res.ok) throw new Error(`${ch.file}: HTTP ${res.status}`);
       const text = await res.text();
       const parsed = parseBank(text).map(q => ({...q, bankKey: ch.key, bankTitle: ch.short || ('Ch ' + ch.num)}));
-      return {key: ch.key, title: ch.short || ('Ch ' + ch.num), fullTitle: ch.title, questions: parsed};
+      return {key: ch.key, num: ch.num, title: ch.short || ('Ch ' + ch.num), fullTitle: ch.title, questions: parsed};
     }));
   }catch(err){
     examConfig = null;
@@ -638,9 +642,25 @@ function recomputeExamPool(){
       const picked = shuffle(b.questions).slice(0, n);
       examPool = examPool.concat(picked);
     }
-    examBreakdown.push({key: b.key, title: b.title, fullTitle: b.fullTitle, percent: a ? a.weight : 0, available: b.questions.length, pulled: n});
+    examBreakdown.push({key: b.key, num: b.num, title: b.title, fullTitle: b.fullTitle, percent: a ? a.weight : 0, available: b.questions.length, pulled: n});
   });
   examPool = shuffle(examPool);
+}
+
+// Display order of the breakdown rows (remembered per browser). Only the order changes:
+// inputs are keyed by bank, so percentages and the exam itself are unaffected.
+function loadBreakdownSort(){
+  try{ return localStorage.getItem(BREAKDOWN_SORT_KEY) === 'alpha' ? 'alpha' : 'chapter'; }catch(e){ return 'chapter'; }
+}
+function saveBreakdownSort(mode){
+  try{ localStorage.setItem(BREAKDOWN_SORT_KEY, mode); }catch(e){}
+}
+// By chapter: chapter number, then the bank list's own order within a chapter; banks with no
+// chapter (Case Law) go last. A-Z: by full title.
+function sortedBreakdown(mode){
+  const rows = examBreakdown.slice();
+  if(mode === 'alpha') return rows.sort((a, b) => a.fullTitle.localeCompare(b.fullTitle, undefined, {sensitivity:'base', numeric:true}));
+  return rows.sort((a, b) => (a.num || Infinity) - (b.num || Infinity));
 }
 
 // Bank breakdown card. With the percentage controls open, each bank's % input sits on the
@@ -649,16 +669,21 @@ function renderBreakdownHtml(config){
   const editing = weightPanelOpen;
   const fileDefaultTotal = (examConfig && examConfig.totalQuestions) || 250;
   const nCustom = Object.keys(config.overrides).length + (config.totalOverride !== null ? 1 : 0);
-  const rows = examBreakdown.map(b => {
+  const sortMode = loadBreakdownSort();
+  const sortBar = `<div class="bd-sort"><span class="wr-meta">Sort:</span>${[['chapter', 'By chapter'], ['alpha', 'A&ndash;Z']].map(([m, label]) =>
+    `<button class="filter-chip${sortMode === m ? ' active' : ''}" data-bd-sort="${m}" type="button" aria-pressed="${sortMode === m}">${label}</button>`).join('')}</div>`;
+  const rows = sortedBreakdown(sortMode).map(b => {
     const isOverridden = config.overrides[b.key] !== undefined;
     const pctLabel = editing ? '' : ` <span class="fn-source" style="display:inline;">(${formatPct(b.percent)}%)</span>`;
     const edit = editing ? `<span class="bd-edit">${isOverridden ? `<button class="wr-reset" data-reset-key="${b.key}" type="button">reset</button>` : ''}<input type="number" min="0" max="100" step="0.5" class="${isOverridden ? 'overridden' : ''}" data-weight-key="${b.key}" value="${formatPct(b.percent)}" aria-label="Percent for ${escapeHtml(b.fullTitle)}"></span>` : '';
-    return `<div class="bd-row"><span>${escapeHtml(b.fullTitle)}${pctLabel}</span><span class="bd-count">${b.pulled} / ${b.available}</span>${edit}</div>`;
+    const ch = b.num ? `<span class="bd-ch">Ch ${b.num}</span>` : '';
+    return `<div class="bd-row"><span>${ch}${escapeHtml(b.fullTitle)}${pctLabel}</span><span class="bd-count">${b.pulled} / ${b.available}</span>${edit}</div>`;
   }).join('');
   const head = `<div class="bd-head"><span>Bank</span><span class="r">Pulled / avail.</span>${editing ? '<span class="r">Percent</span>' : ''}</div>`;
   const total = editing ? `<div class="bd-row bd-total"><span>Target total questions <span class="wr-meta" style="display:inline; font-weight:400;">(file default: ${fileDefaultTotal})</span></span><span class="bd-count">${examPool.length}</span><span class="bd-edit">${config.totalOverride !== null ? '<button class="wr-reset" data-reset-total="1" type="button">reset</button>' : ''}<input type="number" min="1" step="5" id="totalQOverride" value="${config.totalQuestions}" aria-label="Target total questions"></span></div>` : '';
   return `
     ${editing ? `<p class="bd-note">Every bank starts at <strong>0%</strong> allowing you to dial in a percentage for just the handful of subjects you want in the practice exam. All percentages combined <strong>must</strong> add up to 100%. Target total questions defaults at 250, but can be increased or decreased as well. Clear your browser data or hit "Reset all percentages to 0" below to set all percentages back to zero.</p>` : ''}
+    ${sortBar}
     <div class="bd-list${editing ? ' editing' : ''}">${head}${total}${rows}</div>
     ${editing ? `<div class="wp-actions">
         <button class="wp-toggle-btn" id="resetAllWeightsBtn" type="button">Reset all percentages to 0</button>
@@ -736,6 +761,9 @@ function renderExamSetup(){
   document.getElementById('practiceBtn').onclick = () => startQuiz('practice');
   document.getElementById('timedBtn').onclick = () => startQuiz('timed');
   document.getElementById('weightToggleBtn').onclick = () => { weightPanelOpen = !weightPanelOpen; renderExamSetup(); };
+  document.querySelectorAll('[data-bd-sort]').forEach(btn => {
+    btn.onclick = () => { saveBreakdownSort(btn.getAttribute('data-bd-sort')); renderExamSetup(); };
+  });
   if(weightPanelOpen) wireWeightPanel();
 }
 
