@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>The Seven Step Violator Contact | Universal Truths of Policing | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* Same numbered-timeline layout as scene-priorities.html (The 5 Steps at Any Scene). */
+.steps{list-style:none; margin:6px 0 14px; padding:0; display:flex; flex-direction:column; gap:0;}
+.steps > li{display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:stretch; position:relative;}
+.steps > li + li{margin-top:12px;}
+.num{display:flex; align-items:flex-start; justify-content:center; position:relative;}
+.num span{width:56px; height:56px; border-radius:50%; background:var(--navy); color:var(--brass-light); font-family:'IBM Plex Serif',serif; font-weight:700; font-size:26px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 4px #fff, 0 0 0 5px var(--rule); position:relative; z-index:1;}
+.steps > li:not(:last-child) .num::after{content:""; position:absolute; top:58px; bottom:-14px; left:50%; width:3px; margin-left:-1.5px; background:var(--brass);}
+.step-card{background:var(--paper); border:1px solid var(--rule); border-left:5px solid var(--brass); border-radius:10px; padding:12px 16px;}
+.step-card h3{margin:0; font-family:'IBM Plex Serif',serif; font-size:20px; color:var(--navy); line-height:1.25;}
+.step-card h3 .cue{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-left:8px; white-space:nowrap;}
+.step-card ul{margin:8px 0 0; padding-left:1.2em; font-size:14px;}
+.step-card ul li{margin-bottom:3px;}
+.say{margin:8px 0 0; padding:6px 10px; background:#fff; border:1px dashed var(--brass); border-radius:6px; font-size:13.5px; font-style:italic; color:var(--ink);}
+.say b{font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-right:6px;}
+.say + .say{margin-top:5px;}
+
+.callouts{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:4px 0 10px;}
+.callout{border:1px solid var(--rule); border-radius:10px; padding:10px 14px; font-size:13.5px; line-height:1.5; background:#fff;}
+.callout h4{margin:0 0 4px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--navy);}
+.callout.key{background:var(--navy); border-color:var(--navy); color:#EDE7D6;}
+.callout.key h4{color:var(--brass-light);}
+.slide-body .tagline{text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); margin:4px 0 0;}
+
+.print-bar{max-width:1040px; margin:0 auto; padding:14px 16px 0; display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+.print-bar button{font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:var(--navy); background:#fff; border:1px solid var(--rule); border-radius:7px; padding:7px 13px; cursor:pointer;}
+.print-bar button:hover{border-color:var(--brass); color:var(--brass);}
+.print-bar span{font-size:12px; color:var(--ink-soft);}
+
+.controls, .hint{display:none;}   /* single slide: no navigation needed */
+.cards{display:none;}             /* notecards are print-only (see "Print notecards") */
+
+@media (max-width:760px){
+  .steps > li{grid-template-columns:46px 1fr; gap:10px;}
+  .num span{width:42px; height:42px; font-size:20px;}
+  .steps > li:not(:last-child) .num::after{top:44px;}
+  .step-card h3{font-size:17px;}
+  .callouts{grid-template-columns:1fr;}
+}
+
+/* ---------- print: one letter-size page (default) ---------- */
+@media print{
+  @page{size:letter portrait; margin:0.4in;}
+  .print-bar{display:none;}
+  .slide{border:2px solid var(--navy); border-radius:10px;}
+  .slide-head{padding:8px 14px; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .slide-head h2{font-size:16px;}
+  .sub-badge{height:32px; min-width:38px; font-size:15px;}
+  .slide-body{padding:8px 12px 4px; font-size:10pt; line-height:1.3;}
+  .print-grid{display:grid; grid-template-columns:1fr 1fr; gap:7px 10px; margin:0 0 6px;}
+  .steps, .callouts{display:contents;}
+  .callout:last-child{grid-column:1 / -1;}
+  .steps > li{grid-template-columns:26px 1fr; gap:6px; break-inside:avoid;}
+  .steps > li + li{margin-top:0;}
+  .steps > li .num::after{display:none;}
+  .num span{width:24px; height:24px; font-size:13px; box-shadow:none; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .step-card{padding:4px 8px 5px; border-left-width:4px; border-radius:6px; background:#fff;}
+  .step-card h3{font-size:12pt;}
+  .step-card h3 .cue{display:none;}
+  .step-card ul{margin:2px 0 0; font-size:9pt; padding-left:1.05em;}
+  .step-card ul li{margin-bottom:0;}
+  .say{margin-top:3px; padding:2px 6px; font-size:9pt;}
+  .say b{font-size:7pt;}
+  .say + .say{margin-top:2px;}
+  .callout{padding:5px 9px; font-size:9pt; line-height:1.3; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .callout h4{font-size:11pt; margin-bottom:1px;}
+  .slide-body .tagline{font-size:8pt; margin:2px 0 0;}
+  .slide-foot{padding:4px 12px 6px; font-size:7.5pt;}
+}
+
+/* ---------- print: 3x5 notecards, four per landscape letter sheet, cut on the dashed lines ---------- */
+@media print{
+  body.print-cards > *:not(.cards):not(script){display:none !important;}
+  body.print-cards .cards{display:grid; grid-template-columns:5in 5in; grid-auto-rows:3in; justify-content:center; align-content:start;}
+  .card{width:5in; height:3in; border:1px dashed #888; padding:0.16in 0.2in; overflow:hidden; break-inside:avoid; display:flex; flex-direction:column; font-size:10pt; line-height:1.3;}
+  .card .card-head{display:flex; align-items:center; gap:8px; border-bottom:2px solid var(--brass); padding-bottom:4px; margin-bottom:5px;}
+  .card .card-num{flex:none; width:26px; height:26px; border-radius:50%; background:var(--navy); color:var(--brass-light); font-family:'IBM Plex Serif',serif; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .card h3{margin:0; font-family:'IBM Plex Serif',serif; font-size:12pt; line-height:1.15; color:var(--navy);}
+  .card ul{margin:0; padding-left:1.1em;}
+  .card ul li{margin-bottom:1px;}
+  .card .say{font-size:9.6pt; padding:2px 6px; margin-top:4px;}
+  .card .say b{font-size:7pt;}
+  .card .card-foot{margin-top:auto; font-family:'IBM Plex Mono',monospace; font-size:6.5pt; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); text-align:right;}
+  .card ol{margin:0; padding-left:1.3em; font-weight:600;}
+  .card ol li{margin-bottom:1px;}
+  .card .note{font-size:9.2pt; margin:6px 0 0; color:var(--ink-soft);}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Universal Truths of Policing</p>
+      <h1>The Seven Step Violator Contact</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC LO 37.3. The traffic-stop method every TCOLE academy must teach, and the one drivers are now taught to expect. Summarized for a pocket card.</p>
+</header>
+
+<div class="print-bar">
+  <button type="button" id="printPage">&#128438; Print one page</button>
+  <button type="button" id="printCards">&#128438; Print notecards</button>
+  <span>One page: letter, portrait. Notecards: eight 3&times;5 cards, four per landscape letter sheet; cut on the dashed lines.</span>
+</div>
+
+<div class="deck" id="deck">
+<section class="slide" data-key="steps" aria-label="The seven step violator contact">
+  <div class="slide-head"><span class="sub-badge">7</span><div><p class="kicker">Every traffic stop &middot; in order &middot; BPOC LO 37.3</p><h2>The Seven Step Violator Contact</h2></div></div>
+  <div class="slide-body">
+    <div class="print-grid">
+    <ol class="steps" id="steps">
+      <li><div class="num"><span>1</span></div><div class="step-card"><h3>Greeting &amp; identify your agency <span class="cue">Greet</span></h3>
+        <ul>
+          <li>Greet naturally: introduce yourself, or a simple &ldquo;Good morning.&rdquo; It is a courtesy owed to every driver.</li>
+          <li>Always name yourself and your agency, even in uniform and a marked car. Many drivers are from out of town and don&rsquo;t know the uniform.</li>
+          <li>Business courtesy: put the driver at ease, no superiority or deference. Smile; normal tone.</li>
+        </ul>
+        <p class="say"><b>Say</b>&ldquo;Good morning. I&rsquo;m Officer ____ with the ____ Police Department.&rdquo;</p></div></li>
+
+      <li><div class="num"><span>2</span></div><div class="step-card"><h3>State the violation <span class="cue">Violation</span></h3>
+        <ul>
+          <li>Tell the driver at once why they were stopped, and stress that it is serious.</li>
+          <li>Use statements, not questions; don&rsquo;t ask whether they know what they did.</li>
+          <li>Exception, speeding: give them a chance to explain. Circumstances may justify the speed to a reasonable person; if none exist, the question puts them in the position of admitting it.</li>
+        </ul>
+        <p class="say"><b>Ask</b>&ldquo;Is there any reason for your excessive rate of speed?&rdquo;</p></div></li>
+
+      <li><div class="num"><span>3</span></div><div class="step-card"><h3>Identify the driver; check driver &amp; vehicle <span class="cue">ID</span></h3>
+        <ul>
+          <li>Ask every violator for their driver&rsquo;s license and compare the person to its description.</li>
+          <li>No license: ask for other ID, preferably with a description. None at all: write down age, height, weight, eyes, hair, identifying marks, and address.</li>
+          <li>License in a wallet or purse: have them take it out themselves, so no one can claim money or papers went missing.</li>
+          <li>Call the driver by name for the rest of the contact.</li>
+        </ul></div></li>
+
+      <li><div class="num"><span>4</span></div><div class="step-card"><h3>State the action to be taken <span class="cue">Action stated</span></h3>
+        <ul>
+          <li>Clear, firm, and calm, leaving no doubt about what will happen.</li>
+          <li>Say &ldquo;you,&rdquo; not &ldquo;I.&rdquo; &ldquo;I am going to&hellip;&rdquo; shifts the focus to the officer and lets the driver blame you instead of the violation.</li>
+        </ul>
+        <p class="say"><b>Say</b>&ldquo;You will be charged with the offense of speeding in the Justice of the Peace Court in Austin.&rdquo;</p>
+        <p class="say"><b>Say</b>&ldquo;You will be warned for the violation you have committed.&rdquo;</p></div></li>
+
+      <li><div class="num"><span>5</span></div><div class="step-card"><h3>Take that action <span class="cue">Act</span></h3>
+        <ul>
+          <li>Do what you said: write the citation, take the violator into custody, or give the warning by pointing out how serious the violation is and its possible consequences.</li>
+        </ul></div></li>
+
+      <li><div class="num"><span>6</span></div><div class="step-card"><h3>Explain what the violator must do <span class="cue">Explain</span></h3>
+        <ul>
+          <li>Exactly what they must do: get in the patrol car, follow the patrol car, appear at a certain court by a certain time before a certain magistrate, or not repeat the violation.</li>
+          <li>Short and clear, and make sure they understand. They don&rsquo;t know the courts and locations the way you do.</li>
+          <li>A little extra time here means more on-time appearances and fewer warrants to serve.</li>
+        </ul>
+        <p class="say"><b>Say</b>&ldquo;You will be given ten (10) days in which to answer this charge.&rdquo; <span style="font-style:normal">(state your agency&rsquo;s procedure)</span></p></div></li>
+
+      <li><div class="num"><span>7</span></div><div class="step-card"><h3>Leave <span class="cue">Leave</span></h3>
+        <ul>
+          <li>As firm and impersonal as the approach. No gloating.</li>
+          <li>A brief parting comment, sincere but businesslike, is enough. It can leave a feeling of friendliness.</li>
+          <li>Tell the driver they are free to leave, then break contact and return to the patrol car right away.</li>
+        </ul></div></li>
+    </ol>
+
+    <div class="callouts">
+      <div class="callout key"><h4>&ldquo;You,&rdquo; not &ldquo;I&rdquo;</h4>Keep the emphasis on the driver and the violation. &ldquo;You will be charged&hellip;&rdquo; avoids the unpleasantness that &ldquo;I am going to&hellip;&rdquo; invites.</div>
+      <div class="callout"><h4>Why it&rsquo;s expected</h4>TCOLE academies must teach this method. Under the Community Safety Education Act it is also taught in high schools, driver&rsquo;s ed, and defensive driving, so drivers expect officers to use it.</div>
+    </div>
+    </div>
+    <p class="tagline">Greet &rarr; Violation &rarr; ID &rarr; Action stated &rarr; Act &rarr; Explain &rarr; Leave</p>
+  </div>
+  <div class="slide-foot"><span>Source: BPOC Ch. 37 Civilian Interaction Training, LO 37.3 (summarized). Follow your instructors&rsquo; and agency&rsquo;s procedures where they differ.</span></div>
+</section>
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button">&larr; Prev</button>
+  <div class="dots" id="dots"></div>
+  <button class="nav-btn" id="nextBtn" type="button">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<!-- Notecards: built from the steps above when printing, so the two layouts never drift apart. -->
+<div class="cards" id="cards" aria-hidden="true"></div>
+
+<footer>Universal Truths of Policing &middot; Summarized from BPOC LO 37.3, not an official TCOLE or academy publication &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script>
+(function(){
+  const cards = document.getElementById('cards');
+  const foot = '<div class="card-foot">Seven Step Violator Contact &middot; BPOC LO 37.3</div>';
+
+  function buildCards(){
+    if(cards.childElementCount) return;
+    const steps = Array.from(document.querySelectorAll('#steps > li'));
+    const titles = steps.map(li => li.querySelector('h3').firstChild.textContent.trim());
+    let html = `<div class="card"><div class="card-head"><span class="card-num">7</span><h3>The Seven Step Violator Contact</h3></div>
+      <ol>${titles.map(t => `<li>${t}</li>`).join('')}</ol>
+      <p class="note"><b>&ldquo;You,&rdquo; not &ldquo;I&rdquo;:</b> keep the focus on the driver and the violation, not on the officer.</p>${foot}</div>`;
+    steps.forEach((li, i) => {
+      const card = li.querySelector('.step-card').cloneNode(true);
+      const h3 = card.querySelector('h3');
+      h3.querySelector('.cue')?.remove();
+      h3.remove();
+      html += `<div class="card"><div class="card-head"><span class="card-num">${i + 1}</span><h3>${h3.innerHTML.trim()}</h3></div>${card.innerHTML}${foot}</div>`;
+    });
+    cards.innerHTML = html;
+  }
+
+  // Notecards print landscape; the one-page sheet prints portrait.
+  const pageStyle = document.createElement('style');
+  document.head.appendChild(pageStyle);
+  function setMode(mode){
+    document.body.classList.toggle('print-cards', mode === 'cards');
+    pageStyle.textContent = mode === 'cards' ? '@media print{@page{size:letter landscape; margin:0.25in;}}' : '';
+    if(mode === 'cards') buildCards();
+  }
+
+  document.getElementById('printPage').onclick = () => { setMode('page'); window.print(); };
+  document.getElementById('printCards').onclick = () => { setMode('cards'); window.print(); };
+  window.addEventListener('afterprint', () => setMode('page'));
+  // ?print=cards prints the notecards from the browser's own Print command (and lets them be previewed headlessly).
+  if(new URLSearchParams(location.search).get('print') === 'cards') setMode('cards');
+})();
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
