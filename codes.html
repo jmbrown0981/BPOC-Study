@@ -34,6 +34,11 @@
   .search-icon{position:absolute; left:12px; top:50%; transform:translateY(-50%); opacity:0.7; font-size:14px;}
   #scopeSelect{flex:none; max-width:40%; padding:0 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.08); color:#F3EFE4; font-family:'IBM Plex Sans',sans-serif; font-size:13px;}
   #scopeSelect option{color:var(--ink);}
+  .mode-row{margin-top:10px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; position:relative; z-index:1;}
+  .mode-label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass-light); margin-right:2px;}
+  .mode-btn{font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; padding:5px 11px; border-radius:999px; border:1px solid rgba(255,255,255,0.22); background:transparent; color:#D9D2C0; cursor:pointer; white-space:nowrap;}
+  .mode-btn:hover{border-color:var(--brass-light);}
+  .mode-btn.active{background:var(--brass-light); border-color:var(--brass-light); color:var(--navy);}
 
   nav.chips{background:var(--paper); border-bottom:1px solid var(--rule); padding:9px 12px; display:flex; flex-wrap:wrap; gap:6px;}
   .chip{flex:none; font-family:'IBM Plex Sans', sans-serif; font-size:12px; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--ink-soft); cursor:pointer; white-space:nowrap; text-decoration:none;}
@@ -126,6 +131,12 @@
     </div>
     <select id="scopeSelect" aria-label="Which codes to search"></select>
   </div>
+  <div class="mode-row" role="group" aria-label="What to search">
+    <span class="mode-label">Search</span>
+    <button type="button" class="mode-btn" data-mode="">All text</button>
+    <button type="button" class="mode-btn" data-mode="num">Section number</button>
+    <button type="button" class="mode-btn" data-mode="title">Title keyword</button>
+  </div>
 </header>
 
 <nav class="chips" id="codeChips"></nav>
@@ -140,6 +151,14 @@ const DATA_DIR = 'assets/codes/';
 const OFFICIAL_URL = (code, ch) => `https://statutes.capitol.texas.gov/Docs/${code}/htm/${code}.${ch}.htm`;
 const MAX_CHAPTERS_TO_SCAN = 25;   // per search, per code: chapters downloaded to confirm matches/snippets
 const MAX_RESULTS_SHOWN = 150;
+// Search modes. Section number and title keyword read only each code's toc.json (every section's
+// number and title), never the chapter files, so they stay fast however much text the codes hold.
+const SEARCH_MODES = {
+  '':    {placeholder: 'Search statute text (e.g. "conservatorship", "directive to apprehend", "51.02")'},
+  num:   {placeholder: 'Section number (e.g. "49.04", "51.02", "545.4")'},
+  title: {placeholder: 'Words in a section title (e.g. "warrant", "family violence")'}
+};
+let searchMode = '';
 
 let CODES = [];
 const tocCache = new Map(), chCache = new Map(), shardCache = new Map();
@@ -172,11 +191,12 @@ function codeName(code){ const c = CODES.find(x => x.code === code); return c ? 
 /* ---------------- routing ---------------- */
 function getState(){
   const p = new URLSearchParams(location.search);
-  return { code: p.get('code'), ch: p.get('ch'), sec: p.get('sec'), v: p.get('v'), q: p.get('q') || '', hl: p.get('hl') || '' };
+  const m = p.get('m');
+  return { code: p.get('code'), ch: p.get('ch'), sec: p.get('sec'), v: p.get('v'), q: p.get('q') || '', hl: p.get('hl') || '', m: SEARCH_MODES[m] ? m : '' };
 }
 function urlFor(st){
   const p = new URLSearchParams();
-  ['code','ch','sec','v','q','hl'].forEach(k => { if(st[k]) p.set(k, st[k]); });
+  ['code','ch','sec','v','q','m','hl'].forEach(k => { if(st[k]) p.set(k, st[k]); });
   const s = p.toString();
   return location.pathname + (s ? '?' + s : '');
 }
@@ -197,10 +217,11 @@ async function route(){
   const st = getState();
   const input = document.getElementById('searchInput');
   if(document.activeElement !== input) input.value = st.q;
+  if(st.q) setMode(st.m);
   if(!st.code && CODES.length === 1) st.code = CODES[0].code;
   renderChips(st.code);
   try{
-    if(st.q.trim()) return await renderSearch(st);
+    if(st.q.trim()) return await (st.m ? renderTocSearch(st) : renderSearch(st));
     if(!st.code) return renderHome();
     if(!st.ch && st.sec){
       const toc = await loadToc(st.code);
@@ -363,10 +384,12 @@ async function renderSearch(st){
   let direct = [];
 
   const results = [], unscanned = [];
-  for(const code of codes){
+  // Every code is searched at once, then merged back in code order.
+  const perCode = await Promise.all(codes.map(async code => {
+    const out = {direct: [], results: [], unscanned: []};
     const toc = await loadToc(code);
     if(secMatch){
-      toc.sections.filter(s => s[0].toLowerCase() === secMatch[1].toLowerCase()).forEach(s => direct.push({code, toc, s}));
+      toc.sections.filter(s => s[0].toLowerCase() === secMatch[1].toLowerCase()).forEach(s => out.direct.push({code, toc, s}));
     }
     const ids = await candidateIds(code, toc, tokens);
     // group candidate sections by chapter, scan the chapters with the most candidates first
@@ -374,20 +397,21 @@ async function renderSearch(st){
     ids.forEach(id => { const ci = toc.sections[id][2]; byCh.set(ci, (byCh.get(ci) || 0) + 1); });
     const order = [...byCh.entries()].sort((a, b) => b[1] - a[1]);
     const scan = order.slice(0, MAX_CHAPTERS_TO_SCAN), skip = order.slice(MAX_CHAPTERS_TO_SCAN);
-    skip.forEach(([ci, n]) => unscanned.push({code, ch: toc.chapters[ci], n}));
+    skip.forEach(([ci, n]) => out.unscanned.push({code, ch: toc.chapters[ci], n}));
     const chapters = await Promise.all(scan.map(([ci]) => loadChapter(code, toc.chapters[ci].f)));
-    if(seq !== searchSeq) return;
     chapters.forEach(ch => {
       ch.items.forEach(s => {
         if(!s.n) return;
         const text = sectionPlainText(s);
         re.lastIndex = 0;
         const count = (text.match(re) || []).length;
-        if(count) results.push({code, toc, ch, s, count, text});
+        if(count) out.results.push({code, toc, ch, s, count, text});
       });
     });
-  }
+    return out;
+  }));
   if(seq !== searchSeq) return;
+  perCode.forEach(o => { direct.push(...o.direct); results.push(...o.results); unscanned.push(...o.unscanned); });
 
   results.sort((a, b) => b.count - a.count);
   const total = results.reduce((n, r) => n + r.count, 0);
@@ -412,6 +436,63 @@ async function renderSearch(st){
     html += `<div class="note"><b>This is a common term, so not every chapter was checked.</b> These chapters also contain the word${tokens.length > 1 ? 's' : ''} and may have matches &mdash; open one, or narrow the search:<div class="more-list">${
       unscanned.map(u => `<a data-nav href="${urlFor({code:u.code, ch:u.ch.n})}">${codes.length > 1 ? u.code + ' ' : ''}Ch. ${escapeHtml(u.ch.n)}</a> <span class="asof">(${u.n} section${u.n === 1 ? '' : 's'})</span>`).join(' &middot; ')}</div></div>`;
   }
+  main.innerHTML = html;
+}
+
+// Section number / title keyword: matched against toc.json alone, so no chapter files are fetched.
+function markAll(text, re){
+  let out = '', last = 0, m;
+  re.lastIndex = 0;
+  while((m = re.exec(text))){ out += escapeHtml(text.slice(last, m.index)) + '<mark>' + escapeHtml(m[0]) + '</mark>'; last = m.index + m[0].length; if(!m[0].length) re.lastIndex++; }
+  return out + escapeHtml(text.slice(last));
+}
+
+async function renderTocSearch(st){
+  const seq = ++searchSeq;
+  const q = st.q.trim();
+  const main = document.getElementById('main');
+  const scope = document.getElementById('scopeSelect').value;
+  const codes = scope === '*' ? CODES.map(c => c.code) : [scope];
+  const where = codes.length > 1 ? ' across ' + codes.length + ' codes' : ' in the ' + escapeHtml(codeName(codes[0]));
+  main.innerHTML = `<div class="loading-box">Searching&hellip;</div>`;
+  const tocs = await Promise.all(codes.map(loadToc));
+  if(seq !== searchSeq) return;
+
+  let results = [], head, re = null;
+  if(st.m === 'num'){
+    // "Sec. 49.04", "§ 49.04" and "49.04" all work; matches sections whose number starts with it
+    const n = q.replace(/^(?:sec(?:tion)?\.?|§+)\s*/i, '').replace(/\.$/, '').toLowerCase();
+    if(!n){ main.innerHTML = `<div class="search-results-head">Type a section number.</div>`; return; }
+    tocs.forEach((toc, i) => toc.sections.forEach(s => {
+      const sn = s[0].toLowerCase();
+      if(sn.startsWith(n)) results.push({code: codes[i], toc, s, exact: sn === n});
+    }));
+    results.sort((a, b) => b.exact - a.exact);   // stable: exact matches first, then code and section order
+    re = new RegExp('^' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    head = results.length
+      ? `${results.length} section${results.length === 1 ? '' : 's'} numbered &quot;${escapeHtml(n)}&hellip;&quot;${where}.`
+      : `No section numbers start with &quot;${escapeHtml(n)}&quot;${where}.`;
+  } else {
+    const words = queryRegex(q, 'gi');
+    if(!words){ main.innerHTML = `<div class="search-results-head">Type a word from a section title.</div>`; return; }
+    re = new RegExp((/^[a-z0-9]/i.test(q) ? '(?<![a-z0-9])' : '') + words.source, 'gi');
+    tocs.forEach((toc, i) => toc.sections.forEach(s => { re.lastIndex = 0; if(re.test(s[1])) results.push({code: codes[i], toc, s}); }));
+    head = results.length
+      ? `${results.length} section title${results.length === 1 ? '' : 's'} with &quot;${escapeHtml(q)}&quot;${where}. Matches start at the beginning of a word.`
+      : `No section titles contain &quot;${escapeHtml(q)}&quot;${where}.`;
+  }
+
+  let html = `<div class="search-results-head">${head}</div>`;
+  html += results.slice(0, MAX_RESULTS_SHOWN).map(({code, toc, s}) => {
+    const ch = toc.chapters[s[2]];
+    const num = st.m === 'num' ? markAll(s[0], re) : escapeHtml(s[0]);
+    const title = st.m === 'title' ? markAll(s[1], re) : escapeHtml(s[1]);
+    return `<a class="search-result" data-nav href="${urlFor({code, ch: ch.n, sec: s[0], v: s[3] > 1 ? s[3] : null, hl: st.m === 'title' ? q : null})}">
+      <div class="sr-head"><span class="sr-title"><span class="sn">Sec. ${num}</span> ${title}${s[3] ? ` <span class="ver">V${s[3]}</span>` : ''}</span></div>
+      <div class="sr-where">${codes.length > 1 ? escapeHtml(toc.name) + ' &middot; ' : ''}Ch. ${escapeHtml(ch.n)} ${escapeHtml(ch.t)}</div>
+    </a>`;
+  }).join('');
+  if(results.length > MAX_RESULTS_SHOWN) html += `<div class="note">Showing the first ${MAX_RESULTS_SHOWN} sections. Type more of the ${st.m === 'num' ? 'number' : 'title'}, or pick one code, to narrow the search.</div>`;
   main.innerHTML = html;
 }
 
@@ -445,9 +526,23 @@ const input = document.getElementById('searchInput');
 function runSearchFromInput(){
   const st = getState();
   const q = input.value.trim();
-  if(q) go({code: st.code, q}, !!st.q);
+  if(q) go({code: st.code, q, m: searchMode}, !!st.q);
   else if(st.q) go({code: st.code}, true);
 }
+function setMode(m){
+  searchMode = m || '';
+  input.placeholder = SEARCH_MODES[searchMode].placeholder;
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    const on = b.dataset.mode === searchMode;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on);
+  });
+}
+document.querySelectorAll('.mode-btn').forEach(b => b.addEventListener('click', () => {
+  setMode(b.dataset.mode);
+  if(input.value.trim()){ clearTimeout(debounce); runSearchFromInput(); }
+  else input.focus();
+}));
 input.addEventListener('input', () => { clearTimeout(debounce); debounce = setTimeout(runSearchFromInput, 350); });
 input.addEventListener('keydown', e => { if(e.key === 'Enter'){ clearTimeout(debounce); runSearchFromInput(); } });
 document.getElementById('scopeSelect').addEventListener('change', () => { if(getState().q) route(); });
@@ -464,6 +559,7 @@ document.getElementById('scopeSelect').addEventListener('change', () => { if(get
   if(CODES.length < 2) sel.style.display = 'none';
   const st = getState();
   if(st.code && CODES.some(c => c.code === st.code) && CODES.length > 1) sel.value = st.code;
+  setMode(st.m);
   route();
 })();
 </script>
