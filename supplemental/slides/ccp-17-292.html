@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>CCP 17.292 – Magistrate's Order for Emergency Protection | Slides | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: offense chips, may/shall cards, duration bars, prohibition grid, two-way tracking, scenario checks */
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 12px;}
+.chip{border:1px solid var(--rule); border-radius:999px; padding:4px 11px; background:#fff; font-size:13px;}
+.chip b{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass); margin-right:5px;}
+.chip.fv{background:var(--navy); color:#EDE7D6; border-color:var(--navy);} .chip.fv b{color:var(--brass-light);}
+
+.facts{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:4px 0 12px;}
+.fact{border:1px solid var(--rule); border-radius:10px; padding:10px 12px; background:#fff; border-top:4px solid var(--navy);}
+.fact h3{margin:0 0 4px; font-family:'IBM Plex Serif',serif; font-size:14.5px; color:var(--navy);}
+.fact p{margin:0 !important; font-size:13px; line-height:1.5;}
+
+.ms{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:4px 0 12px;}
+.mcard{border:1px solid var(--rule); border-radius:10px; padding:12px 14px; background:#fff; border-top:5px solid var(--brass);}
+.mcard.shall{border-top-color:var(--rust);}
+.mcard .word{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.1em; color:var(--ink-soft);}
+.mcard h3{margin:2px 0 6px; font-family:'IBM Plex Serif',serif; font-size:17px; color:var(--navy);}
+.mcard h3 em{font-style:normal; color:var(--brass);} .mcard.shall h3 em{color:var(--rust);}
+.mcard p, .mcard li{font-size:13.4px; line-height:1.5;}
+.mcard p{margin:0 0 6px !important;}
+.mcard ol{margin:4px 0 0; padding-left:22px;}
+.who{display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin:6px 0 2px;}
+.who div{background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:7px 6px; text-align:center; font-size:12.6px; font-weight:600; color:var(--navy); line-height:1.3;}
+.who div small{display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); font-weight:700;}
+
+.dur{margin:4px 0 12px;}
+.drow{display:grid; grid-template-columns:230px 1fr; gap:12px; align-items:center; padding:9px 0; border-bottom:1px solid var(--rule);}
+.drow .lab b{display:block; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--navy);}
+.drow .lab span{font-size:12.6px; color:var(--ink-soft);}
+.track{position:relative; height:34px; background:var(--paper); border-radius:8px; border:1px solid var(--rule);}
+.track .bar{position:absolute; top:4px; bottom:4px; border-radius:6px; background:var(--brass); color:var(--navy); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; white-space:nowrap;}
+.track .bar.long{background:var(--rust); color:#fff;}
+.track .min{position:absolute; top:4px; bottom:4px; left:0; border-radius:6px 0 0 6px; background:repeating-linear-gradient(45deg,#E5DFCC 0 6px,#EFEADB 6px 12px);}
+.scale{display:grid; grid-template-columns:230px 1fr; gap:12px; margin-top:4px;}
+.scale .ticks{position:relative; height:16px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft);}
+.scale .ticks span{position:absolute; transform:translateX(-50%);}
+.dnote{font-size:12.6px; color:var(--ink-soft); margin:6px 0 10px !important;}
+
+.pro{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:4px 0 12px;}
+.pcard{border:1px solid var(--rule); border-radius:10px; padding:10px 13px; background:#fff; border-left:4px solid var(--rust);}
+.pcard .n{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--ink-soft);}
+.pcard h3{margin:1px 0 5px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--rust);}
+.pcard ul{margin:0; padding-left:18px;} .pcard li{font-size:13px; line-height:1.48; margin-bottom:2px;}
+.pcard.must{border-left-color:var(--navy);} .pcard.must h3{color:var(--navy);}
+.pcard .xc{display:block; margin-top:5px; font-size:12.3px; color:var(--ink-soft);}
+
+.two{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:4px 0 12px;}
+.dir{border:1px solid var(--rule); border-radius:10px; padding:12px 14px; background:#fff;}
+.dir.a{border-top:5px solid var(--rust);} .dir.b{border-top:5px solid var(--green);}
+.dir .arrowline{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.06em; color:var(--ink-soft);}
+.dir h3{margin:2px 0 6px; font-family:'IBM Plex Serif',serif; font-size:16px; color:var(--navy);}
+.dir li{font-size:13.2px; line-height:1.5; margin-bottom:3px;}
+.dir ul{margin:0; padding-left:18px;}
+
+.checks{display:grid; gap:8px; margin:4px 0 8px; counter-reset:q;}
+.checks details{border:1px solid var(--rule); border-radius:10px; background:#fff; padding:9px 13px;}
+.checks summary{cursor:pointer; font-size:13.8px; line-height:1.5; list-style:none;}
+.checks summary::-webkit-details-marker{display:none;}
+.checks summary::before{content:"Q" counter(q) "  "; counter-increment:q; font-family:'IBM Plex Mono',monospace; font-weight:700; color:var(--brass); font-size:12px;}
+.checks summary .show{float:right; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:700; color:var(--navy); border:1px solid var(--navy); border-radius:999px; padding:0 8px; margin-left:8px;}
+.checks details[open] summary .show{background:var(--navy); color:#fff;}
+.checks .ans{margin-top:7px; padding-top:7px; border-top:1px dotted var(--rule); font-size:13.4px; line-height:1.55;}
+.checks .ans b.v{color:var(--green);} .checks .ans b.x{color:var(--rust);}
+
+@media (max-width:760px){
+  .facts{grid-template-columns:1fr 1fr;}
+  .ms, .two, .pro{grid-template-columns:1fr;}
+  .who{grid-template-columns:1fr 1fr;}
+  .drow, .scale{grid-template-columns:1fr; gap:6px;}
+  .scale .sp{display:none;}
+  .track .bar{font-size:11.5px;}
+}
+@media (max-width:440px){ .facts{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Universal Truths &middot; Slides</p>
+      <h1>CCP Art. 17.292 — Magistrate&rsquo;s Order for Emergency Protection</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">The emergency protective order (&ldquo;MOEP&rdquo;) issued at the defendant&rsquo;s first appearance: who can ask for it, when it is mandatory, how long it lasts, what it can prohibit, and how far tracking goes in both directions (17.292(c)(5) and Art. 17.49 GPS monitoring). The required wording of the order, 17.292(g), is not repeated here.</p>
+</header>
+
+<div class="deck" id="deck">
+
+<!-- ===================== TITLE ===================== -->
+<section class="slide title-slide" data-key="start" aria-label="Title">
+  <div class="slide-body">
+    <p class="eyebrow">Code of Criminal Procedure &middot; Chapter 17 &middot; Bail</p>
+    <h2 class="big">Magistrate&rsquo;s Order for<br>Emergency Protection</h2>
+    <p class="lede">Issued by the magistrate when the defendant appears after arrest. It protects the victim <b>from the moment it is issued</b>, and the victim does not have to be present or file anything.</p>
+    <p class="kicker" style="margin:4px 0 4px">Arrests that open the door &mdash; 17.292(a)</p>
+    <div class="chips">
+      <span class="chip fv"><b>FV</b>Any offense involving family violence</span>
+      <span class="chip"><b>PC 20A.02</b>Trafficking of persons</span>
+      <span class="chip"><b>PC 20A.03</b>Continuous trafficking of persons</span>
+      <span class="chip"><b>PC 22.011</b>Sexual assault</span>
+      <span class="chip"><b>PC 22.012</b>Indecent assault</span>
+      <span class="chip"><b>PC 22.021</b>Aggravated sexual assault</span>
+      <span class="chip"><b>PC 42.072</b>Stalking</span>
+    </div>
+    <div class="facts">
+      <div class="fact"><h3>Victim need not be there</h3><p>The order can issue without the victim present. <span class="tag">(d)</span></p></div>
+      <div class="fact"><h3>Effective on issuance</h3><p>Served on the defendant in person or electronically; the magistrate keeps a separate record of service. <span class="tag">(j)</span></p></div>
+      <div class="fact"><h3>Standard OCA form</h3><p>Required, but not using it does <b>not</b> make the order invalid or unenforceable. <span class="tag">(d-1), (d-2)</span></p></div>
+      <div class="fact"><h3>LTC suspended</h3><p>The order <b>shall</b> suspend any license to carry a handgun the defendant holds. <span class="tag">(l)</span></p></div>
+    </div>
+    <div class="callout def"><b>Definitions (m):</b> &ldquo;family,&rdquo; &ldquo;family violence,&rdquo; and &ldquo;household&rdquo; come from Family Code Ch. 71; &ldquo;firearm&rdquo; from Penal Code Ch. 46; a <b>business day</b> is any day except Saturday, Sunday, or a state or national holiday.</div>
+  </div>
+  <div class="slide-foot">
+    <span>Use <b>&larr; &rarr;</b>, swipe, or the buttons below to move between slides.</span>
+    <a class="codes" href="../../codes.html?code=CR&amp;ch=17&amp;sec=17.292" target="bpoc-codes">Open CCP 17.292 in Texas Codes &#8599;</a>
+  </div>
+</section>
+
+<!-- ===================== WHO / MAY vs SHALL ===================== -->
+<section class="slide" data-key="who" data-dot="Who asks" aria-label="Who can ask for the order, and when it is mandatory">
+  <div class="slide-head"><span class="sub-badge">(a)&ndash;(b)</span><div><p class="kicker">Who can ask &middot; when the magistrate has no choice</p><h2>&ldquo;May&rdquo; vs. &ldquo;shall&rdquo;</h2></div></div>
+  <div class="slide-body">
+    <div class="ms">
+      <div class="mcard"><span class="word">17.292(a) &middot; DISCRETIONARY</span><h3>The magistrate <em>may</em> issue it</h3>
+        <p>After arrest for any of the offenses on the title slide, on the magistrate&rsquo;s own motion or on the request of any of these:</p>
+        <div class="who">
+          <div>Magistrate<small>own motion</small></div>
+          <div>The victim<small>(a)(1)</small></div>
+          <div>Victim&rsquo;s guardian<small>(a)(2)</small></div>
+          <div>A peace officer<small>(a)(3)</small></div>
+          <div>Attorney for the state<small>(a)(4)</small></div>
+        </div></div>
+      <div class="mcard shall"><span class="word">17.292(b) &middot; MANDATORY</span><h3>The magistrate <em>shall</em> issue it</h3>
+        <p>When the arrest is for an offense <b>involving family violence</b> that also involves:</p>
+        <ol><li><b>Serious bodily injury</b> to the victim, <span class="tag">(b)(1)</span> or</li>
+          <li>The <b>use or exhibition of a deadly weapon</b> during the commission of an assault. <span class="tag">(b)(2)</span></li></ol>
+        <p style="margin-top:8px !important">No one has to ask. Mandatory orders apply only to <b>family violence</b> arrests &mdash; a sexual assault or stalking arrest outside a family/household relationship falls under (a).</p></div>
+    </div>
+    <div class="callout"><b>Your part as the officer:</b> you are on the list of people who can request the order, and the arresting or custodial officer <b>shall</b> give the magistrate information about the defendant and, where available, the victim &mdash; at minimum the Government Code 411.042(b)(6) information. Missing information does <b>not</b> take away the magistrate&rsquo;s authority or duty to issue the order. <span class="tag">(d-3)</span></div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 17.292(a), (b), (d-3)</summary><div class="statute">
+    <p>(a) At a defendant's appearance before a magistrate after arrest for an offense involving family violence or an offense under Section 20A.02, 20A.03, 22.011, 22.012, 22.021, or 42.072, Penal Code, the magistrate may issue an order for emergency protection on the magistrate's own motion or on the request of:</p>
+    <p class="ind1">(1) the victim of the offense;</p>
+    <p class="ind1">(2) the guardian of the victim;</p>
+    <p class="ind1">(3) a peace officer; or</p>
+    <p class="ind1">(4) the attorney representing the state.</p>
+    <p>(b) At a defendant's appearance before a magistrate after arrest for an offense involving family violence, the magistrate shall issue an order for emergency protection if the arrest is for an offense that also involves:</p>
+    <p class="ind1">(1) serious bodily injury to the victim; or</p>
+    <p class="ind1">(2) the use or exhibition of a deadly weapon during the commission of an assault.</p>
+    <p>(d-3) The person making the arrest or the person having custody of the defendant shall provide to the magistrate any information regarding the defendant that will aid the magistrate in issuing an order for emergency protection under this article. To the extent the information is available, the person making the arrest or the person having custody shall provide information regarding the victim of the offense to the magistrate to aid the magistrate in issuing the order for emergency protection. The person making the arrest or the person having custody, as applicable, shall, at a minimum, provide any information described by Section 411.042(b)(6), Government Code, available to the person and may use a form adopted by the Office of Court Administration of the Texas Judicial System under Section 72.039, Government Code, for this purpose. The failure to provide the necessary information to the magistrate does not negate the magistrate's authority or duty to issue an order for emergency protection under this article.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== DURATION ===================== -->
+<section class="slide" data-key="time" data-dot="How long" aria-label="How long each type of order lasts">
+  <div class="slide-head"><span class="sub-badge">(j)</span><div><p class="kicker">Effective on issuance &middot; the magistrate sets the end date inside the window</p><h2>How long the order lasts</h2></div></div>
+  <div class="slide-body">
+    <div class="dur">
+      <div class="drow"><div class="lab"><b>Discretionary &mdash; (a)</b><span>Any listed offense, on motion or request</span></div>
+        <div class="track"><div class="min" style="width:50.4%"></div><div class="bar" style="left:50.4%;width:24.8%">61 &ndash; 91 days</div></div></div>
+      <div class="drow"><div class="lab"><b>Mandatory &mdash; (b)(1)</b><span>Family violence + serious bodily injury</span></div>
+        <div class="track"><div class="min" style="width:50.4%"></div><div class="bar" style="left:50.4%;width:24.8%">61 &ndash; 91 days</div></div></div>
+      <div class="drow"><div class="lab"><b>Mandatory &mdash; (b)(2)</b><span>Family violence + deadly weapon used or exhibited in an assault</span></div>
+        <div class="track"><div class="min" style="width:75.2%"></div><div class="bar long" style="left:75.2%;width:24.8%">91 &ndash; 121 days</div></div></div>
+      <div class="scale"><div class="sp"></div><div class="ticks"><span style="left:0">0</span><span style="left:24.8%">30</span><span style="left:50.4%">61</span><span style="left:75.2%">91</span><span style="left:100%;transform:translateX(-100%)">121</span></div></div>
+    </div>
+    <p class="dnote">Shaded = the minimum the order must run. Colored bar = where the magistrate can set the expiration (&ldquo;up to the 91st day but not less than 61 days&rdquo; / &ldquo;up to the 121st day but not less than 91 days&rdquo; after issuance).</p>
+    <div class="big-rule">Only the <em>deadly weapon</em> order gets the longer window.<br>Serious bodily injury is mandatory, but still 61&ndash;91 days.</div>
+    <div class="cols">
+      <div class="panel"><h3>Changing the order &mdash; (j), (n)</h3><ul>
+        <li>The issuing court, or the court that later took jurisdiction over the offense, may modify all or part of it.</li>
+        <li>Requires <b>notice</b> to each affected party and a <b>hearing</b>, and all three findings: the original order is <b>unworkable</b>; the change will not put the victim at <b>greater risk</b>; and it will not in any way <b>endanger</b> a protected person.</li></ul></div>
+      <div class="panel tint"><h3>When it conflicts with another order &mdash; (f)&ndash;(f-2)</h3><ul>
+        <li><b>Existing</b> child possession/access order &rarr; the emergency order wins while it lasts.</li>
+        <li><b>Later</b> Family Code protective order (Ch. 85) or Title 1 / Title 5 order &rarr; the Family Code order wins.</li>
+        <li><b>Later</b> temporary ex parte order (Ch. 83) &rarr; the emergency order still wins, unless that court is told about it <b>and</b> finds it is superseding it.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 17.292(j), (n), (f), (f-1), (f-2)</summary><div class="statute">
+    <p>(j) An order for emergency protection issued under this article is effective on issuance, and the defendant shall be served a copy of the order by the magistrate or the magistrate's designee in person or electronically. The magistrate shall make a separate record of the service in written or electronic format. An order for emergency protection issued under Subsection (a) or (b)(1) of this article remains in effect up to the 91st day but not less than 61 days after the date of issuance. An order for emergency protection issued under Subsection (b)(2) of this article remains in effect up to the 121st day but not less than 91 days after the date of issuance. After notice to each affected party and a hearing, the issuing court may modify all or part of an order issued under this article if the court finds that:</p>
+    <p class="ind1">(1) the order as originally issued is unworkable;</p>
+    <p class="ind1">(2) the modification will not place the victim of the offense at greater risk than did the original order; and</p>
+    <p class="ind1">(3) the modification will not in any way endanger a person protected under the order.</p>
+    <p>(n) On request, all or part of an order for emergency protection issued under this article may be modified by the court that assumed jurisdiction over the offense giving rise to the issuance of the order. The standards under Subsection (j) are applicable to a court modifying all or part of an order under this subsection.</p>
+    <p>(f) To the extent that a condition imposed by an order for emergency protection issued under this article conflicts with an existing court order granting possession of or access to a child, the condition imposed under this article prevails for the duration of the order for emergency protection.</p>
+    <p>(f-1) To the extent that a condition imposed by an order issued under this article conflicts with a condition imposed by an order subsequently issued under Chapter 85, Subtitle B, Title 4, Family Code, or under Title 1 or Title 5, Family Code, the condition imposed by the order issued under the Family Code prevails.</p>
+    <p>(f-2) To the extent that a condition imposed by an order issued under this article conflicts with a condition imposed by an order subsequently issued under Chapter 83, Subtitle B, Title 4, Family Code, the condition imposed by the order issued under this article prevails unless the court issuing the order under Chapter 83, Family Code:</p>
+    <p class="ind1">(1) is informed of the existence of the order issued under this article; and</p>
+    <p class="ind1">(2) makes a finding in the order issued under Chapter 83, Family Code, that the court is superseding the order issued under this article.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== PROHIBITIONS ===================== -->
+<section class="slide" data-key="prohibit" data-dot="Prohibits" aria-label="What the magistrate can prohibit">
+  <div class="slide-head"><span class="sub-badge">(c)</span><div><p class="kicker">The order may prohibit the arrested party from&hellip;</p><h2>What the magistrate can prohibit</h2></div></div>
+  <div class="slide-body">
+    <div class="pro">
+      <div class="pcard"><span class="n">(c)(1)</span><h3>Committing</h3><ul>
+        <li><b>Family violence</b> or an <b>assault</b> on the protected person.</li>
+        <li>Any act in furtherance of <b>trafficking</b> (PC 20A.02) or <b>stalking</b> (PC 42.072).</li></ul></div>
+      <div class="pcard"><span class="n">(c)(2)</span><h3>Communicating</h3><ul>
+        <li><b>Directly</b> with a family/household member or protected person in a <b>threatening or harassing</b> manner.</li>
+        <li>A <b>threat through any person</b>.</li>
+        <li>In <b>any manner</b> &mdash; only if the magistrate finds <b>good cause</b> &mdash; except through the defendant&rsquo;s attorney or a court-appointed person.</li></ul></div>
+      <div class="pcard"><span class="n">(c)(3)</span><h3>Going to or near</h3><ul>
+        <li>The <b>residence, workplace, or business</b> of a family/household member or the protected person.</li>
+        <li>The <b>residence, child care facility, or school</b> of a protected child. The magistrate sends a copy of the order to that facility or school. <span class="tag">(i)</span></li></ul></div>
+      <div class="pcard"><span class="n">(c)(4)</span><h3>Possessing a firearm</h3><ul>
+        <li>Any firearm (PC Ch. 46 definition).</li></ul>
+        <span class="xc"><b>Exception:</b> a peace officer (PC 1.07) actively employed as a <b>sworn, full-time paid</b> employee of a state agency or political subdivision.</span></div>
+      <div class="pcard"><span class="n">(c)(5)</span><h3>Tracking or monitoring</h3><ul>
+        <li>The protected person&rsquo;s (or family/household member&rsquo;s) <b>property or vehicle</b>, by app, device, or physically following. Details on the next slide.</li></ul></div>
+      <div class="pcard must"><span class="n">(e) &middot; (l)</span><h3>Also in every order</h3><ul>
+        <li><b>(e)</b> Prohibited locations and minimum distances must be <b>specifically described</b> &mdash; unless leaving them out protects the victim (for example, a shelter address).</li>
+        <li><b>(l)</b> The defendant&rsquo;s <b>LTC is suspended</b> (mandatory, not a &ldquo;may&rdquo;).</li></ul></div>
+    </div>
+    <div class="callout"><b>Read it on scene.</b> The (c) list is a menu &mdash; each order includes the items the magistrate checked. Before you act on a violation call, confirm which prohibitions are in <b>this</b> order, the distances, and the dates.</div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 17.292(c), (e), (l)</summary><div class="statute">
+    <p>(c) The magistrate in the order for emergency protection may prohibit the arrested party from:</p>
+    <p class="ind1">(1) committing:</p>
+    <p class="ind2">(A) family violence or an assault on the person protected under the order; or</p>
+    <p class="ind2">(B) an act in furtherance of an offense under Section 20A.02 or 42.072, Penal Code;</p>
+    <p class="ind1">(2) communicating:</p>
+    <p class="ind2">(A) directly with a member of the family or household or with the person protected under the order in a threatening or harassing manner;</p>
+    <p class="ind2">(B) a threat through any person to a member of the family or household or to the person protected under the order; or</p>
+    <p class="ind2">(C) if the magistrate finds good cause, in any manner with a person protected under the order or a member of the family or household of a person protected under the order, except through the party's attorney or a person appointed by the court;</p>
+    <p class="ind1">(3) going to or near:</p>
+    <p class="ind2">(A) the residence, place of employment, or business of a member of the family or household or of the person protected under the order; or</p>
+    <p class="ind2">(B) the residence, child care facility, or school where a child protected under the order resides or attends;</p>
+    <p class="ind1">(4) possessing a firearm, unless the person is a peace officer, as defined by Section 1.07, Penal Code, actively engaged in employment as a sworn, full-time paid employee of a state agency or political subdivision; or</p>
+    <p class="ind1">(5) tracking or monitoring personal property or a motor vehicle in the possession of the person protected under the order or of a member of the family or household of the person protected under the order, without the protected person's effective consent, including by:</p>
+    <p class="ind2">(A) using a tracking application on a personal electronic device in the possession of the person or the family or household member or using a tracking device; or</p>
+    <p class="ind2">(B) physically following the person or the family or household member or causing another to physically follow the person or member.</p>
+    <p>(e) In the order for emergency protection the magistrate shall specifically describe the prohibited locations and the minimum distances, if any, that the party must maintain, unless the magistrate determines for the safety of the person or persons protected by the order that specific descriptions of the locations should be omitted.</p>
+    <p>(l) In the order for emergency protection, the magistrate shall suspend a license to carry a handgun issued under Subchapter H, Chapter 411, Government Code, that is held by the defendant.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== TRACKING ===================== -->
+<section class="slide" data-key="tracking" data-dot="Tracking" aria-label="Tracking in both directions">
+  <div class="slide-head"><span class="sub-badge">(c)(5) &middot; (c-1)</span><div><p class="kicker">Tracking runs both ways</p><h2>Tracking: what the defendant can&rsquo;t do, and what can be done to the defendant</h2></div></div>
+  <div class="slide-body">
+    <div class="two">
+      <div class="dir a"><span class="arrowline">DEFENDANT &rarr; VICTIM &middot; PROHIBITED &middot; (c)(5)</span><h3>The defendant can be barred from tracking</h3><ul>
+        <li>Tracking or monitoring <b>personal property or a motor vehicle</b> in the possession of the protected person or a family/household member,</li>
+        <li><b>without the protected person&rsquo;s effective consent</b>, including:</li>
+        <li><b>(A)</b> a <b>tracking application</b> on a phone or other personal electronic device they possess, or a <b>tracking device</b> (e.g., a hidden tag on the car);</li>
+        <li><b>(B)</b> <b>physically following</b> them, or <b>having someone else</b> follow them.</li></ul></div>
+      <div class="dir b"><span class="arrowline">COURT &rarr; DEFENDANT &middot; ALLOWED &middot; (c-1) + ART. 17.49</span><h3>The defendant can be ordered onto GPS</h3><ul>
+        <li>The magistrate may add any <b>17.49(b)</b> condition, including ordering the defendant to <b>carry or wear a GPS monitoring device</b> and pay a reimbursement fee.</li>
+        <li>Stay-away zones: the victim may give the magistrate a <b>list of areas</b> to exclude; the order must describe the locations and distances. <span class="tag">17.49(c)</span></li>
+        <li>With the <b>victim&rsquo;s consent</b>, the defendant pays for a <b>victim receptor device</b> that alerts the victim when the defendant is at or near an excluded location. <span class="tag">17.49(b)(3)</span></li>
+        <li>The GPS operator must notify <b>the court and local law enforcement</b> of violations. <span class="tag">17.49(j)</span></li></ul></div>
+    </div>
+    <div class="cols">
+      <div class="panel"><h3>Limits on GPS monitoring &mdash; 17.49</h3><ul>
+        <li><b>Worn or carried only.</b> Anything <b>implanted</b> in or that otherwise invades the body is excluded from the definition. <span class="tag">(a)(2)</span></li>
+        <li>The magistrate weighs whether GPS will <b>deter</b> the defendant from trying to kill, injure, stalk, or threaten the victim before trial. <span class="tag">(f)</span></li>
+        <li><b>Indigent</b> defendant: a sliding-scale partial fee, which the operator must accept as payment in full; the county does not pay the difference. <span class="tag">(h), (i)</span></li></ul></div>
+      <div class="panel tint"><h3>The victim&rsquo;s side &mdash; 17.49</h3><ul>
+        <li>Participation is <b>voluntary</b>; the victim can refuse, or ask to stop <b>at any time</b>, with <b>no sanctions</b>. <span class="tag">(g)</span></li>
+        <li>Before the receptor device, the victim is told how the system works, its risks and limits, and <b>how much it tracks the victim&rsquo;s own location</b> &mdash; and that their communications with the court about it are <b>not confidential</b>. <span class="tag">(d)</span></li>
+        <li>A participating victim gets the name and number of a <b>local law enforcement contact</b> to call for immediate help on a violation. <span class="tag">(e)</span></li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 17.292(c-1) &middot; 17.49(a)&ndash;(j)</summary><div class="statute">
+    <p><b>Art. 17.292</b></p>
+    <p>(c-1) In addition to the conditions described by Subsection (c), the magistrate in the order for emergency protection may impose a condition described by Article 17.49(b) in the manner provided by that article, including ordering a defendant's participation in a global positioning monitoring system or allowing participation in the system by an alleged victim or other person protected under the order.</p>
+    <p><b>Art. 17.49</b></p>
+    <p>(a) In this article:</p>
+    <p class="ind1">(1) "Family violence" has the meaning assigned by Section 71.004, Family Code.</p>
+    <p class="ind1">(2) "Global positioning monitoring system" means a system that electronically determines and reports the location of an individual through the use of a transmitter or similar device carried or worn by the individual that transmits latitude and longitude data to a monitoring entity through global positioning satellite technology. The term does not include a system that contains or operates global positioning system technology, radio frequency identification technology, or any other similar technology that is implanted in or otherwise invades or violates the individual's body.</p>
+    <p>(b) A magistrate may require as a condition of release on bond that a defendant charged with an offense involving family violence:</p>
+    <p class="ind1">(1) refrain from going to or near a residence, school, place of employment, or other location, as specifically described in the bond, frequented by an alleged victim of the offense;</p>
+    <p class="ind1">(2) carry or wear a global positioning monitoring system device and, except as provided by Subsection (h), pay a reimbursement fee for the costs associated with operating that system in relation to the defendant;</p>
+    <p class="ind1">(3) except as provided by Subsection (h), if the alleged victim of the offense consents after receiving the information described by Subsection (d), pay a reimbursement fee for the costs associated with providing the victim with an electronic receptor device that:</p>
+    <p class="ind2">(A) is capable of receiving the global positioning monitoring system information from the device carried or worn by the defendant; and</p>
+    <p class="ind2">(B) notifies the victim if the defendant is at or near a location that the defendant has been ordered to refrain from going to or near under Subdivision (1); or</p>
+    <p class="ind1">(4) refrain from tracking or monitoring personal property or a motor vehicle in the possession of the alleged victim of the offense, without the victim's effective consent, including by:</p>
+    <p class="ind2">(A) using a tracking application on a personal electronic device in the possession of the victim or using a tracking device; or</p>
+    <p class="ind2">(B) physically following the victim or causing another to physically follow the victim.</p>
+    <p>(c) Before imposing a condition described by Subsection (b)(1), a magistrate must afford an alleged victim an opportunity to provide the magistrate with a list of areas from which the victim would like the defendant excluded and shall consider the victim's request, if any, in determining the locations the defendant will be ordered to refrain from going to or near. If the magistrate imposes a condition described by Subsection (b)(1), the magistrate shall specifically describe the locations that the defendant has been ordered to refrain from going to or near and the minimum distances, if any, that the defendant must maintain from those locations.</p>
+    <p>(d) Before imposing a condition described by Subsection (b)(3), a magistrate must provide to an alleged victim information regarding:</p>
+    <p class="ind1">(1) the victim's right to participate in a global positioning monitoring system or to refuse to participate in that system and the procedure for requesting that the magistrate terminate the victim's participation;</p>
+    <p class="ind1">(2) the manner in which the global positioning monitoring system technology functions and the risks and limitations of that technology, and the extent to which the system will track and record the victim's location and movements;</p>
+    <p class="ind1">(3) any locations that the defendant is ordered to refrain from going to or near and the minimum distances, if any, that the defendant must maintain from those locations;</p>
+    <p class="ind1">(4) any sanctions that the court may impose on the defendant for violating a condition of bond imposed under this article;</p>
+    <p class="ind1">(5) the procedure that the victim is to follow, and support services available to assist the victim, if the defendant violates a condition of bond or if the global positioning monitoring system equipment fails;</p>
+    <p class="ind1">(6) community services available to assist the victim in obtaining shelter, counseling, education, child care, legal representation, and other assistance available to address the consequences of family violence; and</p>
+    <p class="ind1">(7) the fact that the victim's communications with the court concerning the global positioning monitoring system and any restrictions to be imposed on the defendant's movements are not confidential.</p>
+    <p>(e) In addition to the information described by Subsection (d), a magistrate shall provide to an alleged victim who participates in a global positioning monitoring system under this article the name and telephone number of an appropriate person employed by a local law enforcement agency whom the victim may call to request immediate assistance if the defendant violates a condition of bond imposed under this article.</p>
+    <p>(f) In determining whether to order a defendant's participation in a global positioning monitoring system under this article, the magistrate shall consider the likelihood that the defendant's participation will deter the defendant from seeking to kill, physically injure, stalk, or otherwise threaten the alleged victim before trial.</p>
+    <p>(g) An alleged victim may request that the magistrate terminate the victim's participation in a global positioning monitoring system at any time. The magistrate may not impose sanctions on the victim for requesting termination of the victim's participation in or refusing to participate in a global positioning monitoring system under this article.</p>
+    <p>(h) If the magistrate determines that a defendant is indigent, the magistrate may, based on a sliding scale established by local rule, require the defendant to pay a reimbursement fee under Subsection (b)(2) or (3) in an amount that is less than the full amount of the costs associated with operating the global positioning monitoring system in relation to the defendant or providing the victim with an electronic receptor device.</p>
+    <p>(i) If an indigent defendant pays to an entity that operates a global positioning monitoring system the partial amount ordered by a magistrate under Subsection (h), the entity shall accept the partial amount as payment in full. The county in which the magistrate who enters an order under Subsection (h) is located is not responsible for payment of any costs associated with operating the global positioning monitoring system in relation to an indigent defendant.</p>
+    <p>(j) A magistrate that imposes a condition described by Subsection (b)(1) or (2) shall order the entity that operates the global positioning monitoring system to notify the court and the appropriate local law enforcement agency if a defendant violates a condition of bond imposed under this article.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== OFFICER DUTIES ===================== -->
+<section class="slide" data-key="duties" data-dot="Deadlines" aria-label="Notice, delivery, and entry deadlines">
+  <div class="slide-head"><span class="sub-badge">(h)&ndash;(k)</span><div><p class="kicker">After the order issues</p><h2>Notice and entry deadlines</h2></div></div>
+  <div class="slide-body">
+    <div class="flow">
+      <div class="step"><b class="t">Magistrate &rarr; agency</b>Copy to the <b>chief of police</b> where the protected person lives (or the <b>sheriff</b> if outside a city) by the <b>next business day</b> <span class="tag">(h)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">Officer &rarr; victim</b>If the victim was not present, an officer ordered by the magistrate makes a good-faith effort to notify the victim <b>within 24 hours</b> by calling their <b>residence and place of employment</b> <span class="tag">(h)</span></div><div class="arrow">&rarr;</div>
+      <div class="step"><b class="t">Clerk &rarr; victim</b>Copy sent to the victim&rsquo;s last known address by the <b>next business day</b> <span class="tag">(h)</span></div><div class="arrow">&rarr;</div>
+      <div class="step hot"><b class="t">Agency &rarr; DPS</b>Enter the order in the DPS statewide system (TCIC) by the <b>third business day</b> after the agency receives it <span class="tag">(k)</span></div>
+    </div>
+    <div class="cols">
+      <div class="panel"><h3>Allowed delays</h3><ul>
+        <li>The magistrate or clerk may delay sending a copy, and the agency may delay entry, <b>only</b> if they lack information needed to ensure service and enforcement. <span class="tag">(h-1), (k-1)</span></li>
+        <li>Copies may go electronically or any other way the recipient can access. <span class="tag">(i-1)</span></li></ul></div>
+      <div class="panel navy"><h3>Why the entry matters</h3><ul>
+        <li>The stated purpose of (k) is so that <b>an officer responding to a call</b> knows the order exists and what it says. When you run the parties on a call, check for an active emergency order and read its terms.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><details><summary>STATUTE TEXT &mdash; CCP 17.292(h), (h-1), (i), (i-1), (k), (k-1)</summary><div class="statute">
+    <p>(h) As soon as possible but not later than the next business day after the date the magistrate issues an order for emergency protection under this article, the magistrate shall send a copy of the order to the chief of police in the municipality where the member of the family or household or individual protected by the order resides, if the person resides in a municipality, or to the sheriff of the county where the person resides, if the person does not reside in a municipality. If the victim of the offense is not present when the order is issued, the magistrate issuing the order shall order an appropriate peace officer to make a good faith effort to notify, within 24 hours, the victim that the order has been issued by calling the victim's residence and place of employment. The clerk of the court shall send a copy of the order to the victim at the victim's last known address as soon as possible but not later than the next business day after the date the order is issued.</p>
+    <p>(h-1) A magistrate or clerk of the court may delay sending a copy of the order under Subsection (h) only if the magistrate or clerk lacks information necessary to ensure service and enforcement.</p>
+    <p>(i) If an order for emergency protection issued under this article prohibits a person from going to or near a child care facility or school, the magistrate shall send a copy of the order to the child care facility or school.</p>
+    <p>(i-1) The copy of the order and any related information may be sent under Subsection (h) or (i) electronically or in another manner that can be accessed by the recipient.</p>
+    <p>(k) To ensure that an officer responding to a call is aware of the existence and terms of an order for emergency protection issued under this article, not later than the third business day after the date of receipt of the copy of the order by the applicable law enforcement agency with jurisdiction over the municipality or county in which the victim resides, the law enforcement agency shall enter the information required under Section 411.042(b)(6), Government Code, into the statewide law enforcement information system maintained by the Department of Public Safety.</p>
+    <p>(k-1) A law enforcement agency may delay entering the information required under Subsection (k) only if the agency lacks information necessary to ensure service and enforcement.</p>
+  </div></details></div>
+</section>
+
+<!-- ===================== CHECKS ===================== -->
+<section class="slide" data-key="recap" aria-label="Scenario checks">
+  <div class="slide-head"><span class="sub-badge">&#9733;</span><div><p class="kicker">Tap a scenario to see the answer</p><h2>Scenario checks</h2></div></div>
+  <div class="slide-body">
+    <div class="checks">
+      <details><summary>A husband is arrested for assault family violence; his wife has bruises but no serious injury, and no weapon was involved. Must the magistrate issue an emergency order? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">No &mdash; but may.</b> Without serious bodily injury or a deadly weapon, it falls under (a). The magistrate may issue one on their own motion or at the request of the victim, her guardian, a peace officer, or the prosecutor. If issued, it runs 61&ndash;91 days.</div></details>
+      <details><summary>A boyfriend (dating relationship) is arrested for aggravated assault FV after pointing a pistol at his girlfriend. What does the magistrate have to do, and how long can the order last? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Shall issue, under (b)(2).</b> Family violence plus exhibition of a deadly weapon during an assault. The order runs at least 91 days and up to the 121st day. His LTC, if he has one, is suspended under (l).</div></details>
+      <details><summary>A defendant broke his ex-wife&rsquo;s jaw (serious bodily injury), no weapon. How long does the mandatory order last? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">61&ndash;91 days.</b> (b)(1) serious bodily injury makes the order mandatory, but (j) puts (a) and (b)(1) orders in the same 61&ndash;91 day window. Only the (b)(2) deadly weapon order runs 91&ndash;121 days.</div></details>
+      <details><summary>The victim finds an AirTag-style tracker taped under her car bumper. The order includes (c)(5). Is that covered? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Yes.</b> (c)(5)(A) covers using a <b>tracking device</b> on a motor vehicle in the protected person&rsquo;s possession without her effective consent. Having a friend follow her car would also be covered under (c)(5)(B).</div></details>
+      <details><summary>The defendant is an off-duty sheriff&rsquo;s deputy (sworn, full-time, paid). The order includes the firearm prohibition. Does it apply to him? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="x">Not the firearm item.</b> (c)(4) excepts a peace officer actively employed as a sworn, full-time paid employee of a state agency or political subdivision. Every other condition in the order still applies, and any LTC is still suspended under (l). Federal law and department policy may also apply.</div></details>
+      <details><summary>The victim agreed to carry a GPS receptor device, but a month later she wants to stop. Can she, and can the court penalize her? <span class="show">Answer</span></summary>
+        <div class="ans"><b class="v">Yes, she can stop at any time,</b> and the magistrate may not impose sanctions for refusing or ending participation (17.49(g)). The defendant&rsquo;s own GPS condition is separate from her participation.</div></details>
+    </div>
+  </div>
+  <div class="slide-foot"><span>See also: <a href="../../codes.html?code=CR&amp;ch=17&amp;sec=17.49" target="bpoc-codes">CCP Art. 17.49 (family violence bond conditions, GPS) &#8599;</a> &middot; <a href="../../codes.html?code=CR&amp;ch=17&amp;sec=17.292" target="bpoc-codes">CCP Art. 17.292 &#8599;</a></span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>CCP Art. 17.292 slides &middot; Text from the site&rsquo;s Texas Codes copy of the Code of Criminal Procedure &middot; Study aid only &mdash; always verify against current statute and department policy &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script src="../../assets/code-links.js"></script>
+<script>
+CodeLinks.ready.then(() => {
+  document.querySelectorAll('.slide-body > .callout, .slide-body > .lede, .fact p, .mcard p, .pcard li, .pcard .xc, .dir li, .panel, .step, .checks .ans, .statute').forEach(el => {
+    el.innerHTML = CodeLinks.linkify(el.innerHTML, {context:true, secCode:'CR'});
+  });
+});
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
