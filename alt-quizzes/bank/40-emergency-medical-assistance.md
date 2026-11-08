@@ -313,9 +313,125 @@ Which of the below is listed as a **Universal Precaution** in BPOC 40.3: Identif
 
 ---
 
+### Q23 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the common communicable diseases BPOC 40.3 lists as spread by **Airborne** transmission.
+
+- [x] Tuberculosis (TB)
+- [ ] Coronavirus (COVID)
+- [ ] Influenza (Flu)
+- [ ] Meningitis
+- [ ] Scabies
+- [ ] Herpes (HSV)
+- [ ] Varicella / Chickenpox / Shingles (VZV)
+- [ ] Human Immunodeficiency Virus (HIV)
+- [ ] Hepatitis B Virus (HBV)
+
+**Explanation:** Airborne: Tuberculosis (TB). BPOC 40.3 full list: Tuberculosis (TB) = Airborne; Coronavirus (COVID) = Droplet; Influenza (Flu) = Droplet; Meningitis = Droplet; Scabies = Contact; Herpes (HSV) = Contact; Varicella / Chickenpox / Shingles (VZV) = Contact; Human Immunodeficiency Virus (HIV) = Blood / Body Fluid; Hepatitis B Virus (HBV) = Blood / Body Fluid.
+
+---
+
+### Q24 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the common communicable diseases BPOC 40.3 lists as spread by **Droplet** transmission.
+
+- [ ] Tuberculosis (TB)
+- [x] Coronavirus (COVID)
+- [x] Influenza (Flu)
+- [x] Meningitis
+- [ ] Scabies
+- [ ] Herpes (HSV)
+- [ ] Varicella / Chickenpox / Shingles (VZV)
+- [ ] Human Immunodeficiency Virus (HIV)
+- [ ] Hepatitis B Virus (HBV)
+
+**Explanation:** Droplet: Coronavirus (COVID); Influenza (Flu); Meningitis. BPOC 40.3 full list: Tuberculosis (TB) = Airborne; Coronavirus (COVID) = Droplet; Influenza (Flu) = Droplet; Meningitis = Droplet; Scabies = Contact; Herpes (HSV) = Contact; Varicella / Chickenpox / Shingles (VZV) = Contact; Human Immunodeficiency Virus (HIV) = Blood / Body Fluid; Hepatitis B Virus (HBV) = Blood / Body Fluid.
+
+---
+
+### Q25 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the common communicable diseases BPOC 40.3 lists as spread by **Contact** transmission.
+
+- [ ] Tuberculosis (TB)
+- [ ] Coronavirus (COVID)
+- [ ] Influenza (Flu)
+- [ ] Meningitis
+- [x] Scabies
+- [x] Herpes (HSV)
+- [x] Varicella / Chickenpox / Shingles (VZV)
+- [ ] Human Immunodeficiency Virus (HIV)
+- [ ] Hepatitis B Virus (HBV)
+
+**Explanation:** Contact: Scabies; Herpes (HSV); Varicella / Chickenpox / Shingles (VZV). BPOC 40.3 full list: Tuberculosis (TB) = Airborne; Coronavirus (COVID) = Droplet; Influenza (Flu) = Droplet; Meningitis = Droplet; Scabies = Contact; Herpes (HSV) = Contact; Varicella / Chickenpox / Shingles (VZV) = Contact; Human Immunodeficiency Virus (HIV) = Blood / Body Fluid; Hepatitis B Virus (HBV) = Blood / Body Fluid.
+
+---
+
+### Q26 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the common communicable diseases BPOC 40.3 lists as spread by **Blood / Body Fluid** transmission.
+
+- [ ] Tuberculosis (TB)
+- [ ] Coronavirus (COVID)
+- [ ] Influenza (Flu)
+- [ ] Meningitis
+- [ ] Scabies
+- [ ] Herpes (HSV)
+- [ ] Varicella / Chickenpox / Shingles (VZV)
+- [x] Human Immunodeficiency Virus (HIV)
+- [x] Hepatitis B Virus (HBV)
+
+**Explanation:** Blood / Body Fluid: Human Immunodeficiency Virus (HIV); Hepatitis B Virus (HBV). BPOC 40.3 full list: Tuberculosis (TB) = Airborne; Coronavirus (COVID) = Droplet; Influenza (Flu) = Droplet; Meningitis = Droplet; Scabies = Contact; Herpes (HSV) = Contact; Varicella / Chickenpox / Shingles (VZV) = Contact; Human Immunodeficiency Virus (HIV) = Blood / Body Fluid; Hepatitis B Virus (HBV) = Blood / Body Fluid.
+
+---
+
+### Q27 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the **universal precautions** BPOC 40.3 lists for preventing transmission of communicable diseases.
+
+- [x] Avoidance
+- [x] Treat all persons as if infected
+- [x] Gloves
+- [x] Goggles
+- [x] Mask (surgical vs N95)
+- [x] Hand/skin washing
+- [x] Changing clothes
+- [ ] Contact your agency's Infection Control Officer and/or follow your agency's exposure policy
+- [ ] Notify the local hospital emergency department and/or local public health department, when agency policy dictates
+- [ ] Possible exposures are triaged, with specific advice given for the exact situation
+- [ ] Treat only persons with visible symptoms as infected
+- [ ] Wear gloves only when blood is visible
+
+**Explanation:** Universal precautions: Avoidance; Treat all persons as if infected; Gloves; Goggles; Mask (surgical vs N95); Hand/skin washing; Changing clothes. The other options are either the steps to take after a possible exposure (also in 40.3) or the opposite of "treat all persons as if infected."
+
+---
+
+### Q28 — Select All
+**LO:** 40.3 · **Source:** BPOC 40.3
+
+Select all of the steps BPOC 40.3 lists for when you believe you have been **exposed** to a communicable disease.
+
+- [x] Contact your agency's Infection Control Officer and/or follow your agency's exposure policy
+- [x] Notify the local hospital emergency department and/or local public health department, when agency policy dictates
+- [x] Possible exposures are triaged, with specific advice given for the exact situation
+- [ ] Avoidance
+- [ ] Changing clothes
+- [ ] Hand/skin washing
+- [ ] Treat all persons as if infected
+- [ ] Wait for symptoms before reporting the exposure
+
+**Explanation:** Exposure: contact the Infection Control Officer and/or follow agency exposure policy; agency policy often dictates notifying the local hospital ED and/or public health department; possible exposures are triaged with specific advice. The distractors are universal precautions (prevention, not the exposure response).
+
+---
+
 ## LO 40.4 — Three Phases of Care
 
-### Q23 — Recall
+### Q29 — Recall
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 BPOC 40.4 identifies three phases of care, each with a different focus. **Direct Threat Care** in the **Hot Zone** focuses on:
@@ -328,7 +444,7 @@ BPOC 40.4 identifies three phases of care, each with a different focus. **Direct
 
 ---
 
-### Q24 — Recall
+### Q30 — Recall
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 BPOC 40.4 identifies three phases of care, each with a different focus. **Indirect Threat Care** in the **Warm Zone** focuses on:
@@ -341,7 +457,7 @@ BPOC 40.4 identifies three phases of care, each with a different focus. **Indire
 
 ---
 
-### Q25 — Recall
+### Q31 — Recall
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 BPOC 40.4 identifies three phases of care, each with a different focus. **Evacuation Care** in the **Cold Zone** focuses on:
@@ -354,7 +470,7 @@ BPOC 40.4 identifies three phases of care, each with a different focus. **Evacua
 
 ---
 
-### Q26 — Term ID
+### Q32 — Term ID
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 **Answer:** Direct Threat Care
@@ -365,7 +481,7 @@ _____ ______ ____ means care provided in any area with an ongoing direct and imm
 
 ---
 
-### Q27 — Term ID
+### Q33 — Term ID
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 **Answer:** Indirect Threat Care
@@ -376,7 +492,7 @@ _______ ______ ____ means care provided in an area of relative safety, with adeq
 
 ---
 
-### Q28 — Term ID
+### Q34 — Term ID
 **LO:** 40.4 · **Source:** BPOC 40.4
 
 **Answer:** Evacuation Care
@@ -389,7 +505,7 @@ __________ ____ means care provided while efforts being made to move casualty to
 
 ## LO 40.5 — Universal Patient Assessment (MARCH / XABCDE)
 
-### Q29 — Recall
+### Q35 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 The wound sweep for **Massive Hemorrhage** in **MARCH** or **Exsanguination** using **XABCDE** should include:
@@ -402,7 +518,7 @@ The wound sweep for **Massive Hemorrhage** in **MARCH** or **Exsanguination** us
 
 ---
 
-### Q30 — Recall
+### Q36 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 The wound sweep for **Respirations** in **MARCH** or **Breathing** using **XABCDE** should include:
@@ -415,7 +531,7 @@ The wound sweep for **Respirations** in **MARCH** or **Breathing** using **XABCD
 
 ---
 
-### Q31 — Recall
+### Q37 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 The wound sweep for **Head/Hypothermia/Hyperthermia** in **MARCH** or **Disability** using **XABCDE** should include:
@@ -428,7 +544,7 @@ The wound sweep for **Head/Hypothermia/Hyperthermia** in **MARCH** or **Disabili
 
 ---
 
-### Q32 — Recall
+### Q38 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Pulse Check: Radial vs Carotid**?
@@ -443,7 +559,7 @@ Which **MARCH** assessment involves **Pulse Check: Radial vs Carotid**?
 
 ---
 
-### Q33 — Recall
+### Q39 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Monitor Breathing: Normal vs Abnormal**?
@@ -458,7 +574,7 @@ Which **MARCH** assessment involves **Monitor Breathing: Normal vs Abnormal**?
 
 ---
 
-### Q34 — Recall
+### Q40 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Open, Clear, Assess**?
@@ -473,7 +589,7 @@ Which **MARCH** assessment involves **Open, Clear, Assess**?
 
 ---
 
-### Q35 — Recall
+### Q41 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Pupil Check: Dilated vs Pinpoint vs Unequal**?
@@ -488,7 +604,7 @@ Which **MARCH** assessment involves **Pupil Check: Dilated vs Pinpoint vs Unequa
 
 ---
 
-### Q36 — Recall
+### Q42 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Skin Check: Normal vs Abnormal**?
@@ -503,7 +619,7 @@ Which **MARCH** assessment involves **Skin Check: Normal vs Abnormal**?
 
 ---
 
-### Q37 — Recall
+### Q43 — Recall
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 Which **MARCH** assessment involves **Temperature Check: Normal vs Hot vs Cold**?
@@ -518,7 +634,7 @@ Which **MARCH** assessment involves **Temperature Check: Normal vs Hot vs Cold**
 
 ---
 
-### Q38 — Term ID
+### Q44 — Term ID
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 **Answer:** Massive Hemorrhage | Massive Bleeding | Massive Haemorrhage
@@ -529,7 +645,7 @@ _______ __________ represents the **M** in the **MARCH** Universal Patient Asses
 
 ---
 
-### Q39 — Term ID
+### Q45 — Term ID
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 **Answer:** Airway
@@ -540,7 +656,7 @@ ______ represents the **A** in the **MARCH** Universal Patient Assessment.
 
 ---
 
-### Q40 — Term ID
+### Q46 — Term ID
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 **Answer:** Respiration | Respirations
@@ -551,7 +667,7 @@ ______ represents the **R** in the **MARCH** Universal Patient Assessment.
 
 ---
 
-### Q41 — Term ID
+### Q47 — Term ID
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 **Answer:** Circulation
@@ -562,7 +678,7 @@ ______ represents the **C** in the **MARCH** Universal Patient Assessment.
 
 ---
 
-### Q42 — Term ID
+### Q48 — Term ID
 **LO:** 40.5 · **Source:** BPOC 40.5
 
 **Answer:** Head | Hypothermia | Hyperthermia
@@ -575,7 +691,7 @@ ______ represents the **H** in the **MARCH** Universal Patient Assessment.
 
 ## LO 40.6 — Hemorrhage / Bleeding Control
 
-### Q43 — Recall
+### Q49 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 This **hemorrhage/bleeding control** method involves applying pressure directly to the wound using gauze, cloth, or a gloved hand.
@@ -590,7 +706,7 @@ This **hemorrhage/bleeding control** method involves applying pressure directly 
 
 ---
 
-### Q44 — Recall
+### Q50 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 This **hemorrhage/bleeding control** method involves utilizing pressure points "above" the wound (closer to the heart).
@@ -605,7 +721,7 @@ This **hemorrhage/bleeding control** method involves utilizing pressure points "
 
 ---
 
-### Q45 — Recall
+### Q51 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 This **hemorrhage/bleeding control** method is used for heavy bleeding from arms/legs, and is most effective when placed "high and tight" or a minimum of 3 inches "above" the wound (closer to the heart).
@@ -620,7 +736,7 @@ This **hemorrhage/bleeding control** method is used for heavy bleeding from arms
 
 ---
 
-### Q46 — Recall
+### Q52 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 This **hemorrhage/bleeding control** method is used for heavy bleeding from groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection.
@@ -635,7 +751,7 @@ This **hemorrhage/bleeding control** method is used for heavy bleeding from groi
 
 ---
 
-### Q47 — Recall
+### Q53 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 Once a wound is fully packed with a **wound pack**, firm and direct pressure should be held for at least __ minutes.
@@ -649,7 +765,7 @@ Once a wound is fully packed with a **wound pack**, firm and direct pressure sho
 
 ---
 
-### Q48 — Recall
+### Q54 — Recall
 **LO:** 40.6 · **Source:** BPOC 40.6
 
 This **hemorrhage/bleeding control** method is used with bleeding that is not massive/heavy, or to maintain pressure after wound pack.
@@ -664,9 +780,127 @@ This **hemorrhage/bleeding control** method is used with bleeding that is not ma
 
 ---
 
+### Q55 — Select All
+**LO:** 40.6 · **Source:** BPOC 40.6
+
+Select all of the items BPOC 40.6 lists for **Direct Pressure** bleeding control.
+
+- [x] Apply pressure directly to the wound
+- [x] Use gauze, cloth, or a gloved hand
+- [x] Maintain pressure until bleeding stops or another effective intervention is used
+- [ ] Femoral artery
+- [ ] Preferentially use commercial gauze with an impregnated hemostatic agent
+- [ ] Preferentially use a commercial pressure dressing with a leverage bar/button/tab
+- [ ] Preferentially use a commercial tourniquet device
+- [ ] Use pressure points &ldquo;above&rdquo; the wound (closer to the heart)
+- [ ] For massive extremity hemorrhage (heavy bleeding from arms/legs)
+- [ ] Note the time of application
+- [ ] If bleeding is not controlled, apply a second one &ldquo;above&rdquo; the first
+- [ ] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [ ] Once fully packed, hold firm direct pressure for at least 3 minutes
+
+**Explanation:** BPOC 40.6, Direct Pressure: Apply pressure directly to the wound; Use gauze, cloth, or a gloved hand; Maintain pressure until bleeding stops or another effective intervention is used. The distractors are items from the other bleeding-control techniques in 40.6 (direct pressure, indirect pressure, tourniquet, wound pack, pressure dressing).
+
+---
+
+### Q56 — Select All
+**LO:** 40.6 · **Source:** BPOC 40.6
+
+Select all of the items BPOC 40.6 lists for **Indirect Pressure** bleeding control.
+
+- [x] Use pressure points &ldquo;above&rdquo; the wound (closer to the heart)
+- [x] Brachial artery
+- [x] Femoral artery
+- [x] Maintain pressure until bleeding stops or another effective intervention is used
+- [ ] Note the time of application
+- [ ] Place &ldquo;high and tight,&rdquo; or a minimum of 3 inches &ldquo;above&rdquo; the wound
+- [ ] For massive junctional hemorrhage (groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection)
+- [ ] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [ ] Preferentially use a commercial tourniquet device
+- [ ] Apply pressure directly to the wound
+- [ ] Fully pack the void in all directions, starting toward the direction of bleeding
+- [ ] Preferentially use a commercial pressure dressing with a leverage bar/button/tab
+- [ ] Use gauze, cloth, or a gloved hand
+- [ ] Preferentially use commercial gauze with an impregnated hemostatic agent
+
+**Explanation:** BPOC 40.6, Indirect Pressure: Use pressure points &ldquo;above&rdquo; the wound (closer to the heart); Brachial artery; Femoral artery; Maintain pressure until bleeding stops or another effective intervention is used. The distractors are items from the other bleeding-control techniques in 40.6 (direct pressure, indirect pressure, tourniquet, wound pack, pressure dressing).
+
+---
+
+### Q57 — Select All
+**LO:** 40.6 · **Source:** BPOC 40.6
+
+Select all of the items BPOC 40.6 lists for **Tourniquet** bleeding control.
+
+- [x] For massive extremity hemorrhage (heavy bleeding from arms/legs)
+- [x] Preferentially use a commercial tourniquet device
+- [x] Place &ldquo;high and tight,&rdquo; or a minimum of 3 inches &ldquo;above&rdquo; the wound
+- [x] If bleeding is not controlled, apply a second one &ldquo;above&rdquo; the first
+- [x] Note the time of application
+- [ ] Use pressure points &ldquo;above&rdquo; the wound (closer to the heart)
+- [ ] For massive junctional hemorrhage (groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection)
+- [ ] Use gauze, cloth, or a gloved hand
+- [ ] Maintain pressure until bleeding stops or another effective intervention is used
+- [ ] Brachial artery
+- [ ] Preferentially use a commercial pressure dressing with a leverage bar/button/tab
+- [ ] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [ ] Preferentially use commercial gauze with an impregnated hemostatic agent
+- [ ] Apply pressure directly to the wound
+- [ ] Once fully packed, hold firm direct pressure for at least 3 minutes
+
+**Explanation:** BPOC 40.6, Tourniquet: For massive extremity hemorrhage (heavy bleeding from arms/legs); Preferentially use a commercial tourniquet device; Place &ldquo;high and tight,&rdquo; or a minimum of 3 inches &ldquo;above&rdquo; the wound; If bleeding is not controlled, apply a second one &ldquo;above&rdquo; the first; Note the time of application. The distractors are items from the other bleeding-control techniques in 40.6 (direct pressure, indirect pressure, tourniquet, wound pack, pressure dressing).
+
+---
+
+### Q58 — Select All
+**LO:** 40.6 · **Source:** BPOC 40.6
+
+Select all of the items BPOC 40.6 lists for **Wound Pack** bleeding control.
+
+- [x] For massive junctional hemorrhage (groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection)
+- [x] Preferentially use commercial gauze with an impregnated hemostatic agent
+- [x] Fully pack the void in all directions, starting toward the direction of bleeding
+- [x] Once fully packed, hold firm direct pressure for at least 3 minutes
+- [ ] Femoral artery
+- [ ] Use pressure points &ldquo;above&rdquo; the wound (closer to the heart)
+- [ ] Preferentially use a commercial tourniquet device
+- [ ] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [ ] Note the time of application
+- [ ] Apply pressure directly to the wound
+- [ ] Place &ldquo;high and tight,&rdquo; or a minimum of 3 inches &ldquo;above&rdquo; the wound
+- [ ] Use gauze, cloth, or a gloved hand
+- [ ] Preferentially use a commercial pressure dressing with a leverage bar/button/tab
+- [ ] If bleeding is not controlled, apply a second one &ldquo;above&rdquo; the first
+
+**Explanation:** BPOC 40.6, Wound Pack: For massive junctional hemorrhage (groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection); Preferentially use commercial gauze with an impregnated hemostatic agent; Fully pack the void in all directions, starting toward the direction of bleeding; Once fully packed, hold firm direct pressure for at least 3 minutes. The distractors are items from the other bleeding-control techniques in 40.6 (direct pressure, indirect pressure, tourniquet, wound pack, pressure dressing).
+
+---
+
+### Q59 — Select All
+**LO:** 40.6 · **Source:** BPOC 40.6
+
+Select all of the items BPOC 40.6 lists for **Pressure Dressing** bleeding control.
+
+- [x] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [x] Preferentially use a commercial pressure dressing with a leverage bar/button/tab
+- [ ] Preferentially use a commercial tourniquet device
+- [ ] Place &ldquo;high and tight,&rdquo; or a minimum of 3 inches &ldquo;above&rdquo; the wound
+- [ ] Note the time of application
+- [ ] Apply pressure directly to the wound
+- [ ] Brachial artery
+- [ ] For massive extremity hemorrhage (heavy bleeding from arms/legs)
+- [ ] Use gauze, cloth, or a gloved hand
+- [ ] Fully pack the void in all directions, starting toward the direction of bleeding
+- [ ] Femoral artery
+- [ ] Preferentially use commercial gauze with an impregnated hemostatic agent
+
+**Explanation:** BPOC 40.6, Pressure Dressing: For bleeding that is not massive/heavy, or to maintain pressure after a wound pack; Preferentially use a commercial pressure dressing with a leverage bar/button/tab. The distractors are items from the other bleeding-control techniques in 40.6 (direct pressure, indirect pressure, tourniquet, wound pack, pressure dressing).
+
+---
+
 ## LO 40.7 — Airway Management
 
-### Q49 — Recall
+### Q60 — Recall
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 This airway management technique allows a casualty to assume any preferred position of comfort to maintain their own airway, and may be the tripod position.
@@ -681,7 +915,7 @@ This airway management technique allows a casualty to assume any preferred posit
 
 ---
 
-### Q50 — Recall
+### Q61 — Recall
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 This airway management technique can be used on casualties **without** neck/spine injury concerns, and can allow for a finger sweep to be performed to clear any airway blocking objects, although a blind finger sweep should never be attempted.
@@ -696,7 +930,7 @@ This airway management technique can be used on casualties **without** neck/spin
 
 ---
 
-### Q51 — Recall
+### Q62 — Recall
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 This airway management technique can be used on casualties **with** neck/spine injury concerns, and can allow for a finger sweep to be performed to clear any airway blocking objects, although a blind finger sweep should never be attempted.
@@ -711,7 +945,7 @@ This airway management technique can be used on casualties **with** neck/spine i
 
 ---
 
-### Q52 — Recall
+### Q63 — Recall
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 Attempts to utilize this airway management technique should utilize/follow current American Heart Association or American Red Cross recommendations/guidelines as part of the integrated course in CPR/AED.
@@ -726,7 +960,7 @@ Attempts to utilize this airway management technique should utilize/follow curre
 
 ---
 
-### Q53 — Term ID
+### Q64 — Term ID
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 **Answer:** Position of Comfort
@@ -737,7 +971,7 @@ ________ __ ______ is for conscious casualties without concern for neck/spine in
 
 ---
 
-### Q54 — Term ID
+### Q65 — Term ID
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 **Answer:** Head Tilt / Chin Lift | Head Tilt | Chin Lift | Head Tilt Chin Lift
@@ -748,7 +982,7 @@ ____ ____ is for casualties (can be conscious or unconscious) without concern fo
 
 ---
 
-### Q55 — Term ID
+### Q66 — Term ID
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 **Answer:** Jaw Thrust
@@ -759,7 +993,7 @@ ___ ______ is for casualties with concern for neck/spine injury (yes major fall/
 
 ---
 
-### Q56 — Term ID
+### Q67 — Term ID
 **LO:** 40.7 · **Source:** BPOC 40.7
 
 **Answer:** Recovery Position
@@ -772,7 +1006,7 @@ ________ ________ is for any casualty with active bleeding/vomit/debris in their
 
 ## LO 40.8 — Respiration / Breathing Management
 
-### Q57 — Recall
+### Q68 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 This **respiration/breathing management** intervention is used for a penetrating injury to the chest, abdomen, and/or back.
@@ -787,7 +1021,7 @@ This **respiration/breathing management** intervention is used for a penetrating
 
 ---
 
-### Q58 — Recall
+### Q69 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 This **respiration/breathing** emergency presents as an injury to the chest/abdomen/back with severe difficulty breathing and signs of shock.
@@ -802,7 +1036,7 @@ This **respiration/breathing** emergency presents as an injury to the chest/abdo
 
 ---
 
-### Q59 — Recall
+### Q70 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 This **respiration/breathing** emergency is often caused by ingestion or injection of an allergen (food, drink, bite, sting), and its symptoms include a diffuse skin rash, hives, a whistling sound in the throat, and difficulty swallowing.
@@ -817,7 +1051,7 @@ This **respiration/breathing** emergency is often caused by ingestion or injecti
 
 ---
 
-### Q60 — Recall
+### Q71 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 This **respiration/breathing** emergency is often caused by inhaling an allergen (mold, pollen, smoke, pollutant) or by intense exercise, usually in someone with a known history, and presents with wheezing, tripod positioning, and an anxious appearance.
@@ -832,7 +1066,7 @@ This **respiration/breathing** emergency is often caused by inhaling an allergen
 
 ---
 
-### Q61 — Recall
+### Q72 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 This **respiration/breathing** emergency presents with an altered level of consciousness, slow/shallow breathing, weak pulse, pale or blue skin, and pinpoint pupils.
@@ -847,7 +1081,7 @@ This **respiration/breathing** emergency presents with an altered level of consc
 
 ---
 
-### Q62 — Recall
+### Q73 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 When should an **occlusive dressing** NOT be used on a penetrating wound?
@@ -861,7 +1095,7 @@ When should an **occlusive dressing** NOT be used on a penetrating wound?
 
 ---
 
-### Q63 — Recall
+### Q74 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 What type of occlusive dressing does BPOC 40.8 say to use preferentially?
@@ -875,7 +1109,7 @@ What type of occlusive dressing does BPOC 40.8 say to use preferentially?
 
 ---
 
-### Q64 — Recall
+### Q75 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 After applying an occlusive dressing, what must you monitor for, and what do you do if it develops?
@@ -889,7 +1123,7 @@ After applying an occlusive dressing, what must you monitor for, and what do you
 
 ---
 
-### Q65 — Recall
+### Q76 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 What does BPOC 40.8 identify as the key to managing a tension pneumothorax?
@@ -903,7 +1137,7 @@ What does BPOC 40.8 identify as the key to managing a tension pneumothorax?
 
 ---
 
-### Q66 — Recall
+### Q77 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 A casualty in anaphylaxis has a prescribed epinephrine auto-injector (Epi Pen). What should the officer do?
@@ -917,7 +1151,7 @@ A casualty in anaphylaxis has a prescribed epinephrine auto-injector (Epi Pen). 
 
 ---
 
-### Q67 — True/False
+### Q78 — True/False
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 True or False: A severe allergic reaction (anaphylaxis) only occurs in people with a known history of allergic reaction.
@@ -929,7 +1163,7 @@ True or False: A severe allergic reaction (anaphylaxis) only occurs in people wi
 
 ---
 
-### Q68 — Recall
+### Q79 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 What medication does BPOC 40.8 name for a casualty's prescribed inhaler/nebulizer during an asthma attack?
@@ -943,7 +1177,7 @@ What medication does BPOC 40.8 name for a casualty's prescribed inhaler/nebulize
 
 ---
 
-### Q69 — Recall
+### Q80 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 Which of the following is NOT listed in BPOC 40.8 as a common cause of opioid (narcotic) overdose?
@@ -957,7 +1191,7 @@ Which of the following is NOT listed in BPOC 40.8 as a common cause of opioid (n
 
 ---
 
-### Q70 — Recall
+### Q81 — Recall
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 For a suspected opioid overdose, what drug may the officer administer if indicated, available, and able/authorized to do so?
@@ -971,7 +1205,7 @@ For a suspected opioid overdose, what drug may the officer administer if indicat
 
 ---
 
-### Q71 — True/False
+### Q82 — True/False
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 True or False: Rescue breathing should follow current American Heart Association or American Red Cross guidelines and must include adult, child, and infant techniques.
@@ -983,7 +1217,7 @@ True or False: Rescue breathing should follow current American Heart Association
 
 ---
 
-### Q72 — Term ID
+### Q83 — Term ID
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 **Answer:** Occlusive Dressing | Chest Seal | Vented Chest Seal
@@ -994,7 +1228,7 @@ __________ ________ is used for a penetrating injury to the chest, abdomen, and/
 
 ---
 
-### Q73 — Term ID
+### Q84 — Term ID
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 **Answer:** Tension Pneumothorax
@@ -1005,7 +1239,7 @@ _______ ____________ is an injury to the chest/abdomen/back with severe difficul
 
 ---
 
-### Q74 — Term ID
+### Q85 — Term ID
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 **Answer:** Anaphylaxis
@@ -1016,7 +1250,7 @@ ___________ is a severe allergic reaction.
 
 ---
 
-### Q75 — Term ID
+### Q86 — Term ID
 **LO:** 40.8 · **Source:** BPOC 40.8
 
 **Answer:** Status Asthmaticus
@@ -1027,9 +1261,217 @@ ______ ___________ is a severe asthma attack.
 
 ---
 
+### Q87 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the items (when to use it, and care steps) BPOC 40.8 lists for **Occlusive Dressing**.
+
+- [x] Penetrating injury to the chest, abdomen, and/or back
+- [x] Do not use if major evisceration (intestines coming out of the wound)
+- [x] Preferentially use a commercial vented chest seal
+- [x] Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+- [ ] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Must include Adult, Child, and Infant
+- [ ] Provide rescue breathing if indicated and able to do so
+- [ ] Encourage self-administration of a prescribed epinephrine device (nasal spray or auto-injector)
+- [ ] Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol)
+- [ ] Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED
+- [ ] Early recognition during assessment is the key
+
+**Explanation:** BPOC 40.8, Occlusive Dressing: Penetrating injury to the chest, abdomen, and/or back; Do not use if major evisceration (intestines coming out of the wound); Preferentially use a commercial vented chest seal; Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
+### Q88 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the items (when to use it, and care steps) BPOC 40.8 lists for **Tension Pneumothorax**.
+
+- [x] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+- [x] Early recognition during assessment is the key
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Provide rescue breathing if indicated and able to do so
+- [ ] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Must include Adult, Child, and Infant
+- [ ] Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated
+- [ ] Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol)
+- [ ] Do not use if major evisceration (intestines coming out of the wound)
+- [ ] Encourage self-administration of a prescribed epinephrine device (nasal spray or auto-injector)
+- [ ] Penetrating injury to the chest, abdomen, and/or back
+- [ ] Preferentially use a commercial vented chest seal
+
+**Explanation:** BPOC 40.8, Tension Pneumothorax: Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock; Early recognition during assessment is the key; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
+### Q89 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the causes and signs/symptoms BPOC 40.8 lists for **Allergic Reaction (Anaphylaxis)**.
+
+- [x] Ingestion/injection of an allergen (food, drink, bite, sting)
+- [x] Can occur with or without a known history of allergic reaction
+- [x] Diffuse skin rash
+- [x] Hives
+- [x] Difficulty breathing
+- [x] Difficulty speaking
+- [x] Difficulty swallowing
+- [x] Whistling sound in throat
+- [x] Wheezing sound in lungs
+- [ ] Pinpoint pupils
+- [ ] Anxious appearance
+- [ ] Weak pulse
+- [ ] Tripod positioning
+- [ ] Usually a known history of asthma
+- [ ] Inhalation of an allergen (mold, pollen, smoke, pollutant) and/or intense physical exercise
+- [ ] Slow/shallow breathing
+- [ ] Pale or blue skin
+- [ ] Inhalation/injection/ingestion of codeine, fentanyl, heroin, morphine, oxycodone, hydrocodone
+
+**Explanation:** BPOC 40.8, Allergic Reaction (Anaphylaxis): Ingestion/injection of an allergen (food, drink, bite, sting); Can occur with or without a known history of allergic reaction; Diffuse skin rash; Hives; Difficulty breathing; Difficulty speaking; Difficulty swallowing; Whistling sound in throat; Wheezing sound in lungs. The distractors are causes and signs from the other breathing-management conditions in 40.8.
+
+---
+
+### Q90 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the care steps BPOC 40.8 lists for **Allergic Reaction (Anaphylaxis)**.
+
+- [x] Encourage self-administration of a prescribed epinephrine device (nasal spray or auto-injector)
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated
+- [ ] Preferentially use a commercial vented chest seal
+- [ ] Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED
+- [ ] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Penetrating injury to the chest, abdomen, and/or back
+- [ ] Early recognition during assessment is the key
+- [ ] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+- [ ] Do not use if major evisceration (intestines coming out of the wound)
+- [ ] Provide rescue breathing if indicated and able to do so
+
+**Explanation:** BPOC 40.8, Allergic Reaction (Anaphylaxis): Encourage self-administration of a prescribed epinephrine device (nasal spray or auto-injector); Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
+### Q91 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the causes and signs/symptoms BPOC 40.8 lists for **Asthma Attack (Status Asthmaticus)**.
+
+- [x] Inhalation of an allergen (mold, pollen, smoke, pollutant) and/or intense physical exercise
+- [x] Usually a known history of asthma
+- [x] Difficulty breathing
+- [x] Difficulty speaking
+- [x] Wheezing sound in lungs
+- [x] Tripod positioning
+- [x] Anxious appearance
+- [ ] Whistling sound in throat
+- [ ] Can occur with or without a known history of allergic reaction
+- [ ] Inhalation/injection/ingestion of codeine, fentanyl, heroin, morphine, oxycodone, hydrocodone
+- [ ] Difficulty swallowing
+- [ ] Hives
+- [ ] Pinpoint pupils
+- [ ] Pale or blue skin
+- [ ] Ingestion/injection of an allergen (food, drink, bite, sting)
+- [ ] Weak pulse
+
+**Explanation:** BPOC 40.8, Asthma Attack (Status Asthmaticus): Inhalation of an allergen (mold, pollen, smoke, pollutant) and/or intense physical exercise; Usually a known history of asthma; Difficulty breathing; Difficulty speaking; Wheezing sound in lungs; Tripod positioning; Anxious appearance. The distractors are causes and signs from the other breathing-management conditions in 40.8.
+
+---
+
+### Q92 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the care steps BPOC 40.8 lists for **Asthma Attack (Status Asthmaticus)**.
+
+- [x] Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol)
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Early recognition during assessment is the key
+- [ ] Must include Adult, Child, and Infant
+- [ ] Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated
+- [ ] Provide rescue breathing if indicated and able to do so
+- [ ] Preferentially use a commercial vented chest seal
+- [ ] Penetrating injury to the chest, abdomen, and/or back
+- [ ] Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED
+- [ ] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+
+**Explanation:** BPOC 40.8, Asthma Attack (Status Asthmaticus): Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol); Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
+### Q93 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the causes and signs/symptoms BPOC 40.8 lists for **Opioid Overdose**.
+
+- [x] Inhalation/injection/ingestion of codeine, fentanyl, heroin, morphine, oxycodone, hydrocodone
+- [x] Altered mental status / altered level of consciousness
+- [x] Slow/shallow breathing
+- [x] Weak pulse
+- [x] Pale or blue skin
+- [x] Pinpoint pupils
+- [ ] Ingestion/injection of an allergen (food, drink, bite, sting)
+- [ ] Wheezing sound in lungs
+- [ ] Inhalation of an allergen (mold, pollen, smoke, pollutant) and/or intense physical exercise
+- [ ] Usually a known history of asthma
+- [ ] Whistling sound in throat
+- [ ] Tripod positioning
+- [ ] Hives
+- [ ] Diffuse skin rash
+- [ ] Difficulty speaking
+
+**Explanation:** BPOC 40.8, Opioid Overdose: Inhalation/injection/ingestion of codeine, fentanyl, heroin, morphine, oxycodone, hydrocodone; Altered mental status / altered level of consciousness; Slow/shallow breathing; Weak pulse; Pale or blue skin; Pinpoint pupils. The distractors are causes and signs from the other breathing-management conditions in 40.8.
+
+---
+
+### Q94 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the care steps BPOC 40.8 lists for **Opioid Overdose**.
+
+- [x] Provide rescue breathing if indicated and able to do so
+- [x] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Do not use if major evisceration (intestines coming out of the wound)
+- [ ] Monitor for tension pneumothorax and &ldquo;burp&rdquo;/remove the seal if indicated
+- [ ] Preferentially use a commercial vented chest seal
+- [ ] Must include Adult, Child, and Infant
+- [ ] Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol)
+- [ ] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+- [ ] Early recognition during assessment is the key
+- [ ] Penetrating injury to the chest, abdomen, and/or back
+- [ ] Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED
+
+**Explanation:** BPOC 40.8, Opioid Overdose: Provide rescue breathing if indicated and able to do so; Administer naloxone / Narcan if indicated, available, and able/authorized to do so. The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
+### Q95 — Select All
+**LO:** 40.8 · **Source:** BPOC 40.8
+
+Select all of the care steps BPOC 40.8 lists for **Rescue Breathing**.
+
+- [x] Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED
+- [x] Must include Adult, Child, and Infant
+- [ ] Encourage self-administration of a prescribed epinephrine device (nasal spray or auto-injector)
+- [ ] Do not use if major evisceration (intestines coming out of the wound)
+- [ ] Encourage self-administration of a prescribed inhaler/nebulizer (Albuterol)
+- [ ] Injury to the chest/abdomen/back with severe difficulty breathing and signs of shock
+- [ ] Administer naloxone / Narcan if indicated, available, and able/authorized to do so
+- [ ] Provide rescue breathing if indicated and able to do so
+- [ ] Penetrating injury to the chest, abdomen, and/or back
+- [ ] Preferentially use a commercial vented chest seal
+- [ ] Early recognition during assessment is the key
+
+**Explanation:** BPOC 40.8, Rescue Breathing: Follow current American Heart Association or American Red Cross guidelines, as part of the integrated course in CPR/AED; Must include Adult, Child, and Infant. The distractors are care steps from the other breathing-management conditions in 40.8.
+
+---
+
 ## LO 40.9 — Circulation Management (Heart Attack, Shock, CPR/AED)
 
-### Q76 — Recall
+### Q96 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 What generally causes a **heart attack** (acute myocardial infarction)?
@@ -1043,7 +1485,7 @@ What generally causes a **heart attack** (acute myocardial infarction)?
 
 ---
 
-### Q77 — Recall
+### Q97 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 Which set of symptoms does BPOC 40.9 list for a **heart attack**?
@@ -1057,7 +1499,7 @@ Which set of symptoms does BPOC 40.9 list for a **heart attack**?
 
 ---
 
-### Q78 — Recall
+### Q98 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 How should the officer manage a casualty having a **heart attack**?
@@ -1071,7 +1513,7 @@ How should the officer manage a casualty having a **heart attack**?
 
 ---
 
-### Q79 — Recall
+### Q99 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 How does BPOC 40.9 describe **shock**?
@@ -1085,7 +1527,7 @@ How does BPOC 40.9 describe **shock**?
 
 ---
 
-### Q80 — Recall
+### Q100 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 Which of the following can cause **shock**?
@@ -1099,7 +1541,7 @@ Which of the following can cause **shock**?
 
 ---
 
-### Q81 — Recall
+### Q101 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 What does BPOC 40.9 say to do for a casualty in **shock**?
@@ -1113,7 +1555,7 @@ What does BPOC 40.9 say to do for a casualty in **shock**?
 
 ---
 
-### Q82 — True/False
+### Q102 — True/False
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 True or False: The shock addressed in BPOC 40.9 is psychological shock caused by emotional trauma.
@@ -1125,7 +1567,7 @@ True or False: The shock addressed in BPOC 40.9 is psychological shock caused by
 
 ---
 
-### Q83 — Recall
+### Q103 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 Which CPR/AED course does BPOC 40.9 require Texas peace officer candidates to complete?
@@ -1139,7 +1581,7 @@ Which CPR/AED course does BPOC 40.9 require Texas peace officer candidates to co
 
 ---
 
-### Q84 — Recall
+### Q104 — Recall
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 Besides CPR/AED, what components must the required CPR/AED course include?
@@ -1153,7 +1595,7 @@ Besides CPR/AED, what components must the required CPR/AED course include?
 
 ---
 
-### Q85 — Term ID
+### Q105 — Term ID
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 **Answer:** Heart Attack
@@ -1164,7 +1606,7 @@ _____ ______ (acute myocardial infarction) is generally caused by a blockage in 
 
 ---
 
-### Q86 — Term ID
+### Q106 — Term ID
 **LO:** 40.9 · **Source:** BPOC 40.9
 
 **Answer:** Shock | Physiological Shock
@@ -1175,9 +1617,103 @@ _____ is inadequate blood flow to the body tissues and organs, highlighted by al
 
 ---
 
+### Q107 — Select All
+**LO:** 40.9 · **Source:** BPOC 40.9
+
+Select all of the causes and signs/symptoms BPOC 40.9 lists for **Heart Attack (Acute Myocardial Infarction)**.
+
+- [x] Blockage in an artery that feeds blood/oxygen to the heart muscle
+- [x] Chest pain/pressure
+- [x] Jaw pain
+- [x] Left arm pain
+- [x] Shortness of breath
+- [x] Indigestion
+- [x] Nausea
+- [x] Pale/sweaty skin
+- [ ] Rapid/weak/absent pulse
+- [ ] Inadequate blood flow to the body tissues and organs
+- [ ] Can be caused by hemorrhage, tension pneumothorax, heat/dehydration, severe infection, severe allergic reaction
+- [ ] Pale/cool skin
+- [ ] Altered mental status / altered level of consciousness
+
+**Explanation:** BPOC 40.9, Heart Attack (Acute Myocardial Infarction): Blockage in an artery that feeds blood/oxygen to the heart muscle; Chest pain/pressure; Jaw pain; Left arm pain; Shortness of breath; Indigestion; Nausea; Pale/sweaty skin. The distractors are causes and signs from the other circulation conditions in 40.9.
+
+---
+
+### Q108 — Select All
+**LO:** 40.9 · **Source:** BPOC 40.9
+
+Select all of the care steps BPOC 40.9 lists for **Heart Attack (Acute Myocardial Infarction)**.
+
+- [x] Do not allow the casualty to exert themselves
+- [x] Place the casualty in a position of comfort
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Try to obtain/maintain normal body temperature
+- [ ] Place the casualty in the recovery position
+
+**Explanation:** BPOC 40.9, Heart Attack (Acute Myocardial Infarction): Do not allow the casualty to exert themselves; Place the casualty in a position of comfort; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other circulation conditions in 40.9.
+
+---
+
+### Q109 — Select All
+**LO:** 40.9 · **Source:** BPOC 40.9
+
+Select all of the causes and signs/symptoms BPOC 40.9 lists for **Shock (Physiological)**.
+
+- [x] Inadequate blood flow to the body tissues and organs
+- [x] Altered mental status / altered level of consciousness
+- [x] Pale/cool skin
+- [x] Rapid/weak/absent pulse
+- [x] Can be caused by hemorrhage, tension pneumothorax, heat/dehydration, severe infection, severe allergic reaction
+- [ ] Indigestion
+- [ ] Jaw pain
+- [ ] Blockage in an artery that feeds blood/oxygen to the heart muscle
+- [ ] Pale/sweaty skin
+- [ ] Nausea
+- [ ] Shortness of breath
+- [ ] Chest pain/pressure
+- [ ] Left arm pain
+
+**Explanation:** BPOC 40.9, Shock (Physiological): Inadequate blood flow to the body tissues and organs; Altered mental status / altered level of consciousness; Pale/cool skin; Rapid/weak/absent pulse; Can be caused by hemorrhage, tension pneumothorax, heat/dehydration, severe infection, severe allergic reaction. The distractors are causes and signs from the other circulation conditions in 40.9.
+
+---
+
+### Q110 — Select All
+**LO:** 40.9 · **Source:** BPOC 40.9
+
+Select all of the care steps BPOC 40.9 lists for **Shock (Physiological)**.
+
+- [x] Place the casualty in the recovery position
+- [x] Try to obtain/maintain normal body temperature
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Do not allow the casualty to exert themselves
+- [ ] Place the casualty in a position of comfort
+
+**Explanation:** BPOC 40.9, Shock (Physiological): Place the casualty in the recovery position; Try to obtain/maintain normal body temperature; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other circulation conditions in 40.9.
+
+---
+
+### Q111 — Select All
+**LO:** 40.9 · **Source:** BPOC 40.9
+
+Select all of the requirements BPOC 40.9 lists for the **complete course in CPR/AED** for Texas Peace Officer candidates.
+
+- [x] A full, nationally accredited course in CPR and AED use
+- [x] American Heart Association (AHA) Heartsaver or American Red Cross (ARC) CPR/AED
+- [x] Must include Adult, Child, and Infant
+- [x] Must include choking and rescue breathing components
+- [ ] Adult CPR only; child and infant are optional
+- [ ] Must include tourniquet and wound-pack training
+- [ ] Must include naloxone administration
+- [ ] Choking is covered, but rescue breathing is not required
+
+**Explanation:** BPOC 40.9: a full, nationally accredited CPR/AED course (AHA Heartsaver or ARC CPR/AED) including Adult, Child, and Infant, plus choking and rescue breathing. Tourniquets and wound packing are 40.6; naloxone is 40.8.
+
+---
+
 ## LO 40.10 — Environmental Emergencies (Heat / Cold)
 
-### Q87 — Recall
+### Q112 — Recall
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 Which of the following is a step for a **cold emergency** (hypothermia)?
@@ -1191,7 +1727,7 @@ Which of the following is a step for a **cold emergency** (hypothermia)?
 
 ---
 
-### Q88 — Recall
+### Q113 — Recall
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 Where should heat packs be placed for a hypothermia victim, and how?
@@ -1205,7 +1741,7 @@ Where should heat packs be placed for a hypothermia victim, and how?
 
 ---
 
-### Q89 — Recall
+### Q114 — Recall
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 Which of the following is a step for a **heat emergency** (hyperthermia)?
@@ -1219,7 +1755,7 @@ Which of the following is a step for a **heat emergency** (hyperthermia)?
 
 ---
 
-### Q90 — True/False
+### Q115 — True/False
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 True or False: For a heat emergency, BPOC 40.10 says to give the victim water to drink only if the victim is conscious.
@@ -1231,7 +1767,7 @@ True or False: For a heat emergency, BPOC 40.10 says to give the victim water to
 
 ---
 
-### Q91 — True/False
+### Q116 — True/False
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 True or False: BPOC 40.10 says to keep all trauma patients warm.
@@ -1243,7 +1779,7 @@ True or False: BPOC 40.10 says to keep all trauma patients warm.
 
 ---
 
-### Q92 — Recall
+### Q117 — Recall
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 Which body locations does BPOC 40.10 list for BOTH heat packs (hypothermia) and ice packs (hyperthermia)?
@@ -1257,7 +1793,7 @@ Which body locations does BPOC 40.10 list for BOTH heat packs (hypothermia) and 
 
 ---
 
-### Q93 — Term ID
+### Q118 — Term ID
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 **Answer:** Hypothermia
@@ -1268,7 +1804,7 @@ ___________ is a cold emergency.
 
 ---
 
-### Q94 — Term ID
+### Q119 — Term ID
 **LO:** 40.10 · **Source:** BPOC 40.10
 
 **Answer:** Hyperthermia
@@ -1279,9 +1815,47 @@ ___________ is a heat emergency.
 
 ---
 
+### Q120 — Select All
+**LO:** 40.10 · **Source:** BPOC 40.10
+
+Select all of the care steps BPOC 40.10 lists for **Cold Emergency (Hypothermia)**.
+
+- [x] Move the victim to a warm place
+- [x] Remove wet clothing and dry the victim
+- [x] Warm with blankets and/or heat packs to the neck, armpits, groin
+- [x] Do not apply heat packs directly to skin; use a barrier such as a cloth
+- [x] Keep all trauma patients warm
+- [ ] Cool with cold wet clothes on skin and/or ice packs to the neck, armpits, groin
+- [ ] Loosen tight clothing
+- [ ] Get the victim out of the heat
+- [ ] If the casualty is conscious, give them water to drink
+
+**Explanation:** BPOC 40.10, Cold Emergency (Hypothermia): Move the victim to a warm place; Remove wet clothing and dry the victim; Warm with blankets and/or heat packs to the neck, armpits, groin; Do not apply heat packs directly to skin; use a barrier such as a cloth; Keep all trauma patients warm. The distractors are care steps from the other environmental conditions in 40.10.
+
+---
+
+### Q121 — Select All
+**LO:** 40.10 · **Source:** BPOC 40.10
+
+Select all of the care steps BPOC 40.10 lists for **Heat Emergency (Hyperthermia)**.
+
+- [x] Get the victim out of the heat
+- [x] Loosen tight clothing
+- [x] Cool with cold wet clothes on skin and/or ice packs to the neck, armpits, groin
+- [x] If the casualty is conscious, give them water to drink
+- [ ] Move the victim to a warm place
+- [ ] Keep all trauma patients warm
+- [ ] Do not apply heat packs directly to skin; use a barrier such as a cloth
+- [ ] Remove wet clothing and dry the victim
+- [ ] Warm with blankets and/or heat packs to the neck, armpits, groin
+
+**Explanation:** BPOC 40.10, Heat Emergency (Hyperthermia): Get the victim out of the heat; Loosen tight clothing; Cool with cold wet clothes on skin and/or ice packs to the neck, armpits, groin; If the casualty is conscious, give them water to drink. The distractors are care steps from the other environmental conditions in 40.10.
+
+---
+
 ## LO 40.11 — Burns
 
-### Q95 — Classification
+### Q122 — Classification
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 A burn caused by the sun, fire/flame, steam, a stove, or boiling water is a:
@@ -1294,7 +1868,7 @@ A burn caused by the sun, fire/flame, steam, a stove, or boiling water is a:
 
 ---
 
-### Q96 — Classification
+### Q123 — Classification
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 A burn caused by bleach, acid, drain cleaner, or paint thinner is a:
@@ -1307,7 +1881,7 @@ A burn caused by bleach, acid, drain cleaner, or paint thinner is a:
 
 ---
 
-### Q97 — Classification
+### Q124 — Classification
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 A burn caused by a car battery, wall outlet, exposed wire, or lightning is a:
@@ -1320,7 +1894,7 @@ A burn caused by a car battery, wall outlet, exposed wire, or lightning is a:
 
 ---
 
-### Q98 — Classification
+### Q125 — Classification
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 Which burn type can present with wounds at entry and exit, an abnormal heartbeat, and cardiac arrest?
@@ -1333,7 +1907,7 @@ Which burn type can present with wounds at entry and exit, an abnormal heartbeat
 
 ---
 
-### Q99 — Recall
+### Q126 — Recall
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 What is the first step for ALL three burn types in BPOC 40.11?
@@ -1347,7 +1921,7 @@ What is the first step for ALL three burn types in BPOC 40.11?
 
 ---
 
-### Q100 — Recall
+### Q127 — Recall
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 For a **chemical burn**, what does BPOC 40.11 say to consider, if safe to do so?
@@ -1361,7 +1935,7 @@ For a **chemical burn**, what does BPOC 40.11 say to consider, if safe to do so?
 
 ---
 
-### Q101 — Recall
+### Q128 — Recall
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 For an **electrical burn** casualty with no pulse, what does BPOC 40.11 direct?
@@ -1375,7 +1949,7 @@ For an **electrical burn** casualty with no pulse, what does BPOC 40.11 direct?
 
 ---
 
-### Q102 — Recall
+### Q129 — Recall
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 For thermal and electrical burns, how should the burns themselves be covered?
@@ -1389,7 +1963,7 @@ For thermal and electrical burns, how should the burns themselves be covered?
 
 ---
 
-### Q103 — Recall
+### Q130 — Recall
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 Which of these is listed as a common symptom of a **thermal burn**?
@@ -1403,7 +1977,7 @@ Which of these is listed as a common symptom of a **thermal burn**?
 
 ---
 
-### Q104 — True/False
+### Q131 — True/False
 **LO:** 40.11 · **Source:** BPOC 40.11
 
 True or False: When a casualty is being burned by a chemical, the officer should enter the area to remove the casualty even if it exposes the officer to the chemical.
@@ -1415,9 +1989,140 @@ True or False: When a casualty is being burned by a chemical, the officer should
 
 ---
 
+### Q132 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the causes and signs/symptoms BPOC 40.11 lists for **Thermal Burns**.
+
+- [x] Sun
+- [x] Fire/flame
+- [x] Steam
+- [x] Stove
+- [x] Boiling water
+- [x] Red painful skin
+- [x] Blisters
+- [x] Black charred skin
+- [x] White waxy skin
+- [ ] Abnormal heartbeat
+- [ ] Cardiac arrest
+- [ ] Skin peeling
+- [ ] Wall outlet
+- [ ] Wounds at entry and exit
+- [ ] Drain cleaner
+- [ ] Acid
+- [ ] Altered mental status / altered level of consciousness
+- [ ] Paint thinner
+
+**Explanation:** BPOC 40.11, Thermal Burns: Sun; Fire/flame; Steam; Stove; Boiling water; Red painful skin; Blisters; Black charred skin; White waxy skin. The distractors are causes and signs from the other burn conditions in 40.11.
+
+---
+
+### Q133 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the care steps BPOC 40.11 lists for **Thermal Burns**.
+
+- [x] Stop the burning process and remove the casualty from the source; do not expose yourself
+- [x] Remove constricting clothing/jewelry and cover burns with dry dressings
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Consider beginning decontamination with copious amounts of water, if safe to do so
+- [ ] Begin CPR/AED if no pulse
+
+**Explanation:** BPOC 40.11, Thermal Burns: Stop the burning process and remove the casualty from the source; do not expose yourself; Remove constricting clothing/jewelry and cover burns with dry dressings; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other burn conditions in 40.11.
+
+---
+
+### Q134 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the causes and signs/symptoms BPOC 40.11 lists for **Chemical Burns**.
+
+- [x] Bleach
+- [x] Acid
+- [x] Drain cleaner
+- [x] Paint thinner
+- [x] Red painful skin
+- [x] Blisters
+- [x] Skin peeling
+- [x] Swelling
+- [ ] Abnormal heartbeat
+- [ ] Wounds at entry and exit
+- [ ] Cardiac arrest
+- [ ] Sun
+- [ ] Black charred skin
+- [ ] Car battery
+- [ ] Steam
+- [ ] Boiling water
+- [ ] White waxy skin
+
+**Explanation:** BPOC 40.11, Chemical Burns: Bleach; Acid; Drain cleaner; Paint thinner; Red painful skin; Blisters; Skin peeling; Swelling. The distractors are causes and signs from the other burn conditions in 40.11.
+
+---
+
+### Q135 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the care steps BPOC 40.11 lists for **Chemical Burns**.
+
+- [x] Stop the burning process and remove the casualty from the source; do not expose yourself
+- [x] Consider beginning decontamination with copious amounts of water, if safe to do so
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Begin CPR/AED if no pulse
+- [ ] Remove constricting clothing/jewelry and cover burns with dry dressings
+
+**Explanation:** BPOC 40.11, Chemical Burns: Stop the burning process and remove the casualty from the source; do not expose yourself; Consider beginning decontamination with copious amounts of water, if safe to do so; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other burn conditions in 40.11.
+
+---
+
+### Q136 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the causes and signs/symptoms BPOC 40.11 lists for **Electrical Burns**.
+
+- [x] Car battery
+- [x] Wall outlet
+- [x] Exposed wire
+- [x] Lightning
+- [x] Altered mental status / altered level of consciousness
+- [x] Wounds at entry and exit
+- [x] Red painful skin
+- [x] Blisters
+- [x] Swelling
+- [x] Weakness
+- [x] Abnormal heartbeat
+- [x] Cardiac arrest
+- [ ] Fire/flame
+- [ ] Acid
+- [ ] Paint thinner
+- [ ] Skin peeling
+- [ ] Black charred skin
+- [ ] Stove
+- [ ] White waxy skin
+- [ ] Drain cleaner
+- [ ] Boiling water
+
+**Explanation:** BPOC 40.11, Electrical Burns: Car battery; Wall outlet; Exposed wire; Lightning; Altered mental status / altered level of consciousness; Wounds at entry and exit; Red painful skin; Blisters; Swelling; Weakness; Abnormal heartbeat; Cardiac arrest. The distractors are causes and signs from the other burn conditions in 40.11.
+
+---
+
+### Q137 — Select All
+**LO:** 40.11 · **Source:** BPOC 40.11
+
+Select all of the care steps BPOC 40.11 lists for **Electrical Burns**.
+
+- [x] Stop the burning process and remove the casualty from the source; do not expose yourself
+- [x] Begin CPR/AED if no pulse
+- [x] Remove constricting clothing/jewelry and cover burns with dry dressings
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Consider beginning decontamination with copious amounts of water, if safe to do so
+
+**Explanation:** BPOC 40.11, Electrical Burns: Stop the burning process and remove the casualty from the source; do not expose yourself; Begin CPR/AED if no pulse; Remove constricting clothing/jewelry and cover burns with dry dressings; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other burn conditions in 40.11.
+
+---
+
 ## LO 40.12 — Diabetic Emergencies, Strokes & Seizures
 
-### Q105 — True/False
+### Q138 — True/False
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 True or False: Rendering proper aid for a person suffering a seizure includes restraining the person.
@@ -1429,7 +2134,7 @@ True or False: Rendering proper aid for a person suffering a seizure includes re
 
 ---
 
-### Q106 — Recall
+### Q139 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which phrase from BPOC 40.12 describes the treatment for **hypoglycemia**?
@@ -1443,7 +2148,7 @@ Which phrase from BPOC 40.12 describes the treatment for **hypoglycemia**?
 
 ---
 
-### Q107 — Recall
+### Q140 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which phrase from BPOC 40.12 describes **hyperglycemia**?
@@ -1457,7 +2162,7 @@ Which phrase from BPOC 40.12 describes **hyperglycemia**?
 
 ---
 
-### Q108 — Recall
+### Q141 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which symptoms point to **hypoglycemia** (blood sugar too low)?
@@ -1471,7 +2176,7 @@ Which symptoms point to **hypoglycemia** (blood sugar too low)?
 
 ---
 
-### Q109 — Recall
+### Q142 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which symptoms point to **hyperglycemia** (blood sugar too high)?
@@ -1485,7 +2190,7 @@ Which symptoms point to **hyperglycemia** (blood sugar too high)?
 
 ---
 
-### Q110 — Recall
+### Q143 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 A diabetic casualty is warm, very thirsty, and has fruity-smelling breath, and can drink. What should you give?
@@ -1499,7 +2204,7 @@ A diabetic casualty is warm, very thirsty, and has fruity-smelling breath, and c
 
 ---
 
-### Q111 — Recall
+### Q144 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 A diabetic casualty is pale, cool, clammy, and acting intoxicated, and can eat and drink. What should you give?
@@ -1513,7 +2218,7 @@ A diabetic casualty is pale, cool, clammy, and acting intoxicated, and can eat a
 
 ---
 
-### Q112 — True/False
+### Q145 — True/False
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 True or False: Low blood sugar (hypoglycemia) can produce symptoms similar to alcohol intoxication.
@@ -1525,7 +2230,7 @@ True or False: Low blood sugar (hypoglycemia) can produce symptoms similar to al
 
 ---
 
-### Q113 — Recall
+### Q146 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 How should a casualty having a **seizure** be positioned?
@@ -1539,7 +2244,7 @@ How should a casualty having a **seizure** be positioned?
 
 ---
 
-### Q114 — Recall
+### Q147 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 If a seizure is due to **heat stroke**, what does BPOC 40.12 say to attempt?
@@ -1553,7 +2258,7 @@ If a seizure is due to **heat stroke**, what does BPOC 40.12 say to attempt?
 
 ---
 
-### Q115 — Recall
+### Q148 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which of these does BPOC 40.12 list as possible **seizure** activity?
@@ -1567,7 +2272,7 @@ Which of these does BPOC 40.12 list as possible **seizure** activity?
 
 ---
 
-### Q116 — Recall
+### Q149 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 What generally causes a **stroke**?
@@ -1581,7 +2286,7 @@ What generally causes a **stroke**?
 
 ---
 
-### Q117 — Recall
+### Q150 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 Which symptoms does BPOC 40.12 list for a **stroke**?
@@ -1595,7 +2300,7 @@ Which symptoms does BPOC 40.12 list for a **stroke**?
 
 ---
 
-### Q118 — Recall
+### Q151 — Recall
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 How should the head and shoulders of a **stroke** casualty be positioned, if able?
@@ -1609,7 +2314,7 @@ How should the head and shoulders of a **stroke** casualty be positioned, if abl
 
 ---
 
-### Q119 — Term ID
+### Q152 — Term ID
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 **Answer:** Hypoglycemia
@@ -1620,7 +2325,7 @@ _____________ means blood sugar levels that are too low.
 
 ---
 
-### Q120 — Term ID
+### Q153 — Term ID
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 **Answer:** Hyperglycemia
@@ -1631,7 +2336,7 @@ _____________ means blood sugar levels that are too high.
 
 ---
 
-### Q121 — Term ID
+### Q154 — Term ID
 **LO:** 40.12 · **Source:** BPOC 40.12
 
 **Answer:** Stroke
@@ -1642,9 +2347,190 @@ ______ is generally caused by a blockage or tear of a blood vessel in the brain.
 
 ---
 
+### Q155 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the causes and signs/symptoms BPOC 40.12 lists for **Hypoglycemia (blood sugar too low)**.
+
+- [x] Altered mental status / altered level of consciousness
+- [x] Symptoms like alcohol intoxication
+- [x] Irritability
+- [x] Pale/cool/clammy skin
+- [x] &ldquo;Cool and Clammy = Give &rsquo;em Candy&rdquo;
+- [ ] Fruity/acetone breath
+- [ ] Blockage or tear of a blood vessel in the brain
+- [ ] Full-body general seizure activity
+- [ ] Headache
+- [ ] Confusion
+- [ ] Unequal pupils
+- [ ] Facial droop
+- [ ] Extreme thirst
+- [ ] Can have many causes
+
+**Explanation:** BPOC 40.12, Hypoglycemia (blood sugar too low): Altered mental status / altered level of consciousness; Symptoms like alcohol intoxication; Irritability; Pale/cool/clammy skin; &ldquo;Cool and Clammy = Give &rsquo;em Candy&rdquo;. The distractors are causes and signs from the other medical conditions in 40.12.
+
+---
+
+### Q156 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the care steps BPOC 40.12 lists for **Hypoglycemia (blood sugar too low)**.
+
+- [x] Maintain airway
+- [x] If able to eat/drink, feed sugary food/drink and/or carbs
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Continuously reassess the casualty
+- [ ] Do not attempt to &ldquo;hold down&rdquo; or restrict movement
+- [ ] Avoid sugar/carbs
+- [ ] If able to drink, give large amounts of water
+- [ ] If due to heat stroke, attempt to cool the patient
+- [ ] Place the casualty in the recovery position with a pillow under the head
+- [ ] Keep head/shoulders elevated ~30&deg;, if able
+
+**Explanation:** BPOC 40.12, Hypoglycemia (blood sugar too low): Maintain airway; If able to eat/drink, feed sugary food/drink and/or carbs; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other medical conditions in 40.12.
+
+---
+
+### Q157 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the causes and signs/symptoms BPOC 40.12 lists for **Hyperglycemia (blood sugar too high)**.
+
+- [x] Altered mental status / altered level of consciousness
+- [x] Deep/fast breathing
+- [x] Fruity/acetone breath
+- [x] Extreme thirst
+- [x] Headache
+- [x] Warm skin
+- [x] &ldquo;Hot and Dry = Sugar High&rdquo;
+- [ ] Full-body general seizure activity
+- [ ] Unequal pupils
+- [ ] Can have many causes
+- [ ] Facial droop
+- [ ] Symptoms like alcohol intoxication
+- [ ] Seizure activity isolated to rapid eye jerking
+- [ ] Confusion
+- [ ] Slurring of speech
+- [ ] Blockage or tear of a blood vessel in the brain
+
+**Explanation:** BPOC 40.12, Hyperglycemia (blood sugar too high): Altered mental status / altered level of consciousness; Deep/fast breathing; Fruity/acetone breath; Extreme thirst; Headache; Warm skin; &ldquo;Hot and Dry = Sugar High&rdquo;. The distractors are causes and signs from the other medical conditions in 40.12.
+
+---
+
+### Q158 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the care steps BPOC 40.12 lists for **Hyperglycemia (blood sugar too high)**.
+
+- [x] Maintain airway
+- [x] If able to drink, give large amounts of water
+- [x] Avoid sugar/carbs
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Do not attempt to &ldquo;hold down&rdquo; or restrict movement
+- [ ] If able to eat/drink, feed sugary food/drink and/or carbs
+- [ ] Continuously reassess the casualty
+- [ ] Keep head/shoulders elevated ~30&deg;, if able
+- [ ] Place the casualty in the recovery position with a pillow under the head
+- [ ] If due to heat stroke, attempt to cool the patient
+
+**Explanation:** BPOC 40.12, Hyperglycemia (blood sugar too high): Maintain airway; If able to drink, give large amounts of water; Avoid sugar/carbs; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other medical conditions in 40.12.
+
+---
+
+### Q159 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the causes and signs/symptoms BPOC 40.12 lists for **Seizure**.
+
+- [x] Can have many causes
+- [x] Altered mental status / altered level of consciousness
+- [x] Full-body general seizure activity
+- [x] Isolated extremity seizure activity
+- [x] Seizure activity isolated to rapid eye jerking
+- [ ] Facial droop
+- [ ] Fruity/acetone breath
+- [ ] Pale/cool/clammy skin
+- [ ] Deep/fast breathing
+- [ ] One-sided body weakness
+- [ ] Extreme thirst
+- [ ] &ldquo;Hot and Dry = Sugar High&rdquo;
+- [ ] Confusion
+- [ ] Slurring of speech
+
+**Explanation:** BPOC 40.12, Seizure: Can have many causes; Altered mental status / altered level of consciousness; Full-body general seizure activity; Isolated extremity seizure activity; Seizure activity isolated to rapid eye jerking. The distractors are causes and signs from the other medical conditions in 40.12.
+
+---
+
+### Q160 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the care steps BPOC 40.12 lists for **Seizure**.
+
+- [x] Place the casualty in the recovery position with a pillow under the head
+- [x] Do not attempt to &ldquo;hold down&rdquo; or restrict movement
+- [x] If due to heat stroke, attempt to cool the patient
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] If able to eat/drink, feed sugary food/drink and/or carbs
+- [ ] Continuously reassess the casualty
+- [ ] Avoid sugar/carbs
+- [ ] Keep head/shoulders elevated ~30&deg;, if able
+- [ ] If able to drink, give large amounts of water
+- [ ] Maintain airway
+
+**Explanation:** BPOC 40.12, Seizure: Place the casualty in the recovery position with a pillow under the head; Do not attempt to &ldquo;hold down&rdquo; or restrict movement; If due to heat stroke, attempt to cool the patient; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other medical conditions in 40.12.
+
+---
+
+### Q161 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the causes and signs/symptoms BPOC 40.12 lists for **Stroke**.
+
+- [x] Blockage or tear of a blood vessel in the brain
+- [x] Altered mental status / altered level of consciousness
+- [x] Headache
+- [x] Facial droop
+- [x] One-sided body weakness
+- [x] Slurring of speech
+- [x] Unequal pupils
+- [x] Confusion
+- [ ] Can have many causes
+- [ ] Fruity/acetone breath
+- [ ] Pale/cool/clammy skin
+- [ ] Symptoms like alcohol intoxication
+- [ ] &ldquo;Hot and Dry = Sugar High&rdquo;
+- [ ] Extreme thirst
+- [ ] Irritability
+- [ ] &ldquo;Cool and Clammy = Give &rsquo;em Candy&rdquo;
+- [ ] Deep/fast breathing
+
+**Explanation:** BPOC 40.12, Stroke: Blockage or tear of a blood vessel in the brain; Altered mental status / altered level of consciousness; Headache; Facial droop; One-sided body weakness; Slurring of speech; Unequal pupils; Confusion. The distractors are causes and signs from the other medical conditions in 40.12.
+
+---
+
+### Q162 — Select All
+**LO:** 40.12 · **Source:** BPOC 40.12
+
+Select all of the care steps BPOC 40.12 lists for **Stroke**.
+
+- [x] Maintain airway
+- [x] Continuously reassess the casualty
+- [x] Keep head/shoulders elevated ~30&deg;, if able
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Avoid sugar/carbs
+- [ ] If due to heat stroke, attempt to cool the patient
+- [ ] If able to eat/drink, feed sugary food/drink and/or carbs
+- [ ] Place the casualty in the recovery position with a pillow under the head
+- [ ] If able to drink, give large amounts of water
+- [ ] Do not attempt to &ldquo;hold down&rdquo; or restrict movement
+
+**Explanation:** BPOC 40.12, Stroke: Maintain airway; Continuously reassess the casualty; Keep head/shoulders elevated ~30&deg;, if able; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other medical conditions in 40.12.
+
+---
+
 ## LO 40.13 — Broken Bones & Severe Sprains
 
-### Q122 — Recall
+### Q163 — Recall
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 When splinting an injured arm or leg, what should be immobilized?
@@ -1658,7 +2544,7 @@ When splinting an injured arm or leg, what should be immobilized?
 
 ---
 
-### Q123 — Recall
+### Q164 — Recall
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 Which of these does BPOC 40.13 list as a usable improvised splint?
@@ -1672,7 +2558,7 @@ Which of these does BPOC 40.13 list as a usable improvised splint?
 
 ---
 
-### Q124 — Recall
+### Q165 — Recall
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 What must be done after immobilizing an injured arm or leg?
@@ -1686,7 +2572,7 @@ What must be done after immobilizing an injured arm or leg?
 
 ---
 
-### Q125 — Recall
+### Q166 — Recall
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 Which of these is listed as a common sign of a broken bone or severe sprain?
@@ -1700,7 +2586,7 @@ Which of these is listed as a common sign of a broken bone or severe sprain?
 
 ---
 
-### Q126 — True/False
+### Q167 — True/False
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 True or False: If there is no pulse in the arm or leg after splinting, BPOC 40.13 says to rapidly refer to medical personnel.
@@ -1712,7 +2598,7 @@ True or False: If there is no pulse in the arm or leg after splinting, BPOC 40.1
 
 ---
 
-### Q127 — True/False
+### Q168 — True/False
 **LO:** 40.13 · **Source:** BPOC 40.13
 
 True or False: BPOC 40.13 requires a commercial splint; improvised items such as a baton or rolled magazines should not be used.
@@ -1724,9 +2610,73 @@ True or False: BPOC 40.13 requires a commercial splint; improvised items such as
 
 ---
 
+### Q169 — Select All
+**LO:** 40.13 · **Source:** BPOC 40.13
+
+Select all of the signs BPOC 40.13 lists for broken bones and severe sprains.
+
+- [x] Pain
+- [x] Weakness
+- [x] Swelling
+- [x] Bruising
+- [x] Bleeding
+- [x] Inability to move the extremity
+- [x] Closed fracture
+- [x] Open fracture
+- [ ] Fruity/acetone breath
+- [ ] Hives
+- [ ] Black charred skin
+- [ ] Tripod positioning
+- [ ] Pinpoint pupils
+- [ ] Facial droop
+
+**Explanation:** BPOC 40.13: pain, weakness, swelling, bruising, bleeding, inability to move the extremity, closed fracture, open fracture. The distractors are signs of other conditions in 40.8-40.12.
+
+---
+
+### Q170 — Select All
+**LO:** 40.13 · **Source:** BPOC 40.13
+
+Select all of the care steps BPOC 40.13 lists for **bandaging and splinting** an arm, hand, leg, or foot.
+
+- [x] Immobilize the affected arm or leg above and below the site of injury
+- [x] Preferentially use a commercial splint and/or sling
+- [x] Re-assess circulation in the affected arm or leg after immobilization
+- [x] If no pulse in the affected arm or leg, rapidly refer to medical personnel
+- [ ] Brachial artery
+- [ ] Femoral artery
+- [ ] For massive junctional hemorrhage (groin, buttocks, shoulder, armpit, collar bone, neck/shoulder/back connection)
+- [ ] Use pressure points &ldquo;above&rdquo; the wound (closer to the heart)
+- [ ] For bleeding that is not massive/heavy, or to maintain pressure after a wound pack
+- [ ] Note the time of application
+- [ ] Use gauze, cloth, or a gloved hand
+
+**Explanation:** BPOC 40.13: immobilize above and below the injury; prefer a commercial splint and/or sling; re-assess circulation after immobilizing; if no pulse, rapidly refer. The distractors are bleeding-control steps from 40.6.
+
+---
+
+### Q171 — Select All
+**LO:** 40.13 · **Source:** BPOC 40.13
+
+Select all of the common items BPOC 40.13 says can be used effectively as a splint when a commercial splint is not available.
+
+- [x] Defensive baton
+- [x] Large flashlight
+- [x] Long board
+- [x] Rolled magazines
+- [x] Belt
+- [ ] Tourniquet
+- [ ] Handcuffs
+- [ ] Hemostatic gauze
+- [ ] Ice pack
+
+**Explanation:** BPOC 40.13: defensive baton, large flashlight, long board, rolled magazines, belt.
+
+---
+
 ## LO 40.14 — Childbirth
 
-### Q128 — Recall
+### Q172 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 Which of these is a common sign of **normal/routine childbirth**?
@@ -1740,7 +2690,7 @@ Which of these is a common sign of **normal/routine childbirth**?
 
 ---
 
-### Q129 — Recall
+### Q173 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 What does "crowning" mean in BPOC 40.14?
@@ -1754,7 +2704,7 @@ What does "crowning" mean in BPOC 40.14?
 
 ---
 
-### Q130 — Recall
+### Q174 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 How should the mother be positioned for a normal delivery?
@@ -1768,7 +2718,7 @@ How should the mother be positioned for a normal delivery?
 
 ---
 
-### Q131 — Recall
+### Q175 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 During delivery, which shoulder should be guided out first?
@@ -1782,7 +2732,7 @@ During delivery, which shoulder should be guided out first?
 
 ---
 
-### Q132 — True/False
+### Q176 — True/False
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 True or False: During a normal delivery, the officer should gently pull the baby to speed up delivery.
@@ -1794,7 +2744,7 @@ True or False: During a normal delivery, the officer should gently pull the baby
 
 ---
 
-### Q133 — Recall
+### Q177 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 As the baby's body and legs deliver, where should the baby be kept?
@@ -1808,7 +2758,7 @@ As the baby's body and legs deliver, where should the baby be kept?
 
 ---
 
-### Q134 — Recall
+### Q178 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 What should be done for the newborn immediately after delivery?
@@ -1822,7 +2772,7 @@ What should be done for the newborn immediately after delivery?
 
 ---
 
-### Q135 — Recall
+### Q179 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 If the newborn does not appear to be awake or breathing, what should the officer consider?
@@ -1836,7 +2786,7 @@ If the newborn does not appear to be awake or breathing, what should the officer
 
 ---
 
-### Q136 — Recall
+### Q180 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 Which of these is a sign of **abnormal childbirth**?
@@ -1850,7 +2800,7 @@ Which of these is a sign of **abnormal childbirth**?
 
 ---
 
-### Q137 — Recall
+### Q181 — Recall
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 What should the officer do in an **abnormal childbirth**?
@@ -1864,7 +2814,7 @@ What should the officer do in an **abnormal childbirth**?
 
 ---
 
-### Q138 — Term ID
+### Q182 — Term ID
 **LO:** 40.14 · **Source:** BPOC 40.14
 
 **Answer:** Crowning
@@ -1875,9 +2825,82 @@ ________ means the infant's head is visible from the outside during childbirth.
 
 ---
 
+### Q183 — Select All
+**LO:** 40.14 · **Source:** BPOC 40.14
+
+Select all of the causes and signs/symptoms BPOC 40.14 lists for **Childbirth (Normal/Routine)**.
+
+- [x] &ldquo;Water broke&rdquo;
+- [x] Contractions close in interval
+- [x] Urge to push
+- [x] Infant&rsquo;s head crowning (visible from the outside)
+- [ ] Bleeding from the birth canal
+- [ ] Severe sharp/tearing pain
+- [ ] Presentation of an arm, leg, or buttocks (visible from the outside)
+
+**Explanation:** BPOC 40.14, Childbirth (Normal/Routine): &ldquo;Water broke&rdquo;; Contractions close in interval; Urge to push; Infant&rsquo;s head crowning (visible from the outside). The distractors are causes and signs from the other childbirth conditions in 40.14.
+
+---
+
+### Q184 — Select All
+**LO:** 40.14 · **Source:** BPOC 40.14
+
+Select all of the care steps BPOC 40.14 lists for **Childbirth (Normal/Routine)**.
+
+- [x] Place mother in a slightly seated position on her back, knees pulled toward chest
+- [x] Assist the natural delivery; do not pull the baby
+- [x] Support the baby&rsquo;s head as it delivers
+- [x] Guide delivery of the upper shoulder, then the lower shoulder
+- [x] Support the body and legs as they deliver; keep baby level with mother
+- [x] Warm/dry/stimulate baby until awake, color changing, and likely crying
+- [x] Place baby on mother&rsquo;s chest with skin contact; encourage breastfeeding; keep warm
+- [x] If baby does not appear awake or breathing, consider CPR
+- [ ] Do not encourage delivery
+
+**Explanation:** BPOC 40.14, Childbirth (Normal/Routine): Place mother in a slightly seated position on her back, knees pulled toward chest; Assist the natural delivery; do not pull the baby; Support the baby&rsquo;s head as it delivers; Guide delivery of the upper shoulder, then the lower shoulder; Support the body and legs as they deliver; keep baby level with mother; Warm/dry/stimulate baby until awake, color changing, and likely crying; Place baby on mother&rsquo;s chest with skin contact; encourage breastfeeding; keep warm; If baby does not appear awake or breathing, consider CPR. The distractors are care steps from the other childbirth conditions in 40.14.
+
+---
+
+### Q185 — Select All
+**LO:** 40.14 · **Source:** BPOC 40.14
+
+Select all of the causes and signs/symptoms BPOC 40.14 lists for **Childbirth (Abnormal)**.
+
+- [x] Severe sharp/tearing pain
+- [x] Bleeding from the birth canal
+- [x] Presentation of an arm, leg, or buttocks (visible from the outside)
+- [ ] Urge to push
+- [ ] &ldquo;Water broke&rdquo;
+- [ ] Infant&rsquo;s head crowning (visible from the outside)
+- [ ] Contractions close in interval
+
+**Explanation:** BPOC 40.14, Childbirth (Abnormal): Severe sharp/tearing pain; Bleeding from the birth canal; Presentation of an arm, leg, or buttocks (visible from the outside). The distractors are causes and signs from the other childbirth conditions in 40.14.
+
+---
+
+### Q186 — Select All
+**LO:** 40.14 · **Source:** BPOC 40.14
+
+Select all of the care steps BPOC 40.14 lists for **Childbirth (Abnormal)**.
+
+- [x] Do not encourage delivery
+- [x] Rapidly refer to medical personnel (life-threatening event)
+- [ ] Place mother in a slightly seated position on her back, knees pulled toward chest
+- [ ] Assist the natural delivery; do not pull the baby
+- [ ] Support the baby&rsquo;s head as it delivers
+- [ ] If baby does not appear awake or breathing, consider CPR
+- [ ] Warm/dry/stimulate baby until awake, color changing, and likely crying
+- [ ] Place baby on mother&rsquo;s chest with skin contact; encourage breastfeeding; keep warm
+- [ ] Support the body and legs as they deliver; keep baby level with mother
+- [ ] Guide delivery of the upper shoulder, then the lower shoulder
+
+**Explanation:** BPOC 40.14, Childbirth (Abnormal): Do not encourage delivery; Rapidly refer to medical personnel (life-threatening event). The distractors are care steps from the other childbirth conditions in 40.14.
+
+---
+
 ## Instructor Material — Instructor Material (Not in the BPOC Outline)
 
-### Q139 — Recall
+### Q187 — Recall
 **LO:** No LO · **Source:** Instructor Slides
 
 Effective CPR can ______ the chances of survival of a person suffering cardiac arrest.
