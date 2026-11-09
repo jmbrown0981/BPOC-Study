@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+<title>The Critical Decision-Making Model (CDM) | Universal Truths of Policing | BPOC Study Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/laymans-theme.css">
+<link rel="stylesheet" href="../../assets/slides.css">
+<style>
+/* deck-specific: CDM step strip, step loop on the opener, two-column point cards, LO tags, phrase swaps */
+.slide{min-height:0;}
+.lo{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:var(--brass); white-space:nowrap; margin-left:4px;}
+
+/* where-am-I strip on each step card */
+.strip{display:grid; grid-template-columns:repeat(5,1fr); gap:5px; margin:0 0 12px;}
+.strip span{border:1px solid var(--rule); border-radius:6px; padding:4px 6px; font-size:11.5px; line-height:1.25; color:var(--ink-soft); background:var(--paper); text-align:center;}
+.strip span b{display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--brass);}
+.strip span.on{background:var(--navy); border-color:var(--navy); color:#EDE7D6; font-weight:600;}
+.strip span.on b{color:var(--brass-light);}
+
+/* opener: the five steps as a loop, principles at the center */
+.open{display:grid; grid-template-columns:1.15fr 1fr; gap:14px;}
+.loop{list-style:none; margin:0; padding:0; counter-reset:s;}
+.loop li{counter-increment:s; display:flex; align-items:center; gap:10px; border:1px solid var(--rule); border-left:5px solid var(--brass); border-radius:8px; padding:7px 10px; background:#fff; font-weight:600; color:var(--navy); font-size:14.5px; line-height:1.3;}
+.loop li + li{margin-top:6px;}
+.loop li::before{content:counter(s); flex:none; width:26px; height:26px; border-radius:50%; background:var(--navy); color:var(--brass-light); font-family:'IBM Plex Serif',serif; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center;}
+.loop-back{margin:6px 0 0 !important; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; color:var(--brass); text-align:center;}
+.box{border:1px solid var(--rule); border-radius:10px; padding:9px 12px; background:#fff;}
+.box + .box{margin-top:10px;}
+.box.key{background:var(--navy); border-color:var(--navy); color:#EDE7D6;}
+.box h3{margin:0 0 4px; font-family:'IBM Plex Serif',serif; font-size:15px; color:var(--navy);}
+.box.key h3{color:var(--brass-light);}
+.box ul{margin:0; padding-left:1.15em;} .box li{font-size:13.5px; line-height:1.45; margin-bottom:2px;}
+.box.key .lo{color:var(--brass-light);}
+
+/* step cards */
+.two{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.col{border:1px solid var(--rule); border-radius:10px; padding:9px 13px; background:#fff;}
+.col.ask{background:var(--paper);}
+.col .lbl{font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass); margin:0 0 4px !important;}
+.col ul{margin:0; padding-left:1.15em;} .col li{font-size:13.5px; line-height:1.45; margin-bottom:4px;}
+.col li:last-child{margin-bottom:0;}
+.tip{margin-top:10px; border:1px solid var(--rule); border-left:5px solid var(--navy); border-radius:8px; padding:7px 12px; background:#fff; font-size:13.5px; line-height:1.45;}
+.tip b.t{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-right:6px;}
+.used{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 8px !important;}
+
+/* say this, not that */
+.swap{display:grid; grid-template-columns:1fr auto 1fr; gap:6px 8px; align-items:center; margin-top:4px;}
+.swap .no{color:var(--rust); text-decoration:line-through; text-decoration-thickness:1px; font-size:13.5px;}
+.swap .yes{color:var(--green); font-weight:600; font-size:13.5px;}
+.swap .ar{color:var(--ink-soft); font-size:13px;}
+
+.printbar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; max-width:1040px; margin:12px auto 0; padding:0 16px; font-size:13px; color:var(--ink-soft);}
+.printbar button{font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:13px; padding:7px 14px; border-radius:999px; border:1px solid var(--rule); background:#fff; color:var(--navy); cursor:pointer;}
+.printbar button:hover{border-color:var(--brass); color:var(--brass);}
+
+@media screen and (max-width:760px){   /* screen only: printed cards and pages keep two columns */
+  .open, .two{grid-template-columns:1fr;}
+  .strip{grid-template-columns:repeat(5,minmax(0,1fr)); gap:3px;}
+  .strip span{font-size:0; padding:4px 2px;}            /* phone: numbers only */
+  .strip span b{font-size:11px;}
+  .swap{grid-template-columns:1fr;} .swap .ar{display:none;}
+}
+
+@media print{
+  .printbar{display:none !important;}
+  .slide-head, .sub-badge, .strip span.on, .box.key, .loop li::before{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  /* 4x6 notecards: one card per page, sized to fit */
+  html.notecards .slide{border:none; border-radius:0;}
+  html.notecards .slide-head{padding:6px 10px; gap:8px;}
+  html.notecards .slide-head h2{font-size:16px;} html.notecards .slide-head .kicker{font-size:8px; margin:0;}
+  html.notecards .sub-badge{font-size:11px; height:24px; min-width:30px; border-radius:6px;}
+  html.notecards .slide-body{padding:7px 10px; font-size:11px; line-height:1.3;}
+  html.notecards .slide-foot{display:none;}
+  html.notecards .strip{gap:3px; margin:0 0 7px;}
+  html.notecards .strip span{font-size:8.5px; padding:2px 3px; border-radius:4px;}
+  html.notecards .strip span b{font-size:8px;}
+  html.notecards .two, html.notecards .open{gap:6px;}
+  html.notecards .col, html.notecards .box{padding:4px 7px; border-radius:6px;}
+  html.notecards .box + .box{margin-top:5px;}
+  html.notecards .col .lbl{font-size:8px; margin-bottom:3px !important;}
+  html.notecards .col li, html.notecards .box li{font-size:11.5px; line-height:1.32; margin-bottom:2px;}
+  html.notecards .box h3{font-size:12px; margin-bottom:2px;}
+  html.notecards .lo{font-size:8.5px;}
+  html.notecards .tip{margin-top:7px; padding:4px 8px; font-size:11.5px; line-height:1.32;}
+  html.notecards .tip b.t{font-size:8px;}
+  html.notecards .used{font-size:8px; margin:0 0 6px !important;}
+  html.notecards .loop li{font-size:12.5px; padding:5px 8px; gap:7px; border-left-width:4px;}
+  html.notecards .loop li + li{margin-top:5px;}
+  html.notecards .loop li::before{width:20px; height:20px; font-size:11px;}
+  html.notecards .loop-back{font-size:8.5px; margin-top:5px !important;}
+  html.notecards .swap{gap:2px 6px;} html.notecards .swap .no, html.notecards .swap .yes, html.notecards .swap .ar{font-size:11.5px;}
+}
+</style>
+<style id="pageSize"></style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <p class="hero-eyebrow">Supplemental &middot; Universal Truths of Policing &middot; Slides / Cards</p>
+      <h1>The Critical Decision-Making Model (CDM)</h1>
+    </div>
+    <a class="back" href="../../index.html">&larr; Hub</a>
+  </div>
+  <p class="sub">BPOC Ch. 27 De-Escalation. The five CDM steps from LO 27.2, with the rest of the chapter sorted under the step where you use it. Sized to print as pocket cards.</p>
+</header>
+
+<div class="printbar">
+  <span>Print:</span>
+  <button type="button" id="printPages">One card per page</button>
+  <button type="button" id="printCards">4&times;6 notecards</button>
+</div>
+
+<div class="deck" id="deck">
+
+<!-- ===================== OPENER ===================== -->
+<section class="slide" data-key="start" data-dot="CDM" aria-label="The five steps of the CDM">
+  <div class="slide-head"><span class="sub-badge">CDM</span><div><p class="kicker">BPOC 27.1 &middot; 27.2 &middot; 27.3</p><h2>Critical Decision-Making Model &mdash; 5 Steps</h2></div></div>
+  <div class="slide-body">
+    <div class="open">
+      <div>
+        <ol class="loop">
+          <li>Collect information</li>
+          <li>Assess situation, threats, and risks</li>
+          <li>Consider police powers and agency policy</li>
+          <li>Identify options and determine best course of action</li>
+          <li>Act, review, and re-assess</li>
+        </ol>
+        <p class="loop-back">After Step 5, loop back to Step 1 as the situation changes</p>
+      </div>
+      <div>
+        <div class="box key"><h3>Key principles &mdash; every step <span class="lo">27.1</span></h3>
+          <ul><li>Police ethics</li><li>The values of the police agency</li><li>Proportionality</li><li>The sanctity of human life</li></ul></div>
+        <div class="box"><h3>Why use it <span class="lo">27.3</span></h3>
+          <ul><li>Organizes the decision-making process</li><li>Helps officers make better decisions</li><li>Gives a structured, rational explanation of your actions afterward, which increases credibility</li></ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>Source: BPOC Ch. 27 De-Escalation (PERF ICAT). Follow your instructors&rsquo; and agency&rsquo;s guidance where it differs.</span></div>
+</section>
+
+<!-- ===================== STEP 1 ===================== -->
+<section class="slide" data-key="step-1" data-dot="1" aria-label="Step 1: Collect information">
+  <div class="slide-head"><span class="sub-badge">1</span><div><p class="kicker">CDM Step 1 &middot; BPOC 27.10 &middot; 27.14 &middot; 27.15 &middot; 27.17</p><h2>Collect Information</h2></div></div>
+  <div class="slide-body">
+    <div class="strip"><span class="on"><b>1</b>Collect</span><span><b>2</b>Assess</span><span><b>3</b>Powers / policy</span><span><b>4</b>Options</span><span><b>5</b>Act / review</span></div>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Ask</p>
+        <ul>
+          <li>What kind of incident is this? Recognize its nature before you respond. <span class="lo">27.14</span></li>
+          <li>Is there an immediate threat? If not, take a <b>tactical pause</b> and slow the situation down. <span class="lo">27.15 &middot; 27.17</span></li>
+          <li>What is the person thinking and feeling? <span class="lo">27.10</span></li>
+        </ul></div>
+      <div class="col"><p class="lbl">Do</p>
+        <ul>
+          <li><b>Prepare yourself</b> on the way and on arrival. <span class="lo">27.15</span></li>
+          <li><b>Listen 80%, talk 20%.</b> Avoid distractions. <span class="lo">27.10</span></li>
+          <li>Watch body language, theirs and yours. <span class="lo">27.7</span></li>
+          <li>Communicate with the subject <b>and</b> the other officers and people involved. <span class="lo">27.14</span></li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>LO 27.15: CDM in a critical incident starts with collecting information, the tactical pause, and preparing yourself.</span></div>
+</section>
+
+<!-- ===================== STEP 2 ===================== -->
+<section class="slide" data-key="step-2" data-dot="2" aria-label="Step 2: Assess situation, threats, and risks">
+  <div class="slide-head"><span class="sub-badge">2</span><div><p class="kicker">CDM Step 2 &middot; BPOC 27.5 &middot; 27.8 &middot; 27.17</p><h2>Assess Situation, Threats, and Risks</h2></div></div>
+  <div class="slide-body">
+    <div class="strip"><span><b>1</b>Collect</span><span class="on"><b>2</b>Assess</span><span><b>3</b>Powers / policy</span><span><b>4</b>Options</span><span><b>5</b>Act / review</span></div>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Person in behavioral crisis? <span class="lo">27.5</span></p>
+        <ul>
+          <li>Not responding to verbal commands</li>
+          <li>Lack of coherence</li>
+          <li>Agitated</li>
+          <li>Talking to themselves</li>
+          <li>Poor hygiene</li>
+        </ul></div>
+      <div class="col"><p class="lbl">Weigh</p>
+        <ul>
+          <li><b>Emotional&ndash;rational scale:</b> as emotions rise, rational thinking declines. Where is this person on it? <span class="lo">27.8</span></li>
+          <li><b>Close quarters + pressed for time</b> = your options quickly dwindle. <span class="lo">27.17</span></li>
+          <li>Is there time to slow things down, or is immediate action required? <span class="lo">27.7 &middot; 27.17</span></li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>Re-assess constantly: threats and risks change as the incident develops (Step 5).</span></div>
+</section>
+
+<!-- ===================== STEP 3 ===================== -->
+<section class="slide" data-key="step-3" data-dot="3" aria-label="Step 3: Consider police powers and agency policy">
+  <div class="slide-head"><span class="sub-badge">3</span><div><p class="kicker">CDM Step 3 &middot; BPOC 27.1 &middot; 27.6</p><h2>Consider Police Powers and Agency Policy</h2></div></div>
+  <div class="slide-body">
+    <div class="strip"><span><b>1</b>Collect</span><span><b>2</b>Assess</span><span class="on"><b>3</b>Powers / policy</span><span><b>4</b>Options</span><span><b>5</b>Act / review</span></div>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Ask</p>
+        <ul>
+          <li>What legal authority do I have to act here?</li>
+          <li>What does agency policy require, allow, or limit?</li>
+          <li>Does my response fit the key principles: <b>ethics, agency values, proportionality, sanctity of human life</b>? <span class="lo">27.1</span></li>
+        </ul></div>
+      <div class="col"><p class="lbl">Person in crisis <span class="lo">27.6</span></p>
+        <ul>
+          <li>Your mission is <b>not</b> to diagnose or treat/solve their issues.</li>
+          <li>Top priority: <b>verbally defuse and stabilize</b> the situation.</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>LO 27.2 names this step; the specific powers and policies come from law and your agency.</span></div>
+</section>
+
+<!-- ===================== STEP 4 ===================== -->
+<section class="slide" data-key="step-4" data-dot="4" aria-label="Step 4: Identify options and determine best course of action">
+  <div class="slide-head"><span class="sub-badge">4</span><div><p class="kicker">CDM Step 4 &middot; BPOC 27.7 &middot; 27.12 &middot; 27.16 &middot; 27.17</p><h2>Identify Options &amp; Determine Best Course of Action</h2></div></div>
+  <div class="slide-body">
+    <div class="strip"><span><b>1</b>Collect</span><span><b>2</b>Assess</span><span><b>3</b>Powers / policy</span><span class="on"><b>4</b>Options</span><span><b>5</b>Act / review</span></div>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Create options <span class="lo">27.17</span></p>
+        <ul>
+          <li><b>Distance + cover = time.</b> With all three, your options multiply.</li>
+          <li><b>Tactical repositioning:</b> keep a position of advantage and a safety zone.</li>
+          <li>Request backup and specialized help. <span class="lo">27.7</span></li>
+          <li>Don&rsquo;t rush, unless immediate action is required. <span class="lo">27.7</span></li>
+        </ul></div>
+      <div class="col"><p class="lbl">As a team <span class="lo">27.16</span></p>
+        <ul>
+          <li>Everyone has a key role and knows it.</li>
+          <li><b>Only one officer</b> communicates with the subject.</li>
+          <li>Others as they arrive: cover, less-lethal, perimeter.</li>
+        </ul></div>
+    </div>
+    <div class="tip"><b class="t">Give them options too</b>Offering the person choices helps gain voluntary compliance. <span class="lo">27.12</span></div>
+  </div>
+  <div class="slide-foot"><span>Pick the option that best fits Steps 1&ndash;3, then act on it (Step 5).</span></div>
+</section>
+
+<!-- ===================== STEP 5 ===================== -->
+<section class="slide" data-key="step-5" data-dot="5" aria-label="Step 5: Act, review, and re-assess">
+  <div class="slide-head"><span class="sub-badge">5</span><div><p class="kicker">CDM Step 5 &middot; BPOC 27.6 &middot; 27.7 &middot; 27.14 &middot; 27.18 &middot; 27.19</p><h2>Act, Review, and Re-Assess</h2></div></div>
+  <div class="slide-body">
+    <div class="strip"><span><b>1</b>Collect</span><span><b>2</b>Assess</span><span><b>3</b>Powers / policy</span><span><b>4</b>Options</span><span class="on"><b>5</b>Act / review</span></div>
+    <div class="two">
+      <div class="col ask"><p class="lbl">During</p>
+        <ul>
+          <li>Act on your chosen option using <b>sound tactics</b>. <span class="lo">27.14</span></li>
+          <li><b>Continually assess and re-assess</b>; when anything changes, go back to Step 1. <span class="lo">27.7</span></li>
+          <li>Goal with a person in crisis: get them to where they can function and reason, so <b>voluntary compliance</b> can be achieved. <span class="lo">27.6</span></li>
+        </ul></div>
+      <div class="col"><p class="lbl">After: after-action review <span class="lo">27.18 &middot; 27.19</span></p>
+        <ul>
+          <li>Uncovers and documents strengths and weaknesses of the response.</li>
+          <li>Purpose: improve future performance; part of continuous learning.</li>
+          <li>AARs answer the questions in the CDM; the model you used to decide is the model you use to explain.</li>
+          <li>Include implicit bias in the review.</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>LO 27.19: the CDM guides thinking during the incident and examines decisions after it.</span></div>
+</section>
+
+<!-- ===================== COMMS: LISTEN / NON-VERBAL ===================== -->
+<section class="slide" data-key="listen" data-dot="Listen" aria-label="Listening and body language">
+  <div class="slide-head"><span class="sub-badge">TALK</span><div><p class="kicker">Every step &middot; BPOC 27.7 &middot; 27.8 &middot; 27.10 &middot; 27.11</p><h2>Listening &amp; Body Language</h2></div></div>
+  <div class="slide-body">
+    <p class="used">Used in Step 1 to collect information and in Step 5 to act and re-assess</p>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Active listening <span class="lo">27.10</span></p>
+        <ul>
+          <li><b>80/20 rule:</b> listen 80% of the time, talk 20%.</li>
+          <li>Goal: understand what the person is thinking and feeling.</li>
+          <li>Pay attention to words <b>and</b> gestures and body language.</li>
+          <li>Avoid distractions; show you are listening carefully.</li>
+          <li>Use silence to your advantage.</li>
+        </ul></div>
+      <div class="col"><p class="lbl">Non-verbal <span class="lo">27.11</span></p>
+        <ul>
+          <li>Project the right body language.</li>
+          <li>Eye contact and open-handed gestures.</li>
+          <li>Modulate your tone of voice.</li>
+          <li>Watch body language, theirs and yours. <span class="lo">27.7</span></li>
+        </ul></div>
+    </div>
+    <div class="tip"><b class="t">Why</b>As emotions rise, rational thinking declines. Lowering emotions helps the person think and decide better. It won&rsquo;t always work, but it&rsquo;s always worth a try. <span class="lo">27.8</span></div>
+  </div>
+  <div class="slide-foot"><span>Focus on calming the situation and minimizing the stress level (27.7).</span></div>
+</section>
+
+<!-- ===================== COMMS: WORDS ===================== -->
+<section class="slide" data-key="words" data-dot="Words" aria-label="Words that de-escalate">
+  <div class="slide-head"><span class="sub-badge">TALK</span><div><p class="kicker">Every step &middot; BPOC 27.7 &middot; 27.12 &middot; 27.13</p><h2>Words That De-Escalate</h2></div></div>
+  <div class="slide-body">
+    <p class="used">Used in Step 1 to collect information and in Step 5 to act and re-assess</p>
+    <div class="two">
+      <div class="col ask"><p class="lbl">Verbal skills <span class="lo">27.12</span></p>
+        <ul>
+          <li>Establish rapport; use the team concept.</li>
+          <li>Ask questions or make requests <b>clearly, one at a time</b>.</li>
+          <li>Ask open-ended <b>&ldquo;what&rdquo;</b> and <b>&ldquo;how&rdquo;</b> questions.</li>
+          <li>Encourage conversation, but don&rsquo;t dominate it.</li>
+          <li>Provide options.</li>
+          <li>Emotional contagion: emotions spread, so your calm can spread too.</li>
+        </ul></div>
+      <div class="col"><p class="lbl">Say this, not that <span class="lo">27.13</span></p>
+        <div class="swap">
+          <span class="no">&ldquo;What&rsquo;s your problem?&rdquo;</span><span class="ar">&rarr;</span><span class="yes">&ldquo;What can I do to help you?&rdquo;</span>
+          <span class="no">&ldquo;Calm down.&rdquo;</span><span class="ar">&rarr;</span><span class="yes">&ldquo;I see that you are upset. Please tell me about it.&rdquo;</span>
+        </div>
+        <p class="lbl" style="margin-top:10px !important;">Always <span class="lo">27.7</span></p>
+        <ul><li>Communicate, communicate, communicate.</li><li>Be respectful, never dismissive.</li></ul></div>
+    </div>
+  </div>
+  <div class="slide-foot"><span>LO 27.13: practice alternatives to adversarial phrases for situations you will meet in policing.</span></div>
+</section>
+
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide">&larr; Prev</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide">Next &rarr;</button>
+</div>
+<p class="hint" id="counter"></p>
+
+<footer>Universal Truths of Policing &middot; From the BPOC Chapter 27 De-Escalation outline (27.1&ndash;27.19) &middot; Study aid only, not an official TCOLE or academy publication &middot; Built for study purposes by and for the FWPD Academy class</footer>
+
+<script src="../../assets/slides.js"></script>
+<script>
+(function(){
+  const ps = document.getElementById('pageSize');
+  function setCards(cards){
+    document.documentElement.classList.toggle('notecards', cards);
+    ps.textContent = cards ? '@page{size:6in 4in; margin:0.15in;}' : '@page{size:letter; margin:0.5in;}';
+  }
+  document.getElementById('printPages').addEventListener('click', () => { setCards(false); window.print(); });
+  document.getElementById('printCards').addEventListener('click', () => { setCards(true); window.print(); });
+  window.addEventListener('afterprint', () => document.documentElement.classList.remove('notecards'));
+  // ?print=cards: the browser's own Print command prints the 4x6 cards
+  if(new URLSearchParams(location.search).get('print') === 'cards') setCards(true);
+})();
+</script>
+<script src="../../assets/site-nav.js" defer></script>
+</body>
+</html>
