@@ -53,12 +53,12 @@ A chemist tweaks methamphetamine's molecular structure just enough that the new 
 
 A counterfeit substance under 481.002(7) is best distinguished from a "simulated controlled substance" under HSC Chapter 482 by which fact?
 
-- [x] A counterfeit substance is an actual controlled substance falsely bearing another maker's brand/label; a simulated controlled substance contains no controlled substance at all, just something represented as one
+- [x] A counterfeit substance is an actual controlled substance falsely bearing another maker's brand/label; a simulated controlled substance is purported to be a controlled substance but is chemically different from the controlled substance it is claimed to be
 - [ ] A counterfeit substance is always marijuana; a simulated controlled substance is always a pill
 - [ ] There's no legal difference — both are prosecuted identically under Chapter 481
 - [ ] A counterfeit substance is a civil violation; a simulated controlled substance is always a felony
 
-**Explanation:** Counterfeit substance (481.002(7)) is a real controlled substance with a false identifying mark/label. A simulated controlled substance (Ch. 482) is the opposite problem: no actual controlled substance is present, but it's represented/sold as if it were one — a different chapter entirely.
+**Explanation:** Counterfeit substance (481.002(7)) is a real controlled substance with a false identifying mark/label. A simulated controlled substance (Ch. 482) is the opposite problem: it is "purported to be a controlled substance, but is chemically different from the controlled substance it is purported to be" (482.001(4)) — usually a fake with no controlled substance in it, charged under a different chapter entirely.
 
 ---
 
@@ -137,7 +137,7 @@ Texas draws the legal line between "hemp" and "marihuana" using which single mea
 
 **Answer:** Human consumption
 
-"______" means the injection, inhalation, ingestion, or application to the human body of a controlled substance.
+"______" means the injection, inhalation, ingestion, or application of a substance to or into a human body.
 
 **Explanation:** 481.002(21) limits "human consumption" to exactly those four routes into the body — a term that matters because several offenses (like unlawful use of drug paraphernalia) are defined around introducing a substance into the body "in violation of this chapter."
 
@@ -157,7 +157,7 @@ The six major categories of controlled substances are narcotics, depressants, st
 - [ ] designer
 - [ ] scheduled
 
-**Explanation:** The six categories are narcotics, depressants, stimulants, hallucinogens, marihuana, and simulated controlled substances — the last of which is its own separate chapter (HSC Ch. 482), covering look-alikes that don't actually contain a controlled substance.
+**Explanation:** The six categories are narcotics, depressants, stimulants, hallucinogens, marihuana, and simulated controlled substances — the last of which is its own separate chapter (HSC Ch. 482), covering substances sold as a controlled substance that are chemically different from what they are claimed to be.
 
 ---
 
@@ -209,11 +209,11 @@ Hallucinogens are grouped separately from depressants/stimulants because their d
 "Simulated controlled substances" — the sixth category — are governed by an entirely separate chapter, HSC Chapter 482, rather than the Chapter 481 penalty groups. What makes something a "simulated" controlled substance?
 
 - [ ] It's a real controlled substance being transported in an unmarked container
-- [x] It's represented as being a controlled substance (by appearance, packaging, or the seller's claims) but doesn't actually contain a scheduled controlled substance
+- [x] It's purported to be a controlled substance (by appearance, packaging, or the seller's claims) but is chemically different from the controlled substance it is claimed to be
 - [ ] It's a controlled substance analogue chemically similar to a real drug
 - [ ] It's any drug seized during a simulated (undercover) police operation
 
-**Explanation:** Chapter 482 covers substances that are marketed or represented as controlled substances — by color, shape, packaging, or the seller's sales pitch — but that lab testing shows contain no actual scheduled controlled substance. It's a deliberately separate offense scheme from Chapter 481, since no real controlled substance is ever involved.
+**Explanation:** HSC 482.001(4): a simulated controlled substance is "a substance that is purported to be a controlled substance, but is chemically different from the controlled substance it is purported to be." The offense (482.002) requires the seller to represent it as a controlled substance, expressly or in a way that would lead a reasonable person to believe it is one. It's a deliberately separate offense scheme from Chapter 481, since no real controlled substance is ever involved.
 
 ---
 
@@ -427,7 +427,176 @@ A suspect is caught with pseudoephedrine, lithium strips, and other classic "met
 - [ ] Class A misdemeanor
 - [ ] Felony of the third degree
 
-**Explanation:** 481.124 (Possession or Transport of Certain Chemicals With Intent to Manufacture) grades the *precursor* offense by which penalty group the intended finished substance belongs to: 481.124(d)(1) makes it a felony of the second degree when the target substance is Penalty Group 1, 1-A, or 1-B; a felony of the third degree for Penalty Group 2; and a state jail felony for Penalty Group 3 or 4 — the precursor possession offense is charged even though no finished controlled substance exists yet.
+**Explanation:** 481.124 (Possession or Transport of Certain Chemicals With Intent to Manufacture) grades the *precursor* offense by which penalty group the intended finished substance belongs to: 481.124(d)(1) makes it a felony of the second degree when the target substance is Penalty Group 1, 1-A, or 1-B; a felony of the third degree for Penalty Group 2; a state jail felony for Penalty Group 3 or 4; and a Class A misdemeanor for a substance scheduled by the commissioner but not in a penalty group — the precursor possession offense is charged even though no finished controlled substance exists yet.
+
+---
+
+### Q166 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 481.115(g); 481.1151(c); 481.116(f); 481.1161(c); 481.117(f); 481.118(f); 481.119(c); 481.121(c)
+
+The "defense to prosecution" that BPOC 15.3 tells instructors to discuss for possession offenses applies to an actor who:
+
+- [x] Was the first person to request emergency medical assistance for another person's possible overdose — during the ongoing emergency, staying on scene until help arrived, and cooperating with medical and law enforcement personnel — or was the overdose victim for whom help was requested
+- [ ] Voluntarily surrendered the drugs to an officer before being searched
+- [ ] Agreed to enter a drug treatment program after arrest
+- [ ] Possessed the drug for less than 24 hours
+
+**Explanation:** Each listed possession section has the same overdose-reporting defense. Example, 481.115(g): the actor "(1) was the first person to request emergency medical assistance in response to the possible overdose of another person and: (A) made the request for medical assistance during an ongoing medical emergency; (B) remained on the scene until the medical assistance arrived; and (C) cooperated with medical assistance and law enforcement personnel; or (2) was the victim of a possible overdose for which emergency medical assistance was requested."
+
+---
+
+### Q167 — Select All
+**LO:** 15.3 · **Source:** HSC 481.115(g); 481.1151(c); 481.116(f); 481.1161(c); 481.117(f); 481.118(f); 481.119(c); 481.121(c)
+
+The overdose-reporting defense applies only to the lowest possession tiers. Select all of the offenses it can apply to.
+
+- [x] Possession of less than 1 gram of a Penalty Group 1 or 1-B substance (state jail felony)
+- [x] Possession of fewer than 20 abuse units of a Penalty Group 1-A substance
+- [x] Possession of less than 1 gram of a Penalty Group 2 substance
+- [x] Possession of 4 ounces or less of a Penalty Group 2-A substance
+- [x] Possession of less than 28 grams of a Penalty Group 3 substance
+- [x] Possession of less than 28 grams of a Penalty Group 4 substance
+- [x] Possession of 4 ounces or less of marihuana
+- [x] Possession of a commissioner-scheduled substance not in a penalty group (481.119(b))
+- [ ] Possession of 1 to 4 grams of a Penalty Group 1 substance
+- [ ] Delivery of less than 1 gram of a Penalty Group 1 substance
+- [ ] Possession of more than 4 ounces of marihuana
+- [ ] Possession of 28 to 200 grams of a Penalty Group 3 substance
+
+**Explanation:** The defense is written for 481.115(b), 481.1151(b)(1), 481.116(b), 481.1161(b)(1)-(2), 481.117(b), 481.118(b), 481.119(b), and 481.121(b)(1)-(2). The same defense also appears for drug paraphernalia (481.125(g)) and dangerous-drug possession (483.041(e)). It never covers delivery or higher possession tiers.
+
+---
+
+### Q168 — Select All
+**LO:** 15.3 · **Source:** HSC 481.115(h)
+
+Select all of the circumstances in which the overdose-reporting defense is NOT available.
+
+- [x] When help was requested, an officer was arresting the actor or executing a search warrant describing the actor or the place the call came from
+- [x] The actor was committing another offense at the time, other than one of the other low-level possession or paraphernalia offenses the statute lists
+- [x] The actor was previously convicted of, or placed on deferred adjudication for, an offense under HSC Chapter 481, 483, or 485
+- [x] The actor was previously acquitted after successfully raising this defense
+- [x] The actor requested emergency medical assistance for a possible overdose at any time in the preceding 18 months
+- [ ] The actor was arrested, but not convicted, for public intoxication two years earlier
+- [ ] The actor requested emergency assistance for an overdose three years earlier
+- [ ] The drugs were found by paramedics rather than by police
+- [ ] The actor was still on scene when officers arrived
+
+**Explanation:** 481.115(h)(1)-(4) (repeated in each section that carries the defense). Under 481.115(i), the defense does not stop the State from using evidence found because of the 911 call for an offense the defense does not cover.
+
+---
+
+### Q169 — Scenario
+**LO:** 15.3 · **Source:** HSC 481.115(g)-(i)
+
+A woman calls 911 for her roommate's overdose, stays on scene, and cooperates. She has 0.5 grams of cocaine in her pocket. While the roommate is being treated, officers see 300 grams of methamphetamine packaged for sale on the roommate's dresser. What is the effect of the overdose-reporting defense?
+
+- [x] It may cover the caller's under-1-gram cocaine possession, but the methamphetamine evidence found because of the call can still be used to prosecute the roommate, since the defense does not cover that offense
+- [ ] It bars prosecution of anyone in the apartment for anything found because of the 911 call
+- [ ] It makes all evidence from the call inadmissible in any proceeding
+- [ ] It does not apply to the caller, because only the overdose victim can raise it
+
+**Explanation:** The defense covers only the listed low-level possession offenses, and under 481.115(i) it "does not preclude the admission of evidence obtained by law enforcement resulting from the request for emergency medical assistance if that evidence pertains to an offense for which the defense... is not available." The roommate, though the overdose victim, was committing another offense (possession with intent to deliver) not on the (h)(1)(B) list, so the defense is not available to the roommate at all.
+
+---
+
+### Q170 — Multiple Choice
+**LO:** 15.3 · **Source:** BPOC 15.3 Instructor Note; HSC 481.112, 481.1123, 481.115
+
+How does the punishment for Penalty Group 1-B (fentanyl) compare with Penalty Group 1?
+
+- [x] Possession is punished the same — 481.115 covers both PG1 and PG1-B on one ladder — but manufacture/delivery of PG1-B (481.1123) is more severe than PG1 (481.112); for example, under 1 gram is a third-degree felony for PG1-B versus a state jail felony for PG1
+- [ ] Both possession and delivery of PG1-B are punished the same as PG1
+- [ ] Possession of PG1-B is punished more severely than PG1, but delivery is the same
+- [ ] PG1-B offenses are always misdemeanors because the amounts are so small
+
+**Explanation:** BPOC 15.3's instructor note: possession of PG 1-B carries the same penalty as possession of PG 1 (both under 481.115), but manufacture or delivery of PG 1-B is more severe than PG 1. 481.1123 runs from a third-degree felony under 1 gram up to life or 20-99 years at 400 grams or more.
+
+---
+
+### Q171 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 481.125
+
+Under HSC 481.125, how are drug paraphernalia offenses classified?
+
+- [x] Using or possessing with intent to use: Class C misdemeanor; delivering or possessing/manufacturing with intent to deliver: Class A misdemeanor; an adult delivering to someone under 18 who is at least three years younger: state jail felony
+- [ ] All paraphernalia offenses are Class C misdemeanors
+- [ ] All paraphernalia offenses are state jail felonies
+- [ ] Possession is a Class A misdemeanor and delivery is a third-degree felony
+
+**Explanation:** 481.125(d), (e), and (f). A delivery offense under (b) with a prior conviction under (b) or (c) is punished by 90 days to one year in jail. The overdose-reporting defense applies to the Class C use/possession offense (481.125(g)).
+
+---
+
+### Q172 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 481.133
+
+Under HSC 481.133 (Falsification of Drug Test Results), a person who uses or possesses with intent to use a product designed to falsify a drug test commits what level of offense, and what is the level for selling such a product?
+
+- [x] Use or possession: Class B misdemeanor; delivery or possession/manufacture with intent to deliver: Class A misdemeanor
+- [ ] Use or possession: Class C misdemeanor; delivery: Class B misdemeanor
+- [ ] Both are state jail felonies
+- [ ] It is not an offense unless the test was court-ordered
+
+**Explanation:** 481.133(d)-(e). "Drug test" means a lawfully administered test designed to detect the presence of a controlled substance or marihuana (481.133(c)).
+
+---
+
+### Q173 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 481.141
+
+A dealer delivers 2 grams of heroin (normally a second-degree felony under 481.112(c)), and the buyer dies after using it. Under HSC 481.141, what happens?
+
+- [x] If the trier of fact finds beyond a reasonable doubt at the guilt phase that the death resulted from the delivered substance, the punishment is increased by one degree, and the sentence may not run concurrently with other sentences
+- [ ] Nothing changes; the death can only be considered at sentencing within the normal range
+- [ ] The offense automatically becomes capital murder
+- [ ] The punishment is increased only if the buyer used the drug by itself, with no other substance
+
+**Explanation:** 481.141 applies to offenses otherwise punishable as a state jail, third-degree, or second-degree felony under 481.112, 481.1121, 481.1123, 481.113, 481.114, or 481.122, regardless of whether the substance was used alone or with another. It does not apply if the defendant is also prosecuted for murder under PC 19.02(b)(4) for the same criminal episode (481.141(d)).
+
+---
+
+### Q174 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 482.002
+
+A man sells a bag of crushed aspirin, telling the buyer it is cocaine. Under HSC 482.002, what is the offense level, and does it matter that he actually believed it was cocaine?
+
+- [x] State jail felony; his belief that it was a real controlled substance is not a defense
+- [ ] Class C misdemeanor; his belief is a complete defense
+- [ ] No offense, because no controlled substance was involved
+- [ ] Felony of the first degree, the same as delivering real cocaine
+
+**Explanation:** 482.002(a) makes it an offense to deliver (or manufacture with intent to deliver) a simulated controlled substance while expressly representing it as a controlled substance, representing it so a reasonable person would believe it is one, or telling the recipient they can pass it off as one. It is a state jail felony (482.002(d)), and 482.002(c) says it is not a defense that the person believed the substance was a controlled substance.
+
+---
+
+### Q175 — Select All
+**LO:** 15.3 · **Source:** HSC 482.002(b)
+
+Select all of the defenses to prosecution listed in HSC 482.002(b) for delivering or manufacturing a simulated controlled substance.
+
+- [x] The person was a peace officer acting in the discharge of official duties
+- [x] The substance was made for or delivered to a licensed medical practitioner for use as a placebo in research or practice
+- [x] The person was a licensed practitioner, pharmacist, or other person authorized to dispense or administer controlled substances, acting in the legitimate performance of professional duties
+- [ ] The person believed the substance was a real controlled substance
+- [ ] The person sold only a small amount
+- [ ] The buyer never used the substance
+
+**Explanation:** Those are the three 482.002(b) defenses. 482.002(c) expressly rejects the "I thought it was real" defense.
+
+---
+
+### Q176 — Multiple Choice
+**LO:** 15.3 · **Source:** HSC 445.004 (formerly 444.004)
+
+BPOC 15.3 lists "Distribution or sale of kratom product to minor" at HSC 444.004. In the current code, where is that offense and how is it classified?
+
+- [x] HSC 445.004 — distributing, selling, or exposing for sale a kratom product to a person younger than 18 is a Class C misdemeanor
+- [ ] HSC 444.004 — a state jail felony
+- [ ] HSC 481.122 — a second-degree felony, the same as delivering a controlled substance to a child
+- [ ] It was repealed and is no longer an offense
+
+**Explanation:** The kratom chapter was redesignated from HSC Chapter 444 to Chapter 445 effective September 1, 2025 (Acts 2025, 89th Leg., H.B. 1620), because two different chapters had been numbered 444. The current HSC 444.004 is "Anticompetitive Behavior Monitoring" in the Wholesale Prescription Drug Importation Program. 445.004(b): the kratom offense is a Class C misdemeanor.
 
 ---
 
@@ -539,7 +708,7 @@ Under PC 22.041(c-1)(3) (Endangering a Child), what creates a presumption that a
 ### Q60 — Multiple Choice
 **LO:** 15.4 · **Source:** PC 71.023(a), (b)
 
-Under PC 71.023, a gang or foreign-terrorist-organization leader who knowingly finances, directs, or supervises the manufacture, delivery, or possession of more than 4 grams of a Penalty Group 1-B substance by gang/organization members commits an offense classified as:
+Under PC 71.023, a gang or foreign-terrorist-organization leader who knowingly finances, directs, or supervises the manufacture, delivery, or possession with intent to deliver of 4 grams or more of a Penalty Group 1-B substance by gang/organization members commits an offense classified as:
 
 - [ ] A state jail felony
 - [ ] A Class A misdemeanor
@@ -576,7 +745,7 @@ An offense that would otherwise be a state jail felony under 481.112 (PG1 manufa
 - [ ] The offense becomes a capital felony
 - [ ] The offense is reduced, since school proximity triggers a diversion program instead
 
-**Explanation:** 481.134(b) escalates the *grade* by one full step for offenses that would otherwise be a state jail felony, third-degree felony, or second-degree felony under 481.112, 481.1121, 481.1123, 481.113, 481.114, or 481.120, when committed within a drug-free zone — a state jail felony becomes a third-degree felony, and so on up the ladder.
+**Explanation:** For a school, the applicable provision is 481.134(d): an offense otherwise punishable under 481.112(b) (and the other listed lowest-tier subsections) is a felony of the third degree if committed in, on, or within 1,000 feet of real property owned, rented, or leased to a school or school board, a youth center, or a playground, or on a school bus. A separate provision, 481.134(b), bumps manufacture/delivery offenses up one grade (state jail → third, third → second, second → first) for institutions of higher learning, youth centers, and playgrounds (1,000 feet) and public pools or video arcades (300 feet).
 
 ---
 
@@ -590,7 +759,7 @@ Which of the following is NOT one of the drug-free zone locations that can trigg
 - [x] Within 1,000 feet of a private residence with no minors present
 - [ ] Within 1,000 feet of premises owned by an institution of higher education (for the grade-escalation enhancement under (b))
 
-**Explanation:** 481.134(g) specifically carves out offenses committed inside a private residence when no minor was present — that scenario does NOT trigger the enhancement. Schools, youth centers, playgrounds, school buses, and (for certain offenses) institutions of higher education are all drug-free-zone triggers.
+**Explanation:** A private residence is not itself a drug-free-zone location. 481.134(g) adds that the Class A misdemeanor enhancement in (f) does not apply to an offense committed inside a private residence when no minor was present. Schools, youth centers, playgrounds, school buses, and (for certain offenses) institutions of higher education are all drug-free-zone triggers.
 
 ---
 
@@ -632,7 +801,7 @@ Can a drug-free-zone-enhanced sentence run concurrently (at the same time) with 
 - [ ] A playground — within 1,000 feet, but only if it's on the same premises as a school
 - [ ] A school bus — within 1,000 feet of where it's parked
 
-**Explanation:** 481.134(a) defines "playground" and "youth center" as 1,000-foot triggers (grouped with schools), while a public swimming pool or video arcade facility gets its own shorter 300-foot radius under (b)(2) — smaller, tightly-defined locations get a smaller buffer than the broader school/youth-center/playground category. Being on a school bus itself is a separate, distance-independent trigger.
+**Explanation:** 481.134(b)(2) uses a 300-foot radius for a public swimming pool or video arcade facility. Youth centers and playgrounds use 1,000 feet throughout (b) through (f). A "playground" by definition is NOT on school premises (481.134(a)(3)), and being on a school bus is a separate trigger under (c)-(f) that has no distance element.
 
 ---
 
@@ -677,6 +846,36 @@ Under HSC 481.160, before a law enforcement agency may summarily destroy an exce
 - [ ] The property has been held in evidence storage for at least one full year
 
 **Explanation:** HSC 481.160(a) sets these three safeguards — sampling, photographing, and weighing/measuring — before excess-quantity property can be summarily destroyed pre-disposition.
+
+---
+
+### Q177 — Multiple Choice
+**LO:** 15.5 · **Source:** HSC 481.151
+
+Under HSC 481.151, "summary destruction" of controlled substance property means:
+
+- [x] Destruction without the necessity of any court action, a court order, or further proceedings
+- [ ] Destruction only after a jury verdict
+- [ ] Destruction ordered by a magistrate at the defendant's first appearance
+- [ ] Destruction of a sample only, with the rest kept until trial
+
+**Explanation:** 481.151(3). The same section defines "controlled substance property" broadly: a controlled substance, a mixture containing one, a controlled substance analogue, a counterfeit controlled substance, drug paraphernalia, a chemical precursor, chemical laboratory apparatus, or raw material (481.151(1)).
+
+---
+
+### Q178 — Select All
+**LO:** 15.5 · **Source:** HSC 481.152
+
+Under HSC 481.152, controlled substance plants are subject to seizure and summary forfeiture to the state in which situations?
+
+- [x] The plants were planted, cultivated, or harvested in violation of Chapter 481
+- [x] The plants are wild growths
+- [x] The owners or cultivators of the plants are unknown
+- [x] The person controlling the land fails, on an officer's demand, to produce a registration or proof of holding one
+- [ ] The plant is unharvested peyote growing in its natural state
+- [ ] The plants are growing on public land under a valid registration
+
+**Explanation:** 481.152(a) and (c). 481.152(b) excludes unharvested peyote growing in its natural state. Once forfeited, a court may order disposition under 481.159, or DPS, a criminal justice agency, or a peace officer may summarily destroy the plants under DPS rules (481.152(d)).
 
 ---
 
@@ -941,9 +1140,9 @@ HSC 483.041(c) lists several exceptions to the dangerous-drug possession offense
 - [ ] Possession of any quantity under one ounce
 - [ ] Possession that occurs outside of Texas
 - [ ] Possession by anyone under 18 years of age, regardless of source
-- [x] Possession by a wholesaler, manufacturer, pharmacist, or practitioner in the lawful course of business or practice
+- [x] Possession by a licensed pharmacy, a practitioner, or a licensed manufacturer or wholesaler in the usual course of business or practice
 
-**Explanation:** 483.041(c) exempts, among others, possession by a manufacturer, wholesaler, pharmacist, or practitioner acting in the lawful course of business, and possession under a valid prescription or order.
+**Explanation:** 483.041(c) exempts possession in the usual course of business, practice, or official duties by (among others) a licensed pharmacy, a practitioner, a hospital, a government officer or employee, a licensed manufacturer or wholesaler, and a carrier or warehouseman. Separately, 483.041(a) is not violated if the person obtained the drug from a pharmacist or practitioner acting as described in 483.042(a) — that is, under a valid prescription.
 
 ---
 
@@ -969,9 +1168,9 @@ Under HSC 483.045, forging or altering a prescription for a dangerous drug is no
 - [ ] A civil infraction only
 - [ ] Always a first-degree felony regardless of prior record
 - [ ] A Class C misdemeanor with no enhancement possible
-- [x] A Class B misdemeanor, enhanced to a Class A misdemeanor if the person has a prior conviction under this section
+- [x] A Class B misdemeanor, enhanced to a Class A misdemeanor if the person has a prior conviction under Chapter 483
 
-**Explanation:** HSC 483.045 sets the base offense at a Class B misdemeanor, enhanced to a Class A misdemeanor for a person previously convicted under that section.
+**Explanation:** HSC 483.045(b): a Class B misdemeanor "unless it is shown on the trial of the defendant that the defendant has previously been convicted of an offense under this chapter," in which case it is a Class A misdemeanor. (Note: BPOC 15.9 names this offense in its title but leaves 483.045 out of its table.)
 
 ---
 
@@ -982,10 +1181,10 @@ Under HSC 483.047, refilling a dangerous drug prescription without the practitio
 
 - [ ] No exceptions whatsoever, under any circumstance
 - [ ] An exception only if the pharmacist is also the prescriber
-- [x] Specific disaster-related exception provisions allowing limited emergency refills
+- [x] Limited emergency exceptions: up to a 72-hour supply when the practitioner cannot be reached (because of a disaster or after reasonable effort) and missing a dose would interrupt therapy, or up to a 30-day supply during a governor-declared disaster when the pharmacy board has authorized it
 - [ ] An exception only for controlled substances, not dangerous drugs
 
-**Explanation:** HSC 483.047(b), (b-1), and (b-2) carve out limited disaster-related exceptions permitting refills without prior authorization under specified emergency conditions.
+**Explanation:** 483.047(b) lets a pharmacist refill without authorization (max 72-hour supply) if failure to refill might interrupt therapy or cause suffering and the practitioner cannot be contacted because of a disaster or after reasonable effort; the pharmacist must tell the patient and later notify the practitioner. 483.047(b-1) allows up to a 30-day supply in a disaster the governor has declared, when the board has notified pharmacies. The offense is a Class B misdemeanor (Class A with a prior Chapter 483 conviction).
 
 ---
 
@@ -1003,6 +1202,52 @@ Under HSC 483.050, it is an offense for a person subject to Chapter 483 to:
 
 ---
 
+### Q179 — Multiple Choice
+**LO:** 15.9 · **Source:** HSC 483.042(c)
+
+A man is charged with offering to sell a dangerous drug (Rx-only muscle relaxers) to an undercover officer. What does HSC 483.042(c) require for the offer?
+
+- [x] Proof of the offer must be corroborated by a person other than the offeree, or by evidence other than the offeree's statement
+- [ ] The offer must be in writing
+- [ ] The drug must actually change hands for any offense to occur
+- [ ] No corroboration is required for any element
+
+**Explanation:** 483.042(c). Delivery or offer to deliver a dangerous drug is a state jail felony (483.042(d)). Compare HSC 483.072, which allows a Chapter 483 conviction on the uncorroborated testimony of a party to the offense.
+
+---
+
+### Q180 — Select All
+**LO:** 15.9 · **Source:** HSC 483.045
+
+Select all of the acts that are offenses under HSC 483.045 (Forging or Altering Prescription).
+
+- [x] Forging a prescription, or increasing the prescribed quantity of a dangerous drug on a prescription
+- [x] Issuing a prescription bearing a forged or fictitious signature
+- [x] Obtaining or attempting to obtain a dangerous drug with a forged, fictitious, or altered prescription
+- [x] Obtaining or attempting to obtain a dangerous drug through a fictitious or fraudulent telephone call
+- [x] Possessing a dangerous drug obtained by a forged, fictitious, or altered prescription or a fraudulent telephone call
+- [ ] A pharmacist failing to retain a prescription after filling it
+- [ ] A pharmacist refilling a prescription without authorization
+- [ ] Refusing to permit an authorized inspection of dangerous-drug records
+
+**Explanation:** 483.045(a)(1)-(5). The distractors are separate offenses: failure to retain a prescription (483.046), refilling without authorization (483.047), and refusal to permit inspection (483.050) — each a Class B misdemeanor, Class A with a prior Chapter 483 conviction.
+
+---
+
+### Q181 — Multiple Choice
+**LO:** 15.9 · **Source:** HSC 483.043
+
+Under HSC 483.043, manufacturing a dangerous drug when not authorized by law to do so is:
+
+- [x] A state jail felony
+- [ ] A Class C misdemeanor
+- [ ] A Class A misdemeanor
+- [ ] A felony of the first degree
+
+**Explanation:** 483.043(b). The dangerous-drug ladder: possession, Class A misdemeanor (483.041); delivery or offer to deliver, state jail felony (483.042); manufacture, state jail felony (483.043).
+
+---
+
 ## LO 15.10: Texas Compassionate-Use Program (Occ. Code Ch. 169)
 
 ### Q102 — Term ID
@@ -1010,23 +1255,23 @@ Under HSC 483.050, it is an offense for a person subject to Chapter 483 to:
 
 **Answer:** Low-THC cannabis
 
-"______" means the dried flowers of the plant Cannabis sativa L. and any derivative, extract, oil, or other substance obtained from that plant that contains not more than 1 percent by weight of tetrahydrocannabinols, prescribed under the Texas Compassionate-Use Program.
+"______" means the plant Cannabis sativa L., and any part of that plant or any compound, manufacture, salt, derivative, mixture, preparation, resin, or oil of that plant that contains not more than 10 milligrams of tetrahydrocannabinols in each dosage unit.
 
-**Explanation:** Occupations Code 169.001 defines "low-THC cannabis" as the substance authorized under the Compassionate-Use Program, capped at not more than 1 percent THC by weight (note: not to be confused with the 0.3 percent delta-9 THC hemp threshold under Agriculture Code 121.001).
+**Explanation:** Occupations Code 169.001(3) defines "low-THC cannabis" for the Compassionate-Use Program by a per-dose cap: not more than 10 milligrams of THC in each dosage unit. (The older 1-percent-by-weight cap no longer appears in the statute.) Don't confuse it with hemp, which is defined by a 0.3 percent delta-9 THC dry-weight concentration under Agriculture Code 121.001.
 
 ---
 
 ### Q103 — Multiple Choice
 **LO:** 15.10 · **Source:** Occ. Code 169.001
 
-Under Occupations Code 169.001, which term is defined as the dried flowers/derivatives of Cannabis sativa L. containing not more than 1% THC by weight, used under the Compassionate-Use Program?
+Under Occupations Code 169.001, which term is defined as Cannabis sativa L. or any part, derivative, resin, or oil of it containing not more than 10 milligrams of THC in each dosage unit, used under the Compassionate-Use Program?
 
 - [ ] Hemp
 - [x] Low-THC cannabis
 - [ ] Marihuana
 - [ ] Dangerous drug
 
-**Explanation:** "Low-THC cannabis" is the Occupations Code term specific to the medical Compassionate-Use Program; "hemp" is the separate Agriculture Code term for industrial/consumer hemp capped at 0.3% delta-9 THC.
+**Explanation:** "Low-THC cannabis" is the Occupations Code term specific to the medical Compassionate-Use Program (capped per dosage unit); "hemp" is the separate Agriculture Code term capped at 0.3% delta-9 THC on a dry-weight basis.
 
 ---
 
@@ -1035,12 +1280,12 @@ Under Occupations Code 169.001, which term is defined as the dried flowers/deriv
 
 Under Occupations Code 169.002, a physician who wishes to prescribe low-THC cannabis under the Compassionate-Use Program must:
 
-- [x] Be a qualified, board-certified physician specializing in the treatment of the patient's qualifying condition and be registered with the compassionate-use registry
+- [x] Be licensed in Texas, be board certified in a specialty relevant to the patient's condition, and dedicate a significant portion of clinical practice to evaluating and treating that condition
 - [ ] Obtain a separate DEA controlled-substance registration number
 - [ ] Be employed directly by the Department of Public Safety
 - [ ] Simply hold any active Texas medical license, with no specialty or registry requirement
 
-**Explanation:** Occupations Code 169.002 requires the prescribing physician to be qualified/board-certified in treating the patient's condition and registered with the compassionate-use registry maintained under 169.004.
+**Explanation:** Occupations Code 169.002(b) lists those three qualifications. (169.002(c) adds a separate path for physicians certified by a compassionate-use institutional review board for an approved research program.) Registration in the compassionate-use registry is a separate prerequisite under 169.003(a)(2) and 169.004.
 
 ---
 
@@ -1051,7 +1296,7 @@ Under Occupations Code 169.002, a physician who wishes to prescribe low-THC cann
 
 Under Occupations Code 169.003, a low-THC cannabis prescription for a qualifying Texas resident may be written for up to a ______ supply, with a maximum of four refills.
 
-**Explanation:** Occupations Code 169.003 caps low-THC cannabis prescriptions at a 90-day supply with up to four refills, for Texas residents with a qualifying condition such as epilepsy, multiple sclerosis, cancer, autism, PTSD, or certain chronic-pain conditions.
+**Explanation:** Occupations Code 169.003 caps low-THC cannabis prescriptions at a 90-day supply with up to four refills, for patients who are permanent residents of Texas with a qualifying condition listed in 169.003(a)(3)(A), such as epilepsy or another seizure disorder, multiple sclerosis, spasticity, ALS, autism, cancer, an incurable neurodegenerative disease, PTSD, a condition causing chronic pain, traumatic brain injury, Crohn's or another inflammatory bowel disease, or a terminal illness or hospice/palliative care. A physician may prescribe more than one package in a 90-day period (169.003(c)).
 
 ---
 
@@ -1063,9 +1308,9 @@ Under Occupations Code 169.004, the compassionate-use registry maintained by DPS
 - [ ] Only the patients themselves, with no physician information recorded
 - [ ] Only dispensing organizations, with no prescriber information recorded
 - [ ] Only law enforcement agencies for tracking purposes
-- [x] Prescribing physicians, so pharmacies can verify a prescription's validity, while keeping physician identities confidential as required
+- [x] The physician as the prescriber for a specific patient — recording the physician's name, the patient's name and date of birth, the dosage, the means of administration, and the total amount needed to fill the prescription
 
-**Explanation:** Occ. Code 169.004 has DPS maintain the secure compassionate-use registry of registered prescribing physicians, with confidentiality protections for physician identity as specified.
+**Explanation:** Under 169.004(a), before prescribing or renewing, the physician must register as that patient's prescriber in the compassionate-use registry DPS maintains under HSC 487.054, listing those five items. Under 169.004(b), DPS may not publish a registered physician's name without the physician's express permission.
 
 ---
 
@@ -1074,12 +1319,12 @@ Under Occupations Code 169.004, the compassionate-use registry maintained by DPS
 
 Under Occupations Code 169.005, a physician prescribing low-THC cannabis must document a patient treatment plan that includes:
 
-- [x] The patient's diagnosis, the physician's treatment rationale, and periodic evaluation of the patient's response to treatment
+- [x] The dosage, means of administration, and planned duration of treatment; a plan for monitoring the patient's symptoms; and a plan for monitoring indicators of tolerance or reaction to low-THC cannabis
 - [ ] Only the dispensing pharmacy's inventory records
 - [ ] The patient's employer and occupation
 - [ ] Only the patient's name and date of birth
 
-**Explanation:** Occ. Code 169.005 requires the physician to maintain a treatment plan documenting diagnosis, rationale, and ongoing evaluation of the patient's response.
+**Explanation:** Occupations Code 169.005 lists exactly those three items for the patient treatment plan.
 
 ---
 
@@ -1094,6 +1339,42 @@ The Texas Compassionate-Use Program, as discussed in BPOC 15.10, authorizes whic
 - [ ] Possession of any amount of marijuana without a prescription
 
 **Explanation:** BPOC 15.10 covers Occupations Code Chapter 169's narrow medical program — it authorizes physician-prescribed low-THC cannabis for qualifying patients, not general marijuana legalization.
+
+---
+
+### Q182 — Select All
+**LO:** 15.10 · **Source:** Occ. Code 169.003(a)(3)(A)
+
+Select all of the conditions for which a qualified physician may prescribe low-THC cannabis under Occupations Code 169.003.
+
+- [x] Epilepsy or another seizure disorder
+- [x] Multiple sclerosis
+- [x] Autism
+- [x] Cancer
+- [x] Post-traumatic stress disorder
+- [x] A condition that causes chronic pain
+- [x] Traumatic brain injury
+- [x] Crohn's disease or another inflammatory bowel disease
+- [ ] Generalized anxiety disorder
+- [ ] Insomnia
+- [ ] Glaucoma
+- [ ] Attention deficit hyperactivity disorder
+
+**Explanation:** 169.003(a)(3)(A) also lists spasticity, ALS, incurable neurodegenerative disease, terminal illness or hospice/palliative care, and conditions approved for a research program. The patient must be a permanent Texas resident, and the physician must be registered under 169.004 and find the risk reasonable in light of the potential benefit.
+
+---
+
+### Q183 — Multiple Choice
+**LO:** 15.10 · **Source:** Occ. Code 169.001(4)-(5)
+
+Under Occupations Code 169.001, which method of use is excluded from "medical use" of low-THC cannabis?
+
+- [x] Smoking — burning or igniting the substance and inhaling the smoke (inhaling an aerosolized or vaporized medication is not "smoking")
+- [ ] Ingestion
+- [ ] Absorption through the skin
+- [ ] Vaporized pulmonary inhalation
+
+**Explanation:** 169.001(4): "medical use" means ingestion, absorption, or insertion by a means of administration other than smoking. 169.001(5): "smoking" means burning or igniting a substance and inhaling the smoke, and does not include inhaling a medication that is aerosolized or vaporized.
 
 ---
 
@@ -1129,9 +1410,9 @@ Under HSC 481.002(26)(F), "marihuana" excludes hemp as defined by Agriculture Co
 
 **Answer:** quantitative
 
-Because hemp and marijuana are visually and by-smell indistinguishable, HSC 481.159(c)(1) requires a ______ analysis (lab testing for delta-9 THC concentration) to legally establish that a plant sample is marijuana rather than hemp.
+Under HSC 481.159(c)(1), an agency that uses forfeited controlled substance property or plants in investigations must employ a qualified individual to conduct qualitative and ______ analyses of the property or plant before and after its use. BPOC 15.11 points to this provision when discussing hemp, because only a measurement of delta-9 THC concentration separates hemp from marihuana.
 
-**Explanation:** HSC 481.159(c)(1) requires a qualified individual to conduct a quantitative analysis of the substance — this is the testing standard that resolves the marijuana/hemp distinction under 481.002(26)(F) and Ag. Code 121.001.
+**Explanation:** 481.159(c)(1) itself is about property kept for investigative use: it must be analyzed qualitatively (what it is) and quantitatively (how much or how strong) before and after use so it isn't diluted, substituted, or tampered with. The hemp/marihuana line under 481.002(26)(F) and Ag. Code 121.001 is a quantitative question — delta-9 THC concentration above or below 0.3% on a dry-weight basis.
 
 ---
 
@@ -1156,10 +1437,10 @@ Under Agriculture Code 121.003, the Texas Department of Agriculture (TDA) is req
 
 - [ ] Set the statewide marijuana penalty-group thresholds
 - [ ] Issue federal DEA registration numbers to hemp growers
-- [x] Prepare and submit a state hemp production plan (consistent with 7 U.S.C. 1639p) coordinated with HSC Chapter 443
+- [x] After consulting the governor and attorney general, develop a state plan to monitor and regulate hemp production that complies with 7 U.S.C. 1639p, Agriculture Code Chapter 122, and HSC Chapter 443, and submit it to the U.S. Secretary of Agriculture
 - [ ] Approve or deny compassionate-use registry applications
 
-**Explanation:** Ag. Code 121.003 requires TDA to submit a state plan under the federal hemp-production framework (7 U.S.C. 1639p), coordinated with HSC Chapter 443 (the state's hemp-program regulatory chapter).
+**Explanation:** Ag. Code 121.003(a)-(b). If USDA disapproves the plan, TDA must amend and resubmit it (121.003(c)). Ag. Code Chapter 122 covers hemp production; HSC Chapter 443 covers consumable hemp products.
 
 ---
 
@@ -1187,7 +1468,7 @@ Per BPOC 15.11, if a plant sample cannot be quantitatively tested for its delta-
 - [ ] Should assume it is hemp and take no enforcement action under any circumstance
 - [x] Cannot conclusively establish, for prosecution purposes, whether the plant is illegal marijuana or legal hemp
 
-**Explanation:** Because HSC 481.002(26)(F) turns entirely on THC concentration, and marijuana/hemp are indistinguishable by sight or smell, prosecutable marijuana cases generally require the quantitative lab analysis called for in HSC 481.159(c)(1).
+**Explanation:** Because HSC 481.002(26)(F) turns entirely on THC concentration, and marijuana/hemp are indistinguishable by sight or smell, prosecutable marijuana cases generally require a quantitative lab analysis of delta-9 THC concentration (the kind of analysis BPOC 15.11 ties to HSC 481.159(c)(1)).
 
 ---
 
@@ -1273,6 +1554,20 @@ Per BPOC 15.13, why does Chapter 483 need its own seizure-and-destruction provis
 - [ ] Because 483.074 was repealed and 481.153 now applies to both
 
 **Explanation:** HSC 483.001(2) defines "dangerous drug" specifically as a substance NOT covered by Chapter 481's schedules/penalty groups — so Chapter 483 maintains its own parallel seizure/destruction framework.
+
+---
+
+### Q184 — Multiple Choice
+**LO:** 15.13 · **Source:** HSC 483.074
+
+When a seized dangerous drug is destroyed under HSC 483.074, which requirement applies?
+
+- [x] The board employee or authorized peace officer must destroy it in the presence of another board employee or authorized peace officer, after preparing an inventory with a statement of who destroyed it, at whose direction, and in whose presence
+- [ ] A district judge must personally witness the destruction
+- [ ] The drug must be held for one year before destruction
+- [ ] No documentation is required for dangerous drugs, only for controlled substances
+
+**Explanation:** 483.074(a): a dangerous drug manufactured, sold, or possessed in violation of Chapter 483 is contraband and may be seized by a board employee or an authorized peace officer. 483.074(b)-(c): the board may direct its destruction; it must be destroyed in the presence of another board employee or authorized peace officer, with an inventory and statement prepared beforehand.
 
 ---
 
@@ -1526,7 +1821,7 @@ Which of the following is listed in BPOC 15.16 as an on-the-person concealment m
 
 **Answer:** uncorroborated testimony
 
-"A conviction under this chapter may be obtained on the ______ ______ of a party to the offense." — HSC 483.072, permitting a Chapter 483 (Dangerous Drug Act) conviction without independent corroboration of a co-participant's testimony.
+"A conviction under this chapter may be obtained on the ______ of a party to the offense." — HSC 483.072, permitting a Chapter 483 (Dangerous Drug Act) conviction without independent corroboration of a co-participant's testimony.
 
 **Explanation:** HSC 483.072 permits conviction on the uncorroborated testimony of a party to the offense — a notable exception to the general accomplice-corroboration rule under CCP 38.14.
 
@@ -1567,18 +1862,18 @@ CCP Art. 38.14 (Testimony of Accomplice) requires that accomplice testimony be:
 - [ ] Given under oath, with no corroboration required at all
 - [ ] Excluded entirely and never admissible
 
-**Explanation:** Art. 38.14 sets the general rule requiring corroboration connecting the defendant to the offense, distinguishing this chapter's uncorroborated-testimony exceptions (HSC 483.072, CCP 38.141) as the exception rather than the rule.
+**Explanation:** Art. 38.14 sets the general rule requiring corroboration connecting the defendant to the offense, while HSC 483.072 is the exception that allows a Chapter 483 conviction on a party's uncorroborated testimony. CCP 38.141 extends a similar corroboration requirement to covert civilians in Chapter 481 cases.
 
 ---
 
 ### Q145 — Term ID
 **LO:** 15.17 · **Source:** CCP Art. 38.141
 
-**Answer:** undercover peace officer or special investigator
+**Answer:** covertly
 
-Under CCP Art. 38.141, a defendant may not be convicted of certain offenses under HSC Chapter 481 on the testimony of a person who is a(n) ______ ______ ______ ______ ______ unless the testimony is corroborated by other evidence tending to connect the defendant with the offense — subject to specified exceptions.
+"A defendant may not be convicted of an offense under Chapter 481, Health and Safety Code, on the testimony of a person who is not a licensed peace officer or a special investigator but who is acting ______ on behalf of a law enforcement agency or under the color of law enforcement unless the testimony is corroborated by other evidence tending to connect the defendant with the offense committed." — CCP Art. 38.141(a)
 
-**Explanation:** CCP Art. 38.141 applies the accomplice-style corroboration requirement specifically to undercover peace officer or special investigator testimony in HSC Chapter 481 prosecutions, subject to statutory exceptions.
+**Explanation:** Despite the article's title, the corroboration rule applies to covert civilians — for example, a confidential informant making a controlled buy — not to licensed peace officers or special investigators. Corroboration that only shows the offense was committed is not enough (38.141(b)).
 
 ---
 
@@ -1587,12 +1882,12 @@ Under CCP Art. 38.141, a defendant may not be convicted of certain offenses unde
 
 CCP Art. 38.141 requires corroboration of whose testimony, specifically in HSC Chapter 481 prosecutions?
 
-- [ ] The arresting patrol officer who conducted the traffic stop
-- [x] An undercover peace officer or special investigator
+- [ ] A licensed peace officer working undercover
+- [x] A person who is not a licensed peace officer or special investigator but who acts covertly on behalf of law enforcement (for example, a confidential informant)
 - [ ] A crime lab analyst who tested the substance
-- [ ] The defendant's own family members
+- [ ] The arresting patrol officer who conducted the traffic stop
 
-**Explanation:** CCP Art. 38.141 requires corroboration of an undercover peace officer's or special investigator's testimony before a defendant may be convicted of certain HSC Chapter 481 offenses, subject to specified statutory exceptions.
+**Explanation:** CCP Art. 38.141(a) requires corroboration — other evidence tending to connect the defendant to the offense — when the witness is a covert civilian acting for law enforcement. An undercover licensed peace officer's or special investigator's testimony is not subject to this rule. The article's title ("Testimony of Undercover Peace Officer or Special Investigator") is easy to misread.
 
 ---
 
@@ -1604,9 +1899,9 @@ Comparing the three uncorroborated/corroborated-testimony provisions in BPOC 15.
 - [ ] CCP 38.141 applies only to civil cases, not criminal prosecutions
 - [ ] All three provisions require corroboration with no exceptions
 - [ ] All three provisions permit uncorroborated testimony with no restrictions
-- [x] HSC 483.072 permits uncorroborated party testimony for dangerous-drug offenses, while CCP 38.14 and 38.141 generally require corroboration for accomplice and undercover-officer testimony, respectively
+- [x] HSC 483.072 permits uncorroborated party testimony for dangerous-drug offenses, while CCP 38.14 requires corroboration of accomplice testimony and CCP 38.141 requires corroboration of testimony from covert civilians (such as informants) in Chapter 481 cases
 
-**Explanation:** BPOC 15.17 contrasts HSC 483.072's uncorroborated-testimony allowance (Chapter 483 dangerous drugs) with the corroboration requirements of CCP 38.14 (accomplice testimony generally) and CCP 38.141 (undercover officer/special investigator testimony in HSC Chapter 481 cases).
+**Explanation:** BPOC 15.17 contrasts HSC 483.072's uncorroborated-testimony allowance (Chapter 483 dangerous drugs) with the corroboration requirements of CCP 38.14 (accomplice testimony generally) and CCP 38.141 (a person who is not a licensed peace officer or special investigator but acts covertly for law enforcement, in HSC Chapter 481 cases).
 
 ---
 

@@ -1,5 +1,12 @@
 [
  {
+  "code": "AG",
+  "name": "Agriculture Code",
+  "asOf": "2026-11-10",
+  "chapters": 95,
+  "sections": 2158
+ },
+ {
   "code": "ABC",
   "name": "Alcoholic Beverage Code",
   "asOf": "2026-09-15",

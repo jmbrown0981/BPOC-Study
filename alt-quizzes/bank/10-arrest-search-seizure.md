@@ -145,14 +145,14 @@ An officer responds to a "suspicious subject" call and finds the subject still o
 ### Q11 — Scenario
 **LO:** 10.1 · **Source:** BPOC 10.1, Lecture Scenario #2
 
-An officer sees a 16-year-old checking car door handles in a store parking lot at 1:00 PM on a school day, but the juvenile never enters a vehicle. Location and time of day alone are used to justify a stop. Per the lecture discussion, is this sufficient for an investigative detention?
+An officer sees a 16-year-old in a store parking lot looking into the windows of several parked cars, apparently checking whether any are unlocked. It is 1:00 PM on a day when school is not in session, and the juvenile never enters a vehicle. Location and time of day alone are used to justify a stop. Per the lecture discussion, is this sufficient for an investigative detention?
 
 - [x] No — location and time of day do not provide reasonable suspicion on their own; they must be combined with other articulable factors
-- [ ] Yes — being a juvenile out during school hours is automatically reasonable suspicion of truancy and theft
+- [ ] Yes — a juvenile in a parking lot in the middle of the day is automatically reasonable suspicion of theft
 - [ ] Yes — checking any car door handle is itself probable cause for arrest
 - [ ] No — reasonable suspicion can never be based on any combination of time, location, and behavior
 
-**Explanation:** The lecture scenario is explicitly built to teach that time/location alone are not enough — they must combine with other observed facts (like the handle-checking behavior itself) to add up to reasonable suspicion.
+**Explanation:** The lecture scenario is explicitly built to teach that time/location alone are not enough — they must combine with other observed facts (like the window-checking behavior itself) to add up to reasonable suspicion.
 
 ---
 
@@ -181,6 +181,52 @@ An officer is dispatched to a "subject with a gun" call at a coffee shop; a cust
 - [ ] The subject's actions immediately amount to criminal trespass
 
 **Explanation:** Lawfully carrying a firearm is not, by itself, criminal activity. Absent additional facts, the officer's options are limited to a consensual encounter — though the scenario also flags that a consensual encounter can shift (e.g., if a business owner tells the subject to leave, refusal becomes criminal trespass).
+
+---
+
+### Q135 — Select All
+**LO:** 10.1 · **Source:** BPOC 10.1, Lecture Scenario #1
+
+Select all of the officer actions the chapter gives as examples that can turn a detention into an arrest.
+
+- [x] Moving the person from the scene
+- [x] Handcuffing the person
+- [x] Placing the person in the back of a patrol car
+- [ ] Asking the person for their name
+- [ ] Asking the person what they are doing in the area
+- [ ] Running a computer check on the person's license plate
+- [ ] Asking the person for consent to search
+- [ ] Explaining to the person why they were stopped
+
+**Explanation:** Lecture Scenario #1 asks students to "articulate what actions from an officer turns a detention into an arrest. Example, moving an individual from the scene, handcuffing, placing a person in the back of a patrol car." Scenario #3 (the beer-run driver placed in the patrol car and driven back to the store) tests the same point.
+
+---
+
+### Q136 — Scenario
+**LO:** 10.1 · **Source:** BPOC 10.1, Lecture Scenario #2
+
+During a lawful detention of the 16-year-old from the parking lot scenario, the officer's questions dispel the suspicion of vehicle burglary. The officer would still like to positively identify the juvenile and let the parents know what happened. What does the chapter say?
+
+- [x] The detention must end once the suspicion is dispelled; further questions that do not amount to reasonable suspicion of other criminal activity — such as wanting to identify the subject or notify the parents — do not justify continuing it
+- [ ] The officer may hold the juvenile until a parent arrives, because the subject is a minor
+- [ ] The officer may hold the juvenile for up to 20 minutes regardless of what the investigation shows
+- [ ] The officer may continue the detention until the juvenile's identity is confirmed by a computer check
+
+**Explanation:** Per the scenario, students must understand "that detentions must be ended when suspicion is dispelled (including ending a detention when officer has further questions if those questions do not amount to reasonable suspicion. Ex: Unable to positively identify the subject without reasonable suspicion of further criminal activity, wanting to make parents aware of a juvenile's activity)."
+
+---
+
+### Q137 — Scenario
+**LO:** 10.1 · **Source:** BPOC 10.1, Lecture Scenario #4
+
+In the coffee-shop "subject with a gun" call, the man is lawfully carrying a holstered handgun. Which development would give the officer a basis to treat the situation as criminal activity rather than a lawful-carry call?
+
+- [x] The business owner tells the man he is no longer welcome, and he refuses to leave (criminal trespass)
+- [ ] Another customer tells the officer the gun makes them uncomfortable
+- [ ] The man declines to tell the officer his name
+- [ ] The man keeps reading his newspaper and does not want to talk to the officer
+
+**Explanation:** The chapter contrasts "the subject being informed by owner that they are no longer welcome at the business (criminal trespass) vs. a customer who is uncomfortable with a subject legally carrying a firearm." A customer's discomfort reports no crime, and refusing to identify or talk is the person's right in a consensual encounter. The chapter also warns that tactical approaches can turn the consensual encounter into a detention.
 
 ---
 
@@ -487,26 +533,26 @@ CCP Art. 15.17 ("Duties of Arresting Officer and Magistrate") is best known for 
 
 CCP Art. 14.01 ("Offense Within View") authorizes a warrantless arrest by:
 
-- [x] Any person for a felony or breach of the peace committed in their view; a peace officer for any offense committed in their view
+- [x] Any person for a felony or an offense against the public peace committed in their presence or view; a peace officer for any offense committed in their presence or view
 - [ ] Only peace officers, and only for felony offenses
 - [ ] Only licensed private investigators
 - [ ] Any person, but only for traffic offenses
 
-**Explanation:** Art. 14.01 draws a distinction: private citizens may arrest without warrant only for felonies or breaches of the peace committed in their view, while peace officers may arrest without warrant for any offense committed in their view.
+**Explanation:** Art. 14.01 draws a distinction: under 14.01(a), a peace officer or any other person may arrest without a warrant for a felony or an "offense against the public peace" committed in their presence or view; under 14.01(b), a peace officer may arrest without a warrant for any offense committed in their presence or view.
 
 ---
 
 ### Q36 — Recall
 **LO:** 10.4 · **Source:** CCP Art. 14.02
 
-CCP Art. 14.02 ("Within View of Magistrate") permits a warrantless arrest when an offense is committed:
+CCP Art. 14.02 ("Within View of Magistrate") permits a peace officer to make a warrantless arrest when:
 
-- [x] In the presence or within the view of a magistrate, who may orally order the offender's arrest
-- [ ] Within view of a police dispatcher monitoring a live camera feed
-- [ ] Within view of any court employee, including a clerk
-- [ ] Within view of a probation officer during a home visit
+- [x] A felony or breach of the peace is committed in the presence or within the view of a magistrate, and the magistrate verbally orders the arrest
+- [ ] Any offense is committed within view of a police dispatcher monitoring a live camera feed
+- [ ] Any offense is committed within view of a court employee, including a clerk
+- [ ] A misdemeanor is committed within view of a probation officer during a home visit
 
-**Explanation:** Art. 14.02 gives a magistrate who personally witnesses an offense the authority to orally order an arrest on the spot, without a written warrant.
+**Explanation:** "A peace officer may arrest, without warrant, when a felony or breach of the peace has been committed in the presence or within the view of a magistrate, and such magistrate verbally orders the arrest of the offender." CCP Art. 14.02.
 
 ---
 
@@ -534,7 +580,7 @@ CCP Art. 14.03(b) creates a mandatory arrest requirement for what circumstance?
 - [ ] Any traffic violation involving a minor
 - [ ] Public intoxication of a repeat offender
 
-**Explanation:** Under CCP Art. 14.03(b), an officer must arrest — not merely may arrest — a person who violates a protective order (Sec. 25.07, Penal Code) in the officer's presence or view.
+**Explanation:** Under CCP Art. 14.03(b), an officer must arrest — not merely may arrest — a person the officer has probable cause to believe violated a protective order (Sec. 25.07, Penal Code) if the offense is committed in the officer's presence. If the violation was not committed in the officer's presence, Art. 14.03(a)(3) still permits, but does not require, a warrantless arrest on probable cause.
 
 ---
 
@@ -543,12 +589,12 @@ CCP Art. 14.03(b) creates a mandatory arrest requirement for what circumstance?
 
 CCP Art. 14.031 ("Public Intoxication") permits an officer to do what instead of making a custodial arrest?
 
-- [x] Release the person in lieu of arrest to a responsible adult who agrees to assume responsibility, if certain conditions are met
+- [x] Release the person in lieu of arrest — if the person is not a child and detention is unnecessary to protect the person or others — to an adult who agrees to take responsibility, or into a substance-use treatment program or supervised sobering facility the person consents to and that admits them
 - [ ] Automatically dismiss the case with no further action
 - [ ] Refer the person only to a civil commitment hearing
 - [ ] Require the person to post bail on the spot before release
 
-**Explanation:** Art. 14.031 gives officers discretion to release a public-intoxication arrestee in lieu of taking them into custody, typically to a responsible adult, subject to statutory conditions.
+**Explanation:** Art. 14.031(a): a peace officer may release a person (not a child) who commits public intoxication if the officer believes detention in a penal facility is unnecessary for the protection of the person or others, and the person (A) is released to the care of an adult who agrees to assume responsibility, (B) verbally consents to voluntary substance-use treatment and is admitted, or (C) verbally consents to admission to a supervised sobering facility and is admitted. The officer and agency are not liable for damage caused by the released person (14.031(d)).
 
 ---
 
@@ -618,7 +664,7 @@ CCP Art. 14.051 ("Arrest by Peace Officer from Other Jurisdiction") authorizes w
 - [ ] Texas officers may pursue suspects into other states without any coordination
 - [ ] Only federal officers may cross state lines in pursuit of a suspect
 
-**Explanation:** Art. 14.051 extends interstate "fresh pursuit" arrest authority to out-of-state officers chasing a felony suspect into Texas, paralleling United States v. Santana, 427 U.S. 38 (1976).
+**Explanation:** Art. 14.051 extends interstate "fresh pursuit" arrest authority to out-of-state officers chasing a felony suspect into Texas. The person must then go before a magistrate; if the magistrate finds the arrest lawful, the person is treated as a fugitive under Art. 51.13, and if unlawful, the person is released (Art. 15.17(d)). The chapter lists United States v. Santana, 427 U.S. 38 (1976) under this article; Santana itself is a hot-pursuit case (following a suspect from a doorway into a house), not an interstate case.
 
 ---
 
@@ -632,7 +678,7 @@ CCP Art. 14.06 ("Must Take Offender Before Magistrate") generally requires an ar
 - [ ] Within 7 days
 - [ ] Within 30 days
 
-**Explanation:** Art. 14.06 sets the general "without unnecessary delay" / 48-hour presentment rule, while also carving out citation-in-lieu-of-arrest options for certain enumerated Class A/B misdemeanors and all Class C misdemeanors.
+**Explanation:** Art. 14.06 sets the general "without unnecessary delay" / 48-hour presentment rule, while also allowing a citation instead of going before a magistrate for Class C misdemeanors other than public intoxication (14.06(b)) and for certain listed Class A/B misdemeanors when the person lives in the county where the offense occurred (14.06(c)–(d)).
 
 ---
 
@@ -689,6 +735,54 @@ CCP Art. 1.21 ("Privilege of Legislators") protects sitting Texas legislators fr
 - [ ] This privilege lapses the moment the legislative session ends, with no travel allowance
 
 **Explanation:** "Senators and Representatives shall, except in cases of treason, felony or breach of the peace, be privileged from arrest during the session of the Legislature, and in going to and returning from the same, allowing one day for every twenty miles such member may reside from the place at which the Legislature is convened." CCP Art. 1.21.
+
+---
+
+### Q138 — Select All
+**LO:** 10.4 · **Source:** CCP Art. 14.03(a)
+
+Select all of the situations in which CCP Art. 14.03(a) authorizes a peace officer to arrest without a warrant.
+
+- [x] A person found in a suspicious place under circumstances that reasonably show they have committed a felony, a Penal Code Chapter 42 offense, a breach of the peace, or public intoxication, or that they are about to commit an offense
+- [x] Probable cause that the person committed an assault causing bodily injury, plus probable cause that there is danger of further bodily injury to that person
+- [x] Probable cause that the person violated a protective order (Penal Code 25.07) outside the officer's presence
+- [x] Probable cause that the person committed an offense involving family violence
+- [x] Probable cause that the person interfered with an emergency telephone call (Penal Code 42.062) outside the officer's presence
+- [x] The person makes a statement to the officer, admissible under Art. 38.21, that establishes probable cause they committed a felony
+- [ ] Probable cause that the person committed a Class C theft the officer did not see, with no other circumstances
+- [ ] An anonymous tip that the person sold marijuana last week, with nothing more
+- [ ] The person refused to give their name during a consensual encounter
+- [ ] The owner reports the next day that the person spray-painted their fence
+
+**Explanation:** Art. 14.03(a)(1)–(7) lists these grounds (plus (a)(7), a felony committed by a person civilly committed as a sexually violent predator). A non-family-violence misdemeanor the officer did not see, with no suspicious-place circumstances, generally needs a warrant. Dyar v. State, 125 S.W.3d 460 (Tex. Crim. App. 2003) explains the "suspicious places" ground.
+
+---
+
+### Q139 — Recall
+**LO:** 10.4 · **Source:** CCP Art. 14.03(c)
+
+On a family violence or protective-order violation call, when does CCP Art. 14.03(c) require the officer to remain at the scene?
+
+- [x] When reasonably necessary to verify the allegation and to prevent further commission of the violation or of family violence
+- [ ] Only until the victim signs a written statement
+- [ ] Never — once the suspect leaves, the officer must clear the call
+- [ ] Only if the suspect is still present when the officer arrives
+
+**Explanation:** "If reasonably necessary to verify an allegation of a violation of a protective order or of the commission of an offense involving family violence, a peace officer shall remain at the scene of the investigation to verify the allegation and to prevent the further commission of the violation or of family violence." CCP Art. 14.03(c).
+
+---
+
+### Q140 — Scenario
+**LO:** 10.4 · **Source:** CCP Art. 14.03(g)
+
+A licensed Fort Worth police officer is driving through Collin County (not a county the city is located in). In front of the officer, a man shoplifts from a convenience store, and a different driver runs a red light. Which statement is correct?
+
+- [x] The officer may arrest the shoplifter without a warrant, but may not arrest the red-light runner, because a city officer outside their jurisdiction may arrest for traffic offenses only in the county or counties where their city is located
+- [ ] The officer may not arrest either person, because a peace officer outside their jurisdiction has only a private citizen's arrest powers
+- [ ] The officer may arrest both people, because a licensed officer may arrest for any offense in their presence anywhere in the state
+- [ ] The officer may arrest the shoplifter only if the theft is a felony
+
+**Explanation:** Art. 14.03(g)(2): a licensed municipal police officer (Art. 2A.001(3)) outside their jurisdiction may arrest without a warrant for any offense in their presence or view, except that a Transportation Code Title 7, Subtitle C (rules of the road) violation may be arrested for only if it occurs in the county or counties where the officer's city is located. Under 14.03(g)(3), the officer must notify the local agency with jurisdiction as soon as practicable, and that agency takes custody of the person and any seized property.
 
 ---
 
@@ -878,6 +972,34 @@ Which Texas case is cited in this chapter alongside CCP Art. 38.22 on the issue 
 
 ---
 
+### Q141 — Recall
+**LO:** 10.6 · **Source:** CCP Art. 38.22, Sec. 3(d); CCP Art. 15.17(c)
+
+A deaf person in custody is about to be interviewed. What must happen for their written or recorded oral statement to be admissible?
+
+- [x] The Art. 38.22 warning must be interpreted to them by an interpreter who is qualified and sworn under Art. 38.31
+- [ ] The officer must hand them a printed copy of the warning; no interpreter is needed
+- [ ] A family member who knows sign language may interpret the warning
+- [ ] Nothing extra — the standard warning is sufficient if it is read aloud
+
+**Explanation:** "If the accused is a deaf person, the accused's statement under Section 2 or Section 3(a) of this article is not admissible against the accused unless the warning in Section 2 of this article is interpreted to the deaf person by an interpreter who is qualified and sworn as provided in Article 38.31." CCP Art. 38.22, Sec. 3(d). Art. 15.17(c) has the same requirement for the magistrate's warnings. This is the statutory backing for the chapter's interpreter point in LO 10.6.
+
+---
+
+### Q142 — Concept
+**LO:** 10.6 · **Source:** CCP Art. 38.22, Sec. 3(c)
+
+A suspect in custody, without being recorded, tells officers where he hid the stolen jewelry. Officers find the jewelry at that location. Under CCP Art. 38.22, Sec. 3(c), what is true about that oral statement?
+
+- [x] The recording requirement of Sec. 3(a) does not apply to a statement containing assertions of fact that are found to be true and that help establish guilt, such as the location of hidden stolen property or the weapon used
+- [ ] It is inadmissible in all cases because it was not electronically recorded
+- [ ] It is admissible only if the suspect later signs a written version
+- [ ] It is admissible only if two officers heard it
+
+**Explanation:** Sec. 3(c): Subsection (a) "shall not apply to any statement which contains assertions of facts or circumstances that are found to be true and which conduce to establish the guilt of the accused, such as the finding of secreted or stolen property or the instrument with which he states the offense was committed."
+
+---
+
 ## LO 10.7 — Arrest warrant criteria
 
 ### Q63 — Definition
@@ -927,12 +1049,12 @@ CCP Art. 15.03 provides that a magistrate:
 
 CCP Art. 15.06 ("Warrant Extends to Every Part of the State") means:
 
-- [x] An arrest warrant issued anywhere in Texas is valid and executable anywhere within the state
+- [x] An arrest warrant issued by any county or district clerk or any magistrate — except the mayor of an incorporated city or town — may be executed in any county in Texas
 - [ ] An arrest warrant is only valid within the county where it was issued
 - [ ] An arrest warrant is only valid within the issuing municipality
 - [ ] An arrest warrant must be re-issued in each county before it can be executed there
 
-**Explanation:** Art. 15.06 ensures statewide validity for Texas arrest warrants, avoiding the need for county-by-county re-issuance.
+**Explanation:** "A warrant of arrest, issued by any county or district clerk, or by any magistrate (except mayors of an incorporated city or town), shall extend to any part of the State..." CCP Art. 15.06. A mayor's warrant is governed by Art. 15.07.
 
 ---
 
@@ -941,12 +1063,12 @@ CCP Art. 15.06 ("Warrant Extends to Every Part of the State") means:
 
 CCP Art. 15.07 ("Warrant Issued by Other Magistrate") addresses:
 
-- [x] Procedures and limitations for a warrant issued by a mayor or magistrate acting outside their usual jurisdiction, including required endorsement
+- [x] A warrant issued by the mayor of an incorporated city or town cannot be executed outside the issuing county unless it is endorsed by a judge of a court of record (then anywhere in the state) or by a magistrate of the county where the accused is found (then in that county)
 - [ ] The process for federal magistrates to issue Texas state warrants
 - [ ] Warrants issued in another U.S. state that automatically apply in Texas
 - [ ] The process for issuing a warrant against a peace officer specifically
 
-**Explanation:** Art. 15.07 covers situations such as a mayor's-warrant county limitation, requiring proper endorsement procedures when a warrant crosses jurisdictional lines.
+**Explanation:** Art. 15.07 applies only to warrants issued by a mayor of an incorporated city or town. Such a warrant is limited to the issuing county unless endorsed — "Let this warrant be executed in the county of ..." (by a magistrate of that county) or "in any county of the State" (by a judge of a court of record).
 
 ---
 
@@ -955,12 +1077,12 @@ CCP Art. 15.07 ("Warrant Issued by Other Magistrate") addresses:
 
 CCP Art. 15.16 ("How Warrant Is Executed") requires:
 
-- [x] The warrant to be executed by presenting it to the accused without unnecessary delay
+- [x] The arrested person to be taken without unnecessary delay before the magistrate who issued or is named in the warrant, if that magistrate is in the county of arrest — otherwise before a magistrate in the county of arrest
 - [ ] The warrant to be executed only during daylight hours
 - [ ] The warrant to be executed only by the magistrate who issued it
 - [ ] The warrant to be read aloud in full before any physical contact is made
 
-**Explanation:** Art. 15.16 establishes the without-unnecessary-delay presentation requirement for executing an arrest warrant.
+**Explanation:** Art. 15.16(a) requires the person arrested on a warrant to be taken without unnecessary delay before the issuing or named magistrate if that magistrate is in the same county; if not, before some magistrate in the county of arrest. Under 15.16(b), the person may instead be taken before a magistrate in another county if that gets the Art. 15.17 warnings to the person faster. (Telling the accused the authority for the arrest is Art. 15.26.)
 
 ---
 
@@ -983,12 +1105,12 @@ CCP Art. 15.171 creates a duty for an officer to notify which entity, and under 
 
 CCP Art. 15.18 ("Arrest for Out-of-County Offense") governs:
 
-- [x] The procedure for handling an arrest made for an offense that occurred in a different county than where the arrest takes place
+- [x] A person arrested on a warrant from another county is taken before a magistrate of the county of arrest (or of any county, if that gets the 15.17 warnings to them faster), who may take bail or, for a fine-only offense, accept a written plea of guilty or nolo contendere
 - [ ] The procedure for arresting a person who lives out of state
 - [ ] The procedure for federal agents making arrests inside Texas
 - [ ] The procedure for extraditing a person to another country
 
-**Explanation:** Art. 15.18 addresses the mechanics of arresting someone in one county for an offense committed in another.
+**Explanation:** Art. 15.18(a): the magistrate may take bail (and send the bond to the court with jurisdiction) or, for a fine-only offense, accept a written plea, set the fine and costs, and discharge the defendant on satisfaction of the judgment. The magistrate must also explain how to request appointed counsel (15.18(a-1)).
 
 ---
 
@@ -997,12 +1119,12 @@ CCP Art. 15.18 ("Arrest for Out-of-County Offense") governs:
 
 CCP Arts. 15.19 ("Notice of Arrest") and 15.20 ("Duty of Sheriff Receiving Notice") work together to:
 
-- [x] Require notification of an out-of-county arrest to the proper sheriff, and set a limit (72 hours) on temporary confinement in the arresting county's jail pending transfer
+- [x] Require the committing magistrate to immediately notify the sheriff of the county where the offense was allegedly committed when the arrested person does not give bail, and require that sheriff to go or send for the person and bring them before the proper court or magistrate
 - [ ] Require the arresting officer to personally transport the arrestee to trial
 - [ ] Require the sheriff to release the arrestee within one hour of notice
 - [ ] Apply only to felony arrests, never misdemeanors
 
-**Explanation:** Arts. 15.19 and 15.20 together handle sheriff notification requirements and set the 72-hour temporary-confinement limit for out-of-county arrests.
+**Explanation:** Under 15.19(a), a person who fails or refuses to give bail is committed to the jail of the county of arrest, and the magistrate immediately notifies the sheriff of the county where the offense allegedly occurred. Under 15.20(a), that sheriff "shall forthwith go or send for" the person. Related limits: a person taken before a magistrate in a county other than the county of arrest may be held in that magistrate's county jail no more than 72 hours (15.19(b)), and Art. 15.21 requires release on personal bond if the person is not picked up before the 11th day.
 
 ---
 
@@ -1016,7 +1138,7 @@ CCP Art. 15.21 ("Release on Personal Bond If Not Timely Demanded") generally req
 - [ ] 30 days
 - [ ] 3 days
 
-**Explanation:** Art. 15.21 sets an 11-day window after which, if the person is not timely demanded by the jurisdiction seeking the arrest, the arrestee may be released on personal bond.
+**Explanation:** If the county where the offense allegedly occurred does not demand the person and take charge of them before the 11th day after commitment to the arresting county's jail, a magistrate in the county of arrest "shall" release the person on personal bond without sureties and forward the bond to that county's sheriff or the issuing court. CCP Art. 15.21.
 
 ---
 
@@ -1081,12 +1203,12 @@ CCP Art. 15.26 ("Authority to Arrest Must Be Made Known") requires:
 
 CCP Art. 15.27 ("Notification to Schools Required") requires notification of a student's arrest for certain enumerated offenses to be given to whom, and how quickly?
 
-- [x] The school superintendent, orally within 24 hours and in writing within 7 days
+- [x] The school superintendent (or designee) — orally within 24 hours after the arrest or before the next school day, whichever is earlier, and in writing within 7 days after the oral notice
 - [ ] The school principal only, with no specific deadline
 - [ ] The Texas Education Agency, within 30 days
 - [ ] The student's parents only — schools are never notified
 
-**Explanation:** Art. 15.27 imposes a dual-deadline notification requirement (24-hour oral, 7-day written) to the school superintendent for enumerated felony/misdemeanor arrests of students; unauthorized disclosure of this information is itself a Class C misdemeanor.
+**Explanation:** Art. 15.27(a) applies to an arrest of a public school student for any felony or a misdemeanor listed in 15.27(h). Oral notice goes to the superintendent or designee within 24 hours or before the next school day, whichever is earlier; written notice marked "PERSONAL and CONFIDENTIAL" follows within seven days. Electronic notice may substitute for oral notice (15.27(i)). Unauthorized disclosure of the information is a Class C misdemeanor (15.27(f)).
 
 ---
 
@@ -1263,7 +1385,7 @@ An officer responds to an accidental 911 hang-up and finds a 7-year-old home alo
 ### Q90 — Scenario
 **LO:** 10.8 · **Source:** BPOC 10.8, Exigency Scenario #1
 
-A juvenile drinking a beer after curfew flees on foot from an officer and runs into an unlocked apartment, leaving the door open, without being followed inside immediately. What does this scenario ask students to weigh?
+A juvenile drinking a beer after curfew flees on foot from an officer and runs into an unlocked apartment, leaving the door open. What does this scenario ask students to weigh?
 
 - [x] Whether fresh pursuit into a residence is reasonable for a low-level offense (a curfew/beer violation, not a felony), and whether entry through even an open door can still be considered unreasonable
 - [ ] Whether the officer needed a search warrant before initiating the foot pursuit
@@ -1407,7 +1529,7 @@ Which of the following is explicitly listed among the items CCP Art. 18.02(a) au
 
 CCP Art. 18.021 allows a search warrant to be issued for what specific purpose, and what related Family Code section is cross-referenced?
 
-- [x] To search for and photograph a child alleged to be a victim of injury to a child, sexual assault, aggravated sexual assault, or continuous sexual abuse — cross-referenced with Family Code Sec. 58.002 (Photographs and Fingerprints of Children)
+- [x] To search for and photograph a child alleged to be a victim of injury to a child, sexual assault of a child, aggravated sexual assault of a child, or continuous sexual abuse of a young child or disabled individual — cross-referenced with Family Code Sec. 58.002 (Photographs and Fingerprints of Children)
 - [ ] To search a child's school locker — cross-referenced with the Education Code
 - [ ] To photograph a crime scene generally — cross-referenced with the Local Government Code
 - [ ] To search a juvenile detention facility — cross-referenced with the Human Resources Code
@@ -1426,7 +1548,7 @@ CCP Art. 18.0215 governs a peace officer's ability to search which specific item
 - [ ] A person's vehicle glovebox, which requires no warrant under any circumstance
 - [ ] A person's mail, which is governed exclusively by federal law
 
-**Explanation:** Art. 18.0215 specifically requires a warrant to search a cellular telephone or wireless device, reflecting the heightened privacy interest in digital data — with narrow exceptions for consent, a reported-stolen device, or specific life-threatening emergencies.
+**Explanation:** Art. 18.0215 specifically requires a warrant to search a cellular telephone or wireless device, reflecting the heightened privacy interest in digital data — with exceptions under 18.0215(d): the owner or possessor consents, the owner or possessor reported the device stolen, or the officer reasonably believes the device is in the possession of a fugitive wanted on a felony arrest warrant or that an immediate life-threatening situation exists. For the last two, the officer must apply for a warrant as soon as practicable after the search (18.0215(e)).
 
 ---
 
@@ -1584,6 +1706,55 @@ CCP Art. 18.22 ("Testing Certain Defendants or Confined Persons for Communicable
 
 ---
 
+### Q143 — Select All
+**LO:** 10.9 · **Source:** CCP Art. 18.0215(d)
+
+Select all of the situations in which CCP Art. 18.0215(d) allows a peace officer to search a cell phone without a warrant.
+
+- [x] The owner or possessor of the phone consents to the search
+- [x] The owner or possessor reported the phone stolen
+- [x] The officer reasonably believes the phone is in the possession of a fugitive wanted on a felony arrest warrant
+- [x] The officer reasonably believes an immediate life-threatening situation exists
+- [ ] The phone was taken from the person during a lawful custodial arrest
+- [ ] The phone was found in plain view on the seat during a traffic stop
+- [ ] The officer has probable cause that the phone contains evidence of a misdemeanor
+- [ ] The phone was found during an inventory of an impounded vehicle
+
+**Explanation:** Art. 18.0215(a) bars searching a phone pursuant to a lawful arrest without a warrant. The (d) exceptions are consent, a stolen report by the owner or possessor, a fugitive with a felony warrant, or an immediate life-threatening situation (as defined by Art. 18A.201). For the last two, the officer must apply for a warrant as soon as practicable; if the judge finds the situation did not exist, the evidence is not admissible (18.0215(e)).
+
+---
+
+### Q144 — Concept
+**LO:** 10.9 · **Source:** CCP Art. 18.07(c)
+
+Officers obtain a search warrant for data on a suspect's phone and seize the phone on day two of the three-day execution period. The forensic download is not finished until two weeks later. Is the warrant considered timely executed?
+
+- [x] Yes — a warrant for data on an electronic device is considered executed in time if the device was seized before the time ran out, and the data may be recovered and analyzed afterward
+- [ ] No — all data must be extracted within three whole days of issuance
+- [ ] No — the officers needed a 15-day DNA warrant instead
+- [ ] Yes, but only if the magistrate signs a new warrant for each day of analysis
+
+**Explanation:** Art. 18.07(c): if the device was seized before the time allowed under 18.07(a) expired, the warrant is considered executed within the time allowed, and "any data or information contained in or on a device seized may be recovered and analyzed after the expiration of the time allowed."
+
+---
+
+### Q145 — Select All
+**LO:** 10.9 · **Source:** CCP Art. 18.01(c)
+
+An "evidentiary" search warrant under CCP Art. 18.02(a)(10) seeks items that are evidence of an offense. Select all of the facts the sworn affidavit must establish probable cause for under Art. 18.01(c).
+
+- [x] A specific offense has been committed
+- [x] The specifically described items to be seized are evidence of that offense, or evidence that a particular person committed it
+- [x] The items are located at or on the particular person, place, or thing to be searched
+- [ ] The suspect has already been arrested for the offense
+- [ ] The suspect has a prior conviction for a similar offense
+- [ ] The items are contraband subject to forfeiture under Chapter 59
+- [ ] A confidential informant has personally seen the items within the last 24 hours
+
+**Explanation:** Art. 18.01(c) lists those three requirements. It also limits who may issue an (a)(10) warrant — generally a judge who is a licensed attorney (municipal court of record or county court), or a statutory county, district, or appellate judge — with exceptions in (i) and (j), such as any attorney-magistrate issuing a blood-draw warrant after an intoxication-offense arrest and refusal. Contraband subject to forfeiture is a separate ground, 18.02(a)(12), which requires probable cause of a felony under 18.01(g).
+
+---
+
 ## LO 10.10 — No-knock vs. knock-and-announce warrants
 
 ### Q113 — Definition
@@ -1668,7 +1839,7 @@ CCP Art. 15.04 ("Complaint") defines a complaint as:
 - [ ] A verbal accusation made directly to the accused
 - [ ] A document only a victim, never an officer, may file
 
-**Explanation:** "A 'complaint' is a sworn allegation, in writing, made before the magistrate or district or county attorney...charging the commission of an offense." This is the foundational charging document under Art. 15.04/15.05.
+**Explanation:** "The affidavit made before the magistrate or district or county attorney is called a 'complaint' if it charges the commission of an offense." CCP Art. 15.04. Art. 15.05 lists what it must contain.
 
 ---
 
@@ -1677,7 +1848,7 @@ CCP Art. 15.04 ("Complaint") defines a complaint as:
 
 CCP Art. 15.05 ("Requisites of Complaint") requires the complaint to contain how many essential elements?
 
-- [x] Four — the name or description of the accused, that the offense is shown to have been committed, the time and place of the offense, and the affiant's signature
+- [x] Four — the name (or a reasonably definite description) of the accused, a showing that the accused committed an offense (directly, or that the affiant has good reason to believe and does believe it), the time and place of the offense, and the affiant's signature or mark
 - [ ] Two — only the accused's name and the offense
 - [ ] Six, matching the search warrant's contents requirements
 - [ ] One — only the affiant's signature
@@ -1740,7 +1911,7 @@ CCP Art. 17.15 ("Rules for Setting Amount of Bail") lists several factors to be 
 - [ ] Only the arresting officer's personal recommendation
 - [ ] Only whether the defendant has previously posted bail successfully in any case
 
-**Explanation:** Art. 17.15 sets out a multi-factor test balancing reasonable assurance of appearance against the statutory prohibition on using bail as "an instrument of oppression," while also weighing victim/community safety and criminal history.
+**Explanation:** Art. 17.15(a) lists seven rules: (1) bail must give reasonable assurance the defendant will comply; (2) bail is not to be an instrument of oppression; (3) the nature and circumstances of the offense, including whether it involved violence or violence against a peace officer; (4) ability to make bail; (5) future safety of the victim, law enforcement, and the community; (6) criminal history, including family violence, other pending charges, and prior failures to appear; and (7) the defendant's citizenship status.
 
 ---
 
@@ -1881,6 +2052,27 @@ CCP Art. 56A.052 provides additional rights beyond the general baseline, specifi
 - [ ] Only offenses that occurred more than one year before the report was made
 
 **Explanation:** Art. 56A.052 layers additional, offense-specific rights (such as disclosure regarding forensic evidence testing and DNA comparisons) on top of the general rights in Art. 56A.051, targeted at victims of particularly serious offenses like those enumerated under Penal Code Secs. 21.02, 21.11, 22.011, 22.012, and 22.021.
+
+---
+
+### Q146 — Select All
+**LO:** 10.12 · **Source:** CCP Art. 17.15(a)
+
+Select all of the rules CCP Art. 17.15(a) requires to be applied when setting bail and conditions of bail.
+
+- [x] Bail must be sufficient to give reasonable assurance that the defendant will comply with the undertaking
+- [x] The power to require bail is not to be used as an instrument of oppression
+- [x] The nature and circumstances of the offense, including whether it involved violence or violence against a peace officer
+- [x] The defendant's ability to make bail
+- [x] The future safety of the victim, law enforcement, and the community
+- [x] The defendant's criminal history record information, including family violence, other pending charges, and prior failures to appear
+- [x] The defendant's citizenship status
+- [ ] The arresting officer's personal recommendation for the bail amount
+- [ ] Whether the defendant cooperated with officers during the arrest
+- [ ] The bail amount set for any co-defendant
+- [ ] Whether the defendant hired a private attorney
+
+**Explanation:** These are the seven rules of Art. 17.15(a). Bail is set by the court, judge, magistrate, or officer taking bail in accordance with Arts. 17.20, 17.21, and 17.22.
 
 ---
 
