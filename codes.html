@@ -143,7 +143,7 @@
 
 <main id="main"><div class="loading-box">Loading&hellip;</div></main>
 
-<footer>Built for study purposes by and for the FWPD Academy class · Statute text from the Texas Legislature (statutes.capitol.texas.gov), as of the date shown for each code · Not an official publication · Always verify against the current official text</footer>
+<footer>Built for study purposes by and for the FWPD Academy class · Statute text from the Texas Legislature (statutes.capitol.texas.gov) · FWPD General Orders from the department's public web version · As of the date shown for each code · Not an official publication · Always verify against the current official text</footer>
 
 <script>
 /* Data comes from tools/build_code_search.py -> assets/codes/ */
@@ -187,6 +187,13 @@ async function loadShard(code, key){
   return shardCache.get(k);
 }
 function codeName(code){ const c = CODES.find(x => x.code === code); return c ? c.name : code; }
+// Per-code labels. Statutes: "Sec. 51.02." and "Ch. 51". A toc.json can override them; the FWPD General
+// Orders use "GO 306.08" / "GO 306.00", group chapters by series (groupCtx), and have no official-text link.
+function secPre(toc){ return escapeHtml((toc && toc.secLabel) || 'Sec.'); }
+function chPre(toc){ return escapeHtml((toc && toc.chLabel) || 'Ch.'); }
+function secDot(toc){ return toc && toc.secLabel ? '' : '.'; }
+function officialUrl(toc, code, ch){ return toc && 'officialUrl' in toc ? toc.officialUrl : OFFICIAL_URL(code, ch); }
+function tagsHtml(s){ return (s.tg || []).map(x => ` <span class="ver">${escapeHtml(x)}</span>`).join(''); }
 
 /* ---------------- routing ---------------- */
 function getState(){
@@ -254,7 +261,7 @@ async function renderCodeToc(code){
     <div class="actions"><span class="asof">${toc.chapters.length} chapters &middot; ${toc.sections.length.toLocaleString()} sections &middot; text as of ${toc.asOf}</span></div>`;
   let lastTitle = null, lastSub = null, open = false;
   toc.chapters.forEach(ch => {
-    const title = ch.ctx.find(x => x.startsWith('TITLE')) || '';
+    const title = ch.ctx.find(x => x.startsWith('TITLE')) || (toc.groupCtx ? (ch.ctx[0] || '') : '');
     const sub = ch.ctx.find(x => x.startsWith('SUBTITLE')) || '';
     if(title !== lastTitle){
       if(open) html += `</div></div>`;
@@ -267,7 +274,7 @@ async function renderCodeToc(code){
       html += `<div class="toc-list">`;
       lastSub = sub; open = true;
     }
-    html += `<a class="toc-row" data-nav href="${urlFor({code, ch:ch.n})}"><span class="n">Ch. ${ch.n}</span><span>${escapeHtml(ch.t)}</span></a>`;
+    html += `<a class="toc-row" data-nav href="${urlFor({code, ch:ch.n})}"><span class="n">${chPre(toc)} ${ch.n}</span><span>${escapeHtml(ch.t)}</span></a>`;
   });
   if(open) html += `</div></div>`;
   main.innerHTML = html;
@@ -276,7 +283,7 @@ async function renderCodeToc(code){
 
 function secAnchor(n, v){ return 's-' + n + (v && v > 1 ? '-v' + v : ''); }
 
-function renderSection(code, chn, s){
+function renderSection(code, chn, s, toc){
   const lines = s.l.map(([t, lvl, x]) => {
     if(t === 'pre') return `<pre>${escapeHtml(x)}</pre>`;
     if(t === 'n') return `<div class="vnote">${escapeHtml(x)}</div>`;
@@ -288,7 +295,7 @@ function renderSection(code, chn, s){
   const ver = s.v ? `<span class="ver">VERSION ${s.v}</span>` : '';
   const href = urlFor({code, ch:chn, sec:s.n, v: s.v > 1 ? s.v : null});
   return `<section class="sec" id="${secAnchor(s.n, s.v)}">${notes}
-    <div class="sec-head"><a class="secnum" data-nav href="${href}">Sec. ${escapeHtml(s.n)}.</a><span class="title">${escapeHtml(s.t)}</span>${ver}</div>
+    <div class="sec-head"><a class="secnum" data-nav href="${href}">${secPre(toc)} ${escapeHtml(s.n)}${secDot(toc)}</a><span class="title">${escapeHtml(s.t)}${tagsHtml(s)}</span>${ver}</div>
     ${lines}${hist}</section>`;
 }
 
@@ -303,14 +310,14 @@ async function renderChapter(st){
   const prev = toc.chapters[ci - 1], next = toc.chapters[ci + 1];
   const secs = ch.items.filter(i => i.n);
   let body = '';
-  ch.items.forEach(it => { body += it.sub ? `<h3 class="subch">${escapeHtml(it.sub)}</h3>` : renderSection(st.code, ch.n, it); });
+  ch.items.forEach(it => { body += it.sub ? `<h3 class="subch">${escapeHtml(it.sub)}</h3>` : renderSection(st.code, ch.n, it, toc); });
   main.innerHTML = `
-    <div class="page-head"><span class="num">${st.code} CH. ${escapeHtml(ch.n)}</span><h2>${escapeHtml(ch.t)}</h2></div>
+    <div class="page-head"><span class="num">${toc.chLabel ? escapeHtml(toc.chLabel) : st.code + ' CH.'} ${escapeHtml(ch.n)}</span><h2>${escapeHtml(ch.t)}</h2></div>
     <div class="crumbs"><a data-nav href="${urlFor({code:st.code})}">${escapeHtml(toc.name)}</a>${ch.ctx.map(x => ' &rsaquo; ' + escapeHtml(x)).join('')}</div>
     <div class="actions">
-      <a class="btn-link${prev ? '' : ' disabled'}" data-nav href="${prev ? urlFor({code:st.code, ch:prev.n}) : '#'}">&larr; Ch. ${prev ? escapeHtml(prev.n) : ''}</a>
-      <a class="btn-link${next ? '' : ' disabled'}" data-nav href="${next ? urlFor({code:st.code, ch:next.n}) : '#'}">Ch. ${next ? escapeHtml(next.n) : ''} &rarr;</a>
-      <a class="btn-link" href="${OFFICIAL_URL(st.code, ch.n)}" target="_blank" rel="noopener">Official text &#8599;</a>
+      <a class="btn-link${prev ? '' : ' disabled'}" data-nav href="${prev ? urlFor({code:st.code, ch:prev.n}) : '#'}">&larr; ${chPre(toc)} ${prev ? escapeHtml(prev.n) : ''}</a>
+      <a class="btn-link${next ? '' : ' disabled'}" data-nav href="${next ? urlFor({code:st.code, ch:next.n}) : '#'}">${chPre(toc)} ${next ? escapeHtml(next.n) : ''} &rarr;</a>
+      ${officialUrl(toc, st.code, ch.n) ? `<a class="btn-link" href="${officialUrl(toc, st.code, ch.n)}" target="_blank" rel="noopener">Official text &#8599;</a>` : ''}
       <span class="asof">text as of ${toc.asOf}</span>
     </div>
     <details class="sec-toc"><summary>Sections in this chapter (${secs.length})</summary><div class="toc-list">
@@ -352,7 +359,7 @@ async function candidateIds(code, toc, tokens){
 }
 
 function sectionPlainText(s){
-  return [s.t, ...(s.notes || []), ...s.l.map(x => x[2])].join(' • ');
+  return [s.t, ...(s.tg || []), ...(s.notes || []), ...s.l.map(x => x[2])].join(' • ');
 }
 function snippetFor(text, re){
   re.lastIndex = 0;
@@ -397,7 +404,7 @@ async function renderSearch(st){
     ids.forEach(id => { const ci = toc.sections[id][2]; byCh.set(ci, (byCh.get(ci) || 0) + 1); });
     const order = [...byCh.entries()].sort((a, b) => b[1] - a[1]);
     const scan = order.slice(0, MAX_CHAPTERS_TO_SCAN), skip = order.slice(MAX_CHAPTERS_TO_SCAN);
-    skip.forEach(([ci, n]) => out.unscanned.push({code, ch: toc.chapters[ci], n}));
+    skip.forEach(([ci, n]) => out.unscanned.push({code, toc, ch: toc.chapters[ci], n}));
     const chapters = await Promise.all(scan.map(([ci]) => loadChapter(code, toc.chapters[ci].f)));
     chapters.forEach(ch => {
       ch.items.forEach(s => {
@@ -420,21 +427,21 @@ async function renderSearch(st){
     html += direct.map(({code, toc, s}) => {
       const ch = toc.chapters[s[2]];
       return `<a class="search-result" data-nav href="${urlFor({code, ch:ch.n, sec:s[0], v: s[3] > 1 ? s[3] : null})}" style="border-left-color:var(--navy)">
-        <div class="sr-head"><span class="sr-title"><span class="sn">Go to Sec. ${escapeHtml(s[0])}</span> ${escapeHtml(s[1])}${s[3] ? ` <span class="ver">V${s[3]}</span>` : ''}</span></div>
-        <div class="sr-where">${escapeHtml(toc.name)} &middot; Ch. ${escapeHtml(ch.n)} ${escapeHtml(ch.t)}</div></a>`;
+        <div class="sr-head"><span class="sr-title"><span class="sn">Go to ${secPre(toc)} ${escapeHtml(s[0])}</span> ${escapeHtml(s[1])}${s[3] ? ` <span class="ver">V${s[3]}</span>` : ''}</span></div>
+        <div class="sr-where">${escapeHtml(toc.name)} &middot; ${chPre(toc)} ${escapeHtml(ch.n)} ${escapeHtml(ch.t)}</div></a>`;
     }).join('');
   }
   html += `<div class="search-results-head">${results.length ? `${results.length} section${results.length === 1 ? '' : 's'} (${total} match${total === 1 ? '' : 'es'}) for &quot;${escapeHtml(q)}&quot;` : `No matches for &quot;${escapeHtml(q)}&quot;`}${codes.length > 1 ? ' across ' + codes.length + ' codes' : ' in the ' + escapeHtml(codeName(codes[0]))}. Matches start at the beginning of a word.</div>`;
   html += results.slice(0, MAX_RESULTS_SHOWN).map(r => `
     <a class="search-result" data-nav href="${urlFor({code:r.code, ch:r.ch.n, sec:r.s.n, v: r.s.v > 1 ? r.s.v : null, hl:q})}">
-      <div class="sr-head"><span class="sr-title"><span class="sn">Sec. ${escapeHtml(r.s.n)}</span> ${escapeHtml(r.s.t)}${r.s.v ? ` <span class="ver">V${r.s.v}</span>` : ''}</span><span class="sr-count">${r.count}&times;</span></div>
-      <div class="sr-where">${codes.length > 1 ? escapeHtml(r.toc.name) + ' &middot; ' : ''}Ch. ${escapeHtml(r.ch.n)} ${escapeHtml(r.ch.t)}</div>
+      <div class="sr-head"><span class="sr-title"><span class="sn">${secPre(r.toc)} ${escapeHtml(r.s.n)}</span> ${escapeHtml(r.s.t)}${r.s.v ? ` <span class="ver">V${r.s.v}</span>` : ''}</span><span class="sr-count">${r.count}&times;</span></div>
+      <div class="sr-where">${codes.length > 1 ? escapeHtml(r.toc.name) + ' &middot; ' : ''}${chPre(r.toc)} ${escapeHtml(r.ch.n)} ${escapeHtml(r.ch.t)}</div>
       <div class="sr-snippet">${snippetFor(r.text, new RegExp(re.source, 'gi'))}</div>
     </a>`).join('');
   if(results.length > MAX_RESULTS_SHOWN) html += `<div class="note">Showing the top ${MAX_RESULTS_SHOWN} sections. Add another word to narrow the search.</div>`;
   if(unscanned.length){
     html += `<div class="note"><b>This is a common term, so not every chapter was checked.</b> These chapters also contain the word${tokens.length > 1 ? 's' : ''} and may have matches &mdash; open one, or narrow the search:<div class="more-list">${
-      unscanned.map(u => `<a data-nav href="${urlFor({code:u.code, ch:u.ch.n})}">${codes.length > 1 ? u.code + ' ' : ''}Ch. ${escapeHtml(u.ch.n)}</a> <span class="asof">(${u.n} section${u.n === 1 ? '' : 's'})</span>`).join(' &middot; ')}</div></div>`;
+      unscanned.map(u => `<a data-nav href="${urlFor({code:u.code, ch:u.ch.n})}">${codes.length > 1 && !u.toc.chLabel ? u.code + ' ' : ''}${chPre(u.toc)} ${escapeHtml(u.ch.n)}</a> <span class="asof">(${u.n} section${u.n === 1 ? '' : 's'})</span>`).join(' &middot; ')}</div></div>`;
   }
   main.innerHTML = html;
 }
@@ -488,8 +495,8 @@ async function renderTocSearch(st){
     const num = st.m === 'num' ? markAll(s[0], re) : escapeHtml(s[0]);
     const title = st.m === 'title' ? markAll(s[1], re) : escapeHtml(s[1]);
     return `<a class="search-result" data-nav href="${urlFor({code, ch: ch.n, sec: s[0], v: s[3] > 1 ? s[3] : null, hl: st.m === 'title' ? q : null})}">
-      <div class="sr-head"><span class="sr-title"><span class="sn">Sec. ${num}</span> ${title}${s[3] ? ` <span class="ver">V${s[3]}</span>` : ''}</span></div>
-      <div class="sr-where">${codes.length > 1 ? escapeHtml(toc.name) + ' &middot; ' : ''}Ch. ${escapeHtml(ch.n)} ${escapeHtml(ch.t)}</div>
+      <div class="sr-head"><span class="sr-title"><span class="sn">${secPre(toc)} ${num}</span> ${title}${s[3] ? ` <span class="ver">V${s[3]}</span>` : ''}</span></div>
+      <div class="sr-where">${codes.length > 1 ? escapeHtml(toc.name) + ' &middot; ' : ''}${chPre(toc)} ${escapeHtml(ch.n)} ${escapeHtml(ch.t)}</div>
     </a>`;
   }).join('');
   if(results.length > MAX_RESULTS_SHOWN) html += `<div class="note">Showing the first ${MAX_RESULTS_SHOWN} sections. Type more of the ${st.m === 'num' ? 'number' : 'title'}, or pick one code, to narrow the search.</div>`;

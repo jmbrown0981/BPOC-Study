@@ -35,6 +35,13 @@
   "sections": 2255
  },
  {
+  "code": "GO",
+  "name": "FWPD General Orders",
+  "asOf": "2026-11-11",
+  "chapters": 149,
+  "sections": 515
+ },
+ {
   "code": "FA",
   "name": "Family Code",
   "asOf": "2026-09-09",

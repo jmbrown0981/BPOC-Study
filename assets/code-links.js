@@ -38,7 +38,9 @@
     ['Parks and Wildlife Code', 'PW'], ['Election Code', 'EL'], ['Water Code', 'WA'], ['Utilities Code', 'UT'],
     // Texas Administrative Code: only Title 37 (TCOLE, Part 7) is built, so only Title-37 / TCOLE wording maps to it;
     // a bare "TAC" (e.g. "43 TAC 217.27", a TxDOT rule) stays unlinked.
-    ['37 TAC', 'TAC'], ['37 Tex. Admin. Code', 'TAC'], ['TCOLE Rules', 'TAC'], ['TCOLE Rule', 'TAC']
+    ['37 TAC', 'TAC'], ['37 Tex. Admin. Code', 'TAC'], ['TCOLE Rules', 'TAC'], ['TCOLE Rule', 'TAC'],
+    // Fort Worth PD General Orders (built by tools/build_general_orders.py): "General Order 306.08"
+    ['General Orders', 'GO'], ['General Order', 'GO']
   ];
   var SHORT = [
     ['CCP', 'CR'], ['HSC', 'HS'], ['HS', 'HS'], ['FC', 'FA'], ['PC', 'PE'], ['GV', 'GV'], ['GC', 'GV'],
