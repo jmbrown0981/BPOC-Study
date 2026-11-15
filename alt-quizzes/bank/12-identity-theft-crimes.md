@@ -4346,3 +4346,1060 @@ Per BPOC 12.16, the Social Security Administration can help a victim with which 
 - [ ] Placing a security freeze
 
 **Explanation:** BPOC 12.16.
+
+---
+
+### Q305 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(2)
+
+**Answer:** Consumer
+
+Under Business and Commerce Code Chapter 20, a "__________" means an individual who resides in this state.
+
+**Explanation:** Business and Commerce Code §20.01(2).
+
+---
+
+### Q306 — Definition
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(2)
+
+Under Business and Commerce Code Chapter 20, who is a "consumer"?
+
+- [x] An individual who resides in this state
+- [ ] Any person who has ever obtained credit in the United States
+- [ ] A business that purchases consumer reports
+- [ ] Any individual with a Social Security number
+
+**Explanation:** Business and Commerce Code §20.01(2).
+
+---
+
+### Q307 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(3)
+
+**Answer:** Consumer file
+
+Under Business and Commerce Code Chapter 20, a "__________" means all of the information about a consumer that is recorded and retained by a consumer reporting agency regardless of how the information is stored.
+
+**Explanation:** Business and Commerce Code §20.01(3). Security alerts and security freezes are notices placed on the consumer file.
+
+---
+
+### Q308 — Definition
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(3)
+
+Under Business and Commerce Code §20.01, which term means all of the information about a consumer that is recorded and retained by a consumer reporting agency, regardless of how it is stored?
+
+- [x] Consumer file
+- [ ] Consumer report
+- [ ] Investigative consumer report
+- [ ] Security alert
+
+**Explanation:** Business and Commerce Code §20.01(3). A consumer REPORT is a communication of that information to someone else.
+
+---
+
+### Q309 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(5)
+
+**Answer:** Consumer reporting agency | Consumer reporting agencies | Credit reporting agency
+
+Under Business and Commerce Code Chapter 20, a "__________" means a person that regularly engages wholly or partly in the practice of assembling or evaluating consumer credit information or other information on consumers to furnish consumer reports to third parties for monetary fees, for dues, or on a cooperative nonprofit basis.
+
+**Explanation:** Business and Commerce Code §20.01(5). Equifax, Experian, and TransUnion are the three major ones (BPOC 12.13).
+
+---
+
+### Q310 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(5)
+
+True or False: A business that provides ONLY check verification or check guarantee services is a "consumer reporting agency" under Business and Commerce Code Chapter 20.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §20.01(5) expressly excludes a business entity that provides only check verification or check guarantee services (those are "check verifiers" under Business and Commerce Code §20.021).
+
+---
+
+### Q311 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(6)
+
+**Answer:** Investigative consumer report
+
+Under Business and Commerce Code §20.01, an "__________" is all or part of a consumer report in which information on the consumer's character, general reputation, personal characteristics, or mode of living is obtained through a personal interview with a neighbor, friend, or associate of the consumer.
+
+**Explanation:** Business and Commerce Code §20.01(6).
+
+---
+
+### Q312 — Definition
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(6)
+
+What distinguishes an "investigative consumer report" from an ordinary consumer report?
+
+- [x] Information on the consumer's character, reputation, or mode of living is obtained through personal interviews with neighbors, friends, or associates
+- [ ] It is prepared only for law enforcement
+- [ ] It contains only criminal history information
+- [ ] It is ordered by a court
+
+**Explanation:** Business and Commerce Code §20.01(6).
+
+---
+
+### Q313 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.01(1)
+
+Under Business and Commerce Code §20.01, "adverse action" includes which of the following? Select all that apply.
+
+- [x] Denial of, increase in a charge for, or reduction in the amount of insurance for personal, family, or household purposes
+- [x] Denial of employment or another employment decision that adversely affects a current or prospective employee
+- [x] An action on a consumer's application for credit that is adverse to the consumer's interests
+- [ ] Approval of a credit limit increase
+- [ ] Placement of a security alert at the consumer's request
+- [ ] Mailing a pre-approved credit offer
+
+**Explanation:** Business and Commerce Code §20.01(1).
+
+---
+
+### Q314 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.02(a)
+
+Under Business and Commerce Code §20.02, a consumer reporting agency may furnish a consumer report only for which of the following? Select all that apply.
+
+- [x] In response to a court order issued by a court with proper jurisdiction
+- [x] In accordance with the written instructions of the consumer
+- [x] To a person intending to use it in connection with extending credit to, or reviewing or collecting an account of, the consumer
+- [x] To a person intending to use it for employment purposes as authorized by the Fair Credit Reporting Act
+- [x] To a person intending to use it to underwrite insurance involving the consumer
+- [x] To a person with a legitimate business need in connection with a business transaction involving the consumer
+- [ ] To a police officer who asks for it by phone without a court order or subpoena
+- [ ] To a neighbor who is curious about the consumer's debts
+- [ ] To a news reporter writing a story about the consumer
+- [ ] To anyone who pays the agency's fee
+
+**Explanation:** Business and Commerce Code §20.02(a). This is why an officer needs the victim's voluntary cooperation or legal process (subpoena/court order) to get a victim's credit history (BPOC 12.12).
+
+---
+
+### Q315 — Scenario
+**LO:** 12.12 · **Source:** BPOC 12.12; Business and Commerce Code §20.02(a)(1)
+
+An investigator wants the credit report of an identity theft victim who will not provide it voluntarily. Under BPOC 12.12 and Business and Commerce Code §20.02, what does the investigator need?
+
+- [x] Legal process, such as a court order or subpoena
+- [ ] Nothing — consumer reporting agencies must give reports to any peace officer
+- [ ] Only the victim's verbal permission over the phone to the agency
+- [ ] A letter from the police chief
+
+**Explanation:** BPOC 12.12: if not given voluntarily, a subpoena is needed. Business and Commerce Code §20.02(a)(1) allows release in response to a court order; Business and Commerce Code §20.038(1) lets law enforcement acting under a court order, warrant, subpoena, or administrative subpoena get past a security freeze.
+
+---
+
+### Q316 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.021
+
+Under Business and Commerce Code §20.021, a check verifier may not charge a consumer for disclosing the consumer's file if the check verifier rejected a check from the consumer within how many days before the request?
+
+- [x] 30 days
+- [ ] 10 days
+- [ ] 60 days
+- [ ] 90 days
+
+**Explanation:** Business and Commerce Code §20.021(c). Otherwise the charge may not exceed $8.
+
+---
+
+### Q317 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.021(b)
+
+On request and proper identification, a check verifier must disclose in writing all information in its files about the consumer, including which of the following? Select all that apply.
+
+- [x] The criteria used to reject a check from the consumer
+- [x] Instructions describing how information is presented on the disclosure
+- [x] A toll-free number for resolving a written dispute during normal business hours
+- [ ] The names of all merchants who accepted the consumer's checks
+- [ ] The consumer's credit score from each major bureau
+- [ ] The consumer's bank account balance
+
+**Explanation:** Business and Commerce Code §20.021(b).
+
+---
+
+### Q318 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.03(a)(1)
+
+When a consumer requests their file, a consumer reporting agency must disclose the name of each person who requested credit information about the consumer during what period?
+
+- [x] The preceding six months
+- [ ] The preceding 30 days
+- [ ] The preceding year
+- [ ] The preceding seven years
+
+**Explanation:** Business and Commerce Code §20.03(a)(1) — along with the date of each request. Useful for spotting inquiries the victim didn't authorize.
+
+---
+
+### Q319 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.03(d)
+
+Any written disclosure from a consumer reporting agency to a consumer under Chapter 20 must include a statement of the consumer's rights covering which of the following? Select all that apply.
+
+- [x] The process for receiving a consumer report or consumer file
+- [x] The process for requesting or removing a security alert or freeze
+- [x] The toll-free number for requesting a security alert
+- [x] Applicable fees
+- [x] Dispute procedures
+- [x] The process for correcting a consumer file or report
+- [x] The consumer's right to bring an action in court or arbitrate a dispute
+- [ ] The names of the consumer's creditors' attorneys
+- [ ] The consumer's credit score history for 10 years
+- [ ] Instructions for filing a police report
+
+**Explanation:** Business and Commerce Code §20.03(d).
+
+---
+
+### Q320 — Select All
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.038
+
+Under Business and Commerce Code §20.038, a security freeze does NOT block a consumer report provided to which of the following? Select all that apply.
+
+- [x] A law enforcement agency or court acting under a court order, warrant, subpoena, or administrative subpoena
+- [x] A child support agency investigating or collecting child support
+- [x] The comptroller investigating or collecting delinquent sales or franchise taxes
+- [x] A tax assessor-collector collecting delinquent ad valorem taxes
+- [x] A person with whom the consumer already has an account, for purposes related to that account
+- [x] A credit file monitoring service the consumer subscribed to
+- [x] A person providing the consumer a copy of the consumer's own report on request
+- [ ] A police officer making an informal request without legal process
+- [ ] A new lender the consumer has never done business with, without the consumer's authorization
+- [ ] A private investigator hired by the consumer's ex-spouse
+
+**Explanation:** Business and Commerce Code §20.038. A new creditor without the consumer's express authorization is exactly who a freeze is designed to block.
+
+---
+
+### Q321 — True/False
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.038(1)
+
+True or False: A security freeze prevents a law enforcement agency from obtaining a consumer report even when it is acting under a search warrant.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §20.038(1): a freeze does not apply to a state or local governmental entity, including a law enforcement agency or court, acting under a court order, warrant, subpoena, or administrative subpoena.
+
+---
+
+### Q322 — True/False
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.039
+
+True or False: A consumer reporting agency must honor a security freeze placed on a consumer file by another consumer reporting agency.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.039.
+
+---
+
+### Q323 — True/False
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.0385(c)
+
+True or False: A consumer reporting agency's failure to place, temporarily lift, or remove a security freeze is a deceptive trade practice under Chapter 17 of the Business and Commerce Code.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §20.0385(c) carves freeze violations out of Business and Commerce Code §20.12; other Chapter 20 violations ARE deceptive trade practices under Business and Commerce Code §20.12.
+
+---
+
+### Q324 — Select All
+**LO:** 12.11 · **Source:** BPOC 12.10, 12.11; Business and Commerce Code §20.04(b)
+
+Under Business and Commerce Code §20.04(b), a consumer reporting agency may NOT charge a fee for which of the following? Select all that apply.
+
+- [x] A copy of the consumer's file requested within 60 days after adverse action is taken
+- [x] A copy of the consumer's file requested when a 45-day security alert expires
+- [x] A request for a security alert
+- [x] Instructions for understanding the information on the consumer report
+- [x] Placing, lifting, or removing a security freeze for a consumer who submits a valid police report involving an offense under Penal Code §32.51
+- [ ] Placing a security freeze for any consumer without a police report
+- [ ] Temporarily lifting a freeze for an identified requester (no police report)
+- [ ] Disclosure of the file at any time for any reason
+
+**Explanation:** Business and Commerce Code §20.04(b). Absent an exemption, the agency may charge reasonable capped fees for disclosures and freeze actions (Business and Commerce Code §20.04(a)).
+
+---
+
+### Q325 — Recall
+**LO:** 12.10 · **Source:** BPOC 12.10; Business and Commerce Code §20.04(b)(1)
+
+A consumer may get a free copy of their file if they request it within how many days after adverse action is taken against them?
+
+- [x] 60 days
+- [ ] 30 days
+- [ ] 45 days
+- [ ] 90 days
+
+**Explanation:** Business and Commerce Code §20.04(b)(1)(A). A free copy is also available on expiration of a 45-day security alert (Business and Commerce Code §20.04(b)(1)(B)).
+
+---
+
+### Q326 — Recall
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.04(a)
+
+Under Business and Commerce Code §20.04(a), how may a consumer reporting agency adjust its capped fees for disclosures and security freezes?
+
+- [x] On January 1 of each year, in proportion to changes in the Consumer Price Index
+- [ ] Whenever the agency chooses, without limit
+- [ ] Only with approval of the Texas Legislature
+- [ ] Fees can never change
+
+**Explanation:** Business and Commerce Code §20.04(a). The statute's base caps are $8 for disclosure, $10 to place, lift for a period, or remove a freeze, and $12 to lift for an identified requester — adjusted annually by CPI.
+
+---
+
+### Q327 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.05(a)
+
+Under Business and Commerce Code §20.05, a consumer report generally may not include a record of arrest, indictment, or conviction when the date of disposition, release, or parole is more than how many years before the report?
+
+- [x] Seven
+- [ ] Five
+- [ ] Ten
+- [ ] Fifteen
+
+**Explanation:** Business and Commerce Code §20.05(a)(4).
+
+---
+
+### Q328 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.05(a)(1)
+
+Under Business and Commerce Code §20.05, a bankruptcy case may generally be reported for how many years after the order for relief or adjudication?
+
+- [x] 10 years
+- [ ] 7 years
+- [ ] 5 years
+- [ ] 15 years
+
+**Explanation:** Business and Commerce Code §20.05(a)(1). Most other adverse items — judgments, paid tax liens, arrests/convictions, and other items — are limited to seven years.
+
+---
+
+### Q329 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.05(b)
+
+The Business and Commerce Code §20.05 time limits on reporting old information do NOT apply when the report is used in connection with which of the following? Select all that apply.
+
+- [x] A credit transaction of $150,000 or more
+- [x] Underwriting life insurance with a face amount of $150,000 or more
+- [x] Employment at an annual salary of $75,000 or more
+- [ ] Any apartment rental application
+- [ ] A credit transaction of $15,000 or more
+- [ ] Employment at any salary
+
+**Explanation:** Business and Commerce Code §20.05(b).
+
+---
+
+### Q330 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.05(c)
+
+True or False: A consumer reporting agency may include a consumer's medical information in a report obtained for employment purposes without the consumer's consent.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §20.05(c): medical information may not be furnished for employment, credit, insurance, or direct marketing purposes unless the consumer consents.
+
+---
+
+### Q331 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(a)
+
+When a consumer disputes the accuracy of information in their file, the consumer reporting agency must reinvestigate free of charge and record the status of the disputed information not later than:
+
+- [x] The 30th business day after receiving notice of the dispute
+- [ ] The 5th business day
+- [ ] The 10th business day
+- [ ] 45 calendar days
+
+**Explanation:** Business and Commerce Code §20.06(a).
+
+---
+
+### Q332 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(b)
+
+After receiving a consumer's dispute, the consumer reporting agency must notify each person who provided information related to the dispute not later than:
+
+- [x] The 5th business day
+- [ ] 24 hours
+- [ ] The 30th business day
+- [ ] 60 days
+
+**Explanation:** Business and Commerce Code §20.06(b).
+
+---
+
+### Q333 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(d)
+
+If disputed information is found to be inaccurate or cannot be verified after reinvestigation, what must the consumer reporting agency do (unless the consumer directs otherwise)? Select all that apply.
+
+- [x] Promptly delete the information from the consumer's file
+- [x] Revise the consumer file
+- [x] Provide the revised report to the consumer
+- [x] Provide the revised report to each person who requested the consumer's report within the preceding six months
+- [ ] Mark the information "disputed" but keep reporting it
+- [ ] Charge the consumer a reinvestigation fee
+- [ ] Wait seven years before removing it
+
+**Explanation:** Business and Commerce Code §20.06(d).
+
+---
+
+### Q334 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(e)
+
+True or False: Once deleted as inaccurate or unverifiable, information may be reinserted only if the person who furnished it reinvestigates and states in writing or by electronic record that it is complete and accurate.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.06(e).
+
+---
+
+### Q335 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(c)
+
+True or False: A consumer reporting agency may terminate a reinvestigation it reasonably determines is frivolous or irrelevant, but must promptly notify the consumer and give the reasons.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.06(c).
+
+---
+
+### Q336 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.06(f)
+
+A consumer reporting agency must send written notice of the results of a reinvestigation not later than:
+
+- [x] The 5th business day after the reinvestigation is completed
+- [ ] 24 hours after completion
+- [ ] The 30th business day after completion
+- [ ] Six months after completion
+
+**Explanation:** Business and Commerce Code §20.06(f).
+
+---
+
+### Q337 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.08(d)
+
+How often may a consumer submit an arbitration action against the same consumer reporting agency under Chapter 20?
+
+- [x] No more than once in any 120-day period
+- [ ] Once per year
+- [ ] Once in a lifetime
+- [ ] There is no limit
+
+**Explanation:** Business and Commerce Code §20.08(d).
+
+---
+
+### Q338 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.09(a)
+
+Under Business and Commerce Code §20.09, a consumer reporting agency that WILFULLY violates Chapter 20 is liable to the consumer for:
+
+- [x] The greater of three times actual damages or $1,000, plus reasonable attorney fees and costs
+- [ ] The greater of actual damages or $500, plus reasonable attorney fees and costs
+- [ ] Actual damages only
+- [ ] A flat $100 per violation
+
+**Explanation:** Business and Commerce Code §20.09(a). A NEGLIGENT violation is the greater of actual damages or $500 (Business and Commerce Code §20.09(b)).
+
+---
+
+### Q339 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.09(b)
+
+Under Business and Commerce Code §20.09, a consumer reporting agency that NEGLIGENTLY violates Chapter 20 is liable for:
+
+- [x] The greater of actual damages or $500, plus reasonable attorney fees and costs
+- [ ] The greater of three times actual damages or $1,000
+- [ ] $2,000 per violation payable to the state
+- [ ] Nothing, unless the violation was wilful
+
+**Explanation:** Business and Commerce Code §20.09(b).
+
+---
+
+### Q340 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.09(c)
+
+If a consumer reporting agency does not correct a consumer's file before the 10th day after a judgment is entered against it for inaccurate information, it is also liable for:
+
+- [x] $1,000 a day until the inaccuracy is corrected
+- [ ] $100 a day
+- [ ] $10,000 one time
+- [ ] Double the original judgment
+
+**Explanation:** Business and Commerce Code §20.09(c).
+
+---
+
+### Q341 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.11
+
+Under Business and Commerce Code §20.11, the attorney general may seek a civil penalty of up to how much for each violation of Chapter 20?
+
+- [x] $2,000
+- [ ] $500
+- [ ] $1,000
+- [ ] $10,000
+
+**Explanation:** Business and Commerce Code §20.11(a)(2). Each day a violation continues or occurs is a separate violation (Business and Commerce Code §20.11(c)).
+
+---
+
+### Q342 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.12
+
+True or False: A violation of Business and Commerce Code Chapter 20 is generally a false, misleading, or deceptive act or practice under Chapter 17 (Deceptive Trade Practices).
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.12 (security freeze placement/lifting/removal violations are carved out by Business and Commerce Code §20.0385(c)).
+
+---
+
+### Q343 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §20.13
+
+Under Business and Commerce Code §20.13, an action brought under Chapter 20 must be filed in a district court in which of these locations? Select all that apply.
+
+- [x] Travis County
+- [x] Any county in which the violation occurred
+- [x] The county in which the victim resides
+- [ ] The county where the consumer reporting agency is headquartered, only
+- [ ] Any federal district court
+- [ ] A justice of the peace court
+
+**Explanation:** Business and Commerce Code §20.13.
+
+---
+
+### Q344 — Term ID
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.21(1)
+
+**Answer:** Protected consumer
+
+Under Business and Commerce Code Chapter 20, Subchapter E, a "__________" is an individual who resides in Texas and is younger than 16 years of age at the time a request for placement of a security freeze is made.
+
+**Explanation:** Business and Commerce Code §20.21(1). Ties to BPOC 12.3's "child identity theft" (an FTC special form of identity theft).
+
+---
+
+### Q345 — Recall
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.21(1)
+
+For the child security freeze provisions (Subchapter E), a "protected consumer" must be younger than what age when the freeze is requested?
+
+- [x] 16
+- [ ] 18
+- [ ] 14
+- [ ] 21
+
+**Explanation:** Business and Commerce Code §20.21(1).
+
+---
+
+### Q346 — Term ID
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.21(3)
+
+**Answer:** Representative
+
+In the child security freeze provisions, a "__________" is a person who provides a consumer reporting agency sufficient proof of authority to act on behalf of a protected consumer.
+
+**Explanation:** Business and Commerce Code §20.21(3).
+
+---
+
+### Q347 — Select All
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.23(a)
+
+Which documents are considered sufficient proof of authority to act on behalf of a protected consumer (a child)? Select all that apply.
+
+- [x] An order issued by a court
+- [x] A written, notarized statement signed by the representative that expressly describes their authority
+- [ ] A verbal statement over the phone
+- [ ] A school enrollment form
+- [ ] An unsigned email
+
+**Explanation:** Business and Commerce Code §20.23(a).
+
+---
+
+### Q348 — Select All
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.23(b)
+
+Which documents are considered sufficient proof of identity of a protected consumer or representative? Select all that apply.
+
+- [x] A Social Security number or a copy of the Social Security card
+- [x] A certified or official copy of a birth certificate
+- [x] A copy of a Texas driver's license or ID card issued by DPS
+- [x] Any other government-issued identification
+- [ ] A library card
+- [ ] A school yearbook photo
+- [ ] A utility bill with no photo
+
+**Explanation:** Business and Commerce Code §20.23(b).
+
+---
+
+### Q349 — True/False
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.25(b)
+
+True or False: If a consumer reporting agency has no file on a child when a valid freeze request is received, it must create a record for the child and place the freeze on that record.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.25(b). That record may not be used to evaluate the child's creditworthiness (Business and Commerce Code §20.24).
+
+---
+
+### Q350 — Recall
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.25(c)
+
+A consumer reporting agency must place a security freeze on a protected consumer's (child's) file or record not later than:
+
+- [x] The 30th day after receiving a proper request
+- [ ] The 5th business day
+- [ ] 24 hours
+- [ ] The 10th business day
+
+**Explanation:** Business and Commerce Code §20.25(c). Compare an adult's freeze: placed by the 5th business day (Business and Commerce Code §20.034). Removal of a child's freeze also has a 30-day deadline (Business and Commerce Code §20.28(b)).
+
+---
+
+### Q351 — Recall
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.27
+
+How long does a security freeze on a protected consumer's (child's) file or record remain in effect?
+
+- [x] Until the protected consumer or representative requests removal, or the agency removes it for material misrepresentation
+- [ ] 45 days
+- [ ] Until the child turns 16
+- [ ] One year
+
+**Explanation:** Business and Commerce Code §20.27; Business and Commerce Code §20.30.
+
+---
+
+### Q352 — Select All
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.29
+
+A consumer reporting agency may NOT charge a fee to place a security freeze for a protected consumer (child) when which of the following is true? Select all that apply.
+
+- [x] The representative submits a valid police report, investigative report, or complaint involving an offense under Penal Code §32.51
+- [x] The child is under 16 and the agency has already created a consumer report pertaining to the child
+- [ ] The representative pays in cash
+- [ ] The child has never had a bank account
+- [ ] The request is made by email
+
+**Explanation:** Business and Commerce Code §20.29(c). Otherwise the fee may not exceed $10 per placement or removal (Business and Commerce Code §20.29(b)).
+
+---
+
+### Q353 — True/False
+**LO:** 12.11 · **Source:** BPOC 12.11; Business and Commerce Code §20.31
+
+True or False: The exclusive remedy for a violation of the child security freeze provisions (Subchapter E) is a suit filed by the attorney general under Business and Commerce Code §20.11.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §20.31.
+
+---
+
+### Q354 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(c)
+
+True or False: A business may deny service to an individual who makes a written request that the business stop using their Social Security number in a manner prohibited by Business and Commerce Code §501.001(a).
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §501.001(c): a person other than a government may not deny a service to an individual because the individual makes that written request.
+
+---
+
+### Q355 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(d)
+
+True or False: A business may charge a fee for complying with an individual's written request to stop using their Social Security number in a prohibited manner.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §501.001(d): it must comply within 30 days and may not impose a fee.
+
+---
+
+### Q356 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(e)
+
+The Business and Commerce Code §501.001 restrictions on using Social Security numbers do NOT apply to which of the following? Select all that apply.
+
+- [x] Collection, use, or release of an SSN required by state or federal law
+- [x] Use of an SSN for internal verification or administrative purposes
+- [x] A document recorded or required to be open to the public under the Public Information Act
+- [x] A court record
+- [x] A higher-education institution whose SSN use is regulated by the Education Code
+- [ ] Posting customers' SSNs on a public website
+- [ ] Printing an SSN on a store loyalty card
+- [ ] Requiring an SSN over an unencrypted internet connection
+
+**Explanation:** Business and Commerce Code §501.001(e).
+
+---
+
+### Q357 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(a)(3)
+
+Under Business and Commerce Code §501.001, a business may require an individual to transmit their Social Security number over the internet only if:
+
+- [x] The internet connection is secure or the Social Security number is encrypted
+- [ ] The individual is over 18
+- [ ] The business is located in Texas
+- [ ] The individual signs a waiver
+
+**Explanation:** Business and Commerce Code §501.001(a)(3).
+
+---
+
+### Q358 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(a)(4)
+
+Under Business and Commerce Code §501.001, a business may require an individual's Social Security number for access to a website only if:
+
+- [x] A password, unique PIN, or other authentication device is also required
+- [ ] The website is hosted in Texas
+- [ ] The SSN is displayed on screen
+- [ ] The individual is an employee
+
+**Explanation:** Business and Commerce Code §501.001(a)(4).
+
+---
+
+### Q359 — Concept
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.001(f)
+
+Section 501.001 generally prohibits printing a Social Security number on material sent by mail. Which of these mailed documents is EXCEPTED from that rule?
+
+- [x] An application or form sent as part of an application or enrollment process
+- [ ] A monthly marketing flyer
+- [ ] A holiday greeting card
+- [ ] A store coupon book
+
+**Explanation:** Business and Commerce Code §501.001(f): applications and forms sent to apply or enroll, to establish/amend/terminate an account, contract, or policy, or to confirm the accuracy of an SSN.
+
+---
+
+### Q360 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.002(a)
+
+True or False: A business may print an individual's Social Security number on a card required to access its product or service if the individual has requested that printing in writing.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §501.002(a). The business may not make that written request a condition of receiving the product or service.
+
+---
+
+### Q361 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.002(b)
+
+A person who violates Business and Commerce Code §501.002 (printing an SSN on an access card) is liable to the state for a civil penalty of up to:
+
+- [x] $500 for each violation
+- [ ] $500 for each calendar month
+- [ ] $2,000 for each violation
+- [ ] $10,000 total
+
+**Explanation:** Business and Commerce Code §501.002(b). The attorney general or the prosecuting attorney in the county where the violation occurs may bring the action.
+
+---
+
+### Q362 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.052(a)
+
+Under Business and Commerce Code §501.052, before a business may REQUIRE an individual to disclose their Social Security number to obtain goods or services, it must:
+
+- [x] Adopt a privacy policy, make it available to the individual, and maintain the SSN's confidentiality and security under that policy
+- [ ] Obtain a court order
+- [ ] Register with the Texas Attorney General
+- [ ] Pay a fee to the state
+
+**Explanation:** Business and Commerce Code §501.052(a).
+
+---
+
+### Q363 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.052(b)
+
+A privacy policy adopted under Business and Commerce Code §501.052 must include which of the following? Select all that apply.
+
+- [x] How personal information is collected
+- [x] How and when the personal information is used
+- [x] How the personal information is protected
+- [x] Who has access to the personal information
+- [x] The method of disposal of the personal information
+- [ ] The price of the goods or services
+- [ ] The names of the business's owners
+- [ ] The business's annual revenue
+
+**Explanation:** Business and Commerce Code §501.052(b).
+
+---
+
+### Q364 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.051
+
+Subchapter B of Business and Commerce Code Chapter 501 (privacy policies for SSNs) does not apply to a person already required to maintain a privacy policy under which federal laws? Select all that apply.
+
+- [x] The Gramm-Leach-Bliley Act
+- [x] The Family Educational Rights and Privacy Act (FERPA)
+- [x] The Health Insurance Portability and Accountability Act (HIPAA)
+- [ ] The Identity Theft Penalty Enhancement Act
+- [ ] The Fair Labor Standards Act
+- [ ] The Americans with Disabilities Act
+
+**Explanation:** Business and Commerce Code §501.051(1).
+
+---
+
+### Q365 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.053
+
+A person who violates the Business and Commerce Code §501.052 privacy-policy requirement is liable for a civil penalty of up to:
+
+- [x] $500 for each calendar month during which a violation occurs
+- [ ] $500 for each violation
+- [ ] $2,000 for each violation
+- [ ] $1,000 a day
+
+**Explanation:** Business and Commerce Code §501.053(a). Only one violation may be penalized per month.
+
+---
+
+### Q366 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.101
+
+Under Business and Commerce Code §501.101, when may a merchant require a returning customer's driver's license or Social Security number?
+
+- [x] When the customer has no valid receipt and is seeking a cash, credit, or store credit refund — and only for identification purposes
+- [ ] For every return, with or without a receipt
+- [ ] For every purchase over $100
+- [ ] Only for online purchases
+
+**Explanation:** Business and Commerce Code §501.101(a).
+
+---
+
+### Q367 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.101
+
+Under Business and Commerce Code §501.101, a merchant that collects a customer's driver's license or SSN for a no-receipt return: (select all that apply)
+
+- [x] May use the number solely for identification purposes
+- [x] May use it only to monitor, investigate, or prosecute fraudulent return of merchandise
+- [x] May not disclose it to any third party (including another merchant) not involved in the initial transaction
+- [x] Must destroy the records six months after the last transaction
+- [ ] May sell the number to marketing partners
+- [ ] Must keep the records for seven years
+- [ ] May share it with any other merchant to prevent fraud
+
+**Explanation:** Business and Commerce Code §501.101(a)–(d).
+
+---
+
+### Q368 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §501.102
+
+A merchant that prints customers' driver's license numbers on sales receipts (Business and Commerce Code §501.1011) is liable for a civil penalty of up to:
+
+- [x] $500 for each calendar month in which a violation occurs
+- [ ] $500 for each receipt printed
+- [ ] $100 per customer
+- [ ] $2,000 per violation
+
+**Explanation:** Business and Commerce Code §501.102(a-1).
+
+---
+
+### Q369 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.001(4)
+
+**Answer:** Merchant
+
+Under Business and Commerce Code Chapter 607, a "__________" means a person whose business includes the sale of motor fuel through motor fuel metering devices to retail customers.
+
+**Explanation:** Business and Commerce Code §607.001(4).
+
+---
+
+### Q370 — Term ID
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.001(5-a)
+
+**Answer:** Motor fuel unattended payment terminal | Unattended payment terminal
+
+Under Business and Commerce Code Chapter 607, a "__________" means a point-of-sale terminal or kiosk operated by a customer to activate or complete a transaction at a motor fuel metering device through the use of a payment card or other electronic payment.
+
+**Explanation:** Business and Commerce Code §607.001(5-a). This is the card reader at the pump where skimmers are typically installed.
+
+---
+
+### Q371 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.001(1)
+
+Under Business and Commerce Code Chapter 607, the "center" that may receive confidential skimmer information is:
+
+- [x] The financial crimes intelligence center established under Occupations Code Chapter 2312
+- [ ] The DPS State Operations Center
+- [ ] The FBI's Internet Crime Complaint Center
+- [ ] The Texas Division of Emergency Management
+
+**Explanation:** Business and Commerce Code §607.001(1).
+
+---
+
+### Q372 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.053(a)
+
+If a SERVICE TECHNICIAN discovers a skimmer in or on a gas pump, who must be notified?
+
+- [x] The Texas Department of Licensing and Regulation and the merchant
+- [ ] Only the merchant
+- [ ] Only the payment card network
+- [ ] No one; the technician should remove and discard it
+
+**Explanation:** Business and Commerce Code §607.053(a). The merchant then has its own duties under Business and Commerce Code §607.053(b): disable the pump, notify law enforcement and the department, and protect the pump from tampering.
+
+---
+
+### Q373 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.054
+
+Under Business and Commerce Code §607.054, the Texas Department of Licensing and Regulation may accept a report of a suspected skimmer from which of the following? Select all that apply.
+
+- [x] A law enforcement agency
+- [x] A financial institution
+- [x] A credit card or debit card issuer
+- [x] A service technician or service company
+- [x] A member of the public
+- [x] A payment card network
+- [ ] Only the merchant who owns the pump
+- [ ] Only a licensed service technician
+
+**Explanation:** Business and Commerce Code §607.054(a): any interested person, including those listed.
+
+---
+
+### Q374 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.055
+
+Under Business and Commerce Code §607.055, when the department receives a skimmer report, which of the following are true? Select all that apply.
+
+- [x] The department may inspect for the presence of suspected skimmers
+- [x] The department shall coordinate with law enforcement agencies in investigating the report
+- [x] The department may inspect the reported pump and any other pump at the same place of business
+- [x] The merchant must cooperate and permit inspection and alteration of pumps as necessary
+- [ ] The department must obtain a search warrant before inspecting any pump
+- [ ] The merchant may refuse inspection of pumps that were not reported
+- [ ] Only the FBI may investigate skimmers
+
+**Explanation:** Business and Commerce Code §607.055. Refusing an inspection is a Class C misdemeanor under Business and Commerce Code §607.103(a).
+
+---
+
+### Q375 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.056(a)
+
+True or False: Information from a skimmer report received by the Texas Department of Licensing and Regulation is confidential and generally not subject to disclosure under the Public Information Act while the report is open.
+
+- [x] True
+- [ ] False
+
+**Explanation:** True. Business and Commerce Code §607.056(a), (d). It becomes subject to disclosure on dismissal or final resolution of the report.
+
+---
+
+### Q376 — Select All
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.056(b)
+
+Confidential skimmer report information may be disclosed to which of the following? Select all that apply.
+
+- [x] A law enforcement agency
+- [x] The financial crimes intelligence center
+- [x] A credit or debit card issuer, financial institution, or payment card network that may be impacted
+- [x] An institution of higher education
+- [ ] Any member of the public who requests it
+- [ ] A competing gas station
+- [ ] A news outlet without a law enforcement purpose
+
+**Explanation:** Business and Commerce Code §607.056(b).
+
+---
+
+### Q377 — True/False
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.056(e)
+
+True or False: A law enforcement agency may disclose confidential skimmer information to the public to further a law enforcement purpose, including the identity of the person who reported the skimmer.
+
+- [ ] True
+- [x] False
+
+**Explanation:** False. Business and Commerce Code §607.056(e): law enforcement or the center may disclose information to the public to further a law enforcement purpose, but may NOT disclose the identity of the person who submitted the report.
+
+---
+
+### Q378 — Recall
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.1021(b)
+
+Who may bring an action to collect a civil penalty for a violation of Business and Commerce Code Chapter 607?
+
+- [x] The attorney general or the executive director of the Texas Department of Licensing and Regulation
+- [ ] Only the merchant's insurer
+- [ ] Only the payment card network
+- [ ] Only the county sheriff
+
+**Explanation:** Business and Commerce Code §607.1021(b).
+
+---
+
+### Q379 — Concept
+**LO:** 12.9 · **Source:** BPOC 12.9; Business and Commerce Code §607.103
+
+Officers are investigating a skimmer found on a gas pump. Knowing about the investigation, the station manager throws the skimmer in a dumpster. What is the offense level?
+
+- [x] Felony of the third degree
+- [ ] Class C misdemeanor
+- [ ] Class B misdemeanor
+- [ ] No offense — the merchant owns the pump
+
+**Explanation:** Business and Commerce Code §607.103(c): knowingly disposing of a skimmer installed by another person while an investigation is ongoing or a criminal proceeding is pending. (Negligent or reckless disposal without that knowledge is Class B under (b).)
